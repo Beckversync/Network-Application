@@ -1,4 +1,5 @@
 import socket
+import time
 
 TRACKER_IP = "127.0.0.1"  # Địa chỉ Tracker
 TRACKER_PORT = 5000        # Cổng Tracker
@@ -18,7 +19,7 @@ def get_peer_list():
         s.sendall(b"GET_LIST")
         response = s.recv(1024).decode('utf-8')
         print(f"[INFO] Peer list: {response}")
-        return response.replace("PEER_LIST ", "").split(",")
+        return response.replace("PEER_LIST ", "").strip().split(",") if response.startswith("PEER_LIST") else []
 
 def peer_client(target_ip, target_port, message):
     """Gửi dữ liệu đến Peer khác"""
@@ -28,6 +29,14 @@ def peer_client(target_ip, target_port, message):
         response = s.recv(1024).decode('utf-8')
         print(f"[INFO] Response from Peer: {response}")
 
+def leave_tracker(peer_ip, peer_port):
+    """Gửi tín hiệu LEAVE để thông báo rời Tracker"""
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.connect((TRACKER_IP, TRACKER_PORT))
+        s.sendall(f"LEAVE {peer_ip} {peer_port}".encode('utf-8'))
+        response = s.recv(1024).decode('utf-8')
+        print(f"[INFO] Tracker response: {response}")
+
 if __name__ == "__main__":
     peer_ip = "192.168.1.101"  # Địa chỉ IP của Peer
     peer_port = 8081            # Cổng Peer
@@ -35,10 +44,16 @@ if __name__ == "__main__":
     # Đăng ký với Tracker
     register_with_tracker(peer_ip, peer_port)
 
-    # Lấy danh sách Peer
-    peer_list = get_peer_list()
-
-    # Kết nối và gửi dữ liệu đến Peer khác
-    if peer_list:
-        target = peer_list[0].split(":")
-        peer_client(target[0], target[1], "Hello from Peer!")
+    # Giữ kết nối trong một khoảng thời gian để kiểm tra danh sách Peer
+    try:
+        while True:
+            peer_list = get_peer_list()
+            if peer_list and peer_list[0]:
+                target = peer_list[0].split(":")
+                if len(target) == 2:
+                    peer_client(target[0], target[1], "Hello from Peer!")
+            time.sleep(10)  # Chờ 10 giây trước khi gửi tiếp
+    except KeyboardInterrupt:
+        print("\n[INFO] Rời khỏi mạng...")
+        leave_tracker(peer_ip, peer_port)
+        print("[INFO] Đã thoát.")
