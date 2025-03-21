@@ -109,11 +109,11 @@ def handle_client(conn, addr):
                 break
 
     # Nếu kết nối bị đóng mà peer chưa được xóa thông qua LEAVE, xóa peer đó khỏi danh sách
-    if added_peer:
-        with peer_list_lock:
-            if added_peer in peer_list:
-                peer_list.remove(added_peer)
-                print(f"[INFO] Kết nối đóng, đã xóa peer: {added_peer}")
+    # if added_peer:
+    #     with peer_list_lock:
+    #         if added_peer in peer_list:
+    #             peer_list.remove(added_peer)
+    #             print(f"[INFO] Kết nối đóng, đã xóa peer: {added_peer}")
 
 def tracker_server(host="0.0.0.0", port=5000):
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
