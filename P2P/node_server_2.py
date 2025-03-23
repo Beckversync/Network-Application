@@ -15,7 +15,7 @@ def peer_server(port):
             print(f"[NEW CONNECTION] from {addr}")
             with conn:
                 data = conn.recv(1024).decode('utf-8')
-                print(f"[DEBUG] Received data: {data}")
+                # print(f"[DEBUG] Received data: {data}")
                 if data.startswith("DATA"):
                     print(f"[RECEIVED] {data[5:]}")
                     conn.sendall(b"RECEIVED")
