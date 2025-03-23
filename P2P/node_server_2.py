@@ -26,5 +26,5 @@ def peer_server(port):
 
 
 if __name__ == "__main__":
-    peer_port = 8081  # Cổng Peer server
+    peer_port = 8082  # Cổng Peer server
     threading.Thread(target=peer_server, args=(peer_port,)).start()
