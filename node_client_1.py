@@ -46,7 +46,8 @@ def peer_client(target_ip, target_port, message):
 
 
 if __name__ == "__main__":
-    peer_ip = "192.168.1.101"  # Địa chỉ IP của Peer
+    # peer_ip = "192.168.1.101"  # Địa chỉ IP của Peer
+    peer_ip="127.0.0.1"
     peer_port = 8081  # Cổng Peer
 
     # Tạo kết nối duy trì đến Tracker
