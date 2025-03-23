@@ -64,16 +64,17 @@ if __name__ == "__main__":
                     print("[INFO] Không có peer nào để gửi tin nhắn.")
                     continue
 
-                for i, peer in enumerate(peer_list):
-                    print(f"{i + 1}. {peer}")
+                print("Nhập tin nhắn để gửi đến tất cả peers:")
+                message = input("> ")
 
-                peer_choice = int(input("Chọn peer để gửi tin nhắn: ")) - 1
-                if 0 <= peer_choice < len(peer_list):
-                    target = peer_list[peer_choice].split(":")
-                    message = input("Nhập tin nhắn: ")
-                    peer_client(target[0], target[1], message)
-                else:
-                    print("[ERROR] Lựa chọn không hợp lệ.")
+                for peer in peer_list:
+                    try:
+                        target = peer.split(":")
+                        if len(target) == 2:
+                            peer_client(target[0], target[1], message)
+                    except Exception as e:
+                        print(f"[ERROR] Không thể gửi đến {peer} - {e}")
+
 
             elif choice == "3":
                 print("[INFO] Đang thoát...")
