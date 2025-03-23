@@ -11,7 +11,21 @@ each group, using the **TCP/IP** protocol stack.
 <img width=800 src="https://github.com/user-attachments/assets/f0feb615-fd1d-424c-b169-6b142bbc5516"/>
 </p>
 
-## Features
+## Application overview
+● Hybrid paradigm: This application uses both client-server paradigm and peer-to-peer
+paradigm.
+
+● The application performs the client-server during the initialization time to submit the
+information of upcoming new peers.
+
+● The application leverages peer-to-peer to broadcast the content from one peer to all
+other peers (as a live streaming session).
+
+● The application supports client-server when the live streamer is offline which is in low
+traffic conditions.
+
+● Hosts: there are two types of hosts in this system: a centralized server and several
+normal PCs
 
 
 ## Table of Contents
