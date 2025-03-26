@@ -1,30 +1,22 @@
-
-from fastapi import HTTPException  # type: ignore
+import json
 from models.authModel import UserRegister, UserLogin, Visitor
 from services.authService import register_user, login_user, visitor_mode
-##########################################################
-def register(user: UserRegister):
+
+def register(data):
+    user = UserRegister(**data)
     result = register_user(user)
-    
-    if result["message"] == "User registered successfully":
-        return result
-    if result["message"] == "Email already registered":
-        raise HTTPException(status_code=409, detail=result["message"])
-    if result["message"] == "Username already taken":
-        raise HTTPException(status_code=409, detail=result["message"])
-    
-    raise HTTPException(status_code=500, detail="Failed to process registration")
-##########################################################
-def login(user: UserLogin):
+
+    return json.dumps(result)
+
+def login(data):
+    user = UserLogin(**data)
     result = login_user(user)
-    
-    if result["message"] == "Login successful":
-        return result
-    raise HTTPException(status_code=403, detail=result["message"])
-##########################################################
-def visitor(visitor_data: Visitor):
+
+    return json.dumps(result)
+
+
+def visitor(data):
+    visitor_data = Visitor(**data)
     result = visitor_mode(visitor_data)
-    
-    if "message" in result:
-        return result
-    raise HTTPException(status_code=400, detail="Invalid visitor request")
+
+    return json.dumps(result)
