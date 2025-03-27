@@ -12,9 +12,5 @@ class Visitor(BaseModel):
 class UserLogin(BaseModel):
     username: str
     password: str
-
-class UserData(BaseModel):
-    username: str
-    email: str
     channels_joined: List[str] = []
     hosted_channels: List[str] = []

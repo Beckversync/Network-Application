@@ -4,7 +4,11 @@ uri = "mongodb+srv://admin1:cn242@cluster0.fum1o.mongodb.net/?retryWrites=true&w
 
 client = MongoClient(uri)
 db = client["user_database"]
-users_collection = db["users"]
+def get_collection(collection_name):
+    return db[collection_name]
+
+users_collection = get_collection("users")
+channels_collection = get_collection("channels")
 
 try:
     client.admin.command("ping")
