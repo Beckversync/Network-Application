@@ -1,6 +1,5 @@
 from config.db import channels_collection, users_collection
 from models.channelModel import Channel
-
 ##############################################################################################
 def create_channel(host: str, channel_name: str):
     if channels_collection.find_one({"channel_name": channel_name}):
@@ -61,9 +60,54 @@ def send_message(username: str, channel_name: str, message_text: str):
     return {"status": "success", "message": "Message sent successfully"}
 
 ##############################################################################################
-def get_messages(channel_name: str):
-    channel_data = channels_collection.find_one({"channel_name": channel_name}, {"messages": 1, "_id": 0})
-    if not channel_data:
+def get_channel_info(channel_name: str) -> dict:
+    channel = channels_collection.find_one({"channel_name": channel_name}) 
+
+    if not channel:
         return {"status": "error", "message": "Channel not found"}
 
-    return {"status": "success", "messages": channel_data.get("messages", [])}
+    return {
+        "status": "success",
+        "channel_name": channel["channel_name"],
+        "owner": channel["owner"],
+        "members": channel["members"],
+        "messages": channel.get("messages", [])
+    }
+##############################################################################################
+def get_joined_channels(username: str):
+    user_data = users_collection.find_one({"username": username}, {"joined_channels": 1, "_id": 0})
+    if not user_data:
+        return {"status": "error", "message": "User not found"}
+    
+    return {"status": "success", "joined_channels": user_data.get("joined_channels", [])}
+
+##############################################################################################
+def get_hosted_channels(username: str):
+    user_data = users_collection.find_one({"username": username}, {"hosted_channels": 1, "_id": 0})
+    if not user_data:
+        return {"status": "error", "message": "User not found"}
+    
+    return {"status": "success", "hosted_channels": user_data.get("hosted_channels", [])}
+##############################################################################################
+def delete_channel(username: str, channel_name: str):
+    channel = channels_collection.find_one({"channel_name": channel_name})
+    
+    if not channel:
+        return {"status": "error", "message": "Channel not found"}
+
+    if channel["owner"] != username:
+        return {"status": "error", "message": "Only the owner can delete the channel"}
+
+    channels_collection.delete_one({"channel_name": channel_name})
+
+    users_collection.update_many(
+        {},
+        {
+            "$pull": {
+                "hosted_channels": channel_name,
+                "joined_channels": channel_name
+            }
+        }
+    )
+
+    return {"status": "success", "message": f"Channel '{channel_name}' deleted successfully"}

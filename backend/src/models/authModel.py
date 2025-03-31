@@ -1,5 +1,5 @@
 from pydantic import BaseModel # type: ignore
-from typing import List
+from typing import List, Dict
 
 class UserRegister(BaseModel):
     username: str
@@ -14,3 +14,4 @@ class UserLogin(BaseModel):
     password: str
     channels_joined: List[str] = []
     hosted_channels: List[str] = []
+    sessions: List[Dict[str, str]] = []

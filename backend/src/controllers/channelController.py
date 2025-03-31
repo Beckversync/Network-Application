@@ -1,4 +1,4 @@
-from services.channelService import create_channel, join_channel, send_message, get_messages
+from services.channelService import create_channel, join_channel, send_message, get_channel_info, get_joined_channels, get_hosted_channels, delete_channel
 
 ##############################################################################################
 def create_channel_controller(data):
@@ -23,14 +23,25 @@ def join_channel_controller(data):
     return result
 
 ##############################################################################################
-# def get_channel_info_controller(data):
-#     channel_name = data.get("channel_name")
+def get_user_channels_controller(data):
+    username = data.get("username")
 
-#     if not channel_name:
-#         return {"status": "error", "message": "Missing parameters"}
+    if not username:
+        return {"status": "error", "message": "Missing parameters"}
 
-#     result = get_channel_info(channel_name)
-#     return result
+    joined_result = get_joined_channels(username)
+    hosted_result = get_hosted_channels(username)
+
+    if joined_result["status"] == "error" or hosted_result["status"] == "error":
+        return {"status": "error", "message": "User not found"}
+
+    return {
+        "status": "success",
+        "data": {
+            "joined_channels": joined_result.get("joined_channels", []),
+            "hosted_channels": hosted_result.get("hosted_channels", [])
+        }
+    }
 
 ##############################################################################################
 def send_message_controller(data):
@@ -45,13 +56,21 @@ def send_message_controller(data):
     return result
 
 ##############################################################################################
-def get_messages_controller(data):
-    """Controller để lấy danh sách tin nhắn của kênh."""
-    
+def get_channel_info_controller(data):
     channel_name = data.get("channel_name")
 
     if not channel_name:
         return {"status": "error", "message": "Missing parameters"}
 
-    result = get_messages(channel_name)
+    result = get_channel_info(channel_name)
+    return result
+##############################################################################################
+def delete_channel_controller(data):
+    username = data.get("username")
+    channel_name = data.get("channel_name")
+
+    if not username or not channel_name:
+        return {"status": "error", "message": "Missing parameters"}
+
+    result = delete_channel(username, channel_name)
     return result

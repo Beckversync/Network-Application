@@ -7,8 +7,8 @@ from config.db import client  # Kết nối MongoDB
 
 # Kết nối đến MongoDB
 def handle_client(conn, addr):
-    """ Xử lý kết nối từ client """
-    print(f"New connection from {addr}")
+    peer_ip, peer_port = addr 
+    print(f"New connection from {peer_ip}:{peer_port}")
 
     try:
         while True:
@@ -19,20 +19,19 @@ def handle_client(conn, addr):
             request = json.loads(data)
             action = request.get("action")
 
-            if action in ["create_channel", "join_channel", "get_messages", "send_message"]:
-                response = handle_channel_request(data)  # Xử lý channel
+            if action in ["create_channel", "join_channel", "get_user_channels", "send_message", "get_channel_info", "delete_channel"]:
+                response = handle_channel_request(data)
             else:
-                response = auth_request(data)  # Xử lý auth
+                response = auth_request(data, peer_ip, peer_port)
 
             conn.send(response.encode())
 
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"Error with {peer_ip}:{peer_port} -> {e}")
     finally:
         conn.close()
 
 def server_program(host, port):
-    """ Khởi động server """
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind((host, port))
     server_socket.listen(5)
