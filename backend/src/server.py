@@ -19,7 +19,7 @@ def handle_client(conn, addr):
             request = json.loads(data)
             action = request.get("action")
 
-            if action in ["create_channel", "join_channel", "get_user_channels", "send_message", "get_channel_info", "delete_channel"]:
+            if action in ["create_channel", "join_channel", "get_user_channels", "send_message", "get_channel_info", "delete_channel", "get_all_channels"]:
                 response = handle_channel_request(data)
             else:
                 response = auth_request(data, peer_ip, peer_port)

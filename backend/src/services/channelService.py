@@ -111,3 +111,13 @@ def delete_channel(username: str, channel_name: str):
     )
 
     return {"status": "success", "message": f"Channel '{channel_name}' deleted successfully"}
+##############################################################################################
+def get_all_channels():
+    channels = channels_collection.find({}, {"_id": 0, "channel_name": 1, "owner": 1})
+
+    all_channels = list(channels)
+
+    return {
+        "status": "success",
+        "data": all_channels
+    }

@@ -18,11 +18,13 @@ session_id = None
 response_list = None
 status_login = None
 username_login = None
+all_channelist = None
 #username = None
 def send_to_tracker(sock, message):
     global session_id
     global response_list
     global status_login
+    global all_channelist
     try:
         parts = message.split()
         action = parts[0].lower()
@@ -59,6 +61,8 @@ def send_to_tracker(sock, message):
             data["message"] = parts[3]
         elif action == "get_channel_info":
             data["channel_name"] = parts[1]
+        elif action == "get_all_channels":
+            pass
         elif action == "delete_channel":
             data["username"] = parts[1]
             data["channel_name"] = parts[2]
@@ -77,7 +81,10 @@ def send_to_tracker(sock, message):
             return "[ERROR] Không nhận được phản hồi từ server."
 
         response_data = response.decode('utf-8')
-        response_list = response_data
+        if action == "get_user_channels":
+            response_list = response_data
+        elif action == "get_all_channels":
+            all_channelist = response_data
         #print(response_list)
         #print(type(response_list))
         print(f"[DEBUG] Phản hồi từ Tracker: {response_data}")
@@ -174,11 +181,12 @@ def menu(sock, username):
     try:
         while True:
             print("\n=== MENU ===")
-            print("1. Channel list")
+            print("1. User channel list")
             print("2. Gửi tin nhắn đến peer")
             print("3. Create channel")
             print("4. Join channel")
-            print("5. Đăng xuất")
+            print("5. All Channel")
+            print("6. Đăng xuất")
 
             choice = input("Chọn một hành động: ").strip()
             if choice == "1":
@@ -252,6 +260,55 @@ def menu(sock, username):
                 channel_name = input("Name of channel: ").strip()
                 send_to_tracker(sock, f"JOIN_CHANNEL {username} {channel_name}")
             elif choice == "5":
+                print("\n=== All Channels ===")
+                
+                send_to_tracker(sock, "GET_ALL_CHANNELS")
+                
+                try:
+                    channel_info = json.loads(all_channelist)
+                    
+                    all_channels = channel_info["data"]
+                    
+                    print("\n=== DANH SÁCH TẤT CẢ CÁC KÊNH ===")
+                    if all_channels:
+                        for idx, channel in enumerate(all_channels, 1):
+                            print(f"{idx}. {channel['channel_name']} (Chủ kênh: {channel['owner']})")
+                    else:
+                        print("[INFO] Hiện tại không có kênh nào.")
+                    
+                    # Chọn kênh để tham gia
+                    selected_channel = input("Nhập tên kênh để vào (hoặc Enter để quay lại): ").strip()
+                    
+                    # Kiểm tra nếu kênh hợp lệ
+                    valid_channels = [c["channel_name"] for c in all_channels]
+                    if selected_channel in valid_channels:
+                        print(f"[INFO] Đang vào kênh: {selected_channel}")
+                        print(f"\n=== {selected_channel} ===")
+                        print("1. Channel_Info")
+                        print("2. Send Message (Not P2P)")
+                        print("ENTER để quay lại")
+                        
+                        option = input("Chọn: ").strip()
+                        
+                        if option == "1":
+                            send_to_tracker(sock, f"GET_CHANNEL_INFO {selected_channel}")
+                        elif option == "2":
+                            while True:
+                                print("Nhập tin nhắn (Nhấn ENTER để quay lại): ")
+                                text = input("Message: ").strip()
+                                if text == "":
+                                    break
+                                else:
+                                    send_to_tracker(sock, f"SEND_MESSAGE {username} {selected_channel} {text}")
+                        else:
+                            print("[INFO] Quay lại menu chính.")
+                    
+                    else:
+                        print("[ERROR] Tên kênh không hợp lệ.")
+                
+                except Exception as e:
+                    print(f"[ERROR] Không thể lấy danh sách kênh: {e}")
+            elif choice == "6":
                 logout(sock)
                 #username = None
                 login_or_register(sock)

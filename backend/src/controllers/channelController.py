@@ -1,4 +1,4 @@
-from services.channelService import create_channel, join_channel, send_message, get_channel_info, get_joined_channels, get_hosted_channels, delete_channel
+from services.channelService import create_channel, join_channel, send_message, get_channel_info, get_joined_channels, get_hosted_channels, delete_channel, get_all_channels
 
 ##############################################################################################
 def create_channel_controller(data):
@@ -73,4 +73,9 @@ def delete_channel_controller(data):
         return {"status": "error", "message": "Missing parameters"}
 
     result = delete_channel(username, channel_name)
+    return result
+
+##############################################################################################
+def get_all_channels_controller(data):
+    result = get_all_channels()
     return result
