@@ -1,6 +1,9 @@
 import socket
 import threading
 import json
+from request.authRequest import handle_request as auth_request
+from request.channelRequest import handle_channel_request  # Import xử lý channel
+from config.db import client  # Kết nối MongoDB
 
 
 class TRACKER:
@@ -11,7 +14,8 @@ class TRACKER:
 
     def handle_client(self, conn, addr):
         """Xử lý client kết nối đến tracker"""
-        print(f"[INFO] Kết nối mới từ {addr}")
+        user_ip, user_port = addr 
+        print(f"New connection from {user_ip}:{user_port}")
     
         try:
             while True:
@@ -80,16 +84,26 @@ class TRACKER:
                     conn.sendall(json.dumps(response).encode('utf-8'))
 
                 elif cmd == "MSG_SEND":
-                    if not all(k in command for k in ["ip", "port", "name", "message"]):
+                    if not all(k in command for k in ["ip", "port", "name", "channel" ,"message"]):
                         conn.sendall(json.dumps({"status": "ERROR", "message": "Thiếu thông tin cần thiết"}).encode('utf-8'))
                         continue
 
-                    name, ip, port, message = command["name"], command["ip"], command["port"], command["message"]
-                    print(f"[CHAT] {name}: {message}")
+                    name, ip, port, channel ,message = command["name"], command["ip"], command["port"], command["channel"], command["message"]
+                    print(f"[CHAT] {name} from {channel}: {message}")
 
                     with self.peer_list_lock:
                         disconnected_peers = []
-                        for name_list, ip_list, port_list, peer_conn in self.peer_list:
+                        #PHÂN PHỐI TIN NHẮN ĐẾN CÁC NHỮNG NGƯỜI GỬI CÓ TRONG CHANNEL
+                        
+                        #LẤY DANH SÁCH CÁC PEER TRONG CHANNEL
+                        if channel == "GENERRAL":
+                            peers_in_channel = self.peer_list
+                        else:
+                            pass
+                            #DEVELOP
+                        
+
+                        for name_list, ip_list, port_list, peer_conn in peers_in_channel:
                             if ip == ip_list and port == port_list:
                                 continue  # Không gửi lại cho người gửi
 
@@ -111,6 +125,14 @@ class TRACKER:
                         for peer in disconnected_peers:
                             self.peer_list.remove(peer)
                             print(f"[INFO] Xóa peer không còn kết nối: {peer[0]} ({peer[1]}:{peer[2]})")
+
+                elif cmd in ["create_channel", "join_channel", "get_user_channels", "send_message", "get_channel_info", "delete_channel", "get_all_channels"]:
+                    response = handle_channel_request(data)
+                    conn.sendall(json.dumps(response.encode()))
+                    
+                elif cmd in ["register_user","login_user","vistor_mode","logout_user"]:
+                    response = auth_request(data, user_port, user_port)
+                    conn.send(json.dumps(response.encode()))
 
                 else:
                     conn.sendall(json.dumps({"status": "ERROR", "message": "Lệnh không hợp lệ"}).encode('utf-8'))
