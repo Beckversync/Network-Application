@@ -6,33 +6,47 @@ import cv2
 import numpy as np
 import base64
 import time
-
+import random
 
 class USER:
-    def __init__(self, TRACKER_IP, TRACKER_PORT):
-        self.TRACKER_IP = TRACKER_IP
-        self.TRACKER_PORT = TRACKER_PORT
-        self.name = input("ENTER YOUR NAME: ")
-        self.ip = input("ENTER YOUR IP (Press Enter to use default 127.0.0.1): ") or "127.0.0.1"
-        self.port = int(input("ENTER YOUR PORT (TCP): "))
-        # UDP port được tính bằng TCP port + 1
+    def __init__(self, TRACKER_IP, TRACKER_PORT, headless=False, username=None, port=None):
+        # Nếu đã cung cấp username thì dùng luôn, nếu không thì yêu cầu nhập từ terminal
+        if username is not None:
+            self.name = username
+        else:
+            self.name = input("ENTER YOUR NAME: ")
+        
+        # Dùng IP mặc định
+        self.ip = "127.0.0.1"
+        
+        # Nếu ở chế độ headless, tự động chọn port (nếu chưa được chỉ định)
+        if headless:
+            if port is not None:
+                self.port = port
+            else:
+                self.port = self._get_random_port()
+        else:
+            self.port = int(input("ENTER YOUR PORT (TCP): "))
+        
         self.udp_port = self.port + 1
         self.tracker_socket = None
-        self.connect_to_tracker()
-
-        # Khởi động P2P server dùng TCP cho các tin nhắn thông thường
+        self.connect_to_tracker(TRACKER_IP, TRACKER_PORT)
         self.start_p2p_server()
-        # Khởi động UDP listener cho livestream
         self.start_udp_listener()
-
-        self.chat_history = []  # Lưu trữ lịch sử chat (các tin nhắn của tất cả mọi người)
+        self.chat_history = []  # Lưu trữ lịch sử chat
         self.isChatRunning = False
-        self.menu()
+        
+        # Nếu không ở chế độ headless, hiển thị menu terminal
+        if not headless:
+            self.menu()
+            
+    def _get_random_port(self):
+        return random.randint(6000, 9000)
 
-    def connect_to_tracker(self):
+    def connect_to_tracker(self, TRACKER_IP, TRACKER_PORT):
         try:
             self.tracker_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            self.tracker_socket.connect((self.TRACKER_IP, self.TRACKER_PORT))
+            self.tracker_socket.connect((TRACKER_IP, TRACKER_PORT))
             request = json.dumps({
                 "command": "CONNECT",
                 "name": self.name,
@@ -51,7 +65,6 @@ class USER:
         threading.Thread(target=self.p2p_server, daemon=True).start()
 
     def p2p_server(self):
-        """Server socket P2P dùng TCP cho tin nhắn chat và các kết nối không liên quan đến livestream UDP."""
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         try:
             server_socket.bind((self.ip, self.port))
@@ -66,7 +79,6 @@ class USER:
             server_socket.close()
 
     def handle_p2p_connection(self, conn, addr):
-        """Xử lý kết nối đến từ các peer khác qua TCP (chat và các thông điệp không phải livestream UDP)."""
         try:
             data = conn.recv(4096)
             if data:
@@ -76,7 +88,6 @@ class USER:
                     msg_type = message_data.get("type", "chat")
                     sender = message_data.get("sender", "Unknown")
                     if msg_type == "livestream":
-                        # Nếu nhận livestream qua TCP (không dùng trong UDP version)
                         frame_data = message_data.get("message", "")
                         img_bytes = base64.b64decode(frame_data)
                         np_arr = np.frombuffer(img_bytes, np.uint8)
@@ -97,7 +108,6 @@ class USER:
             conn.close()
 
     def send_message_p2p(self, target_ip, target_port, message, msg_type="chat"):
-        """Gửi tin nhắn trực tiếp qua TCP tới một peer cụ thể."""
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             s.connect((target_ip, target_port))
@@ -113,7 +123,6 @@ class USER:
             print(f"[ERROR] Failed to send {msg_type} message to {target_ip}:{target_port}: {e}")
 
     def send_p2p_broadcast(self, message, msg_type="chat"):
-        """Gửi tin nhắn TCP P2P tới tất cả các peer (trừ bản thân) dựa trên danh sách từ Tracker."""
         peers = self.get_peer_list()
         if not peers:
             print("[INFO] No peers available for P2P broadcast.")
@@ -126,7 +135,6 @@ class USER:
             self.send_message_p2p(target_ip, target_port, message, msg_type)
 
     def send_udp_message(self, target_ip, target_udp_port, message, msg_type="livestream"):
-        """Gửi tin nhắn UDP đến một peer cụ thể."""
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
             message_data = json.dumps({
@@ -141,8 +149,6 @@ class USER:
             print(f"[ERROR] Failed to send UDP {msg_type} message to {target_ip}:{target_udp_port}: {e}")
 
     def send_udp_broadcast(self, message, msg_type="livestream"):
-        """Gửi tin nhắn UDP livestream đến tất cả các peer (trừ bản thân).
-           Giả sử mỗi peer sử dụng udp_port = tcp_port + 1."""
         peers = self.get_peer_list()
         if not peers:
             print("[INFO] No peers available for UDP broadcast.")
@@ -155,7 +161,6 @@ class USER:
             self.send_udp_message(target_ip, target_udp_port, message, msg_type)
 
     def get_peer_list(self):
-        """Lấy danh sách peer từ Tracker qua mô hình Client-Server."""
         if self.tracker_socket is None:
             print("[ERROR] Not connected to tracker.")
             return []
@@ -178,7 +183,6 @@ class USER:
             return []
 
     def leave_tracker(self):
-        """Gửi yêu cầu rời khỏi tracker theo mô hình Client-Server."""
         if self.tracker_socket is None:
             print("[ERROR] Not connected to tracker.")
             return
@@ -200,7 +204,6 @@ class USER:
             self.tracker_socket = None
 
     def start_udp_listener(self):
-        """Khởi động thread lắng nghe tin nhắn UDP (dành cho livestream)."""
         threading.Thread(target=self.udp_listener, daemon=True).start()
 
     def udp_listener(self):
@@ -235,7 +238,6 @@ class USER:
             udp_socket.close()
 
     def menu(self):
-        """Menu chính cho người dùng lựa chọn chức năng."""
         while True:
             print("\n===== MENU =====")
             print("0. Exit")
@@ -258,26 +260,20 @@ class USER:
             elif choice == "4":
                 self.send_direct_message_menu()
             elif choice == "5":
-                # Khởi động livestream trên một luồng riêng để không làm block menu
                 threading.Thread(target=self.start_livestream, daemon=True).start()
             else:
                 print("[ERROR] Invalid option. Please try again.")
 
     def talk_to_tracker_chat(self):
-        """Giao diện chat dựa trên mô hình Client-Server (Tracker broadcast).
-           Khi thoát, không nhận tin nhắn mới, nhưng khi quay lại sẽ hiển thị tin nhắn cũ."""
-        # Hiển thị lịch sử chat cũ nếu có
         if self.chat_history:
             print("==== Chat History ====")
             for msg in self.chat_history:
                 print(msg)
             print("======================")
         self.isChatRunning = True
-        # Bắt đầu thread nhận tin
         chat_thread = threading.Thread(target=self.receive_tracker_message, daemon=True)
         chat_thread.start()
         self.send_tracker_message()
-        # Sau khi thoát, thread nhận tin sẽ dừng và không nhận tin mới
 
     def send_tracker_message(self):
         while self.isChatRunning:
@@ -286,7 +282,6 @@ class USER:
                 self.isChatRunning = False
                 break
             else:
-                # Lưu lại tin nhắn của chính mình vào lịch sử chat
                 local_msg = f"\033[1;33m{self.name} >> {client_input}\033[0m"
                 self.chat_history.append(local_msg)
                 if self.isChatRunning:
@@ -305,7 +300,6 @@ class USER:
                     break
 
     def receive_tracker_message(self):
-        """Nhận tin nhắn từ Tracker và lưu vào lịch sử chat (chỉ khi đang ở chế độ chat)."""
         if self.tracker_socket is None:
             print("[ERROR] No tracker connection to receive messages.")
             return
@@ -330,7 +324,6 @@ class USER:
                 break
 
     def send_direct_message_menu(self):
-        """Giao diện gửi tin nhắn trực tiếp tới 1 peer theo mô hình P2P."""
         peers = self.get_peer_list()
         if not peers:
             print("[INFO] No peers available for direct messaging.")
@@ -358,11 +351,7 @@ class USER:
             print(f"[ERROR] Invalid selection or error: {e}")
 
     def start_livestream(self):
-        """Thực hiện livestream video (sử dụng webcam) và broadcast qua UDP.
-        Nhấn 'q' trong cửa sổ video để dừng livestream."""
-        # Sử dụng backend DirectShow (cv2.CAP_DSHOW) thay vì mặc định MSMF
         cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
-        # Đặt độ phân giải webcam thấp hơn để giảm dung lượng mỗi khung hình
         cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
         cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
         if not cap.isOpened():
@@ -374,24 +363,19 @@ class USER:
             if not ret:
                 print("[ERROR] Failed to read frame from webcam.")
                 break
-            # Mã hóa frame thành JPEG với chất lượng nén cao hơn (giảm dung lượng)
             encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 50]
             ret, buffer = cv2.imencode('.jpg', frame, encode_param)
             if not ret:
                 print("[ERROR] Failed to encode frame.")
                 continue
-            # Chuyển đổi thành chuỗi base64
             jpg_as_text = base64.b64encode(buffer).decode('utf-8')
-            # Gửi frame qua UDP broadcast với msg_type là livestream
             self.send_udp_broadcast(jpg_as_text, msg_type="livestream")
-            # Hiển thị livestream local
             cv2.imshow('Livestream (Local)', frame)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
             time.sleep(0.1)
         cap.release()
         cv2.destroyAllWindows()
-
 
 if __name__ == '__main__':
     USER("127.0.0.1", 5000)

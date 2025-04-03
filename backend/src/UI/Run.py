@@ -1,0 +1,47 @@
+import sys
+import os
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.append(BASE_DIR)
+
+from PyQt6.QtWidgets import QApplication
+from UI.Login import LoginRegisterUI
+from UI.Home import DiscordUI
+
+from tracker import TRACKER  # Tracker server, chạy riêng (python tracker.py)
+from user import USER
+
+class AppManager:
+    def __init__(self):
+        self.app = QApplication(sys.argv)
+        self.login_window = LoginRegisterUI()
+        self.login_window.login_success.connect(self.open_main_app)
+        self.login_window.viewer_login_success.connect(self.open_main_app_as_viewer)
+        self.main_window = None
+        self.user_peer = None
+
+    def open_main_app(self, username, session_info):
+        # Khởi tạo USER ở chế độ headless để thực hiện các thao tác P2P (không dùng menu terminal)
+        self.user_peer = USER("127.0.0.1", 5000, headless=True, username=username)
+        self.main_window = DiscordUI(self.login_window, username, session_info, self.user_peer)
+        self.main_window.show()
+        self.login_window.close()
+    
+    def open_main_app_as_viewer(self, username, session_info):
+        self.user_peer = USER("127.0.0.1", 5000, headless=True, username=username)
+        self.main_window = DiscordUI(self.login_window, username, session_info, self.user_peer)
+        self.main_window.setWindowTitle("Discord Clone - Viewer Mode")
+        self.main_window.send_button.setEnabled(False)
+        self.main_window.message_input.setEnabled(False)
+        self.main_window.add_channel_button.setEnabled(False)
+        self.main_window.status_dropdown.setEnabled(False)
+        self.main_window.show()
+        self.login_window.close()
+    
+    def run(self):
+        self.login_window.resize(600, 400)
+        self.login_window.show()
+        sys.exit(self.app.exec())
+
+if __name__ == "__main__":
+    app_manager = AppManager()
+    app_manager.run()
