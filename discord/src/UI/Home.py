@@ -1,5 +1,6 @@
 import json
-import sys, os, threading
+import sys, os, threading, time
+import logging
 from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QWidget,
     QVBoxLayout, QHBoxLayout, QSplitter,
@@ -7,11 +8,11 @@ from PyQt6.QtWidgets import (
     QTextEdit, QLineEdit, QLabel, QTabWidget,
     QCheckBox, QFrame, QComboBox, QDialog
 )
-from PyQt6.QtCore import Qt
+from PyQt6.QtCore import Qt, QTimer
 from PyQt6.QtGui import QFont
-
-# Giả sử bạn có module request
 from request import channelRequest
+
+logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
 class DiscordUI(QMainWindow):
     def __init__(self, login_window, username, session_info, user_peer=None):
@@ -24,7 +25,7 @@ class DiscordUI(QMainWindow):
         self.setWindowTitle("Discord Clone - Improved UI")
         self.setGeometry(100, 100, 1200, 700)
         
-        # Thêm thuộc tính live_mode để tránh lỗi AttributeError
+        # Thuộc tính live_mode
         self.live_mode = False
         
         # Chế độ chat: "channel" hay "dm"
@@ -34,43 +35,43 @@ class DiscordUI(QMainWindow):
 
         self.channels = {}      # Danh sách channel
         self.dm_users = []      # Danh sách user (sẽ load từ API)
+        self.last_message_count = 0  # Dùng để theo dõi tin nhắn mới
+        
+        # Thuộc tính is_viewer (mặc định False, được thiết lập lại nếu ở chế độ Visitor)
+        self.is_viewer = False
 
         self.initUI()
         self.get_channels_from_server()
-        self.load_dm_list()  # Load DM list sau khi UI được thiết lập
+        self.load_dm_list()
+
+        # Polling cập nhật tin nhắn mới mỗi 5 giây
+        self.polling_thread = threading.Thread(target=self.poll_new_messages, daemon=True)
+        self.polling_thread.start()
 
     def initUI(self):
-        # Widget trung tâm
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
-
-        # Tạo layout tổng
         main_layout = QHBoxLayout(central_widget)
         main_layout.setContentsMargins(0,0,0,0)
 
-        # ─────────────────────────────────────────
-        # 1) KHU VỰC TRÁI: Sidebar (Channel + DM)
-        # ─────────────────────────────────────────
+        # Sidebar (Channel + DM)
         self.sidebar_frame = QFrame()
         self.sidebar_frame.setStyleSheet("background-color: #2F3136;")
-        self.sidebar_frame.setFixedWidth(200)  # Đặt chiều rộng sidebar
+        self.sidebar_frame.setFixedWidth(200)
         sidebar_layout = QVBoxLayout(self.sidebar_frame)
         sidebar_layout.setContentsMargins(10,10,10,10)
         sidebar_layout.setSpacing(8)
 
-        # Tiêu đề
         title_label = QLabel("DISCORD V2.0")
         title_label.setStyleSheet("color: white; font-size: 16px; font-weight: bold;")
         title_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         sidebar_layout.addWidget(title_label)
 
-        # Nút tạo channel
         self.add_channel_button = QPushButton("+ Create Channel")
         self.add_channel_button.setStyleSheet("background-color: #5865F2; color: white;")
         self.add_channel_button.clicked.connect(self.add_channel)
         sidebar_layout.addWidget(self.add_channel_button)
 
-        # TabWidget để phân tách Channel & DM
         tab_widget = QTabWidget()
         tab_widget.setStyleSheet("QTabBar::tab { height: 30px; color: white; }")
 
@@ -94,42 +95,34 @@ class DiscordUI(QMainWindow):
 
         sidebar_layout.addWidget(tab_widget)
 
-        # Live mode
         self.live_checkbox = QCheckBox("Live Mode (P2P)")
         self.live_checkbox.setStyleSheet("color: white;")
         self.live_checkbox.stateChanged.connect(self.toggle_live_mode)
         sidebar_layout.addWidget(self.live_checkbox)
 
-        # Thông tin user
         self.status_dropdown = QComboBox()
         self.status_dropdown.addItems(["Online", "Away", "Do Not Disturb", "Offline"])
         self.status_dropdown.currentTextChanged.connect(self.change_status)
         sidebar_layout.addWidget(self.status_dropdown)
 
-        # Thêm sidebar vào layout
         main_layout.addWidget(self.sidebar_frame)
 
-        # ─────────────────────────────────────────
-        # 2) KHU VỰC GIỮA: Chat chính
-        # ─────────────────────────────────────────
+        # Khung chat chính
         self.center_frame = QFrame()
         self.center_frame.setStyleSheet("background-color: #36393F;")
         center_layout = QVBoxLayout(self.center_frame)
         center_layout.setContentsMargins(10,10,10,10)
         center_layout.setSpacing(8)
 
-        # Label hiển thị tên channel / user DM
         self.chat_title_label = QLabel("No channel/user selected")
         self.chat_title_label.setStyleSheet("color: white; font-size: 18px; font-weight: bold;")
         center_layout.addWidget(self.chat_title_label)
 
-        # Khung chat
         self.chat_display = QTextEdit()
         self.chat_display.setReadOnly(True)
         self.chat_display.setStyleSheet("background-color: #40444B; color: white;")
         center_layout.addWidget(self.chat_display, 1)
 
-        # Hàng nhập tin nhắn
         input_layout = QHBoxLayout()
         self.message_input = QLineEdit()
         self.message_input.setStyleSheet("background-color: #2F3136; color: white; padding: 8px;")
@@ -140,17 +133,14 @@ class DiscordUI(QMainWindow):
         input_layout.addWidget(self.send_button)
         center_layout.addLayout(input_layout)
 
-        # Nút livestream
         self.livestream_button = QPushButton("Start Livestream")
         self.livestream_button.setStyleSheet("background-color: orange; color: white; padding: 8px;")
         self.livestream_button.clicked.connect(self.start_livestream)
         center_layout.addWidget(self.livestream_button)
 
-        main_layout.addWidget(self.center_frame, 1)  # Chiếm nhiều không gian
+        main_layout.addWidget(self.center_frame, 1)
 
-        # ─────────────────────────────────────────
-        # 3) KHU VỰC PHẢI: (Tùy ý) - danh sách member
-        # ─────────────────────────────────────────
+        # Khung danh sách thành viên
         self.right_frame = QFrame()
         self.right_frame.setStyleSheet("background-color: #2F3136;")
         self.right_frame.setFixedWidth(200)
@@ -165,7 +155,6 @@ class DiscordUI(QMainWindow):
         self.member_list.setStyleSheet("background-color: #3F4147; color: white;")
         right_layout.addWidget(self.member_list)
 
-        # Nút Logout
         self.logout_button = QPushButton("Logout")
         self.logout_button.setStyleSheet("background-color: red; color: white;")
         self.logout_button.clicked.connect(self.logout)
@@ -173,102 +162,94 @@ class DiscordUI(QMainWindow):
 
         main_layout.addWidget(self.right_frame)
 
-        # Sau khi setup xong, ta load DM list tạm
         self.load_dm_list()
 
-    # ─────────────────────────────────────────
-    # HÀM HỖ TRỢ
-    # ─────────────────────────────────────────
     def toggle_live_mode(self, state):
         self.live_mode = (state == Qt.CheckState.Checked.value)
+        logging.info("Live mode set to %s", self.live_mode)
 
+    # Cập nhật danh sách user dựa trên API get_all_users
     def load_dm_list(self):
-        """Gọi API để lấy danh sách user và cập nhật vào DM list (loại trừ user đang đăng nhập)."""
         try:
-            # Lưu ý: Nếu API không hỗ trợ "get_all_users", hãy thay đổi action này theo đúng yêu cầu.
             request_data = {"action": "get_all_users"}
             response_str = channelRequest.handle_channel_request(json.dumps(request_data))
             response = json.loads(response_str)
             if response.get("status") == "success":
                 users = response.get("data", [])
                 self.dm_list.clear()
-                self.dm_users = []  # Cập nhật danh sách DM
+                self.dm_users = []
                 for user in users:
-                    username = user.get("username")
-                    if username != self.username:
-                        self.dm_users.append(username)
-                        item = QListWidgetItem(username)
-                        self.dm_list.addItem(item)
+                    # Hiển thị theo định dạng: username (ip:port, session: session_id)
+                    display_text = f"{user.get('username')} ({user.get('peer_ip')}:{user.get('peer_port')}, {user.get('session_id')})"
+                    self.dm_users.append(user)
+                    item = QListWidgetItem(display_text)
+                    self.dm_list.addItem(item)
             else:
-                print("Error getting user list:", response.get("message"))
+                logging.error("Error getting user list: %s", response.get("message"))
         except Exception as e:
-            print("Exception in load_dm_list:", e)
-
+            logging.error("Exception in load_dm_list: %s", e)
 
     def handle_channel_clicked(self, item):
-        """Khi click vào 1 channel."""
         self.current_mode = "channel"
         self.current_channel = item.text()
         self.chat_title_label.setText(f"#{self.current_channel}")
         self.load_channel_messages()
 
     def handle_dm_clicked(self, item):
-        """Khi click vào 1 user để chat DM."""
         self.current_mode = "dm"
         self.current_dm_user = item.text()
         self.chat_title_label.setText(f"DM with {self.current_dm_user}")
         self.load_dm_messages()
 
     def load_channel_messages(self):
-        """Load tin nhắn kênh từ server."""
         if not self.current_channel:
             return
         self.chat_display.clear()
-        # Gọi API get channel info
         try:
             request_data = {"action": "get_channel_info", "channel_name": self.current_channel}
+            if self.is_viewer:
+                request_data["is_visitor"] = True
             response_str = channelRequest.handle_channel_request(json.dumps(request_data))
             response = json.loads(response_str)
             if response.get("status") == "success":
                 messages = response.get("messages", [])
+                # Nếu có tin nhắn mới, hiển thị thông báo
+                if len(messages) > self.last_message_count and self.last_message_count > 0:
+                    new_count = len(messages) - self.last_message_count
+                    self.chat_display.append(f"[Notification] You have {new_count} new message(s).")
+                self.last_message_count = len(messages)
                 for msg in messages:
                     sender = msg.get("sender")
                     text = msg.get("text")
                     self.chat_display.append(f"{sender}: {text}")
+            else:
+                self.chat_display.append(f"[ERROR] {response.get('message')}")
+                logging.error("Error loading channel messages: %s", response.get("message"))
         except Exception as e:
-            print("load_channel_messages error:", e)
+            logging.error("load_channel_messages error: %s", e)
 
     def load_dm_messages(self):
-        """Load tin nhắn DM (nếu bạn muốn lưu DB). Tạm thời chỉ clear."""
         self.chat_display.clear()
-        # Nếu muốn, gọi API / DB để load DM cũ, hoặc hiển thị tạm
-        # self.chat_display.append("=== DM HISTORY ===")
+        # Nếu có tích hợp DM history, load tại đây
 
     def send_message(self):
         message = self.message_input.text().strip()
         if not message:
             return
         self.message_input.clear()
-
-        # Hiển thị luôn
         self.chat_display.append(f"You: {message}")
+        logging.info("Sending message: %s", message)
 
-        # Phân biệt channel vs dm
         if self.current_mode == "channel":
             if self.live_mode:
-                # Gửi P2P broadcast
                 if self.user_peer:
                     self.user_peer.send_p2p_broadcast(message)
                 else:
                     self.chat_display.append("[ERROR] No user_peer for P2P")
             else:
-                # Gửi lên server
                 self.send_channel_message_api(message)
         elif self.current_mode == "dm":
-            # Gửi tin nhắn trực tiếp (P2P)
             if self.user_peer:
-                # Tìm IP, port user kia (cách làm tuỳ bạn)
-                # Hoặc broadcast tạm, tuỳ logic DM
                 self.user_peer.send_p2p_broadcast(f"[DM to {self.current_dm_user}] {message}")
             else:
                 self.chat_display.append("[ERROR] No user_peer for DM")
@@ -296,18 +277,24 @@ class DiscordUI(QMainWindow):
     def add_channel(self):
         dialog = AddChannelDialog()
         if dialog.exec():
-            new_channel = dialog.get_channel_name()
+            data = dialog.get_channel_data()
+            new_channel = data.get("channel_name")
+            allow_visitor = data.get("allow_visitor", True)
             if new_channel:
-                request_data = {"action": "create_channel", "host": self.username, "channel_name": new_channel}
+                request_data = {
+                    "action": "create_channel",
+                    "host": self.username,
+                    "channel_name": new_channel,
+                    "allow_visitor": allow_visitor
+                }
                 response_str = channelRequest.handle_channel_request(json.dumps(request_data))
                 response = json.loads(response_str)
                 if response.get("status") == "success":
                     self.get_channels_from_server()
                 else:
-                    print("Error creating channel:", response.get("message"))
+                    logging.error("Error creating channel: %s", response.get("message"))
 
     def get_channels_from_server(self):
-        """Tải danh sách channel từ server."""
         try:
             request_data = {"action": "get_all_channels"}
             response_str = channelRequest.handle_channel_request(json.dumps(request_data))
@@ -319,9 +306,36 @@ class DiscordUI(QMainWindow):
                 for c in channels:
                     self.channel_list.addItem(c["channel_name"])
             else:
-                print("Error get_channels:", response.get("message"))
+                logging.error("Error get_channels: %s", response.get("message"))
         except Exception as e:
-            print("get_channels_from_server error:", e)
+            logging.error("get_channels_from_server error: %s", e)
+
+    def poll_new_messages(self):
+        # Polling mỗi 5 giây nếu có channel được chọn
+        while True:
+            if self.current_mode == "channel" and self.current_channel:
+                try:
+                    request_data = {"action": "get_channel_info", "channel_name": self.current_channel}
+                    if self.is_viewer:
+                        request_data["is_visitor"] = True
+                    response_str = channelRequest.handle_channel_request(json.dumps(request_data))
+                    response = json.loads(response_str)
+                    if response.get("status") == "success":
+                        messages = response.get("messages", [])
+                        if len(messages) > self.last_message_count:
+                            new_msgs = messages[self.last_message_count:]
+                            # Thông báo nếu có tin nhắn mới
+                            self.chat_display.append(f"[Notification] {len(new_msgs)} new message(s) received.")
+                            for msg in new_msgs:
+                                sender = msg.get("sender")
+                                text = msg.get("text")
+                                self.chat_display.append(f"{sender}: {text}")
+                            self.last_message_count = len(messages)
+                    else:
+                        logging.error("Polling error: %s", response.get("message"))
+                except Exception as e:
+                    logging.error("Error in poll_new_messages: %s", e)
+            time.sleep(5)
 
     def start_livestream(self):
         if self.user_peer:
@@ -330,7 +344,8 @@ class DiscordUI(QMainWindow):
             self.chat_display.append("[ERROR] user_peer not found!")
 
     def change_status(self, status):
-        print(f"Status changed to {status}")
+        logging.info("Status changed to %s", status)
+        # Có thể gửi request cập nhật status lên server
 
     def logout(self):
         self.close()
@@ -340,19 +355,25 @@ class AddChannelDialog(QDialog):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Add Channel")
-        self.setGeometry(300, 300, 300, 120)
+        self.setGeometry(300, 300, 300, 150)
         layout = QVBoxLayout(self)
 
         self.channel_name_input = QLineEdit()
         self.channel_name_input.setPlaceholderText("Channel name")
         layout.addWidget(self.channel_name_input)
 
+        self.allow_visitor_checkbox = QCheckBox("Allow Visitors to View")
+        self.allow_visitor_checkbox.setChecked(True)
+        layout.addWidget(self.allow_visitor_checkbox)
+
         create_btn = QPushButton("Create")
         create_btn.clicked.connect(self.accept)
         layout.addWidget(create_btn)
 
-    def get_channel_name(self):
-        return self.channel_name_input.text().strip()
+    def get_channel_data(self):
+        channel_name = self.channel_name_input.text().strip()
+        allow_visitor = self.allow_visitor_checkbox.isChecked()
+        return {"channel_name": channel_name, "allow_visitor": allow_visitor}
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

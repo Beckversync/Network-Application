@@ -1,9 +1,9 @@
-from pymongo.mongo_client import MongoClient # type: ignore
+from pymongo.mongo_client import MongoClient
 
 uri = "mongodb+srv://admin1:cn242@cluster0.fum1o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-
 client = MongoClient(uri)
 db = client["user_database"]
+
 def get_collection(collection_name):
     return db[collection_name]
 

@@ -7,19 +7,18 @@ import numpy as np
 import base64
 import time
 import random
+import logging
+
+logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
 class USER:
     def __init__(self, TRACKER_IP, TRACKER_PORT, headless=False, username=None, port=None):
-        # Nếu đã cung cấp username thì dùng luôn, nếu không thì yêu cầu nhập từ terminal
         if username is not None:
             self.name = username
         else:
             self.name = input("ENTER YOUR NAME: ")
         
-        # Dùng IP mặc định
         self.ip = "127.0.0.1"
-        
-        # Nếu ở chế độ headless, tự động chọn port (nếu chưa được chỉ định)
         if headless:
             if port is not None:
                 self.port = port
@@ -33,10 +32,13 @@ class USER:
         self.connect_to_tracker(TRACKER_IP, TRACKER_PORT)
         self.start_p2p_server()
         self.start_udp_listener()
-        self.chat_history = []  # Lưu trữ lịch sử chat
+        self.chat_history = []  # Lịch sử chat
         self.isChatRunning = False
-        
-        # Nếu không ở chế độ headless, hiển thị menu terminal
+
+        # Offline caching: file lưu tin nhắn chưa sync
+        self.offline_file = f"offline_{self.name}.txt"
+        self.sync_offline_messages()
+
         if not headless:
             self.menu()
             
@@ -56,9 +58,9 @@ class USER:
             self.tracker_socket.sendall(request.encode('utf-8'))
             response = self.tracker_socket.recv(1024).decode('utf-8')
             response_data = json.loads(response)
-            print(f"[INFO] Tracker response: {response_data.get('message', 'No response')}")
+            logging.info("Tracker response: %s", response_data.get('message', 'No response'))
         except Exception as e:
-            print(f"[ERROR] Unable to connect to Tracker: {e}")
+            logging.error("Unable to connect to Tracker: %s", e)
             self.tracker_socket = None
 
     def start_p2p_server(self):
@@ -69,12 +71,12 @@ class USER:
         try:
             server_socket.bind((self.ip, self.port))
             server_socket.listen(5)
-            print(f"[P2P SERVER] Listening on {self.ip}:{self.port} for direct P2P connections.")
+            logging.info("P2P SERVER listening on %s:%s", self.ip, self.port)
             while True:
                 conn, addr = server_socket.accept()
                 threading.Thread(target=self.handle_p2p_connection, args=(conn, addr), daemon=True).start()
         except Exception as e:
-            print(f"[ERROR] P2P server error: {e}")
+            logging.error("P2P server error: %s", e)
         finally:
             server_socket.close()
 
@@ -96,14 +98,14 @@ class USER:
                             cv2.imshow(f"Livestream from {sender}", frame)
                             cv2.waitKey(1)
                         else:
-                            print(f"[ERROR] Failed to decode livestream frame from {sender}")
+                            logging.error("Failed to decode livestream frame from %s", sender)
                     else:
                         text = message_data.get("message", "")
-                        print(f"\033[1;35m[P2P MESSAGE] {sender} -> {self.name}: {text}\033[0m")
+                        logging.info("[P2P MESSAGE] %s -> %s: %s", sender, self.name, text)
                 except Exception as e:
-                    print(f"[ERROR] Error handling received P2P data: {e}")
+                    logging.error("Error handling received P2P data: %s", e)
         except Exception as e:
-            print(f"[ERROR] Handling P2P connection error: {e}")
+            logging.error("Handling P2P connection error: %s", e)
         finally:
             conn.close()
 
@@ -118,14 +120,16 @@ class USER:
             })
             s.sendall(message_data.encode('utf-8'))
             s.close()
-            print(f"[INFO] Sent {msg_type} message to {target_ip}:{target_port}")
+            logging.info("Sent %s message to %s:%s", msg_type, target_ip, target_port)
         except Exception as e:
-            print(f"[ERROR] Failed to send {msg_type} message to {target_ip}:{target_port}: {e}")
+            logging.error("Failed to send %s message to %s:%s: %s", msg_type, target_ip, target_port, e)
+            # Nếu không gửi được, lưu offline
+            self.store_offline_message({"target_ip": target_ip, "target_port": target_port, "message": message, "msg_type": msg_type})
 
     def send_p2p_broadcast(self, message, msg_type="chat"):
         peers = self.get_peer_list()
         if not peers:
-            print("[INFO] No peers available for P2P broadcast.")
+            logging.info("No peers available for P2P broadcast.")
             return
         for peer in peers:
             if peer["ip"] == self.ip and int(peer["port"]) == self.port:
@@ -144,14 +148,14 @@ class USER:
             })
             s.sendto(message_data.encode('utf-8'), (target_ip, target_udp_port))
             s.close()
-            print(f"[INFO] Sent UDP {msg_type} message to {target_ip}:{target_udp_port}")
+            logging.info("Sent UDP %s message to %s:%s", msg_type, target_ip, target_udp_port)
         except Exception as e:
-            print(f"[ERROR] Failed to send UDP {msg_type} message to {target_ip}:{target_udp_port}: {e}")
+            logging.error("Failed to send UDP %s message to %s:%s: %s", msg_type, target_ip, target_udp_port, e)
 
     def send_udp_broadcast(self, message, msg_type="livestream"):
         peers = self.get_peer_list()
         if not peers:
-            print("[INFO] No peers available for UDP broadcast.")
+            logging.info("No peers available for UDP broadcast.")
             return
         for peer in peers:
             if peer["ip"] == self.ip and int(peer["port"]) == self.port:
@@ -162,7 +166,7 @@ class USER:
 
     def get_peer_list(self):
         if self.tracker_socket is None:
-            print("[ERROR] Not connected to tracker.")
+            logging.error("Not connected to tracker.")
             return []
         try:
             request = json.dumps({"command": "GET_LIST", "name": self.name})
@@ -171,20 +175,20 @@ class USER:
             response_data = json.loads(response)
             if response_data.get("status") == "OK":
                 peer_list = response_data.get("peer_list", [])
-                print("[INFO] Peer list:")
+                logging.info("Peer list retrieved:")
                 for peer in peer_list:
-                    print(f" - {peer['name']} ({peer['ip']}:{peer['port']})")
+                    logging.info(" - %s (%s:%s)", peer['name'], peer['ip'], peer['port'])
                 return peer_list
             else:
-                print(f"[ERROR] Tracker error: {response_data.get('message', 'No error message')}")
+                logging.error("Tracker error: %s", response_data.get('message', 'No error message'))
                 return []
         except Exception as e:
-            print(f"[ERROR] Error retrieving peer list: {e}")
+            logging.error("Error retrieving peer list: %s", e)
             return []
 
     def leave_tracker(self):
         if self.tracker_socket is None:
-            print("[ERROR] Not connected to tracker.")
+            logging.error("Not connected to tracker.")
             return
         try:
             request = json.dumps({
@@ -196,9 +200,9 @@ class USER:
             self.tracker_socket.sendall(request.encode('utf-8'))
             response = self.tracker_socket.recv(1024).decode('utf-8')
             response_data = json.loads(response)
-            print(f"[INFO] Tracker response: {response_data.get('message', 'No response')}")
+            logging.info("Tracker response on LEAVE: %s", response_data.get('message', 'No response'))
         except Exception as e:
-            print(f"[ERROR] Error leaving tracker: {e}")
+            logging.error("Error leaving tracker: %s", e)
         finally:
             self.tracker_socket.close()
             self.tracker_socket = None
@@ -210,7 +214,7 @@ class USER:
         udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         try:
             udp_socket.bind((self.ip, self.udp_port))
-            print(f"[UDP LISTENER] Listening on {self.ip}:{self.udp_port} for UDP livestream.")
+            logging.info("UDP LISTENER listening on %s:%s for UDP livestream.", self.ip, self.udp_port)
             while True:
                 data, addr = udp_socket.recvfrom(65535)
                 try:
@@ -227,15 +231,43 @@ class USER:
                             cv2.imshow(f"UDP Livestream from {sender}", frame)
                             cv2.waitKey(1)
                         else:
-                            print(f"[ERROR] Failed to decode UDP livestream frame from {sender}")
+                            logging.error("Failed to decode UDP livestream frame from %s", sender)
                     else:
-                        print(f"[INFO] Received non-livestream UDP message from {sender}")
+                        logging.info("Received non-livestream UDP message from %s", sender)
                 except Exception as e:
-                    print(f"[ERROR] Error handling UDP data from {addr}: {e}")
+                    logging.error("Error handling UDP data from %s: %s", addr, e)
         except Exception as e:
-            print(f"[ERROR] UDP listener error: {e}")
+            logging.error("UDP listener error: %s", e)
         finally:
             udp_socket.close()
+
+    def store_offline_message(self, msg_obj):
+        try:
+            with open(self.offline_file, 'a') as f:
+                f.write(json.dumps(msg_obj) + "\n")
+            logging.info("Stored offline message: %s", msg_obj)
+        except Exception as e:
+            logging.error("Error storing offline message: %s", e)
+
+    def sync_offline_messages(self):
+        if os.path.exists(self.offline_file):
+            try:
+                with open(self.offline_file, 'r') as f:
+                    lines = f.readlines()
+                for line in lines:
+                    try:
+                        msg_obj = json.loads(line.strip())
+                        target_ip = msg_obj.get("target_ip")
+                        target_port = msg_obj.get("target_port")
+                        message = msg_obj.get("message")
+                        msg_type = msg_obj.get("msg_type", "chat")
+                        self.send_message_p2p(target_ip, target_port, message, msg_type)
+                    except Exception as ex:
+                        logging.error("Error syncing a message: %s", ex)
+                os.remove(self.offline_file)
+                logging.info("Offline messages synced and file removed.")
+            except Exception as e:
+                logging.error("Error syncing offline messages: %s", e)
 
     def menu(self):
         while True:
@@ -262,7 +294,7 @@ class USER:
             elif choice == "5":
                 threading.Thread(target=self.start_livestream, daemon=True).start()
             else:
-                print("[ERROR] Invalid option. Please try again.")
+                logging.error("Invalid option. Please try again.")
 
     def talk_to_tracker_chat(self):
         if self.chat_history:
@@ -282,10 +314,9 @@ class USER:
                 self.isChatRunning = False
                 break
             else:
-                local_msg = f"\033[1;33m{self.name} >> {client_input}\033[0m"
+                local_msg = f"{self.name} >> {client_input}"
                 self.chat_history.append(local_msg)
-                if self.isChatRunning:
-                    print(local_msg)
+                logging.info("Tracker chat: %s", local_msg)
                 request = json.dumps({
                     "command": "MSG_SEND",
                     "ip": self.ip,
@@ -296,12 +327,12 @@ class USER:
                 try:
                     self.tracker_socket.sendall(request.encode('utf-8'))
                 except Exception as e:
-                    print(f"[ERROR] Error sending message: {e}")
+                    logging.error("Error sending tracker message: %s", e)
                     break
 
     def receive_tracker_message(self):
         if self.tracker_socket is None:
-            print("[ERROR] No tracker connection to receive messages.")
+            logging.error("No tracker connection to receive messages.")
             return
         while self.isChatRunning:
             try:
@@ -310,23 +341,21 @@ class USER:
                     break
                 data = json.loads(server_message)
                 if data.get("command") == "MSG_RECV":
-                    msg = f"\033[1;34m{data['client_name']} >> {data['message']}\033[0m"
+                    msg = f"{data['client_name']} >> {data['message']}"
                     self.chat_history.append(msg)
-                    if self.isChatRunning:
-                        print(msg)
+                    logging.info("Received tracker message: %s", msg)
                 elif data.get("command") == "NOTIFY":
-                    msg = f"\033[1;32m[NOTIFY] {data['message']}\033[0m"
+                    msg = f"[NOTIFY] {data['message']}"
                     self.chat_history.append(msg)
-                    if self.isChatRunning:
-                        print(msg)
+                    logging.info("Notification: %s", msg)
             except (json.JSONDecodeError, ConnectionResetError):
-                print("[ERROR] Lost connection to tracker.")
+                logging.error("Lost connection to tracker.")
                 break
 
     def send_direct_message_menu(self):
         peers = self.get_peer_list()
         if not peers:
-            print("[INFO] No peers available for direct messaging.")
+            logging.info("No peers available for direct messaging.")
             return
         print("\nSelect a peer to send a direct message:")
         valid_peers = []
@@ -335,7 +364,7 @@ class USER:
                 continue
             valid_peers.append(peer)
         if not valid_peers:
-            print("[INFO] No valid peers found for direct messaging.")
+            logging.info("No valid peers found for direct messaging.")
             return
         for idx, peer in enumerate(valid_peers):
             print(f"{idx}. {peer['name']} ({peer['ip']}:{peer['port']})")
@@ -348,25 +377,25 @@ class USER:
             message = input("Enter your message: ")
             self.send_message_p2p(target_ip, target_port, message, msg_type="chat")
         except Exception as e:
-            print(f"[ERROR] Invalid selection or error: {e}")
+            logging.error("Invalid selection or error: %s", e)
 
     def start_livestream(self):
         cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
         cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
         cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
         if not cap.isOpened():
-            print("[ERROR] Cannot access webcam for livestream.")
+            logging.error("Cannot access webcam for livestream.")
             return
-        print("[LIVESTREAM] Starting livestream. Press 'q' in the video window to stop.")
+        logging.info("Starting livestream. Press 'q' in the video window to stop.")
         while True:
             ret, frame = cap.read()
             if not ret:
-                print("[ERROR] Failed to read frame from webcam.")
+                logging.error("Failed to read frame from webcam.")
                 break
             encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 50]
             ret, buffer = cv2.imencode('.jpg', frame, encode_param)
             if not ret:
-                print("[ERROR] Failed to encode frame.")
+                logging.error("Failed to encode frame.")
                 continue
             jpg_as_text = base64.b64encode(buffer).decode('utf-8')
             self.send_udp_broadcast(jpg_as_text, msg_type="livestream")

@@ -1,7 +1,10 @@
 import sys
+import logging
 from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QLabel, QLineEdit, QDialog, QMessageBox
 from PyQt6.QtGui import QFont
 from PyQt6.QtCore import Qt, pyqtSignal
+
+logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
 class RegisterDialog(QDialog):
     def __init__(self):
@@ -37,6 +40,7 @@ class RegisterDialog(QDialog):
         if not username or not password:
             QMessageBox.warning(self, "Registration Failed", "Username and password cannot be empty!")
         else:
+            logging.info("Registration successful for user: %s", username)
             QMessageBox.information(self, "Registration Successful", "You have successfully registered!")
             self.accept()
     
@@ -106,10 +110,11 @@ class LoginRegisterUI(QWidget):
             QMessageBox.warning(self, "Login Failed", "Username and password cannot be empty!")
             return
         
-        print(f"Logged in as: {username}")
+        logging.info("Logged in as: %s", username)
         QMessageBox.information(self, "Login Successful", "You have successfully logged in!")
         
         self.username = username
+        # Trong phiên bản thực tế, session_info sẽ được nhận từ API sau khi login thành công
         self.session_info = {"session_id": "dummy-session-id"}
         
         self.login_success.emit(self.username, self.session_info)
@@ -117,7 +122,7 @@ class LoginRegisterUI(QWidget):
     def login_as_viewer(self):
         username = self.username_input.text().strip() or "Viewer"
         QMessageBox.information(self, "Viewer Mode", "You are now in viewer mode. You cannot interact with the chat.")
-        print("Logged in as Viewer")
+        logging.info("Logged in as Viewer: %s", username)
         
         self.username = username
         self.session_info = {"session_id": "dummy-session-id"}
