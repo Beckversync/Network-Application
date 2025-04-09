@@ -1,0 +1,26 @@
+[2025-04-09 09:22:27,852] INFO: Logged in as: an08
+[2025-04-09 09:22:28,925] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-09 09:22:30,952] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-09 09:22:30,954] INFO: P2P SERVER listening on 127.0.0.1:7130
+[2025-04-09 09:22:30,954] INFO: UDP LISTENER listening on 127.0.0.1:7131 for UDP livestream.
+[2025-04-09 09:22:39,304] INFO: Sending message: alo
+[2025-04-09 09:23:16,582] INFO: Sending message: alo
+[2025-04-09 09:24:26,890] INFO: Live mode set to True
+[2025-04-09 09:24:27,477] INFO: Live mode set to False
+[2025-04-09 09:24:43,422] INFO: Status changed to Away
+[2025-04-09 09:24:45,516] INFO: Status changed to Online
+[2025-04-09 09:24:50,032] INFO: Sending message: alo
+[2025-04-09 10:09:38,588] INFO: Logged in as: an08
+[2025-04-09 10:09:39,796] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-09 10:09:41,837] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-09 10:09:41,839] INFO: P2P SERVER listening on 127.0.0.1:6425
+[2025-04-09 10:09:41,839] INFO: UDP LISTENER listening on 127.0.0.1:6426 for UDP livestream.
+[2025-04-09 10:09:46,930] INFO: Sending message: alo
+[2025-04-09 10:09:47,044] INFO: Message from an08 sent in channel 'Con Chó'
+[2025-04-09 10:10:03,819] INFO: Sending message: lo cc
+[2025-04-09 10:10:03,917] INFO: Message from an08 sent in channel 'Con Chó'
+[2025-04-09 11:24:00,976] INFO: Logged in as: 123
+[2025-04-09 11:24:02,445] INFO: User '123' logging in (authenticated mode).
+[2025-04-09 11:24:04,478] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-09 11:24:04,480] INFO: P2P SERVER listening on 127.0.0.1:6054
+[2025-04-09 11:24:04,481] INFO: UDP LISTENER listening on 127.0.0.1:6055 for UDP livestream.

@@ -1,6 +1,8 @@
 import sys
 import os
 import logging
+import threading
+
 
 # Cấu hình logging tập trung: ghi log vào file system.log (ASCII text file) và console
 logger = logging.getLogger()
@@ -22,6 +24,7 @@ logger.addHandler(console_handler)
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(BASE_DIR)
 
+from server import server_program  
 from PyQt6.QtWidgets import QApplication
 from UI.Login import LoginRegisterUI
 from UI.Home import DiscordUI
@@ -65,5 +68,7 @@ class AppManager:
         sys.exit(self.app.exec())
 
 if __name__ == "__main__":
+    server_thread = threading.Thread(target=server_program, args=("0.0.0.0", 22236), daemon=True)
+    server_thread.start()
     app_manager = AppManager()
     app_manager.run()

@@ -42,8 +42,8 @@ def send_message(username: str, channel_name: str, message_text: str):
     channel_data = channels_collection.find_one({"channel_name": channel_name})
     if not channel_data:
         return {"status": "error", "message": "Channel not found"}
-    if username not in channel_data["members"]:
-        return {"status": "error", "message": "Only registered users can send messages"}
+    # if username not in channel_data["members"]:
+    #     return {"status": "error", "message": "Only registered users can send messages"}
     new_message = {"sender": username, "text": message_text}
     channels_collection.update_one(
         {"channel_name": channel_name},

@@ -1,0 +1,30 @@
+[2025-04-09 13:42:20,472] INFO: User an08 logged in successfully
+[2025-04-09 13:46:20,604] INFO: User an08 logged in successfully
+[2025-04-09 13:51:29,122] INFO: User an08 logged in successfully
+[2025-04-09 13:51:29,124] INFO: Logged in as: an08
+[2025-04-09 13:51:30,183] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-09 13:51:32,213] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-09 13:51:32,214] INFO: P2P SERVER listening on 127.0.0.1:6584
+[2025-04-09 13:51:32,214] INFO: UDP LISTENER listening on 127.0.0.1:6585 for UDP livestream.
+[2025-04-09 13:53:25,403] INFO: Registration successful for user: an10
+[2025-04-09 14:06:19,376] ERROR: Registration error: 'RegisterDialog' object has no attribute 'client_socket'
+[2025-04-09 14:06:24,443] ERROR: Registration error: 'RegisterDialog' object has no attribute 'client_socket'
+[2025-04-09 14:09:04,730] ERROR: Registration error: 'RegisterDialog' object has no attribute 'client_socket'
+[2025-04-09 14:13:34,217] INFO: User an11 registered successfully
+[2025-04-09 14:13:34,218] INFO: Registration successful for user: an11
+[2025-04-09 14:13:44,418] INFO: User an11 logged in successfully
+[2025-04-09 14:13:44,420] INFO: Logged in as: an11
+[2025-04-09 14:13:45,228] INFO: User 'an11' logging in (authenticated mode).
+[2025-04-09 14:13:47,262] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-09 14:13:47,263] INFO: P2P SERVER listening on 127.0.0.1:7089
+[2025-04-09 14:13:47,263] INFO: UDP LISTENER listening on 127.0.0.1:7090 for UDP livestream.
+[2025-04-09 14:13:57,514] INFO: Sending message: alo
+[2025-04-09 14:13:57,681] INFO: Message from an11 sent in channel 'Con Chó'
+[2025-04-09 14:14:07,621] INFO: Sending message: lo cc
+[2025-04-09 14:14:07,722] INFO: Message from an11 sent in channel 'Con Chó'
+[2025-04-09 15:02:37,183] INFO: Logged in as Viewer: Viewer
+[2025-04-09 15:02:37,184] INFO: User 'Viewer' logging in (visitor mode).
+[2025-04-09 15:02:39,235] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-09 15:02:39,238] INFO: P2P SERVER listening on 127.0.0.1:8581
+[2025-04-09 15:02:39,238] INFO: UDP LISTENER listening on 127.0.0.1:8582 for UDP livestream.
+[2025-04-09 15:02:50,682] ERROR: Error loading channel messages: This channel does not allow visitor viewing operation
