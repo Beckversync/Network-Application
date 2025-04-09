@@ -3,11 +3,15 @@ import uuid
 from datetime import datetime, timezone
 from models.authModel import UserRegister, UserLogin, Visitor
 import logging
+import re
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
 def register_user(user: UserRegister) -> dict:
     try:
+        if not re.match(r"^[\w\.-]+@hcmut\.edu\.vn$", user.email):
+            return {"status": "error", "message": "Email must be in format '@hcmut.edu.vn'"}
+
         if users_collection.find_one({"email": user.email}):
             return {"status": "error", "message": "Email already registered"}
         if users_collection.find_one({"username": user.username}):
