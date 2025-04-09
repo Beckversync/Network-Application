@@ -6,11 +6,12 @@ from PyQt6.QtWidgets import (
     QVBoxLayout, QHBoxLayout, QSplitter,
     QPushButton, QListWidget, QListWidgetItem,
     QTextEdit, QLineEdit, QLabel, QTabWidget,
-    QCheckBox, QFrame, QComboBox, QDialog
+    QCheckBox, QFrame, QComboBox, QDialog, QMessageBox
 )
 from PyQt6.QtCore import Qt, QTimer
 from PyQt6.QtGui import QFont
 from request import channelRequest
+import socket
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
@@ -348,6 +349,28 @@ class DiscordUI(QMainWindow):
         # Có thể gửi request cập nhật status lên server
 
     def logout(self):
+        try:
+            client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            server_ip = "127.0.0.1"
+            server_port = 22236
+            client_socket.connect((server_ip, server_port))
+            session_id = self.session_info.get("session_id")
+            request_data = {"action": "logout", "session_id": session_id}
+            client_socket.send(json.dumps(request_data).encode())
+
+            # Nhận phản hồi từ server
+            response_str = client_socket.recv(4096).decode()
+            response = json.loads(response_str)
+            client_socket.close()
+
+            if response.get("status") == "success":
+                QMessageBox.information(self, "Logout", "You have been logged out.")
+            else:
+                QMessageBox.warning(self, "Logout Failed", response.get("message", "Unknown error"))
+
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"Logout error: {str(e)}")
+
         self.close()
         self.login_window.show()
 

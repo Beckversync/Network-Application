@@ -28,3 +28,52 @@
 [2025-04-09 15:02:39,238] INFO: P2P SERVER listening on 127.0.0.1:8581
 [2025-04-09 15:02:39,238] INFO: UDP LISTENER listening on 127.0.0.1:8582 for UDP livestream.
 [2025-04-09 15:02:50,682] ERROR: Error loading channel messages: This channel does not allow visitor viewing operation
+[2025-04-09 15:03:14,289] INFO: User an11 logged in successfully
+[2025-04-09 15:03:14,292] INFO: Logged in as: an11
+[2025-04-09 15:03:15,058] INFO: User 'an11' logging in (authenticated mode).
+[2025-04-09 15:03:17,109] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-09 15:03:17,111] INFO: P2P SERVER listening on 127.0.0.1:7726
+[2025-04-09 15:03:17,111] INFO: UDP LISTENER listening on 127.0.0.1:7727 for UDP livestream.
+[2025-04-09 15:03:23,298] INFO: Sending message: bye cl
+[2025-04-09 15:03:23,398] INFO: Message from an11 sent in channel 'test'
+[2025-04-09 15:03:36,969] INFO: Sending message: thang nao z
+[2025-04-09 15:03:37,070] INFO: Message from an11 sent in channel 'test'
+[2025-04-09 15:18:39,004] INFO: User an11 logged in successfully
+[2025-04-09 15:18:39,006] INFO: Logged in as: an11
+[2025-04-09 15:18:39,988] INFO: User 'an11' logging in (authenticated mode).
+[2025-04-09 15:18:42,040] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-09 15:18:42,041] INFO: P2P SERVER listening on 127.0.0.1:8268
+[2025-04-09 15:18:42,041] INFO: UDP LISTENER listening on 127.0.0.1:8269 for UDP livestream.
+[2025-04-09 15:19:00,146] INFO: Sending message: vc
+[2025-04-09 15:19:00,248] INFO: Message from an11 sent in channel 'test1'
+[2025-04-09 15:19:34,122] INFO: Sending message: nay dang user la dc nhan
+[2025-04-09 15:19:34,233] INFO: Message from an11 sent in channel 'test1'
+[2025-04-09 15:19:40,571] INFO: Sending message: dder set laij
+[2025-04-09 15:19:40,673] INFO: Message from an11 sent in channel 'test1'
+[2025-04-09 15:19:51,383] INFO: Sending message: ma dm chua co tinh nang join nua
+[2025-04-09 15:19:51,485] INFO: Message from an11 sent in channel 'test1'
+[2025-04-09 15:21:01,768] INFO: User an11 logged in successfully
+[2025-04-09 15:21:01,770] INFO: Logged in as: an11
+[2025-04-09 15:21:03,331] INFO: User 'an11' logging in (authenticated mode).
+[2025-04-09 15:21:05,364] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-09 15:21:05,365] INFO: UDP LISTENER listening on 127.0.0.1:8902 for UDP livestream.
+[2025-04-09 15:21:05,365] INFO: P2P SERVER listening on 127.0.0.1:8901
+[2025-04-09 15:25:42,974] INFO: User an11 logged in successfully
+[2025-04-09 15:25:42,976] INFO: Logged in as: an11
+[2025-04-09 15:25:43,860] INFO: User 'an11' logging in (authenticated mode).
+[2025-04-09 15:25:45,889] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-09 15:25:45,891] INFO: P2P SERVER listening on 127.0.0.1:6999
+[2025-04-09 15:25:45,891] INFO: UDP LISTENER listening on 127.0.0.1:7000 for UDP livestream.
+[2025-04-09 15:28:54,506] INFO: User an11 logged in successfully
+[2025-04-09 15:28:54,509] INFO: Logged in as: an11
+[2025-04-09 15:28:58,442] INFO: User 'an11' logging in (authenticated mode).
+[2025-04-09 15:29:00,486] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-09 15:29:00,488] INFO: P2P SERVER listening on 127.0.0.1:7339
+[2025-04-09 15:29:00,488] INFO: UDP LISTENER listening on 127.0.0.1:7340 for UDP livestream.
+[2025-04-09 15:36:47,439] INFO: User an09 logged in successfully
+[2025-04-09 15:36:47,442] INFO: Logged in as: an09
+[2025-04-09 15:36:49,688] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-09 15:36:51,741] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-09 15:36:51,744] INFO: P2P SERVER listening on 127.0.0.1:8906
+[2025-04-09 15:36:51,744] INFO: UDP LISTENER listening on 127.0.0.1:8907 for UDP livestream.
+[2025-04-09 15:37:09,604] INFO: User an09 logged out
