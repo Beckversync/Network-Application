@@ -60,6 +60,7 @@ class USER:
         return random.randint(6000, 9000)
 
     def connect_to_tracker(self, TRACKER_IP, TRACKER_PORT):
+        
         try:
             self.tracker_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.tracker_socket.connect((TRACKER_IP, TRACKER_PORT))

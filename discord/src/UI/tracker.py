@@ -5,6 +5,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
+
 class TRACKER:
     def __init__(self, host="127.0.0.1", port=5000):
         self.peer_list = []  # Danh sách các peer đang kết nối
@@ -13,7 +14,7 @@ class TRACKER:
 
     def handle_client(self, conn, addr):
         logging.info("New connection from %s", addr)
-    
+
         try:
             while True:
                 data = conn.recv(1024).decode('utf-8').strip()
@@ -127,6 +128,7 @@ class TRACKER:
         while True:
             conn, addr = server.accept()
             threading.Thread(target=self.handle_client, args=(conn, addr), daemon=True).start()
+
 
 if __name__ == "__main__":
     TRACKER()
