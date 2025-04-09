@@ -1757,3 +1757,53 @@
 [2025-04-09 17:52:46,722] INFO:  - beckhamngo (127.0.0.1:8295)
 [2025-04-09 17:52:46,723] INFO: Sent UDP livestream message to 127.0.0.1:8524
 [2025-04-09 17:52:46,723] INFO: Sent UDP livestream message to 127.0.0.1:6286
+[2025-04-09 21:54:16,768] INFO: User beckhamngo logged in successfully
+[2025-04-09 21:54:16,773] INFO: Logged in as: beckhamngo
+[2025-04-09 21:54:17,463] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-09 21:54:19,504] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-09 21:54:19,505] INFO: P2P SERVER listening on 127.0.0.1:6714
+[2025-04-09 21:54:19,506] INFO: UDP LISTENER listening on 127.0.0.1:6715 for UDP livestream.
+[2025-04-09 21:54:23,290] INFO: Sending message: ewqqweqw
+[2025-04-09 21:54:23,385] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-09 21:54:26,126] INFO: Sending message: eqweqwe
+[2025-04-09 21:54:26,224] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-09 21:54:27,784] INFO: Sending message: fmsmfsdf
+[2025-04-09 21:54:27,883] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-09 21:54:31,926] INFO: Status changed to Offline
+[2025-04-09 21:54:34,395] INFO: Status changed to Invisible
+[2025-04-09 21:54:36,006] INFO: Status changed to Offline
+[2025-04-09 22:00:57,502] INFO: Sending message: ửewrwerwe
+[2025-04-09 22:00:57,601] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-09 22:01:00,319] INFO: Status changed to Invisible
+[2025-04-09 22:01:02,220] INFO: Sending message: rewrewere
+[2025-04-09 22:01:02,322] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-09 22:04:19,817] INFO: User beckhamngo logged in successfully
+[2025-04-09 22:04:19,820] INFO: Logged in as: beckhamngo
+[2025-04-09 22:04:20,579] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-09 22:04:22,619] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-09 22:04:22,621] INFO: P2P SERVER listening on 127.0.0.1:6464
+[2025-04-09 22:04:22,621] INFO: UDP LISTENER listening on 127.0.0.1:6465 for UDP livestream.
+[2025-04-09 22:04:25,401] INFO: Sending message: ewqeqwe
+[2025-04-09 22:04:25,494] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-09 22:04:28,526] INFO: Sending message: t met m qua
+[2025-04-09 22:04:28,619] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-09 22:04:33,577] INFO: Status changed to Offline
+[2025-04-09 22:07:37,868] INFO: User beckhamngo logged in successfully
+[2025-04-09 22:07:37,870] INFO: Logged in as: beckhamngo
+[2025-04-09 22:07:38,581] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-09 22:07:40,618] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-09 22:07:40,621] INFO: P2P SERVER listening on 127.0.0.1:8664
+[2025-04-09 22:07:40,621] INFO: UDP LISTENER listening on 127.0.0.1:8665 for UDP livestream.
+[2025-04-09 22:07:45,423] INFO: Sending message: xong
+[2025-04-09 22:07:45,556] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-09 22:07:47,443] INFO: Sending message: clm
+[2025-04-09 22:07:47,544] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-09 22:07:49,072] INFO: Sending message: đỉnh
+[2025-04-09 22:07:49,191] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-09 22:07:54,458] INFO: User beckhamngo logged in successfully
+[2025-04-09 22:07:54,460] INFO: Logged in as: beckhamngo
+[2025-04-09 22:07:55,210] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-09 22:07:57,256] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-09 22:07:57,257] INFO: P2P SERVER listening on 127.0.0.1:8833
+[2025-04-09 22:07:57,257] INFO: UDP LISTENER listening on 127.0.0.1:8834 for UDP livestream.
+[2025-04-09 22:07:59,202] INFO: Status changed to Offline

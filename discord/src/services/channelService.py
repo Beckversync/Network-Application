@@ -1,6 +1,8 @@
+# file: channelService.py
 from config.db import channels_collection, users_collection
 from models.channelModel import Channel
 import logging
+from typing import Dict, Any, List
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
@@ -42,8 +44,6 @@ def send_message(username: str, channel_name: str, message_text: str):
     channel_data = channels_collection.find_one({"channel_name": channel_name})
     if not channel_data:
         return {"status": "error", "message": "Channel not found"}
-    # if username not in channel_data["members"]:
-    #     return {"status": "error", "message": "Only registered users can send messages"}
     new_message = {"sender": username, "text": message_text}
     channels_collection.update_one(
         {"channel_name": channel_name},
@@ -56,7 +56,6 @@ def get_channel_info(channel_name: str) -> dict:
     channel = channels_collection.find_one({"channel_name": channel_name})
     if not channel:
         return {"status": "error", "message": "Channel not found"}
-    # Trả về cả trường allow_visitor để kiểm tra trong trường hợp yêu cầu của visitor
     return {
         "status": "success",
         "channel_name": channel["channel_name"],
@@ -96,3 +95,111 @@ def get_all_channels():
     channels = channels_collection.find({}, {"_id": 0, "channel_name": 1, "owner": 1})
     all_channels = list(channels)
     return {"status": "success", "data": all_channels}
+
+# >>> NEW <<<
+def sync_channels(local_channels: Dict[str, Any], username: str) -> dict:
+    """
+    local_channels có dạng:
+      {
+        "<channel_name>": {
+          "name": "<channel_name>",
+          "members": [...],
+          "messages": [ { "sender": ..., "text": ... }, ... ]
+        },
+        ...
+      }
+    Ta sẽ đồng bộ mỗi channel với DB. Trường 'owner' = username (chủ kênh).
+    Nếu channel chưa tồn tại trên server, ta tạo. Nếu đã tồn tại, merge tin nhắn hai chiều.
+    Trả về "synced_channels" là phiên bản cuối cùng (danh sách messages, members, …).
+    """
+    synced_channels = {}
+
+    for ch_name, ch_data in local_channels.items():
+        # Kiểm tra kênh trên server
+        existing = channels_collection.find_one({"channel_name": ch_name})
+        if not existing:
+            # Tạo mới
+            # Lưu ý: ta giả định host= username
+            new_channel = Channel(
+                channel_name=ch_name,
+                owner=username,
+                members=ch_data.get("members", [username]),
+                allow_visitor=True  # tuỳ ý
+            )
+            channels_collection.insert_one(new_channel.dict())
+            # Ghi messages local lên server
+            local_msgs = ch_data.get("messages", [])
+            if local_msgs:
+                for msg in local_msgs:
+                    channels_collection.update_one(
+                        {"channel_name": ch_name},
+                        {"$push": {"messages": msg}}
+                    )
+            logging.info("Created channel '%s' on server from local host '%s'", ch_name, username)
+
+            # Thêm kênh vào hosted_channels của user
+            users_collection.update_one(
+                {"username": username},
+                {"$addToSet": {"hosted_channels": ch_name, "joined_channels": ch_name}}
+            )
+
+            # synced_channels[ch_name] = final info
+            synced_channels[ch_name] = {
+                "owner": username,
+                "members": ch_data.get("members", [username]),
+                "messages": local_msgs
+            }
+        else:
+            # Kênh đã tồn tại -> merge messages
+            server_msgs = existing.get("messages", [])
+            local_msgs = ch_data.get("messages", [])
+
+            # 1) Thêm tin từ server vào local nếu local chưa có
+            #    (Ở đây so sánh dict msg, thực tế nên so sánh theo id/time)
+            for sm in server_msgs:
+                if sm not in local_msgs:
+                    local_msgs.append(sm)
+
+            # 2) Đẩy tin nhắn local lên server
+            for lm in local_msgs:
+                if lm not in server_msgs:
+                    channels_collection.update_one(
+                        {"channel_name": ch_name},
+                        {"$push": {"messages": lm}}
+                    )
+
+            # 3) Merge members
+            server_members = existing.get("members", [])
+            local_members = ch_data.get("members", [])
+            # Ai chưa có trong server_members thì push
+            for mem in local_members:
+                if mem not in server_members:
+                    server_members.append(mem)
+            # Ai chưa có trong local thì thêm
+            for mem in server_members:
+                if mem not in local_members:
+                    local_members.append(mem)
+
+            channels_collection.update_one(
+                {"channel_name": ch_name},
+                {
+                    "$set": {
+                        "messages": local_msgs,
+                        "members": server_members
+                    }
+                }
+            )
+            logging.info("Merged channel '%s' from local <-> server for host '%s'", ch_name, username)
+
+            # Lưu final merged
+            synced_channels[ch_name] = {
+                "owner": existing["owner"],
+                "members": server_members,
+                "messages": local_msgs
+            }
+
+    return {
+        "status": "success",
+        "message": "Sync completed",
+        "synced_channels": synced_channels
+    }

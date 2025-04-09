@@ -1,3 +1,4 @@
+# file: channelRequest.py
 import json
 from controllers.channelController import (
     create_channel_controller,
@@ -7,7 +8,8 @@ from controllers.channelController import (
     get_user_channels_controller,
     delete_channel_controller,
     get_all_channels_controller,
-    get_all_users_controller
+    get_all_users_controller,
+    sync_channels_controller
 )
 
 def handle_channel_request(data: str) -> str:
@@ -17,6 +19,7 @@ def handle_channel_request(data: str) -> str:
         request = json.loads(data)
         if not isinstance(request, dict):
             return json.dumps({"status": "error", "message": "Invalid request format"})
+
         action = request.get("action")
         if action == "create_channel":
             response = create_channel_controller(request)
@@ -34,9 +37,14 @@ def handle_channel_request(data: str) -> str:
             response = get_all_channels_controller(request)
         elif action == "get_all_users":
             response = get_all_users_controller(request)
+        # >>> NEW <<<
+        elif action == "sync_channels":
+            response = sync_channels_controller(request)
         else:
             response = {"status": "error", "message": "Invalid action"}
+
         return json.dumps(response)
+
     except json.JSONDecodeError:
         return json.dumps({"status": "error", "message": "Invalid JSON format"})
     except Exception as e:

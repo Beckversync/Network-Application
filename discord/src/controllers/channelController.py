@@ -1,6 +1,8 @@
+# file: channelController.py
 from services.channelService import (
     create_channel, join_channel, send_message, get_channel_info,
-    get_joined_channels, get_hosted_channels, delete_channel, get_all_channels
+    get_joined_channels, get_hosted_channels, delete_channel, get_all_channels,
+    sync_channels
 )
 
 def create_channel_controller(data):
@@ -67,7 +69,15 @@ def get_all_channels_controller(data):
     result = get_all_channels()
     return result
 
-# Hỗ trợ truy vấn danh sách các phiên đăng nhập của người dùng
 def get_all_users_controller(data):
     from services.authService import get_all_users
     return get_all_users()
+
+# >>> NEW <<<
+def sync_channels_controller(data):
+    username = data.get("username")
+    local_channels = data.get("local_channels")
+    if not username or not local_channels:
+        return {"status": "error", "message": "Missing username or local_channels"}
+    result = sync_channels(local_channels, username)
+    return result
