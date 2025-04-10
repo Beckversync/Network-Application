@@ -183,7 +183,16 @@ class LoginRegisterUI(QWidget):
             QMessageBox.information(self, "Login Successful", "You have successfully logged in!")
 
             self.username = username
-            self.session_info = response.get("session_info", {"session_id": "dummy-session-id"})
+            user_data = response.get("user", {})
+            sessions = user_data.get("sessions", [])
+
+            if sessions:
+                last_session = sessions[-1]
+                self.session_info = {"session_id": last_session["session_id"]}
+            else:
+                self.session_info = {"session_id": "dummy-session-id"}
+
+            print("Session info:", self.session_info)
             self.login_success.emit(self.username, self.session_info)
 
         except Exception as e:

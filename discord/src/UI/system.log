@@ -24,6 +24,3 @@
 [2025-04-09 11:24:04,478] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
 [2025-04-09 11:24:04,480] INFO: P2P SERVER listening on 127.0.0.1:6054
 [2025-04-09 11:24:04,481] INFO: UDP LISTENER listening on 127.0.0.1:6055 for UDP livestream.
-[2025-04-10 00:07:25,938] INFO: User beckhamngo logged in successfully
-[2025-04-10 00:49:46,421] INFO: User an08 logged in successfully
-[2025-04-10 00:51:30,960] INFO: User an08 logged in successfully

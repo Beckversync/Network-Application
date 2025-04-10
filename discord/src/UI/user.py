@@ -11,7 +11,6 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
-
 class USER:
     def __init__(self, TRACKER_IP, TRACKER_PORT, headless=False, username=None, port=None):
         if username is not None:
@@ -31,36 +30,22 @@ class USER:
         self.udp_port = self.port + 1
         self.tracker_socket = None
         self.connect_to_tracker(TRACKER_IP, TRACKER_PORT)
-
-        # Khởi động server TCP để lắng nghe kết nối P2P
         self.start_p2p_server()
-
-        # Khởi động listener UDP để lắng nghe livestream
         self.start_udp_listener()
-
-        self.chat_history = []  # Lịch sử chat (chat với Tracker)
+        self.chat_history = []  # Lịch sử chat
         self.isChatRunning = False
 
-        # Offline caching (dùng cho tin nhắn P2P gửi thất bại)
+        # Offline caching: file lưu tin nhắn chưa sync
         self.offline_file = f"offline_{self.name}.txt"
         self.sync_offline_messages()
 
-        # >>> NEW <<< 
-        # File local để lưu channel mà user này HOST
-        # Ví dụ: channels_username.json, chứa thông tin về kênh cục bộ, tin nhắn, vv.
-        self.local_channel_file = f"channels_{self.name}.json"
-
-        # Tải thông tin channel cục bộ lúc khởi động
-        self.local_channels = self.load_local_channels()
-
         if not headless:
             self.menu()
-
+            
     def _get_random_port(self):
         return random.randint(6000, 9000)
 
     def connect_to_tracker(self, TRACKER_IP, TRACKER_PORT):
-        
         try:
             self.tracker_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.tracker_socket.connect((TRACKER_IP, TRACKER_PORT))
@@ -117,12 +102,6 @@ class USER:
                     else:
                         text = message_data.get("message", "")
                         logging.info("[P2P MESSAGE] %s -> %s: %s", sender, self.name, text)
-
-                        # >>> NEW <<<
-                        # (Tuỳ ý mở rộng xử lý tin nhắn P2P, ví dụ: nếu kênh do mình host,
-                        #  thì ghi vào local_channels rồi sync sau.)
-                        # Ở đây chỉ log ra console.
-                        # ---------------------------------------------------------------
                 except Exception as e:
                     logging.error("Error handling received P2P data: %s", e)
         except Exception as e:
@@ -264,7 +243,7 @@ class USER:
 
     def store_offline_message(self, msg_obj):
         try:
-            with open(self.offline_file, 'a', encoding='utf-8') as f:
+            with open(self.offline_file, 'a') as f:
                 f.write(json.dumps(msg_obj) + "\n")
             logging.info("Stored offline message: %s", msg_obj)
         except Exception as e:
@@ -273,7 +252,7 @@ class USER:
     def sync_offline_messages(self):
         if os.path.exists(self.offline_file):
             try:
-                with open(self.offline_file, 'r', encoding='utf-8') as f:
+                with open(self.offline_file, 'r') as f:
                     lines = f.readlines()
                 for line in lines:
                     try:
@@ -290,135 +269,6 @@ class USER:
             except Exception as e:
                 logging.error("Error syncing offline messages: %s", e)
 
-    # >>> NEW <<<
-    # ---------------------------
-    # Phần LOCAL CHANNEL HOSTING
-    # ---------------------------
-    def load_local_channels(self):
-        """Load thông tin channel cục bộ (channel mà user này host) từ file JSON."""
-        if os.path.exists(self.local_channel_file):
-            try:
-                with open(self.local_channel_file, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                logging.info("Loaded local channel data from %s", self.local_channel_file)
-                return data
-            except Exception as e:
-                logging.error("Could not load local channel file: %s", e)
-                return {}
-        else:
-            return {}
-
-    def save_local_channels(self):
-        """Lưu local_channels ra file JSON."""
-        try:
-            with open(self.local_channel_file, 'w', encoding='utf-8') as f:
-                json.dump(self.local_channels, f, ensure_ascii=False, indent=2)
-        except Exception as e:
-            logging.error("Could not save local channel file: %s", e)
-
-    def create_local_channel(self, channel_name):
-        """
-        Tạo kênh do chính user này host (chỉ lưu cục bộ).
-        Mỗi kênh là 1 dict: {
-          "name": <channel_name>,
-          "members": [self.name],
-          "messages": []
-        }
-        """
-        if channel_name in self.local_channels:
-            logging.info("Channel %s already exists locally.", channel_name)
-            return
-        self.local_channels[channel_name] = {
-            "name": channel_name,
-            "members": [self.name],
-            "messages": []
-        }
-        logging.info("Created local channel: %s", channel_name)
-        self.save_local_channels()
-
-    def add_local_message(self, channel_name, sender, text):
-        """Thêm 1 tin nhắn vào channel cục bộ."""
-        if channel_name not in self.local_channels:
-            logging.warning("Channel %s is not hosted locally!", channel_name)
-            return
-        self.local_channels[channel_name]["messages"].append({
-            "sender": sender,
-            "text": text
-        })
-        self.save_local_channels()
-
-    def sync_local_channels_with_server(self):
-        """
-        Đồng bộ tất cả kênh local mà user này host với server.
-        - Pull tin nhắn từ server (nếu có user khác gửi trong lúc host offline).
-        - Push tin nhắn local lên server (nếu host tạo offline).
-        
-        Giả sử ta gọi API server qua channelRequest, 
-        hoặc qua socket server trung tâm (tuỳ cách bạn hiện thực).
-        Ở đây minh hoạ pseudo-code:
-        """
-        try:
-            import requests  # Hoặc bạn dùng socket tùy ý, code minh hoạ
-        except:
-            logging.info("You need requests or custom code to sync. This is an example stub.")
-            return
-
-        # Ví dụ: ta duyệt qua các channel local, gọi get_channel_info ở server để so sánh
-        for channel_name, channel_data in self.local_channels.items():
-            # 1) Lấy info server
-            # (Đây chỉ là code ví dụ. Thực tế bạn nên dùng channelRequest.handle_channel_request.)
-            # -------------------------------------------------------------------------
-            server_info = None
-            try:
-                # Giả sử server lắng nghe API REST cổng 8000 -> thay bằng code thật của bạn
-                r = requests.post("http://127.0.0.1:8000/api/channel/info",
-                                  json={"channel_name": channel_name})
-                server_info = r.json()
-            except:
-                logging.error("Could not connect to server to sync channel '%s'", channel_name)
-                continue
-            
-            if server_info.get("status") != "success":
-                # Kênh chưa có trên server -> tạo kênh trên server
-                # ...
-                # Tạm bỏ qua, tuỳ logic 
-                pass
-            else:
-                server_msgs = server_info.get("messages", [])
-                local_msgs = channel_data.get("messages", [])
-                # Tìm tin nhắn nào chưa có ở local vs chưa có ở server -> đồng bộ hai chiều
-
-                # 2) Pull from server
-                #    So sánh, giả sử message text + sender + index. Code minh hoạ đơn giản.
-                #    Thực tế bạn cần ID tin nhắn hoặc timestamp.
-                for msg in server_msgs:
-                    if msg not in local_msgs:
-                        local_msgs.append(msg)
-
-                # 3) Push to server
-                #    Tìm msg nào ở local mà server chưa có.
-                #    Ở đây ta so sánh msg dictionary. Thực tế cần cẩn thận.
-                for msg in local_msgs:
-                    if msg not in server_msgs:
-                        # Gửi msg này lên server
-                        try:
-                            requests.post("http://127.0.0.1:8000/api/channel/send_message",
-                                          json={
-                                              "channel_name": channel_name,
-                                              "username": msg["sender"],
-                                              "message": msg["text"]
-                                          })
-                        except:
-                            logging.error("Failed to push message to server for channel %s", channel_name)
-
-                # Lưu local_channels sau khi pull
-                self.local_channels[channel_name]["messages"] = local_msgs
-                self.save_local_channels()
-
-        logging.info("Finished local->server sync for all hosted channels.")
-
-    # >>> END of NEW PART <<<
-
     def menu(self):
         while True:
             print("\n===== MENU =====")
@@ -428,11 +278,6 @@ class USER:
             print("3. Send Message via Tracker (Broadcast, Client-Server)")
             print("4. Send Direct P2P Message (One-to-One)")
             print("5. Start Livestream (UDP P2P)")
-            # >>> NEW <<<
-            print("6. Create local channel (Hosting cục bộ)")
-            print("7. Add local message to hosted channel (offline mode)")
-            print("8. Sync local channels with server")
-
             choice = input("Choose an option: ")
             if choice == "0":
                 self.leave_tracker()
@@ -448,15 +293,6 @@ class USER:
                 self.send_direct_message_menu()
             elif choice == "5":
                 threading.Thread(target=self.start_livestream, daemon=True).start()
-            elif choice == "6":
-                ch_name = input("Enter channel name to create locally: ")
-                self.create_local_channel(ch_name)
-            elif choice == "7":
-                ch_name = input("Which local channel? ")
-                msg = input("Your message: ")
-                self.add_local_message(ch_name, self.name, msg)
-            elif choice == "8":
-                self.sync_local_channels_with_server()
             else:
                 logging.error("Invalid option. Please try again.")
 
@@ -481,19 +317,18 @@ class USER:
                 local_msg = f"{self.name} >> {client_input}"
                 self.chat_history.append(local_msg)
                 logging.info("Tracker chat: %s", local_msg)
-                if self.tracker_socket:
-                    request = json.dumps({
-                        "command": "MSG_SEND",
-                        "ip": self.ip,
-                        "port": self.port,
-                        "name": self.name,
-                        "message": client_input
-                    })
-                    try:
-                        self.tracker_socket.sendall(request.encode('utf-8'))
-                    except Exception as e:
-                        logging.error("Error sending tracker message: %s", e)
-                        break
+                request = json.dumps({
+                    "command": "MSG_SEND",
+                    "ip": self.ip,
+                    "port": self.port,
+                    "name": self.name,
+                    "message": client_input
+                })
+                try:
+                    self.tracker_socket.sendall(request.encode('utf-8'))
+                except Exception as e:
+                    logging.error("Error sending tracker message: %s", e)
+                    break
 
     def receive_tracker_message(self):
         if self.tracker_socket is None:
@@ -570,7 +405,6 @@ class USER:
             time.sleep(0.1)
         cap.release()
         cv2.destroyAllWindows()
-
 
 if __name__ == '__main__':
     USER("127.0.0.1", 5000)

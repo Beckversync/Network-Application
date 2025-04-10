@@ -64,3 +64,495 @@
 [2025-04-10 01:11:23,374] INFO: UDP LISTENER listening on 127.0.0.1:7332 for UDP livestream.
 [2025-04-10 01:11:23,386] ERROR: Error getting user list: cannot import name 'get_all_users' from 'services.authService' (d:\HCMUT-K22\Mạng Máy Tính\ASG1\discord\src\services\authService.py)
 [2025-04-10 01:11:23,435] ERROR: Error getting user list: cannot import name 'get_all_users' from 'services.authService' (d:\HCMUT-K22\Mạng Máy Tính\ASG1\discord\src\services\authService.py)
+[2025-04-10 01:15:01,955] INFO: User beckhamngo logged in successfully
+[2025-04-10 01:15:01,955] INFO: Logged in as: beckhamngo
+[2025-04-10 01:15:02,723] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-10 01:15:02,723] INFO: Tracker response: Peer beckhamngo (127.0.0.1:6618) added
+[2025-04-10 01:15:02,723] INFO: P2P SERVER listening on 127.0.0.1:6618
+[2025-04-10 01:15:02,723] INFO: UDP LISTENER listening on 127.0.0.1:6619 for UDP livestream.
+[2025-04-10 01:15:02,742] ERROR: Error getting user list: cannot import name 'get_all_users' from 'services.authService' (d:\HCMUT-K22\Mạng Máy Tính\ASG1\discord\src\services\authService.py)
+[2025-04-10 01:15:02,792] ERROR: Error getting user list: cannot import name 'get_all_users' from 'services.authService' (d:\HCMUT-K22\Mạng Máy Tính\ASG1\discord\src\services\authService.py)
+[2025-04-10 01:15:06,103] INFO: Sending message: chào
+[2025-04-10 01:15:06,212] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-10 01:15:12,899] INFO: Sending message: nice to meet you
+[2025-04-10 01:15:13,011] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-10 01:17:57,994] INFO: Sending message: xin hád
+[2025-04-10 01:17:58,102] INFO: Message from beckhamngo sent in channel 'Xin chao Viet Nam'
+[2025-04-10 01:18:01,553] INFO: Sending message: cubwgbwkdnfks
+[2025-04-10 01:18:01,652] INFO: Message from beckhamngo sent in channel 'Xin chao Viet Nam'
+[2025-04-10 01:18:50,786] INFO: User an08 logged in successfully
+[2025-04-10 01:18:50,786] INFO: Logged in as: an08
+[2025-04-10 01:18:51,602] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-10 01:18:51,604] INFO: Tracker response: Peer an08 (127.0.0.1:6440) added
+[2025-04-10 01:18:51,604] INFO: P2P SERVER listening on 127.0.0.1:6440
+[2025-04-10 01:18:51,604] INFO: UDP LISTENER listening on 127.0.0.1:6441 for UDP livestream.
+[2025-04-10 01:18:51,621] ERROR: Error getting user list: cannot import name 'get_all_users' from 'services.authService' (d:\HCMUT-K22\Mạng Máy Tính\ASG1\discord\src\services\authService.py)
+[2025-04-10 01:18:51,665] ERROR: Error getting user list: cannot import name 'get_all_users' from 'services.authService' (d:\HCMUT-K22\Mạng Máy Tính\ASG1\discord\src\services\authService.py)
+[2025-04-10 01:19:10,684] INFO: User an08 logged in successfully
+[2025-04-10 01:19:10,684] INFO: Logged in as: an08
+[2025-04-10 01:19:11,614] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-10 01:19:11,614] INFO: Tracker response: Peer an08 (127.0.0.1:7369) added
+[2025-04-10 01:19:11,614] INFO: P2P SERVER listening on 127.0.0.1:7369
+[2025-04-10 01:19:11,614] INFO: UDP LISTENER listening on 127.0.0.1:7370 for UDP livestream.
+[2025-04-10 01:19:11,634] ERROR: Error getting user list: cannot import name 'get_all_users' from 'services.authService' (d:\HCMUT-K22\Mạng Máy Tính\ASG1\discord\src\services\authService.py)
+[2025-04-10 01:19:11,687] ERROR: Error getting user list: cannot import name 'get_all_users' from 'services.authService' (d:\HCMUT-K22\Mạng Máy Tính\ASG1\discord\src\services\authService.py)
+[2025-04-10 01:19:17,872] INFO: Sending message: chào
+[2025-04-10 01:19:18,013] INFO: Message from an08 sent in channel 'Private'
+[2025-04-10 12:05:55,936] INFO: User beckhamngo logged in successfully
+[2025-04-10 12:05:55,939] INFO: Logged in as: beckhamngo
+[2025-04-10 12:05:57,585] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-10 12:05:59,629] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-10 12:05:59,632] INFO: P2P SERVER listening on 127.0.0.1:7884
+[2025-04-10 12:05:59,635] INFO: UDP LISTENER listening on 127.0.0.1:7885 for UDP livestream.
+[2025-04-10 12:05:59,667] ERROR: Error getting user list: cannot import name 'get_all_users' from 'services.authService' (d:\HCMUT-K22\Mạng Máy Tính\ASG1\discord\src\services\authService.py)
+[2025-04-10 12:05:59,716] ERROR: Error getting user list: cannot import name 'get_all_users' from 'services.authService' (d:\HCMUT-K22\Mạng Máy Tính\ASG1\discord\src\services\authService.py)
+[2025-04-10 12:06:30,160] INFO: Sending message: oke
+[2025-04-10 12:06:30,256] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-10 12:06:32,826] INFO: Sending message: xin chào
+[2025-04-10 12:06:32,922] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-10 12:06:36,918] INFO: Sending message: tôi đang test
+[2025-04-10 12:06:37,011] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-10 12:06:42,583] INFO: Sending message: ngày hôm nay của bạn thế nào
+[2025-04-10 12:06:42,679] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-10 12:06:58,037] INFO: Status changed to Invisible
+[2025-04-10 12:07:00,183] INFO: Status changed to Offline
+[2025-04-10 12:07:01,789] INFO: Status changed to Online
+[2025-04-10 12:08:54,702] INFO: User beckhamngo logged in successfully
+[2025-04-10 12:08:54,704] INFO: Logged in as: beckhamngo
+[2025-04-10 12:08:55,495] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-10 12:08:55,498] INFO: Tracker response: Peer beckhamngo (127.0.0.1:6816) added
+[2025-04-10 12:08:55,498] INFO: P2P SERVER listening on 127.0.0.1:6816
+[2025-04-10 12:08:55,499] INFO: UDP LISTENER listening on 127.0.0.1:6817 for UDP livestream.
+[2025-04-10 12:08:55,514] ERROR: Error getting user list: cannot import name 'get_all_users' from 'services.authService' (d:\HCMUT-K22\Mạng Máy Tính\ASG1\discord\src\services\authService.py)
+[2025-04-10 12:08:55,572] ERROR: Error getting user list: cannot import name 'get_all_users' from 'services.authService' (d:\HCMUT-K22\Mạng Máy Tính\ASG1\discord\src\services\authService.py)
+[2025-04-10 12:10:49,945] INFO: Starting livestream. Press 'q' in the video window to stop.
+[2025-04-10 12:10:50,078] INFO: Peer list retrieved:
+[2025-04-10 12:10:50,078] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:50,210] INFO: Peer list retrieved:
+[2025-04-10 12:10:50,210] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:50,316] INFO: Peer list retrieved:
+[2025-04-10 12:10:50,316] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:50,423] INFO: Peer list retrieved:
+[2025-04-10 12:10:50,423] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:50,534] INFO: Peer list retrieved:
+[2025-04-10 12:10:50,535] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:50,652] INFO: Peer list retrieved:
+[2025-04-10 12:10:50,654] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:50,758] INFO: Peer list retrieved:
+[2025-04-10 12:10:50,758] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:50,868] INFO: Peer list retrieved:
+[2025-04-10 12:10:50,868] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:50,990] INFO: Peer list retrieved:
+[2025-04-10 12:10:50,990] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:51,097] INFO: Peer list retrieved:
+[2025-04-10 12:10:51,097] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:51,202] INFO: Peer list retrieved:
+[2025-04-10 12:10:51,202] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:51,311] INFO: Peer list retrieved:
+[2025-04-10 12:10:51,311] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:51,415] INFO: Peer list retrieved:
+[2025-04-10 12:10:51,416] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:51,524] INFO: Peer list retrieved:
+[2025-04-10 12:10:51,524] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:51,640] INFO: Peer list retrieved:
+[2025-04-10 12:10:51,640] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:51,752] INFO: Peer list retrieved:
+[2025-04-10 12:10:51,752] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:51,857] INFO: Peer list retrieved:
+[2025-04-10 12:10:51,857] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:51,973] INFO: Peer list retrieved:
+[2025-04-10 12:10:51,974] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:52,077] INFO: Peer list retrieved:
+[2025-04-10 12:10:52,078] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:52,190] INFO: Peer list retrieved:
+[2025-04-10 12:10:52,190] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:52,302] INFO: Peer list retrieved:
+[2025-04-10 12:10:52,302] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:52,414] INFO: Peer list retrieved:
+[2025-04-10 12:10:52,415] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:52,520] INFO: Peer list retrieved:
+[2025-04-10 12:10:52,520] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:52,631] INFO: Peer list retrieved:
+[2025-04-10 12:10:52,631] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:52,746] INFO: Peer list retrieved:
+[2025-04-10 12:10:52,746] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:52,851] INFO: Peer list retrieved:
+[2025-04-10 12:10:52,851] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:52,963] INFO: Peer list retrieved:
+[2025-04-10 12:10:52,963] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:53,080] INFO: Peer list retrieved:
+[2025-04-10 12:10:53,080] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:53,190] INFO: Peer list retrieved:
+[2025-04-10 12:10:53,190] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:53,302] INFO: Peer list retrieved:
+[2025-04-10 12:10:53,302] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:53,420] INFO: Peer list retrieved:
+[2025-04-10 12:10:53,420] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:53,537] INFO: Peer list retrieved:
+[2025-04-10 12:10:53,537] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:53,642] INFO: Peer list retrieved:
+[2025-04-10 12:10:53,642] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:53,750] INFO: Peer list retrieved:
+[2025-04-10 12:10:53,750] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:53,860] INFO: Peer list retrieved:
+[2025-04-10 12:10:53,860] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:53,976] INFO: Peer list retrieved:
+[2025-04-10 12:10:53,981] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:54,090] INFO: Peer list retrieved:
+[2025-04-10 12:10:54,090] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:54,204] INFO: Peer list retrieved:
+[2025-04-10 12:10:54,204] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:54,313] INFO: Peer list retrieved:
+[2025-04-10 12:10:54,313] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:54,420] INFO: Peer list retrieved:
+[2025-04-10 12:10:54,420] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:54,540] INFO: Peer list retrieved:
+[2025-04-10 12:10:54,540] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:54,648] INFO: Peer list retrieved:
+[2025-04-10 12:10:54,648] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:54,760] INFO: Peer list retrieved:
+[2025-04-10 12:10:54,760] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:54,878] INFO: Peer list retrieved:
+[2025-04-10 12:10:54,878] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:54,985] INFO: Peer list retrieved:
+[2025-04-10 12:10:54,985] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:55,089] INFO: Peer list retrieved:
+[2025-04-10 12:10:55,089] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:55,195] INFO: Peer list retrieved:
+[2025-04-10 12:10:55,195] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:55,314] INFO: Peer list retrieved:
+[2025-04-10 12:10:55,314] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:55,424] INFO: Peer list retrieved:
+[2025-04-10 12:10:55,424] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:55,543] INFO: Peer list retrieved:
+[2025-04-10 12:10:55,543] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:55,647] INFO: Peer list retrieved:
+[2025-04-10 12:10:55,647] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:55,754] INFO: Peer list retrieved:
+[2025-04-10 12:10:55,754] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:55,866] INFO: Peer list retrieved:
+[2025-04-10 12:10:55,866] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:55,986] INFO: Peer list retrieved:
+[2025-04-10 12:10:55,986] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:56,103] INFO: Peer list retrieved:
+[2025-04-10 12:10:56,103] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:56,211] INFO: Peer list retrieved:
+[2025-04-10 12:10:56,211] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:56,317] INFO: Peer list retrieved:
+[2025-04-10 12:10:56,317] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:56,433] INFO: Peer list retrieved:
+[2025-04-10 12:10:56,433] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:56,547] INFO: Peer list retrieved:
+[2025-04-10 12:10:56,547] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:56,654] INFO: Peer list retrieved:
+[2025-04-10 12:10:56,654] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:56,760] INFO: Peer list retrieved:
+[2025-04-10 12:10:56,760] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:56,868] INFO: Peer list retrieved:
+[2025-04-10 12:10:56,868] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:56,982] INFO: Peer list retrieved:
+[2025-04-10 12:10:56,982] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:57,090] INFO: Peer list retrieved:
+[2025-04-10 12:10:57,090] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:57,200] INFO: Peer list retrieved:
+[2025-04-10 12:10:57,200] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:57,309] INFO: Peer list retrieved:
+[2025-04-10 12:10:57,310] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:57,413] INFO: Peer list retrieved:
+[2025-04-10 12:10:57,413] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:57,521] INFO: Peer list retrieved:
+[2025-04-10 12:10:57,521] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:57,625] INFO: Peer list retrieved:
+[2025-04-10 12:10:57,625] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:57,744] INFO: Peer list retrieved:
+[2025-04-10 12:10:57,744] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:57,855] INFO: Peer list retrieved:
+[2025-04-10 12:10:57,855] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:57,970] INFO: Peer list retrieved:
+[2025-04-10 12:10:57,970] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:58,074] INFO: Peer list retrieved:
+[2025-04-10 12:10:58,074] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:58,182] INFO: Peer list retrieved:
+[2025-04-10 12:10:58,182] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:58,297] INFO: Peer list retrieved:
+[2025-04-10 12:10:58,297] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:58,406] INFO: Peer list retrieved:
+[2025-04-10 12:10:58,406] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:58,524] INFO: Peer list retrieved:
+[2025-04-10 12:10:58,524] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:58,628] INFO: Peer list retrieved:
+[2025-04-10 12:10:58,630] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:58,735] INFO: Peer list retrieved:
+[2025-04-10 12:10:58,735] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:58,840] INFO: Peer list retrieved:
+[2025-04-10 12:10:58,840] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:58,946] INFO: Peer list retrieved:
+[2025-04-10 12:10:58,946] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:59,050] INFO: Peer list retrieved:
+[2025-04-10 12:10:59,050] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:59,160] INFO: Peer list retrieved:
+[2025-04-10 12:10:59,160] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:59,266] INFO: Peer list retrieved:
+[2025-04-10 12:10:59,266] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:59,371] INFO: Peer list retrieved:
+[2025-04-10 12:10:59,371] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:59,485] INFO: Peer list retrieved:
+[2025-04-10 12:10:59,485] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:59,590] INFO: Peer list retrieved:
+[2025-04-10 12:10:59,591] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:59,695] INFO: Peer list retrieved:
+[2025-04-10 12:10:59,695] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:59,799] INFO: Peer list retrieved:
+[2025-04-10 12:10:59,799] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:10:59,902] INFO: Peer list retrieved:
+[2025-04-10 12:10:59,903] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:11:00,006] INFO: Peer list retrieved:
+[2025-04-10 12:11:00,008] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:11:00,110] INFO: Peer list retrieved:
+[2025-04-10 12:11:00,110] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:11:00,214] INFO: Peer list retrieved:
+[2025-04-10 12:11:00,215] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:11:00,317] INFO: Peer list retrieved:
+[2025-04-10 12:11:00,317] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:11:00,420] INFO: Peer list retrieved:
+[2025-04-10 12:11:00,421] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:11:00,525] INFO: Peer list retrieved:
+[2025-04-10 12:11:00,525] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:11:00,630] INFO: Peer list retrieved:
+[2025-04-10 12:11:00,631] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:11:00,735] INFO: Peer list retrieved:
+[2025-04-10 12:11:00,735] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:11:00,839] INFO: Peer list retrieved:
+[2025-04-10 12:11:00,840] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:11:00,944] INFO: Peer list retrieved:
+[2025-04-10 12:11:00,944] INFO:  - beckhamngo (127.0.0.1:6816)
+[2025-04-10 12:11:08,840] INFO: Sending message: testing
+[2025-04-10 12:11:08,935] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-10 12:11:25,870] INFO: Sending message: xóa các chanel cũ được hong nhỉ
+[2025-04-10 12:11:25,969] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-10 21:41:48,185] INFO: User beckhamngo logged in successfully
+[2025-04-10 21:41:48,186] INFO: Logged in as: beckhamngo
+[2025-04-10 21:41:49,202] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-10 21:41:51,244] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-10 21:41:51,247] INFO: P2P SERVER listening on 127.0.0.1:8261
+[2025-04-10 21:41:51,253] INFO: UDP LISTENER listening on 127.0.0.1:8262 for UDP livestream.
+[2025-04-10 21:42:03,488] INFO: Sending message: lô
+[2025-04-10 21:42:06,074] INFO: Live mode set to True
+[2025-04-10 21:42:07,378] INFO: Sending message: lô
+[2025-04-10 21:42:07,379] ERROR: Not connected to tracker.
+[2025-04-10 21:42:07,379] INFO: No peers available for P2P broadcast.
+[2025-04-10 21:42:19,102] INFO: Sending message: nhắn tin phải luôn livemode An nhỉ
+[2025-04-10 21:42:19,102] ERROR: Not connected to tracker.
+[2025-04-10 21:42:19,103] INFO: No peers available for P2P broadcast.
+[2025-04-10 21:42:29,402] INFO: Channel 'đã' deleted by beckhamngo
+[2025-04-10 21:42:32,789] INFO: Channel 'Private' deleted by beckhamngo
+[2025-04-10 21:43:18,944] INFO: Sending message: xóa con chó đi
+[2025-04-10 21:43:18,945] ERROR: Not connected to tracker.
+[2025-04-10 21:43:18,945] INFO: No peers available for P2P broadcast.
+[2025-04-10 21:43:24,591] INFO: Sending message: thằng nào mod
+[2025-04-10 21:43:24,591] ERROR: Not connected to tracker.
+[2025-04-10 21:43:24,591] INFO: No peers available for P2P broadcast.
+[2025-04-10 21:44:08,116] INFO: Channel 'Bekcham' created by beckhamngo (is_private=False)
+[2025-04-10 21:44:11,290] INFO: Channel 'Bekcham' deleted by beckhamngo
+[2025-04-10 21:44:14,270] INFO: User beckhamngo requested to join private channel 'private0'
+[2025-04-10 21:45:04,701] INFO: Sending message: oke
+[2025-04-10 21:45:04,701] ERROR: Not connected to tracker.
+[2025-04-10 21:45:04,701] INFO: No peers available for P2P broadcast.
+[2025-04-10 21:45:08,961] INFO: Sending message: có mấy chanel cũ
+[2025-04-10 21:45:08,962] ERROR: Not connected to tracker.
+[2025-04-10 21:45:08,962] INFO: No peers available for P2P broadcast.
+[2025-04-10 21:45:18,756] INFO: Sending message: không xác định ai owner á An
+[2025-04-10 21:45:18,757] ERROR: Not connected to tracker.
+[2025-04-10 21:45:18,757] INFO: No peers available for P2P broadcast.
+[2025-04-10 21:45:58,799] INFO: Starting livestream. Press 'q' in the video window to stop.
+[2025-04-10 21:45:58,991] ERROR: Not connected to tracker.
+[2025-04-10 21:45:58,991] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:45:59,113] ERROR: Not connected to tracker.
+[2025-04-10 21:45:59,114] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:45:59,220] ERROR: Not connected to tracker.
+[2025-04-10 21:45:59,220] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:45:59,325] ERROR: Not connected to tracker.
+[2025-04-10 21:45:59,325] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:45:59,429] ERROR: Not connected to tracker.
+[2025-04-10 21:45:59,429] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:45:59,533] ERROR: Not connected to tracker.
+[2025-04-10 21:45:59,534] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:45:59,638] ERROR: Not connected to tracker.
+[2025-04-10 21:45:59,639] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:45:59,743] ERROR: Not connected to tracker.
+[2025-04-10 21:45:59,744] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:45:59,847] ERROR: Not connected to tracker.
+[2025-04-10 21:45:59,848] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:45:59,952] ERROR: Not connected to tracker.
+[2025-04-10 21:45:59,952] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:00,057] ERROR: Not connected to tracker.
+[2025-04-10 21:46:00,058] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:00,161] ERROR: Not connected to tracker.
+[2025-04-10 21:46:00,162] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:00,266] ERROR: Not connected to tracker.
+[2025-04-10 21:46:00,267] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:00,370] ERROR: Not connected to tracker.
+[2025-04-10 21:46:00,371] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:00,475] ERROR: Not connected to tracker.
+[2025-04-10 21:46:00,475] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:00,580] ERROR: Not connected to tracker.
+[2025-04-10 21:46:00,580] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:00,683] ERROR: Not connected to tracker.
+[2025-04-10 21:46:00,683] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:00,787] ERROR: Not connected to tracker.
+[2025-04-10 21:46:00,787] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:00,890] ERROR: Not connected to tracker.
+[2025-04-10 21:46:00,891] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:00,994] ERROR: Not connected to tracker.
+[2025-04-10 21:46:00,995] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:01,099] ERROR: Not connected to tracker.
+[2025-04-10 21:46:01,100] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:01,204] ERROR: Not connected to tracker.
+[2025-04-10 21:46:01,205] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:01,308] ERROR: Not connected to tracker.
+[2025-04-10 21:46:01,309] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:01,414] ERROR: Not connected to tracker.
+[2025-04-10 21:46:01,414] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:01,517] ERROR: Not connected to tracker.
+[2025-04-10 21:46:01,518] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:01,622] ERROR: Not connected to tracker.
+[2025-04-10 21:46:01,623] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:01,727] ERROR: Not connected to tracker.
+[2025-04-10 21:46:01,728] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:01,831] ERROR: Not connected to tracker.
+[2025-04-10 21:46:01,832] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:01,937] ERROR: Not connected to tracker.
+[2025-04-10 21:46:01,937] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:02,042] ERROR: Not connected to tracker.
+[2025-04-10 21:46:02,042] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:02,147] ERROR: Not connected to tracker.
+[2025-04-10 21:46:02,147] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:02,250] ERROR: Not connected to tracker.
+[2025-04-10 21:46:02,250] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:02,353] ERROR: Not connected to tracker.
+[2025-04-10 21:46:02,355] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:02,458] ERROR: Not connected to tracker.
+[2025-04-10 21:46:02,459] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:02,563] ERROR: Not connected to tracker.
+[2025-04-10 21:46:02,564] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:02,667] ERROR: Not connected to tracker.
+[2025-04-10 21:46:02,667] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:02,770] ERROR: Not connected to tracker.
+[2025-04-10 21:46:02,772] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:02,875] ERROR: Not connected to tracker.
+[2025-04-10 21:46:02,876] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:02,979] ERROR: Not connected to tracker.
+[2025-04-10 21:46:02,980] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:03,084] ERROR: Not connected to tracker.
+[2025-04-10 21:46:03,085] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:03,188] ERROR: Not connected to tracker.
+[2025-04-10 21:46:03,189] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:03,294] ERROR: Not connected to tracker.
+[2025-04-10 21:46:03,294] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:03,397] ERROR: Not connected to tracker.
+[2025-04-10 21:46:03,398] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:03,502] ERROR: Not connected to tracker.
+[2025-04-10 21:46:03,502] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:03,605] ERROR: Not connected to tracker.
+[2025-04-10 21:46:03,605] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:03,709] ERROR: Not connected to tracker.
+[2025-04-10 21:46:03,709] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:03,814] ERROR: Not connected to tracker.
+[2025-04-10 21:46:03,814] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:03,918] ERROR: Not connected to tracker.
+[2025-04-10 21:46:03,919] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:04,022] ERROR: Not connected to tracker.
+[2025-04-10 21:46:04,023] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:04,128] ERROR: Not connected to tracker.
+[2025-04-10 21:46:04,128] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:04,231] ERROR: Not connected to tracker.
+[2025-04-10 21:46:04,232] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:04,334] ERROR: Not connected to tracker.
+[2025-04-10 21:46:04,335] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:04,440] ERROR: Not connected to tracker.
+[2025-04-10 21:46:04,440] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:04,562] ERROR: Not connected to tracker.
+[2025-04-10 21:46:04,564] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:04,709] ERROR: Not connected to tracker.
+[2025-04-10 21:46:04,709] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:04,811] ERROR: Not connected to tracker.
+[2025-04-10 21:46:04,812] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:04,915] ERROR: Not connected to tracker.
+[2025-04-10 21:46:04,917] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:05,020] ERROR: Not connected to tracker.
+[2025-04-10 21:46:05,021] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:05,124] ERROR: Not connected to tracker.
+[2025-04-10 21:46:05,125] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:05,280] ERROR: Not connected to tracker.
+[2025-04-10 21:46:05,281] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:05,408] ERROR: Not connected to tracker.
+[2025-04-10 21:46:05,410] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:05,519] ERROR: Not connected to tracker.
+[2025-04-10 21:46:05,520] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:05,624] ERROR: Not connected to tracker.
+[2025-04-10 21:46:05,625] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:05,728] ERROR: Not connected to tracker.
+[2025-04-10 21:46:05,728] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:05,831] ERROR: Not connected to tracker.
+[2025-04-10 21:46:05,832] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:05,937] ERROR: Not connected to tracker.
+[2025-04-10 21:46:05,938] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:06,042] ERROR: Not connected to tracker.
+[2025-04-10 21:46:06,043] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:06,146] ERROR: Not connected to tracker.
+[2025-04-10 21:46:06,148] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:06,250] ERROR: Not connected to tracker.
+[2025-04-10 21:46:06,251] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:06,354] ERROR: Not connected to tracker.
+[2025-04-10 21:46:06,355] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:06,458] ERROR: Not connected to tracker.
+[2025-04-10 21:46:06,459] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:06,561] ERROR: Not connected to tracker.
+[2025-04-10 21:46:06,562] INFO: No peers available for UDP broadcast.
+[2025-04-10 21:46:10,509] INFO: User beckhamngo logged out
+[2025-04-10 22:13:46,418] INFO: User beckhamngo logged in successfully
+[2025-04-10 22:13:46,420] INFO: Logged in as: beckhamngo
+[2025-04-10 22:13:47,469] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-10 22:13:49,512] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-10 22:13:49,514] INFO: P2P SERVER listening on 127.0.0.1:7157
+[2025-04-10 22:13:49,516] INFO: UDP LISTENER listening on 127.0.0.1:7158 for UDP livestream.
+[2025-04-10 22:18:30,998] INFO: User beckhamngo logged in successfully
+[2025-04-10 22:18:30,999] INFO: Logged in as: beckhamngo
+[2025-04-10 22:18:31,829] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-10 22:18:33,877] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-10 22:18:33,881] INFO: UDP LISTENER listening on 127.0.0.1:7229 for UDP livestream.
+[2025-04-10 22:18:33,881] INFO: P2P SERVER listening on 127.0.0.1:7228
+[2025-04-10 22:18:53,122] INFO: User beckhamngo logged out
+[2025-04-10 22:18:55,767] INFO: User beckhamngo logged in successfully
+[2025-04-10 22:18:55,768] INFO: Logged in as: beckhamngo
+[2025-04-10 22:18:56,634] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-10 22:18:58,666] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-10 22:18:58,668] INFO: P2P SERVER listening on 127.0.0.1:6127
+[2025-04-10 22:18:58,670] INFO: UDP LISTENER listening on 127.0.0.1:6128 for UDP livestream.
+[2025-04-10 22:19:39,405] INFO: Starting livestream. Press 'q' in the video window to stop.
+[2025-04-10 22:19:39,550] ERROR: Not connected to tracker.
+[2025-04-10 22:19:39,554] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:19:39,679] ERROR: Not connected to tracker.
+[2025-04-10 22:19:39,679] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:19:39,782] ERROR: Not connected to tracker.
+[2025-04-10 22:19:39,783] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:19:39,886] ERROR: Not connected to tracker.
+[2025-04-10 22:19:39,886] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:19:39,990] ERROR: Not connected to tracker.
+[2025-04-10 22:19:39,992] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:19:40,097] ERROR: Not connected to tracker.
+[2025-04-10 22:19:40,100] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:19:40,203] ERROR: Not connected to tracker.
+[2025-04-10 22:19:40,203] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:19:40,306] ERROR: Not connected to tracker.
+[2025-04-10 22:19:40,308] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:19:40,413] ERROR: Not connected to tracker.
+[2025-04-10 22:19:40,414] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:19:40,517] ERROR: Not connected to tracker.
+[2025-04-10 22:19:40,518] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:19:40,623] ERROR: Not connected to tracker.
+[2025-04-10 22:19:40,624] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:19:40,728] ERROR: Not connected to tracker.
+[2025-04-10 22:19:40,728] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:19:40,833] ERROR: Not connected to tracker.
+[2025-04-10 22:19:40,834] INFO: No peers available for UDP broadcast.
