@@ -1,23 +1,25 @@
-import socket
-import threading
 import json
+import sys
 import os
+import threading
+import time
+import logging
+import random
+import socket
 import cv2
 import numpy as np
 import base64
-import time
-import random
-import logging
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
 class USER:
     def __init__(self, TRACKER_IP, TRACKER_PORT, headless=False, username=None, port=None):
+        # Nếu không truyền username thì nhập từ bàn phím
         if username is not None:
             self.name = username
         else:
             self.name = input("ENTER YOUR NAME: ")
-        
+
         self.ip = "127.0.0.1"
         if headless:
             if port is not None:
@@ -26,7 +28,7 @@ class USER:
                 self.port = self._get_random_port()
         else:
             self.port = int(input("ENTER YOUR PORT (TCP): "))
-        
+
         self.udp_port = self.port + 1
         self.tracker_socket = None
         self.connect_to_tracker(TRACKER_IP, TRACKER_PORT)
@@ -35,13 +37,17 @@ class USER:
         self.chat_history = []  # Lịch sử chat
         self.isChatRunning = False
 
-        # Offline caching: file lưu tin nhắn chưa sync
+        # Offline caching: file lưu tin nhắn chưa đồng bộ (các tin tin P2P không gửi được)
         self.offline_file = f"offline_{self.name}.txt"
         self.sync_offline_messages()
 
+        # Các thuộc tính hỗ trợ livestream:
+        self._stop_livestream_flag = False  # Cờ dừng livestream
+        self.is_livestreaming = False       # Trạng thái livestream
+
         if not headless:
             self.menu()
-            
+
     def _get_random_port(self):
         return random.randint(6000, 9000)
 
@@ -123,7 +129,6 @@ class USER:
             logging.info("Sent %s message to %s:%s", msg_type, target_ip, target_port)
         except Exception as e:
             logging.error("Failed to send %s message to %s:%s: %s", msg_type, target_ip, target_port, e)
-            # Nếu không gửi được, lưu offline
             self.store_offline_message({"target_ip": target_ip, "target_port": target_port, "message": message, "msg_type": msg_type})
 
     def send_p2p_broadcast(self, message, msg_type="chat"):
@@ -177,7 +182,7 @@ class USER:
                 peer_list = response_data.get("peer_list", [])
                 logging.info("Peer list retrieved:")
                 for peer in peer_list:
-                    logging.info(" - %s (%s:%s)", peer['name'], peer['ip'], peer['port'])
+                    logging.info(" - %s (%s:%s)", peer.get('name'), peer.get('ip'), peer.get('port'))
                 return peer_list
             else:
                 logging.error("Tracker error: %s", response_data.get('message', 'No error message'))
@@ -214,7 +219,7 @@ class USER:
         udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         try:
             udp_socket.bind((self.ip, self.udp_port))
-            logging.info("UDP LISTENER listening on %s:%s for UDP livestream.", self.ip, self.udp_port)
+            logging.info("UDP LISTENER listening on %s:%s for livestream.", self.ip, self.udp_port)
             while True:
                 data, addr = udp_socket.recvfrom(65535)
                 try:
@@ -358,11 +363,7 @@ class USER:
             logging.info("No peers available for direct messaging.")
             return
         print("\nSelect a peer to send a direct message:")
-        valid_peers = []
-        for peer in peers:
-            if peer["ip"] == self.ip and int(peer["port"]) == self.port:
-                continue
-            valid_peers.append(peer)
+        valid_peers = [peer for peer in peers if not (peer["ip"] == self.ip and int(peer["port"]) == self.port)]
         if not valid_peers:
             logging.info("No valid peers found for direct messaging.")
             return
@@ -380,14 +381,20 @@ class USER:
             logging.error("Invalid selection or error: %s", e)
 
     def start_livestream(self):
+        if self.is_livestreaming:
+            logging.info("Livestream already running.")
+            return
+        self.is_livestreaming = True
+        self._stop_livestream_flag = False
         cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
         cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
         cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
         if not cap.isOpened():
             logging.error("Cannot access webcam for livestream.")
+            self.is_livestreaming = False
             return
-        logging.info("Starting livestream. Press 'q' in the video window to stop.")
-        while True:
+        logging.info("Starting livestream.")
+        while not self._stop_livestream_flag:
             ret, frame = cap.read()
             if not ret:
                 logging.error("Failed to read frame from webcam.")
@@ -400,11 +407,19 @@ class USER:
             jpg_as_text = base64.b64encode(buffer).decode('utf-8')
             self.send_udp_broadcast(jpg_as_text, msg_type="livestream")
             cv2.imshow('Livestream (Local)', frame)
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                break
+            cv2.waitKey(1)
             time.sleep(0.1)
         cap.release()
         cv2.destroyAllWindows()
+        self.is_livestreaming = False
+        logging.info("Livestream stopped.")
+
+    def stop_livestream(self):
+        if not self.is_livestreaming:
+            logging.info("No livestream to stop.")
+            return
+        logging.info("Stopping livestream.")
+        self._stop_livestream_flag = True
 
 if __name__ == '__main__':
     USER("127.0.0.1", 5000)

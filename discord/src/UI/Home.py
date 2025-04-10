@@ -25,7 +25,7 @@ class DiscordUI(QMainWindow):
         self.setWindowTitle("Discord Clone - Improved UI")
         self.setGeometry(100, 100, 1200, 700)
         
-        # Thuộc tính live_mode dùng cho chế độ livestream P2P
+        # Thuộc tính live_mode (dùng cho livestream P2P)
         self.live_mode = False
         
         # Chế độ chat: "channel" hay "dm"
@@ -137,6 +137,7 @@ class DiscordUI(QMainWindow):
         self.chat_display.setStyleSheet("background-color: #40444B; color: white;")
         center_layout.addWidget(self.chat_display, 1)
         
+        # Khu vực nhập tin nhắn
         input_layout = QHBoxLayout()
         self.message_input = QLineEdit()
         self.message_input.setStyleSheet("background-color: #2F3136; color: white; padding: 8px;")
@@ -148,14 +149,15 @@ class DiscordUI(QMainWindow):
         input_layout.addWidget(self.send_button)
         center_layout.addLayout(input_layout)
         
-        self.livestream_button = QPushButton("Start Livestream")
-        self.livestream_button.setStyleSheet("background-color: orange; color: white; padding: 8px;")
-        self.livestream_button.clicked.connect(self.start_livestream)
-        center_layout.addWidget(self.livestream_button)
+        # Nút "Start/Stop Livestream" gộp chung
+        self.toggle_livestream_button = QPushButton("Start Livestream")
+        self.toggle_livestream_button.setStyleSheet("background-color: orange; color: white; padding: 8px;")
+        self.toggle_livestream_button.clicked.connect(self.toggle_livestream)
+        center_layout.addWidget(self.toggle_livestream_button)
         
         main_layout.addWidget(self.center_frame, 1)
         
-        # Sidebar bên phải: danh sách thành viên và yêu cầu tham gia kênh
+        # Sidebar bên phải: danh sách thành viên và join requests
         self.right_frame = QFrame()
         self.right_frame.setStyleSheet("background-color: #2F3136;")
         self.right_frame.setFixedWidth(200)
@@ -232,7 +234,6 @@ class DiscordUI(QMainWindow):
         self.chat_display.clear()
         try:
             request_data = {"action": "get_channel_info", "channel_name": self.current_channel}
-            # Nếu ở chế độ Visitor, thêm flag is_visitor
             if self.is_viewer:
                 request_data["is_visitor"] = True
             response_str = channelRequest.handle_channel_request(json.dumps(request_data))
@@ -252,7 +253,7 @@ class DiscordUI(QMainWindow):
                 else:
                     self.join_button.setText("Join Channel")
                     self.join_button.setEnabled(True)
-                # Nếu người dùng là chủ kênh, load danh sách yêu cầu join
+                # Nếu là owner, load danh sách join requests
                 owner = response.get("owner")
                 if self.username == owner:
                     req_data = {
@@ -292,7 +293,7 @@ class DiscordUI(QMainWindow):
                 else:
                     self.request_list.clear()
                     self.request_list.addItem("You are not the owner")
-                # Lưu lại thông tin channel để hỗ trợ các xử lý offline nếu cần
+                # Lưu thông tin channel để hỗ trợ xử lý offline
                 self.current_channel_info = response
             else:
                 self.chat_display.append(f"[ERROR] {response.get('message')}")
@@ -359,8 +360,7 @@ class DiscordUI(QMainWindow):
         self.chat_display.append(message)
         logging.info("Sending message: %s", message)
         if self.current_mode == "channel":
-            # Nếu người dùng là chủ kênh và đang ở trạng thái Offline,
-            # lưu tin nhắn cục bộ để đồng bộ khi chuyển sang Online
+            # Nếu owner và đang ở trạng thái Offline, lưu tin nhắn cục bộ
             if self.current_channel_info and self.current_channel_info.get("owner") == self.username and self.status_dropdown.currentText() == "Offline":
                 self.store_channel_offline_message(message)
                 self.chat_display.append("[Offline] Message stored locally, will sync when online.")
@@ -399,7 +399,6 @@ class DiscordUI(QMainWindow):
             self.chat_display.append(f"[ERROR] {e}")
     
     def store_channel_offline_message(self, message):
-        # Lưu tin nhắn vào file theo định dạng: offline_channel_<channel>_<username>.txt
         filename = f"offline_channel_{self.current_channel}_{self.username}.txt"
         try:
             with open(filename, "a", encoding="utf-8") as f:
@@ -409,7 +408,6 @@ class DiscordUI(QMainWindow):
             logging.error("Error storing offline message: %s", e)
     
     def sync_offline_channel_messages(self):
-        # Đọc file offline, gửi lần lượt các tin nhắn lên server, sau đó xoá file
         filename = f"offline_channel_{self.current_channel}_{self.username}.txt"
         try:
             if os.path.exists(filename):
@@ -529,7 +527,6 @@ class DiscordUI(QMainWindow):
             logging.error("get_channels_from_server error: %s", e)
     
     def poll_new_messages(self):
-        # Polling mỗi 5 giây nếu có channel được chọn
         while True:
             if self.current_mode == "channel" and self.current_channel:
                 try:
@@ -555,22 +552,28 @@ class DiscordUI(QMainWindow):
                     logging.error("Error in poll_new_messages: %s", e)
             time.sleep(5)
     
-    def start_livestream(self):
-        # Nếu đang livestream theo P2P nhưng chủ kênh (nếu là owner) đang Offline,
-        # báo lỗi và không cho bắt đầu livestream.
-        if self.current_mode == "channel":
-            if self.current_channel_info and self.current_channel_info.get("owner") == self.username and self.status_dropdown.currentText() == "Offline":
-                self.chat_display.append("[ERROR] Channel hosting offline. Livestream not available. Use server fallback.")
-                return
-        if self.user_peer:
-            threading.Thread(target=self.user_peer.start_livestream, daemon=True).start()
-        else:
+    def toggle_livestream(self):
+        # Chỉ owner của phòng được start/stop livestream.
+        if self.current_mode != "channel":
+            self.chat_display.append("[INFO] No channel selected or not in channel mode!")
+            return
+        if not (self.current_channel_info and self.current_channel_info.get("owner") == self.username):
+            self.chat_display.append("[INFO] Only the channel owner can start/stop livestream. Others can only watch.")
+            return
+        if not self.user_peer:
             self.chat_display.append("[ERROR] user_peer not found!")
+            return
+        # Nếu chưa livestream, start livestream; nếu đang livestream, stop livestream.
+        if not self.user_peer.is_livestreaming:
+            threading.Thread(target=self.user_peer.start_livestream, daemon=True).start()
+            self.toggle_livestream_button.setText("Stop Livestream")
+        else:
+            self.user_peer.stop_livestream()
+            self.toggle_livestream_button.setText("Start Livestream")
     
     def change_status(self, status):
         logging.info("Status changed to %s", status)
-        # Nếu chuyển sang Online và người dùng là chủ kênh,
-        # thực hiện đồng bộ tin nhắn offline đã lưu cục bộ.
+        # Khi chuyển sang Online và nếu bạn là owner của phòng, đồng bộ tin nhắn offline.
         if status == "Online":
             if self.current_mode == "channel":
                 if self.current_channel_info and self.current_channel_info.get("owner") == self.username:
@@ -620,8 +623,8 @@ class AddChannelDialog(QDialog):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    login_window = QWidget()  # Cửa sổ login mẫu; thay thế theo thiết kế của bạn
-    username = "UserA"        # Ví dụ, hãy thay bằng username hợp lệ
+    login_window = QWidget()  # Thay đổi cửa sổ đăng nhập nếu cần
+    username = "UserA"        # Thay bằng username hợp lệ
     session_info = {"session_id": "dummy"}
     window = DiscordUI(login_window, username, session_info)
     window.show()

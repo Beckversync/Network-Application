@@ -556,3 +556,982 @@
 [2025-04-10 22:19:40,728] INFO: No peers available for UDP broadcast.
 [2025-04-10 22:19:40,833] ERROR: Not connected to tracker.
 [2025-04-10 22:19:40,834] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:26:32,339] INFO: User beckhamngo logged in successfully
+[2025-04-10 22:26:32,345] INFO: Logged in as: beckhamngo
+[2025-04-10 22:26:33,354] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-10 22:26:35,402] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-10 22:26:35,405] INFO: P2P SERVER listening on 127.0.0.1:7840
+[2025-04-10 22:26:35,407] INFO: UDP LISTENER listening on 127.0.0.1:7841 for UDP livestream.
+[2025-04-10 22:26:52,449] INFO: Channel 'Beckham' created by beckhamngo (is_private=False)
+[2025-04-10 22:26:58,169] INFO: Starting livestream. Press 'q' in the video window to stop.
+[2025-04-10 22:26:58,317] ERROR: Not connected to tracker.
+[2025-04-10 22:26:58,318] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:26:58,435] ERROR: Not connected to tracker.
+[2025-04-10 22:26:58,436] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:26:58,540] ERROR: Not connected to tracker.
+[2025-04-10 22:26:58,543] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:26:58,647] ERROR: Not connected to tracker.
+[2025-04-10 22:26:58,648] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:26:58,751] ERROR: Not connected to tracker.
+[2025-04-10 22:26:58,752] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:26:58,855] ERROR: Not connected to tracker.
+[2025-04-10 22:26:58,856] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:26:58,959] ERROR: Not connected to tracker.
+[2025-04-10 22:26:58,988] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:26:59,095] ERROR: Not connected to tracker.
+[2025-04-10 22:26:59,095] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:26:59,199] ERROR: Not connected to tracker.
+[2025-04-10 22:26:59,199] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:26:59,303] ERROR: Not connected to tracker.
+[2025-04-10 22:26:59,304] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:26:59,408] ERROR: Not connected to tracker.
+[2025-04-10 22:26:59,409] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:26:59,512] ERROR: Not connected to tracker.
+[2025-04-10 22:26:59,514] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:26:59,618] ERROR: Not connected to tracker.
+[2025-04-10 22:26:59,619] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:26:59,723] ERROR: Not connected to tracker.
+[2025-04-10 22:26:59,724] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:26:59,826] ERROR: Not connected to tracker.
+[2025-04-10 22:26:59,853] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:26:59,958] ERROR: Not connected to tracker.
+[2025-04-10 22:26:59,959] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:00,062] ERROR: Not connected to tracker.
+[2025-04-10 22:27:00,063] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:00,168] ERROR: Not connected to tracker.
+[2025-04-10 22:27:00,170] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:00,275] ERROR: Not connected to tracker.
+[2025-04-10 22:27:00,275] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:00,379] ERROR: Not connected to tracker.
+[2025-04-10 22:27:00,379] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:00,482] ERROR: Not connected to tracker.
+[2025-04-10 22:27:00,482] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:00,587] ERROR: Not connected to tracker.
+[2025-04-10 22:27:00,588] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:00,691] ERROR: Not connected to tracker.
+[2025-04-10 22:27:00,692] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:00,796] ERROR: Not connected to tracker.
+[2025-04-10 22:27:00,798] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:00,901] ERROR: Not connected to tracker.
+[2025-04-10 22:27:00,902] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:01,006] ERROR: Not connected to tracker.
+[2025-04-10 22:27:01,006] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:01,109] ERROR: Not connected to tracker.
+[2025-04-10 22:27:01,111] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:01,215] ERROR: Not connected to tracker.
+[2025-04-10 22:27:01,215] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:01,319] ERROR: Not connected to tracker.
+[2025-04-10 22:27:01,320] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:01,423] ERROR: Not connected to tracker.
+[2025-04-10 22:27:01,424] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:01,527] ERROR: Not connected to tracker.
+[2025-04-10 22:27:01,527] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:01,631] ERROR: Not connected to tracker.
+[2025-04-10 22:27:01,633] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:01,736] ERROR: Not connected to tracker.
+[2025-04-10 22:27:01,737] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:01,841] ERROR: Not connected to tracker.
+[2025-04-10 22:27:01,841] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:01,945] ERROR: Not connected to tracker.
+[2025-04-10 22:27:01,946] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:02,049] ERROR: Not connected to tracker.
+[2025-04-10 22:27:02,058] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:02,162] ERROR: Not connected to tracker.
+[2025-04-10 22:27:02,163] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:02,268] ERROR: Not connected to tracker.
+[2025-04-10 22:27:02,274] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:02,381] ERROR: Not connected to tracker.
+[2025-04-10 22:27:02,382] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:02,486] ERROR: Not connected to tracker.
+[2025-04-10 22:27:02,486] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:02,591] ERROR: Not connected to tracker.
+[2025-04-10 22:27:02,591] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:02,694] ERROR: Not connected to tracker.
+[2025-04-10 22:27:02,695] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:02,798] ERROR: Not connected to tracker.
+[2025-04-10 22:27:02,798] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:02,902] ERROR: Not connected to tracker.
+[2025-04-10 22:27:02,904] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:03,008] ERROR: Not connected to tracker.
+[2025-04-10 22:27:03,009] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:03,113] ERROR: Not connected to tracker.
+[2025-04-10 22:27:03,113] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:03,218] ERROR: Not connected to tracker.
+[2025-04-10 22:27:03,218] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:03,321] ERROR: Not connected to tracker.
+[2025-04-10 22:27:03,321] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:03,424] ERROR: Not connected to tracker.
+[2025-04-10 22:27:03,424] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:03,528] ERROR: Not connected to tracker.
+[2025-04-10 22:27:03,529] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:03,631] ERROR: Not connected to tracker.
+[2025-04-10 22:27:03,632] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:03,735] ERROR: Not connected to tracker.
+[2025-04-10 22:27:03,735] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:03,838] ERROR: Not connected to tracker.
+[2025-04-10 22:27:03,838] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:07,725] INFO: Channel 'Beckham' deleted by beckhamngo
+[2025-04-10 22:27:43,959] INFO: Starting livestream. Press 'q' in the video window to stop.
+[2025-04-10 22:27:44,113] ERROR: Not connected to tracker.
+[2025-04-10 22:27:44,113] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:44,228] ERROR: Not connected to tracker.
+[2025-04-10 22:27:44,232] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:44,341] ERROR: Not connected to tracker.
+[2025-04-10 22:27:44,342] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:44,451] ERROR: Not connected to tracker.
+[2025-04-10 22:27:44,459] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:44,576] ERROR: Not connected to tracker.
+[2025-04-10 22:27:44,577] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:44,687] ERROR: Not connected to tracker.
+[2025-04-10 22:27:44,688] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:44,794] ERROR: Not connected to tracker.
+[2025-04-10 22:27:44,795] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:44,901] ERROR: Not connected to tracker.
+[2025-04-10 22:27:44,902] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:45,010] ERROR: Not connected to tracker.
+[2025-04-10 22:27:45,018] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:45,135] ERROR: Not connected to tracker.
+[2025-04-10 22:27:45,136] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:45,243] ERROR: Not connected to tracker.
+[2025-04-10 22:27:45,243] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:45,351] ERROR: Not connected to tracker.
+[2025-04-10 22:27:45,352] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:45,460] ERROR: Not connected to tracker.
+[2025-04-10 22:27:45,461] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:45,568] ERROR: Not connected to tracker.
+[2025-04-10 22:27:45,568] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:45,678] ERROR: Not connected to tracker.
+[2025-04-10 22:27:45,679] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:45,788] ERROR: Not connected to tracker.
+[2025-04-10 22:27:45,789] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:45,895] ERROR: Not connected to tracker.
+[2025-04-10 22:27:45,897] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:46,002] ERROR: Not connected to tracker.
+[2025-04-10 22:27:46,004] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:46,111] ERROR: Not connected to tracker.
+[2025-04-10 22:27:46,112] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:46,221] ERROR: Not connected to tracker.
+[2025-04-10 22:27:46,223] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:46,327] ERROR: Not connected to tracker.
+[2025-04-10 22:27:46,327] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:46,430] ERROR: Not connected to tracker.
+[2025-04-10 22:27:46,431] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:46,535] ERROR: Not connected to tracker.
+[2025-04-10 22:27:46,536] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:46,640] ERROR: Not connected to tracker.
+[2025-04-10 22:27:46,640] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:46,742] ERROR: Not connected to tracker.
+[2025-04-10 22:27:46,742] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:46,845] ERROR: Not connected to tracker.
+[2025-04-10 22:27:46,845] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:46,948] ERROR: Not connected to tracker.
+[2025-04-10 22:27:46,959] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:47,061] ERROR: Not connected to tracker.
+[2025-04-10 22:27:47,061] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:47,165] ERROR: Not connected to tracker.
+[2025-04-10 22:27:47,165] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:47,267] ERROR: Not connected to tracker.
+[2025-04-10 22:27:47,267] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:47,369] ERROR: Not connected to tracker.
+[2025-04-10 22:27:47,369] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:47,472] ERROR: Not connected to tracker.
+[2025-04-10 22:27:47,472] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:47,574] ERROR: Not connected to tracker.
+[2025-04-10 22:27:47,574] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:47,676] ERROR: Not connected to tracker.
+[2025-04-10 22:27:47,676] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:47,780] ERROR: Not connected to tracker.
+[2025-04-10 22:27:47,800] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:47,903] ERROR: Not connected to tracker.
+[2025-04-10 22:27:47,903] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:48,005] ERROR: Not connected to tracker.
+[2025-04-10 22:27:48,006] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:48,109] ERROR: Not connected to tracker.
+[2025-04-10 22:27:48,109] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:48,212] ERROR: Not connected to tracker.
+[2025-04-10 22:27:48,212] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:48,316] ERROR: Not connected to tracker.
+[2025-04-10 22:27:48,316] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:48,419] ERROR: Not connected to tracker.
+[2025-04-10 22:27:48,419] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:48,522] ERROR: Not connected to tracker.
+[2025-04-10 22:27:48,522] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:48,625] ERROR: Not connected to tracker.
+[2025-04-10 22:27:48,626] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:48,729] ERROR: Not connected to tracker.
+[2025-04-10 22:27:48,730] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:48,833] ERROR: Not connected to tracker.
+[2025-04-10 22:27:48,834] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:48,940] ERROR: Not connected to tracker.
+[2025-04-10 22:27:48,940] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:49,044] ERROR: Not connected to tracker.
+[2025-04-10 22:27:49,044] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:49,148] ERROR: Not connected to tracker.
+[2025-04-10 22:27:49,149] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:49,253] ERROR: Not connected to tracker.
+[2025-04-10 22:27:49,253] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:49,357] ERROR: Not connected to tracker.
+[2025-04-10 22:27:49,357] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:49,463] ERROR: Not connected to tracker.
+[2025-04-10 22:27:49,463] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:49,567] ERROR: Not connected to tracker.
+[2025-04-10 22:27:49,568] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:49,670] ERROR: Not connected to tracker.
+[2025-04-10 22:27:49,671] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:49,773] ERROR: Not connected to tracker.
+[2025-04-10 22:27:49,773] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:49,876] ERROR: Not connected to tracker.
+[2025-04-10 22:27:49,876] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:49,980] ERROR: Not connected to tracker.
+[2025-04-10 22:27:49,984] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:50,087] ERROR: Not connected to tracker.
+[2025-04-10 22:27:50,087] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:50,191] ERROR: Not connected to tracker.
+[2025-04-10 22:27:50,192] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:50,297] ERROR: Not connected to tracker.
+[2025-04-10 22:27:50,297] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:50,401] ERROR: Not connected to tracker.
+[2025-04-10 22:27:50,401] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:50,506] ERROR: Not connected to tracker.
+[2025-04-10 22:27:50,506] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:50,610] ERROR: Not connected to tracker.
+[2025-04-10 22:27:50,611] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:27:50,715] ERROR: Not connected to tracker.
+[2025-04-10 22:27:50,716] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:28:02,031] INFO: User beckhamngo logged out
+[2025-04-10 22:35:18,135] INFO: User beckhamngo logged in successfully
+[2025-04-10 22:35:18,137] INFO: Logged in as: beckhamngo
+[2025-04-10 22:35:18,717] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-10 22:35:20,756] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-10 22:35:20,758] INFO: P2P SERVER listening on 127.0.0.1:8774
+[2025-04-10 22:35:20,761] INFO: UDP LISTENER listening on 127.0.0.1:8775 for UDP livestream.
+[2025-04-10 22:35:43,343] INFO: Channel 'Beckham' created by beckhamngo (is_private=False)
+[2025-04-10 22:39:31,738] INFO: User beckhamngo logged in successfully
+[2025-04-10 22:39:31,739] INFO: Logged in as: beckhamngo
+[2025-04-10 22:39:32,396] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-10 22:39:34,421] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-10 22:39:34,422] INFO: P2P SERVER listening on 127.0.0.1:6722
+[2025-04-10 22:39:34,423] INFO: UDP LISTENER listening on 127.0.0.1:6723 for livestream.
+[2025-04-10 22:39:37,959] INFO: Starting livestream.
+[2025-04-10 22:39:38,101] ERROR: Not connected to tracker.
+[2025-04-10 22:39:38,101] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:38,223] ERROR: Not connected to tracker.
+[2025-04-10 22:39:38,224] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:38,327] ERROR: Not connected to tracker.
+[2025-04-10 22:39:38,328] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:38,432] ERROR: Not connected to tracker.
+[2025-04-10 22:39:38,433] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:38,536] ERROR: Not connected to tracker.
+[2025-04-10 22:39:38,537] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:38,639] ERROR: Not connected to tracker.
+[2025-04-10 22:39:38,640] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:38,745] ERROR: Not connected to tracker.
+[2025-04-10 22:39:38,745] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:38,848] ERROR: Not connected to tracker.
+[2025-04-10 22:39:38,849] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:38,953] ERROR: Not connected to tracker.
+[2025-04-10 22:39:38,953] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:39,056] ERROR: Not connected to tracker.
+[2025-04-10 22:39:39,057] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:39,161] ERROR: Not connected to tracker.
+[2025-04-10 22:39:39,162] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:39,265] ERROR: Not connected to tracker.
+[2025-04-10 22:39:39,266] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:39,369] ERROR: Not connected to tracker.
+[2025-04-10 22:39:39,371] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:39,474] ERROR: Not connected to tracker.
+[2025-04-10 22:39:39,475] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:39,579] ERROR: Not connected to tracker.
+[2025-04-10 22:39:39,580] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:39,684] ERROR: Not connected to tracker.
+[2025-04-10 22:39:39,684] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:39,788] ERROR: Not connected to tracker.
+[2025-04-10 22:39:39,788] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:39,892] ERROR: Not connected to tracker.
+[2025-04-10 22:39:39,893] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:39,996] ERROR: Not connected to tracker.
+[2025-04-10 22:39:39,997] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:40,099] ERROR: Not connected to tracker.
+[2025-04-10 22:39:40,100] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:40,203] ERROR: Not connected to tracker.
+[2025-04-10 22:39:40,204] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:40,306] ERROR: Not connected to tracker.
+[2025-04-10 22:39:40,308] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:40,411] ERROR: Not connected to tracker.
+[2025-04-10 22:39:40,412] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:40,516] ERROR: Not connected to tracker.
+[2025-04-10 22:39:40,517] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:40,620] ERROR: Not connected to tracker.
+[2025-04-10 22:39:40,622] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:40,725] ERROR: Not connected to tracker.
+[2025-04-10 22:39:40,726] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:40,830] ERROR: Not connected to tracker.
+[2025-04-10 22:39:40,830] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:40,935] ERROR: Not connected to tracker.
+[2025-04-10 22:39:40,935] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:41,039] ERROR: Not connected to tracker.
+[2025-04-10 22:39:41,039] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:41,143] ERROR: Not connected to tracker.
+[2025-04-10 22:39:41,144] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:41,247] ERROR: Not connected to tracker.
+[2025-04-10 22:39:41,248] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:41,352] ERROR: Not connected to tracker.
+[2025-04-10 22:39:41,353] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:41,457] ERROR: Not connected to tracker.
+[2025-04-10 22:39:41,458] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:41,563] ERROR: Not connected to tracker.
+[2025-04-10 22:39:41,563] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:41,666] ERROR: Not connected to tracker.
+[2025-04-10 22:39:41,667] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:41,771] ERROR: Not connected to tracker.
+[2025-04-10 22:39:41,772] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:41,875] ERROR: Not connected to tracker.
+[2025-04-10 22:39:41,876] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:41,980] ERROR: Not connected to tracker.
+[2025-04-10 22:39:41,980] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:42,084] ERROR: Not connected to tracker.
+[2025-04-10 22:39:42,085] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:42,188] ERROR: Not connected to tracker.
+[2025-04-10 22:39:42,188] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:42,292] ERROR: Not connected to tracker.
+[2025-04-10 22:39:42,293] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:42,395] ERROR: Not connected to tracker.
+[2025-04-10 22:39:42,395] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:42,499] ERROR: Not connected to tracker.
+[2025-04-10 22:39:42,500] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:42,602] ERROR: Not connected to tracker.
+[2025-04-10 22:39:42,603] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:42,707] ERROR: Not connected to tracker.
+[2025-04-10 22:39:42,708] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:42,813] ERROR: Not connected to tracker.
+[2025-04-10 22:39:42,813] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:42,916] ERROR: Not connected to tracker.
+[2025-04-10 22:39:42,917] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:43,019] ERROR: Not connected to tracker.
+[2025-04-10 22:39:43,021] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:43,123] ERROR: Not connected to tracker.
+[2025-04-10 22:39:43,123] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:43,228] ERROR: Not connected to tracker.
+[2025-04-10 22:39:43,228] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:43,331] ERROR: Not connected to tracker.
+[2025-04-10 22:39:43,331] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:43,435] ERROR: Not connected to tracker.
+[2025-04-10 22:39:43,435] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:43,539] ERROR: Not connected to tracker.
+[2025-04-10 22:39:43,539] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:43,642] ERROR: Not connected to tracker.
+[2025-04-10 22:39:43,643] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:43,746] ERROR: Not connected to tracker.
+[2025-04-10 22:39:43,747] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:43,850] ERROR: Not connected to tracker.
+[2025-04-10 22:39:43,850] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:43,953] ERROR: Not connected to tracker.
+[2025-04-10 22:39:43,954] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:44,057] ERROR: Not connected to tracker.
+[2025-04-10 22:39:44,058] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:44,161] ERROR: Not connected to tracker.
+[2025-04-10 22:39:44,161] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:44,265] ERROR: Not connected to tracker.
+[2025-04-10 22:39:44,266] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:44,369] ERROR: Not connected to tracker.
+[2025-04-10 22:39:44,369] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:44,473] ERROR: Not connected to tracker.
+[2025-04-10 22:39:44,474] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:44,578] ERROR: Not connected to tracker.
+[2025-04-10 22:39:44,578] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:44,683] ERROR: Not connected to tracker.
+[2025-04-10 22:39:44,683] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:44,786] ERROR: Not connected to tracker.
+[2025-04-10 22:39:44,786] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:44,889] ERROR: Not connected to tracker.
+[2025-04-10 22:39:44,889] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:44,993] ERROR: Not connected to tracker.
+[2025-04-10 22:39:44,993] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:45,096] ERROR: Not connected to tracker.
+[2025-04-10 22:39:45,096] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:45,201] ERROR: Not connected to tracker.
+[2025-04-10 22:39:45,201] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:45,304] ERROR: Not connected to tracker.
+[2025-04-10 22:39:45,305] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:45,407] ERROR: Not connected to tracker.
+[2025-04-10 22:39:45,407] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:45,513] ERROR: Not connected to tracker.
+[2025-04-10 22:39:45,513] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:45,617] ERROR: Not connected to tracker.
+[2025-04-10 22:39:45,618] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:45,720] ERROR: Not connected to tracker.
+[2025-04-10 22:39:45,720] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:45,824] ERROR: Not connected to tracker.
+[2025-04-10 22:39:45,824] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:45,928] ERROR: Not connected to tracker.
+[2025-04-10 22:39:45,928] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:46,032] ERROR: Not connected to tracker.
+[2025-04-10 22:39:46,033] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:46,038] INFO: Stopping livestream.
+[2025-04-10 22:39:46,680] INFO: Livestream stopped.
+[2025-04-10 22:39:49,751] INFO: Starting livestream.
+[2025-04-10 22:39:49,880] ERROR: Not connected to tracker.
+[2025-04-10 22:39:49,880] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:49,999] ERROR: Not connected to tracker.
+[2025-04-10 22:39:50,000] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:50,104] ERROR: Not connected to tracker.
+[2025-04-10 22:39:50,104] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:50,207] ERROR: Not connected to tracker.
+[2025-04-10 22:39:50,207] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:50,310] ERROR: Not connected to tracker.
+[2025-04-10 22:39:50,311] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:50,415] ERROR: Not connected to tracker.
+[2025-04-10 22:39:50,416] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:50,518] ERROR: Not connected to tracker.
+[2025-04-10 22:39:50,519] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:50,623] ERROR: Not connected to tracker.
+[2025-04-10 22:39:50,624] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:50,727] ERROR: Not connected to tracker.
+[2025-04-10 22:39:50,728] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:50,832] ERROR: Not connected to tracker.
+[2025-04-10 22:39:50,833] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:50,936] ERROR: Not connected to tracker.
+[2025-04-10 22:39:50,936] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:51,039] ERROR: Not connected to tracker.
+[2025-04-10 22:39:51,040] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:51,143] ERROR: Not connected to tracker.
+[2025-04-10 22:39:51,144] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:51,247] ERROR: Not connected to tracker.
+[2025-04-10 22:39:51,247] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:51,351] ERROR: Not connected to tracker.
+[2025-04-10 22:39:51,351] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:51,368] INFO: Stopping livestream.
+[2025-04-10 22:39:52,027] INFO: Livestream stopped.
+[2025-04-10 22:39:53,790] INFO: Starting livestream.
+[2025-04-10 22:39:53,916] ERROR: Not connected to tracker.
+[2025-04-10 22:39:53,916] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:54,028] ERROR: Not connected to tracker.
+[2025-04-10 22:39:54,029] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:54,133] ERROR: Not connected to tracker.
+[2025-04-10 22:39:54,134] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:54,238] ERROR: Not connected to tracker.
+[2025-04-10 22:39:54,238] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:54,342] ERROR: Not connected to tracker.
+[2025-04-10 22:39:54,343] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:54,446] ERROR: Not connected to tracker.
+[2025-04-10 22:39:54,447] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:54,549] ERROR: Not connected to tracker.
+[2025-04-10 22:39:54,549] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:54,654] ERROR: Not connected to tracker.
+[2025-04-10 22:39:54,655] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:54,758] ERROR: Not connected to tracker.
+[2025-04-10 22:39:54,759] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:54,863] ERROR: Not connected to tracker.
+[2025-04-10 22:39:54,864] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:54,968] ERROR: Not connected to tracker.
+[2025-04-10 22:39:54,969] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:55,072] ERROR: Not connected to tracker.
+[2025-04-10 22:39:55,073] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:55,177] ERROR: Not connected to tracker.
+[2025-04-10 22:39:55,178] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:55,283] ERROR: Not connected to tracker.
+[2025-04-10 22:39:55,283] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:55,386] ERROR: Not connected to tracker.
+[2025-04-10 22:39:55,387] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:55,491] ERROR: Not connected to tracker.
+[2025-04-10 22:39:55,491] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:55,594] ERROR: Not connected to tracker.
+[2025-04-10 22:39:55,596] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:55,699] ERROR: Not connected to tracker.
+[2025-04-10 22:39:55,700] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:55,804] ERROR: Not connected to tracker.
+[2025-04-10 22:39:55,804] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:55,907] ERROR: Not connected to tracker.
+[2025-04-10 22:39:55,908] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:56,011] ERROR: Not connected to tracker.
+[2025-04-10 22:39:56,012] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:56,116] ERROR: Not connected to tracker.
+[2025-04-10 22:39:56,117] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:56,220] ERROR: Not connected to tracker.
+[2025-04-10 22:39:56,220] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:56,324] ERROR: Not connected to tracker.
+[2025-04-10 22:39:56,324] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:56,427] ERROR: Not connected to tracker.
+[2025-04-10 22:39:56,428] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:56,531] ERROR: Not connected to tracker.
+[2025-04-10 22:39:56,531] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:56,635] ERROR: Not connected to tracker.
+[2025-04-10 22:39:56,636] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:56,739] ERROR: Not connected to tracker.
+[2025-04-10 22:39:56,739] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:56,842] ERROR: Not connected to tracker.
+[2025-04-10 22:39:56,843] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:56,946] ERROR: Not connected to tracker.
+[2025-04-10 22:39:56,947] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:57,050] ERROR: Not connected to tracker.
+[2025-04-10 22:39:57,050] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:57,153] ERROR: Not connected to tracker.
+[2025-04-10 22:39:57,154] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:57,259] ERROR: Not connected to tracker.
+[2025-04-10 22:39:57,259] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:57,363] ERROR: Not connected to tracker.
+[2025-04-10 22:39:57,363] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:57,467] ERROR: Not connected to tracker.
+[2025-04-10 22:39:57,468] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:57,572] ERROR: Not connected to tracker.
+[2025-04-10 22:39:57,573] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:57,676] ERROR: Not connected to tracker.
+[2025-04-10 22:39:57,676] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:57,779] ERROR: Not connected to tracker.
+[2025-04-10 22:39:57,780] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:57,884] ERROR: Not connected to tracker.
+[2025-04-10 22:39:57,885] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:57,990] ERROR: Not connected to tracker.
+[2025-04-10 22:39:57,991] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:58,095] ERROR: Not connected to tracker.
+[2025-04-10 22:39:58,096] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:58,199] ERROR: Not connected to tracker.
+[2025-04-10 22:39:58,201] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:58,304] ERROR: Not connected to tracker.
+[2025-04-10 22:39:58,304] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:58,408] ERROR: Not connected to tracker.
+[2025-04-10 22:39:58,408] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:58,512] ERROR: Not connected to tracker.
+[2025-04-10 22:39:58,513] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:58,616] ERROR: Not connected to tracker.
+[2025-04-10 22:39:58,616] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:58,719] ERROR: Not connected to tracker.
+[2025-04-10 22:39:58,720] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:58,823] ERROR: Not connected to tracker.
+[2025-04-10 22:39:58,824] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:58,927] ERROR: Not connected to tracker.
+[2025-04-10 22:39:58,927] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:59,031] ERROR: Not connected to tracker.
+[2025-04-10 22:39:59,031] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:59,133] ERROR: Not connected to tracker.
+[2025-04-10 22:39:59,134] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:59,238] ERROR: Not connected to tracker.
+[2025-04-10 22:39:59,238] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:59,342] ERROR: Not connected to tracker.
+[2025-04-10 22:39:59,342] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:59,446] ERROR: Not connected to tracker.
+[2025-04-10 22:39:59,447] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:59,550] ERROR: Not connected to tracker.
+[2025-04-10 22:39:59,550] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:59,654] ERROR: Not connected to tracker.
+[2025-04-10 22:39:59,655] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:59,759] ERROR: Not connected to tracker.
+[2025-04-10 22:39:59,760] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:59,863] ERROR: Not connected to tracker.
+[2025-04-10 22:39:59,864] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:39:59,967] ERROR: Not connected to tracker.
+[2025-04-10 22:39:59,968] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:40:00,072] ERROR: Not connected to tracker.
+[2025-04-10 22:40:00,072] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:40:00,175] ERROR: Not connected to tracker.
+[2025-04-10 22:40:00,176] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:40:00,280] ERROR: Not connected to tracker.
+[2025-04-10 22:40:00,280] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:40:00,373] INFO: Stopping livestream.
+[2025-04-10 22:40:00,935] INFO: Livestream stopped.
+[2025-04-10 22:40:04,128] INFO: Starting livestream.
+[2025-04-10 22:40:04,257] ERROR: Not connected to tracker.
+[2025-04-10 22:40:04,258] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:40:04,382] ERROR: Not connected to tracker.
+[2025-04-10 22:40:04,383] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:40:04,488] ERROR: Not connected to tracker.
+[2025-04-10 22:40:04,488] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:40:04,592] ERROR: Not connected to tracker.
+[2025-04-10 22:40:04,593] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:40:04,697] ERROR: Not connected to tracker.
+[2025-04-10 22:40:04,698] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:40:04,803] ERROR: Not connected to tracker.
+[2025-04-10 22:40:04,803] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:40:04,906] ERROR: Not connected to tracker.
+[2025-04-10 22:40:04,906] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:40:05,010] ERROR: Not connected to tracker.
+[2025-04-10 22:40:05,012] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:40:05,115] ERROR: Not connected to tracker.
+[2025-04-10 22:40:05,116] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:40:05,220] ERROR: Not connected to tracker.
+[2025-04-10 22:40:05,220] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:40:05,324] ERROR: Not connected to tracker.
+[2025-04-10 22:40:05,325] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:40:05,407] INFO: Stopping livestream.
+[2025-04-10 22:40:05,957] INFO: Livestream stopped.
+[2025-04-10 22:44:59,477] INFO: Starting livestream.
+[2025-04-10 22:44:59,628] ERROR: Not connected to tracker.
+[2025-04-10 22:44:59,629] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:44:59,744] ERROR: Not connected to tracker.
+[2025-04-10 22:44:59,745] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:44:59,850] ERROR: Not connected to tracker.
+[2025-04-10 22:44:59,851] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:44:59,965] ERROR: Not connected to tracker.
+[2025-04-10 22:44:59,965] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:00,074] ERROR: Not connected to tracker.
+[2025-04-10 22:45:00,083] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:00,198] ERROR: Not connected to tracker.
+[2025-04-10 22:45:00,199] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:00,309] ERROR: Not connected to tracker.
+[2025-04-10 22:45:00,310] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:00,417] ERROR: Not connected to tracker.
+[2025-04-10 22:45:00,418] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:00,527] ERROR: Not connected to tracker.
+[2025-04-10 22:45:00,528] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:00,637] ERROR: Not connected to tracker.
+[2025-04-10 22:45:00,638] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:00,742] ERROR: Not connected to tracker.
+[2025-04-10 22:45:00,742] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:00,846] ERROR: Not connected to tracker.
+[2025-04-10 22:45:00,847] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:00,951] ERROR: Not connected to tracker.
+[2025-04-10 22:45:00,952] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:01,054] ERROR: Not connected to tracker.
+[2025-04-10 22:45:01,055] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:01,158] ERROR: Not connected to tracker.
+[2025-04-10 22:45:01,158] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:01,262] ERROR: Not connected to tracker.
+[2025-04-10 22:45:01,262] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:01,366] ERROR: Not connected to tracker.
+[2025-04-10 22:45:01,366] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:01,471] ERROR: Not connected to tracker.
+[2025-04-10 22:45:01,471] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:01,575] ERROR: Not connected to tracker.
+[2025-04-10 22:45:01,575] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:01,679] ERROR: Not connected to tracker.
+[2025-04-10 22:45:01,680] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:01,784] ERROR: Not connected to tracker.
+[2025-04-10 22:45:01,784] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:01,888] ERROR: Not connected to tracker.
+[2025-04-10 22:45:01,888] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:01,991] ERROR: Not connected to tracker.
+[2025-04-10 22:45:01,991] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:02,096] ERROR: Not connected to tracker.
+[2025-04-10 22:45:02,097] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:02,202] ERROR: Not connected to tracker.
+[2025-04-10 22:45:02,203] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:02,308] ERROR: Not connected to tracker.
+[2025-04-10 22:45:02,308] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:02,413] ERROR: Not connected to tracker.
+[2025-04-10 22:45:02,413] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:02,518] ERROR: Not connected to tracker.
+[2025-04-10 22:45:02,519] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:02,623] ERROR: Not connected to tracker.
+[2025-04-10 22:45:02,625] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:02,729] ERROR: Not connected to tracker.
+[2025-04-10 22:45:02,729] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:02,833] ERROR: Not connected to tracker.
+[2025-04-10 22:45:02,834] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:02,937] ERROR: Not connected to tracker.
+[2025-04-10 22:45:02,939] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:03,042] ERROR: Not connected to tracker.
+[2025-04-10 22:45:03,043] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:03,146] ERROR: Not connected to tracker.
+[2025-04-10 22:45:03,147] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:03,251] ERROR: Not connected to tracker.
+[2025-04-10 22:45:03,252] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:03,355] ERROR: Not connected to tracker.
+[2025-04-10 22:45:03,355] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:03,459] ERROR: Not connected to tracker.
+[2025-04-10 22:45:03,460] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:03,562] ERROR: Not connected to tracker.
+[2025-04-10 22:45:03,562] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:03,666] ERROR: Not connected to tracker.
+[2025-04-10 22:45:03,666] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:03,770] ERROR: Not connected to tracker.
+[2025-04-10 22:45:03,770] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:03,874] ERROR: Not connected to tracker.
+[2025-04-10 22:45:03,875] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:03,979] ERROR: Not connected to tracker.
+[2025-04-10 22:45:03,980] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:04,094] ERROR: Not connected to tracker.
+[2025-04-10 22:45:04,105] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:04,209] ERROR: Not connected to tracker.
+[2025-04-10 22:45:04,209] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:04,236] INFO: Stopping livestream.
+[2025-04-10 22:45:04,845] INFO: Livestream stopped.
+[2025-04-10 22:45:10,789] INFO: Starting livestream.
+[2025-04-10 22:45:10,912] ERROR: Not connected to tracker.
+[2025-04-10 22:45:10,914] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:11,028] ERROR: Not connected to tracker.
+[2025-04-10 22:45:11,030] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:11,133] ERROR: Not connected to tracker.
+[2025-04-10 22:45:11,138] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:11,241] ERROR: Not connected to tracker.
+[2025-04-10 22:45:11,255] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:11,365] ERROR: Not connected to tracker.
+[2025-04-10 22:45:11,401] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:11,504] ERROR: Not connected to tracker.
+[2025-04-10 22:45:11,508] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:11,612] ERROR: Not connected to tracker.
+[2025-04-10 22:45:11,613] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:11,715] ERROR: Not connected to tracker.
+[2025-04-10 22:45:11,716] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:11,851] ERROR: Not connected to tracker.
+[2025-04-10 22:45:11,851] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:11,967] ERROR: Not connected to tracker.
+[2025-04-10 22:45:11,967] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:12,070] ERROR: Not connected to tracker.
+[2025-04-10 22:45:12,071] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:12,174] ERROR: Not connected to tracker.
+[2025-04-10 22:45:12,174] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:12,278] ERROR: Not connected to tracker.
+[2025-04-10 22:45:12,279] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:12,382] ERROR: Not connected to tracker.
+[2025-04-10 22:45:12,391] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:12,494] ERROR: Not connected to tracker.
+[2025-04-10 22:45:12,495] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:12,598] ERROR: Not connected to tracker.
+[2025-04-10 22:45:12,598] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:12,700] ERROR: Not connected to tracker.
+[2025-04-10 22:45:12,701] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:12,805] ERROR: Not connected to tracker.
+[2025-04-10 22:45:12,805] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:12,909] ERROR: Not connected to tracker.
+[2025-04-10 22:45:12,915] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:45:13,018] INFO: Stopping livestream.
+[2025-04-10 22:45:13,553] INFO: Livestream stopped.
+[2025-04-10 22:45:19,047] INFO: Sending message: cádsa
+[2025-04-10 22:45:19,146] INFO: Message from beckhamngo sent in channel 'private0'
+[2025-04-10 22:45:23,408] INFO: Sending message: xin chào chơi đê
+[2025-04-10 22:45:23,497] INFO: Message from beckhamngo sent in channel 'private0'
+[2025-04-10 22:45:43,499] INFO: Sending message: ụa
+[2025-04-10 22:45:43,742] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-10 22:46:05,033] INFO: Sending message: q2 trúng
+[2025-04-10 22:46:05,125] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-10 22:46:10,269] INFO: User beckhamngo logged out
+[2025-04-10 22:46:12,490] INFO: User beckhamngo logged in successfully
+[2025-04-10 22:46:12,492] INFO: Logged in as: beckhamngo
+[2025-04-10 22:46:13,192] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-10 22:46:15,230] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-10 22:46:15,232] INFO: P2P SERVER listening on 127.0.0.1:6771
+[2025-04-10 22:46:15,232] INFO: UDP LISTENER listening on 127.0.0.1:6772 for livestream.
+[2025-04-10 22:46:20,955] INFO: User beckhamngo logged out
+[2025-04-10 22:48:00,844] INFO: User beckhamngo logged in successfully
+[2025-04-10 22:48:00,848] INFO: Logged in as: beckhamngo
+[2025-04-10 22:48:01,840] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-10 22:48:03,876] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-10 22:48:03,878] INFO: P2P SERVER listening on 127.0.0.1:8481
+[2025-04-10 22:48:03,879] INFO: UDP LISTENER listening on 127.0.0.1:8482 for livestream.
+[2025-04-10 22:48:15,606] INFO: Starting livestream.
+[2025-04-10 22:48:15,760] ERROR: Not connected to tracker.
+[2025-04-10 22:48:15,760] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:15,877] ERROR: Not connected to tracker.
+[2025-04-10 22:48:15,877] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:15,981] ERROR: Not connected to tracker.
+[2025-04-10 22:48:15,981] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:16,085] ERROR: Not connected to tracker.
+[2025-04-10 22:48:16,086] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:16,189] ERROR: Not connected to tracker.
+[2025-04-10 22:48:16,189] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:16,292] ERROR: Not connected to tracker.
+[2025-04-10 22:48:16,292] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:16,396] ERROR: Not connected to tracker.
+[2025-04-10 22:48:16,397] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:16,500] ERROR: Not connected to tracker.
+[2025-04-10 22:48:16,502] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:16,606] ERROR: Not connected to tracker.
+[2025-04-10 22:48:16,607] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:16,709] ERROR: Not connected to tracker.
+[2025-04-10 22:48:16,709] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:16,813] ERROR: Not connected to tracker.
+[2025-04-10 22:48:16,813] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:16,917] ERROR: Not connected to tracker.
+[2025-04-10 22:48:16,918] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:17,022] ERROR: Not connected to tracker.
+[2025-04-10 22:48:17,022] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:17,125] ERROR: Not connected to tracker.
+[2025-04-10 22:48:17,126] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:17,228] ERROR: Not connected to tracker.
+[2025-04-10 22:48:17,229] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:17,332] ERROR: Not connected to tracker.
+[2025-04-10 22:48:17,333] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:17,436] ERROR: Not connected to tracker.
+[2025-04-10 22:48:17,437] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:17,541] ERROR: Not connected to tracker.
+[2025-04-10 22:48:17,542] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:17,647] ERROR: Not connected to tracker.
+[2025-04-10 22:48:17,647] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:17,751] ERROR: Not connected to tracker.
+[2025-04-10 22:48:17,752] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:17,855] ERROR: Not connected to tracker.
+[2025-04-10 22:48:17,856] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:17,960] ERROR: Not connected to tracker.
+[2025-04-10 22:48:17,960] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:18,064] ERROR: Not connected to tracker.
+[2025-04-10 22:48:18,064] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:18,168] ERROR: Not connected to tracker.
+[2025-04-10 22:48:18,169] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:18,272] ERROR: Not connected to tracker.
+[2025-04-10 22:48:18,272] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:18,376] ERROR: Not connected to tracker.
+[2025-04-10 22:48:18,377] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:18,480] ERROR: Not connected to tracker.
+[2025-04-10 22:48:18,480] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:18,584] ERROR: Not connected to tracker.
+[2025-04-10 22:48:18,584] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:18,687] ERROR: Not connected to tracker.
+[2025-04-10 22:48:18,688] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:18,790] ERROR: Not connected to tracker.
+[2025-04-10 22:48:18,790] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:18,893] ERROR: Not connected to tracker.
+[2025-04-10 22:48:18,894] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:18,999] ERROR: Not connected to tracker.
+[2025-04-10 22:48:18,999] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:19,103] ERROR: Not connected to tracker.
+[2025-04-10 22:48:19,103] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:19,208] ERROR: Not connected to tracker.
+[2025-04-10 22:48:19,209] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:19,312] ERROR: Not connected to tracker.
+[2025-04-10 22:48:19,314] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:19,417] ERROR: Not connected to tracker.
+[2025-04-10 22:48:19,417] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:19,520] ERROR: Not connected to tracker.
+[2025-04-10 22:48:19,520] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:19,623] ERROR: Not connected to tracker.
+[2025-04-10 22:48:19,623] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:19,727] ERROR: Not connected to tracker.
+[2025-04-10 22:48:19,727] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:19,830] ERROR: Not connected to tracker.
+[2025-04-10 22:48:19,830] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:19,933] ERROR: Not connected to tracker.
+[2025-04-10 22:48:19,933] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:20,035] ERROR: Not connected to tracker.
+[2025-04-10 22:48:20,035] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:20,139] ERROR: Not connected to tracker.
+[2025-04-10 22:48:20,139] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:20,242] ERROR: Not connected to tracker.
+[2025-04-10 22:48:20,243] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:20,347] ERROR: Not connected to tracker.
+[2025-04-10 22:48:20,347] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:20,450] ERROR: Not connected to tracker.
+[2025-04-10 22:48:20,451] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:20,554] ERROR: Not connected to tracker.
+[2025-04-10 22:48:20,555] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:20,659] ERROR: Not connected to tracker.
+[2025-04-10 22:48:20,659] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:20,762] ERROR: Not connected to tracker.
+[2025-04-10 22:48:20,763] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:20,866] ERROR: Not connected to tracker.
+[2025-04-10 22:48:20,866] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:20,969] ERROR: Not connected to tracker.
+[2025-04-10 22:48:20,970] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:21,074] ERROR: Not connected to tracker.
+[2025-04-10 22:48:21,075] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:21,178] ERROR: Not connected to tracker.
+[2025-04-10 22:48:21,179] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:21,282] ERROR: Not connected to tracker.
+[2025-04-10 22:48:21,283] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:21,388] ERROR: Not connected to tracker.
+[2025-04-10 22:48:21,389] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:21,492] ERROR: Not connected to tracker.
+[2025-04-10 22:48:21,493] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:21,596] ERROR: Not connected to tracker.
+[2025-04-10 22:48:21,597] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:21,700] ERROR: Not connected to tracker.
+[2025-04-10 22:48:21,700] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:21,805] ERROR: Not connected to tracker.
+[2025-04-10 22:48:21,806] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:21,910] ERROR: Not connected to tracker.
+[2025-04-10 22:48:21,910] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:22,014] ERROR: Not connected to tracker.
+[2025-04-10 22:48:22,015] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:22,119] ERROR: Not connected to tracker.
+[2025-04-10 22:48:22,120] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:22,223] ERROR: Not connected to tracker.
+[2025-04-10 22:48:22,224] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:22,328] ERROR: Not connected to tracker.
+[2025-04-10 22:48:22,329] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:22,432] ERROR: Not connected to tracker.
+[2025-04-10 22:48:22,432] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:22,535] ERROR: Not connected to tracker.
+[2025-04-10 22:48:22,536] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:22,640] ERROR: Not connected to tracker.
+[2025-04-10 22:48:22,640] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:22,743] ERROR: Not connected to tracker.
+[2025-04-10 22:48:22,744] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:22,847] ERROR: Not connected to tracker.
+[2025-04-10 22:48:22,848] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:22,950] ERROR: Not connected to tracker.
+[2025-04-10 22:48:22,950] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:23,055] ERROR: Not connected to tracker.
+[2025-04-10 22:48:23,055] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:23,158] ERROR: Not connected to tracker.
+[2025-04-10 22:48:23,159] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:23,262] ERROR: Not connected to tracker.
+[2025-04-10 22:48:23,262] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:23,365] ERROR: Not connected to tracker.
+[2025-04-10 22:48:23,366] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:23,468] ERROR: Not connected to tracker.
+[2025-04-10 22:48:23,468] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:23,572] ERROR: Not connected to tracker.
+[2025-04-10 22:48:23,572] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:23,675] ERROR: Not connected to tracker.
+[2025-04-10 22:48:23,675] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:23,779] ERROR: Not connected to tracker.
+[2025-04-10 22:48:23,779] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:23,882] ERROR: Not connected to tracker.
+[2025-04-10 22:48:23,882] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:23,986] ERROR: Not connected to tracker.
+[2025-04-10 22:48:23,986] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:24,089] ERROR: Not connected to tracker.
+[2025-04-10 22:48:24,089] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:24,192] ERROR: Not connected to tracker.
+[2025-04-10 22:48:24,192] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:24,296] ERROR: Not connected to tracker.
+[2025-04-10 22:48:24,297] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:24,400] ERROR: Not connected to tracker.
+[2025-04-10 22:48:24,400] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:24,504] ERROR: Not connected to tracker.
+[2025-04-10 22:48:24,505] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:24,608] ERROR: Not connected to tracker.
+[2025-04-10 22:48:24,609] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:24,712] ERROR: Not connected to tracker.
+[2025-04-10 22:48:24,713] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:24,815] ERROR: Not connected to tracker.
+[2025-04-10 22:48:24,815] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:24,919] ERROR: Not connected to tracker.
+[2025-04-10 22:48:24,920] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:25,024] ERROR: Not connected to tracker.
+[2025-04-10 22:48:25,025] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:25,128] ERROR: Not connected to tracker.
+[2025-04-10 22:48:25,129] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:25,233] ERROR: Not connected to tracker.
+[2025-04-10 22:48:25,234] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:25,337] ERROR: Not connected to tracker.
+[2025-04-10 22:48:25,338] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:25,443] ERROR: Not connected to tracker.
+[2025-04-10 22:48:25,444] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:25,547] ERROR: Not connected to tracker.
+[2025-04-10 22:48:25,548] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:25,650] ERROR: Not connected to tracker.
+[2025-04-10 22:48:25,651] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:25,754] ERROR: Not connected to tracker.
+[2025-04-10 22:48:25,755] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:25,858] ERROR: Not connected to tracker.
+[2025-04-10 22:48:25,859] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:25,963] ERROR: Not connected to tracker.
+[2025-04-10 22:48:25,964] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:26,067] ERROR: Not connected to tracker.
+[2025-04-10 22:48:26,068] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:26,172] ERROR: Not connected to tracker.
+[2025-04-10 22:48:26,173] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:26,277] ERROR: Not connected to tracker.
+[2025-04-10 22:48:26,278] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:26,382] ERROR: Not connected to tracker.
+[2025-04-10 22:48:26,382] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:26,486] ERROR: Not connected to tracker.
+[2025-04-10 22:48:26,487] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:26,592] ERROR: Not connected to tracker.
+[2025-04-10 22:48:26,592] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:26,696] ERROR: Not connected to tracker.
+[2025-04-10 22:48:26,697] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:26,800] ERROR: Not connected to tracker.
+[2025-04-10 22:48:26,801] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:26,905] ERROR: Not connected to tracker.
+[2025-04-10 22:48:26,905] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:27,009] ERROR: Not connected to tracker.
+[2025-04-10 22:48:27,010] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:27,113] ERROR: Not connected to tracker.
+[2025-04-10 22:48:27,114] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:27,218] ERROR: Not connected to tracker.
+[2025-04-10 22:48:27,219] INFO: No peers available for UDP broadcast.
+[2025-04-10 22:48:27,307] INFO: Stopping livestream.
+[2025-04-10 22:48:27,878] INFO: Livestream stopped.
+[2025-04-10 22:48:58,395] INFO: Channel 'Beckham' deleted by beckhamngo
+[2025-04-10 22:49:05,072] INFO: User beckhamngo logged out
