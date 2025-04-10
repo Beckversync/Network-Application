@@ -3,10 +3,9 @@ import sys, os, threading, time
 import logging
 from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QWidget,
-    QVBoxLayout, QHBoxLayout, QSplitter,
-    QPushButton, QListWidget, QListWidgetItem,
+    QVBoxLayout, QHBoxLayout, QPushButton, QListWidget, QListWidgetItem,
     QTextEdit, QLineEdit, QLabel, QTabWidget,
-    QCheckBox, QFrame, QComboBox, QDialog, QMessageBox
+    QCheckBox, QFrame, QComboBox, QDialog, QMessageBox, QInputDialog
 )
 from PyQt6.QtCore import Qt, QTimer
 from PyQt6.QtGui import QFont
@@ -100,9 +99,12 @@ class DiscordUI(QMainWindow):
         self.live_checkbox.setStyleSheet("color: white;")
         self.live_checkbox.stateChanged.connect(self.toggle_live_mode)
         sidebar_layout.addWidget(self.live_checkbox)
-
+        # CHỈ SỬ DỤNG 3 TRẠNG THÁI: Online, Offline, Invisible
+        # Online: trạng thái online được hiển thị công khai cho các authenticated-user khác.
+        # Offline: người dùng không có kết nối đến hệ thống.
+        # Invisible: mặc dù user vẫn kết nối và hoạt động như online, nhưng trạng thái hiển thị là offline.
         self.status_dropdown = QComboBox()
-        self.status_dropdown.addItems(["Online", "Away", "Do Not Disturb", "Offline"])
+        self.status_dropdown.addItems(["Online", "Offline", "Invisible"])
         self.status_dropdown.currentTextChanged.connect(self.change_status)
         sidebar_layout.addWidget(self.status_dropdown)
 
@@ -118,7 +120,21 @@ class DiscordUI(QMainWindow):
         self.chat_title_label = QLabel("No channel/user selected")
         self.chat_title_label.setStyleSheet("color: white; font-size: 18px; font-weight: bold;")
         center_layout.addWidget(self.chat_title_label)
+        # Nút Join cho kênh (chỉ hiển thị khi chế độ chat là channel)
 
+        self.join_button = QPushButton("Join Channel")
+        self.join_button.setStyleSheet("background-color: #7289DA; color: white;")
+        self.join_button.clicked.connect(self.join_channel)
+        center_layout.addWidget(self.join_button)
+
+        # Ban đầu ẩn đi nếu chưa có kênh nào được chọn
+        self.delete_channel_button = QPushButton("Delete Channel")
+        self.delete_channel_button.setStyleSheet("background-color: #FF5555; color: white;")
+        self.delete_channel_button.clicked.connect(self.delete_channel)
+        self.delete_channel_button.setVisible(False)
+        center_layout.addWidget(self.delete_channel_button)
+
+        self.join_button.setVisible(False)
         self.chat_display = QTextEdit()
         self.chat_display.setReadOnly(True)
         self.chat_display.setStyleSheet("background-color: #40444B; color: white;")
@@ -127,6 +143,8 @@ class DiscordUI(QMainWindow):
         input_layout = QHBoxLayout()
         self.message_input = QLineEdit()
         self.message_input.setStyleSheet("background-color: #2F3136; color: white; padding: 8px;")
+         # THÊM SIGNAL: Nhấn Enter sẽ gửi tin nhắn
+        self.message_input.returnPressed.connect(self.send_message)
         self.send_button = QPushButton("Send")
         self.send_button.setStyleSheet("background-color: #5865F2; color: white; padding: 8px;")
         self.send_button.clicked.connect(self.send_message)
@@ -141,7 +159,7 @@ class DiscordUI(QMainWindow):
 
         main_layout.addWidget(self.center_frame, 1)
 
-        # Khung danh sách thành viên
+        # Khung danh sách thành viên (các thành viên online trong kênh)
         self.right_frame = QFrame()
         self.right_frame.setStyleSheet("background-color: #2F3136;")
         self.right_frame.setFixedWidth(200)
@@ -155,6 +173,14 @@ class DiscordUI(QMainWindow):
         self.member_list = QListWidget()
         self.member_list.setStyleSheet("background-color: #3F4147; color: white;")
         right_layout.addWidget(self.member_list)
+        #ui for join request
+        request_label = QLabel("Join Requests")
+        request_label.setStyleSheet("color: white; font-size: 14px; font-weight: bold;")
+        right_layout.addWidget(request_label)
+
+        self.request_list = QListWidget()
+        self.request_list.setStyleSheet("background-color: #3F4147; color: white;")
+        right_layout.addWidget(self.request_list)
 
         self.logout_button = QPushButton("Logout")
         self.logout_button.setStyleSheet("background-color: red; color: white;")
@@ -194,13 +220,18 @@ class DiscordUI(QMainWindow):
         self.current_mode = "channel"
         self.current_channel = item.text()
         self.chat_title_label.setText(f"#{self.current_channel}")
+        self.join_button.setVisible(True) 
+        self.delete_channel_button.setVisible(True)
         self.load_channel_messages()
 
     def handle_dm_clicked(self, item):
         self.current_mode = "dm"
         self.current_dm_user = item.text()
         self.chat_title_label.setText(f"DM with {self.current_dm_user}")
+        self.join_button.setVisible(False)
+        self.delete_channel_button.setVisible(False)
         self.load_dm_messages()
+
 
     def load_channel_messages(self):
         if not self.current_channel:
@@ -210,24 +241,141 @@ class DiscordUI(QMainWindow):
             request_data = {"action": "get_channel_info", "channel_name": self.current_channel}
             if self.is_viewer:
                 request_data["is_visitor"] = True
+
             response_str = channelRequest.handle_channel_request(json.dumps(request_data))
             response = json.loads(response_str)
+
             if response.get("status") == "success":
                 messages = response.get("messages", [])
-                # Nếu có tin nhắn mới, hiển thị thông báo
-                if len(messages) > self.last_message_count and self.last_message_count > 0:
-                    new_count = len(messages) - self.last_message_count
-                    self.chat_display.append(f"[Notification] You have {new_count} new message(s).")
                 self.last_message_count = len(messages)
+
                 for msg in messages:
                     sender = msg.get("sender")
                     text = msg.get("text")
                     self.chat_display.append(f"{sender}: {text}")
+
+                # member
+                members = response.get("members", [])
+                self.update_member_list(members)
+
+                if self.username in members:
+                    self.join_button.setText("Joined")
+                    self.join_button.setEnabled(False)
+                else:
+                    self.join_button.setText("Join Channel")
+                    self.join_button.setEnabled(True)
+
+                # if owner
+                owner = response.get("owner")
+                if self.username == owner:
+                    request_data = {
+                        "action": "get_join_requests",
+                        "channel_name": self.current_channel,
+                        "owner": owner
+                    }
+                    response_str = channelRequest.handle_channel_request(json.dumps(request_data))
+                    response = json.loads(response_str)
+                    print(response)
+                    if response.get("status") == "success":
+                        join_requests = response.get("join_requests", [])
+                        print(join_requests)
+                        self.request_list.clear()
+                        for user in join_requests:
+                            #Viet UI ow day dell bt dc k co j m sua cho t
+                            item_widget = QWidget()
+                            layout = QHBoxLayout()
+                            layout.setContentsMargins(0, 0, 0, 0)
+
+                            label = QLabel(user)
+                            approve_btn = QPushButton("✔")
+                            reject_btn = QPushButton("✖")
+
+                            approve_btn.setStyleSheet("color: green;")
+                            reject_btn.setStyleSheet("color: red;")
+
+                            approve_btn.setFixedSize(30, 25)
+                            reject_btn.setFixedSize(30, 25)
+
+                            approve_btn.clicked.connect(lambda _, u=user: self.approve_user(u))
+                            reject_btn.clicked.connect(lambda _, u=user: self.reject_user(u))
+
+                            layout.addWidget(label)
+                            layout.addWidget(approve_btn)
+                            layout.addWidget(reject_btn)
+
+                            item_widget.setLayout(layout)
+
+                            item = QListWidgetItem()
+                            item.setSizeHint(item_widget.sizeHint())
+
+                            self.request_list.addItem(item)
+                            self.request_list.setItemWidget(item, item_widget)
+                    else:
+                        self.request_list.clear()
+                        self.request_list.addItem("No requests")
+                else:
+                    self.request_list.clear()
+                    self.request_list.addItem("You are not the owner")
             else:
                 self.chat_display.append(f"[ERROR] {response.get('message')}")
                 logging.error("Error loading channel messages: %s", response.get("message"))
+
         except Exception as e:
             logging.error("load_channel_messages error: %s", e)
+    
+
+    def approve_user(self, username):
+        if not self.current_channel:
+            return
+
+        request_data = {
+            "action": "approve_join_request",
+            "channel_name": self.current_channel,
+            "owner": self.username,
+            "target_user": username
+        }
+
+        try:
+            response_str = channelRequest.handle_channel_request(json.dumps(request_data))
+            response = json.loads(response_str)
+
+            if response.get("status") == "success":
+                QMessageBox.information(self, "Approved", f"{username} has been approved to join {self.current_channel}")
+                self.load_channel_messages() 
+            else:
+                QMessageBox.warning(self, "Failed", response.get("message", "Something went wrong"))
+        except Exception as e:
+            logging.error("approve_user error: %s", e)
+
+            QMessageBox.critical(self, "Error", str(e))
+    def reject_user(self, username):
+        if not self.current_channel:
+            return
+
+        request_data = {
+            "action": "reject_join_request",
+            "channel_name": self.current_channel,
+            "owner": self.username,
+            "target_user": username
+        }
+
+        try:
+            response_str = channelRequest.handle_channel_request(json.dumps(request_data))
+            response = json.loads(response_str)
+
+            if response.get("status") == "success":
+                QMessageBox.information(self, "Rejected", f"{username} has been rejected from joining {self.current_channel}")
+                self.load_channel_messages()  # reload để cập nhật danh sách yêu cầu
+            else:
+                QMessageBox.warning(self, "Failed", response.get("message", "Something went wrong"))
+        except Exception as e:
+            logging.error("reject_user error: %s", e)
+            QMessageBox.critical(self, "Error", str(e))
+
+    def update_member_list(self, members):
+        self.member_list.clear()
+        for m in members:
+            self.member_list.addItem(m)
 
     def load_dm_messages(self):
         self.chat_display.clear()
@@ -238,7 +386,9 @@ class DiscordUI(QMainWindow):
         if not message:
             return
         self.message_input.clear()
-        self.chat_display.append(f"You: {message}")
+        # self.chat_display.append(f"You: {message}")
+        # Hiển thị tin nhắn ngay (chỉ nội dung, không có tiền tố "You:")
+        self.chat_display.append(message)
         logging.info("Sending message: %s", message)
 
         if self.current_mode == "channel":
@@ -275,25 +425,105 @@ class DiscordUI(QMainWindow):
         except Exception as e:
             self.chat_display.append(f"[ERROR] {e}")
 
+
+    def delete_channel(self):
+        if not self.current_channel:
+            return
+        try:
+            confirm = QMessageBox.question(
+                self,
+                "Confirm Deletion",
+                f"Are you sure you want to delete the channel '{self.current_channel}'?",
+                QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
+            )
+
+            if confirm != QMessageBox.StandardButton.Yes:
+                return
+
+            request_data = {
+                "action": "delete_channel",
+                "username": self.username,
+                "channel_name": self.current_channel
+            }
+            response_str = channelRequest.handle_channel_request(json.dumps(request_data))
+            response = json.loads(response_str)
+            
+            if response.get("status") == "success":
+                self.chat_display.append(f"[INFO] {response.get('message')}")
+                self.get_channels_from_server()  # Reload danh sách kênh
+                self.chat_display.clear()
+                self.chat_title_label.setText("No channel/user selected")
+                self.join_button.setVisible(False)
+                self.current_channel = None
+            else:
+                self.chat_display.append(f"[ERROR] {response.get('message')}")
+        except Exception as e:
+            self.chat_display.append(f"[ERROR] {e}")
+
+    def join_channel(self):
+        if not self.current_channel:
+            self.chat_display.append("[ERROR] No channel selected.")
+            return
+
+        # if member existed
+        if hasattr(self, 'is_member') and self.is_member:
+            self.chat_display.append("[INFO] You have already joined this channel.")
+            return
+
+        try:
+            request_data = {
+                "action": "join_channel",
+                "username": self.username,
+                "channel_name": self.current_channel
+            }
+            response_str = channelRequest.handle_channel_request(json.dumps(request_data))
+            response = json.loads(response_str)
+            if response.get("status") == "success":
+                self.chat_display.append(f"[INFO] Joined channel '{self.current_channel}' successfully.")
+                self.load_channel_messages()
+                self.is_member = True 
+                if hasattr(self, 'join_button'):
+                    self.join_button.setEnabled(False)
+            else:
+                error_msg = response.get('message', 'Unknown error')
+                self.chat_display.append(f"[INFO] '{self.current_channel}': {error_msg}")
+        except Exception as e:
+            self.chat_display.append(f"[ERROR] Exception: {e}")
+
     def add_channel(self):
         dialog = AddChannelDialog()
         if dialog.exec():
             data = dialog.get_channel_data()
             new_channel = data.get("channel_name")
-            allow_visitor = data.get("allow_visitor", True)
-            if new_channel:
-                request_data = {
-                    "action": "create_channel",
-                    "host": self.username,
-                    "channel_name": new_channel,
-                    "allow_visitor": allow_visitor
-                }
-                response_str = channelRequest.handle_channel_request(json.dumps(request_data))
-                response = json.loads(response_str)
-                if response.get("status") == "success":
-                    self.get_channels_from_server()
-                else:
-                    logging.error("Error creating channel: %s", response.get("message"))
+            
+            if not new_channel:
+                return
+            
+            type_choice = QMessageBox.question(
+                self,
+                "Channel Type",
+                "Do you want to create a Private channel?",
+                QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
+            )
+
+            is_private = type_choice == QMessageBox.StandardButton.Yes
+            print(is_private)
+            allow_visitor = False if is_private else True
+
+            request_data = {
+                "action": "create_channel",
+                "host": self.username,
+                "channel_name": new_channel,
+                "is_private": is_private,
+                "allow_visitor": allow_visitor,
+            }
+
+            response_str = channelRequest.handle_channel_request(json.dumps(request_data))
+            response = json.loads(response_str)
+            if response.get("status") == "success":
+                self.get_channels_from_server()
+            else:
+                logging.error("Error creating channel: %s", response.get("message"))
 
     def get_channels_from_server(self):
         try:
@@ -325,11 +555,14 @@ class DiscordUI(QMainWindow):
                         messages = response.get("messages", [])
                         if len(messages) > self.last_message_count:
                             new_msgs = messages[self.last_message_count:]
-                            # Thông báo nếu có tin nhắn mới
-                            self.chat_display.append(f"[Notification] {len(new_msgs)} new message(s) received.")
+                            # # Thông báo nếu có tin nhắn mới
+                            # self.chat_display.append(f"[Notification] {len(new_msgs)} new message(s) received.")
                             for msg in new_msgs:
                                 sender = msg.get("sender")
                                 text = msg.get("text")
+                                #Nếu tin nhắn do chính bạn gửi, bỏ qua (để không lặp)
+                                if sender == self.username:
+                                    continue
                                 self.chat_display.append(f"{sender}: {text}")
                             self.last_message_count = len(messages)
                     else:
@@ -358,7 +591,6 @@ class DiscordUI(QMainWindow):
             request_data = {"action": "logout", "session_id": session_id}
             client_socket.send(json.dumps(request_data).encode())
 
-            # Nhận phản hồi từ server
             response_str = client_socket.recv(4096).decode()
             response = json.loads(response_str)
             client_socket.close()

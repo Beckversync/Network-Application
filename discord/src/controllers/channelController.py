@@ -1,16 +1,46 @@
 from services.channelService import (
     create_channel, join_channel, send_message, get_channel_info,
-    get_joined_channels, get_hosted_channels, delete_channel, get_all_channels
+    get_joined_channels, get_hosted_channels, delete_channel, get_all_channels, approve_join_request, get_join_requests, reject_join_request
 )
 
 def create_channel_controller(data):
     host = data.get("host")
     channel_name = data.get("channel_name")
-    allow_visitor = data.get("allow_visitor", True)
+    is_private = data.get("is_private", False)
     if not host or not channel_name:
         return {"status": "error", "message": "Missing parameters"}
-    result = create_channel(host, channel_name, allow_visitor)
+    result = create_channel(host, channel_name, is_private)
     return result
+
+def approve_join_request_controller(data):
+    owner = data.get("owner")
+    channel_name = data.get("channel_name")
+    target_user = data.get("target_user")
+    if not owner or not channel_name or not target_user:
+        return {"status": "error", "message": "Missing parameters"}
+    result = approve_join_request(owner, channel_name, target_user)
+    return result
+
+def reject_join_request_controller(data):
+    owner = data.get("owner")
+    channel_name = data.get("channel_name")
+    target_user = data.get("target_user")
+
+    if not owner or not channel_name or not target_user:
+        return {"status": "error", "message": "Missing parameters"}
+
+    from services.channelService import reject_join_request
+    result = reject_join_request(owner, channel_name, target_user)
+    return result
+
+def get_join_requests_controller(data):
+    owner = data.get("owner")
+    channel_name = data.get("channel_name")
+
+    if not owner or not channel_name:
+        return {"status": "error", "message": "Missing parameters"}
+
+    return get_join_requests(owner, channel_name)
 
 def join_channel_controller(data):
     username = data.get("username")

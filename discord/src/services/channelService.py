@@ -4,46 +4,119 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
-def create_channel(host: str, channel_name: str, allow_visitor: bool = True):
+def create_channel(host: str, channel_name: str, is_private: bool):
     if channels_collection.find_one({"channel_name": channel_name}):
         return {"status": "error", "message": "Channel already exists"}
+    
     new_channel = Channel(
         channel_name=channel_name,
         owner=host,
         members=[host],
-        allow_visitor=allow_visitor
+        is_private=is_private,
+        join_requests=[] 
     )
     channels_collection.insert_one(new_channel.dict())
     users_collection.update_one(
         {"username": host},
         {"$addToSet": {"hosted_channels": channel_name, "joined_channels": channel_name}}
     )
-    logging.info("Channel '%s' created by %s with allow_visitor=%s", channel_name, host, allow_visitor)
+    logging.info("Channel '%s' created by %s (is_private=%s)", channel_name, host, is_private)
     return {"status": "success", "message": f"Channel '{channel_name}' created successfully"}
 
 def join_channel(username: str, channel_name: str):
     channel = channels_collection.find_one({"channel_name": channel_name})
     if not channel:
         return {"status": "error", "message": "Channel not found"}
-    if username in channel["members"]:
+
+    if username in channel.get("members", []):
         return {"status": "error", "message": "User already in channel"}
+
+    if not channel.get("is_private", False):  # public channel
+        channels_collection.update_one(
+            {"channel_name": channel_name},
+            {"$push": {"members": username}}
+        )
+        users_collection.update_one(
+            {"username": username},
+            {"$addToSet": {"joined_channels": channel_name}}
+        )
+        logging.info("User %s joined public channel '%s'", username, channel_name)
+        return {"status": "success", "message": f"{username} joined public channel '{channel_name}'"}
+    
+    else:  # private channel
+        if username in channel.get("join_requests", []):
+            return {"status": "info", "message": "Join request already sent"}
+        
+        channels_collection.update_one(
+            {"channel_name": channel_name},
+            {"$addToSet": {"join_requests": username}}
+        )
+        logging.info("User %s requested to join private channel '%s'", username, channel_name)
+        return {"status": "info", "message": "Join request sent to channel owner"}
+    
+def approve_join_request(owner: str, channel_name: str, target_user: str):
+    channel = channels_collection.find_one({"channel_name": channel_name})
+    if not channel or channel["owner"] != owner:
+        return {"status": "error", "message": "Only the channel owner can approve requests"}
+
+    if target_user not in channel.get("join_requests", []):
+        return {"status": "error", "message": "No join request from this user"}
+
     channels_collection.update_one(
         {"channel_name": channel_name},
-        {"$push": {"members": username}}
+        {
+            "$addToSet": {"members": target_user},
+            "$pull": {"join_requests": target_user}
+        }
     )
     users_collection.update_one(
-        {"username": username},
+        {"username": target_user},
         {"$addToSet": {"joined_channels": channel_name}}
     )
-    logging.info("User %s joined channel '%s'", username, channel_name)
-    return {"status": "success", "message": f"{username} joined '{channel_name}'"}
+    logging.info("User %s approved to join channel '%s' by %s", target_user, channel_name, owner)
+    return {"status": "success", "message": f"{target_user} approved to join '{channel_name}'"}
+
+def reject_join_request(owner: str, channel_name: str, target_user: str):
+    channel = channels_collection.find_one({"channel_name": channel_name})
+    if not channel or channel["owner"] != owner:
+        return {"status": "error", "message": "Only the channel owner can reject requests"}
+
+    if target_user not in channel.get("join_requests", []):
+        return {"status": "error", "message": "No join request from this user"}
+
+    channels_collection.update_one(
+        {"channel_name": channel_name},
+        {"$pull": {"join_requests": target_user}}
+    )
+    logging.info("User %s rejected from channel '%s' by %s", target_user, channel_name, owner)
+    return {"status": "success", "message": f"{target_user} has been rejected from '{channel_name}'"}
+
+def get_join_requests(owner: str, channel_name: str):
+    channel = channels_collection.find_one({"channel_name": channel_name})
+    
+    if not channel:
+        return {"status": "error", "message": "Channel not found"}
+
+    if channel["owner"] != owner:
+        return {"status": "error", "message": "Only the channel owner can view join requests"}
+
+    join_requests = channel.get("join_requests", [])
+    return {
+        "status": "success",
+        "join_requests": join_requests
+    }
 
 def send_message(username: str, channel_name: str, message_text: str):
     channel_data = channels_collection.find_one({"channel_name": channel_name})
     if not channel_data:
         return {"status": "error", "message": "Channel not found"}
-    # if username not in channel_data["members"]:
-    #     return {"status": "error", "message": "Only registered users can send messages"}
+
+    if channel_data.get("is_private", False) and username not in channel_data.get("members", []):
+        return {
+            "status": "error",
+            "message": "You do not have permission to send messages in this private channel"
+        }
+
     new_message = {"sender": username, "text": message_text}
     channels_collection.update_one(
         {"channel_name": channel_name},

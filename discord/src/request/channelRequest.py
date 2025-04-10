@@ -7,7 +7,8 @@ from controllers.channelController import (
     get_user_channels_controller,
     delete_channel_controller,
     get_all_channels_controller,
-    get_all_users_controller
+    get_all_users_controller,
+    approve_join_request_controller, get_join_requests_controller, reject_join_request_controller
 )
 
 def handle_channel_request(data: str) -> str:
@@ -34,6 +35,12 @@ def handle_channel_request(data: str) -> str:
             response = get_all_channels_controller(request)
         elif action == "get_all_users":
             response = get_all_users_controller(request)
+        elif action == "approve_join_request":
+            response = approve_join_request_controller(request)
+        elif action == "get_join_requests":
+            response = get_join_requests_controller(request)
+        elif action == "reject_join_request":
+            response = reject_join_request_controller(request)
         else:
             response = {"status": "error", "message": "Invalid action"}
         return json.dumps(response)
