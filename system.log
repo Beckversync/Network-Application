@@ -1535,3 +1535,492 @@
 [2025-04-10 22:48:27,878] INFO: Livestream stopped.
 [2025-04-10 22:48:58,395] INFO: Channel 'Beckham' deleted by beckhamngo
 [2025-04-10 22:49:05,072] INFO: User beckhamngo logged out
+[2025-04-11 11:33:35,534] INFO: User bachbach registered successfully
+[2025-04-11 11:33:35,544] INFO: Registration successful for user: bachbach
+[2025-04-11 11:33:46,445] INFO: User bachbach logged in successfully
+[2025-04-11 11:33:46,445] INFO: Logged in as: bachbach
+[2025-04-11 11:33:48,754] INFO: User 'bachbach' logging in (authenticated mode).
+[2025-04-11 11:33:50,774] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 11:33:50,777] INFO: P2P SERVER listening on 127.0.0.1:6017
+[2025-04-11 11:33:50,777] INFO: UDP LISTENER listening on 127.0.0.1:6018 for livestream.
+[2025-04-11 11:34:21,285] INFO: Sending message: hello is me
+[2025-04-11 11:34:22,314] INFO: Message from bachbach sent in channel 'ABC'
+[2025-04-11 11:35:13,291] INFO: Starting livestream.
+[2025-04-11 11:35:13,578] ERROR: Not connected to tracker.
+[2025-04-11 11:35:13,578] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:13,720] ERROR: Not connected to tracker.
+[2025-04-11 11:35:13,721] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:13,826] ERROR: Not connected to tracker.
+[2025-04-11 11:35:13,827] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:13,931] ERROR: Not connected to tracker.
+[2025-04-11 11:35:13,931] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:14,036] ERROR: Not connected to tracker.
+[2025-04-11 11:35:14,036] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:14,140] ERROR: Not connected to tracker.
+[2025-04-11 11:35:14,141] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:14,244] ERROR: Not connected to tracker.
+[2025-04-11 11:35:14,244] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:14,349] ERROR: Not connected to tracker.
+[2025-04-11 11:35:14,349] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:14,453] ERROR: Not connected to tracker.
+[2025-04-11 11:35:14,454] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:14,559] ERROR: Not connected to tracker.
+[2025-04-11 11:35:14,560] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:14,664] ERROR: Not connected to tracker.
+[2025-04-11 11:35:14,665] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:14,768] ERROR: Not connected to tracker.
+[2025-04-11 11:35:14,769] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:14,873] ERROR: Not connected to tracker.
+[2025-04-11 11:35:14,876] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:14,980] ERROR: Not connected to tracker.
+[2025-04-11 11:35:14,981] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:15,093] ERROR: Not connected to tracker.
+[2025-04-11 11:35:15,094] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:15,197] ERROR: Not connected to tracker.
+[2025-04-11 11:35:15,198] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:15,301] ERROR: Not connected to tracker.
+[2025-04-11 11:35:15,303] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:15,406] ERROR: Not connected to tracker.
+[2025-04-11 11:35:15,407] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:15,512] ERROR: Not connected to tracker.
+[2025-04-11 11:35:15,513] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:15,616] ERROR: Not connected to tracker.
+[2025-04-11 11:35:15,617] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:15,722] ERROR: Not connected to tracker.
+[2025-04-11 11:35:15,722] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:15,828] ERROR: Not connected to tracker.
+[2025-04-11 11:35:15,828] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:15,932] ERROR: Not connected to tracker.
+[2025-04-11 11:35:15,938] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:16,042] ERROR: Not connected to tracker.
+[2025-04-11 11:35:16,043] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:16,147] ERROR: Not connected to tracker.
+[2025-04-11 11:35:16,148] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:16,252] ERROR: Not connected to tracker.
+[2025-04-11 11:35:16,252] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:16,356] ERROR: Not connected to tracker.
+[2025-04-11 11:35:16,357] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:16,461] ERROR: Not connected to tracker.
+[2025-04-11 11:35:16,462] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:16,565] ERROR: Not connected to tracker.
+[2025-04-11 11:35:16,566] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:16,670] ERROR: Not connected to tracker.
+[2025-04-11 11:35:16,670] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:16,774] ERROR: Not connected to tracker.
+[2025-04-11 11:35:16,775] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:16,879] ERROR: Not connected to tracker.
+[2025-04-11 11:35:16,879] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:16,983] ERROR: Not connected to tracker.
+[2025-04-11 11:35:16,984] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:17,087] ERROR: Not connected to tracker.
+[2025-04-11 11:35:17,088] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:17,191] ERROR: Not connected to tracker.
+[2025-04-11 11:35:17,192] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:17,295] ERROR: Not connected to tracker.
+[2025-04-11 11:35:17,301] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:17,405] ERROR: Not connected to tracker.
+[2025-04-11 11:35:17,406] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:17,509] ERROR: Not connected to tracker.
+[2025-04-11 11:35:17,510] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:17,615] ERROR: Not connected to tracker.
+[2025-04-11 11:35:17,616] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:17,720] ERROR: Not connected to tracker.
+[2025-04-11 11:35:17,720] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:17,824] ERROR: Not connected to tracker.
+[2025-04-11 11:35:17,824] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:17,929] ERROR: Not connected to tracker.
+[2025-04-11 11:35:17,929] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:18,033] ERROR: Not connected to tracker.
+[2025-04-11 11:35:18,034] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:18,138] ERROR: Not connected to tracker.
+[2025-04-11 11:35:18,139] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:18,241] ERROR: Not connected to tracker.
+[2025-04-11 11:35:18,243] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:18,346] ERROR: Not connected to tracker.
+[2025-04-11 11:35:18,351] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:18,454] ERROR: Not connected to tracker.
+[2025-04-11 11:35:18,455] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:18,559] ERROR: Not connected to tracker.
+[2025-04-11 11:35:18,559] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:18,663] ERROR: Not connected to tracker.
+[2025-04-11 11:35:18,671] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:18,774] ERROR: Not connected to tracker.
+[2025-04-11 11:35:18,776] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:18,879] ERROR: Not connected to tracker.
+[2025-04-11 11:35:18,880] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:18,985] ERROR: Not connected to tracker.
+[2025-04-11 11:35:18,985] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:19,089] ERROR: Not connected to tracker.
+[2025-04-11 11:35:19,089] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:19,194] ERROR: Not connected to tracker.
+[2025-04-11 11:35:19,195] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:19,299] ERROR: Not connected to tracker.
+[2025-04-11 11:35:19,300] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:19,403] ERROR: Not connected to tracker.
+[2025-04-11 11:35:19,404] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:19,508] ERROR: Not connected to tracker.
+[2025-04-11 11:35:19,508] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:19,612] ERROR: Not connected to tracker.
+[2025-04-11 11:35:19,613] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:19,717] ERROR: Not connected to tracker.
+[2025-04-11 11:35:19,717] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:19,822] ERROR: Not connected to tracker.
+[2025-04-11 11:35:19,822] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:19,925] ERROR: Not connected to tracker.
+[2025-04-11 11:35:19,927] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:20,030] ERROR: Not connected to tracker.
+[2025-04-11 11:35:20,030] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:20,135] ERROR: Not connected to tracker.
+[2025-04-11 11:35:20,135] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:20,239] ERROR: Not connected to tracker.
+[2025-04-11 11:35:20,240] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:20,344] ERROR: Not connected to tracker.
+[2025-04-11 11:35:20,345] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:20,449] ERROR: Not connected to tracker.
+[2025-04-11 11:35:20,450] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:20,555] ERROR: Not connected to tracker.
+[2025-04-11 11:35:20,556] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:20,660] ERROR: Not connected to tracker.
+[2025-04-11 11:35:20,661] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:20,765] ERROR: Not connected to tracker.
+[2025-04-11 11:35:20,766] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:20,870] ERROR: Not connected to tracker.
+[2025-04-11 11:35:20,870] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:20,975] ERROR: Not connected to tracker.
+[2025-04-11 11:35:20,975] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:21,080] ERROR: Not connected to tracker.
+[2025-04-11 11:35:21,080] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:21,183] ERROR: Not connected to tracker.
+[2025-04-11 11:35:21,184] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:21,287] ERROR: Not connected to tracker.
+[2025-04-11 11:35:21,289] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:21,392] ERROR: Not connected to tracker.
+[2025-04-11 11:35:21,393] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:21,497] ERROR: Not connected to tracker.
+[2025-04-11 11:35:21,498] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:21,602] ERROR: Not connected to tracker.
+[2025-04-11 11:35:21,602] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:21,706] ERROR: Not connected to tracker.
+[2025-04-11 11:35:21,707] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:21,811] ERROR: Not connected to tracker.
+[2025-04-11 11:35:21,811] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:21,915] ERROR: Not connected to tracker.
+[2025-04-11 11:35:21,916] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:22,021] ERROR: Not connected to tracker.
+[2025-04-11 11:35:22,022] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:22,126] ERROR: Not connected to tracker.
+[2025-04-11 11:35:22,127] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:22,231] ERROR: Not connected to tracker.
+[2025-04-11 11:35:22,232] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:22,336] ERROR: Not connected to tracker.
+[2025-04-11 11:35:22,336] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:22,439] ERROR: Not connected to tracker.
+[2025-04-11 11:35:22,441] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:22,545] ERROR: Not connected to tracker.
+[2025-04-11 11:35:22,545] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:22,649] ERROR: Not connected to tracker.
+[2025-04-11 11:35:22,649] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:22,754] ERROR: Not connected to tracker.
+[2025-04-11 11:35:22,754] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:22,859] ERROR: Not connected to tracker.
+[2025-04-11 11:35:22,859] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:22,963] ERROR: Not connected to tracker.
+[2025-04-11 11:35:22,963] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:23,067] ERROR: Not connected to tracker.
+[2025-04-11 11:35:23,067] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:23,171] ERROR: Not connected to tracker.
+[2025-04-11 11:35:23,171] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:23,277] ERROR: Not connected to tracker.
+[2025-04-11 11:35:23,278] INFO: No peers available for UDP broadcast.
+[2025-04-11 11:35:23,298] INFO: Stopping livestream.
+[2025-04-11 11:35:23,927] INFO: Livestream stopped.
+[2025-04-11 11:35:56,331] INFO: Channel 'an1' created by bachbach (is_private=True)
+[2025-04-11 11:36:01,151] INFO: Sending message: 45525
+[2025-04-11 11:36:01,261] INFO: Message from bachbach sent in channel 'an1'
+[2025-04-11 11:36:04,195] INFO: User bachbach logged out
+[2025-04-11 11:36:10,108] INFO: Logged in as Viewer: bachbach
+[2025-04-11 11:36:10,108] INFO: User 'bachbach' logging in (visitor mode).
+[2025-04-11 11:36:10,113] INFO: Tracker response: Peer bachbach (127.0.0.1:7702) added
+[2025-04-11 11:36:10,115] INFO: P2P SERVER listening on 127.0.0.1:7702
+[2025-04-11 11:36:10,118] INFO: UDP LISTENER listening on 127.0.0.1:7703 for livestream.
+[2025-04-11 11:36:20,786] ERROR: Error loading channel messages: This channel does not allow visitor viewing operation
+[2025-04-11 11:36:51,494] INFO: User beckhamngo logged in successfully
+[2025-04-11 11:36:51,494] INFO: Logged in as: beckhamngo
+[2025-04-11 11:36:53,843] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-11 11:36:53,843] INFO: Tracker response: Peer beckhamngo (127.0.0.1:6646) added
+[2025-04-11 11:36:53,849] INFO: P2P SERVER listening on 127.0.0.1:6646
+[2025-04-11 11:36:53,850] INFO: UDP LISTENER listening on 127.0.0.1:6647 for livestream.
+[2025-04-11 11:37:06,329] INFO: Sending message: xin chào Bách
+[2025-04-11 11:37:10,088] INFO: Live mode set to True
+[2025-04-11 11:37:16,479] INFO: Sending message: xin chào Bách
+[2025-04-11 11:37:16,479] INFO: Peer list retrieved:
+[2025-04-11 11:37:16,479] INFO:  - bachbach (127.0.0.1:7702)
+[2025-04-11 11:37:16,479] INFO:  - beckhamngo (127.0.0.1:6646)
+[2025-04-11 11:37:16,479] INFO: Sent chat message to 127.0.0.1:7702
+[2025-04-11 11:37:16,479] INFO: [P2P MESSAGE] beckhamngo -> bachbach: xin chào Bách
+[2025-04-11 11:37:24,205] INFO: Sending message: 1111\
+[2025-04-11 11:37:24,205] INFO: Peer list retrieved:
+[2025-04-11 11:37:24,205] INFO:  - bachbach (127.0.0.1:7702)
+[2025-04-11 11:37:24,205] INFO:  - beckhamngo (127.0.0.1:6646)
+[2025-04-11 11:37:24,205] INFO: Sent chat message to 127.0.0.1:7702
+[2025-04-11 11:37:24,205] INFO: [P2P MESSAGE] beckhamngo -> bachbach: 1111\
+[2025-04-11 11:37:27,038] INFO: User beckhamngo logged out
+[2025-04-11 11:37:36,418] INFO: User an08 logged in successfully
+[2025-04-11 11:37:36,418] INFO: Logged in as: an08
+[2025-04-11 11:37:37,593] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-11 11:37:37,597] INFO: Tracker response: Peer an08 (127.0.0.1:8648) added
+[2025-04-11 11:37:37,599] INFO: P2P SERVER listening on 127.0.0.1:8648
+[2025-04-11 11:37:37,599] INFO: UDP LISTENER listening on 127.0.0.1:8649 for livestream.
+[2025-04-11 11:37:52,743] INFO: Channel 'private0' deleted by an08
+[2025-04-11 11:37:54,917] ERROR: Polling error: Channel not found
+[2025-04-11 11:37:59,938] INFO: Channel 'public0' deleted by an08
+[2025-04-11 11:37:59,977] ERROR: Polling error: Channel not found
+[2025-04-11 11:38:05,034] ERROR: Polling error: Channel not found
+[2025-04-11 11:38:10,102] ERROR: Polling error: Channel not found
+[2025-04-11 11:38:15,156] ERROR: Polling error: Channel not found
+[2025-04-11 11:38:15,534] INFO: User an08 logged out
+[2025-04-11 15:50:27,301] INFO: User beckhamngo logged in successfully
+[2025-04-11 15:50:27,305] INFO: Logged in as: beckhamngo
+[2025-04-11 15:50:28,365] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-11 15:50:30,391] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 15:50:30,394] INFO: P2P SERVER listening on 127.0.0.1:6795
+[2025-04-11 15:50:30,394] INFO: UDP LISTENER listening on 127.0.0.1:6796 for livestream.
+[2025-04-11 15:50:39,773] INFO: Sending message: xin chào
+[2025-04-11 15:50:47,635] INFO: Live mode set to True
+[2025-04-11 15:50:51,057] INFO: Sending message: hãy cho tôi vào
+[2025-04-11 15:50:51,058] ERROR: Not connected to tracker.
+[2025-04-11 15:50:51,058] INFO: No peers available for P2P broadcast.
+[2025-04-11 15:50:56,174] INFO: Live mode set to False
+[2025-04-11 15:51:01,496] INFO: Sending message: xin chào
+[2025-04-11 15:51:01,597] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-11 15:51:03,428] INFO: Sending message: ồ
+[2025-04-11 15:51:03,531] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-11 15:51:10,799] INFO: Sending message: e e e e e e e e e
+[2025-04-11 15:51:10,902] INFO: Message from beckhamngo sent in channel 'test'
+[2025-04-11 15:51:25,886] INFO: User beckhamngo requested to join private channel 'an1'
+[2025-04-11 15:51:31,471] INFO: Sending message: eweqwer
+[2025-04-11 15:51:36,023] INFO: Status changed to Offline
+[2025-04-11 15:51:39,599] INFO: User beckhamngo logged out
+[2025-04-11 16:16:37,912] INFO: User beckhamngo logged in successfully
+[2025-04-11 16:16:37,912] INFO: Logged in as: beckhamngo
+[2025-04-11 16:16:39,017] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-11 16:16:41,067] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 16:16:41,069] INFO: P2P SERVER listening on 127.0.0.1:7132
+[2025-04-11 16:16:41,069] INFO: UDP LISTENER listening on 127.0.0.1:7133 for livestream.
+[2025-04-11 16:17:07,191] INFO: Channel 'Beckham' created by beckhamngo (is_private=False)
+[2025-04-11 16:17:13,777] INFO: Sending message: from Beckham
+[2025-04-11 16:17:13,877] INFO: Message from beckhamngo sent in channel 'Beckham'
+[2025-04-11 16:17:15,982] INFO: Status changed to Offline
+[2025-04-11 16:17:16,087] INFO: User beckhamngo logged out
+[2025-04-11 16:17:19,487] INFO: User beckhamngo logged in successfully
+[2025-04-11 16:17:19,492] INFO: Logged in as: beckhamngo
+[2025-04-11 16:17:20,294] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-11 16:17:22,309] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 16:17:22,309] INFO: P2P SERVER listening on 127.0.0.1:7874
+[2025-04-11 16:17:22,309] INFO: UDP LISTENER listening on 127.0.0.1:7875 for livestream.
+[2025-04-11 16:17:32,057] INFO: Status changed to Invisible
+[2025-04-11 16:17:32,162] INFO: Updated session e08f6eba-6c13-4fae-8997-14bbf66b5fba visible to False
+[2025-04-11 16:17:45,258] INFO: Status changed to Online
+[2025-04-11 16:17:45,360] INFO: Updated session e08f6eba-6c13-4fae-8997-14bbf66b5fba visible to True
+[2025-04-11 16:17:49,105] INFO: Status changed to Invisible
+[2025-04-11 16:17:49,207] INFO: Updated session e08f6eba-6c13-4fae-8997-14bbf66b5fba visible to False
+[2025-04-11 16:17:59,817] INFO: Sending message: có ai thấy tôi không
+[2025-04-11 16:17:59,917] INFO: Message from beckhamngo sent in channel 'Beckham'
+[2025-04-11 16:18:36,707] INFO: Status changed to Offline
+[2025-04-11 16:18:36,819] INFO: User beckhamngo logged out
+[2025-04-11 16:18:40,290] INFO: User beckhamngo logged in successfully
+[2025-04-11 16:18:40,290] INFO: Logged in as: beckhamngo
+[2025-04-11 16:18:41,022] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-11 16:18:43,035] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 16:18:43,037] INFO: P2P SERVER listening on 127.0.0.1:8243
+[2025-04-11 16:18:43,037] INFO: UDP LISTENER listening on 127.0.0.1:8244 for livestream.
+[2025-04-11 16:25:40,584] INFO: User beckhamngo logged in successfully
+[2025-04-11 16:25:40,586] INFO: Logged in as: beckhamngo
+[2025-04-11 16:25:41,499] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-11 16:25:43,529] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 16:25:43,529] INFO: P2P SERVER listening on 127.0.0.1:7966
+[2025-04-11 16:25:43,529] INFO: UDP LISTENER listening on 127.0.0.1:7967 for livestream.
+[2025-04-11 16:25:51,370] INFO: Sending message: không
+[2025-04-11 16:25:51,461] INFO: Message from beckhamngo sent in channel 'Beckham'
+[2025-04-11 16:26:00,889] INFO: Sending message: an08 online à
+[2025-04-11 16:26:00,995] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-11 16:26:03,661] INFO: Sending message: alo
+[2025-04-11 16:26:03,753] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-11 16:26:17,542] INFO: Sending message: nghe có mặt
+[2025-04-11 16:26:17,629] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-11 16:26:28,384] INFO: Status changed to Invisible
+[2025-04-11 16:26:28,476] INFO: Updated session efbcc61b-983c-4a87-bdd0-a7e5979bbee0 visible to False
+[2025-04-11 16:27:29,746] INFO: Status changed to Offline
+[2025-04-11 16:27:29,836] INFO: User beckhamngo logged out
+[2025-04-11 16:27:34,229] INFO: User beckhamngo logged in successfully
+[2025-04-11 16:27:34,229] INFO: Logged in as: beckhamngo
+[2025-04-11 16:27:34,874] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-11 16:27:36,913] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 16:27:36,915] INFO: P2P SERVER listening on 127.0.0.1:6451
+[2025-04-11 16:27:36,915] INFO: UDP LISTENER listening on 127.0.0.1:6452 for livestream.
+[2025-04-11 16:28:50,478] INFO: Status changed to Offline
+[2025-04-11 16:28:50,564] INFO: User beckhamngo logged out
+[2025-04-11 16:28:53,375] INFO: User beckhamngo logged in successfully
+[2025-04-11 16:28:53,378] INFO: Logged in as: beckhamngo
+[2025-04-11 16:28:54,213] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-11 16:28:56,248] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 16:28:56,248] INFO: P2P SERVER listening on 127.0.0.1:8483
+[2025-04-11 16:28:56,248] INFO: UDP LISTENER listening on 127.0.0.1:8484 for livestream.
+[2025-04-11 16:28:58,785] INFO: Status changed to Invisible
+[2025-04-11 16:28:58,876] INFO: Updated session 0622c620-c2e2-4bce-a8c9-6f8ec71b4372 visible to False
+[2025-04-11 16:29:23,036] INFO: Live mode set to True
+[2025-04-11 16:29:23,564] INFO: Live mode set to False
+[2025-04-11 16:29:23,986] INFO: Live mode set to True
+[2025-04-11 16:30:41,105] INFO: Sending message: ?
+[2025-04-11 16:30:41,105] ERROR: Not connected to tracker.
+[2025-04-11 16:30:41,105] INFO: No peers available for P2P broadcast.
+[2025-04-11 16:30:45,824] INFO: Sending message: ???
+[2025-04-11 16:30:45,824] ERROR: Not connected to tracker.
+[2025-04-11 16:30:45,824] INFO: No peers available for P2P broadcast.
+[2025-04-11 16:30:49,596] INFO: Live mode set to False
+[2025-04-11 16:30:51,278] INFO: Sending message: chào
+[2025-04-11 16:30:51,369] INFO: Message from beckhamngo sent in channel 'Beckham'
+[2025-04-11 16:31:31,506] INFO: User beckhamngo logged out
+[2025-04-11 16:36:33,857] INFO: User beckhamngo logged in successfully
+[2025-04-11 16:36:33,857] INFO: Logged in as: beckhamngo
+[2025-04-11 16:36:35,376] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-11 16:36:37,402] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 16:36:37,402] INFO: P2P SERVER listening on 127.0.0.1:8091
+[2025-04-11 16:36:37,402] INFO: UDP LISTENER listening on 127.0.0.1:8092 for livestream.
+[2025-04-11 16:36:48,723] INFO: Sending message: xin chào
+[2025-04-11 16:36:48,807] INFO: Message from beckhamngo sent in channel 'Beckham'
+[2025-04-11 16:36:51,057] INFO: Status changed to Invisible
+[2025-04-11 16:36:51,147] INFO: Updated session 998c9942-ea7d-42f3-a1d5-03bf4d84bed7 visible to False
+[2025-04-11 16:36:57,266] INFO: Sending message: cameraa
+[2025-04-11 16:36:57,355] INFO: Message from beckhamngo sent in channel 'Beckham'
+[2025-04-11 16:37:18,247] INFO: Channel 'Beckham' deleted by beckhamngo
+[2025-04-11 16:37:25,977] INFO: Status changed to Online
+[2025-04-11 16:37:26,072] INFO: Updated session 998c9942-ea7d-42f3-a1d5-03bf4d84bed7 visible to True
+[2025-04-11 16:37:27,639] INFO: Status changed to Offline
+[2025-04-11 16:37:27,737] INFO: User beckhamngo logged out
+[2025-04-11 16:37:30,180] INFO: User beckhamngo logged in successfully
+[2025-04-11 16:37:30,180] INFO: Logged in as: beckhamngo
+[2025-04-11 16:37:31,091] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-11 16:37:33,137] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 16:37:33,138] INFO: P2P SERVER listening on 127.0.0.1:6519
+[2025-04-11 16:37:33,138] INFO: UDP LISTENER listening on 127.0.0.1:6520 for livestream.
+[2025-04-11 16:37:54,865] INFO: Sending message: foewrr
+[2025-04-11 16:38:01,747] INFO: Sending message: âsas
+[2025-04-11 16:38:01,837] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-11 16:38:04,812] INFO: Sending message: ádassad
+[2025-04-11 16:38:04,904] INFO: Message from beckhamngo sent in channel 'test'
+[2025-04-11 16:38:08,807] INFO: Sending message: dasadasd
+[2025-04-11 16:38:08,898] INFO: Message from beckhamngo sent in channel '1'
+[2025-04-11 16:38:21,575] INFO: Sending message: private thì đâu được thấy nhỉ
+[2025-04-11 16:50:09,558] INFO: User beckhamngo logged in successfully
+[2025-04-11 16:50:09,562] INFO: Logged in as: beckhamngo
+[2025-04-11 16:50:10,389] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-11 16:50:12,427] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 16:50:12,428] INFO: P2P SERVER listening on 127.0.0.1:8683
+[2025-04-11 16:50:12,428] INFO: UDP LISTENER listening on 127.0.0.1:8684 for livestream.
+[2025-04-11 16:50:32,785] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 16:50:46,835] INFO: Sending message: ụa
+[2025-04-11 16:50:46,928] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-11 16:51:08,398] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 16:51:20,669] INFO: User beckhamngo logged out
+[2025-04-11 16:51:37,002] INFO: User an08 logged in successfully
+[2025-04-11 16:51:37,002] INFO: Logged in as: an08
+[2025-04-11 16:51:37,663] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-11 16:51:39,684] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 16:51:39,684] INFO: P2P SERVER listening on 127.0.0.1:7899
+[2025-04-11 16:51:39,685] INFO: UDP LISTENER listening on 127.0.0.1:7900 for livestream.
+[2025-04-11 16:51:44,920] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 16:51:48,320] INFO: User an08 requested to join private channel 'an1'
+[2025-04-11 16:51:49,969] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 16:51:55,018] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 16:51:58,768] INFO: Sending message: t chủ mà
+[2025-04-11 16:52:00,060] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 16:52:05,110] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 16:52:10,164] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 16:52:15,213] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 16:52:30,353] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 16:52:47,943] INFO: Channel 'TestPrivate' created by an08 (is_private=True)
+[2025-04-11 16:52:54,548] INFO: Sending message: Đây là kênh private
+[2025-04-11 16:52:54,648] INFO: Message from an08 sent in channel 'TestPrivate'
+[2025-04-11 16:52:57,640] INFO: Status changed to Offline
+[2025-04-11 16:52:57,743] INFO: User an08 logged out
+[2025-04-11 16:53:08,790] INFO: User beckhamngo logged in successfully
+[2025-04-11 16:53:08,790] INFO: Logged in as: beckhamngo
+[2025-04-11 16:53:09,571] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-11 16:53:11,614] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 16:53:11,614] INFO: P2P SERVER listening on 127.0.0.1:8949
+[2025-04-11 16:53:11,614] INFO: UDP LISTENER listening on 127.0.0.1:8950 for livestream.
+[2025-04-11 16:53:15,205] INFO: User beckhamngo requested to join private channel 'TestPrivate'
+[2025-04-11 16:53:16,824] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 16:53:18,782] INFO: User beckhamngo logged out
+[2025-04-11 16:53:21,873] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 16:53:26,922] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 16:53:29,303] INFO: User an08 logged in successfully
+[2025-04-11 16:53:29,307] INFO: Logged in as: an08
+[2025-04-11 16:53:30,030] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-11 16:53:31,969] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 16:53:32,049] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 16:53:32,049] INFO: P2P SERVER listening on 127.0.0.1:6400
+[2025-04-11 16:53:32,049] INFO: UDP LISTENER listening on 127.0.0.1:6401 for livestream.
+[2025-04-11 16:53:37,018] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 16:53:42,060] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 16:54:47,919] INFO: User an08 logged in successfully
+[2025-04-11 16:54:47,919] INFO: Logged in as: an08
+[2025-04-11 16:54:48,748] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-11 16:54:50,787] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 16:54:50,788] INFO: P2P SERVER listening on 127.0.0.1:7634
+[2025-04-11 16:54:50,790] INFO: UDP LISTENER listening on 127.0.0.1:7635 for livestream.
+[2025-04-11 16:58:13,582] INFO: User an08 logged in successfully
+[2025-04-11 16:58:13,582] INFO: Logged in as: an08
+[2025-04-11 16:58:14,738] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-11 16:58:16,780] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 16:58:16,780] INFO: P2P SERVER listening on 127.0.0.1:8388
+[2025-04-11 16:58:16,780] INFO: UDP LISTENER listening on 127.0.0.1:8389 for livestream.
+[2025-04-11 16:59:05,839] INFO: User an08 logged in successfully
+[2025-04-11 16:59:05,844] INFO: Logged in as: an08
+[2025-04-11 16:59:07,166] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-11 16:59:09,198] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 16:59:09,199] INFO: P2P SERVER listening on 127.0.0.1:6400
+[2025-04-11 16:59:09,199] INFO: UDP LISTENER listening on 127.0.0.1:6401 for livestream.
+[2025-04-11 16:59:12,939] INFO: User beckhamngo approved to join channel 'TestPrivate' by an08
+[2025-04-11 17:00:04,655] INFO: User an08 logged out
+[2025-04-11 17:00:12,900] INFO: User beckhamngo logged in successfully
+[2025-04-11 17:00:12,900] INFO: Logged in as: beckhamngo
+[2025-04-11 17:00:13,718] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-11 17:00:15,752] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 17:00:15,752] INFO: P2P SERVER listening on 127.0.0.1:8419
+[2025-04-11 17:00:15,752] INFO: UDP LISTENER listening on 127.0.0.1:8420 for livestream.
+[2025-04-11 17:00:19,943] INFO: Sending message: chào
+[2025-04-11 17:00:20,050] INFO: Message from beckhamngo sent in channel 'TestPrivate'
+[2025-04-11 17:00:24,899] INFO: Sending message: tôi đã trong kênh
+[2025-04-11 17:00:24,999] INFO: Message from beckhamngo sent in channel 'TestPrivate'
+[2025-04-11 17:00:31,086] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 17:00:36,136] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 17:00:41,184] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 17:00:46,232] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 17:00:51,286] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 17:00:56,332] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 17:01:01,409] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 17:01:06,462] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 17:01:11,510] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 17:01:13,054] INFO: Status changed to Invisible
+[2025-04-11 17:01:13,159] INFO: Updated session 8dcb7550-3f20-430a-ae58-e5ef28f2ff34 visible to False
+[2025-04-11 17:01:16,559] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-11 17:01:19,505] INFO: User beckhamngo logged out
+[2025-04-11 17:01:26,344] INFO: User an08 logged in successfully
+[2025-04-11 17:01:26,349] INFO: Logged in as: an08
+[2025-04-11 17:01:27,139] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-11 17:01:29,179] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 17:01:29,180] INFO: P2P SERVER listening on 127.0.0.1:8847
+[2025-04-11 17:01:29,180] INFO: UDP LISTENER listening on 127.0.0.1:8848 for livestream.
+[2025-04-11 17:01:44,600] INFO: Sending message: sao m vẫn on z
+[2025-04-11 17:01:44,709] INFO: Message from an08 sent in channel 'TestPrivate'
+[2025-04-11 17:01:51,900] INFO: Status changed to Offline
+[2025-04-11 17:01:52,024] INFO: User an08 logged out
+[2025-04-11 17:02:00,372] INFO: User beckhamngo logged in successfully
+[2025-04-11 17:02:00,372] INFO: Logged in as: beckhamngo
+[2025-04-11 17:02:01,359] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-11 17:02:03,387] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 17:02:03,389] INFO: P2P SERVER listening on 127.0.0.1:7790
+[2025-04-11 17:02:03,389] INFO: UDP LISTENER listening on 127.0.0.1:7791 for livestream.
+[2025-04-11 17:02:36,611] INFO: User beckhamngo logged out

@@ -23,3 +23,12 @@ def logout(data):
         return {"status": "error", "message": "Session ID is required"}
     result = logout_user(session_id)
     return result
+
+def update_status(data):
+    session_id = data.get("session_id")
+    visible = data.get("visible")
+    if session_id is None or visible is None:
+        return {"status": "error", "message": "Missing parameters"}
+    from services.authService import update_user_status
+    result = update_user_status(session_id, visible)
+    return result

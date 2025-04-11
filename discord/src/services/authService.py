@@ -34,7 +34,8 @@ def login_user(user: UserLogin, peer_ip: str, peer_port: int) -> dict:
             "peer_ip": peer_ip,
             "peer_port": peer_port,
             "session_id": session_id,
-            "login_time": datetime.now(timezone.utc).isoformat()
+            "login_time": datetime.now(timezone.utc).isoformat(),
+            "visible": True  # Mặc định hiển thị là Online
         }
         users_collection.update_one(
             {"username": user.username},
@@ -62,6 +63,37 @@ def login_user(user: UserLogin, peer_ip: str, peer_port: int) -> dict:
         }
     return {"status": "error", "message": "Invalid username or password"}
 
+def update_user_status(session_id: str, visible: bool) -> dict:
+    user = users_collection.find_one({"sessions.session_id": session_id})
+    if not user:
+         return {"status": "error", "message": "Session not found"}
+    users_collection.update_one(
+         {"_id": user["_id"], "sessions.session_id": session_id},
+         {"$set": {"sessions.$.visible": visible}}
+    )
+    logging.info("Updated session %s visible to %s", session_id, visible)
+    return {"status": "success", "message": "User status updated"}
+
+def get_all_users():
+    try:
+        users = list(users_collection.find({}, {"username": 1, "sessions": 1, "_id": 0}))
+        result = []
+        for user in users:
+            username = user.get("username")
+            sessions = user.get("sessions", [])
+            status = "Offline"
+            for session in sessions:
+                if session.get("visible", True):
+                    status = "Online"
+                    break
+            result.append({
+                "username": username,
+                "status": status
+            })
+        return {"status": "success", "data": result}
+    except Exception as e:
+        return {"status": "error", "message": str(e)}
+
 def visitor_mode(visitor_data: Visitor) -> dict:
     if users_collection.find_one({"username": visitor_data.name}):
         return {"status": "error", "message": "Username already taken"}
@@ -85,22 +117,3 @@ def logout_user(session_id: str) -> dict:
     except Exception as e:
         logging.error("Database error during logout: %s", e)
         return {"status": "error", "message": f"Database error: {str(e)}"}
-
-# Hàm get_all_users: Trả về danh sách các phiên đăng nhập của người dùng
-def get_all_users():
-    try:
-        users = list(users_collection.find({}, {"username": 1, "sessions": 1, "_id": 0}))
-        result = []
-        for user in users:
-            username = user.get("username")
-            sessions = user.get("sessions", [])
-            for session in sessions:
-                result.append({
-                    "peer_ip": session.get("peer_ip", ""),
-                    "peer_port": session.get("peer_port", ""),
-                    "username": username,
-                    "session_id": session.get("session_id", "")
-                })
-        return {"status": "success", "data": result}
-    except Exception as e:
-        return {"status": "error", "message": str(e)}

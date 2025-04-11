@@ -125,18 +125,26 @@ def send_message(username: str, channel_name: str, message_text: str):
     logging.info("Message from %s sent in channel '%s'", username, channel_name)
     return {"status": "success", "message": "Message sent successfully"}
 
-def get_channel_info(channel_name: str) -> dict:
+def get_channel_info(channel_name: str, username: str) -> dict:
     channel = channels_collection.find_one({"channel_name": channel_name})
     if not channel:
         return {"status": "error", "message": "Channel not found"}
-    # Trả về cả trường allow_visitor để kiểm tra trong trường hợp yêu cầu của visitor
+    
+    # Nếu channel là private và user không nằm trong members, trả về lỗi
+    if channel.get("is_private", False) and username not in channel.get("members", []):
+        return {
+            "status": "error",
+            "message": "This is a private channel. You do not have permission to see old messages."
+        }
+    
     return {
         "status": "success",
         "channel_name": channel["channel_name"],
         "owner": channel["owner"],
         "members": channel["members"],
         "messages": channel.get("messages", []),
-        "allow_visitor": channel.get("allow_visitor", True)
+        "allow_visitor": channel.get("allow_visitor", True),
+        "is_private": channel.get("is_private", False)
     }
 
 def get_joined_channels(username: str):

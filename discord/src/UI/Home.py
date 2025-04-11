@@ -1,5 +1,5 @@
 import json
-import sys, os, threading, time
+import sys, os, threading, time, socket
 import logging
 from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QWidget,
@@ -8,9 +8,9 @@ from PyQt6.QtWidgets import (
     QCheckBox, QFrame, QComboBox, QDialog, QMessageBox
 )
 from PyQt6.QtCore import Qt
+from PyQt6 import QtGui  # Để sử dụng QColor và QIcon nếu cần
 from PyQt6.QtGui import QFont
 from request import channelRequest
-import socket
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
@@ -24,9 +24,6 @@ class DiscordUI(QMainWindow):
 
         self.setWindowTitle("Discord Clone - Improved UI")
         self.setGeometry(100, 100, 1200, 700)
-        
-        # Thuộc tính live_mode (dùng cho livestream P2P)
-        self.live_mode = False
         
         # Chế độ chat: "channel" hay "dm"
         self.current_mode = None
@@ -95,12 +92,9 @@ class DiscordUI(QMainWindow):
         
         sidebar_layout.addWidget(tab_widget)
         
-        self.live_checkbox = QCheckBox("Live Mode (P2P)")
-        self.live_checkbox.setStyleSheet("color: white;")
-        self.live_checkbox.stateChanged.connect(self.toggle_live_mode)
-        sidebar_layout.addWidget(self.live_checkbox)
+        # Loại bỏ checkbox "Live Mode" vì tin nhắn text sẽ luôn gửi qua tracker.
         
-        # Chỉ sử dụng 3 trạng thái: Online, Offline, Invisible
+        # Dropdown trạng thái: Online, Offline, Invisible
         self.status_dropdown = QComboBox()
         self.status_dropdown.addItems(["Online", "Offline", "Invisible"])
         self.status_dropdown.currentTextChanged.connect(self.change_status)
@@ -149,7 +143,7 @@ class DiscordUI(QMainWindow):
         input_layout.addWidget(self.send_button)
         center_layout.addLayout(input_layout)
         
-        # Nút "Start/Stop Livestream" gộp chung
+        # Nút "Start/Stop Livestream" vẫn được giữ lại (Livestream sẽ hoạt động qua P2P như cũ)
         self.toggle_livestream_button = QPushButton("Start Livestream")
         self.toggle_livestream_button.setStyleSheet("background-color: orange; color: white; padding: 8px;")
         self.toggle_livestream_button.clicked.connect(self.toggle_livestream)
@@ -189,9 +183,40 @@ class DiscordUI(QMainWindow):
         
         self.load_dm_list()
     
-    def toggle_live_mode(self, state):
-        self.live_mode = (state == Qt.CheckState.Checked.value)
-        logging.info("Live mode set to %s", self.live_mode)
+    def send_message(self):
+        message = self.message_input.text().strip()
+        if not message:
+            return
+        self.message_input.clear()
+        self.chat_display.append(message)
+        logging.info("Sending message: %s", message)
+        if self.current_mode == "channel":
+            self.send_channel_message_api(message)
+        elif self.current_mode == "dm":
+            if self.user_peer:
+                self.user_peer.send_p2p_broadcast(f"[DM to {self.current_dm_user}] {message}")
+            else:
+                self.chat_display.append("[ERROR] No user_peer for DM")
+        else:
+            self.chat_display.append("[INFO] No channel or DM selected!")
+    
+    def send_channel_message_api(self, message):
+        if not self.current_channel:
+            self.chat_display.append("[ERROR] No channel selected.")
+            return
+        try:
+            request_data = {
+                "action": "send_message",
+                "username": self.username,
+                "channel_name": self.current_channel,
+                "message": message
+            }
+            response_str = channelRequest.handle_channel_request(json.dumps(request_data))
+            response = json.loads(response_str)
+            if response.get("status") != "success":
+                self.chat_display.append(f"[ERROR] Send failed: {response.get('message')}")
+        except Exception as e:
+            self.chat_display.append(f"[ERROR] {e}")
     
     def load_dm_list(self):
         try:
@@ -203,7 +228,7 @@ class DiscordUI(QMainWindow):
                 self.dm_list.clear()
                 self.dm_users = []
                 for user in users:
-                    display_text = f"{user.get('username')} ({user.get('peer_ip')}:{user.get('peer_port')}, {user.get('session_id')})"
+                    display_text = f"{user.get('username')} ({user.get('status')})"
                     self.dm_users.append(user)
                     item = QListWidgetItem(display_text)
                     self.dm_list.addItem(item)
@@ -233,7 +258,12 @@ class DiscordUI(QMainWindow):
             return
         self.chat_display.clear()
         try:
-            request_data = {"action": "get_channel_info", "channel_name": self.current_channel}
+            # Ở đây gửi kèm username để server kiểm tra quyền truy cập (private channel)
+            request_data = {
+                "action": "get_channel_info",
+                "channel_name": self.current_channel,
+                "username": self.username
+            }
             if self.is_viewer:
                 request_data["is_visitor"] = True
             response_str = channelRequest.handle_channel_request(json.dumps(request_data))
@@ -293,11 +323,13 @@ class DiscordUI(QMainWindow):
                 else:
                     self.request_list.clear()
                     self.request_list.addItem("You are not the owner")
-                # Lưu thông tin channel để hỗ trợ xử lý offline
+                # Lưu thông tin channel để xử lý offline
                 self.current_channel_info = response
             else:
+                # Nếu nhận được lỗi (ví dụ kênh private và user chưa join), hiển thị thông báo
+                self.chat_display.clear()
                 self.chat_display.append(f"[ERROR] {response.get('message')}")
-                logging.error("Error loading channel messages: %s", response.get("message"))
+                return
         except Exception as e:
             logging.error("load_channel_messages error: %s", e)
     
@@ -321,7 +353,7 @@ class DiscordUI(QMainWindow):
         except Exception as e:
             logging.error("approve_user error: %s", e)
             QMessageBox.critical(self, "Error", str(e))
-    
+
     def reject_user(self, username):
         if not self.current_channel:
             return
@@ -342,70 +374,47 @@ class DiscordUI(QMainWindow):
         except Exception as e:
             logging.error("reject_user error: %s", e)
             QMessageBox.critical(self, "Error", str(e))
+   
     
     def update_member_list(self, members):
+        """
+        Hiển thị danh sách thành viên kèm trạng thái (Online/Offline) bằng màu sắc và icon.
+        members: danh sách username (ví dụ: ["alice", "bob", "john"])
+        """
         self.member_list.clear()
+        
+        # Gọi API get_all_users để lấy trạng thái của các user
+        status_map = {}
+        try:
+            request_data = {"action": "get_all_users"}
+            response_str = channelRequest.handle_channel_request(json.dumps(request_data))
+            response = json.loads(response_str)
+            if response.get("status") == "success":
+                all_users = response.get("data", [])
+                for u in all_users:
+                    user_name = u.get("username")
+                    user_status = u.get("status", "Offline")
+                    status_map[user_name] = user_status
+            else:
+                logging.error("Error get_all_users: %s", response.get("message"))
+        except Exception as e:
+            logging.error("Exception in get_all_users: %s", e)
+        
         for m in members:
-            self.member_list.addItem(m)
+            user_status = status_map.get(m, "Offline")
+            if user_status == "Online":
+                display_text = f"🟢 {m}"
+                color = QtGui.QColor("lime")
+            else:
+                display_text = f"🔴 {m}"
+                color = QtGui.QColor("red")
+            item = QListWidgetItem(display_text)
+            item.setForeground(color)
+            self.member_list.addItem(item)
     
     def load_dm_messages(self):
         self.chat_display.clear()
         # Triển khai load DM history nếu có
-    
-    def send_message(self):
-        message = self.message_input.text().strip()
-        if not message:
-            return
-        self.message_input.clear()
-        self.chat_display.append(message)
-        logging.info("Sending message: %s", message)
-        if self.current_mode == "channel":
-            # Nếu owner và đang ở trạng thái Offline, lưu tin nhắn cục bộ
-            if self.current_channel_info and self.current_channel_info.get("owner") == self.username and self.status_dropdown.currentText() == "Offline":
-                self.store_channel_offline_message(message)
-                self.chat_display.append("[Offline] Message stored locally, will sync when online.")
-            else:
-                if self.live_mode:
-                    if self.user_peer:
-                        self.user_peer.send_p2p_broadcast(message)
-                    else:
-                        self.chat_display.append("[ERROR] No user_peer for P2P")
-                else:
-                    self.send_channel_message_api(message)
-        elif self.current_mode == "dm":
-            if self.user_peer:
-                self.user_peer.send_p2p_broadcast(f"[DM to {self.current_dm_user}] {message}")
-            else:
-                self.chat_display.append("[ERROR] No user_peer for DM")
-        else:
-            self.chat_display.append("[INFO] No channel or DM selected!")
-    
-    def send_channel_message_api(self, message):
-        if not self.current_channel:
-            self.chat_display.append("[ERROR] No channel selected.")
-            return
-        try:
-            request_data = {
-                "action": "send_message",
-                "username": self.username,
-                "channel_name": self.current_channel,
-                "message": message
-            }
-            response_str = channelRequest.handle_channel_request(json.dumps(request_data))
-            response = json.loads(response_str)
-            if response.get("status") != "success":
-                self.chat_display.append(f"[ERROR] Send failed: {response.get('message')}")
-        except Exception as e:
-            self.chat_display.append(f"[ERROR] {e}")
-    
-    def store_channel_offline_message(self, message):
-        filename = f"offline_channel_{self.current_channel}_{self.username}.txt"
-        try:
-            with open(filename, "a", encoding="utf-8") as f:
-                f.write(message + "\n")
-            logging.info("Stored offline message: %s", message)
-        except Exception as e:
-            logging.error("Error storing offline message: %s", e)
     
     def sync_offline_channel_messages(self):
         filename = f"offline_channel_{self.current_channel}_{self.username}.txt"
@@ -530,7 +539,7 @@ class DiscordUI(QMainWindow):
         while True:
             if self.current_mode == "channel" and self.current_channel:
                 try:
-                    request_data = {"action": "get_channel_info", "channel_name": self.current_channel}
+                    request_data = {"action": "get_channel_info", "channel_name": self.current_channel, "username": self.username}
                     if self.is_viewer:
                         request_data["is_visitor"] = True
                     response_str = channelRequest.handle_channel_request(json.dumps(request_data))
@@ -553,7 +562,7 @@ class DiscordUI(QMainWindow):
             time.sleep(5)
     
     def toggle_livestream(self):
-        # Chỉ owner của phòng được start/stop livestream.
+        # Livestream vẫn hoạt động theo chế độ P2P như cũ
         if self.current_mode != "channel":
             self.chat_display.append("[INFO] No channel selected or not in channel mode!")
             return
@@ -563,7 +572,6 @@ class DiscordUI(QMainWindow):
         if not self.user_peer:
             self.chat_display.append("[ERROR] user_peer not found!")
             return
-        # Nếu chưa livestream, start livestream; nếu đang livestream, stop livestream.
         if not self.user_peer.is_livestreaming:
             threading.Thread(target=self.user_peer.start_livestream, daemon=True).start()
             self.toggle_livestream_button.setText("Stop Livestream")
@@ -573,11 +581,30 @@ class DiscordUI(QMainWindow):
     
     def change_status(self, status):
         logging.info("Status changed to %s", status)
-        # Khi chuyển sang Online và nếu bạn là owner của phòng, đồng bộ tin nhắn offline.
-        if status == "Online":
-            if self.current_mode == "channel":
-                if self.current_channel_info and self.current_channel_info.get("owner") == self.username:
-                    self.sync_offline_channel_messages()
+        session_id = self.session_info.get("session_id")
+        try:
+            client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            server_ip = "127.0.0.1"
+            server_port = 22236
+            client_socket.connect((server_ip, server_port))
+            if status == "Online":
+                request_data = {"action": "update_status", "session_id": session_id, "visible": True}
+            elif status == "Invisible":
+                request_data = {"action": "update_status", "session_id": session_id, "visible": False}
+            elif status == "Offline":
+                request_data = {"action": "logout", "session_id": session_id}
+            client_socket.send(json.dumps(request_data).encode())
+            response_str = client_socket.recv(4096).decode()
+            response = json.loads(response_str)
+            client_socket.close()
+            if response.get("status") != "success":
+                logging.error("Status update failed: %s", response.get("message"))
+            if status == "Offline":
+                QMessageBox.information(self, "Logout", "You have been logged out.")
+                self.close()
+                self.login_window.show()
+        except Exception as e:
+            logging.error("Change status error: %s", str(e))
     
     def logout(self):
         try:
