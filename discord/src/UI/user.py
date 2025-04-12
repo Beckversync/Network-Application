@@ -37,7 +37,7 @@ class USER:
         self.chat_history = []  # Lịch sử chat
         self.isChatRunning = False
 
-        # Offline caching: file lưu tin nhắn chưa đồng bộ (các tin tin P2P không gửi được)
+        # Offline caching: chỉ lưu tin nhắn khi đó là non-chat (ví dụ livestream) vì chat chỉ sử dụng tracker
         self.offline_file = f"offline_{self.name}.txt"
         self.sync_offline_messages()
 
@@ -106,6 +106,7 @@ class USER:
                         else:
                             logging.error("Failed to decode livestream frame from %s", sender)
                     else:
+                        # Tin nhắn chat chỉ nhận broadcast từ tracker, không xử lý P2P ở đây
                         text = message_data.get("message", "")
                         logging.info("[P2P MESSAGE] %s -> %s: %s", sender, self.name, text)
                 except Exception as e:
@@ -115,7 +116,30 @@ class USER:
         finally:
             conn.close()
 
+    def send_chat_message_via_tracker(self, message):
+        """Gửi tin nhắn (chat) qua tracker theo mô hình client-server."""
+        if self.tracker_socket is None:
+            logging.error("No tracker connection. Chat message not sent: %s", message)
+            return  # Không gửi tin nhắn nếu không có kết nối tracker
+        try:
+            request = json.dumps({
+                "command": "MSG_SEND",
+                "ip": self.ip,
+                "port": self.port,
+                "name": self.name,
+                "message": message
+            })
+            self.tracker_socket.sendall(request.encode('utf-8'))
+            logging.info("Sent chat message via tracker: %s", message)
+        except Exception as e:
+            logging.error("Error sending chat message via tracker: %s", e)
+            # Không sử dụng offline caching cho tin nhắn chat
+
     def send_message_p2p(self, target_ip, target_port, message, msg_type="chat"):
+        # Nếu tin nhắn là chat, chuyển hoàn toàn qua tracker
+        if msg_type == "chat":
+            self.send_chat_message_via_tracker(message)
+            return
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             s.connect((target_ip, target_port))
@@ -132,6 +156,10 @@ class USER:
             self.store_offline_message({"target_ip": target_ip, "target_port": target_port, "message": message, "msg_type": msg_type})
 
     def send_p2p_broadcast(self, message, msg_type="chat"):
+        # Nếu tin nhắn là chat, sử dụng tracker thay vì broadcast P2P
+        if msg_type == "chat":
+            self.send_chat_message_via_tracker(message)
+            return
         peers = self.get_peer_list()
         if not peers:
             logging.info("No peers available for P2P broadcast.")
@@ -143,31 +171,27 @@ class USER:
             target_port = int(peer["port"])
             self.send_message_p2p(target_ip, target_port, message, msg_type)
 
-    def send_udp_message(self, target_ip, target_udp_port, message, msg_type="livestream"):
+    # Hàm gửi UDP broadcast mới được thêm vào cho livestream
+    def send_udp_broadcast(self, message, msg_type="chat"):
+        udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         try:
-            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-            message_data = json.dumps({
-                "sender": self.name,
-                "type": msg_type,
-                "message": message
-            })
-            s.sendto(message_data.encode('utf-8'), (target_ip, target_udp_port))
-            s.close()
-            logging.info("Sent UDP %s message to %s:%s", msg_type, target_ip, target_udp_port)
+            peers = self.get_peer_list()
+            for peer in peers:
+                if peer["ip"] == self.ip and int(peer["port"]) == self.port:
+                    continue
+                target_ip = peer["ip"]
+                target_udp_port = int(peer["port"]) + 1  # Giả sử cổng UDP là cổng TCP + 1
+                data = json.dumps({
+                    "sender": self.name,
+                    "type": msg_type,
+                    "message": message
+                })
+                udp_socket.sendto(data.encode('utf-8'), (target_ip, target_udp_port))
+                logging.info("Sent UDP %s message to %s:%s", msg_type, target_ip, target_udp_port)
         except Exception as e:
-            logging.error("Failed to send UDP %s message to %s:%s: %s", msg_type, target_ip, target_udp_port, e)
-
-    def send_udp_broadcast(self, message, msg_type="livestream"):
-        peers = self.get_peer_list()
-        if not peers:
-            logging.info("No peers available for UDP broadcast.")
-            return
-        for peer in peers:
-            if peer["ip"] == self.ip and int(peer["port"]) == self.port:
-                continue
-            target_ip = peer["ip"]
-            target_udp_port = int(peer["port"]) + 1
-            self.send_udp_message(target_ip, target_udp_port, message, msg_type)
+            logging.error("Error sending UDP broadcast: %s", e)
+        finally:
+            udp_socket.close()
 
     def get_peer_list(self):
         if self.tracker_socket is None:
@@ -247,6 +271,10 @@ class USER:
             udp_socket.close()
 
     def store_offline_message(self, msg_obj):
+        # Chỉ lưu offline cho những tin nhắn không phải chat (ví dụ livestream)
+        if msg_obj.get("msg_type") == "chat":
+            # Không lưu tin nhắn chat vì phải gửi qua tracker
+            return
         try:
             with open(self.offline_file, 'a') as f:
                 f.write(json.dumps(msg_obj) + "\n")
@@ -262,6 +290,9 @@ class USER:
                 for line in lines:
                     try:
                         msg_obj = json.loads(line.strip())
+                        if msg_obj.get("msg_type") == "chat":
+                            # Bỏ qua tin nhắn chat offline vì luôn phải qua tracker
+                            continue
                         target_ip = msg_obj.get("target_ip")
                         target_port = msg_obj.get("target_port")
                         message = msg_obj.get("message")
@@ -280,8 +311,8 @@ class USER:
             print("0. Exit")
             print("1. Get Peer List (Client-Server)")
             print("2. Leave Network (Client-Server)")
-            print("3. Send Message via Tracker (Broadcast, Client-Server)")
-            print("4. Send Direct P2P Message (One-to-One)")
+            print("3. Chat via Tracker (Broadcast, Client-Server)")
+            print("4. Send Direct Message via Tracker (One-to-One)")
             print("5. Start Livestream (UDP P2P)")
             choice = input("Choose an option: ")
             if choice == "0":
@@ -330,7 +361,10 @@ class USER:
                     "message": client_input
                 })
                 try:
-                    self.tracker_socket.sendall(request.encode('utf-8'))
+                    if self.tracker_socket:
+                        self.tracker_socket.sendall(request.encode('utf-8'))
+                    else:
+                        logging.error("Cannot send tracker message: No tracker connection.")
                 except Exception as e:
                     logging.error("Error sending tracker message: %s", e)
                     break
@@ -373,10 +407,8 @@ class USER:
         try:
             selection = int(selection)
             target = valid_peers[selection]
-            target_ip = target["ip"]
-            target_port = int(target["port"])
             message = input("Enter your message: ")
-            self.send_message_p2p(target_ip, target_port, message, msg_type="chat")
+            self.send_chat_message_via_tracker(f"[DM to {target['name']}] {message}")
         except Exception as e:
             logging.error("Invalid selection or error: %s", e)
 
@@ -405,6 +437,7 @@ class USER:
                 logging.error("Failed to encode frame.")
                 continue
             jpg_as_text = base64.b64encode(buffer).decode('utf-8')
+            # Sử dụng hàm send_udp_broadcast để gửi frame livestream qua UDP
             self.send_udp_broadcast(jpg_as_text, msg_type="livestream")
             cv2.imshow('Livestream (Local)', frame)
             cv2.waitKey(1)

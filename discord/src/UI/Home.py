@@ -92,8 +92,6 @@ class DiscordUI(QMainWindow):
         
         sidebar_layout.addWidget(tab_widget)
         
-        # Loại bỏ checkbox "Live Mode" vì tin nhắn text sẽ luôn gửi qua tracker.
-        
         # Dropdown trạng thái: Online, Offline, Invisible
         self.status_dropdown = QComboBox()
         self.status_dropdown.addItems(["Online", "Offline", "Invisible"])
@@ -193,16 +191,22 @@ class DiscordUI(QMainWindow):
         if self.current_mode == "channel":
             self.send_channel_message_api(message)
         elif self.current_mode == "dm":
+            # Gửi tin nhắn DM qua tracker (client-server)
             if self.user_peer:
-                self.user_peer.send_p2p_broadcast(f"[DM to {self.current_dm_user}] {message}")
+                self.user_peer.send_chat_message_via_tracker(f"[DM to {self.current_dm_user}] {message}")
             else:
                 self.chat_display.append("[ERROR] No user_peer for DM")
         else:
             self.chat_display.append("[INFO] No channel or DM selected!")
-    
+        
     def send_channel_message_api(self, message):
         if not self.current_channel:
             self.chat_display.append("[ERROR] No channel selected.")
+            return
+        # Kiểm tra kết nối tracker thông qua user_peer
+        if not (self.user_peer and self.user_peer.tracker_socket):
+            self.chat_display.append("[ERROR] Tracker is offline. Cannot send channel message.")
+            logging.error("Tracker offline: cannot send channel message: %s", message)
             return
         try:
             request_data = {
@@ -215,8 +219,11 @@ class DiscordUI(QMainWindow):
             response = json.loads(response_str)
             if response.get("status") != "success":
                 self.chat_display.append(f"[ERROR] Send failed: {response.get('message')}")
+            else:
+                logging.info("Message from %s sent in channel '%s'", self.username, self.current_channel)
         except Exception as e:
             self.chat_display.append(f"[ERROR] {e}")
+
     
     def load_dm_list(self):
         try:
@@ -258,7 +265,6 @@ class DiscordUI(QMainWindow):
             return
         self.chat_display.clear()
         try:
-            # Ở đây gửi kèm username để server kiểm tra quyền truy cập (private channel)
             request_data = {
                 "action": "get_channel_info",
                 "channel_name": self.current_channel,
@@ -283,7 +289,6 @@ class DiscordUI(QMainWindow):
                 else:
                     self.join_button.setText("Join Channel")
                     self.join_button.setEnabled(True)
-                # Nếu là owner, load danh sách join requests
                 owner = response.get("owner")
                 if self.username == owner:
                     req_data = {
@@ -323,10 +328,8 @@ class DiscordUI(QMainWindow):
                 else:
                     self.request_list.clear()
                     self.request_list.addItem("You are not the owner")
-                # Lưu thông tin channel để xử lý offline
                 self.current_channel_info = response
             else:
-                # Nếu nhận được lỗi (ví dụ kênh private và user chưa join), hiển thị thông báo
                 self.chat_display.clear()
                 self.chat_display.append(f"[ERROR] {response.get('message')}")
                 return
@@ -375,15 +378,8 @@ class DiscordUI(QMainWindow):
             logging.error("reject_user error: %s", e)
             QMessageBox.critical(self, "Error", str(e))
    
-    
     def update_member_list(self, members):
-        """
-        Hiển thị danh sách thành viên kèm trạng thái (Online/Offline) bằng màu sắc và icon.
-        members: danh sách username (ví dụ: ["alice", "bob", "john"])
-        """
         self.member_list.clear()
-        
-        # Gọi API get_all_users để lấy trạng thái của các user
         status_map = {}
         try:
             request_data = {"action": "get_all_users"}
@@ -562,7 +558,6 @@ class DiscordUI(QMainWindow):
             time.sleep(5)
     
     def toggle_livestream(self):
-        # Livestream vẫn hoạt động theo chế độ P2P như cũ
         if self.current_mode != "channel":
             self.chat_display.append("[INFO] No channel selected or not in channel mode!")
             return

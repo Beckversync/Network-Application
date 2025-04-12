@@ -112,3 +112,11 @@
 [2025-04-10 23:55:56,899] INFO: P2P SERVER listening on 127.0.0.1:6453
 [2025-04-10 23:55:56,901] INFO: UDP LISTENER listening on 127.0.0.1:6454 for livestream.
 [2025-04-10 23:55:58,703] INFO: User an08 logged out
+[2025-04-12 14:25:11,215] INFO: User beckhamngo logged in successfully
+[2025-04-12 14:25:11,218] INFO: Logged in as: beckhamngo
+[2025-04-12 14:25:12,322] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-12 14:25:12,335] INFO: Tracker response: Peer beckhamngo (127.0.0.1:7166) added
+[2025-04-12 14:25:12,337] INFO: P2P SERVER listening on 127.0.0.1:7166
+[2025-04-12 14:25:12,337] INFO: UDP LISTENER listening on 127.0.0.1:7167 for livestream.
+[2025-04-12 14:25:52,853] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-12 14:26:12,534] INFO: User beckhamngo logged out
