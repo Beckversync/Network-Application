@@ -24,3 +24,91 @@
 [2025-04-09 11:24:04,478] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
 [2025-04-09 11:24:04,480] INFO: P2P SERVER listening on 127.0.0.1:6054
 [2025-04-09 11:24:04,481] INFO: UDP LISTENER listening on 127.0.0.1:6055 for UDP livestream.
+[2025-04-10 23:15:59,006] INFO: User beckhamngo logged in successfully
+[2025-04-10 23:15:59,006] INFO: Logged in as: beckhamngo
+[2025-04-10 23:15:59,782] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-10 23:16:01,823] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-10 23:16:01,824] INFO: P2P SERVER listening on 127.0.0.1:6551
+[2025-04-10 23:16:01,826] INFO: UDP LISTENER listening on 127.0.0.1:6552 for livestream.
+[2025-04-10 23:16:09,550] INFO: Sending message: nice to meet you
+[2025-04-10 23:16:09,651] INFO: Message from beckhamngo sent in channel 'private0'
+[2025-04-10 23:16:11,248] INFO: Sending message: an 08
+[2025-04-10 23:16:11,338] INFO: Message from beckhamngo sent in channel 'private0'
+[2025-04-10 23:16:22,563] INFO: Channel 'Beckham' created by beckhamngo (is_private=True)
+[2025-04-10 23:16:28,465] INFO: Sending message: from Beckham
+[2025-04-10 23:16:28,559] INFO: Message from beckhamngo sent in channel 'Beckham'
+[2025-04-10 23:16:31,314] INFO: Sending message: 11
+[2025-04-10 23:16:31,401] INFO: Message from beckhamngo sent in channel 'Beckham'
+[2025-04-10 23:16:34,327] INFO: Starting livestream.
+[2025-04-10 23:16:35,328] ERROR: Not connected to tracker.
+[2025-04-10 23:16:35,328] INFO: No peers available for UDP broadcast.
+[2025-04-10 23:16:36,466] ERROR: Not connected to tracker.
+[2025-04-10 23:16:36,467] INFO: No peers available for UDP broadcast.
+[2025-04-10 23:16:37,581] ERROR: Not connected to tracker.
+[2025-04-10 23:16:37,581] INFO: No peers available for UDP broadcast.
+[2025-04-10 23:16:38,691] ERROR: Not connected to tracker.
+[2025-04-10 23:16:38,692] INFO: No peers available for UDP broadcast.
+[2025-04-10 23:16:38,787] INFO: Stopping livestream.
+[2025-04-10 23:16:39,034] INFO: Livestream stopped.
+[2025-04-10 23:16:49,280] INFO: Channel 'Beckham' deleted by beckhamngo
+[2025-04-10 23:16:56,165] INFO: Status changed to Offline
+[2025-04-10 23:16:58,460] INFO: Status changed to Invisible
+[2025-04-10 23:16:59,604] INFO: User beckhamngo logged out
+[2025-04-10 23:17:01,921] INFO: Logged in as Viewer: beckhamngo
+[2025-04-10 23:17:01,922] INFO: User 'beckhamngo' logging in (visitor mode).
+[2025-04-10 23:17:03,964] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-10 23:17:03,966] INFO: P2P SERVER listening on 127.0.0.1:6123
+[2025-04-10 23:17:03,968] INFO: UDP LISTENER listening on 127.0.0.1:6124 for livestream.
+[2025-04-10 23:47:20,998] INFO: User beckhamngo logged in successfully
+[2025-04-10 23:47:21,000] INFO: Logged in as: beckhamngo
+[2025-04-10 23:47:21,602] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-10 23:47:23,636] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-10 23:47:23,637] INFO: P2P SERVER listening on 127.0.0.1:7981
+[2025-04-10 23:47:23,638] INFO: UDP LISTENER listening on 127.0.0.1:7982 for livestream.
+[2025-04-10 23:47:25,749] INFO: Changing status to Offline
+[2025-04-10 23:47:25,817] INFO: User beckhamngo logged out (offline)
+[2025-04-10 23:47:25,818] INFO: Status update response: User logged out (offline)
+[2025-04-10 23:47:28,775] INFO: Changing status to Invisible
+[2025-04-10 23:47:28,814] INFO: Status update response: Invalid session
+[2025-04-10 23:47:56,749] INFO: User beckhamngo logged in successfully
+[2025-04-10 23:47:56,752] INFO: Logged in as: beckhamngo
+[2025-04-10 23:47:57,452] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-10 23:47:59,498] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-10 23:47:59,500] INFO: P2P SERVER listening on 127.0.0.1:8064
+[2025-04-10 23:47:59,502] INFO: UDP LISTENER listening on 127.0.0.1:8065 for livestream.
+[2025-04-10 23:48:03,866] INFO: Sending message: ewqeweq
+[2025-04-10 23:48:03,936] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-10 23:48:10,193] INFO: Status changed to Offline
+[2025-04-10 23:48:14,815] INFO: Sending message: ưewerwe
+[2025-04-10 23:48:14,888] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-10 23:52:53,410] INFO: User beckhamngo logged out
+[2025-04-10 23:53:59,522] INFO: User beckhamngo logged in successfully
+[2025-04-10 23:53:59,523] INFO: Logged in as: beckhamngo
+[2025-04-10 23:54:00,320] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-10 23:54:02,355] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-10 23:54:02,356] INFO: P2P SERVER listening on 127.0.0.1:6854
+[2025-04-10 23:54:02,357] INFO: UDP LISTENER listening on 127.0.0.1:6855 for livestream.
+[2025-04-10 23:54:04,294] INFO: Changing status to Offline
+[2025-04-10 23:54:04,494] INFO: User beckhamngo logged out (offline)
+[2025-04-10 23:54:04,494] INFO: Status update response: User logged out (offline)
+[2025-04-10 23:54:12,544] INFO: Changing status to Invisible
+[2025-04-10 23:54:12,577] INFO: Status update response: Invalid session
+[2025-04-10 23:54:18,562] INFO: Sending message: rewrewer
+[2025-04-10 23:54:18,679] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-10 23:54:24,211] INFO: Changing status to Online
+[2025-04-10 23:54:24,247] INFO: Status update response: Invalid session
+[2025-04-10 23:54:26,017] INFO: Sending message: rẻwere
+[2025-04-10 23:54:26,087] INFO: Message from beckhamngo sent in channel 'test1'
+[2025-04-10 23:55:24,376] INFO: User an08 logged in successfully
+[2025-04-10 23:55:24,408] INFO: Logged in as: an08
+[2025-04-10 23:55:25,050] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-10 23:55:27,092] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-10 23:55:27,093] INFO: P2P SERVER listening on 127.0.0.1:6985
+[2025-04-10 23:55:27,093] INFO: UDP LISTENER listening on 127.0.0.1:6986 for livestream.
+[2025-04-10 23:55:53,630] INFO: User an08 logged in successfully
+[2025-04-10 23:55:53,631] INFO: Logged in as: an08
+[2025-04-10 23:55:54,851] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-10 23:55:56,897] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-10 23:55:56,899] INFO: P2P SERVER listening on 127.0.0.1:6453
+[2025-04-10 23:55:56,901] INFO: UDP LISTENER listening on 127.0.0.1:6454 for livestream.
+[2025-04-10 23:55:58,703] INFO: User an08 logged out

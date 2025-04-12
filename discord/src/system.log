@@ -467,3 +467,51 @@
 [2025-04-10 17:48:51,455] INFO: Sending message: i am panguyen
 [2025-04-10 17:48:51,561] INFO: Message from an09 sent in channel 'private0'
 [2025-04-10 17:48:54,338] INFO: User an09 logged out
+[2025-04-10 22:20:19,221] INFO: User an08 logged in successfully
+[2025-04-10 22:20:19,223] INFO: Logged in as: an08
+[2025-04-10 22:20:20,066] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-10 22:20:22,113] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-10 22:20:22,118] INFO: P2P SERVER listening on 127.0.0.1:7683
+[2025-04-10 22:20:22,126] INFO: UDP LISTENER listening on 127.0.0.1:7684 for UDP livestream.
+[2025-04-10 22:20:27,612] INFO: User beckhamngo approved to join channel 'private0' by an08
+[2025-04-10 22:20:32,256] INFO: Sending message: hello
+[2025-04-10 22:20:32,356] INFO: Message from an08 sent in channel 'private0'
+[2025-04-10 22:21:08,136] INFO: Sending message: da add beckham
+[2025-04-10 22:21:08,239] INFO: Message from an08 sent in channel 'private0'
+[2025-04-10 22:21:33,260] INFO: User an08 logged out
+[2025-04-11 11:54:42,428] INFO: User an08 logged in successfully
+[2025-04-11 11:54:42,433] INFO: Logged in as: an08
+[2025-04-11 11:54:43,143] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-11 11:54:45,175] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 11:54:45,185] INFO: P2P SERVER listening on 127.0.0.1:8001
+[2025-04-11 11:54:45,194] INFO: UDP LISTENER listening on 127.0.0.1:8002 for UDP livestream.
+[2025-04-11 11:55:34,439] INFO: User an08 logged out
+[2025-04-11 17:05:35,794] INFO: User an08 logged in successfully
+[2025-04-11 17:05:35,798] INFO: Logged in as: an08
+[2025-04-11 17:05:37,044] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-11 17:05:39,078] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 17:05:39,079] INFO: UDP LISTENER listening on 127.0.0.1:8217 for UDP livestream.
+[2025-04-11 17:05:39,080] INFO: P2P SERVER listening on 127.0.0.1:8216
+[2025-04-11 17:05:59,284] INFO: Channel 'private0' created by an08 (is_private=True)
+[2025-04-11 17:06:03,673] INFO: Sending message: 12431423
+[2025-04-11 17:06:03,769] INFO: Message from an08 sent in channel 'private0'
+[2025-04-11 17:06:04,888] INFO: User an08 logged out
+[2025-04-11 17:06:09,062] INFO: User an09 logged in successfully
+[2025-04-11 17:06:09,064] INFO: Logged in as: an09
+[2025-04-11 17:06:09,713] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-11 17:06:11,752] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 17:06:11,755] INFO: P2P SERVER listening on 127.0.0.1:7961
+[2025-04-11 17:06:11,756] INFO: UDP LISTENER listening on 127.0.0.1:7962 for UDP livestream.
+[2025-04-11 17:06:15,705] INFO: Sending message: gfafE
+[2025-04-11 17:06:18,402] INFO: User an09 requested to join private channel 'private0'
+[2025-04-11 17:06:22,969] INFO: User an09 logged out
+[2025-04-11 17:06:27,355] INFO: User an08 logged in successfully
+[2025-04-11 17:06:27,358] INFO: Logged in as: an08
+[2025-04-11 17:06:28,014] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-11 17:06:30,058] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-11 17:06:30,060] INFO: P2P SERVER listening on 127.0.0.1:6923
+[2025-04-11 17:06:30,061] INFO: UDP LISTENER listening on 127.0.0.1:6924 for UDP livestream.
+[2025-04-11 17:06:34,232] INFO: User an09 approved to join channel 'private0' by an08
+[2025-04-11 17:09:45,879] INFO: Sending message: asfdsf
+[2025-04-11 17:09:45,986] INFO: Message from an08 sent in channel 'private0'
+[2025-04-11 17:11:47,604] INFO: User an08 logged out

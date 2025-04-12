@@ -1,5 +1,5 @@
 import json
-from controllers.authController import register, login, visitor, logout
+from controllers.authController import register, login, visitor, logout, update_status
 
 def handle_request(data: str, peer_ip: str, peer_port: int) -> str:
     try:
@@ -13,6 +13,8 @@ def handle_request(data: str, peer_ip: str, peer_port: int) -> str:
             response = visitor(request)
         elif action == "logout":
             response = logout(request)
+        elif action == "update_status":
+            response = update_status(request)
         else:
             response = {"status": "error", "message": "Invalid action"}
         return json.dumps(response)

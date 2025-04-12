@@ -77,9 +77,10 @@ def send_message_controller(data):
 
 def get_channel_info_controller(data):
     channel_name = data.get("channel_name")
-    if not channel_name:
+    username = data.get("username")
+    if not channel_name or not username:
         return {"status": "error", "message": "Missing parameters"}
-    result = get_channel_info(channel_name)
+    result = get_channel_info(channel_name, username)
     is_visitor = data.get("is_visitor", False)
     if result.get("status") == "success" and is_visitor and not result.get("allow_visitor", True):
          return {"status": "error", "message": "This channel does not allow visitor viewing operation"}
