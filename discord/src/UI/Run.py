@@ -3,7 +3,6 @@ import os
 import logging
 import threading
 
-
 # Cấu hình logging tập trung: ghi log vào file system.log (ASCII text file) và console
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -43,15 +42,15 @@ class AppManager:
 
     def open_main_app(self, username, session_info):
         logging.info("User '%s' logging in (authenticated mode).", username)
-        # Khởi tạo USER ở chế độ headless để thực hiện các thao tác P2P
-        self.user_peer = USER("127.0.0.1", 5000, headless=True, username=username)
+        # Khởi tạo USER ở chế độ headless để thực hiện các thao tác P2P.
+        self.user_peer = USER("10.229.33.201", 5000, headless=True, username=username)
         self.main_window = DiscordUI(self.login_window, username, session_info, self.user_peer)
         self.main_window.show()
         self.login_window.close()
     
     def open_main_app_as_viewer(self, username, session_info):
         logging.info("User '%s' logging in (visitor mode).", username)
-        self.user_peer = USER("127.0.0.1", 5000, headless=True, username=username)
+        self.user_peer = USER("10.229.33.201", 5000, headless=True, username=username)
         self.main_window = DiscordUI(self.login_window, username, session_info, self.user_peer)
         self.main_window.setWindowTitle("Discord Clone - Viewer Mode")
         self.main_window.send_button.setEnabled(False)

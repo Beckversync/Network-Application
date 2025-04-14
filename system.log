@@ -2449,3 +2449,842 @@
 [2025-04-12 15:41:40,254] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
 [2025-04-12 15:41:42,575] INFO: User beckhamngo logged out
 [2025-04-12 15:41:43,227] INFO: Tracker response on LEAVE: Peer beckhamngo (127.0.0.1:7123) left
+[2025-04-12 15:54:08,465] INFO: User beckhamngo logged in successfully
+[2025-04-12 15:54:08,466] INFO: Logged in as: beckhamngo
+[2025-04-12 15:54:09,536] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-12 15:54:09,538] INFO: Tracker response: Peer beckhamngo (127.0.0.1:6030) added
+[2025-04-12 15:54:09,540] INFO: P2P SERVER listening on 127.0.0.1:6030
+[2025-04-12 15:54:09,540] INFO: UDP LISTENER listening on 127.0.0.1:6031 for livestream.
+[2025-04-12 15:54:19,898] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-12 15:54:38,442] INFO: Sending message: dsasds
+[2025-04-12 15:54:38,537] INFO: Message from beckhamngo sent in channel '1'
+[2025-04-12 15:54:38,537] INFO: Message from beckhamngo sent in channel '1'
+[2025-04-12 15:55:05,766] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-12 15:55:27,137] INFO: Sending message: giải quyết được tracker
+[2025-04-12 15:55:27,230] INFO: Message from beckhamngo sent in channel 'test2'
+[2025-04-12 15:55:27,230] INFO: Message from beckhamngo sent in channel 'test2'
+[2025-04-12 15:55:37,290] INFO: User beckhamngo joined public channel 'test2'
+[2025-04-12 15:55:41,612] INFO: Sending message: hello
+[2025-04-12 15:55:41,709] INFO: Message from beckhamngo sent in channel 'test2'
+[2025-04-12 15:55:41,709] INFO: Message from beckhamngo sent in channel 'test2'
+[2025-04-12 15:55:45,829] INFO: Sending message: à nhon
+[2025-04-12 15:55:45,925] INFO: Message from beckhamngo sent in channel 'test2'
+[2025-04-12 15:55:45,926] INFO: Message from beckhamngo sent in channel 'test2'
+[2025-04-12 15:56:07,770] INFO: User beckhamngo logged out
+[2025-04-12 15:56:08,583] INFO: Tracker response on LEAVE: Peer beckhamngo (127.0.0.1:6030) left
+[2025-04-12 15:57:13,947] INFO: User beckhamngo logged in successfully
+[2025-04-12 15:57:13,948] INFO: Logged in as: beckhamngo
+[2025-04-12 15:57:14,869] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-12 15:57:14,871] INFO: Tracker response: Peer beckhamngo (127.0.0.1:8579) added
+[2025-04-12 15:57:14,872] INFO: P2P SERVER listening on 127.0.0.1:8579
+[2025-04-12 15:57:14,872] INFO: UDP LISTENER listening on 127.0.0.1:8580 for livestream.
+[2025-04-12 16:02:18,346] INFO: User beckhamngo logged out
+[2025-04-12 16:02:19,525] INFO: Tracker response on LEAVE: Peer beckhamngo (127.0.0.1:8579) left
+[2025-04-12 16:02:48,384] INFO: User beckhamngo logged in successfully
+[2025-04-12 16:02:48,384] INFO: Logged in as: beckhamngo
+[2025-04-12 16:02:49,103] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-12 16:02:49,105] INFO: Tracker response: Peer beckhamngo (127.0.0.1:7123) added
+[2025-04-12 16:02:49,106] INFO: P2P SERVER listening on 127.0.0.1:7123
+[2025-04-12 16:02:49,106] INFO: UDP LISTENER listening on 127.0.0.1:7124 for livestream.
+[2025-04-12 16:02:55,624] INFO: Sending message: nà ná na
+[2025-04-12 16:02:55,714] INFO: Message from beckhamngo sent in channel '123'
+[2025-04-12 16:02:55,714] INFO: Message from beckhamngo sent in channel '123'
+[2025-04-12 16:03:01,844] INFO: Sending message: off r mà
+[2025-04-12 16:03:02,230] INFO: Message from beckhamngo sent in channel '123'
+[2025-04-12 16:03:02,230] INFO: Message from beckhamngo sent in channel '123'
+[2025-04-12 16:03:11,754] INFO: User beckhamngo logged out
+[2025-04-12 16:03:14,254] INFO: Tracker response on LEAVE: Peer beckhamngo (127.0.0.1:7123) left
+[2025-04-12 16:05:39,246] INFO: User beckhamngo logged in successfully
+[2025-04-12 16:05:39,252] INFO: Logged in as: beckhamngo
+[2025-04-12 16:05:40,556] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-12 16:05:40,556] INFO: Tracker response: Peer beckhamngo (127.0.0.1:8658) added
+[2025-04-12 16:05:40,561] INFO: P2P SERVER listening on 127.0.0.1:8658
+[2025-04-12 16:05:40,562] INFO: UDP LISTENER listening on 127.0.0.1:8659 for livestream.
+[2025-04-12 16:05:44,430] INFO: Status changed to Invisible
+[2025-04-12 16:05:44,536] INFO: Updated session 81744b86-c033-4091-aa6d-efb92e7ad0c1 visible to False
+[2025-04-12 16:05:51,177] INFO: Sending message: invi
+[2025-04-12 16:05:51,546] INFO: Message from beckhamngo sent in channel '123'
+[2025-04-12 16:05:51,546] INFO: Message from beckhamngo sent in channel '123'
+[2025-04-12 16:05:53,226] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-12 16:06:25,851] INFO: Sending message: đù
+[2025-04-12 16:06:25,851] INFO: Sent chat message via tracker: [DM to an08 (Online)] đù
+[2025-04-12 16:06:34,946] INFO: Status changed to Online
+[2025-04-12 16:06:35,041] INFO: Updated session 81744b86-c033-4091-aa6d-efb92e7ad0c1 visible to True
+[2025-04-12 16:06:37,571] INFO: Sending message: alo
+[2025-04-12 16:06:37,576] INFO: Sent chat message via tracker: [DM to an08 (Online)] alo
+[2025-04-12 16:06:47,557] INFO: Sending message: aaaa
+[2025-04-12 16:06:47,557] INFO: Sent chat message via tracker: [DM to an08 (Online)] aaaa
+[2025-04-12 16:06:56,426] INFO: Status changed to Invisible
+[2025-04-12 16:06:56,526] INFO: Updated session 81744b86-c033-4091-aa6d-efb92e7ad0c1 visible to False
+[2025-04-12 16:06:58,551] INFO: Sending message: adsasdas
+[2025-04-12 16:06:58,551] INFO: Sent chat message via tracker: [DM to an08 (Online)] adsasdas
+[2025-04-12 16:07:03,634] INFO: Sending message: sấdsasd
+[2025-04-12 16:07:03,730] INFO: Message from beckhamngo sent in channel '123'
+[2025-04-12 16:07:03,730] INFO: Message from beckhamngo sent in channel '123'
+[2025-04-12 16:13:47,931] INFO: Sending message: ?
+[2025-04-12 16:13:47,932] INFO: Sent chat message via tracker: [DM to beckhamngo (Online)] ?
+[2025-04-12 16:13:53,433] INFO: Status changed to Offline
+[2025-04-12 16:13:53,534] INFO: User beckhamngo logged out
+[2025-04-12 16:13:58,699] INFO: User an08 logged in successfully
+[2025-04-12 16:13:58,700] INFO: Logged in as: an08
+[2025-04-12 16:13:59,162] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-12 16:13:59,163] INFO: Tracker response: Peer an08 (127.0.0.1:8846) added
+[2025-04-12 16:13:59,164] INFO: P2P SERVER listening on 127.0.0.1:8846
+[2025-04-12 16:13:59,164] INFO: UDP LISTENER listening on 127.0.0.1:8847 for livestream.
+[2025-04-12 16:14:07,813] INFO: User an08 logged out
+[2025-04-12 16:14:08,488] INFO: Tracker response on LEAVE: Peer an08 (127.0.0.1:8846) left
+[2025-04-12 16:14:17,142] INFO: User an08 logged in successfully
+[2025-04-12 16:14:17,143] INFO: Logged in as: an08
+[2025-04-12 16:14:17,877] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-12 16:14:17,879] INFO: Tracker response: Peer an08 (127.0.0.1:6447) added
+[2025-04-12 16:14:17,879] INFO: UDP LISTENER listening on 127.0.0.1:6448 for livestream.
+[2025-04-12 16:14:17,880] INFO: P2P SERVER listening on 127.0.0.1:6447
+[2025-04-12 16:14:26,582] INFO: User an08 logged out
+[2025-04-12 16:14:27,548] INFO: Tracker response on LEAVE: Peer an08 (127.0.0.1:6447) left
+[2025-04-12 16:14:28,987] ERROR: Exception in load_dm_list: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-14 13:31:36,696] INFO: User beckhamngo logged in successfully
+[2025-04-14 13:31:36,705] INFO: Logged in as: beckhamngo
+[2025-04-14 13:31:37,513] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 13:31:39,563] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-14 13:31:39,566] INFO: P2P SERVER listening on 127.0.0.1:7139
+[2025-04-14 13:31:39,566] INFO: UDP LISTENER listening on 127.0.0.1:7140 for livestream.
+[2025-04-14 13:32:47,573] INFO: User beckhamngo joined public channel 'test'
+[2025-04-14 13:33:19,164] INFO: Sending message: alo
+[2025-04-14 13:33:19,164] ERROR: Tracker offline: cannot send channel message: alo
+[2025-04-14 13:33:22,208] INFO: User beckhamngo logged out
+[2025-04-14 13:33:23,465] ERROR: Not connected to tracker.
+[2025-04-14 13:43:21,777] INFO: User beckhamngo logged in successfully
+[2025-04-14 13:43:21,780] INFO: Logged in as: beckhamngo
+[2025-04-14 13:43:23,029] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 13:43:25,062] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-14 13:43:25,065] INFO: P2P SERVER listening on 127.0.0.1:8165
+[2025-04-14 13:43:25,065] INFO: UDP LISTENER listening on 127.0.0.1:8166 for livestream.
+[2025-04-14 13:55:02,402] INFO: Server for beckhamngo is listening on port 4039...
+[2025-04-14 13:55:02,546] INFO: User beckhamngo logged in successfully
+[2025-04-14 13:55:02,546] INFO: Logged in as: beckhamngo
+[2025-04-14 13:55:03,645] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 13:55:05,688] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-14 13:55:05,690] INFO: P2P SERVER listening on 127.0.0.1:7678
+[2025-04-14 13:55:05,691] INFO: UDP LISTENER listening on 127.0.0.1:7679 for livestream.
+[2025-04-14 13:56:07,802] INFO: User beckhamngo logged out
+[2025-04-14 13:56:08,760] ERROR: Not connected to tracker.
+[2025-04-14 14:00:01,474] INFO: Server for beckhamngo is listening on port 4039...
+[2025-04-14 14:00:01,596] INFO: User beckhamngo logged in successfully
+[2025-04-14 14:00:01,597] INFO: Logged in as: beckhamngo
+[2025-04-14 14:00:03,021] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 14:00:03,023] INFO: Tracker response: Peer beckhamngo (127.0.0.1:6650) added
+[2025-04-14 14:00:03,024] INFO: P2P SERVER listening on 127.0.0.1:6650
+[2025-04-14 14:00:03,024] INFO: UDP LISTENER listening on 127.0.0.1:6651 for livestream.
+[2025-04-14 14:00:42,090] INFO: User beckhamngo logged out
+[2025-04-14 14:00:42,737] INFO: Tracker response on LEAVE: Peer beckhamngo (127.0.0.1:6650) left
+[2025-04-14 14:00:43,802] INFO: User beckhamngo logged in successfully
+[2025-04-14 14:00:43,803] INFO: Logged in as: beckhamngo
+[2025-04-14 14:00:44,399] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 14:00:44,401] INFO: Tracker response: Peer beckhamngo (127.0.0.1:7127) added
+[2025-04-14 14:00:44,402] INFO: P2P SERVER listening on 127.0.0.1:7127
+[2025-04-14 14:00:44,403] INFO: UDP LISTENER listening on 127.0.0.1:7128 for livestream.
+[2025-04-14 14:02:18,735] INFO: Channel 'Public2' created by beckhamngo (is_private=False)
+[2025-04-14 14:02:30,015] INFO: Sending message: xin chào
+[2025-04-14 14:02:30,133] INFO: Message from beckhamngo sent in channel 'public1'
+[2025-04-14 14:02:30,134] INFO: Message from beckhamngo sent in channel 'public1'
+[2025-04-14 14:02:42,520] INFO: User beckhamngo joined public channel 'public1'
+[2025-04-14 14:03:03,584] INFO: User beckhamngo logged out
+[2025-04-14 14:03:04,210] INFO: Tracker response on LEAVE: Peer beckhamngo (127.0.0.1:7127) left
+[2025-04-14 14:03:11,701] INFO: User beckhamngo logged in successfully
+[2025-04-14 14:03:11,702] INFO: Logged in as: beckhamngo
+[2025-04-14 14:03:12,488] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 14:03:12,489] INFO: Tracker response: Peer beckhamngo (127.0.0.1:8912) added
+[2025-04-14 14:03:12,490] INFO: P2P SERVER listening on 127.0.0.1:8912
+[2025-04-14 14:03:12,491] INFO: UDP LISTENER listening on 127.0.0.1:8913 for livestream.
+[2025-04-14 14:03:20,807] INFO: User beckhamngo requested to join private channel 'private1'
+[2025-04-14 14:03:22,803] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:03:27,890] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:03:28,124] INFO: Sending message: alo
+[2025-04-14 14:03:32,989] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:03:43,024] INFO: Sending message: xin chào
+[2025-04-14 14:03:43,116] INFO: Message from beckhamngo sent in channel 'private1'
+[2025-04-14 14:03:43,116] INFO: Message from beckhamngo sent in channel 'private1'
+[2025-04-14 14:04:17,222] INFO: Sending message: lô
+[2025-04-14 14:04:17,222] INFO: Sent chat message via tracker: [DM to an09 (Online)] lô
+[2025-04-14 14:04:29,306] INFO: [SYNC] SyncManager started for channel 'Public2'
+[2025-04-14 14:04:45,591] INFO: Sending message: alooo
+[2025-04-14 14:04:45,687] INFO: Message from beckhamngo sent in channel 'private1'
+[2025-04-14 14:04:45,687] INFO: Message from beckhamngo sent in channel 'private1'
+[2025-04-14 14:04:48,769] INFO: Sending message: hong thấy
+[2025-04-14 14:04:48,883] INFO: Message from beckhamngo sent in channel 'private1'
+[2025-04-14 14:04:48,884] INFO: Message from beckhamngo sent in channel 'private1'
+[2025-04-14 14:11:26,933] INFO: Channel '21' created by beckhamngo (is_private=False)
+[2025-04-14 14:11:32,939] INFO: Starting livestream.
+[2025-04-14 14:11:33,161] INFO: Peer list retrieved:
+[2025-04-14 14:11:33,161] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:33,292] INFO: Peer list retrieved:
+[2025-04-14 14:11:33,294] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:33,399] INFO: Peer list retrieved:
+[2025-04-14 14:11:33,401] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:33,505] INFO: Peer list retrieved:
+[2025-04-14 14:11:33,505] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:33,610] INFO: Peer list retrieved:
+[2025-04-14 14:11:33,610] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:33,716] INFO: Peer list retrieved:
+[2025-04-14 14:11:33,716] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:33,821] INFO: Peer list retrieved:
+[2025-04-14 14:11:33,822] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:33,926] INFO: Peer list retrieved:
+[2025-04-14 14:11:33,927] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:34,031] INFO: Peer list retrieved:
+[2025-04-14 14:11:34,032] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:34,136] INFO: Peer list retrieved:
+[2025-04-14 14:11:34,137] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:34,241] INFO: Peer list retrieved:
+[2025-04-14 14:11:34,241] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:34,345] INFO: Peer list retrieved:
+[2025-04-14 14:11:34,346] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:34,451] INFO: Peer list retrieved:
+[2025-04-14 14:11:34,451] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:34,556] INFO: Peer list retrieved:
+[2025-04-14 14:11:34,556] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:34,660] INFO: Peer list retrieved:
+[2025-04-14 14:11:34,664] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:34,769] INFO: Peer list retrieved:
+[2025-04-14 14:11:34,770] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:34,875] INFO: Peer list retrieved:
+[2025-04-14 14:11:34,875] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:34,978] INFO: Peer list retrieved:
+[2025-04-14 14:11:34,979] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:35,082] INFO: Peer list retrieved:
+[2025-04-14 14:11:35,083] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:35,186] INFO: Peer list retrieved:
+[2025-04-14 14:11:35,186] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:35,289] INFO: Peer list retrieved:
+[2025-04-14 14:11:35,289] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:35,393] INFO: Peer list retrieved:
+[2025-04-14 14:11:35,394] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:35,498] INFO: Peer list retrieved:
+[2025-04-14 14:11:35,498] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:35,602] INFO: Peer list retrieved:
+[2025-04-14 14:11:35,603] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:35,708] INFO: Peer list retrieved:
+[2025-04-14 14:11:35,708] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:35,811] INFO: Peer list retrieved:
+[2025-04-14 14:11:35,811] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:35,914] INFO: Peer list retrieved:
+[2025-04-14 14:11:35,914] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:36,018] INFO: Peer list retrieved:
+[2025-04-14 14:11:36,018] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:36,121] INFO: Peer list retrieved:
+[2025-04-14 14:11:36,122] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:36,225] INFO: Peer list retrieved:
+[2025-04-14 14:11:36,225] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:36,329] INFO: Peer list retrieved:
+[2025-04-14 14:11:36,329] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:36,434] INFO: Peer list retrieved:
+[2025-04-14 14:11:36,434] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:36,538] INFO: Peer list retrieved:
+[2025-04-14 14:11:36,538] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:36,642] INFO: Peer list retrieved:
+[2025-04-14 14:11:36,642] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:36,746] INFO: Peer list retrieved:
+[2025-04-14 14:11:36,746] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:36,850] INFO: Peer list retrieved:
+[2025-04-14 14:11:36,850] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:36,954] INFO: Peer list retrieved:
+[2025-04-14 14:11:36,954] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:37,059] INFO: Peer list retrieved:
+[2025-04-14 14:11:37,059] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:37,163] INFO: Peer list retrieved:
+[2025-04-14 14:11:37,163] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:37,267] INFO: Peer list retrieved:
+[2025-04-14 14:11:37,268] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:37,371] INFO: Peer list retrieved:
+[2025-04-14 14:11:37,371] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:37,475] INFO: Peer list retrieved:
+[2025-04-14 14:11:37,475] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:37,579] INFO: Peer list retrieved:
+[2025-04-14 14:11:37,579] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:37,683] INFO: Peer list retrieved:
+[2025-04-14 14:11:37,683] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:37,787] INFO: Peer list retrieved:
+[2025-04-14 14:11:37,788] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:37,892] INFO: Peer list retrieved:
+[2025-04-14 14:11:37,893] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:37,995] INFO: Peer list retrieved:
+[2025-04-14 14:11:37,996] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:38,099] INFO: Peer list retrieved:
+[2025-04-14 14:11:38,100] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:38,203] INFO: Peer list retrieved:
+[2025-04-14 14:11:38,203] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:38,306] INFO: Peer list retrieved:
+[2025-04-14 14:11:38,308] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:38,411] INFO: Peer list retrieved:
+[2025-04-14 14:11:38,412] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:38,516] INFO: Peer list retrieved:
+[2025-04-14 14:11:38,516] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:38,619] INFO: Peer list retrieved:
+[2025-04-14 14:11:38,620] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:38,723] INFO: Peer list retrieved:
+[2025-04-14 14:11:38,724] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:38,826] INFO: Peer list retrieved:
+[2025-04-14 14:11:38,827] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:38,931] INFO: Peer list retrieved:
+[2025-04-14 14:11:38,931] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:39,034] INFO: Peer list retrieved:
+[2025-04-14 14:11:39,035] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:39,139] INFO: Peer list retrieved:
+[2025-04-14 14:11:39,139] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:39,243] INFO: Peer list retrieved:
+[2025-04-14 14:11:39,243] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:39,347] INFO: Peer list retrieved:
+[2025-04-14 14:11:39,347] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:39,451] INFO: Peer list retrieved:
+[2025-04-14 14:11:39,451] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:39,555] INFO: Peer list retrieved:
+[2025-04-14 14:11:39,555] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:39,658] INFO: Peer list retrieved:
+[2025-04-14 14:11:39,660] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:39,764] INFO: Peer list retrieved:
+[2025-04-14 14:11:39,764] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:39,868] INFO: Peer list retrieved:
+[2025-04-14 14:11:39,868] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:39,972] INFO: Peer list retrieved:
+[2025-04-14 14:11:39,973] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:40,076] INFO: Peer list retrieved:
+[2025-04-14 14:11:40,077] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:40,180] INFO: Peer list retrieved:
+[2025-04-14 14:11:40,181] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:40,283] INFO: Peer list retrieved:
+[2025-04-14 14:11:40,284] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:40,387] INFO: Peer list retrieved:
+[2025-04-14 14:11:40,388] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:40,490] INFO: Peer list retrieved:
+[2025-04-14 14:11:40,491] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:40,595] INFO: Peer list retrieved:
+[2025-04-14 14:11:40,596] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:40,699] INFO: Peer list retrieved:
+[2025-04-14 14:11:40,699] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:40,803] INFO: Peer list retrieved:
+[2025-04-14 14:11:40,803] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:40,907] INFO: Peer list retrieved:
+[2025-04-14 14:11:40,907] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:41,011] INFO: Peer list retrieved:
+[2025-04-14 14:11:41,011] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:41,115] INFO: Peer list retrieved:
+[2025-04-14 14:11:41,115] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:41,218] INFO: Peer list retrieved:
+[2025-04-14 14:11:41,219] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:41,322] INFO: Peer list retrieved:
+[2025-04-14 14:11:41,323] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:41,427] INFO: Peer list retrieved:
+[2025-04-14 14:11:41,427] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:41,531] INFO: Peer list retrieved:
+[2025-04-14 14:11:41,531] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:41,635] INFO: Peer list retrieved:
+[2025-04-14 14:11:41,635] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:41,739] INFO: Peer list retrieved:
+[2025-04-14 14:11:41,739] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:41,842] INFO: Peer list retrieved:
+[2025-04-14 14:11:41,843] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:41,947] INFO: Peer list retrieved:
+[2025-04-14 14:11:41,947] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:42,051] INFO: Peer list retrieved:
+[2025-04-14 14:11:42,051] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:42,155] INFO: Peer list retrieved:
+[2025-04-14 14:11:42,156] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:42,260] INFO: Peer list retrieved:
+[2025-04-14 14:11:42,260] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:42,363] INFO: Peer list retrieved:
+[2025-04-14 14:11:42,364] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:42,468] INFO: Peer list retrieved:
+[2025-04-14 14:11:42,468] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:42,572] INFO: Peer list retrieved:
+[2025-04-14 14:11:42,573] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:42,676] INFO: Peer list retrieved:
+[2025-04-14 14:11:42,677] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:42,781] INFO: Peer list retrieved:
+[2025-04-14 14:11:42,782] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:42,885] INFO: Peer list retrieved:
+[2025-04-14 14:11:42,885] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:42,989] INFO: Peer list retrieved:
+[2025-04-14 14:11:42,990] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:43,092] INFO: Peer list retrieved:
+[2025-04-14 14:11:43,093] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:43,196] INFO: Peer list retrieved:
+[2025-04-14 14:11:43,197] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:43,299] INFO: Peer list retrieved:
+[2025-04-14 14:11:43,300] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:43,404] INFO: Peer list retrieved:
+[2025-04-14 14:11:43,404] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:43,507] INFO: Peer list retrieved:
+[2025-04-14 14:11:43,508] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:43,612] INFO: Peer list retrieved:
+[2025-04-14 14:11:43,612] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:43,715] INFO: Peer list retrieved:
+[2025-04-14 14:11:43,716] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:43,819] INFO: Peer list retrieved:
+[2025-04-14 14:11:43,819] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:43,923] INFO: Peer list retrieved:
+[2025-04-14 14:11:43,923] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:44,027] INFO: Peer list retrieved:
+[2025-04-14 14:11:44,028] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:44,130] INFO: Peer list retrieved:
+[2025-04-14 14:11:44,131] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:44,234] INFO: Peer list retrieved:
+[2025-04-14 14:11:44,234] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:44,338] INFO: Peer list retrieved:
+[2025-04-14 14:11:44,338] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:44,442] INFO: Peer list retrieved:
+[2025-04-14 14:11:44,443] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:44,545] INFO: Peer list retrieved:
+[2025-04-14 14:11:44,546] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:44,649] INFO: Peer list retrieved:
+[2025-04-14 14:11:44,650] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:44,752] INFO: Peer list retrieved:
+[2025-04-14 14:11:44,753] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:44,856] INFO: Peer list retrieved:
+[2025-04-14 14:11:44,856] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:44,960] INFO: Peer list retrieved:
+[2025-04-14 14:11:44,961] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:45,065] INFO: Peer list retrieved:
+[2025-04-14 14:11:45,065] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:45,168] INFO: Peer list retrieved:
+[2025-04-14 14:11:45,169] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:45,272] INFO: Peer list retrieved:
+[2025-04-14 14:11:45,273] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:45,376] INFO: Peer list retrieved:
+[2025-04-14 14:11:45,377] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:45,480] INFO: Peer list retrieved:
+[2025-04-14 14:11:45,480] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:45,584] INFO: Peer list retrieved:
+[2025-04-14 14:11:45,584] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:45,687] INFO: Peer list retrieved:
+[2025-04-14 14:11:45,687] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:45,790] INFO: Peer list retrieved:
+[2025-04-14 14:11:45,792] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:45,894] INFO: Peer list retrieved:
+[2025-04-14 14:11:45,895] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:45,999] INFO: Peer list retrieved:
+[2025-04-14 14:11:46,000] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:46,102] INFO: Peer list retrieved:
+[2025-04-14 14:11:46,103] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:46,206] INFO: Peer list retrieved:
+[2025-04-14 14:11:46,206] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:46,309] INFO: Peer list retrieved:
+[2025-04-14 14:11:46,309] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:46,413] INFO: Peer list retrieved:
+[2025-04-14 14:11:46,414] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:46,517] INFO: Peer list retrieved:
+[2025-04-14 14:11:46,517] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:46,620] INFO: Peer list retrieved:
+[2025-04-14 14:11:46,621] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:46,724] INFO: Peer list retrieved:
+[2025-04-14 14:11:46,725] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:46,827] INFO: Peer list retrieved:
+[2025-04-14 14:11:46,828] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:46,931] INFO: Peer list retrieved:
+[2025-04-14 14:11:46,932] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:47,034] INFO: Peer list retrieved:
+[2025-04-14 14:11:47,035] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:47,138] INFO: Peer list retrieved:
+[2025-04-14 14:11:47,139] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:47,242] INFO: Peer list retrieved:
+[2025-04-14 14:11:47,243] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:47,347] INFO: Peer list retrieved:
+[2025-04-14 14:11:47,348] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:47,452] INFO: Peer list retrieved:
+[2025-04-14 14:11:47,452] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:47,555] INFO: Peer list retrieved:
+[2025-04-14 14:11:47,556] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:47,658] INFO: Peer list retrieved:
+[2025-04-14 14:11:47,659] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:47,763] INFO: Peer list retrieved:
+[2025-04-14 14:11:47,763] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:47,867] INFO: Peer list retrieved:
+[2025-04-14 14:11:47,867] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:47,970] INFO: Peer list retrieved:
+[2025-04-14 14:11:47,970] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:48,074] INFO: Peer list retrieved:
+[2025-04-14 14:11:48,074] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:48,178] INFO: Peer list retrieved:
+[2025-04-14 14:11:48,178] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:48,282] INFO: Peer list retrieved:
+[2025-04-14 14:11:48,282] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:48,385] INFO: Peer list retrieved:
+[2025-04-14 14:11:48,386] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:48,489] INFO: Peer list retrieved:
+[2025-04-14 14:11:48,490] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:48,594] INFO: Peer list retrieved:
+[2025-04-14 14:11:48,594] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:48,697] INFO: Peer list retrieved:
+[2025-04-14 14:11:48,698] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:48,801] INFO: Peer list retrieved:
+[2025-04-14 14:11:48,802] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:48,905] INFO: Peer list retrieved:
+[2025-04-14 14:11:48,906] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:49,008] INFO: Peer list retrieved:
+[2025-04-14 14:11:49,009] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:49,111] INFO: Peer list retrieved:
+[2025-04-14 14:11:49,112] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:49,215] INFO: Peer list retrieved:
+[2025-04-14 14:11:49,216] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:49,319] INFO: Peer list retrieved:
+[2025-04-14 14:11:49,319] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:49,423] INFO: Peer list retrieved:
+[2025-04-14 14:11:49,423] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:49,527] INFO: Peer list retrieved:
+[2025-04-14 14:11:49,528] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:49,633] INFO: Peer list retrieved:
+[2025-04-14 14:11:49,633] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:49,738] INFO: Peer list retrieved:
+[2025-04-14 14:11:49,738] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:49,841] INFO: Peer list retrieved:
+[2025-04-14 14:11:49,842] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:49,945] INFO: Peer list retrieved:
+[2025-04-14 14:11:49,945] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:50,050] INFO: Peer list retrieved:
+[2025-04-14 14:11:50,051] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:50,153] INFO: Peer list retrieved:
+[2025-04-14 14:11:50,154] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:50,257] INFO: Peer list retrieved:
+[2025-04-14 14:11:50,258] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:50,361] INFO: Peer list retrieved:
+[2025-04-14 14:11:50,362] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:50,466] INFO: Peer list retrieved:
+[2025-04-14 14:11:50,466] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:50,570] INFO: Peer list retrieved:
+[2025-04-14 14:11:50,570] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:50,674] INFO: Peer list retrieved:
+[2025-04-14 14:11:50,675] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:50,779] INFO: Peer list retrieved:
+[2025-04-14 14:11:50,779] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:50,883] INFO: Peer list retrieved:
+[2025-04-14 14:11:50,883] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:50,987] INFO: Peer list retrieved:
+[2025-04-14 14:11:50,987] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:51,092] INFO: Peer list retrieved:
+[2025-04-14 14:11:51,092] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:51,194] INFO: Peer list retrieved:
+[2025-04-14 14:11:51,195] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:51,304] INFO: Peer list retrieved:
+[2025-04-14 14:11:51,305] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:51,410] INFO: Peer list retrieved:
+[2025-04-14 14:11:51,410] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:51,513] INFO: Peer list retrieved:
+[2025-04-14 14:11:51,513] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:51,617] INFO: Peer list retrieved:
+[2025-04-14 14:11:51,618] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:51,720] INFO: Peer list retrieved:
+[2025-04-14 14:11:51,722] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:51,826] INFO: Peer list retrieved:
+[2025-04-14 14:11:51,826] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:51,931] INFO: Peer list retrieved:
+[2025-04-14 14:11:51,931] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:52,035] INFO: Peer list retrieved:
+[2025-04-14 14:11:52,036] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:52,139] INFO: Peer list retrieved:
+[2025-04-14 14:11:52,140] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:52,244] INFO: Peer list retrieved:
+[2025-04-14 14:11:52,244] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:52,348] INFO: Peer list retrieved:
+[2025-04-14 14:11:52,348] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:52,452] INFO: Peer list retrieved:
+[2025-04-14 14:11:52,453] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:52,556] INFO: Peer list retrieved:
+[2025-04-14 14:11:52,557] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:52,660] INFO: Peer list retrieved:
+[2025-04-14 14:11:52,660] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:52,764] INFO: Peer list retrieved:
+[2025-04-14 14:11:52,765] INFO:  - beckhamngo (127.0.0.1:8912)
+[2025-04-14 14:11:52,776] INFO: Stopping livestream.
+[2025-04-14 14:11:53,408] INFO: Livestream stopped.
+[2025-04-14 14:13:06,030] INFO: User beckhamngo logged out
+[2025-04-14 14:13:06,730] INFO: Tracker response on LEAVE: Peer beckhamngo (127.0.0.1:8912) left
+[2025-04-14 14:27:04,636] INFO: Server for beckhamngo is listening on port 4039...
+[2025-04-14 14:27:04,738] INFO: User beckhamngo logged in successfully
+[2025-04-14 14:27:04,740] INFO: Logged in as: beckhamngo
+[2025-04-14 14:27:05,259] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 14:27:05,261] INFO: Tracker response: Peer beckhamngo (127.0.0.1:7902) added
+[2025-04-14 14:27:05,261] INFO: P2P SERVER listening on 127.0.0.1:7902
+[2025-04-14 14:27:05,262] INFO: UDP LISTENER listening on 127.0.0.1:7903 for livestream.
+[2025-04-14 14:27:10,269] INFO: [SYNC] SyncManager started for channel '21'
+[2025-04-14 14:27:16,331] INFO: Channel 'Bec1' created by beckhamngo (is_private=False)
+[2025-04-14 14:27:35,970] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:27:37,712] INFO: Sending message: chào
+[2025-04-14 14:27:37,803] INFO: Message from beckhamngo sent in channel 'Bec1'
+[2025-04-14 14:27:37,804] INFO: Message from beckhamngo sent in channel 'Bec1'
+[2025-04-14 14:27:57,605] INFO: Channel 'Peee' created by beckhamngo (is_private=True)
+[2025-04-14 14:28:29,933] INFO: User beckhamngo logged out
+[2025-04-14 14:28:30,567] INFO: Tracker response on LEAVE: Peer beckhamngo (127.0.0.1:7902) left
+[2025-04-14 14:28:31,845] INFO: User beckhamngo logged in successfully
+[2025-04-14 14:28:31,846] INFO: Logged in as: beckhamngo
+[2025-04-14 14:28:35,481] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 14:28:35,483] INFO: Tracker response: Peer beckhamngo (127.0.0.1:7921) added
+[2025-04-14 14:28:35,484] INFO: P2P SERVER listening on 127.0.0.1:7921
+[2025-04-14 14:28:35,484] INFO: UDP LISTENER listening on 127.0.0.1:7922 for livestream.
+[2025-04-14 14:28:37,203] INFO: [SYNC] SyncManager started for channel 'Peee'
+[2025-04-14 14:28:45,737] INFO: Sending message: aaa
+[2025-04-14 14:28:45,833] INFO: Message from beckhamngo sent in channel 'Peee'
+[2025-04-14 14:28:45,833] INFO: Message from beckhamngo sent in channel 'Peee'
+[2025-04-14 14:29:18,139] INFO: User an09 approved to join channel 'Peee' by beckhamngo
+[2025-04-14 14:29:25,439] INFO: Channel 'an08' created by beckhamngo (is_private=True)
+[2025-04-14 14:29:43,823] INFO: User an09 approved to join channel 'an08' by beckhamngo
+[2025-04-14 14:29:53,868] INFO: Channel 'an09' created by beckhamngo (is_private=True)
+[2025-04-14 14:30:13,769] INFO: User an09 approved to join channel 'an09' by beckhamngo
+[2025-04-14 14:30:21,785] INFO: Channel 'an09' deleted by beckhamngo
+[2025-04-14 14:30:24,674] INFO: Channel 'an08' deleted by beckhamngo
+[2025-04-14 14:30:27,205] INFO: Channel 'Peee' deleted by beckhamngo
+[2025-04-14 14:30:29,312] ERROR: Polling error: Channel not found
+[2025-04-14 14:30:29,742] INFO: Channel 'Bec1' deleted by beckhamngo
+[2025-04-14 14:30:33,488] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:30:34,418] ERROR: Polling error: Channel not found
+[2025-04-14 14:30:36,629] INFO: Channel '21' deleted by beckhamngo
+[2025-04-14 14:30:37,433] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-14 14:30:38,574] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:30:39,532] ERROR: Polling error: Channel not found
+[2025-04-14 14:30:40,636] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-14 14:30:42,512] INFO: Channel 'Public2' deleted by beckhamngo
+[2025-04-14 14:30:44,621] ERROR: Polling error: Channel not found
+[2025-04-14 14:30:49,712] ERROR: Polling error: Channel not found
+[2025-04-14 14:30:54,808] ERROR: Polling error: Channel not found
+[2025-04-14 14:30:59,902] ERROR: Polling error: Channel not found
+[2025-04-14 14:31:04,992] ERROR: Polling error: Channel not found
+[2025-04-14 14:31:05,961] INFO: User beckhamngo logged out
+[2025-04-14 14:31:06,693] INFO: Tracker response on LEAVE: Peer beckhamngo (127.0.0.1:7921) left
+[2025-04-14 14:31:07,477] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-14 14:31:10,089] ERROR: Polling error: Channel not found
+[2025-04-14 14:31:10,135] ERROR: Exception in load_dm_list: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-14 14:33:21,735] INFO: Server for beckhamngo is listening on port 4039...
+[2025-04-14 14:33:21,860] INFO: User beckhamngo logged in successfully
+[2025-04-14 14:33:21,861] INFO: Logged in as: beckhamngo
+[2025-04-14 14:33:23,093] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 14:33:23,093] ERROR: Unable to connect to Tracker: [Errno 11001] getaddrinfo failed
+[2025-04-14 14:33:23,094] INFO: P2P SERVER listening on 127.0.0.1:6868
+[2025-04-14 14:33:23,095] INFO: UDP LISTENER listening on 127.0.0.1:6869 for livestream.
+[2025-04-14 14:33:27,782] INFO: User beckhamngo logged out
+[2025-04-14 14:33:28,545] ERROR: Not connected to tracker.
+[2025-04-14 14:33:32,360] INFO: User beckhamngo logged in successfully
+[2025-04-14 14:33:32,360] INFO: Logged in as: beckhamngo
+[2025-04-14 14:33:33,489] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 14:33:33,489] ERROR: Unable to connect to Tracker: [Errno 11001] getaddrinfo failed
+[2025-04-14 14:33:33,490] INFO: P2P SERVER listening on 127.0.0.1:8211
+[2025-04-14 14:33:33,490] INFO: UDP LISTENER listening on 127.0.0.1:8212 for livestream.
+[2025-04-14 14:33:41,521] INFO: User beckhamngo logged out
+[2025-04-14 14:33:42,596] ERROR: Not connected to tracker.
+[2025-04-14 14:33:48,010] INFO: User beckhamngo logged in successfully
+[2025-04-14 14:33:48,011] INFO: Logged in as: beckhamngo
+[2025-04-14 14:33:49,925] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 14:33:49,925] ERROR: Unable to connect to Tracker: [Errno 11001] getaddrinfo failed
+[2025-04-14 14:33:49,925] INFO: P2P SERVER listening on 127.0.0.1:7198
+[2025-04-14 14:33:49,926] INFO: UDP LISTENER listening on 127.0.0.1:7199 for livestream.
+[2025-04-14 14:36:12,597] INFO: User beckhamngo logged out
+[2025-04-14 14:36:13,674] ERROR: Not connected to tracker.
+[2025-04-14 14:36:15,027] INFO: User beckhamngo logged in successfully
+[2025-04-14 14:36:15,027] INFO: Logged in as: beckhamngo
+[2025-04-14 14:36:15,601] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 14:36:15,601] ERROR: Unable to connect to Tracker: [Errno 11001] getaddrinfo failed
+[2025-04-14 14:36:15,602] INFO: UDP LISTENER listening on 127.0.0.1:8580 for livestream.
+[2025-04-14 14:36:15,602] INFO: P2P SERVER listening on 127.0.0.1:8579
+[2025-04-14 14:36:46,454] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:36:47,694] INFO: User beckhamngo requested to join private channel 'private4'
+[2025-04-14 14:36:51,637] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:36:56,782] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:37:01,912] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:37:07,039] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:37:12,161] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:37:15,996] INFO: User beckhamngo requested to join private channel 'private2'
+[2025-04-14 14:37:17,302] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:37:22,503] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:37:37,222] INFO: Channel 'pewrerw' created by beckhamngo (is_private=True)
+[2025-04-14 14:37:42,031] INFO: [SYNC] SyncManager started for channel 'pewrerw'
+[2025-04-14 14:38:13,551] INFO: Channel '132123432432' created by beckhamngo (is_private=True)
+[2025-04-14 14:38:35,495] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:38:45,721] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:38:45,841] INFO: User beckhamngo logged out
+[2025-04-14 14:38:46,508] ERROR: Not connected to tracker.
+[2025-04-14 14:38:47,585] INFO: User beckhamngo logged in successfully
+[2025-04-14 14:38:47,587] INFO: Logged in as: beckhamngo
+[2025-04-14 14:38:48,188] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 14:38:48,188] ERROR: Unable to connect to Tracker: [Errno 11001] getaddrinfo failed
+[2025-04-14 14:38:48,189] INFO: P2P SERVER listening on 127.0.0.1:6146
+[2025-04-14 14:38:48,189] INFO: UDP LISTENER listening on 127.0.0.1:6147 for livestream.
+[2025-04-14 14:38:50,834] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:38:50,938] INFO: User beckhamngo requested to join private channel 'helo3'
+[2025-04-14 14:38:53,553] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:38:56,011] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:38:58,730] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:39:01,175] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:39:03,891] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:39:09,052] ERROR: Polling error: Channel not found
+[2025-04-14 14:39:11,558] ERROR: Polling error: Channel not found
+[2025-04-14 14:39:14,207] ERROR: Polling error: Channel not found
+[2025-04-14 14:39:16,687] ERROR: Polling error: Channel not found
+[2025-04-14 14:39:17,397] INFO: User beckhamngo logged out
+[2025-04-14 14:39:18,205] ERROR: Not connected to tracker.
+[2025-04-14 14:39:19,335] ERROR: Polling error: Channel not found
+[2025-04-14 14:39:21,869] ERROR: Polling error: Channel not found
+[2025-04-14 14:39:24,479] ERROR: Polling error: Channel not found
+[2025-04-14 14:39:26,999] ERROR: Polling error: Channel not found
+[2025-04-14 14:39:29,609] ERROR: Polling error: Channel not found
+[2025-04-14 14:39:32,143] ERROR: Polling error: Channel not found
+[2025-04-14 14:39:34,759] ERROR: Polling error: Channel not found
+[2025-04-14 14:39:37,277] ERROR: Polling error: Channel not found
+[2025-04-14 14:39:39,891] ERROR: Polling error: Channel not found
+[2025-04-14 14:40:42,302] INFO: Server for beckhamngo is listening on port 4039...
+[2025-04-14 14:40:42,385] INFO: User beckhamngo logged in successfully
+[2025-04-14 14:40:42,386] INFO: Logged in as: beckhamngo
+[2025-04-14 14:40:43,087] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 14:40:43,090] INFO: Tracker response: Peer beckhamngo (127.0.0.1:8477) added
+[2025-04-14 14:40:43,091] INFO: P2P SERVER listening on 127.0.0.1:8477
+[2025-04-14 14:40:43,092] INFO: UDP LISTENER listening on 127.0.0.1:8478 for livestream.
+[2025-04-14 14:40:46,144] INFO: [SYNC] SyncManager started for channel 'pewrerw'
+[2025-04-14 14:40:49,401] INFO: Channel '132123432432' deleted by beckhamngo
+[2025-04-14 14:40:51,376] INFO: User an09 rejected from channel 'pewrerw' by beckhamngo
+[2025-04-14 14:40:54,680] INFO: Channel 'pewrerw' deleted by beckhamngo
+[2025-04-14 14:41:16,234] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-14 14:41:46,343] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-14 14:42:16,398] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-14 14:42:46,479] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-14 14:43:16,533] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-14 14:43:46,592] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-14 14:44:16,656] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-14 14:44:46,728] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-14 14:45:16,792] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-14 14:45:46,849] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-14 14:46:16,906] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-14 14:46:46,979] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-14 14:47:17,034] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-14 14:47:42,243] INFO: User beckhamngo logged out
+[2025-04-14 14:47:42,952] ERROR: Error leaving tracker: [WinError 10054] An existing connection was forcibly closed by the remote host
+[2025-04-14 14:47:47,105] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-14 14:47:59,206] INFO: User beckhamngo logged in successfully
+[2025-04-14 14:47:59,218] INFO: Logged in as: beckhamngo
+[2025-04-14 14:47:59,899] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 14:48:01,919] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-14 14:48:01,920] INFO: P2P SERVER listening on 127.0.0.1:7489
+[2025-04-14 14:48:01,920] INFO: UDP LISTENER listening on 127.0.0.1:7490 for livestream.
+[2025-04-14 14:48:09,694] INFO: Sending message: 1
+[2025-04-14 14:48:09,694] ERROR: Tracker offline: cannot send channel message: 1
+[2025-04-14 14:48:16,031] INFO: User beckhamngo logged out
+[2025-04-14 14:48:16,667] ERROR: Not connected to tracker.
+[2025-04-14 14:48:17,145] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-14 14:50:16,457] INFO: Server for beckhamngo is listening on port 4039...
+[2025-04-14 14:50:16,575] INFO: User beckhamngo logged in successfully
+[2025-04-14 14:50:16,576] INFO: Logged in as: beckhamngo
+[2025-04-14 14:50:17,708] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 14:50:19,735] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-14 14:50:19,736] INFO: P2P SERVER listening on 127.0.0.1:7191
+[2025-04-14 14:50:19,737] INFO: UDP LISTENER listening on 127.0.0.1:7192 for livestream.
+[2025-04-14 14:53:48,407] INFO: Server for beckhamngo is listening on port 4039...
+[2025-04-14 14:53:48,495] INFO: User beckhamngo logged in successfully
+[2025-04-14 14:53:48,497] INFO: Logged in as: beckhamngo
+[2025-04-14 14:53:49,136] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 14:53:51,181] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-14 14:53:51,182] INFO: P2P SERVER listening on 127.0.0.1:6729
+[2025-04-14 14:53:51,182] INFO: UDP LISTENER listening on 127.0.0.1:6730 for livestream.
+[2025-04-14 14:53:56,940] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:54:02,030] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:54:07,126] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:54:12,221] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:54:17,309] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:54:22,400] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:54:27,490] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:54:32,584] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:54:37,698] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:03,164] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:05,767] INFO: User beckhamngo logged out
+[2025-04-14 14:55:06,385] ERROR: Not connected to tracker.
+[2025-04-14 14:55:07,363] INFO: User beckhamngo logged in successfully
+[2025-04-14 14:55:07,365] INFO: Logged in as: beckhamngo
+[2025-04-14 14:55:08,091] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 14:55:08,253] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:10,135] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-14 14:55:10,136] INFO: P2P SERVER listening on 127.0.0.1:7445
+[2025-04-14 14:55:10,137] INFO: UDP LISTENER listening on 127.0.0.1:7446 for livestream.
+[2025-04-14 14:55:13,356] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:15,333] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:18,444] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:20,780] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:23,531] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:25,866] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:26,862] INFO: User beckhamngo requested to join private channel 'private3'
+[2025-04-14 14:55:28,618] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:30,962] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:33,705] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:36,051] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:38,793] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:41,159] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:43,951] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:46,256] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:49,113] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:51,344] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:54,202] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:56,432] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:55:59,290] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:01,525] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:04,381] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:06,624] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:09,469] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:11,722] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:14,558] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:16,814] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:19,646] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:21,904] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:24,736] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:26,993] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:29,823] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:32,097] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:34,912] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:37,187] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:40,020] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:42,275] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:45,107] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:47,365] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:50,208] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:52,449] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:55,297] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:56:57,535] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:57:00,390] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:57:02,626] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:57:05,478] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:57:07,711] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:57:10,565] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:57:11,625] INFO: User beckhamngo logged out
+[2025-04-14 14:57:12,799] ERROR: Not connected to tracker.
+[2025-04-14 14:57:12,835] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:58:00,849] INFO: User beckhamngo logged in successfully
+[2025-04-14 14:58:00,850] INFO: Logged in as: beckhamngo
+[2025-04-14 14:58:01,506] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 14:58:03,546] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-14 14:58:03,547] INFO: P2P SERVER listening on 127.0.0.1:8327
+[2025-04-14 14:58:03,548] INFO: UDP LISTENER listening on 127.0.0.1:8328 for livestream.
+[2025-04-14 15:18:05,584] INFO: User beckhamngo logged out
+[2025-04-14 15:18:06,311] ERROR: Not connected to tracker.
+[2025-04-14 15:19:32,094] INFO: User beckhamngo logged in successfully
+[2025-04-14 15:19:32,095] INFO: Logged in as: beckhamngo
+[2025-04-14 15:19:32,892] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 15:19:53,940] ERROR: Unable to connect to Tracker: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-14 15:19:53,941] INFO: P2P SERVER listening on 127.0.0.1:6639
+[2025-04-14 15:19:53,942] INFO: UDP LISTENER listening on 127.0.0.1:6640 for livestream.
+[2025-04-14 15:20:14,738] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 15:20:18,462] ERROR: Error creating channel: Channel already exists
+[2025-04-14 15:20:19,984] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 15:20:25,036] INFO: Sending message: 1
+[2025-04-14 15:20:25,037] ERROR: Tracker offline: cannot send channel message: 1
+[2025-04-14 15:20:34,021] INFO: User beckhamngo logged out
+[2025-04-14 15:20:34,834] ERROR: Not connected to tracker.
+[2025-04-14 15:20:36,409] INFO: User beckhamngo logged in successfully
+[2025-04-14 15:20:36,410] INFO: Logged in as: beckhamngo
+[2025-04-14 15:20:37,058] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 15:20:58,098] ERROR: Unable to connect to Tracker: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-14 15:20:58,098] INFO: P2P SERVER listening on 127.0.0.1:6747
+[2025-04-14 15:20:58,099] INFO: UDP LISTENER listening on 127.0.0.1:6748 for livestream.
+[2025-04-14 15:23:24,402] INFO: User beckhamngo logged out
+[2025-04-14 15:23:25,008] ERROR: Not connected to tracker.
+[2025-04-14 15:23:26,680] INFO: User beckhamngo logged in successfully
+[2025-04-14 15:23:26,682] INFO: Logged in as: beckhamngo
+[2025-04-14 15:23:27,758] INFO: User 'beckhamngo' logging in (authenticated mode).
+[2025-04-14 15:23:48,813] ERROR: Unable to connect to Tracker: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-14 15:23:48,815] INFO: P2P SERVER listening on 127.0.0.1:7905
+[2025-04-14 15:23:48,818] INFO: UDP LISTENER listening on 127.0.0.1:7906 for livestream.
+[2025-04-14 15:25:22,181] INFO: User beckhamngo logged out
+[2025-04-14 15:25:23,229] ERROR: Not connected to tracker.
+[2025-04-14 15:25:48,414] ERROR: Exception in load_dm_list: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-14 15:25:48,469] ERROR: get_channels_from_server error: wrapped C/C++ object of type QListWidget has been deleted

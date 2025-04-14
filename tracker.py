@@ -7,7 +7,7 @@ logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(m
 
 
 class TRACKER:
-    def __init__(self, host="127.0.0.1", port=5000):
+    def __init__(self, host="0.0.0.0", port=5000):  # <-- Sử dụng 0.0.0.0 để lắng nghe tất cả các interface
         self.peer_list = []  # Danh sách các peer đang kết nối
         self.peer_list_lock = threading.Lock()  # Lock cho việc truy cập danh sách
         self.tracker_server(host, port)  # Khởi động server
@@ -118,7 +118,7 @@ class TRACKER:
             conn.close()
             logging.info("Connection with %s closed.", addr)
 
-    def tracker_server(self, host="127.0.0.1", port=5000):
+    def tracker_server(self, host="0.0.0.0", port=5000):  # Sửa host thành 0.0.0.0
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         server.bind((host, port))

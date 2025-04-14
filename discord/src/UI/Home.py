@@ -47,7 +47,7 @@ class DiscordUI(QMainWindow):
         self.get_channels_from_server()
         self.load_dm_list()
 
-        # Polling cập nhật tin nhắn và danh sách user mỗi 5 giây
+        # Polling cập nhật tin nhắn, danh sách user và danh sách channel mỗi 5 giây
         self.polling_thread = threading.Thread(target=self.poll_loop, daemon=True)
         self.polling_thread.start()
 
@@ -411,7 +411,6 @@ class DiscordUI(QMainWindow):
                 display_text = f"🟢 {m}"
                 color = QtGui.QColor("lime")
             else:
-                # Nếu trạng thái không phải Online, hiển thị Offline với màu gray và biểu tượng ⚪
                 display_text = f"⚪ {m}"
                 color = QtGui.QColor("gray")
             item = QListWidgetItem(display_text)
@@ -542,8 +541,8 @@ class DiscordUI(QMainWindow):
     
     def poll_loop(self):
         """
-        Vòng lặp polling: mỗi 5 giây cập nhật tin nhắn mới (nếu ở channel mode)
-        và load lại danh sách user (DM list) để hiển thị trạng thái online/offline mới nhất.
+        Vòng lặp polling: mỗi 5 giây cập nhật tin nhắn mới (nếu ở channel mode),
+        cập nhật danh sách user (DM list) và refresh danh sách channel để hiển thị channel mới.
         """
         while True:
             # Poll tin nhắn mới nếu đang ở chế độ channel
@@ -570,11 +569,12 @@ class DiscordUI(QMainWindow):
                 except Exception as e:
                     logging.error("Error in poll_loop (new messages): %s", e)
             
-            # Cập nhật danh sách user để hiển thị trạng thái Online/Offline mới nhất
+            # Cập nhật danh sách user và danh sách channel để hiển thị trạng thái mới nhất
             try:
                 self.load_dm_list()
+                self.get_channels_from_server()  # <-- Thêm refresh channel list
             except Exception as e:
-                logging.error("Error updating DM list: %s", e)
+                logging.error("Error updating lists: %s", e)
 
             time.sleep(5)
     
