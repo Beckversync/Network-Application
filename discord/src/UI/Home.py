@@ -1,3 +1,5 @@
+# Home.py
+
 import json
 import sys, os, threading, time, socket
 import logging
@@ -8,9 +10,10 @@ from PyQt6.QtWidgets import (
     QCheckBox, QFrame, QComboBox, QDialog, QMessageBox
 )
 from PyQt6.QtCore import Qt
-from PyQt6 import QtGui  # Để sử dụng QColor và QIcon nếu cần
+from PyQt6 import QtGui
 from PyQt6.QtGui import QFont
 from request import channelRequest
+from syncService import SyncManager  # Import module đồng bộ
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
@@ -31,18 +34,21 @@ class DiscordUI(QMainWindow):
         self.current_dm_user = None
 
         self.channels = {}      # Danh sách channel
-        self.dm_users = []      # Danh sách user (sẽ load từ API)
+        self.dm_users = []      # Danh sách user, load từ API
         self.last_message_count = 0  # Dùng để theo dõi tin nhắn mới
-        
+
         # Thuộc tính is_viewer: nếu ở chế độ Visitor thì không được gửi tin nhắn
         self.is_viewer = False
+
+        # Sync manager dành cho channel hosting (nếu chủ kênh mở channel của mình)
+        self.sync_manager = None
 
         self.initUI()
         self.get_channels_from_server()
         self.load_dm_list()
 
-        # Polling cập nhật tin nhắn mới mỗi 5 giây
-        self.polling_thread = threading.Thread(target=self.poll_new_messages, daemon=True)
+        # Polling cập nhật tin nhắn và danh sách user mỗi 5 giây
+        self.polling_thread = threading.Thread(target=self.poll_loop, daemon=True)
         self.polling_thread.start()
 
     def initUI(self):
@@ -91,8 +97,6 @@ class DiscordUI(QMainWindow):
         tab_widget.addTab(dm_tab, "Direct Msg")
         
         sidebar_layout.addWidget(tab_widget)
-        
-        # Loại bỏ checkbox "Live Mode" vì tin nhắn text sẽ luôn gửi qua tracker.
         
         # Dropdown trạng thái: Online, Offline, Invisible
         self.status_dropdown = QComboBox()
@@ -143,7 +147,7 @@ class DiscordUI(QMainWindow):
         input_layout.addWidget(self.send_button)
         center_layout.addLayout(input_layout)
         
-        # Nút "Start/Stop Livestream" vẫn được giữ lại (Livestream sẽ hoạt động qua P2P như cũ)
+        # Nút "Start/Stop Livestream"
         self.toggle_livestream_button = QPushButton("Start Livestream")
         self.toggle_livestream_button.setStyleSheet("background-color: orange; color: white; padding: 8px;")
         self.toggle_livestream_button.clicked.connect(self.toggle_livestream)
@@ -190,27 +194,23 @@ class DiscordUI(QMainWindow):
         self.message_input.clear()
         self.chat_display.append(message)
         logging.info("Sending message: %s", message)
-        logging.info(f"current_channel: {self.current_channel}, username: {self.username}, message: {message}")
         if self.current_mode == "channel":
-            # if self.tracker:  # Kiểm tra xem tracker có sẵn không
-            #     if hasattr(self.tracker, 'send_to_server'):
-            #         self.tracker.send_to_server(self.current_channel, self.username, message)
-            #     else:
-            #         self.chat_display.append("[ERROR] Tracker does not have send_to_server method.")
-            # else:
-            #     self.chat_display.append("[ERROR] Tracker is not available.")
-            self.send_channel_message_api(message);
+            self.send_channel_message_api(message)
         elif self.current_mode == "dm":
             if self.user_peer:
-                self.user_peer.send_p2p_broadcast(f"[DM to {self.current_dm_user}] {message}")
+                self.user_peer.send_chat_message_via_tracker(f"[DM to {self.current_dm_user}] {message}")
             else:
                 self.chat_display.append("[ERROR] No user_peer for DM")
         else:
             self.chat_display.append("[INFO] No channel or DM selected!")
-    
+        
     def send_channel_message_api(self, message):
         if not self.current_channel:
             self.chat_display.append("[ERROR] No channel selected.")
+            return
+        if not (self.user_peer and self.user_peer.tracker_socket):
+            self.chat_display.append("[ERROR] Tracker is offline. Cannot send channel message.")
+            logging.error("Tracker offline: cannot send channel message: %s", message)
             return
         try:
             request_data = {
@@ -223,9 +223,11 @@ class DiscordUI(QMainWindow):
             response = json.loads(response_str)
             if response.get("status") != "success":
                 self.chat_display.append(f"[ERROR] Send failed: {response.get('message')}")
+            else:
+                logging.info("Message from %s sent in channel '%s'", self.username, self.current_channel)
         except Exception as e:
             self.chat_display.append(f"[ERROR] {e}")
-    
+
     def load_dm_list(self):
         try:
             request_data = {"action": "get_all_users"}
@@ -252,7 +254,13 @@ class DiscordUI(QMainWindow):
         self.join_button.setVisible(True)
         self.delete_channel_button.setVisible(True)
         self.load_channel_messages()
-    
+        # Nếu user là chủ kênh thì khởi động tiến trình đồng bộ
+        if self.channels.get(self.current_channel, {}).get("owner") == self.username:
+            if not self.sync_manager:
+                self.sync_manager = SyncManager(self.username, self.current_channel)
+                self.sync_manager.start_periodic_sync(interval=30)
+                logging.info("[SYNC] SyncManager started for channel '%s'", self.current_channel)
+
     def handle_dm_clicked(self, item):
         self.current_mode = "dm"
         self.current_dm_user = item.text()
@@ -266,7 +274,6 @@ class DiscordUI(QMainWindow):
             return
         self.chat_display.clear()
         try:
-            # Ở đây gửi kèm username để server kiểm tra quyền truy cập (private channel)
             request_data = {
                 "action": "get_channel_info",
                 "channel_name": self.current_channel,
@@ -291,7 +298,6 @@ class DiscordUI(QMainWindow):
                 else:
                     self.join_button.setText("Join Channel")
                     self.join_button.setEnabled(True)
-                # Nếu là owner, load danh sách join requests
                 owner = response.get("owner")
                 if self.username == owner:
                     req_data = {
@@ -331,10 +337,8 @@ class DiscordUI(QMainWindow):
                 else:
                     self.request_list.clear()
                     self.request_list.addItem("You are not the owner")
-                # Lưu thông tin channel để xử lý offline
                 self.current_channel_info = response
             else:
-                # Nếu nhận được lỗi (ví dụ kênh private và user chưa join), hiển thị thông báo
                 self.chat_display.clear()
                 self.chat_display.append(f"[ERROR] {response.get('message')}")
                 return
@@ -383,15 +387,8 @@ class DiscordUI(QMainWindow):
             logging.error("reject_user error: %s", e)
             QMessageBox.critical(self, "Error", str(e))
    
-    
     def update_member_list(self, members):
-        """
-        Hiển thị danh sách thành viên kèm trạng thái (Online/Offline) bằng màu sắc và icon.
-        members: danh sách username (ví dụ: ["alice", "bob", "john"])
-        """
         self.member_list.clear()
-        
-        # Gọi API get_all_users để lấy trạng thái của các user
         status_map = {}
         try:
             request_data = {"action": "get_all_users"}
@@ -414,15 +411,15 @@ class DiscordUI(QMainWindow):
                 display_text = f"🟢 {m}"
                 color = QtGui.QColor("lime")
             else:
-                display_text = f"🔴 {m}"
-                color = QtGui.QColor("red")
+                # Nếu trạng thái không phải Online, hiển thị Offline với màu gray và biểu tượng ⚪
+                display_text = f"⚪ {m}"
+                color = QtGui.QColor("gray")
             item = QListWidgetItem(display_text)
             item.setForeground(color)
             self.member_list.addItem(item)
     
     def load_dm_messages(self):
         self.chat_display.clear()
-        # Triển khai load DM history nếu có
     
     def sync_offline_channel_messages(self):
         filename = f"offline_channel_{self.current_channel}_{self.username}.txt"
@@ -543,8 +540,13 @@ class DiscordUI(QMainWindow):
         except Exception as e:
             logging.error("get_channels_from_server error: %s", e)
     
-    def poll_new_messages(self):
+    def poll_loop(self):
+        """
+        Vòng lặp polling: mỗi 5 giây cập nhật tin nhắn mới (nếu ở channel mode)
+        và load lại danh sách user (DM list) để hiển thị trạng thái online/offline mới nhất.
+        """
         while True:
+            # Poll tin nhắn mới nếu đang ở chế độ channel
             if self.current_mode == "channel" and self.current_channel:
                 try:
                     request_data = {"action": "get_channel_info", "channel_name": self.current_channel, "username": self.username}
@@ -566,11 +568,17 @@ class DiscordUI(QMainWindow):
                     else:
                         logging.error("Polling error: %s", response.get("message"))
                 except Exception as e:
-                    logging.error("Error in poll_new_messages: %s", e)
+                    logging.error("Error in poll_loop (new messages): %s", e)
+            
+            # Cập nhật danh sách user để hiển thị trạng thái Online/Offline mới nhất
+            try:
+                self.load_dm_list()
+            except Exception as e:
+                logging.error("Error updating DM list: %s", e)
+
             time.sleep(5)
     
     def toggle_livestream(self):
-        # Livestream vẫn hoạt động theo chế độ P2P như cũ
         if self.current_mode != "channel":
             self.chat_display.append("[INFO] No channel selected or not in channel mode!")
             return
@@ -628,6 +636,9 @@ class DiscordUI(QMainWindow):
             client_socket.close()
             if response.get("status") == "success":
                 QMessageBox.information(self, "Logout", "You have been logged out.")
+                # Gọi hàm leave_tracker() để xóa peer khỏi tracker khi logout
+                if self.user_peer:
+                    self.user_peer.leave_tracker()
             else:
                 QMessageBox.warning(self, "Logout Failed", response.get("message", "Unknown error"))
         except Exception as e:
@@ -658,8 +669,8 @@ class AddChannelDialog(QDialog):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    login_window = QWidget()  # Thay đổi cửa sổ đăng nhập nếu cần
-    username = "UserA"        # Thay bằng username hợp lệ
+    login_window = QWidget()
+    username = "UserA"
     session_info = {"session_id": "dummy"}
     window = DiscordUI(login_window, username, session_info)
     window.show()
