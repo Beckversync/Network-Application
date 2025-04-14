@@ -37,13 +37,16 @@ class USER:
         self.chat_history = []  # Lịch sử chat
         self.isChatRunning = False
 
-        # Offline caching: chỉ lưu tin nhắn khi đó là non-chat (ví dụ livestream) vì chat chỉ sử dụng tracker
+        # Offline caching: lưu tin nhắn livestream nếu gửi không thành công
         self.offline_file = f"offline_{self.name}.txt"
         self.sync_offline_messages()
 
         # Các thuộc tính hỗ trợ livestream:
         self._stop_livestream_flag = False  # Cờ dừng livestream
         self.is_livestreaming = False       # Trạng thái livestream
+        # THÊM: Thuộc tính để kiểm soát livestream cho từng channel
+        self.livestream_channel = None  # Channel mà host đang phát livestream
+        self.active_channel = None      # Channel mà user hiện đang xem (điều này được cập nhật từ giao diện)
 
         if not headless:
             self.menu()
@@ -96,6 +99,10 @@ class USER:
                     msg_type = message_data.get("type", "chat")
                     sender = message_data.get("sender", "Unknown")
                     if msg_type == "livestream":
+                        # Kiểm tra xem livestream có thuộc channel đang xem hay không
+                        msg_channel = message_data.get("channel")
+                        if not self.active_channel or self.active_channel != msg_channel:
+                            return  # Bỏ qua nếu không trùng
                         frame_data = message_data.get("message", "")
                         img_bytes = base64.b64decode(frame_data)
                         np_arr = np.frombuffer(img_bytes, np.uint8)
@@ -106,7 +113,6 @@ class USER:
                         else:
                             logging.error("Failed to decode livestream frame from %s", sender)
                     else:
-                        # Tin nhắn chat chỉ nhận broadcast từ tracker, không xử lý P2P ở đây
                         text = message_data.get("message", "")
                         logging.info("[P2P MESSAGE] %s -> %s: %s", sender, self.name, text)
                 except Exception as e:
@@ -117,10 +123,9 @@ class USER:
             conn.close()
 
     def send_chat_message_via_tracker(self, message):
-        """Gửi tin nhắn (chat) qua tracker theo mô hình client-server."""
         if self.tracker_socket is None:
             logging.error("No tracker connection. Chat message not sent: %s", message)
-            return  # Không gửi tin nhắn nếu không có kết nối tracker
+            return
         try:
             request = json.dumps({
                 "command": "MSG_SEND",
@@ -133,10 +138,8 @@ class USER:
             logging.info("Sent chat message via tracker: %s", message)
         except Exception as e:
             logging.error("Error sending chat message via tracker: %s", e)
-            # Không sử dụng offline caching cho tin nhắn chat
 
     def send_message_p2p(self, target_ip, target_port, message, msg_type="chat"):
-        # Nếu tin nhắn là chat, chuyển hoàn toàn qua tracker
         if msg_type == "chat":
             self.send_chat_message_via_tracker(message)
             return
@@ -153,10 +156,8 @@ class USER:
             logging.info("Sent %s message to %s:%s", msg_type, target_ip, target_port)
         except Exception as e:
             logging.error("Failed to send %s message to %s:%s: %s", msg_type, target_ip, target_port, e)
-            self.store_offline_message({"target_ip": target_ip, "target_port": target_port, "message": message, "msg_type": msg_type})
 
     def send_p2p_broadcast(self, message, msg_type="chat"):
-        # Nếu tin nhắn là chat, sử dụng tracker thay vì broadcast P2P
         if msg_type == "chat":
             self.send_chat_message_via_tracker(message)
             return
@@ -171,8 +172,7 @@ class USER:
             target_port = int(peer["port"])
             self.send_message_p2p(target_ip, target_port, message, msg_type)
 
-    # Hàm gửi UDP broadcast mới được thêm vào cho livestream
-    def send_udp_broadcast(self, message, msg_type="chat"):
+    def send_udp_broadcast(self, message, msg_type="chat", channel=None):
         udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         try:
             peers = self.get_peer_list()
@@ -180,16 +180,96 @@ class USER:
                 if peer["ip"] == self.ip and int(peer["port"]) == self.port:
                     continue
                 target_ip = peer["ip"]
-                target_udp_port = int(peer["port"]) + 1  # Giả sử cổng UDP là cổng TCP + 1
-                data = json.dumps({
+                target_udp_port = int(peer["port"]) + 1  # Giả sử UDP port = TCP port + 1
+                data_dict = {
                     "sender": self.name,
                     "type": msg_type,
                     "message": message
-                })
+                }
+                if msg_type == "livestream" and channel is not None:
+                    data_dict["channel"] = channel
+                data = json.dumps(data_dict)
                 udp_socket.sendto(data.encode('utf-8'), (target_ip, target_udp_port))
                 logging.info("Sent UDP %s message to %s:%s", msg_type, target_ip, target_udp_port)
         except Exception as e:
             logging.error("Error sending UDP broadcast: %s", e)
+        finally:
+            udp_socket.close()
+
+    def start_livestream(self):
+        if self.is_livestreaming:
+            logging.info("Livestream already running.")
+            return
+        self.is_livestreaming = True
+        self._stop_livestream_flag = False
+        cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+        cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
+        cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
+        if not cap.isOpened():
+            logging.error("Cannot access webcam for livestream.")
+            self.is_livestreaming = False
+            return
+        logging.info("Starting livestream.")
+        # Yêu cầu self.livestream_channel được set từ UI (là tên channel)
+        while not self._stop_livestream_flag:
+            ret, frame = cap.read()
+            if not ret:
+                logging.error("Failed to read frame from webcam.")
+                break
+            encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 50]
+            ret, buffer = cv2.imencode('.jpg', frame, encode_param)
+            if not ret:
+                logging.error("Failed to encode frame.")
+                continue
+            jpg_as_text = base64.b64encode(buffer).decode('utf-8')
+            self.send_udp_broadcast(jpg_as_text, msg_type="livestream", channel=self.livestream_channel)
+            cv2.imshow('Livestream (Local)', frame)
+            cv2.waitKey(1)
+            time.sleep(0.1)
+        cap.release()
+        cv2.destroyAllWindows()
+        self.is_livestreaming = False
+        logging.info("Livestream stopped.")
+
+    # THÊM: Phương thức stop_livestream để dừng quá trình livestream
+    def stop_livestream(self):
+        if not self.is_livestreaming:
+            logging.info("No livestream is running.")
+            return
+        logging.info("Stopping livestream.")
+        self._stop_livestream_flag = True
+
+    def udp_listener(self):
+        udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        try:
+            udp_socket.bind((self.ip, self.udp_port))
+            logging.info("UDP LISTENER listening on %s:%s for livestream.", self.ip, self.udp_port)
+            while True:
+                data, addr = udp_socket.recvfrom(65535)
+                try:
+                    data_str = data.decode('utf-8')
+                    message_data = json.loads(data_str)
+                    msg_type = message_data.get("type", "chat")
+                    sender = message_data.get("sender", "Unknown")
+                    if msg_type == "livestream":
+                        msg_channel = message_data.get("channel")
+                        if not self.active_channel or self.active_channel != msg_channel:
+                            continue
+                        frame_data = message_data.get("message", "")
+                        img_bytes = base64.b64decode(frame_data)
+                        np_arr = np.frombuffer(img_bytes, np.uint8)
+                        frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
+                        if frame is not None:
+                            cv2.imshow(f"UDP Livestream from {sender}", frame)
+                            cv2.waitKey(1)
+                        else:
+                            logging.error("Failed to decode UDP livestream frame from %s", sender)
+                    else:
+                        logging.info("Received non-livestream UDP message from %s", sender)
+                except Exception as e:
+                    logging.error("Error handling UDP data from %s: %s", addr, e)
+        except Exception as e:
+            logging.error("UDP listener error: %s", e)
         finally:
             udp_socket.close()
 
@@ -236,52 +316,6 @@ class USER:
             self.tracker_socket.close()
             self.tracker_socket = None
 
-    def start_udp_listener(self):
-        threading.Thread(target=self.udp_listener, daemon=True).start()
-
-    def udp_listener(self):
-        udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        try:
-            udp_socket.bind((self.ip, self.udp_port))
-            logging.info("UDP LISTENER listening on %s:%s for livestream.", self.ip, self.udp_port)
-            while True:
-                data, addr = udp_socket.recvfrom(65535)
-                try:
-                    data_str = data.decode('utf-8')
-                    message_data = json.loads(data_str)
-                    msg_type = message_data.get("type", "chat")
-                    sender = message_data.get("sender", "Unknown")
-                    if msg_type == "livestream":
-                        frame_data = message_data.get("message", "")
-                        img_bytes = base64.b64decode(frame_data)
-                        np_arr = np.frombuffer(img_bytes, np.uint8)
-                        frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
-                        if frame is not None:
-                            cv2.imshow(f"UDP Livestream from {sender}", frame)
-                            cv2.waitKey(1)
-                        else:
-                            logging.error("Failed to decode UDP livestream frame from %s", sender)
-                    else:
-                        logging.info("Received non-livestream UDP message from %s", sender)
-                except Exception as e:
-                    logging.error("Error handling UDP data from %s: %s", addr, e)
-        except Exception as e:
-            logging.error("UDP listener error: %s", e)
-        finally:
-            udp_socket.close()
-
-    def store_offline_message(self, msg_obj):
-        # Chỉ lưu offline cho những tin nhắn không phải chat (ví dụ livestream)
-        if msg_obj.get("msg_type") == "chat":
-            # Không lưu tin nhắn chat vì phải gửi qua tracker
-            return
-        try:
-            with open(self.offline_file, 'a') as f:
-                f.write(json.dumps(msg_obj) + "\n")
-            logging.info("Stored offline message: %s", msg_obj)
-        except Exception as e:
-            logging.error("Error storing offline message: %s", e)
-
     def sync_offline_messages(self):
         if os.path.exists(self.offline_file):
             try:
@@ -291,7 +325,6 @@ class USER:
                     try:
                         msg_obj = json.loads(line.strip())
                         if msg_obj.get("msg_type") == "chat":
-                            # Bỏ qua tin nhắn chat offline vì luôn phải qua tracker
                             continue
                         target_ip = msg_obj.get("target_ip")
                         target_port = msg_obj.get("target_port")
@@ -304,6 +337,9 @@ class USER:
                 logging.info("Offline messages synced and file removed.")
             except Exception as e:
                 logging.error("Error syncing offline messages: %s", e)
+
+    def start_udp_listener(self):
+        threading.Thread(target=self.udp_listener, daemon=True).start()
 
     def menu(self):
         while True:
@@ -411,48 +447,6 @@ class USER:
             self.send_chat_message_via_tracker(f"[DM to {target['name']}] {message}")
         except Exception as e:
             logging.error("Invalid selection or error: %s", e)
-
-    def start_livestream(self):
-        if self.is_livestreaming:
-            logging.info("Livestream already running.")
-            return
-        self.is_livestreaming = True
-        self._stop_livestream_flag = False
-        cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
-        cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
-        cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
-        if not cap.isOpened():
-            logging.error("Cannot access webcam for livestream.")
-            self.is_livestreaming = False
-            return
-        logging.info("Starting livestream.")
-        while not self._stop_livestream_flag:
-            ret, frame = cap.read()
-            if not ret:
-                logging.error("Failed to read frame from webcam.")
-                break
-            encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 50]
-            ret, buffer = cv2.imencode('.jpg', frame, encode_param)
-            if not ret:
-                logging.error("Failed to encode frame.")
-                continue
-            jpg_as_text = base64.b64encode(buffer).decode('utf-8')
-            # Sử dụng hàm send_udp_broadcast để gửi frame livestream qua UDP
-            self.send_udp_broadcast(jpg_as_text, msg_type="livestream")
-            cv2.imshow('Livestream (Local)', frame)
-            cv2.waitKey(1)
-            time.sleep(0.1)
-        cap.release()
-        cv2.destroyAllWindows()
-        self.is_livestreaming = False
-        logging.info("Livestream stopped.")
-
-    def stop_livestream(self):
-        if not self.is_livestreaming:
-            logging.info("No livestream to stop.")
-            return
-        logging.info("Stopping livestream.")
-        self._stop_livestream_flag = True
 
 if __name__ == '__main__':
     USER("127.0.0.1", 5000)
