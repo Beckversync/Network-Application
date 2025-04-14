@@ -281,8 +281,10 @@ class DiscordUI(QMainWindow):
             }
             if self.is_viewer:
                 request_data["is_visitor"] = True
+            
             response_str = channelRequest.handle_channel_request(json.dumps(request_data))
             response = json.loads(response_str)
+            
             if response.get("status") == "success":
                 messages = response.get("messages", [])
                 self.last_message_count = len(messages)
@@ -290,15 +292,35 @@ class DiscordUI(QMainWindow):
                     sender = msg.get("sender")
                     text = msg.get("text")
                     self.chat_display.append(f"{sender}: {text}")
+                
                 members = response.get("members", [])
                 self.update_member_list(members)
+                
                 if self.username in members:
                     self.join_button.setText("Joined")
                     self.join_button.setEnabled(False)
                 else:
                     self.join_button.setText("Join Channel")
                     self.join_button.setEnabled(True)
+                
                 owner = response.get("owner")
+                if self.username == owner:
+                    self.get_join_requests(owner)
+                else:
+                    self.request_list.clear()
+                    self.request_list.addItem("You are not the owner")
+                
+                self.current_channel_info = response
+            else:
+                self.chat_display.clear()
+                self.chat_display.append(f"[ERROR] {response.get('message')}")
+                return
+        except Exception as e:
+            logging.error("load_channel_messages error: %s", e)
+
+    def get_join_requests(self, owner: str):
+        def sync_requests():
+            while True:
                 if self.username == owner:
                     req_data = {
                         "action": "get_join_requests",
@@ -334,16 +356,9 @@ class DiscordUI(QMainWindow):
                     else:
                         self.request_list.clear()
                         self.request_list.addItem("No requests")
-                else:
-                    self.request_list.clear()
-                    self.request_list.addItem("You are not the owner")
-                self.current_channel_info = response
-            else:
-                self.chat_display.clear()
-                self.chat_display.append(f"[ERROR] {response.get('message')}")
-                return
-        except Exception as e:
-            logging.error("load_channel_messages error: %s", e)
+                    
+                    time.sleep(2)  
+        threading.Thread(target=sync_requests, daemon=True).start()
     
     def approve_user(self, username):
         if not self.current_channel:
@@ -525,20 +540,26 @@ class DiscordUI(QMainWindow):
                 logging.error("Error creating channel: %s", response.get("message"))
     
     def get_channels_from_server(self):
-        try:
-            request_data = {"action": "get_all_channels"}
-            response_str = channelRequest.handle_channel_request(json.dumps(request_data))
-            response = json.loads(response_str)
-            if response.get("status") == "success":
-                channels = response.get("data", [])
-                self.channels = {ch["channel_name"]: ch for ch in channels}
-                self.channel_list.clear()
-                for c in channels:
-                    self.channel_list.addItem(c["channel_name"])
-            else:
-                logging.error("Error get_channels: %s", response.get("message"))
-        except Exception as e:
-            logging.error("get_channels_from_server error: %s", e)
+        def sync_loop():
+            while True:
+                try:
+                    request_data = {"action": "get_all_channels"}
+                    response_str = channelRequest.handle_channel_request(json.dumps(request_data))
+                    response = json.loads(response_str)
+                    if response.get("status") == "success":
+                        channels = response.get("data", [])
+                        self.channels = {ch["channel_name"]: ch for ch in channels}
+                        self.channel_list.clear()
+                        for c in channels:
+                            self.channel_list.addItem(c["channel_name"])
+                    else:
+                        logging.error("Error get_channels: %s", response.get("message"))
+                except Exception as e:
+                    logging.error("get_channels_from_server error: %s", e)
+                
+                time.sleep(2)
+            
+        threading.Thread(target=sync_loop, daemon=True).start()
     
     def poll_loop(self):
         """

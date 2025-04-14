@@ -504,3 +504,28 @@
 [2025-04-14 13:11:37,416] INFO: Message from an09 sent in channel '123'
 [2025-04-14 13:11:37,417] INFO: Message from an09 sent in channel '123'
 [2025-04-14 13:15:57,480] INFO: Tracker response on LEAVE: Peer an09 (127.0.0.1:6641) left
+[2025-04-14 14:15:17,101] INFO: Logged in as: an09
+[2025-04-14 14:15:17,605] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-14 14:15:17,607] INFO: Tracker response: Peer an09 (127.0.0.1:6290) added
+[2025-04-14 14:15:17,608] INFO: P2P SERVER listening on 127.0.0.1:6290
+[2025-04-14 14:15:17,609] INFO: UDP LISTENER listening on 127.0.0.1:6291 for livestream.
+[2025-04-14 14:25:06,893] INFO: Logged in as: an09
+[2025-04-14 14:25:08,048] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-14 14:25:08,050] INFO: Tracker response: Peer an09 (127.0.0.1:8078) added
+[2025-04-14 14:25:08,050] INFO: P2P SERVER listening on 127.0.0.1:8078
+[2025-04-14 14:25:08,050] INFO: UDP LISTENER listening on 127.0.0.1:8079 for livestream.
+[2025-04-14 14:29:14,253] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:29:16,899] INFO: User an09 requested to join private channel 'Peee'
+[2025-04-14 14:29:19,358] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:29:24,466] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:29:49,494] INFO: User an09 requested to join private channel 'an08'
+[2025-04-14 14:29:50,437] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:30:11,020] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:30:13,153] INFO: User an09 requested to join private channel 'an09'
+[2025-04-14 14:30:16,158] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:30:21,282] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-14 14:30:36,603] ERROR: Polling error: Channel not found
+[2025-04-14 14:30:41,711] ERROR: Polling error: Channel not found
+[2025-04-14 14:30:51,948] ERROR: Polling error: Channel not found
+[2025-04-14 14:30:57,052] ERROR: Polling error: Channel not found
+[2025-04-14 14:30:57,101] ERROR: Exception in load_dm_list: wrapped C/C++ object of type QListWidget has been deleted
