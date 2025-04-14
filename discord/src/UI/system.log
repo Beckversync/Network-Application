@@ -120,3 +120,117 @@
 [2025-04-12 14:25:12,337] INFO: UDP LISTENER listening on 127.0.0.1:7167 for livestream.
 [2025-04-12 14:25:52,853] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
 [2025-04-12 14:26:12,534] INFO: User beckhamngo logged out
+[2025-04-14 12:02:17,164] INFO: User an08 logged in successfully
+[2025-04-14 12:02:17,167] INFO: Logged in as: an08
+[2025-04-14 12:02:18,061] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-14 12:02:20,095] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-14 12:02:20,099] INFO: P2P SERVER listening on 127.0.0.1:7488
+[2025-04-14 12:02:20,105] INFO: UDP LISTENER listening on 127.0.0.1:7489 for livestream.
+[2025-04-14 12:02:22,573] INFO: [SYNC] SyncManager started for channel 'Lânnaa'
+[2025-04-14 12:02:54,930] INFO: Sending message: me
+[2025-04-14 12:02:54,930] ERROR: Tracker offline: cannot send channel message: me
+[2025-04-14 12:03:27,529] INFO: User an08 logged out
+[2025-04-14 12:03:28,517] ERROR: Not connected to tracker.
+[2025-04-14 12:04:06,136] INFO: User an08 logged out
+[2025-04-14 12:04:22,686] INFO: User beckhamngo logged out
+[2025-04-14 12:04:41,180] INFO: User an09 logged out
+[2025-04-14 12:05:41,912] INFO: User an08 logged in successfully
+[2025-04-14 12:05:41,915] INFO: Logged in as: an08
+[2025-04-14 12:05:42,818] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-14 12:05:42,820] INFO: Tracker response: Peer an08 (127.0.0.1:8963) added
+[2025-04-14 12:05:42,822] INFO: P2P SERVER listening on 127.0.0.1:8963
+[2025-04-14 12:05:42,822] INFO: UDP LISTENER listening on 127.0.0.1:8964 for livestream.
+[2025-04-14 12:05:44,644] INFO: [SYNC] SyncManager started for channel '123'
+[2025-04-14 12:06:01,794] INFO: Sending message: lo
+[2025-04-14 12:06:01,965] INFO: Message from an08 sent in channel 'test2'
+[2025-04-14 12:06:01,966] INFO: Message from an08 sent in channel 'test2'
+[2025-04-14 12:06:09,374] INFO: Sending message: moi them state zo cai user
+[2025-04-14 12:06:09,485] INFO: Message from an08 sent in channel 'test2'
+[2025-04-14 12:06:09,486] INFO: Message from an08 sent in channel 'test2'
+[2025-04-14 12:06:12,951] INFO: Sending message: co j xu li them
+[2025-04-14 12:06:13,125] INFO: Message from an08 sent in channel 'test2'
+[2025-04-14 12:06:13,126] INFO: Message from an08 sent in channel 'test2'
+[2025-04-14 12:17:31,793] INFO: User an08 logged out
+[2025-04-14 12:17:32,543] INFO: Tracker response on LEAVE: Peer an08 (127.0.0.1:8963) left
+[2025-04-14 12:17:48,554] INFO: User an08 logged in successfully
+[2025-04-14 12:17:48,555] INFO: Logged in as: an08
+[2025-04-14 12:17:51,869] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-14 12:17:51,871] INFO: Tracker response: Peer an08 (127.0.0.1:7850) added
+[2025-04-14 12:17:51,872] INFO: P2P SERVER listening on 127.0.0.1:7850
+[2025-04-14 12:17:51,872] INFO: UDP LISTENER listening on 127.0.0.1:7851 for livestream.
+[2025-04-14 12:24:06,376] INFO: User an08 logged out
+[2025-04-14 12:24:07,081] INFO: Tracker response on LEAVE: Peer an08 (127.0.0.1:7850) left
+[2025-04-14 12:24:20,784] INFO: User an08 logged in successfully
+[2025-04-14 12:24:20,784] INFO: Server for an08 is listening on port 3001...
+[2025-04-14 12:24:20,784] INFO: Logged in as: an08
+[2025-04-14 12:24:21,504] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-14 12:24:21,506] INFO: Tracker response: Peer an08 (127.0.0.1:8755) added
+[2025-04-14 12:24:21,507] INFO: P2P SERVER listening on 127.0.0.1:8755
+[2025-04-14 12:24:21,507] INFO: UDP LISTENER listening on 127.0.0.1:8756 for livestream.
+[2025-04-14 12:26:28,118] INFO: User an09 logged in successfully
+[2025-04-14 12:26:28,120] INFO: Logged in as: an09
+[2025-04-14 12:26:34,699] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-14 12:26:34,701] INFO: Tracker response: Peer an09 (127.0.0.1:6130) added
+[2025-04-14 12:26:34,703] INFO: P2P SERVER listening on 127.0.0.1:6130
+[2025-04-14 12:26:34,703] INFO: UDP LISTENER listening on 127.0.0.1:6131 for livestream.
+[2025-04-14 12:27:29,922] INFO: User an09 logged out
+[2025-04-14 12:27:30,707] INFO: Tracker response on LEAVE: Peer an09 (127.0.0.1:6130) left
+[2025-04-14 12:27:33,498] INFO: User an08 logged out
+[2025-04-14 12:27:34,321] INFO: Tracker response on LEAVE: Peer an08 (127.0.0.1:8755) left
+[2025-04-14 12:30:25,131] INFO: Server for an08 is listening on port 4263...
+[2025-04-14 12:35:17,158] INFO: Server for an08 is listening on port 4743...
+[2025-04-14 12:35:17,258] INFO: User an08 logged in successfully
+[2025-04-14 12:35:17,260] INFO: Logged in as: an08
+[2025-04-14 12:35:18,598] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-14 12:35:18,600] INFO: Tracker response: Peer an08 (127.0.0.1:7706) added
+[2025-04-14 12:35:18,602] INFO: P2P SERVER listening on 127.0.0.1:7706
+[2025-04-14 12:35:18,602] INFO: UDP LISTENER listening on 127.0.0.1:7707 for livestream.
+[2025-04-14 12:35:43,511] INFO: Server for an09 is listening on port 4109...
+[2025-04-14 12:35:43,607] INFO: User an09 logged in successfully
+[2025-04-14 12:35:43,609] INFO: Logged in as: an09
+[2025-04-14 12:35:44,863] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-14 12:35:44,866] INFO: Tracker response: Peer an09 (127.0.0.1:8259) added
+[2025-04-14 12:35:44,867] INFO: P2P SERVER listening on 127.0.0.1:8259
+[2025-04-14 12:35:44,867] INFO: UDP LISTENER listening on 127.0.0.1:8260 for livestream.
+[2025-04-14 12:37:05,879] INFO: User an09 logged out
+[2025-04-14 12:37:06,570] INFO: Tracker response on LEAVE: Peer an09 (127.0.0.1:8259) left
+[2025-04-14 12:37:15,203] INFO: User an08 logged out
+[2025-04-14 12:37:15,916] INFO: Tracker response on LEAVE: Peer an08 (127.0.0.1:7706) left
+[2025-04-14 12:37:54,722] INFO: Server for an08 is listening on port 4906...
+[2025-04-14 12:37:54,892] INFO: User an08 logged in successfully
+[2025-04-14 12:37:54,895] INFO: Logged in as: an08
+[2025-04-14 12:38:00,601] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-14 12:38:00,602] INFO: Tracker response: Peer an08 (127.0.0.1:6514) added
+[2025-04-14 12:38:00,603] INFO: P2P SERVER listening on 127.0.0.1:6514
+[2025-04-14 12:38:00,603] INFO: UDP LISTENER listening on 127.0.0.1:6515 for livestream.
+[2025-04-14 12:38:08,734] INFO: User an08 logged out
+[2025-04-14 12:38:09,352] INFO: Tracker response on LEAVE: Peer an08 (127.0.0.1:6514) left
+[2025-04-14 12:40:19,822] INFO: Server for an08 is listening on port 4311...
+[2025-04-14 12:40:19,943] INFO: User an08 logged in successfully
+[2025-04-14 12:40:19,945] INFO: Logged in as: an08
+[2025-04-14 12:40:22,898] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-14 12:40:22,900] INFO: Tracker response: Peer an08 (127.0.0.1:7794) added
+[2025-04-14 12:40:22,901] INFO: P2P SERVER listening on 127.0.0.1:7794
+[2025-04-14 12:40:22,901] INFO: UDP LISTENER listening on 127.0.0.1:7795 for livestream.
+[2025-04-14 12:41:03,553] INFO: Server for an09 is listening on port 4312...
+[2025-04-14 12:41:03,660] INFO: User an09 logged in successfully
+[2025-04-14 12:44:08,122] INFO: User an09 logged out
+[2025-04-14 12:44:12,020] INFO: User an08 logged out
+[2025-04-14 12:44:12,691] INFO: Tracker response on LEAVE: Peer an08 (127.0.0.1:7794) left
+[2025-04-14 13:08:10,323] INFO: Server for an08 is listening on port 4311...
+[2025-04-14 13:08:10,437] INFO: User an08 logged in successfully
+[2025-04-14 13:08:10,438] INFO: Logged in as: an08
+[2025-04-14 13:08:11,227] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-14 13:08:11,228] INFO: Tracker response: Peer an08 (127.0.0.1:7857) added
+[2025-04-14 13:08:11,230] INFO: P2P SERVER listening on 127.0.0.1:7857
+[2025-04-14 13:08:11,230] INFO: UDP LISTENER listening on 127.0.0.1:7858 for livestream.
+[2025-04-14 13:08:18,437] INFO: Server for an09 is listening on port 4312...
+[2025-04-14 13:08:18,538] INFO: User an09 logged in successfully
+[2025-04-14 13:11:16,931] INFO: [SYNC] SyncManager started for channel '123'
+[2025-04-14 13:12:08,628] INFO: Sending message: lo m m
+[2025-04-14 13:12:08,792] INFO: Message from an08 sent in channel '123'
+[2025-04-14 13:12:08,793] INFO: Message from an08 sent in channel '123'
+[2025-04-14 13:15:56,462] INFO: User an09 logged out
+[2025-04-14 13:16:00,296] INFO: User an08 logged out
+[2025-04-14 13:16:01,032] INFO: Tracker response on LEAVE: Peer an08 (127.0.0.1:7857) left
+[2025-04-14 13:16:02,726] ERROR: Exception in load_dm_list: wrapped C/C++ object of type QListWidget has been deleted

@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from typing import List, Dict
+from typing import Optional
 
 class UserRegister(BaseModel):
     username: str
@@ -15,3 +16,4 @@ class UserLogin(BaseModel):
     channels_joined: List[str] = []
     hosted_channels: List[str] = []
     sessions: List[Dict[str, str]] = []
+    state: Optional[str] = "offline"

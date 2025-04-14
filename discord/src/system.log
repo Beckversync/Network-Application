@@ -467,3 +467,40 @@
 [2025-04-10 17:48:51,455] INFO: Sending message: i am panguyen
 [2025-04-10 17:48:51,561] INFO: Message from an09 sent in channel 'private0'
 [2025-04-10 17:48:54,338] INFO: User an09 logged out
+[2025-04-14 12:41:03,664] INFO: Logged in as: an09
+[2025-04-14 12:42:46,439] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-14 12:42:46,441] INFO: Tracker response: Peer an09 (127.0.0.1:6739) added
+[2025-04-14 12:42:46,442] INFO: UDP LISTENER listening on 127.0.0.1:6740 for livestream.
+[2025-04-14 12:42:46,442] INFO: P2P SERVER listening on 127.0.0.1:6739
+[2025-04-14 12:44:08,761] INFO: Tracker response on LEAVE: Peer an09 (127.0.0.1:6739) left
+[2025-04-14 12:44:30,389] INFO: Server for an09 is listening on port 4312...
+[2025-04-14 12:44:30,496] INFO: User an09 logged in successfully
+[2025-04-14 12:44:30,498] INFO: Logged in as: an09
+[2025-04-14 12:44:31,657] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-14 12:44:31,659] INFO: Tracker response: Peer an09 (127.0.0.1:8499) added
+[2025-04-14 12:44:31,660] INFO: P2P SERVER listening on 127.0.0.1:8499
+[2025-04-14 12:44:31,660] INFO: UDP LISTENER listening on 127.0.0.1:8500 for livestream.
+[2025-04-14 12:44:35,767] INFO: User an09 logged out
+[2025-04-14 12:44:36,684] INFO: Tracker response on LEAVE: Peer an09 (127.0.0.1:8499) left
+[2025-04-14 13:08:18,538] INFO: Logged in as: an09
+[2025-04-14 13:08:19,296] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-14 13:08:19,297] INFO: Tracker response: Peer an09 (127.0.0.1:6641) added
+[2025-04-14 13:08:19,298] INFO: P2P SERVER listening on 127.0.0.1:6641
+[2025-04-14 13:08:19,298] INFO: UDP LISTENER listening on 127.0.0.1:6642 for livestream.
+[2025-04-14 13:09:35,598] INFO: [SYNC] SyncManager started for channel 'test2'
+[2025-04-14 13:09:40,598] INFO: Sending message: alo
+[2025-04-14 13:09:40,727] INFO: Message from an09 sent in channel '123'
+[2025-04-14 13:09:40,727] INFO: Message from an09 sent in channel '123'
+[2025-04-14 13:09:44,513] INFO: Sending message: lololo
+[2025-04-14 13:09:44,622] INFO: Message from an09 sent in channel '123'
+[2025-04-14 13:09:44,623] INFO: Message from an09 sent in channel '123'
+[2025-04-14 13:09:50,657] INFO: Sending message: 123
+[2025-04-14 13:09:50,770] INFO: Message from an09 sent in channel '123'
+[2025-04-14 13:09:50,771] INFO: Message from an09 sent in channel '123'
+[2025-04-14 13:09:52,038] INFO: Sending message: 545
+[2025-04-14 13:09:52,166] INFO: Message from an09 sent in channel '123'
+[2025-04-14 13:09:52,167] INFO: Message from an09 sent in channel '123'
+[2025-04-14 13:11:37,158] INFO: Sending message: lo
+[2025-04-14 13:11:37,416] INFO: Message from an09 sent in channel '123'
+[2025-04-14 13:11:37,417] INFO: Message from an09 sent in channel '123'
+[2025-04-14 13:15:57,480] INFO: Tracker response on LEAVE: Peer an09 (127.0.0.1:6641) left
