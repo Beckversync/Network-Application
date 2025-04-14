@@ -190,8 +190,16 @@ class DiscordUI(QMainWindow):
         self.message_input.clear()
         self.chat_display.append(message)
         logging.info("Sending message: %s", message)
+        logging.info(f"current_channel: {self.current_channel}, username: {self.username}, message: {message}")
         if self.current_mode == "channel":
-            self.send_channel_message_api(message)
+            # if self.tracker:  # Kiểm tra xem tracker có sẵn không
+            #     if hasattr(self.tracker, 'send_to_server'):
+            #         self.tracker.send_to_server(self.current_channel, self.username, message)
+            #     else:
+            #         self.chat_display.append("[ERROR] Tracker does not have send_to_server method.")
+            # else:
+            #     self.chat_display.append("[ERROR] Tracker is not available.")
+            self.send_channel_message_api(message);
         elif self.current_mode == "dm":
             if self.user_peer:
                 self.user_peer.send_p2p_broadcast(f"[DM to {self.current_dm_user}] {message}")
