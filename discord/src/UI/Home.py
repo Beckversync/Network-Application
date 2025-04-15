@@ -1,5 +1,3 @@
-# Home.py
-
 import json
 import sys, os, threading, time, socket
 import logging
@@ -9,12 +7,11 @@ from PyQt6.QtWidgets import (
     QTextEdit, QLineEdit, QLabel, QTabWidget,
     QCheckBox, QFrame, QComboBox, QDialog, QMessageBox
 )
-from PyQt6.QtCore import Qt
+from PyQt6.QtCore import Qt, QTimer
 from PyQt6 import QtGui
 from PyQt6.QtGui import QFont
 from request import channelRequest
-from syncService import SyncManager  # Import module đồng bộ
-
+from syncService import SyncManager
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
 class DiscordUI(QMainWindow):
@@ -28,26 +25,22 @@ class DiscordUI(QMainWindow):
         self.setWindowTitle("Discord Clone - Improved UI")
         self.setGeometry(100, 100, 1200, 700)
         
-        # Chế độ chat: "channel" hay "dm"
         self.current_mode = None
         self.current_channel = None
         self.current_dm_user = None
 
-        self.channels = {}      # Danh sách channel
-        self.dm_users = []      # Danh sách user, load từ API
-        self.last_message_count = 0  # Dùng để theo dõi tin nhắn mới
+        self.channels = {}      
+        self.dm_users = []      
+        self.last_message_count = 0  
 
-        # Thuộc tính is_viewer: nếu ở chế độ Visitor thì không được gửi tin nhắn
         self.is_viewer = False
 
-        # Sync manager dành cho channel hosting (nếu chủ kênh mở channel của mình)
         self.sync_manager = None
 
         self.initUI()
         self.get_channels_from_server()
         self.load_dm_list()
 
-        # Polling cập nhật tin nhắn và danh sách user mỗi 5 giây
         self.polling_thread = threading.Thread(target=self.poll_loop, daemon=True)
         self.polling_thread.start()
 
@@ -57,7 +50,6 @@ class DiscordUI(QMainWindow):
         main_layout = QHBoxLayout(central_widget)
         main_layout.setContentsMargins(0, 0, 0, 0)
         
-        # Sidebar (Channel + DM)
         self.sidebar_frame = QFrame()
         self.sidebar_frame.setStyleSheet("background-color: #2F3136;")
         self.sidebar_frame.setFixedWidth(200)
@@ -78,7 +70,6 @@ class DiscordUI(QMainWindow):
         tab_widget = QTabWidget()
         tab_widget.setStyleSheet("QTabBar::tab { height: 30px; color: white; }")
         
-        # Tab Channel
         channel_tab = QWidget()
         channel_tab_layout = QVBoxLayout(channel_tab)
         self.channel_list = QListWidget()
@@ -87,7 +78,6 @@ class DiscordUI(QMainWindow):
         channel_tab_layout.addWidget(self.channel_list)
         tab_widget.addTab(channel_tab, "Channels")
         
-        # Tab DM
         dm_tab = QWidget()
         dm_tab_layout = QVBoxLayout(dm_tab)
         self.dm_list = QListWidget()
@@ -98,7 +88,6 @@ class DiscordUI(QMainWindow):
         
         sidebar_layout.addWidget(tab_widget)
         
-        # Dropdown trạng thái: Online, Offline, Invisible
         self.status_dropdown = QComboBox()
         self.status_dropdown.addItems(["Online", "Offline", "Invisible"])
         self.status_dropdown.currentTextChanged.connect(self.change_status)
@@ -106,7 +95,6 @@ class DiscordUI(QMainWindow):
         
         main_layout.addWidget(self.sidebar_frame)
         
-        # Khung chat chính
         self.center_frame = QFrame()
         self.center_frame.setStyleSheet("background-color: #36393F;")
         center_layout = QVBoxLayout(self.center_frame)
@@ -135,7 +123,6 @@ class DiscordUI(QMainWindow):
         self.chat_display.setStyleSheet("background-color: #40444B; color: white;")
         center_layout.addWidget(self.chat_display, 1)
         
-        # Khu vực nhập tin nhắn
         input_layout = QHBoxLayout()
         self.message_input = QLineEdit()
         self.message_input.setStyleSheet("background-color: #2F3136; color: white; padding: 8px;")
@@ -147,7 +134,6 @@ class DiscordUI(QMainWindow):
         input_layout.addWidget(self.send_button)
         center_layout.addLayout(input_layout)
         
-        # Nút "Start/Stop Livestream"
         self.toggle_livestream_button = QPushButton("Start Livestream")
         self.toggle_livestream_button.setStyleSheet("background-color: orange; color: white; padding: 8px;")
         self.toggle_livestream_button.clicked.connect(self.toggle_livestream)
@@ -155,7 +141,6 @@ class DiscordUI(QMainWindow):
         
         main_layout.addWidget(self.center_frame, 1)
         
-        # Sidebar bên phải: danh sách thành viên và join requests
         self.right_frame = QFrame()
         self.right_frame.setStyleSheet("background-color: #2F3136;")
         self.right_frame.setFixedWidth(200)
@@ -186,7 +171,7 @@ class DiscordUI(QMainWindow):
         main_layout.addWidget(self.right_frame)
         
         self.load_dm_list()
-    
+
     def send_message(self):
         message = self.message_input.text().strip()
         if not message:
@@ -254,7 +239,12 @@ class DiscordUI(QMainWindow):
         self.join_button.setVisible(True)
         self.delete_channel_button.setVisible(True)
         self.load_channel_messages()
-        # Nếu user là chủ kênh thì khởi động tiến trình đồng bộ
+        # Cập nhật active_channel của user_peer
+        if self.user_peer:
+            self.user_peer.active_channel = self.current_channel
+            # Nếu user là chủ kênh, cập nhật livestream_channel
+            if self.channels.get(self.current_channel, {}).get("owner") == self.username:
+                self.user_peer.livestream_channel = self.current_channel
         if self.channels.get(self.current_channel, {}).get("owner") == self.username:
             if not self.sync_manager:
                 self.sync_manager = SyncManager(self.username, self.current_channel)
@@ -281,10 +271,8 @@ class DiscordUI(QMainWindow):
             }
             if self.is_viewer:
                 request_data["is_visitor"] = True
-            
             response_str = channelRequest.handle_channel_request(json.dumps(request_data))
             response = json.loads(response_str)
-            
             if response.get("status") == "success":
                 messages = response.get("messages", [])
                 self.last_message_count = len(messages)
@@ -292,24 +280,16 @@ class DiscordUI(QMainWindow):
                     sender = msg.get("sender")
                     text = msg.get("text")
                     self.chat_display.append(f"{sender}: {text}")
-                
                 members = response.get("members", [])
                 self.update_member_list(members)
-                
                 if self.username in members:
                     self.join_button.setText("Joined")
                     self.join_button.setEnabled(False)
                 else:
                     self.join_button.setText("Join Channel")
                     self.join_button.setEnabled(True)
-                
                 owner = response.get("owner")
-                if self.username == owner:
-                    self.get_join_requests(owner)
-                else:
-                    self.request_list.clear()
-                    self.request_list.addItem("You are not the owner")
-                
+                self.start_request_timer(owner)
                 self.current_channel_info = response
             else:
                 self.chat_display.clear()
@@ -318,48 +298,58 @@ class DiscordUI(QMainWindow):
         except Exception as e:
             logging.error("load_channel_messages error: %s", e)
 
-    def get_join_requests(self, owner: str):
-        def sync_requests():
-            while True:
-                if self.username == owner:
-                    req_data = {
-                        "action": "get_join_requests",
-                        "channel_name": self.current_channel,
-                        "owner": owner
-                    }
-                    resp_str = channelRequest.handle_channel_request(json.dumps(req_data))
-                    resp = json.loads(resp_str)
-                    self.request_list.clear()
-                    if resp.get("status") == "success":
-                        join_requests = resp.get("join_requests", [])
-                        for user in join_requests:
-                            item_widget = QWidget()
-                            layout = QHBoxLayout()
-                            layout.setContentsMargins(0, 0, 0, 0)
-                            label = QLabel(user)
-                            approve_btn = QPushButton("✔")
-                            reject_btn = QPushButton("✖")
-                            approve_btn.setStyleSheet("color: green;")
-                            reject_btn.setStyleSheet("color: red;")
-                            approve_btn.setFixedSize(30, 25)
-                            reject_btn.setFixedSize(30, 25)
-                            approve_btn.clicked.connect(lambda _, u=user: self.approve_user(u))
-                            reject_btn.clicked.connect(lambda _, u=user: self.reject_user(u))
-                            layout.addWidget(label)
-                            layout.addWidget(approve_btn)
-                            layout.addWidget(reject_btn)
-                            item_widget.setLayout(layout)
-                            item = QListWidgetItem()
-                            item.setSizeHint(item_widget.sizeHint())
-                            self.request_list.addItem(item)
-                            self.request_list.setItemWidget(item, item_widget)
-                    else:
-                        self.request_list.clear()
-                        self.request_list.addItem("No requests")
-                    
-                    time.sleep(2)  
-        threading.Thread(target=sync_requests, daemon=True).start()
-    
+    def start_request_timer(self, owner):
+        self.owner = owner
+        self.request_timer = QTimer()
+        self.request_timer.timeout.connect(self.generate_request)
+        self.request_timer.start(1000)  # mỗi 1 giây gọi lại
+
+    def generate_request(self):
+        if self.username != self.owner:
+            self.request_list.clear()
+            self.request_list.addItem("You are not the owner")
+            return
+
+        req_data = {
+            "action": "get_join_requests",
+            "channel_name": self.current_channel,
+            "owner": self.owner
+        }
+        try:
+            resp_str = channelRequest.handle_channel_request(json.dumps(req_data))
+            resp = json.loads(resp_str)
+            self.request_list.clear()
+            if resp.get("status") == "success":
+                join_requests = resp.get("join_requests", [])
+                if not join_requests:
+                    self.request_list.addItem("No requests")
+                for user in join_requests:
+                    item_widget = QWidget()
+                    layout = QHBoxLayout()
+                    layout.setContentsMargins(0, 0, 0, 0)
+                    label = QLabel(user)
+                    approve_btn = QPushButton("✔")
+                    reject_btn = QPushButton("✖")
+                    approve_btn.setStyleSheet("color: green;")
+                    reject_btn.setStyleSheet("color: red;")
+                    approve_btn.setFixedSize(30, 25)
+                    reject_btn.setFixedSize(30, 25)
+                    approve_btn.clicked.connect(lambda _, u=user: self.approve_user(u))
+                    reject_btn.clicked.connect(lambda _, u=user: self.reject_user(u))
+                    layout.addWidget(label)
+                    layout.addWidget(approve_btn)
+                    layout.addWidget(reject_btn)
+                    item_widget.setLayout(layout)
+                    item = QListWidgetItem()
+                    item.setSizeHint(item_widget.sizeHint())
+                    self.request_list.addItem(item)
+                    self.request_list.setItemWidget(item, item_widget)
+            else:
+                self.request_list.addItem("Failed to fetch requests")
+        except Exception as e:
+            logging.error("generate_request error: %s", e)
+
+
     def approve_user(self, username):
         if not self.current_channel:
             return
@@ -426,7 +416,6 @@ class DiscordUI(QMainWindow):
                 display_text = f"🟢 {m}"
                 color = QtGui.QColor("lime")
             else:
-                # Nếu trạng thái không phải Online, hiển thị Offline với màu gray và biểu tượng ⚪
                 display_text = f"⚪ {m}"
                 color = QtGui.QColor("gray")
             item = QListWidgetItem(display_text)
@@ -540,34 +529,23 @@ class DiscordUI(QMainWindow):
                 logging.error("Error creating channel: %s", response.get("message"))
     
     def get_channels_from_server(self):
-        def sync_loop():
-            while True:
-                try:
-                    request_data = {"action": "get_all_channels"}
-                    response_str = channelRequest.handle_channel_request(json.dumps(request_data))
-                    response = json.loads(response_str)
-                    if response.get("status") == "success":
-                        channels = response.get("data", [])
-                        self.channels = {ch["channel_name"]: ch for ch in channels}
-                        self.channel_list.clear()
-                        for c in channels:
-                            self.channel_list.addItem(c["channel_name"])
-                    else:
-                        logging.error("Error get_channels: %s", response.get("message"))
-                except Exception as e:
-                    logging.error("get_channels_from_server error: %s", e)
-                
-                time.sleep(2)
-            
-        threading.Thread(target=sync_loop, daemon=True).start()
+        try:
+            request_data = {"action": "get_all_channels"}
+            response_str = channelRequest.handle_channel_request(json.dumps(request_data))
+            response = json.loads(response_str)
+            if response.get("status") == "success":
+                channels = response.get("data", [])
+                self.channels = {ch["channel_name"]: ch for ch in channels}
+                self.channel_list.clear()
+                for c in channels:
+                    self.channel_list.addItem(c["channel_name"])
+            else:
+                logging.error("Error get_channels: %s", response.get("message"))
+        except Exception as e:
+            logging.error("get_channels_from_server error: %s", e)
     
     def poll_loop(self):
-        """
-        Vòng lặp polling: mỗi 5 giây cập nhật tin nhắn mới (nếu ở channel mode)
-        và load lại danh sách user (DM list) để hiển thị trạng thái online/offline mới nhất.
-        """
         while True:
-            # Poll tin nhắn mới nếu đang ở chế độ channel
             if self.current_mode == "channel" and self.current_channel:
                 try:
                     request_data = {"action": "get_channel_info", "channel_name": self.current_channel, "username": self.username}
@@ -591,11 +569,11 @@ class DiscordUI(QMainWindow):
                 except Exception as e:
                     logging.error("Error in poll_loop (new messages): %s", e)
             
-            # Cập nhật danh sách user để hiển thị trạng thái Online/Offline mới nhất
             try:
                 self.load_dm_list()
+                self.get_channels_from_server()
             except Exception as e:
-                logging.error("Error updating DM list: %s", e)
+                logging.error("Error updating lists: %s", e)
 
             time.sleep(5)
     
@@ -609,6 +587,7 @@ class DiscordUI(QMainWindow):
         if not self.user_peer:
             self.chat_display.append("[ERROR] user_peer not found!")
             return
+        # Nếu livestream chưa chạy, bắt đầu livestream; nếu đang chạy, gọi stop_livestream
         if not self.user_peer.is_livestreaming:
             threading.Thread(target=self.user_peer.start_livestream, daemon=True).start()
             self.toggle_livestream_button.setText("Stop Livestream")
@@ -621,7 +600,7 @@ class DiscordUI(QMainWindow):
         session_id = self.session_info.get("session_id")
         try:
             client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            server_ip = "127.0.0.1"
+            server_ip = '10.229.68.204'
             server_port = 22236
             client_socket.connect((server_ip, server_port))
             if status == "Online":
@@ -646,7 +625,7 @@ class DiscordUI(QMainWindow):
     def logout(self):
         try:
             client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            server_ip = "127.0.0.1"
+            server_ip = '10.229.68.204'
             server_port = 22236
             client_socket.connect((server_ip, server_port))
             session_id = self.session_info.get("session_id")
@@ -657,7 +636,6 @@ class DiscordUI(QMainWindow):
             client_socket.close()
             if response.get("status") == "success":
                 QMessageBox.information(self, "Logout", "You have been logged out.")
-                # Gọi hàm leave_tracker() để xóa peer khỏi tracker khi logout
                 if self.user_peer:
                     self.user_peer.leave_tracker()
             else:
@@ -689,6 +667,7 @@ class AddChannelDialog(QDialog):
         return {"channel_name": channel_name, "allow_visitor": allow_visitor}
 
 if __name__ == "__main__":
+    from PyQt6.QtWidgets import QApplication, QWidget
     app = QApplication(sys.argv)
     login_window = QWidget()
     username = "UserA"

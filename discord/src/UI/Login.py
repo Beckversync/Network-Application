@@ -6,7 +6,6 @@ from PyQt6.QtCore import Qt, pyqtSignal
 from request import authRequest
 import json
 import socket
-
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
 class RegisterDialog(QDialog):
@@ -89,7 +88,7 @@ class LoginRegisterUI(QWidget):
     def __init__(self):
         super().__init__()
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_ip = "127.0.0.1"
+        server_ip = '10.229.68.204'
         server_port = 22236
         try:
             self.client_socket.connect((server_ip, server_port))

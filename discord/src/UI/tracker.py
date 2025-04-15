@@ -6,10 +6,22 @@ import logging
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
 class TRACKER:
-    def __init__(self, host="127.0.0.1", port=5000):
+    def __init__(self, port=5000):
         self.peer_list = []  # Danh sách các peer đang kết nối
         self.peer_list_lock = threading.Lock()  # Lock cho việc truy cập danh sách
+        host = self.get_host_default_interface_ip()
         self.tracker_server(host, port)  # Khởi động server
+
+    def get_host_default_interface_ip(self):
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        try:
+            s.connect(('8.8.8.8',1))
+            ip = s.getsockname()[0]
+        except Exception:
+            ip = '127.0.0.1'
+        finally:
+            s.close()
+        return ip
 
     def handle_client(self, conn, addr):
         logging.info("New connection from %s", addr)
@@ -117,15 +129,14 @@ class TRACKER:
             conn.close()
             logging.info("Connection with %s closed.", addr)
 
-    def tracker_server(self, host="127.0.0.1", port=5000):
-        server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        server.bind((host, port))
-        server.listen(5)
+    def tracker_server(self, host, port=5000):
+        serversocket = socket.socket()
+        serversocket.bind((host, port))
+        serversocket.listen(5)
         logging.info("Tracker is listening on %s:%s", host, port)
 
         while True:
-            conn, addr = server.accept()
+            conn, addr = serversocket.accept()
             threading.Thread(target=self.handle_client, args=(conn, addr), daemon=True).start()
 
 if __name__ == "__main__":

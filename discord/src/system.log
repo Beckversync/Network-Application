@@ -467,65 +467,256 @@
 [2025-04-10 17:48:51,455] INFO: Sending message: i am panguyen
 [2025-04-10 17:48:51,561] INFO: Message from an09 sent in channel 'private0'
 [2025-04-10 17:48:54,338] INFO: User an09 logged out
-[2025-04-14 12:41:03,664] INFO: Logged in as: an09
-[2025-04-14 12:42:46,439] INFO: User 'an09' logging in (authenticated mode).
-[2025-04-14 12:42:46,441] INFO: Tracker response: Peer an09 (127.0.0.1:6739) added
-[2025-04-14 12:42:46,442] INFO: UDP LISTENER listening on 127.0.0.1:6740 for livestream.
-[2025-04-14 12:42:46,442] INFO: P2P SERVER listening on 127.0.0.1:6739
-[2025-04-14 12:44:08,761] INFO: Tracker response on LEAVE: Peer an09 (127.0.0.1:6739) left
-[2025-04-14 12:44:30,389] INFO: Server for an09 is listening on port 4312...
-[2025-04-14 12:44:30,496] INFO: User an09 logged in successfully
-[2025-04-14 12:44:30,498] INFO: Logged in as: an09
-[2025-04-14 12:44:31,657] INFO: User 'an09' logging in (authenticated mode).
-[2025-04-14 12:44:31,659] INFO: Tracker response: Peer an09 (127.0.0.1:8499) added
-[2025-04-14 12:44:31,660] INFO: P2P SERVER listening on 127.0.0.1:8499
-[2025-04-14 12:44:31,660] INFO: UDP LISTENER listening on 127.0.0.1:8500 for livestream.
-[2025-04-14 12:44:35,767] INFO: User an09 logged out
-[2025-04-14 12:44:36,684] INFO: Tracker response on LEAVE: Peer an09 (127.0.0.1:8499) left
-[2025-04-14 13:08:18,538] INFO: Logged in as: an09
-[2025-04-14 13:08:19,296] INFO: User 'an09' logging in (authenticated mode).
-[2025-04-14 13:08:19,297] INFO: Tracker response: Peer an09 (127.0.0.1:6641) added
-[2025-04-14 13:08:19,298] INFO: P2P SERVER listening on 127.0.0.1:6641
-[2025-04-14 13:08:19,298] INFO: UDP LISTENER listening on 127.0.0.1:6642 for livestream.
-[2025-04-14 13:09:35,598] INFO: [SYNC] SyncManager started for channel 'test2'
-[2025-04-14 13:09:40,598] INFO: Sending message: alo
-[2025-04-14 13:09:40,727] INFO: Message from an09 sent in channel '123'
-[2025-04-14 13:09:40,727] INFO: Message from an09 sent in channel '123'
-[2025-04-14 13:09:44,513] INFO: Sending message: lololo
-[2025-04-14 13:09:44,622] INFO: Message from an09 sent in channel '123'
-[2025-04-14 13:09:44,623] INFO: Message from an09 sent in channel '123'
-[2025-04-14 13:09:50,657] INFO: Sending message: 123
-[2025-04-14 13:09:50,770] INFO: Message from an09 sent in channel '123'
-[2025-04-14 13:09:50,771] INFO: Message from an09 sent in channel '123'
-[2025-04-14 13:09:52,038] INFO: Sending message: 545
-[2025-04-14 13:09:52,166] INFO: Message from an09 sent in channel '123'
-[2025-04-14 13:09:52,167] INFO: Message from an09 sent in channel '123'
-[2025-04-14 13:11:37,158] INFO: Sending message: lo
-[2025-04-14 13:11:37,416] INFO: Message from an09 sent in channel '123'
-[2025-04-14 13:11:37,417] INFO: Message from an09 sent in channel '123'
-[2025-04-14 13:15:57,480] INFO: Tracker response on LEAVE: Peer an09 (127.0.0.1:6641) left
-[2025-04-14 14:15:17,101] INFO: Logged in as: an09
-[2025-04-14 14:15:17,605] INFO: User 'an09' logging in (authenticated mode).
-[2025-04-14 14:15:17,607] INFO: Tracker response: Peer an09 (127.0.0.1:6290) added
-[2025-04-14 14:15:17,608] INFO: P2P SERVER listening on 127.0.0.1:6290
-[2025-04-14 14:15:17,609] INFO: UDP LISTENER listening on 127.0.0.1:6291 for livestream.
-[2025-04-14 14:25:06,893] INFO: Logged in as: an09
-[2025-04-14 14:25:08,048] INFO: User 'an09' logging in (authenticated mode).
-[2025-04-14 14:25:08,050] INFO: Tracker response: Peer an09 (127.0.0.1:8078) added
-[2025-04-14 14:25:08,050] INFO: P2P SERVER listening on 127.0.0.1:8078
-[2025-04-14 14:25:08,050] INFO: UDP LISTENER listening on 127.0.0.1:8079 for livestream.
-[2025-04-14 14:29:14,253] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
-[2025-04-14 14:29:16,899] INFO: User an09 requested to join private channel 'Peee'
-[2025-04-14 14:29:19,358] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
-[2025-04-14 14:29:24,466] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
-[2025-04-14 14:29:49,494] INFO: User an09 requested to join private channel 'an08'
-[2025-04-14 14:29:50,437] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
-[2025-04-14 14:30:11,020] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
-[2025-04-14 14:30:13,153] INFO: User an09 requested to join private channel 'an09'
-[2025-04-14 14:30:16,158] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
-[2025-04-14 14:30:21,282] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
-[2025-04-14 14:30:36,603] ERROR: Polling error: Channel not found
-[2025-04-14 14:30:41,711] ERROR: Polling error: Channel not found
-[2025-04-14 14:30:51,948] ERROR: Polling error: Channel not found
-[2025-04-14 14:30:57,052] ERROR: Polling error: Channel not found
-[2025-04-14 14:30:57,101] ERROR: Exception in load_dm_list: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-15 10:45:26,342] INFO: Logged in as: an08
+[2025-04-15 10:45:30,840] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-15 10:45:49,295] INFO: Logged in as: an09
+[2025-04-15 10:45:50,070] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-15 10:45:51,890] ERROR: Unable to connect to Tracker: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-15 10:45:51,892] INFO: P2P SERVER listening on 127.0.0.1:6133
+[2025-04-15 10:45:51,892] INFO: UDP LISTENER listening on 127.0.0.1:6134 for livestream.
+[2025-04-15 10:46:11,115] ERROR: Unable to connect to Tracker: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-15 10:46:11,118] INFO: P2P SERVER listening on 127.0.0.1:6661
+[2025-04-15 10:46:11,118] INFO: UDP LISTENER listening on 127.0.0.1:6662 for livestream.
+[2025-04-15 10:46:20,160] ERROR: Not connected to tracker.
+[2025-04-15 10:46:23,545] ERROR: Not connected to tracker.
+[2025-04-15 11:00:11,031] INFO: Logged in as: an09
+[2025-04-15 11:00:18,280] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-15 11:00:39,321] ERROR: Unable to connect to Tracker: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-15 11:00:39,323] INFO: P2P SERVER listening on 127.0.0.1:7897
+[2025-04-15 11:00:39,323] INFO: UDP LISTENER listening on 127.0.0.1:7898 for livestream.
+[2025-04-15 11:03:44,842] ERROR: Not connected to tracker.
+[2025-04-15 11:17:17,772] INFO: Logged in as: an08
+[2025-04-15 11:17:18,521] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-15 11:17:39,555] ERROR: Unable to connect to Tracker: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-15 11:17:39,560] INFO: P2P SERVER listening on 10.229.68.204:6266
+[2025-04-15 11:17:39,561] INFO: UDP LISTENER listening on 10.229.68.204:6267 for livestream.
+[2025-04-15 11:18:54,164] INFO: Channel 'public' created by an08 (is_private=True)
+[2025-04-15 11:18:55,647] INFO: [SYNC] SyncManager started for channel 'public'
+[2025-04-15 11:18:57,132] INFO: Sending message: 1
+[2025-04-15 11:18:57,133] ERROR: Tracker offline: cannot send channel message: 1
+[2025-04-15 11:20:48,327] ERROR: Not connected to tracker.
+[2025-04-15 11:37:42,978] INFO: Logged in as: an08
+[2025-04-15 11:37:44,653] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-15 11:38:05,686] ERROR: Unable to connect to Tracker: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-15 11:38:05,689] INFO: P2P SERVER listening on 10.229.68.204:6595
+[2025-04-15 11:38:05,691] INFO: UDP LISTENER listening on 10.229.68.204:6596 for livestream.
+[2025-04-15 11:44:21,794] ERROR: Not connected to tracker.
+[2025-04-15 11:44:31,754] INFO: Logged in as: an08
+[2025-04-15 11:44:32,803] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-15 11:44:32,807] INFO: Tracker response: Peer an08 (10.229.68.204:8946) added
+[2025-04-15 11:44:32,808] INFO: UDP LISTENER listening on 10.229.68.204:8947 for livestream.
+[2025-04-15 11:44:32,808] INFO: P2P SERVER listening on 10.229.68.204:8946
+[2025-04-15 11:44:46,846] INFO: [SYNC] SyncManager started for channel 'public'
+[2025-04-15 11:44:49,887] INFO: Sending message: helo
+[2025-04-15 11:44:49,990] INFO: Message from an08 sent in channel 'public'
+[2025-04-15 11:44:49,991] INFO: Message from an08 sent in channel 'public'
+[2025-04-15 11:44:55,448] INFO: Sending message: lz nao z
+[2025-04-15 11:44:55,554] INFO: Message from an08 sent in channel 'public'
+[2025-04-15 11:44:55,554] INFO: Message from an08 sent in channel 'public'
+[2025-04-15 11:46:58,967] INFO: Sending message: t
+[2025-04-15 11:46:59,071] INFO: Message from an08 sent in channel 'public'
+[2025-04-15 11:46:59,071] INFO: Message from an08 sent in channel 'public'
+[2025-04-15 11:47:01,915] INFO: Sending message: an08'
+[2025-04-15 11:47:02,018] INFO: Message from an08 sent in channel 'public'
+[2025-04-15 11:47:02,019] INFO: Message from an08 sent in channel 'public'
+[2025-04-15 11:52:17,637] INFO: Channel 'private' created by an08 (is_private=True)
+[2025-04-15 11:52:21,745] INFO: Sending message: helo
+[2025-04-15 11:52:21,894] INFO: Message from an08 sent in channel 'private'
+[2025-04-15 11:52:21,895] INFO: Message from an08 sent in channel 'private'
+[2025-04-15 11:52:41,133] INFO: Logged in as: an09
+[2025-04-15 11:52:42,242] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-15 11:52:42,245] INFO: Tracker response: Peer an09 (10.229.68.204:8723) added
+[2025-04-15 11:52:42,246] INFO: P2P SERVER listening on 10.229.68.204:8723
+[2025-04-15 11:52:42,246] INFO: UDP LISTENER listening on 10.229.68.204:8724 for livestream.
+[2025-04-15 11:52:47,581] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:52:52,749] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:52:53,287] INFO: User an09 requested to join private channel 'private'
+[2025-04-15 11:52:57,923] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:53:03,205] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:53:08,427] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:53:12,930] INFO: Channel 'public1' created by an09 (is_private=False)
+[2025-04-15 11:53:13,614] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:53:18,784] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:53:24,182] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:53:29,764] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:53:35,006] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:53:40,175] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:53:45,389] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:53:46,122] INFO: Channel 'public2' created by an09 (is_private=True)
+[2025-04-15 11:53:50,556] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:53:55,732] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:53:58,206] INFO: [SYNC] SyncManager started for channel 'public2'
+[2025-04-15 11:53:59,185] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:54:04,394] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:54:08,268] INFO: User an08 requested to join private channel 'public2'
+[2025-04-15 11:54:09,625] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:54:14,923] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:54:20,100] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 11:54:24,995] INFO: User an08 approved to join channel 'public2' by an09
+[2025-04-15 11:54:28,897] INFO: Channel 'public2' deleted by an09
+[2025-04-15 11:54:32,473] INFO: User an09 rejected from channel 'private' by an08
+[2025-04-15 11:54:35,180] INFO: Channel 'private' deleted by an08
+[2025-04-15 11:54:45,131] INFO: Channel 'public1' deleted by an09
+[2025-04-15 11:54:48,444] INFO: Tracker response on LEAVE: Peer an09 (10.229.68.204:8723) left
+[2025-04-15 11:54:51,825] INFO: Tracker response on LEAVE: Peer an08 (10.229.68.204:8946) left
+[2025-04-15 12:06:58,288] INFO: Logged in as: an08
+[2025-04-15 12:06:58,868] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-15 12:06:58,870] INFO: Tracker response: Peer an08 (10.229.68.204:6860) added
+[2025-04-15 12:06:58,872] INFO: P2P SERVER listening on 10.229.68.204:6860
+[2025-04-15 12:06:58,873] INFO: UDP LISTENER listening on 10.229.68.204:6861 for livestream.
+[2025-04-15 12:07:06,842] INFO: Logged in as: an09
+[2025-04-15 12:07:07,626] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-15 12:07:07,628] INFO: Tracker response: Peer an09 (10.229.68.204:7285) added
+[2025-04-15 12:07:07,629] INFO: P2P SERVER listening on 10.229.68.204:7285
+[2025-04-15 12:07:07,629] INFO: UDP LISTENER listening on 10.229.68.204:7286 for livestream.
+[2025-04-15 12:07:18,139] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:07:20,921] INFO: User an09 requested to join private channel 'Testprivate'
+[2025-04-15 12:07:23,301] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:07:28,472] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:07:33,639] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:07:38,786] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:07:43,966] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:07:49,118] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:07:54,273] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:07:59,454] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:08:04,647] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:08:09,829] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:08:15,040] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:08:17,472] INFO: Tracker response on LEAVE: Peer an09 (10.229.68.204:7285) left
+[2025-04-15 12:10:55,591] INFO: Logged in as: an08
+[2025-04-15 12:10:56,293] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-15 12:10:56,294] INFO: Tracker response: Peer an08 (10.229.68.204:6306) added
+[2025-04-15 12:10:56,295] INFO: UDP LISTENER listening on 10.229.68.204:6307 for livestream.
+[2025-04-15 12:10:56,295] INFO: P2P SERVER listening on 10.229.68.204:6306
+[2025-04-15 12:11:04,096] INFO: Logged in as: an09
+[2025-04-15 12:11:04,832] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-15 12:11:04,834] INFO: Tracker response: Peer an09 (10.229.68.204:6540) added
+[2025-04-15 12:11:04,835] INFO: P2P SERVER listening on 10.229.68.204:6540
+[2025-04-15 12:11:04,835] INFO: UDP LISTENER listening on 10.229.68.204:6541 for livestream.
+[2025-04-15 12:11:10,129] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:11:10,132] INFO: [SYNC] SyncManager started for channel 'public'
+[2025-04-15 12:11:10,452] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:11:15,628] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:11:16,914] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:11:18,042] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:11:20,935] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:11:26,279] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:11:31,563] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:11:33,139] INFO: User an09 requested to join private channel 'public'
+[2025-04-15 12:11:36,758] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:11:41,097] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:11:41,869] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:11:41,943] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:11:42,444] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:11:43,012] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:11:43,678] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:11:47,132] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:11:51,284] INFO: Channel 'public' deleted by an08
+[2025-04-15 12:11:52,333] ERROR: Polling error: Channel not found
+[2025-04-15 12:11:52,798] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:11:57,519] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:12:02,405] INFO: Channel 'helo1' created by an09 (is_private=True)
+[2025-04-15 12:12:02,728] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:12:07,932] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:12:09,073] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:12:10,399] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-15 12:12:13,166] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:12:14,398] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:12:17,192] INFO: User an08 requested to join private channel 'helo1'
+[2025-04-15 12:12:18,361] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:12:19,564] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:12:20,144] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:12:20,145] INFO: [SYNC] SyncManager started for channel 'helo1'
+[2025-04-15 12:12:21,894] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:12:22,289] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:12:22,695] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:12:23,392] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:12:24,216] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:12:24,740] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:12:24,900] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:12:25,254] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:12:25,652] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:12:26,207] ERROR: load_channel_messages error: DiscordUI.generate_request() takes 1 positional argument but 2 were given
+[2025-04-15 12:12:29,290] INFO: Tracker response on LEAVE: Peer an08 (10.229.68.204:6306) left
+[2025-04-15 12:12:29,921] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:12:34,118] INFO: Tracker response on LEAVE: Peer an09 (10.229.68.204:6540) left
+[2025-04-15 12:14:53,567] INFO: Logged in as: an08
+[2025-04-15 12:14:54,139] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-15 12:14:54,141] INFO: Tracker response: Peer an08 (10.229.68.204:8760) added
+[2025-04-15 12:14:54,142] INFO: P2P SERVER listening on 10.229.68.204:8760
+[2025-04-15 12:14:54,142] INFO: UDP LISTENER listening on 10.229.68.204:8761 for livestream.
+[2025-04-15 12:15:00,752] INFO: Logged in as: an09
+[2025-04-15 12:15:01,538] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-15 12:15:01,539] INFO: Tracker response: Peer an09 (10.229.68.204:8811) added
+[2025-04-15 12:15:01,539] INFO: P2P SERVER listening on 10.229.68.204:8811
+[2025-04-15 12:15:01,539] INFO: UDP LISTENER listening on 10.229.68.204:8812 for livestream.
+[2025-04-15 12:15:06,005] ERROR: load_channel_messages error: 'DiscordUI' object has no attribute 'owner'
+[2025-04-15 12:15:06,007] INFO: [SYNC] SyncManager started for channel 'helo1'
+[2025-04-15 12:15:08,242] ERROR: load_channel_messages error: 'DiscordUI' object has no attribute 'owner'
+[2025-04-15 12:15:09,864] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:15:15,047] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:15:19,420] INFO: Channel 'helo1' deleted by an09
+[2025-04-15 12:15:20,251] ERROR: Polling error: Channel not found
+[2025-04-15 12:15:25,439] ERROR: Polling error: Channel not found
+[2025-04-15 12:15:25,474] INFO: Channel '3' created by an09 (is_private=True)
+[2025-04-15 12:15:28,976] INFO: User an08 requested to join private channel '3'
+[2025-04-15 12:15:30,642] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:15:32,306] ERROR: load_channel_messages error: 'DiscordUI' object has no attribute 'owner'
+[2025-04-15 12:15:34,025] ERROR: load_channel_messages error: 'DiscordUI' object has no attribute 'owner'
+[2025-04-15 12:15:34,498] ERROR: load_channel_messages error: 'DiscordUI' object has no attribute 'owner'
+[2025-04-15 12:15:35,530] ERROR: load_channel_messages error: 'DiscordUI' object has no attribute 'owner'
+[2025-04-15 12:15:35,822] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:15:35,960] ERROR: load_channel_messages error: 'DiscordUI' object has no attribute 'owner'
+[2025-04-15 12:15:36,118] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-15 12:15:41,003] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:15:46,189] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:15:51,379] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:15:56,577] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:16:01,810] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:16:04,600] INFO: Tracker response on LEAVE: Peer an08 (10.229.68.204:8760) left
+[2025-04-15 12:16:06,189] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-15 12:16:07,382] INFO: Tracker response on LEAVE: Peer an09 (10.229.68.204:8811) left
+[2025-04-15 12:16:09,031] ERROR: Exception in load_dm_list: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-15 12:16:09,092] ERROR: get_channels_from_server error: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-15 12:17:05,204] INFO: Logged in as: an08
+[2025-04-15 12:17:06,184] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-15 12:17:06,186] INFO: Tracker response: Peer an08 (10.229.68.204:6802) added
+[2025-04-15 12:17:06,187] INFO: P2P SERVER listening on 10.229.68.204:6802
+[2025-04-15 12:17:06,187] INFO: UDP LISTENER listening on 10.229.68.204:6803 for livestream.
+[2025-04-15 12:17:14,975] INFO: Logged in as: an09
+[2025-04-15 12:17:15,628] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-15 12:17:15,630] INFO: Tracker response: Peer an09 (10.229.68.204:7121) added
+[2025-04-15 12:17:15,630] INFO: UDP LISTENER listening on 10.229.68.204:7122 for livestream.
+[2025-04-15 12:17:15,631] INFO: P2P SERVER listening on 10.229.68.204:7121
+[2025-04-15 12:17:18,892] INFO: [SYNC] SyncManager started for channel '3'
+[2025-04-15 12:17:27,576] INFO: Channel '4' created by an09 (is_private=True)
+[2025-04-15 12:17:37,339] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:17:39,256] INFO: Channel '5' created by an08 (is_private=True)
+[2025-04-15 12:17:42,761] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:17:47,961] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:17:48,614] INFO: User an08 requested to join private channel '4'
+[2025-04-15 12:17:52,561] INFO: User an08 approved to join channel '4' by an09
+[2025-04-15 12:17:58,125] INFO: Tracker response on LEAVE: Peer an08 (10.229.68.204:6802) left
+[2025-04-15 12:18:00,017] INFO: Logged in as: an08
+[2025-04-15 12:18:00,905] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-15 12:18:00,907] INFO: Tracker response: Peer an08 (10.229.68.204:7847) added
+[2025-04-15 12:18:00,908] INFO: P2P SERVER listening on 10.229.68.204:7847
+[2025-04-15 12:18:00,908] INFO: UDP LISTENER listening on 10.229.68.204:7848 for livestream.
+[2025-04-15 12:18:04,133] INFO: [SYNC] SyncManager started for channel '5'
+[2025-04-15 12:18:08,380] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:18:11,898] INFO: User an09 requested to join private channel '5'
+[2025-04-15 12:18:13,535] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 12:18:16,628] INFO: User an09 approved to join channel '5' by an08
+[2025-04-15 12:18:20,363] INFO: Channel '5' deleted by an08
+[2025-04-15 12:18:23,941] INFO: Channel '4' deleted by an09
+[2025-04-15 12:18:24,365] ERROR: Polling error: Channel not found
+[2025-04-15 12:18:27,313] ERROR: Polling error: Channel not found
+[2025-04-15 12:18:29,535] ERROR: Polling error: Channel not found
+[2025-04-15 12:18:32,333] INFO: Channel '3' deleted by an09
+[2025-04-15 12:18:32,458] ERROR: Polling error: Channel not found
+[2025-04-15 12:18:34,258] ERROR: [SYNC] Sync down failed: Channel not found
+[2025-04-15 12:18:34,700] ERROR: Polling error: Channel not found
+[2025-04-15 12:18:37,068] INFO: Tracker response on LEAVE: Peer an09 (10.229.68.204:7121) left
+[2025-04-15 12:18:37,613] ERROR: Polling error: Channel not found
+[2025-04-15 12:18:39,848] ERROR: Polling error: Channel not found
+[2025-04-15 12:18:40,364] INFO: Tracker response on LEAVE: Peer an08 (10.229.68.204:7847) left
