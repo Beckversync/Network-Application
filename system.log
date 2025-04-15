@@ -70043,3 +70043,82 @@
 [2025-04-14 21:47:53,734] INFO: User an08 logged out
 [2025-04-14 21:47:54,507] INFO: Tracker response on LEAVE: Peer an08 (127.0.0.1:7260) left
 [2025-04-14 21:47:57,172] ERROR: Exception in load_dm_list: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-15 13:20:38,485] INFO: User an08 logged in successfully
+[2025-04-15 13:20:38,485] INFO: Logged in as: an08
+[2025-04-15 13:20:39,404] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-15 13:21:00,429] ERROR: Unable to connect to Tracker: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-15 13:21:00,429] INFO: P2P SERVER listening on 127.0.0.1:7415
+[2025-04-15 13:21:00,429] INFO: UDP LISTENER listening on 127.0.0.1:7416 for livestream.
+[2025-04-15 13:21:05,135] INFO: User an08 logged out
+[2025-04-15 13:21:05,760] ERROR: Not connected to tracker.
+[2025-04-15 13:21:12,758] INFO: User an08 logged in successfully
+[2025-04-15 13:21:12,760] INFO: Logged in as: an08
+[2025-04-15 13:21:13,358] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-15 13:21:13,358] INFO: Tracker response: Peer an08 (127.0.0.1:8481) added
+[2025-04-15 13:21:13,358] INFO: P2P SERVER listening on 127.0.0.1:8481
+[2025-04-15 13:21:13,358] INFO: UDP LISTENER listening on 127.0.0.1:8482 for livestream.
+[2025-04-15 13:21:15,049] INFO: User an08 logged out
+[2025-04-15 13:21:16,638] INFO: Tracker response on LEAVE: Peer an08 (127.0.0.1:8481) left
+[2025-04-15 13:24:48,732] INFO: User an08 logged in successfully
+[2025-04-15 13:24:48,732] INFO: Logged in as: an08
+[2025-04-15 13:24:49,354] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-15 13:24:49,356] INFO: Tracker response: Peer an08 (127.0.0.1:7643) added
+[2025-04-15 13:24:49,356] INFO: P2P SERVER listening on 127.0.0.1:7643
+[2025-04-15 13:24:49,356] INFO: UDP LISTENER listening on 127.0.0.1:7644 for livestream.
+[2025-04-15 13:26:44,767] INFO: User an08 logged out
+[2025-04-15 13:26:45,323] INFO: Tracker response on LEAVE: Peer an08 (127.0.0.1:7643) left
+[2025-04-15 13:38:50,317] INFO: User an08 logged in successfully
+[2025-04-15 13:38:50,317] INFO: Logged in as: an08
+[2025-04-15 13:38:51,011] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-15 13:38:51,011] INFO: Tracker response: Peer an08 (192.168.110.96:7259) added
+[2025-04-15 13:38:51,017] INFO: P2P SERVER listening on 192.168.110.96:7259
+[2025-04-15 13:38:51,017] INFO: UDP LISTENER listening on 192.168.110.96:7260 for livestream.
+[2025-04-15 13:38:52,749] INFO: User an08 logged out
+[2025-04-15 13:38:54,624] INFO: Tracker response on LEAVE: Peer an08 (192.168.110.96:7259) left
+[2025-04-15 13:54:37,325] INFO: User an08 logged in successfully
+[2025-04-15 13:54:37,325] INFO: Logged in as: an08
+[2025-04-15 13:54:38,112] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-15 13:54:38,112] INFO: Tracker response: Peer an08 (192.168.110.96:8256) added
+[2025-04-15 13:54:38,112] INFO: P2P SERVER listening on 192.168.110.96:8256
+[2025-04-15 13:54:38,112] INFO: UDP LISTENER listening on 192.168.110.96:8257 for livestream.
+[2025-04-15 13:54:43,117] INFO: User an08 logged out
+[2025-04-15 13:54:44,019] INFO: Tracker response on LEAVE: Peer an08 (192.168.110.96:8256) left
+[2025-04-15 14:58:44,711] INFO: User an09 logged in successfully
+[2025-04-15 14:58:44,711] INFO: Logged in as: an09
+[2025-04-15 14:58:45,205] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-15 14:58:45,205] INFO: Tracker response: Peer an09 (172.20.10.2:6912) added
+[2025-04-15 14:58:45,205] INFO: P2P SERVER listening on 172.20.10.2:6912
+[2025-04-15 14:58:45,205] INFO: UDP LISTENER listening on 172.20.10.2:6913 for livestream.
+[2025-04-15 14:59:16,904] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 14:59:37,089] INFO: Sending message: hello AN
+[2025-04-15 14:59:37,248] INFO: Message from an09 sent in channel 'live1'
+[2025-04-15 14:59:37,248] INFO: Message from an09 sent in channel 'live1'
+[2025-04-15 15:00:24,896] INFO: Sending message: he;;o
+[2025-04-15 15:00:25,063] INFO: Message from an09 sent in channel 'live1'
+[2025-04-15 15:00:25,064] INFO: Message from an09 sent in channel 'live1'
+[2025-04-15 15:00:37,495] INFO: Sending message: sao cu
+[2025-04-15 15:00:37,654] INFO: Message from an09 sent in channel 'live1'
+[2025-04-15 15:00:37,654] INFO: Message from an09 sent in channel 'live1'
+[2025-04-15 15:00:53,545] INFO: User an09 logged out
+[2025-04-15 15:00:54,448] INFO: Tracker response on LEAVE: Peer an09 (172.20.10.2:6912) left
+[2025-04-15 15:10:25,282] INFO: User an09 logged in successfully
+[2025-04-15 15:10:25,282] INFO: Logged in as: an09
+[2025-04-15 15:10:26,186] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-15 15:10:26,186] INFO: Tracker response: Peer an09 (172.20.10.2:7735) added
+[2025-04-15 15:10:26,186] INFO: P2P SERVER listening on 172.20.10.2:7735
+[2025-04-15 15:10:26,186] INFO: UDP LISTENER listening on 172.20.10.2:7736 for livestream.
+[2025-04-15 15:10:47,273] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-15 15:10:48,177] INFO: [SYNC] SyncManager started for channel 'lol'
+[2025-04-15 15:11:24,936] INFO: Sending message: xin chào
+[2025-04-15 15:11:25,100] INFO: Message from an09 sent in channel 'an08'
+[2025-04-15 15:11:25,100] INFO: Message from an09 sent in channel 'an08'
+[2025-04-15 15:11:35,579] INFO: Channel 'newchanel' created by an09 (is_private=True)
+[2025-04-15 15:11:52,369] INFO: User an08 approved to join channel 'newchanel' by an09
+[2025-04-15 15:12:04,406] INFO: Sending message: oke
+[2025-04-15 15:12:04,610] INFO: Message from an09 sent in channel 'newchanel'
+[2025-04-15 15:12:04,610] INFO: Message from an09 sent in channel 'newchanel'
+[2025-04-15 15:12:15,199] INFO: Channel 'ấddsa' created by an09 (is_private=True)
+[2025-04-15 15:12:29,869] INFO: User an08 rejected from channel 'ấddsa' by an09
+[2025-04-15 15:12:44,689] INFO: User an08 approved to join channel 'ấddsa' by an09
+[2025-04-15 15:13:56,199] INFO: User an09 logged out
+[2025-04-15 15:13:57,305] INFO: Tracker response on LEAVE: [DM to an09 (Online)] aaaaa

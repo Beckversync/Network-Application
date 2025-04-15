@@ -20,7 +20,7 @@ class USER:
         else:
             self.name = input("ENTER YOUR NAME: ")
 
-        self.ip = "127.0.0.1"
+        self.ip = "172.20.10.2"
         if headless:
             if port is not None:
                 self.port = port
@@ -449,4 +449,4 @@ class USER:
             logging.error("Invalid selection or error: %s", e)
 
 if __name__ == '__main__':
-    USER("127.0.0.1", 5000)
+    USER("172.20.10.2", 5000)

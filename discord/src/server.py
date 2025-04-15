@@ -3,7 +3,7 @@ import socket
 import threading
 from request.authRequest import handle_request as auth_request
 from request.channelRequest import handle_channel_request  # Import xử lý channel
-from config.db import client  # Kết nối MongoDB
+# from config.db import client  # Kết nối MongoDB
 
 # Kết nối đến MongoDB
 def handle_client(conn, addr):
@@ -31,15 +31,30 @@ def handle_client(conn, addr):
     finally:
         conn.close()
 
+def get_host_default_interface_ip():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    try:
+       s.connect(('8.8.8.8',1))
+       ip = s.getsockname()[0]
+    except Exception:
+       ip = '127.0.0.1'
+    finally:
+       s.close()
+    return ip
+
 def server_program(host, port):
-    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.bind((host, port))
-    server_socket.listen(5)
+    serversocket = socket.socket()
+    serversocket.bind((host, port))
+    serversocket.listen(5)
     print(f"Socket server listening on {host}:{port}")
 
     while True:
-        conn, addr = server_socket.accept()
+        conn, addr = serversocket.accept()
         threading.Thread(target=handle_client, args=(conn, addr)).start()
 
 if __name__ == "__main__":
-    server_program("0.0.0.0", 22236)
+    #hostname = socket.gethostname()
+    hostip = get_host_default_interface_ip()
+    port = 22236
+    print("Listening on: {}:{}".format(hostip,port))
+    server_program(hostip, port)
