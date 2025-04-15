@@ -600,7 +600,7 @@ class DiscordUI(QMainWindow):
         session_id = self.session_info.get("session_id")
         try:
             client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            server_ip = '10.229.68.204'
+            server_ip = '172.20.10.4'
             server_port = 22236
             client_socket.connect((server_ip, server_port))
             if status == "Online":
@@ -625,7 +625,7 @@ class DiscordUI(QMainWindow):
     def logout(self):
         try:
             client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            server_ip = '10.229.68.204'
+            server_ip = '172.20.10.4'
             server_port = 22236
             client_socket.connect((server_ip, server_port))
             session_id = self.session_info.get("session_id")

@@ -20,7 +20,7 @@ class USER:
         else:
             self.name = input("ENTER YOUR NAME: ")
 
-        self.ip = "10.229.68.204"
+        self.ip = "172.20.10.4"
         if headless:
             if port is not None:
                 self.port = port
@@ -31,7 +31,7 @@ class USER:
 
         self.udp_port = self.port + 1
         self.tracker_socket = None
-        self.connect_to_tracker('10.229.68.204', 5000)
+        self.connect_to_tracker('172.20.10.4', 5000)
         self.start_p2p_server()
         self.start_udp_listener()
         self.chat_history = []  # Lịch sử chat
@@ -449,4 +449,4 @@ class USER:
             logging.error("Invalid selection or error: %s", e)
 
 if __name__ == '__main__':
-    USER("10.229.68.204", 5000)
+    USER("172.20.10.4", 5000)

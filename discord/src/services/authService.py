@@ -4,6 +4,8 @@ from datetime import datetime, timezone
 from models.authModel import UserRegister, UserLogin, Visitor
 import logging
 import re
+import threading
+import socket
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
@@ -39,7 +41,11 @@ def login_user(user: UserLogin, peer_ip: str, peer_port: int) -> dict:
         }
         users_collection.update_one(
             {"username": user.username},
-            {"$push": {"sessions": new_session}}
+             {
+                 "$push": {"sessions": new_session},
+                 "$set": {"state": "online"}
+             }
+            
         )
         user_data = users_collection.find_one({"username": user.username})
 
@@ -55,6 +61,7 @@ def login_user(user: UserLogin, peer_ip: str, peer_port: int) -> dict:
             "user": {
                 "username": user_data["username"],
                 "email": user_data.get("email", ""),
+                "state": user_data.get("state", "online"),
                 "channels_joined": user_data.get("channels_joined", []),
                 "hosted_channels": user_data.get("hosted_channels", []),
                 "sessions": [{**session, "login_time": serialize(session["login_time"])}
@@ -112,6 +119,13 @@ def logout_user(session_id: str) -> dict:
             {"_id": user["_id"]},
             {"$pull": {"sessions": {"session_id": session_id}}}
         )
+
+        updated_user = users_collection.find_one({"_id": user["_id"]})
+        if not updated_user.get("sessions"):  # sessions rỗng hoặc không tồn tại
+             users_collection.update_one(
+                 {"_id": user["_id"]},
+                 {"$set": {"state": "offline"}}
+             )
         logging.info("User %s logged out", user["username"])
         return {"status": "success", "message": "Logout successful"}
     except Exception as e:
