@@ -9,7 +9,9 @@ import socket
 import cv2
 import numpy as np
 import base64
-
+from config.db import users_collection, channels_collection
+import time
+import datetime
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
 class USER:
@@ -20,7 +22,7 @@ class USER:
         else:
             self.name = input("ENTER YOUR NAME: ")
 
-        self.ip = "172.20.10.4"
+        self.ip = "192.168.0.4"
         if headless:
             if port is not None:
                 self.port = port
@@ -31,7 +33,7 @@ class USER:
 
         self.udp_port = self.port + 1
         self.tracker_socket = None
-        self.connect_to_tracker('172.20.10.4', 5000)
+        self.connect_to_tracker('192.168.0.4', 5000)
         self.start_p2p_server()
         self.start_udp_listener()
         self.chat_history = []  # Lịch sử chat
@@ -71,9 +73,8 @@ class USER:
         except Exception as e:
             logging.error("Unable to connect to Tracker: %s", e)
             self.tracker_socket = None
-
     def start_p2p_server(self):
-        threading.Thread(target=self.p2p_server, daemon=True).start()
+            threading.Thread(target=self.p2p_server, daemon=True).start()
 
     def p2p_server(self):
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -85,40 +86,70 @@ class USER:
                 conn, addr = server_socket.accept()
                 threading.Thread(target=self.handle_p2p_connection, args=(conn, addr), daemon=True).start()
         except Exception as e:
-            logging.error("P2P server error: %s", e)
+                logging.error("P2P server error: %s", e)
         finally:
             server_socket.close()
 
     def handle_p2p_connection(self, conn, addr):
         try:
             data = conn.recv(4096)
-            if data:
-                try:
-                    data_str = data.decode('utf-8')
-                    message_data = json.loads(data_str)
-                    msg_type = message_data.get("type", "chat")
-                    sender = message_data.get("sender", "Unknown")
-                    if msg_type == "livestream":
-                        # Kiểm tra xem livestream có thuộc channel đang xem hay không
-                        msg_channel = message_data.get("channel")
-                        if not self.active_channel or self.active_channel != msg_channel:
-                            return  # Bỏ qua nếu không trùng
-                        frame_data = message_data.get("message", "")
+            if not data:
+                logging.warning("No data received from %s", addr)
+                return
+            try:
+                data_str = data.decode('utf-8')
+                message_data = json.loads(data_str)
+                msg_type = message_data.get("type", "chat")
+                sender = message_data.get("sender", "Unknown")
+                
+                if msg_type == "livestream":
+                    msg_channel = message_data.get("channel")
+                    if not self.active_channel or self.active_channel != msg_channel:
+                        logging.warning("Livestream not matching active channel: %s", msg_channel)
+                        return
+                    
+                    frame_data = message_data.get("message", "")
+                    try:
                         img_bytes = base64.b64decode(frame_data)
                         np_arr = np.frombuffer(img_bytes, np.uint8)
                         frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
                         if frame is not None:
-                            cv2.imshow(f"Livestream from {sender}", frame)
-                            cv2.waitKey(1)
+                            threading.Thread(target=self.show_frame, args=(frame, sender)).start()
                         else:
                             logging.error("Failed to decode livestream frame from %s", sender)
-                    else:
-                        text = message_data.get("message", "")
-                        logging.info("[P2P MESSAGE] %s -> %s: %s", sender, self.name, text)
-                except Exception as e:
-                    logging.error("Error handling received P2P data: %s", e)
+                    except Exception as e:
+                        logging.error("Error decoding livestream frame: %s", e)
+
+                elif msg_type == "chat":
+                    text = message_data.get("message", "")
+                    readable_time = message_data.get("readable_time", datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+                    filename = f"sync_{self.active_channel}_{self.name}.txt"
+                    filepath = os.path.join("local_sync", filename)
+                    os.makedirs(os.path.dirname(filepath), exist_ok=True)
+                    if not os.path.exists(filepath):
+                        try:
+                            with open(filepath, 'w', encoding='utf-8') as f:
+                                f.write(f"{filename}\n")
+                            logging.info("[INFO] Create new file: %s", filepath)
+                        except Exception as e:
+                            logging.error("[ERROR] Cannot create file: %s", e)
+
+                    line = f"[{readable_time}] {sender}: {text}\n"
+                    try:
+                        with open(filepath, 'a', encoding='utf-8') as f:
+                            f.write(line)
+
+                    except Exception as e:
+                        logging.error("[SAVE_DOWN] Cannot save message: %s", e)
+
+                    logging.info("[P2P MESSAGE] %s -> %s: %s", sender, self.name, text)
+
+            except (json.JSONDecodeError, UnicodeDecodeError) as e:
+                logging.error("Error handling received data from %s: %s", addr, e)
+
         except Exception as e:
             logging.error("Handling P2P connection error: %s", e)
+
         finally:
             conn.close()
 
@@ -316,6 +347,20 @@ class USER:
             self.tracker_socket.close()
             self.tracker_socket = None
 
+    def sync_online_message(self):
+        user_data = self.users_collection.find_one({"username": self.username})
+        
+        if user_data:
+            if user_data.get("state") == "online":
+                logging.info(f"User {self.username} is online. You can now send or sync messages.")
+                return True
+            else:
+                logging.info(f"User {self.username} is not online.")
+                return False 
+        else:
+            logging.error(f"User {self.username} not found.")
+            return False
+
     def sync_offline_messages(self):
         if os.path.exists(self.offline_file):
             try:
@@ -449,4 +494,4 @@ class USER:
             logging.error("Invalid selection or error: %s", e)
 
 if __name__ == '__main__':
-    USER("172.20.10.4", 5000)
+    USER("192.168.0.4", 5000)

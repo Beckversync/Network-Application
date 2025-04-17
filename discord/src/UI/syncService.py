@@ -12,6 +12,27 @@ class SyncManager:
         # File dùng để lưu các message cục bộ khi chưa sync
         self.local_sync_file = local_sync_file or f"sync_{channel_name}_{username}.txt"
         self.last_sync_time = 0  # Sử dụng timestamp (epoch seconds) để đánh dấu lần sync cuối
+    
+    def save_down(self, message_data: dict):
+        """
+        Lưu tin nhắn được gửi đến vào file local_sync_file dưới dạng:
+        [HH:MM:SS YYYY-MM-DD] sender: text
+        """
+        try:
+            # Đảm bảo định dạng có đủ các trường cần thiết
+            readable_time = message_data.get("readable_time", "unknown_time")
+            sender = message_data.get("sender", "unknown_sender")
+            text = message_data.get("text", "")
+            line = f"[{readable_time}] {sender}: {text}\n"
+
+            # Ghi vào file
+            with open(self.local_sync_file, 'a', encoding='utf-8') as f:
+                f.write(line)
+
+            logging.info("[SAVE_DOWN] Đã lưu tin nhắn: %s", line.strip())
+
+        except Exception as e:
+            logging.error("[SAVE_DOWN] Lỗi khi lưu tin nhắn: %s", e)
 
     def sync_up(self):
         """

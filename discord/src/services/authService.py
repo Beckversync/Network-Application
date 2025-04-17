@@ -37,7 +37,7 @@ def login_user(user: UserLogin, peer_ip: str, peer_port: int) -> dict:
             "peer_port": peer_port,
             "session_id": session_id,
             "login_time": datetime.now(timezone.utc).isoformat(),
-            "visible": True  # Mặc định hiển thị là Online
+            "visible": True 
         }
         users_collection.update_one(
             {"username": user.username},

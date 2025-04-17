@@ -6,8 +6,11 @@ from PyQt6.QtCore import Qt, pyqtSignal
 from request import authRequest
 import json
 import socket
+import os
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
-
+from user import USER
+from config.db import channels_collection, users_collection
+from request import channelRequest
 class RegisterDialog(QDialog):
     def __init__(self, client_socket): 
         super().__init__()
@@ -88,8 +91,8 @@ class LoginRegisterUI(QWidget):
     def __init__(self):
         super().__init__()
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_ip = '172.20.10.4'
-        server_port = 22236
+        server_ip = '192.168.0.4'
+        server_port = 5000
         try:
             self.client_socket.connect((server_ip, server_port))
             print("Connected to server from LoginRegisterUI")
@@ -159,11 +162,10 @@ class LoginRegisterUI(QWidget):
                 "password": password
             }
 
-            # dùng self.client_socket
             self.client_socket.send(json.dumps(request_data).encode())
             response_str = self.client_socket.recv(4096).decode()
 
-            print("Server response:", response_str)
+            #print("Server response:", response_str)
             try:
                 response = json.loads(response_str)
             except json.JSONDecodeError:
@@ -191,7 +193,47 @@ class LoginRegisterUI(QWidget):
             else:
                 self.session_info = {"session_id": "dummy-session-id"}
 
-            print("Session info:", self.session_info)
+            #Đồng bộ các kênh làm owner vào file local
+            try:
+                request_channels = {
+                    "action": "get_hosted_channels",
+                    "username": self.username
+                }
+                response_channels = channelRequest.handle_channel_request(json.dumps(request_channels))
+                hosted_channels_response = json.loads(response_channels)
+                print(hosted_channels_response)
+                if hosted_channels_response.get("status") == "success":
+                    print(12222222222222222222222222222)
+                    os.makedirs("local_sync", exist_ok=True)
+                    hosted_channels = hosted_channels_response.get("data", {}).get("hosted_channels", [])
+                    for channel_name in hosted_channels:
+                        print(channel_name)
+                        request_messages = {
+                            "action": "get_channel_info",
+                            "channel_name": channel_name,
+                            "username": self.username
+                        }
+                        response_msg_str = channelRequest.handle_channel_request(json.dumps(request_messages))
+                        msg_data = json.loads(response_msg_str)
+
+                        if msg_data.get("status") == "success":
+                            messages = msg_data.get("messages", [])
+                            sync_filename = f"sync_{channel_name}_{self.username}.txt"
+                            sync_path = os.path.join("local_sync", sync_filename)
+                            
+                            with open(sync_path, "w", encoding="utf-8") as f:
+                                for msg in messages:
+                                    line = msg.get("text", "")
+                                    f.write(line + "\n")
+                            logging.info("[SYNC LOGIN] Saved %d messages for %s", len(messages), channel_name)
+                        else:
+                            logging.warning("[SYNC LOGIN] Failed to get messages for channel: %s", channel_name)
+                else:
+                    logging.warning("[SYNC LOGIN] Failed to fetch hosted channels")
+
+            except Exception as sync_e:
+                logging.error("Error during login-time sync: %s", sync_e)
+
             self.login_success.emit(self.username, self.session_info)
 
         except Exception as e:

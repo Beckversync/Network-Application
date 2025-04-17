@@ -1,8 +1,11 @@
 from config.db import channels_collection, users_collection
 from models.channelModel import Channel
 import logging
-
+import time
+import datetime
+import socket
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
+import json
 
 def create_channel(host: str, channel_name: str, is_private: bool):
     if channels_collection.find_one({"channel_name": channel_name}):
@@ -105,7 +108,6 @@ def get_join_requests(owner: str, channel_name: str):
         "status": "success",
         "join_requests": join_requests
     }
-
 def send_message(username: str, channel_name: str, message_text: str):
     channel_data = channels_collection.find_one({"channel_name": channel_name})
     if not channel_data:
@@ -116,14 +118,68 @@ def send_message(username: str, channel_name: str, message_text: str):
             "status": "error",
             "message": "You do not have permission to send messages in this private channel"
         }
-
-    new_message = {"sender": username, "text": message_text}
+    timestamp = time.time()
+    readable_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    new_message = {
+        "sender": username,
+        "text": f"[{readable_time}] {username}: {message_text}"
+    }
     channels_collection.update_one(
-        {"channel_name": channel_name},
-        {"$push": {"messages": new_message}}
+            {"channel_name": channel_name},
+            {"$push": {"messages": new_message}}
     )
-    logging.info("Message from %s sent in channel '%s'", username, channel_name)
     return {"status": "success", "message": "Message sent successfully"}
+
+def send_to_p2p_server(peer_ip, peer_port, message_text, sender="Unknown"):
+    try:
+        message_data = {
+            "type": "chat",
+            "sender": sender,
+            "message": message_text
+        }
+        json_str = json.dumps(message_data)
+
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.connect((peer_ip, peer_port))
+            s.sendall((json_str + "\n").encode('utf-8'))  # gửi JSON hợp lệ
+            response = s.recv(1024).decode('utf-8')
+            logging.info(f"Sending message: {json_str}")
+            return {"status": "success", "message": response}
+    except Exception as e:
+        return {"status": "error", "message": f"Không thể gửi tin nhắn đến server P2P: {str(e)}"}
+
+def send_message_p2p(username: str, channel_name: str, message_text: str):
+    channel_data = channels_collection.find_one({"channel_name": channel_name})
+    if not channel_data:
+        return {"status": "error", "message": "Không tìm thấy kênh"}
+
+    if channel_data.get("is_private", False) and username not in channel_data.get("members", []):
+        return {
+            "status": "error",
+            "message": "Bạn không có quyền gửi tin nhắn trong kênh riêng tư này"
+        }
+    owner_username = channel_data.get("owner")
+    if owner_username:
+        owner_data = users_collection.find_one({"username": owner_username})
+        if owner_data and owner_data.get("state") == "online":
+            session = next((s for s in owner_data.get("sessions", []) if s.get("visible")), None)
+            if session and session.get("peer_ip") and session.get("peer_port"):
+                peer_ip = session.get("peer_ip")
+                peer_port = session.get("peer_port")
+                
+                result = send_to_p2p_server(peer_ip, peer_port, message_text, sender=username)
+                if result['status'] == 'success':
+                    logging.info("Tin nhắn từ %s đã được gửi qua peer của chủ kênh và lưu vào kênh '%s'", username, channel_name)
+                    return {"status": "success", "message": "Tin nhắn đã được gửi qua peer của chủ kênh và lưu vào kênh"}
+                else:
+                    return result
+            else:
+                return {"status": "error", "message": "Không tìm thấy thông tin peer của chủ kênh"}
+        else:
+            send_message(username, channel_name, message_text)
+            return {"status": "success", "message": "Message sent successfully"}
+    else:
+        return {"status": "error", "message": "Không tìm thấy chủ kênh"}
 
 def get_channel_info(channel_name: str, username: str) -> dict:
     channel = channels_collection.find_one({"channel_name": channel_name})
@@ -158,7 +214,7 @@ def get_hosted_channels(username: str):
     if not user_data:
         return {"status": "error", "message": "User not found"}
     return {"status": "success", "hosted_channels": user_data.get("hosted_channels", [])}
-
+    
 def delete_channel(username: str, channel_name: str):
     channel = channels_collection.find_one({"channel_name": channel_name})
     if not channel:
