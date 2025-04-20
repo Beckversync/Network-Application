@@ -7,3 +7,4 @@ class Channel(BaseModel):
     members: List[str] = []
     is_private: bool = False
     join_requests: List[str] = []
+    allow_visitor: bool = False

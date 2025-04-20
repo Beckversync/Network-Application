@@ -21,19 +21,18 @@ class USER:
             self.name = username
         else:
             self.name = input("ENTER YOUR NAME: ")
-
-        self.ip = "192.168.0.4"
+        # ip = self.get_host_default_interface_ip()
+        # print(ip)
+        self.ip = '10.0.217.86'
         if headless:
-            if port is not None:
-                self.port = port
-            else:
-                self.port = self._get_random_port()
+            self.port = port if port is not None else self._get_random_port()
         else:
             self.port = int(input("ENTER YOUR PORT (TCP): "))
 
+        
         self.udp_port = self.port + 1
         self.tracker_socket = None
-        self.connect_to_tracker('192.168.0.4', 5000)
+        self.connect_to_tracker(TRACKER_IP, TRACKER_PORT)
         self.start_p2p_server()
         self.start_udp_listener()
         self.chat_history = []  # Lịch sử chat
@@ -52,7 +51,18 @@ class USER:
 
         if not headless:
             self.menu()
-
+    def get_host_default_interface_ip(self):
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            try:
+                s.connect(('192.168.1.1', 80))
+                ip = s.getsockname()[0]
+            except Exception as e:
+                ip = '127.0.0.1'
+                print("Error when getting IP:", e)
+            finally:
+                s.close()
+            return ip
+    
     def _get_random_port(self):
         return random.randint(6000, 9000)
 
@@ -73,8 +83,9 @@ class USER:
         except Exception as e:
             logging.error("Unable to connect to Tracker: %s", e)
             self.tracker_socket = None
+
     def start_p2p_server(self):
-            threading.Thread(target=self.p2p_server, daemon=True).start()
+        threading.Thread(target=self.p2p_server, daemon=True).start()
 
     def p2p_server(self):
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -86,7 +97,7 @@ class USER:
                 conn, addr = server_socket.accept()
                 threading.Thread(target=self.handle_p2p_connection, args=(conn, addr), daemon=True).start()
         except Exception as e:
-                logging.error("P2P server error: %s", e)
+            logging.error("P2P server error: %s", e)
         finally:
             server_socket.close()
 
@@ -494,4 +505,4 @@ class USER:
             logging.error("Invalid selection or error: %s", e)
 
 if __name__ == '__main__':
-    USER("192.168.0.4", 5000)
+    USER("10.0.217.86", 5000)

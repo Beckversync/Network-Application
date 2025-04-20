@@ -8,9 +8,10 @@ def create_channel_controller(data):
     host = data.get("host")
     channel_name = data.get("channel_name")
     is_private = data.get("is_private", False)
+    allow_visitor = data.get("allow_visitor", False)
     if not host or not channel_name:
         return {"status": "error", "message": "Missing parameters"}
-    result = create_channel(host, channel_name, is_private)
+    result = create_channel(host, channel_name, is_private, allow_visitor)
     return result
 
 def approve_join_request_controller(data):

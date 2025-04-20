@@ -30,7 +30,7 @@ class DiscordUI(QMainWindow):
         self.current_mode = None
         self.current_channel = None
         self.current_dm_user = None
-
+        self.current_channel_info = None
         self.channels = {}
         self.hosted_channels = {}      
         self.dm_users = []      
@@ -331,32 +331,37 @@ class DiscordUI(QMainWindow):
         owner_username = channel_data.get("owner")
         owner_data = users_collection.find_one({"username": owner_username})
         if owner_data and owner_data.get("state") == "offline":
-            messages = response.get("messages", [])
-            self.last_message_count = len(messages)
-            for msg in messages:
-                text = msg.get("text")
-                self.chat_display.append(f"{text}")
-            self.current_channel_info = response
-            if response.get("status") != "success":
-                self.chat_display.clear()
-                self.chat_display.append(f"[ERROR] {response.get('message')}")
-        else:
-            try:
-                file_path = os.path.join("local_sync", f"sync_{self.current_channel}_{owner_username}.txt")
-                if not os.path.exists(file_path):
-                    self.chat_display.append("[INFO] Do not have mesage.")
-                    return
+            if response.get("status") == "success":
+                messages = response.get("messages", [])
+                self.last_message_count = len(messages)
+                for msg in messages:
+                    text = msg.get("text")
+                    self.chat_display.append(f"{text}")
+                self.current_channel_info = response
+            else:
+                self.chat_display.append(f"Polling error: {response.get('message')}")
 
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    for line in f:
-                        self.chat_display.append(line.strip())
-                        self.last_message_count += 1
+        if owner_data and owner_data.get("state") == "online":
+            
+            if response.get("status") == "success":
+                try:
+                    file_path = os.path.join("local_sync", f"sync_{self.current_channel}_{owner_username}.txt")
+                    if not os.path.exists(file_path):
+                        self.chat_display.append("[INFO] Do not have mesage.")
+                        return
 
-                logging.info("[SYNC LOAD] Save message to file: %s", file_path)
-            except Exception as e:
-                logging.error("[SYNC LOAD] Error when read file: %s", e)
-                self.chat_display.append("[ERROR] Can not load message from file.")
-        
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        for line in f:
+                            self.chat_display.append(line.strip())
+                            self.last_message_count += 1
+                            self.current_channel_info = response
+
+                    logging.info("[SYNC LOAD] Save message to file: %s", file_path)
+                except Exception as e:
+                    logging.error("[SYNC LOAD] Error when read file: %s", e)
+                    self.chat_display.append("[ERROR] Can not load message from file.")
+            else:
+                self.chat_display.append(f"Polling error: {response.get('message')}")
 
 
     def start_request_timer(self, owner):
@@ -563,11 +568,12 @@ class DiscordUI(QMainWindow):
     
     def add_channel(self):
         type_choice = QMessageBox.question(
-                self,
-                "Channel Type",
-                "Do you want to create a Private channel?",
-                QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
+            self,
+            "Channel Type",
+            "Do you want to create a Private channel?",
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
         )
+
         dialog = AddChannelDialog()
         if dialog.exec():
             data = dialog.get_channel_data()
@@ -575,7 +581,13 @@ class DiscordUI(QMainWindow):
             if not new_channel:
                 return
             is_private = (type_choice == QMessageBox.StandardButton.Yes)
-            allow_visitor = False if is_private else True
+
+            if is_private:
+                allow_visitor = False
+            else:
+                allow_visitor = data.get("allow_visitor", False)
+                print("ADDDDDDDDDDD", allow_visitor)
+
             request_data = {
                 "action": "create_channel",
                 "host": self.username,
@@ -583,9 +595,16 @@ class DiscordUI(QMainWindow):
                 "is_private": is_private,
                 "allow_visitor": allow_visitor,
             }
+
             response_str = channelRequest.handle_channel_request(json.dumps(request_data))
             response = json.loads(response_str)
+
             if response.get("status") == "success":
+                # Đẩy thêm thông tin thành viên ban đầu
+                channels_collection.update_one(
+                    {"channel_name": new_channel},
+                    {"$push": {"members": self.username}}
+                )
                 self.get_channels_from_server()
                 self.get_hosted_channels_from_server()
             else:
@@ -624,53 +643,101 @@ class DiscordUI(QMainWindow):
         
         except Exception as e:
             logging.error("get_hosted_channels_from_server error: %s", e)
-    
+    def switch_channel(self, channel_name):
+        self.current_channel = channel_name
+        self.chat_display.clear()
+        self.last_message_count = 0
+
     def poll_loop(self):
         while True:
             if self.current_mode == "channel" and self.current_channel:
-                channel_data = channels_collection.find_one({"channel_name": self.current_channel})
-                owner_username = channel_data.get("owner")
-                owner_data = users_collection.find_one({"username": owner_username})
-                if owner_data and owner_data.get("state") == "offline":
-                    try:
-                        request_data = {"action": "get_channel_info", "channel_name": self.current_channel, "username": self.username}
+                try:
+                    channel_data = channels_collection.find_one({"channel_name": self.current_channel})
+                    if not channel_data:
+                        logging.warning("poll_loop: Channel data is None for channel: %s", self.current_channel)
+                        time.sleep(0.5)
+                        continue  # bỏ qua vòng này
+
+                    owner_username = channel_data.get("owner")
+                    owner_data = users_collection.find_one({"username": owner_username})
+
+                    if not owner_data:
+                        logging.warning("poll_loop: Owner data is None for username: %s", owner_username)
+                        time.sleep(0.5)
+                        continue
+
+                    # --- Phần xử lý khi chủ kênh offline ---
+                    if owner_data.get("state") == "offline":
+                        request_data = {
+                            "action": "get_channel_info",
+                            "channel_name": self.current_channel,
+                            "username": self.username,
+                        }
                         if self.is_viewer:
                             request_data["is_visitor"] = True
+
                         response_str = channelRequest.handle_channel_request(json.dumps(request_data))
                         response = json.loads(response_str)
+
                         if response.get("status") == "success":
                             messages = response.get("messages", [])
                             if len(messages) > self.last_message_count:
                                 new_msgs = messages[self.last_message_count:]
                                 for msg in new_msgs:
-                                    sender = msg.get("sender")
                                     text = msg.get("text")
-                                    # if sender == self.username:
-                                    #     continue
                                     self.chat_display.append(f"{text}")
-                                self.last_message_count = len(messages)
+                                    self.last_message_count = len(messages)
                         else:
                             logging.error("Polling error: %s", response.get("message"))
-                    except Exception as e:
-                        logging.error("Error in poll_loop (new messages): %s", e)
 
-                if owner_data and owner_data.get("state") == "online":
-                    file_path = os.path.join("local_sync", f"sync_{self.current_channel}_{owner_username}.txt")
-                    if os.path.exists(file_path):
-                        with open(file_path, 'r', encoding='utf-8') as f:
-                            lines = f.readlines()
-                            for line in lines[self.last_message_count:]:
-                                self.chat_display.append(line.strip())
-                                self.last_message_count += 1
-                        # logging.info("[SYNC LOAD] Loaded messages from file: %s", file_path)
-                    else:
-                        logging.warning("[SYNC LOAD] File not found: %s", file_path)
-                
+                    # --- Phần xử lý khi chủ kênh online ---
+                    elif owner_data.get("state") == "online":
+                        request_data = {
+                            "action": "get_channel_info",
+                            "channel_name": self.current_channel,
+                            "username": self.username,
+                        }
+                        if self.is_viewer:
+                            request_data["is_visitor"] = True
+
+                        response_str = channelRequest.handle_channel_request(json.dumps(request_data))
+                        response = json.loads(response_str)
+
+                        if response.get("status") == "success":
+                            file_path = os.path.join("local_sync", f"sync_{self.current_channel}_{owner_username}.txt")
+                            if os.path.exists(file_path):
+                                with open(file_path, 'r', encoding='utf-8') as f:
+                                    lines = [line.strip() for line in f if line.strip()]
+                                    if not lines:
+                                        time.sleep(0.5)
+                                        continue
+
+                                    if not hasattr(self, "last_seen_line") or self.last_seen_line not in lines:
+                                        for line in lines:
+                                            self.chat_display.append(line)
+                                        self.last_seen_line = lines[-1]
+                                        self.last_message_count = len(lines)
+                                    else:
+                                        idx = lines.index(self.last_seen_line)
+                                        new_lines = lines[idx + 1:]
+                                        for line in new_lines:
+                                            self.chat_display.append(line)
+                                        if new_lines:
+                                            self.last_seen_line = new_lines[-1]
+                                        self.last_message_count = len(lines)
+                            else:
+                                logging.warning("[SYNC LOAD] File not found: %s", file_path)
+                        else:
+                            logging.error("poll_loop response error: %s", response.get("message"))
+
+                except Exception as e:
+                    logging.error("Exception in poll_loop: %s", e)
+
+            # --- Refresh danh sách ---
             try:
                 self.load_dm_list()
                 self.get_channels_from_server()
                 self.get_hosted_channels_from_server()
-                #self.load_channel_messages()
             except Exception as e:
                 logging.error("Error updating lists: %s", e)
 
@@ -680,7 +747,7 @@ class DiscordUI(QMainWindow):
         if self.current_mode != "channel":
             self.chat_display.append("[INFO] No channel selected or not in channel mode!")
             return
-        if not (self.current_channel_info and self.current_channel_info.get("owner") == self.username and self.is_viewer == True):
+        if not (self.current_channel_info and self.current_channel_info.get("owner") == self.username):
             self.chat_display.append("[INFO] Only the channel owner can start/stop livestream. Others can only watch.")
             return
         if not self.user_peer:
@@ -699,7 +766,7 @@ class DiscordUI(QMainWindow):
         session_id = self.session_info.get("session_id")
         try:
             client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            server_ip = '192.168.0.4'
+            server_ip = '10.0.217.86'
             server_port = 5000
             client_socket.connect((server_ip, server_port))
             if status == "Online":
@@ -716,15 +783,14 @@ class DiscordUI(QMainWindow):
                 logging.error("Status update failed: %s", response.get("message"))
             if status == "Offline":
                 QMessageBox.information(self, "Logout", "You have been logged out.")
-                self.close()
-                self.login_window.show()
+                self.logout();
         except Exception as e:
             logging.error("Change status error: %s", str(e))
     
     def logout(self):
         try:
             client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            server_ip = '192.168.0.4'
+            server_ip = '10.0.217.86'
             server_port = 5000
             client_socket.connect((server_ip, server_port))
             session_id = self.session_info.get("session_id")
@@ -751,7 +817,14 @@ class DiscordUI(QMainWindow):
                                 logging.warning("[SYNC SKIPPED] User is not owner of channel: %s", channel_name)
                                 continue
 
+                            channel_doc = channels_collection.find_one({"channel_name": channel_name})
+                            existing_messages = channel_doc.get("messages", []) if channel_doc else []
+                            existing_texts = set(msg["text"] for msg in existing_messages)
+                            message_id = len(existing_messages)
+
                             with open(file_path, "r", encoding="utf-8") as f:
+                                existing_texts = set(msg["text"] for msg in existing_messages)
+                                
                                 for line in f:
                                     line = line.strip()
                                     if not line:
@@ -760,16 +833,26 @@ class DiscordUI(QMainWindow):
                                         time_part, rest = line.split("] ", 1)
                                         readable_time = time_part[1:]
                                         sender, message_text = rest.split(": ", 1)
+                                        full_text = f"[{readable_time}] {sender}: {message_text}"
+                                        
+                                        if full_text in existing_texts:
+                                            continue 
+
                                         message_dict = {
+                                            "id": message_id,
                                             "sender": sender,
-                                            "text": f"[{readable_time}] {sender}: {message_text}"
+                                            "text": full_text
                                         }
+
                                         channels_collection.update_one(
                                             {"channel_name": channel_name},
                                             {"$push": {"messages": message_dict}}
                                         )
+                                        message_id += 1
+                                        existing_texts.add(full_text)
                                     except Exception as e:
-                                        logging.error("Error sending line in %s: %s", filename, e)
+                                        logging.error("Error processing line in %s: %s", filename, e)
+
                             logging.info("[SYNC DONE] Synced file: %s", filename)
 
                 QMessageBox.information(self, "Logout", "You have been logged out.")
@@ -802,6 +885,7 @@ class AddChannelDialog(QDialog):
     def get_channel_data(self):
         channel_name = self.channel_name_input.text().strip()
         allow_visitor = self.allow_visitor_checkbox.isChecked()
+        print("DAYLA", allow_visitor)
         return {"channel_name": channel_name, "allow_visitor": allow_visitor}
 
 if __name__ == "__main__":

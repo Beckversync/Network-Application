@@ -7,7 +7,7 @@ import socket
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 import json
 
-def create_channel(host: str, channel_name: str, is_private: bool):
+def create_channel(host: str, channel_name: str, is_private: bool, allow_visitor: bool):
     if channels_collection.find_one({"channel_name": channel_name}):
         return {"status": "error", "message": "Channel already exists"}
     
@@ -16,7 +16,8 @@ def create_channel(host: str, channel_name: str, is_private: bool):
         owner=host,
         members=[host],
         is_private=is_private,
-        join_requests=[] 
+        join_requests=[],
+        allow_visitor=allow_visitor
     )
     channels_collection.insert_one(new_channel.dict())
     users_collection.update_one(
@@ -191,6 +192,17 @@ def get_channel_info(channel_name: str, username: str) -> dict:
         return {
             "status": "error",
             "message": "This is a private channel. You do not have permission to see old messages."
+        }
+    
+    elif channel.get("is_private", True):
+        return {
+            "status": "success",
+            "channel_name": channel["channel_name"],
+            "owner": channel["owner"],
+            "members": channel["members"],
+            "messages": channel.get("messages", []),
+            "allow_visitor": channel.get("allow_visitor", True),
+            "is_private": channel.get("is_private", False)
         }
     
     return {
