@@ -665,6 +665,7 @@ class DiscordUI(QMainWindow):
 
                     if not owner_data:
                         logging.warning("poll_loop: Owner data is None for username: %s", owner_username)
+                        time.sleep(0.5)
                         continue
 
                     if owner_data.get("state") == "offline":
@@ -681,53 +682,46 @@ class DiscordUI(QMainWindow):
 
                         if response.get("status") == "success":
                             messages = response.get("messages", [])
-                            
                             if len(messages) > self.last_message_count:
                                 new_msgs = messages[self.last_message_count:]
-
                                 for msg in new_msgs:
                                     text = msg.get("text")
-                                    if not hasattr(self, "seen_messages"):
-                                        self.seen_messages = set()
-
-                                    if text not in self.seen_messages:
-                                        self.chat_display.append(f"{text}")
-                                        self.seen_messages.add(text)
-                                        print(">>> Tin nhắn mới được thêm <<<")
-
-                                self.last_message_count = len(messages)
+                                    self.chat_display.append(f"{text}")
+                                    self.last_message_count = len(messages)
                         else:
                             logging.error("Polling error: %s", response.get("message"))
 
                     elif owner_data.get("state") == "online" or owner_data.get("state") == "Invisible":
-                            request_data = {
-                                "action": "get_channel_info",
-                                "channel_name": self.current_channel,
-                                "username": self.username,
-                            }
-                            if self.is_viewer:
-                                request_data["is_visitor"] = True
+                        request_data = {
+                            "action": "get_channel_info",
+                            "channel_name": self.current_channel,
+                            "username": self.username,
+                        }
+                        if self.is_viewer:
+                            request_data["is_visitor"] = True
 
-                            response_str = channelRequest.handle_channel_request(json.dumps(request_data))
-                            response = json.loads(response_str)
+                        response_str = channelRequest.handle_channel_request(json.dumps(request_data))
+                        response = json.loads(response_str)
 
-                            if response.get("status") == "success":
-                                file_path = os.path.join("local_sync", f"sync_{self.current_channel}_{owner_username}.txt")
-                                if os.path.exists(file_path):
-                                    with open(file_path, 'r', encoding='utf-8') as f:
-                                        lines = [line.strip() for line in f if line.strip() and message_pattern.match(line)]
+                        if response.get("status") == "success":
+                            file_path = os.path.join("local_sync", f"sync_{self.current_channel}_{owner_username}.txt")
+                            if os.path.exists(file_path):
+                                with open(file_path, 'r', encoding='utf-8') as f:
+                                    lines = [line.strip() for line in f if line.strip() and message_pattern.match(line)]
 
-                                   
-                                    if not lines:
-                                        time.sleep(0.5)
-                                        continue
+                                if not lines:
+                                    time.sleep(0.5)
+                                    continue
 
-                                    if not hasattr(self, "last_seen_line") or self.last_seen_line not in lines:
-                                        for _, line in enumerate(lines):  # _ vì bạn không cần chỉ mục (index)
-                                            self.chat_display.append(line)
-                                            # print("EEEEEEEEEEEEEEEEEEEEEE")
-                                            if owner_username == self.username:
-                                                # print("nEEEEEEEEEEEEEEe")
+                                if not hasattr(self, "last_seen_line") or self.last_seen_line not in lines:
+                                    for line in lines:
+                                        self.chat_display.append(line)
+                                        if self.username != owner_username:
+                                            # Push lên database nếu là người xem (không phải owner)
+                                            if not channels_collection.find_one({
+                                                "channel_name": self.current_channel,
+                                                "messages.text": line
+                                            }):
                                                 message_dict = {
                                                     "sender": owner_username,
                                                     "text": line
@@ -736,40 +730,36 @@ class DiscordUI(QMainWindow):
                                                     {"channel_name": self.current_channel},
                                                     {"$push": {"messages": message_dict}}
                                                 )
-                                        self.last_seen_line = lines[-1]
-                                        self.last_message_count = len(lines)
-                                    else:
-                                        idx = lines.index(self.last_seen_line)
-                                        new_lines = lines[idx + 1:]
-                                        if not hasattr(self, "seen_messages"):
-                                            self.seen_messages = set()
+                                    self.last_seen_line = lines[-1]
+                                    self.last_message_count = len(lines)
 
-                                        for line in new_lines:  # <-- CHỈ XỬ LÝ DÒNG MỚI
-                                            if line not in self.seen_messages:
-                                                self.chat_display.append(line)
-                                                self.seen_messages.add(line)
-
-                                                if owner_username == self.username:
-                                                    if not channels_collection.find_one({
-                                                        "channel_name": self.current_channel,
-                                                        "messages.text": line
-                                                    }):
-                                                        message_dict = {
-                                                            "sender": owner_username,
-                                                            "text": line
-                                                        }
-                                                        channels_collection.update_one(
-                                                            {"channel_name": self.current_channel},
-                                                            {"$push": {"messages": message_dict}}
-                                                        )
-
-                                        if new_lines:
-                                            self.last_seen_line = new_lines[-1]
-                                            self.last_message_count = len(new_lines)
                                 else:
-                                    logging.warning("[SYNC LOAD] File not found: %s", file_path)
+                                    idx = lines.index(self.last_seen_line)
+                                    new_lines = lines[idx + 1:]
+                                    for line in new_lines:
+                                        self.chat_display.append(line)
+                                        if self.username != owner_username:
+                                            # Push lên database nếu là người xem (không phải owner)
+                                            if not channels_collection.find_one({
+                                                "channel_name": self.current_channel,
+                                                "messages.text": line
+                                            }):
+                                                message_dict = {
+                                                    "sender": owner_username,
+                                                    "text": line
+                                                }
+                                                channels_collection.update_one(
+                                                    {"channel_name": self.current_channel},
+                                                    {"$push": {"messages": message_dict}}
+                                                )
+
+                                    if new_lines:
+                                        self.last_seen_line = new_lines[-1]
+                                        self.last_message_count = len(lines)
                             else:
-                                logging.error("poll_loop response error: %s", response.get("message"))
+                                logging.warning("[SYNC LOAD] File not found: %s", file_path)
+                        else:
+                            logging.error("poll_loop response error: %s", response.get("message"))
 
                 except Exception as e:
                     logging.error("Exception in poll_loop: %s", e)

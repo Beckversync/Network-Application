@@ -50137,3 +50137,162 @@
 [2025-04-22 00:41:42,556] INFO: Tracker response on LEAVE: Peer an11 (10.0.3.222:6615) left
 [2025-04-22 00:41:42,852] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
 [2025-04-22 00:41:44,214] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-22 00:52:36,616] INFO: Logged in as: an10
+[2025-04-22 00:52:37,260] INFO: User 'an10' logging in (authenticated mode).
+[2025-04-22 00:52:37,442] INFO: Tracker response: Peer an10 (10.0.3.222:8056) added
+[2025-04-22 00:52:37,442] INFO: P2P SERVER listening on 10.0.3.222:8056
+[2025-04-22 00:52:37,447] INFO: UDP LISTENER listening on 10.0.3.222:8057 for livestream.
+[2025-04-22 00:52:55,593] INFO: Logged in as: an11
+[2025-04-22 00:52:56,458] INFO: User 'an11' logging in (authenticated mode).
+[2025-04-22 00:52:56,549] INFO: Tracker response: Peer an11 (10.0.3.222:8431) added
+[2025-04-22 00:52:56,549] INFO: P2P SERVER listening on 10.0.3.222:8431
+[2025-04-22 00:52:56,549] INFO: UDP LISTENER listening on 10.0.3.222:8432 for livestream.
+[2025-04-22 00:53:04,335] INFO: Channel 'test1' created by an10 (is_private=False)
+[2025-04-22 00:53:05,254] INFO: [SYNC] SyncManager started for channel 'test1'
+[2025-04-22 00:53:05,932] WARNING: [SYNC LOAD] File not found: local_sync\sync_test1_an10.txt
+[2025-04-22 00:53:07,061] WARNING: [SYNC LOAD] File not found: local_sync\sync_test1_an10.txt
+[2025-04-22 00:53:07,195] WARNING: [SYNC LOAD] File not found: local_sync\sync_test1_an10.txt
+[2025-04-22 00:53:08,356] WARNING: [SYNC LOAD] File not found: local_sync\sync_test1_an10.txt
+[2025-04-22 00:53:08,442] WARNING: [SYNC LOAD] File not found: local_sync\sync_test1_an10.txt
+[2025-04-22 00:53:08,656] INFO: Sending message: alo
+[2025-04-22 00:53:09,089] INFO: Sent P2P chat to 10.0.3.222:8056 – {"type": "chat", "sender": "an10", "message": "alo"}
+[2025-04-22 00:53:09,100] INFO: Tin nhắn từ an10 đã được gửi đến 1 peer online trong kênh 'test1'
+[2025-04-22 00:53:09,101] INFO: Message from an10 sent in channel 'test1'
+[2025-04-22 00:53:09,101] INFO: [INFO] Create new file: local_sync\sync_test1_an10.txt
+[2025-04-22 00:53:09,101] INFO: [P2P MESSAGE] an10 -> an10: alo
+[2025-04-22 00:53:11,848] INFO: Sending message: lo
+[2025-04-22 00:53:11,985] INFO: Sent P2P chat to 10.0.3.222:8056 – {"type": "chat", "sender": "an11", "message": "lo"}
+[2025-04-22 00:53:11,986] INFO: Tin nhắn từ an11 đã được gửi đến 1 peer online trong kênh 'test1'
+[2025-04-22 00:53:11,987] INFO: Message from an11 sent in channel 'test1'
+[2025-04-22 00:53:11,987] INFO: [P2P MESSAGE] an11 -> an10: lo
+[2025-04-22 00:56:58,875] INFO: [SYNC LOAD] Save message to file: local_sync\sync_test1_an10.txt
+[2025-04-22 00:56:58,885] INFO: [SYNC] SyncManager started for channel 'test1'
+[2025-04-22 00:56:59,516] INFO: [SYNC LOAD] Save message to file: local_sync\sync_test1_an10.txt
+[2025-04-22 00:56:59,516] INFO: [SYNC] SyncManager started for channel 'test1'
+[2025-04-22 00:57:05,171] INFO: Channel 'test1' deleted by an10
+[2025-04-22 00:57:05,246] WARNING: poll_loop: Channel data is None for channel: test1
+[2025-04-22 00:57:05,246] ERROR: Exception in poll_loop: 'NoneType' object has no attribute 'get'
+[2025-04-22 00:57:06,437] WARNING: poll_loop: Channel data is None for channel: test1
+[2025-04-22 00:57:06,439] ERROR: Exception in poll_loop: 'NoneType' object has no attribute 'get'
+[2025-04-22 00:57:07,637] WARNING: poll_loop: Channel data is None for channel: test1
+[2025-04-22 00:57:07,639] ERROR: Exception in poll_loop: 'NoneType' object has no attribute 'get'
+[2025-04-22 00:57:08,813] WARNING: poll_loop: Channel data is None for channel: test1
+[2025-04-22 00:57:08,823] ERROR: Exception in poll_loop: 'NoneType' object has no attribute 'get'
+[2025-04-22 00:57:08,830] INFO: Tracker response on LEAVE: Peer an11 (10.0.3.222:8431) left
+[2025-04-22 00:57:10,000] WARNING: poll_loop: Channel data is None for channel: test1
+[2025-04-22 00:57:10,000] ERROR: Exception in poll_loop: 'NoneType' object has no attribute 'get'
+[2025-04-22 00:57:11,194] WARNING: poll_loop: Channel data is None for channel: test1
+[2025-04-22 00:57:11,194] ERROR: Exception in poll_loop: 'NoneType' object has no attribute 'get'
+[2025-04-22 00:57:11,977] INFO: Tracker response on LEAVE: Peer an10 (10.0.3.222:8056) left
+[2025-04-22 00:57:12,431] WARNING: poll_loop: Channel data is None for channel: test1
+[2025-04-22 00:57:12,431] ERROR: Exception in poll_loop: 'NoneType' object has no attribute 'get'
+[2025-04-22 00:57:13,618] WARNING: poll_loop: Channel data is None for channel: test1
+[2025-04-22 00:57:13,618] ERROR: Exception in poll_loop: 'NoneType' object has no attribute 'get'
+[2025-04-22 00:57:14,788] WARNING: poll_loop: Channel data is None for channel: test1
+[2025-04-22 00:57:14,788] ERROR: Exception in poll_loop: 'NoneType' object has no attribute 'get'
+[2025-04-22 00:57:28,836] INFO: Logged in as: an10
+[2025-04-22 00:57:29,375] INFO: User 'an10' logging in (authenticated mode).
+[2025-04-22 00:57:29,477] INFO: Tracker response: Peer an10 (10.0.3.222:6650) added
+[2025-04-22 00:57:29,479] INFO: P2P SERVER listening on 10.0.3.222:6650
+[2025-04-22 00:57:29,479] INFO: UDP LISTENER listening on 10.0.3.222:6651 for livestream.
+[2025-04-22 00:57:46,630] INFO: Logged in as: an11
+[2025-04-22 00:57:47,332] INFO: User 'an11' logging in (authenticated mode).
+[2025-04-22 00:57:47,431] INFO: Tracker response: Peer an11 (10.0.3.222:6443) added
+[2025-04-22 00:57:47,431] INFO: P2P SERVER listening on 10.0.3.222:6443
+[2025-04-22 00:57:47,431] INFO: UDP LISTENER listening on 10.0.3.222:6444 for livestream.
+[2025-04-22 00:57:53,090] INFO: Channel '555' created by an10 (is_private=False)
+[2025-04-22 00:57:53,762] INFO: [SYNC] SyncManager started for channel '555'
+[2025-04-22 00:57:53,849] WARNING: [SYNC LOAD] File not found: local_sync\sync_555_an10.txt
+[2025-04-22 00:57:55,126] WARNING: [SYNC LOAD] File not found: local_sync\sync_555_an10.txt
+[2025-04-22 00:57:56,229] INFO: Sending message: 4
+[2025-04-22 00:57:56,403] WARNING: [SYNC LOAD] File not found: local_sync\sync_555_an10.txt
+[2025-04-22 00:57:56,459] INFO: Sent P2P chat to 10.0.3.222:6650 – {"type": "chat", "sender": "an10", "message": "4"}
+[2025-04-22 00:57:56,460] INFO: Tin nhắn từ an10 đã được gửi đến 1 peer online trong kênh '555'
+[2025-04-22 00:57:56,460] INFO: Message from an10 sent in channel '555'
+[2025-04-22 00:57:56,461] INFO: [INFO] Create new file: local_sync\sync_555_an10.txt
+[2025-04-22 00:57:56,463] INFO: [P2P MESSAGE] an10 -> an10: 4
+[2025-04-22 00:57:58,894] INFO: Sending message: 2
+[2025-04-22 00:58:01,249] INFO: [SYNC LOAD] Save message to file: local_sync\sync_555_an10.txt
+[2025-04-22 00:58:03,330] INFO: [SYNC LOAD] Save message to file: local_sync\sync_555_an10.txt
+[2025-04-22 00:58:04,594] INFO: Sending message: 2
+[2025-04-22 00:58:04,730] INFO: Sent P2P chat to 10.0.3.222:6650 – {"type": "chat", "sender": "an11", "message": "2"}
+[2025-04-22 00:58:04,730] INFO: Tin nhắn từ an11 đã được gửi đến 1 peer online trong kênh '555'
+[2025-04-22 00:58:04,731] INFO: Message from an11 sent in channel '555'
+[2025-04-22 00:58:04,731] INFO: [P2P MESSAGE] an11 -> an10: 2
+[2025-04-22 00:58:22,494] INFO: Tracker response on LEAVE: Peer an10 (10.0.3.222:6650) left
+[2025-04-22 00:58:35,895] INFO: Logged in as: an10
+[2025-04-22 00:58:36,704] INFO: [SYNC LOGIN] Saved 0 new messages for 555
+[2025-04-22 00:58:36,704] INFO: User 'an10' logging in (authenticated mode).
+[2025-04-22 00:58:36,803] INFO: Tracker response: Peer an10 (10.0.3.222:7530) added
+[2025-04-22 00:58:36,803] INFO: P2P SERVER listening on 10.0.3.222:7530
+[2025-04-22 00:58:36,803] INFO: UDP LISTENER listening on 10.0.3.222:7531 for livestream.
+[2025-04-22 00:58:39,921] INFO: [SYNC LOAD] Save message to file: local_sync\sync_555_an10.txt
+[2025-04-22 00:58:39,921] INFO: [SYNC] SyncManager started for channel '555'
+[2025-04-22 00:58:41,982] INFO: [SYNC LOAD] Save message to file: local_sync\sync_555_an10.txt
+[2025-04-22 00:58:41,982] INFO: [SYNC] SyncManager started for channel '555'
+[2025-04-22 00:58:56,924] INFO: [SYNC LOAD] Save message to file: local_sync\sync_555_an10.txt
+[2025-04-22 00:58:56,924] INFO: [SYNC] SyncManager started for channel '555'
+[2025-04-22 00:58:58,440] INFO: Sending message: sadas
+[2025-04-22 00:58:58,650] INFO: Sent P2P chat to 10.0.3.222:7530 – {"type": "chat", "sender": "an10", "message": "sadas"}
+[2025-04-22 00:58:58,650] INFO: Tin nhắn từ an10 đã được gửi đến 1 peer online trong kênh '555'
+[2025-04-22 00:58:58,650] INFO: Message from an10 sent in channel '555'
+[2025-04-22 00:58:58,650] INFO: [P2P MESSAGE] an10 -> an10: sadas
+[2025-04-22 00:59:16,165] INFO: Tracker response on LEAVE: Peer an10 (10.0.3.222:7530) left
+[2025-04-22 00:59:17,408] INFO: Logged in as: an10
+[2025-04-22 00:59:18,026] INFO: [SYNC LOGIN] Saved 0 new messages for 555
+[2025-04-22 00:59:18,026] INFO: User 'an10' logging in (authenticated mode).
+[2025-04-22 00:59:18,123] INFO: Tracker response: Peer an10 (10.0.3.222:7449) added
+[2025-04-22 00:59:18,124] INFO: UDP LISTENER listening on 10.0.3.222:7450 for livestream.
+[2025-04-22 00:59:18,124] INFO: P2P SERVER listening on 10.0.3.222:7449
+[2025-04-22 00:59:19,069] INFO: [SYNC LOAD] Save message to file: local_sync\sync_555_an10.txt
+[2025-04-22 00:59:19,069] INFO: [SYNC] SyncManager started for channel '555'
+[2025-04-22 00:59:19,395] INFO: [SYNC LOAD] Save message to file: local_sync\sync_555_an10.txt
+[2025-04-22 00:59:19,395] INFO: [SYNC] SyncManager started for channel '555'
+[2025-04-22 00:59:19,764] INFO: [SYNC LOAD] Save message to file: local_sync\sync_555_an10.txt
+[2025-04-22 00:59:19,764] INFO: [SYNC] SyncManager started for channel '555'
+[2025-04-22 00:59:21,104] INFO: [SYNC LOAD] Save message to file: local_sync\sync_555_an10.txt
+[2025-04-22 00:59:21,104] INFO: [SYNC] SyncManager started for channel '555'
+[2025-04-22 00:59:43,577] INFO: Sending message: 2334
+[2025-04-22 00:59:43,716] INFO: Sent P2P chat to 10.0.3.222:7449 – {"type": "chat", "sender": "an11", "message": "2334"}
+[2025-04-22 00:59:43,716] INFO: Tin nhắn từ an11 đã được gửi đến 1 peer online trong kênh '555'
+[2025-04-22 00:59:43,716] INFO: Message from an11 sent in channel '555'
+[2025-04-22 00:59:43,716] INFO: [P2P MESSAGE] an11 -> an10: 2334
+[2025-04-22 00:59:46,606] INFO: Tracker response on LEAVE: Peer an11 (10.0.3.222:6443) left
+[2025-04-22 01:00:02,308] INFO: Logged in as: an11
+[2025-04-22 01:00:03,338] INFO: User 'an11' logging in (authenticated mode).
+[2025-04-22 01:00:03,438] INFO: Tracker response: Peer an11 (10.0.3.222:6588) added
+[2025-04-22 01:00:03,438] INFO: UDP LISTENER listening on 10.0.3.222:6589 for livestream.
+[2025-04-22 01:00:03,438] INFO: P2P SERVER listening on 10.0.3.222:6588
+[2025-04-22 01:00:05,022] INFO: [SYNC LOAD] Save message to file: local_sync\sync_555_an10.txt
+[2025-04-22 01:00:05,499] INFO: [SYNC LOAD] Save message to file: local_sync\sync_555_an10.txt
+[2025-04-22 01:00:06,697] INFO: [SYNC LOAD] Save message to file: local_sync\sync_555_an10.txt
+[2025-04-22 01:00:08,347] INFO: Sending message: as
+[2025-04-22 01:00:08,490] INFO: Sent P2P chat to 10.0.3.222:7449 – {"type": "chat", "sender": "an11", "message": "as"}
+[2025-04-22 01:00:08,490] INFO: Tin nhắn từ an11 đã được gửi đến 1 peer online trong kênh '555'
+[2025-04-22 01:00:08,490] INFO: Message from an11 sent in channel '555'
+[2025-04-22 01:00:08,490] INFO: [P2P MESSAGE] an11 -> an10: as
+[2025-04-22 01:00:25,943] INFO: Sending message: xzc
+[2025-04-22 01:00:26,194] INFO: Sent P2P chat to 10.0.3.222:7449 – {"type": "chat", "sender": "an10", "message": "xzc"}
+[2025-04-22 01:00:26,194] INFO: Tin nhắn từ an10 đã được gửi đến 1 peer online trong kênh '555'
+[2025-04-22 01:00:26,194] INFO: Message from an10 sent in channel '555'
+[2025-04-22 01:00:26,194] INFO: [P2P MESSAGE] an10 -> an10: xzc
+[2025-04-22 01:00:30,210] INFO: Tracker response on LEAVE: Peer an10 (10.0.3.222:7449) left
+[2025-04-22 01:00:36,517] INFO: Sending message: 324324
+[2025-04-22 01:00:36,695] INFO: Message from an11 sent in channel '555'
+[2025-04-22 01:00:37,634] INFO: Sending message: 23423
+[2025-04-22 01:00:37,863] INFO: Message from an11 sent in channel '555'
+[2025-04-22 01:01:00,243] INFO: Logged in as: an10
+[2025-04-22 01:01:01,173] INFO: [SYNC LOGIN] Saved 2 new messages for 555
+[2025-04-22 01:01:01,173] INFO: User 'an10' logging in (authenticated mode).
+[2025-04-22 01:01:01,268] INFO: Tracker response: Peer an10 (10.0.3.222:6236) added
+[2025-04-22 01:01:01,268] INFO: P2P SERVER listening on 10.0.3.222:6236
+[2025-04-22 01:01:01,271] INFO: UDP LISTENER listening on 10.0.3.222:6237 for livestream.
+[2025-04-22 01:01:02,567] INFO: [SYNC LOAD] Save message to file: local_sync\sync_555_an10.txt
+[2025-04-22 01:01:02,567] INFO: [SYNC] SyncManager started for channel '555'
+[2025-04-22 01:01:03,370] INFO: [SYNC LOAD] Save message to file: local_sync\sync_555_an10.txt
+[2025-04-22 01:01:03,370] INFO: [SYNC] SyncManager started for channel '555'
+[2025-04-22 01:01:03,985] INFO: [SYNC LOAD] Save message to file: local_sync\sync_555_an10.txt
+[2025-04-22 01:01:03,985] INFO: [SYNC] SyncManager started for channel '555'
+[2025-04-22 01:01:19,355] INFO: Tracker response on LEAVE: Peer an11 (10.0.3.222:6588) left
+[2025-04-22 01:01:20,715] ERROR: get_channels_from_server error: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-22 01:01:22,572] INFO: Tracker response on LEAVE: Peer an10 (10.0.3.222:6236) left
