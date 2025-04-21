@@ -46155,3 +46155,72 @@
 [2025-04-21 16:48:18,491] INFO: Message from an09 sent in channel 'aa1'
 [2025-04-21 16:51:12,572] INFO: [SYNC DONE] Synced file: sync_aa1_an09.txt
 [2025-04-21 16:51:13,763] INFO: Tracker response on LEAVE: Peer an09 (172.20.10.2:6022) left
+[2025-04-21 16:52:12,395] INFO: Logged in as: an08
+[2025-04-21 16:52:18,231] INFO: [SYNC LOGIN] Saved 0 new messages for kenhAn
+[2025-04-21 16:52:18,305] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 16:52:18,306] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 16:52:18,509] INFO: Tracker response: Peer an08 (172.20.10.2:8386) added
+[2025-04-21 16:52:18,510] INFO: UDP LISTENER listening on 172.20.10.2:8387 for livestream.
+[2025-04-21 16:52:18,511] INFO: P2P SERVER listening on 172.20.10.2:8386
+[2025-04-21 16:52:22,924] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:52:26,876] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:52:27,263] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:52:33,044] INFO: Sending message: xin chào
+[2025-04-21 16:52:33,215] INFO: Sent P2P chat to 172.20.10.2:8155 – {"type": "chat", "sender": "an08", "message": "xin ch\u00e0o", "channel": "aa1", "owner": "an09"}
+[2025-04-21 16:52:33,377] INFO: Message from an08 sent in channel 'aa1'
+[2025-04-21 16:52:39,419] INFO: [P2P MESSAGE] an09 -> an08: chào
+[2025-04-21 16:53:00,206] INFO: [P2P MESSAGE] an09 -> an08: 1
+[2025-04-21 16:53:09,232] INFO: Sending message: 2
+[2025-04-21 16:53:09,386] INFO: Sent P2P chat to 172.20.10.2:8155 – {"type": "chat", "sender": "an08", "message": "2", "channel": "aa1", "owner": "an09"}
+[2025-04-21 16:53:09,536] INFO: Message from an08 sent in channel 'aa1'
+[2025-04-21 16:53:26,037] INFO: [SYNC DONE] Synced file: sync_kenhAn_an08.txt
+[2025-04-21 16:53:26,115] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 16:53:27,796] INFO: Tracker response on LEAVE: Peer an08 (172.20.10.2:8386) left
+[2025-04-21 16:53:30,151] INFO: Logged in as: an08
+[2025-04-21 16:53:31,133] INFO: [SYNC LOGIN] Saved 0 new messages for kenhAn
+[2025-04-21 16:53:31,228] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 16:53:31,228] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 16:53:31,408] INFO: Tracker response: Peer an08 (172.20.10.2:8237) added
+[2025-04-21 16:53:31,408] INFO: P2P SERVER listening on 172.20.10.2:8237
+[2025-04-21 16:53:31,409] INFO: UDP LISTENER listening on 172.20.10.2:8238 for livestream.
+[2025-04-21 16:53:36,174] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:53:36,540] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:53:39,756] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:55:41,541] INFO: Sending message: test
+[2025-04-21 16:55:41,705] INFO: Sent P2P chat to 172.20.10.2:6461 – {"type": "chat", "sender": "an08", "message": "test", "channel": "aa1", "owner": "an09"}
+[2025-04-21 16:55:41,888] INFO: Message from an08 sent in channel 'aa1'
+[2025-04-21 16:55:46,444] INFO: [P2P MESSAGE] an09 -> an08: test1
+[2025-04-21 16:57:22,087] WARNING: [SYNC LOAD] File not found: local_sync\sync_tesst1_an10.txt
+[2025-04-21 16:57:23,065] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 16:57:23,065] INFO: [SYNC] SyncManager started for channel 'kênhnew'
+[2025-04-21 16:57:23,575] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kenhAn_an08.txt
+[2025-04-21 16:57:23,575] INFO: [SYNC] SyncManager started for channel 'kenhAn'
+[2025-04-21 16:57:23,995] WARNING: [SYNC LOAD] File not found: local_sync\sync_aa1_an08.txt
+[2025-04-21 16:57:24,105] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:57:24,538] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:57:24,846] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:57:25,386] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:58:31,503] WARNING: [SYNC LOAD] File not found: local_sync\sync_tesst1_an10.txt
+[2025-04-21 16:58:32,592] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 16:58:32,593] INFO: [SYNC] SyncManager started for channel 'kênhnew'
+[2025-04-21 16:58:33,197] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:58:42,515] WARNING: [SYNC LOAD] File not found: local_sync\sync_tesst1_an09.txt
+[2025-04-21 16:58:43,543] WARNING: [SYNC LOAD] File not found: local_sync\sync_tesst1_an10.txt
+[2025-04-21 16:58:44,662] WARNING: [SYNC LOAD] File not found: local_sync\sync_tesst1_an10.txt
+[2025-04-21 16:58:45,641] WARNING: [SYNC LOAD] File not found: local_sync\sync_tesst1_an10.txt
+[2025-04-21 16:58:46,739] WARNING: [SYNC LOAD] File not found: local_sync\sync_tesst1_an10.txt
+[2025-04-21 16:58:47,750] WARNING: [SYNC LOAD] File not found: local_sync\sync_tesst1_an10.txt
+[2025-04-21 16:58:48,771] WARNING: [SYNC LOAD] File not found: local_sync\sync_tesst1_an10.txt
+[2025-04-21 16:58:49,854] WARNING: [SYNC LOAD] File not found: local_sync\sync_tesst1_an10.txt
+[2025-04-21 16:58:50,802] WARNING: [SYNC LOAD] File not found: local_sync\sync_tesst1_an10.txt
+[2025-04-21 16:58:51,839] WARNING: [SYNC LOAD] File not found: local_sync\sync_tesst1_an10.txt
+[2025-04-21 16:58:52,982] WARNING: [SYNC LOAD] File not found: local_sync\sync_aa1_an10.txt
+[2025-04-21 16:58:53,062] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 17:00:01,070] INFO: [P2P MESSAGE] an09 -> an08: alooo
+[2025-04-21 17:00:14,781] INFO: Sending message: chào
+[2025-04-21 17:00:14,918] INFO: Sent P2P chat to 172.20.10.2:8549 – {"type": "chat", "sender": "an08", "message": "ch\u00e0o", "channel": "aa1", "owner": "an09"}
+[2025-04-21 17:00:15,055] INFO: Message from an08 sent in channel 'aa1'
+[2025-04-21 17:00:18,606] INFO: Sending message: alo
+[2025-04-21 17:00:18,759] INFO: Sent P2P chat to 172.20.10.2:8549 – {"type": "chat", "sender": "an08", "message": "alo", "channel": "aa1", "owner": "an09"}
+[2025-04-21 17:00:18,910] INFO: Message from an08 sent in channel 'aa1'
+[2025-04-21 17:00:23,263] INFO: [P2P MESSAGE] an09 -> an08: sao hong hiện

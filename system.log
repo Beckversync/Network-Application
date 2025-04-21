@@ -72918,3 +72918,1345 @@
 [2025-04-21 16:51:12,995] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
 [2025-04-21 16:51:14,548] INFO: Tracker response on LEAVE: Peer an08 (172.20.10.2:6232) left
 [2025-04-21 16:51:15,727] ERROR: get_hosted_channels_from_server error: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-21 16:52:16,287] INFO: Logged in as: an09
+[2025-04-21 16:52:17,547] INFO: [SYNC LOGIN] Saved 5 new messages for aa1
+[2025-04-21 16:52:17,548] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-21 16:52:17,765] INFO: Tracker response: Peer an09 (172.20.10.2:8155) added
+[2025-04-21 16:52:17,766] INFO: P2P SERVER listening on 172.20.10.2:8155
+[2025-04-21 16:52:17,768] INFO: UDP LISTENER listening on 172.20.10.2:8156 for livestream.
+[2025-04-21 16:52:24,779] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:52:24,780] INFO: [SYNC] SyncManager started for channel 'aa1'
+[2025-04-21 16:52:28,127] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:52:28,127] INFO: [SYNC] SyncManager started for channel 'aa1'
+[2025-04-21 16:52:33,216] INFO: [P2P MESSAGE] an08 -> an09: xin chào
+[2025-04-21 16:52:39,103] INFO: Sending message: chào
+[2025-04-21 16:52:39,418] INFO: Sent P2P chat to 172.20.10.2:8386 – {"type": "chat", "sender": "an09", "message": "ch\u00e0o", "channel": "aa1", "owner": "an09"}
+[2025-04-21 16:52:41,469] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-21 16:52:43,505] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-21 16:52:45,558] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-21 16:52:45,558] INFO: Message from an09 sent in channel 'aa1'
+[2025-04-21 16:52:59,884] INFO: Sending message: 1
+[2025-04-21 16:53:00,205] INFO: Sent P2P chat to 172.20.10.2:8386 – {"type": "chat", "sender": "an09", "message": "1", "channel": "aa1", "owner": "an09"}
+[2025-04-21 16:53:02,245] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-21 16:53:04,278] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-21 16:53:06,308] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-21 16:53:06,308] INFO: Message from an09 sent in channel 'aa1'
+[2025-04-21 16:53:09,388] INFO: [P2P MESSAGE] an08 -> an09: 2
+[2025-04-21 16:53:27,029] INFO: [SYNC DONE] Synced file: sync_aa1_an09.txt
+[2025-04-21 16:53:28,545] INFO: Tracker response on LEAVE: Peer an09 (172.20.10.2:8155) left
+[2025-04-21 16:53:47,918] INFO: Logged in as: an09
+[2025-04-21 16:53:48,769] INFO: [SYNC LOGIN] Saved 2 new messages for aa1
+[2025-04-21 16:53:48,769] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-21 16:53:48,960] INFO: Tracker response: Peer an09 (172.20.10.2:6461) added
+[2025-04-21 16:53:48,961] INFO: P2P SERVER listening on 172.20.10.2:6461
+[2025-04-21 16:53:48,961] INFO: UDP LISTENER listening on 172.20.10.2:6462 for livestream.
+[2025-04-21 16:53:52,191] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:53:52,191] INFO: [SYNC] SyncManager started for channel 'aa1'
+[2025-04-21 16:53:52,518] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:53:52,518] INFO: [SYNC] SyncManager started for channel 'aa1'
+[2025-04-21 16:53:54,203] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:53:54,203] INFO: [SYNC] SyncManager started for channel 'aa1'
+[2025-04-21 16:53:55,494] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:53:55,495] INFO: [SYNC] SyncManager started for channel 'aa1'
+[2025-04-21 16:53:55,940] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:53:55,940] INFO: [SYNC] SyncManager started for channel 'aa1'
+[2025-04-21 16:55:41,707] INFO: [P2P MESSAGE] an08 -> an09: test
+[2025-04-21 16:55:46,077] INFO: Sending message: test1
+[2025-04-21 16:55:46,443] INFO: Sent P2P chat to 172.20.10.2:8237 – {"type": "chat", "sender": "an09", "message": "test1", "channel": "aa1", "owner": "an09"}
+[2025-04-21 16:55:48,487] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-21 16:55:50,535] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-21 16:55:52,580] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-21 16:55:52,581] INFO: Message from an09 sent in channel 'aa1'
+[2025-04-21 16:56:46,816] INFO: [SYNC DONE] Synced file: sync_aa1_an09.txt
+[2025-04-21 16:56:47,747] INFO: Tracker response on LEAVE: Peer an09 (172.20.10.2:6461) left
+[2025-04-21 16:56:48,949] INFO: Logged in as: an09
+[2025-04-21 16:56:50,039] INFO: [SYNC LOGIN] Saved 1 new messages for aa1
+[2025-04-21 16:56:50,039] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-21 16:56:50,214] INFO: Tracker response: Peer an09 (172.20.10.2:8549) added
+[2025-04-21 16:56:50,215] INFO: P2P SERVER listening on 172.20.10.2:8549
+[2025-04-21 16:56:50,216] INFO: UDP LISTENER listening on 172.20.10.2:8550 for livestream.
+[2025-04-21 16:56:54,023] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:56:54,023] INFO: [SYNC] SyncManager started for channel 'aa1'
+[2025-04-21 16:56:54,600] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 16:56:54,600] INFO: [SYNC] SyncManager started for channel 'aa1'
+[2025-04-21 16:58:25,780] INFO: Starting livestream.
+[2025-04-21 16:58:25,901] INFO: Peer list retrieved:
+[2025-04-21 16:58:25,902] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:25,902] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:25,902] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:26,031] INFO: Peer list retrieved:
+[2025-04-21 16:58:26,031] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:26,031] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:26,032] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:26,135] INFO: Peer list retrieved:
+[2025-04-21 16:58:26,136] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:26,136] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:26,136] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:26,240] INFO: Peer list retrieved:
+[2025-04-21 16:58:26,240] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:26,240] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:26,241] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:26,345] INFO: Peer list retrieved:
+[2025-04-21 16:58:26,345] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:26,346] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:26,346] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:26,449] INFO: Peer list retrieved:
+[2025-04-21 16:58:26,449] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:26,450] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:26,450] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:26,554] INFO: Peer list retrieved:
+[2025-04-21 16:58:26,554] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:26,554] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:26,556] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:26,662] INFO: Peer list retrieved:
+[2025-04-21 16:58:26,662] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:26,662] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:26,663] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:26,769] INFO: Peer list retrieved:
+[2025-04-21 16:58:26,769] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:26,770] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:26,771] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:26,875] INFO: Peer list retrieved:
+[2025-04-21 16:58:26,875] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:26,876] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:26,877] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:26,982] INFO: Peer list retrieved:
+[2025-04-21 16:58:26,982] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:26,983] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:26,983] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:27,087] INFO: Peer list retrieved:
+[2025-04-21 16:58:27,088] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:27,088] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:27,089] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:27,193] INFO: Peer list retrieved:
+[2025-04-21 16:58:27,194] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:27,195] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:27,196] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:27,301] INFO: Peer list retrieved:
+[2025-04-21 16:58:27,301] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:27,302] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:27,302] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:27,408] INFO: Peer list retrieved:
+[2025-04-21 16:58:27,408] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:27,409] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:27,409] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:27,514] INFO: Peer list retrieved:
+[2025-04-21 16:58:27,514] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:27,515] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:27,516] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:27,620] INFO: Peer list retrieved:
+[2025-04-21 16:58:27,620] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:27,620] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:27,621] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:27,725] INFO: Peer list retrieved:
+[2025-04-21 16:58:27,726] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:27,726] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:27,726] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:27,831] INFO: Peer list retrieved:
+[2025-04-21 16:58:27,832] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:27,832] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:27,833] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:27,938] INFO: Peer list retrieved:
+[2025-04-21 16:58:27,938] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:27,939] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:27,940] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:28,042] INFO: Peer list retrieved:
+[2025-04-21 16:58:28,042] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:28,042] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:28,043] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:28,147] INFO: Peer list retrieved:
+[2025-04-21 16:58:28,148] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:28,148] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:28,149] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:28,253] INFO: Peer list retrieved:
+[2025-04-21 16:58:28,253] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:28,254] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:28,254] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:28,359] INFO: Peer list retrieved:
+[2025-04-21 16:58:28,360] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:28,361] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:28,361] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:28,467] INFO: Peer list retrieved:
+[2025-04-21 16:58:28,467] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:28,468] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:28,469] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:28,574] INFO: Peer list retrieved:
+[2025-04-21 16:58:28,574] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:28,575] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:28,575] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:28,679] INFO: Peer list retrieved:
+[2025-04-21 16:58:28,680] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:28,680] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:28,680] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:28,785] INFO: Peer list retrieved:
+[2025-04-21 16:58:28,786] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:28,786] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:28,787] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:28,891] INFO: Peer list retrieved:
+[2025-04-21 16:58:28,891] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:28,892] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:28,892] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:28,995] INFO: Peer list retrieved:
+[2025-04-21 16:58:28,996] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:28,996] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:28,998] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:29,101] INFO: Peer list retrieved:
+[2025-04-21 16:58:29,101] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:29,101] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:29,102] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:29,206] INFO: Peer list retrieved:
+[2025-04-21 16:58:29,206] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:29,206] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:29,207] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:29,311] INFO: Peer list retrieved:
+[2025-04-21 16:58:29,312] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:29,312] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:29,313] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:29,416] INFO: Peer list retrieved:
+[2025-04-21 16:58:29,417] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:29,417] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:29,418] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:29,522] INFO: Peer list retrieved:
+[2025-04-21 16:58:29,522] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:29,523] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:29,523] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:29,627] INFO: Peer list retrieved:
+[2025-04-21 16:58:29,627] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:29,628] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:29,628] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:29,733] INFO: Peer list retrieved:
+[2025-04-21 16:58:29,733] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:29,733] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:29,734] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:29,838] INFO: Peer list retrieved:
+[2025-04-21 16:58:29,838] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:29,840] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:29,840] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:29,943] INFO: Peer list retrieved:
+[2025-04-21 16:58:29,944] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:29,944] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:29,945] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:30,049] INFO: Peer list retrieved:
+[2025-04-21 16:58:30,049] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:30,050] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:30,050] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:30,155] INFO: Peer list retrieved:
+[2025-04-21 16:58:30,155] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:30,156] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:30,156] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:30,260] INFO: Peer list retrieved:
+[2025-04-21 16:58:30,262] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:30,262] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:30,262] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:30,366] INFO: Peer list retrieved:
+[2025-04-21 16:58:30,366] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:30,367] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:30,367] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:30,472] INFO: Peer list retrieved:
+[2025-04-21 16:58:30,472] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:30,473] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:30,473] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:30,577] INFO: Peer list retrieved:
+[2025-04-21 16:58:30,577] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:30,578] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:30,578] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:30,682] INFO: Peer list retrieved:
+[2025-04-21 16:58:30,682] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:30,682] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:30,683] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:30,787] INFO: Peer list retrieved:
+[2025-04-21 16:58:30,787] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:30,788] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:30,788] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:30,893] INFO: Peer list retrieved:
+[2025-04-21 16:58:30,893] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:30,895] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:30,895] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:30,999] INFO: Peer list retrieved:
+[2025-04-21 16:58:30,999] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:31,000] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:31,000] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:31,103] INFO: Peer list retrieved:
+[2025-04-21 16:58:31,104] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:31,104] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:31,105] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:31,210] INFO: Peer list retrieved:
+[2025-04-21 16:58:31,210] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:31,210] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:31,211] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:31,315] INFO: Peer list retrieved:
+[2025-04-21 16:58:31,315] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:31,316] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:31,316] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:31,420] INFO: Peer list retrieved:
+[2025-04-21 16:58:31,420] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:31,421] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:31,421] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:31,525] INFO: Peer list retrieved:
+[2025-04-21 16:58:31,525] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:31,525] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:31,526] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:31,629] INFO: Peer list retrieved:
+[2025-04-21 16:58:31,629] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:31,630] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:31,632] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:31,735] INFO: Peer list retrieved:
+[2025-04-21 16:58:31,736] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:31,736] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:31,736] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:31,840] INFO: Peer list retrieved:
+[2025-04-21 16:58:31,840] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:31,841] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:31,841] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:31,944] INFO: Peer list retrieved:
+[2025-04-21 16:58:31,946] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:31,946] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:31,947] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:32,050] INFO: Peer list retrieved:
+[2025-04-21 16:58:32,051] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:32,051] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:32,052] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:32,154] INFO: Peer list retrieved:
+[2025-04-21 16:58:32,154] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:32,154] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:32,155] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:32,258] INFO: Peer list retrieved:
+[2025-04-21 16:58:32,259] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:32,259] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:32,260] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:32,363] INFO: Peer list retrieved:
+[2025-04-21 16:58:32,363] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:32,364] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:32,364] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:32,468] INFO: Peer list retrieved:
+[2025-04-21 16:58:32,469] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:32,469] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:32,470] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:32,572] INFO: Peer list retrieved:
+[2025-04-21 16:58:32,573] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:32,573] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:32,573] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:32,677] INFO: Peer list retrieved:
+[2025-04-21 16:58:32,678] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:32,678] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:32,679] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:32,782] INFO: Peer list retrieved:
+[2025-04-21 16:58:32,782] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:32,782] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:32,783] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:32,887] INFO: Peer list retrieved:
+[2025-04-21 16:58:32,888] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:32,888] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:32,889] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:32,993] INFO: Peer list retrieved:
+[2025-04-21 16:58:32,993] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:32,994] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:32,994] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:33,099] INFO: Peer list retrieved:
+[2025-04-21 16:58:33,099] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:33,100] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:33,100] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:33,204] INFO: Peer list retrieved:
+[2025-04-21 16:58:33,205] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:33,205] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:33,205] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:33,309] INFO: Peer list retrieved:
+[2025-04-21 16:58:33,309] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:33,310] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:33,310] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:33,414] INFO: Peer list retrieved:
+[2025-04-21 16:58:33,415] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:33,415] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:33,415] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:33,519] INFO: Peer list retrieved:
+[2025-04-21 16:58:33,520] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:33,520] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:33,521] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:33,625] INFO: Peer list retrieved:
+[2025-04-21 16:58:33,625] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:33,626] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:33,626] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:33,730] INFO: Peer list retrieved:
+[2025-04-21 16:58:33,730] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:33,730] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:33,731] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:33,834] INFO: Peer list retrieved:
+[2025-04-21 16:58:33,834] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:33,835] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:33,835] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:33,939] INFO: Peer list retrieved:
+[2025-04-21 16:58:33,939] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:33,940] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:33,940] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:34,044] INFO: Peer list retrieved:
+[2025-04-21 16:58:34,044] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:34,044] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:34,045] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:34,148] INFO: Peer list retrieved:
+[2025-04-21 16:58:34,148] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:34,148] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:34,149] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:34,252] INFO: Peer list retrieved:
+[2025-04-21 16:58:34,253] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:34,253] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:34,253] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:34,357] INFO: Peer list retrieved:
+[2025-04-21 16:58:34,358] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:34,358] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:34,359] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:34,463] INFO: Peer list retrieved:
+[2025-04-21 16:58:34,463] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:34,464] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:34,464] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:34,569] INFO: Peer list retrieved:
+[2025-04-21 16:58:34,569] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:34,570] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:34,570] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:34,674] INFO: Peer list retrieved:
+[2025-04-21 16:58:34,674] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:34,675] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:34,676] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:34,779] INFO: Peer list retrieved:
+[2025-04-21 16:58:34,780] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:34,780] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:34,781] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:34,884] INFO: Peer list retrieved:
+[2025-04-21 16:58:34,885] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:34,885] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:34,886] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:34,990] INFO: Peer list retrieved:
+[2025-04-21 16:58:34,990] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:34,991] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:34,991] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:35,095] INFO: Peer list retrieved:
+[2025-04-21 16:58:35,095] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:35,096] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:35,096] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:35,199] INFO: Peer list retrieved:
+[2025-04-21 16:58:35,200] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:35,200] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:35,201] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:35,306] INFO: Peer list retrieved:
+[2025-04-21 16:58:35,306] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:35,307] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:35,307] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:35,411] INFO: Peer list retrieved:
+[2025-04-21 16:58:35,411] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:35,412] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:35,413] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:35,516] INFO: Peer list retrieved:
+[2025-04-21 16:58:35,516] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:35,516] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:35,516] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:35,621] INFO: Peer list retrieved:
+[2025-04-21 16:58:35,621] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:35,621] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:35,621] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:35,726] INFO: Peer list retrieved:
+[2025-04-21 16:58:35,726] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:35,726] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:35,727] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:35,830] INFO: Peer list retrieved:
+[2025-04-21 16:58:35,830] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:35,830] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:35,831] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:35,935] INFO: Peer list retrieved:
+[2025-04-21 16:58:35,936] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:35,936] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:35,937] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:36,041] INFO: Peer list retrieved:
+[2025-04-21 16:58:36,041] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:36,042] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:36,042] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:36,146] INFO: Peer list retrieved:
+[2025-04-21 16:58:36,147] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:36,147] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:36,148] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:36,251] INFO: Peer list retrieved:
+[2025-04-21 16:58:36,251] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:36,252] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:36,254] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:36,357] INFO: Peer list retrieved:
+[2025-04-21 16:58:36,357] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:36,357] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:36,358] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:36,462] INFO: Peer list retrieved:
+[2025-04-21 16:58:36,462] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:36,462] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:36,463] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:36,571] INFO: Peer list retrieved:
+[2025-04-21 16:58:36,571] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:36,572] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:36,572] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:36,676] INFO: Peer list retrieved:
+[2025-04-21 16:58:36,677] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:36,677] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:36,677] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:36,783] INFO: Peer list retrieved:
+[2025-04-21 16:58:36,783] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:36,783] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:36,784] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:36,888] INFO: Peer list retrieved:
+[2025-04-21 16:58:36,888] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:36,890] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:36,891] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:36,993] INFO: Peer list retrieved:
+[2025-04-21 16:58:36,994] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:36,994] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:36,995] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:37,099] INFO: Peer list retrieved:
+[2025-04-21 16:58:37,100] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:37,100] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:37,100] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:37,204] INFO: Peer list retrieved:
+[2025-04-21 16:58:37,206] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:37,206] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:37,207] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:37,310] INFO: Peer list retrieved:
+[2025-04-21 16:58:37,310] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:37,311] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:37,311] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:37,416] INFO: Peer list retrieved:
+[2025-04-21 16:58:37,417] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:37,417] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:37,417] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:37,521] INFO: Peer list retrieved:
+[2025-04-21 16:58:37,521] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:37,522] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:37,522] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:37,625] INFO: Peer list retrieved:
+[2025-04-21 16:58:37,626] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:37,626] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:37,627] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:37,731] INFO: Peer list retrieved:
+[2025-04-21 16:58:37,732] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:37,732] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:37,732] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:37,837] INFO: Peer list retrieved:
+[2025-04-21 16:58:37,837] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:37,837] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:37,838] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:37,941] INFO: Peer list retrieved:
+[2025-04-21 16:58:37,942] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:37,942] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:37,943] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:38,046] INFO: Peer list retrieved:
+[2025-04-21 16:58:38,046] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:38,046] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:38,047] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:38,150] INFO: Peer list retrieved:
+[2025-04-21 16:58:38,151] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:38,151] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:38,152] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:38,257] INFO: Peer list retrieved:
+[2025-04-21 16:58:38,257] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:38,257] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:38,258] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:38,362] INFO: Peer list retrieved:
+[2025-04-21 16:58:38,362] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:38,363] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:38,363] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:38,468] INFO: Peer list retrieved:
+[2025-04-21 16:58:38,468] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:38,469] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:38,469] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:38,573] INFO: Peer list retrieved:
+[2025-04-21 16:58:38,573] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:38,573] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:38,574] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:38,678] INFO: Peer list retrieved:
+[2025-04-21 16:58:38,678] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:38,678] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:38,679] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:38,782] INFO: Peer list retrieved:
+[2025-04-21 16:58:38,782] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:38,782] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:38,783] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:38,887] INFO: Peer list retrieved:
+[2025-04-21 16:58:38,887] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:38,888] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:38,888] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:38,993] INFO: Peer list retrieved:
+[2025-04-21 16:58:38,994] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:38,994] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:38,995] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:39,099] INFO: Peer list retrieved:
+[2025-04-21 16:58:39,099] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:39,100] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:39,100] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:39,205] INFO: Peer list retrieved:
+[2025-04-21 16:58:39,205] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:39,206] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:39,206] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:39,312] INFO: Peer list retrieved:
+[2025-04-21 16:58:39,312] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:39,312] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:39,314] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:39,418] INFO: Peer list retrieved:
+[2025-04-21 16:58:39,419] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:39,419] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:39,420] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:39,523] INFO: Peer list retrieved:
+[2025-04-21 16:58:39,523] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:39,524] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:39,524] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:39,628] INFO: Peer list retrieved:
+[2025-04-21 16:58:39,629] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:39,629] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:39,630] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:39,734] INFO: Peer list retrieved:
+[2025-04-21 16:58:39,734] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:39,735] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:39,735] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:39,837] INFO: Peer list retrieved:
+[2025-04-21 16:58:39,837] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:39,839] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:39,839] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:39,942] INFO: Peer list retrieved:
+[2025-04-21 16:58:39,943] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:39,943] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:39,944] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:40,048] INFO: Peer list retrieved:
+[2025-04-21 16:58:40,049] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:40,049] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:40,050] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:40,161] INFO: Peer list retrieved:
+[2025-04-21 16:58:40,162] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:40,162] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:40,164] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:40,268] INFO: Peer list retrieved:
+[2025-04-21 16:58:40,269] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:40,269] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:40,270] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:40,374] INFO: Peer list retrieved:
+[2025-04-21 16:58:40,374] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:40,375] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:40,375] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:40,479] INFO: Peer list retrieved:
+[2025-04-21 16:58:40,479] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:40,479] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:40,481] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:40,584] INFO: Peer list retrieved:
+[2025-04-21 16:58:40,584] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:40,585] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:40,585] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:40,689] INFO: Peer list retrieved:
+[2025-04-21 16:58:40,689] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:40,690] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:40,690] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:40,794] INFO: Peer list retrieved:
+[2025-04-21 16:58:40,794] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:40,794] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:40,795] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:40,899] INFO: Peer list retrieved:
+[2025-04-21 16:58:40,899] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:40,899] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:40,900] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:41,004] INFO: Peer list retrieved:
+[2025-04-21 16:58:41,005] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:41,005] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:41,006] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:41,110] INFO: Peer list retrieved:
+[2025-04-21 16:58:41,110] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:41,110] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:41,111] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:41,215] INFO: Peer list retrieved:
+[2025-04-21 16:58:41,215] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:41,216] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:41,216] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:41,320] INFO: Peer list retrieved:
+[2025-04-21 16:58:41,320] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:41,321] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:41,321] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:41,426] INFO: Peer list retrieved:
+[2025-04-21 16:58:41,428] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:41,428] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:41,429] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:41,531] INFO: Peer list retrieved:
+[2025-04-21 16:58:41,531] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:41,532] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:41,532] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:41,637] INFO: Peer list retrieved:
+[2025-04-21 16:58:41,637] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:41,637] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:41,638] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:41,742] INFO: Peer list retrieved:
+[2025-04-21 16:58:41,742] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:41,742] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:41,744] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:41,847] INFO: Peer list retrieved:
+[2025-04-21 16:58:41,847] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:41,848] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:41,848] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:41,952] INFO: Peer list retrieved:
+[2025-04-21 16:58:41,952] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:41,952] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:41,954] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:42,058] INFO: Peer list retrieved:
+[2025-04-21 16:58:42,058] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:42,059] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:42,059] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:42,163] INFO: Peer list retrieved:
+[2025-04-21 16:58:42,163] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:42,164] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:42,164] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:42,268] INFO: Peer list retrieved:
+[2025-04-21 16:58:42,269] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:42,269] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:42,269] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:42,373] INFO: Peer list retrieved:
+[2025-04-21 16:58:42,374] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:42,374] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:42,375] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:42,480] INFO: Peer list retrieved:
+[2025-04-21 16:58:42,480] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:42,480] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:42,480] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:42,584] INFO: Peer list retrieved:
+[2025-04-21 16:58:42,585] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:42,585] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:42,585] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:42,689] INFO: Peer list retrieved:
+[2025-04-21 16:58:42,690] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:42,690] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:42,692] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:42,797] INFO: Peer list retrieved:
+[2025-04-21 16:58:42,797] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:42,798] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:42,798] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:42,902] INFO: Peer list retrieved:
+[2025-04-21 16:58:42,902] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:42,903] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:42,903] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:43,006] INFO: Peer list retrieved:
+[2025-04-21 16:58:43,007] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:43,007] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:43,008] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:43,111] INFO: Peer list retrieved:
+[2025-04-21 16:58:43,112] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:43,112] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:43,113] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:43,216] INFO: Peer list retrieved:
+[2025-04-21 16:58:43,216] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:43,217] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:43,217] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:43,321] INFO: Peer list retrieved:
+[2025-04-21 16:58:43,321] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:43,321] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:43,322] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:43,424] INFO: Peer list retrieved:
+[2025-04-21 16:58:43,425] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:43,425] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:43,426] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:43,530] INFO: Peer list retrieved:
+[2025-04-21 16:58:43,531] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:43,531] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:43,532] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:43,635] INFO: Peer list retrieved:
+[2025-04-21 16:58:43,635] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:43,636] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:43,637] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:43,740] INFO: Peer list retrieved:
+[2025-04-21 16:58:43,741] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:43,741] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:43,742] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:43,845] INFO: Peer list retrieved:
+[2025-04-21 16:58:43,846] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:43,846] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:43,847] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:43,951] INFO: Peer list retrieved:
+[2025-04-21 16:58:43,952] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:43,952] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:43,953] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:44,056] INFO: Peer list retrieved:
+[2025-04-21 16:58:44,057] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:44,057] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:44,057] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:44,161] INFO: Peer list retrieved:
+[2025-04-21 16:58:44,161] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:44,161] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:44,162] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:44,266] INFO: Peer list retrieved:
+[2025-04-21 16:58:44,267] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:44,267] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:44,267] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:44,371] INFO: Peer list retrieved:
+[2025-04-21 16:58:44,371] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:44,371] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:44,372] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:44,481] INFO: Peer list retrieved:
+[2025-04-21 16:58:44,482] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:44,482] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:44,483] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:44,589] INFO: Peer list retrieved:
+[2025-04-21 16:58:44,590] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:44,590] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:44,591] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:44,695] INFO: Peer list retrieved:
+[2025-04-21 16:58:44,695] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:44,696] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:44,698] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:44,803] INFO: Peer list retrieved:
+[2025-04-21 16:58:44,803] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:44,804] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:44,805] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:44,908] INFO: Peer list retrieved:
+[2025-04-21 16:58:44,908] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:44,909] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:44,910] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:45,014] INFO: Peer list retrieved:
+[2025-04-21 16:58:45,014] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:45,015] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:45,016] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:45,130] INFO: Peer list retrieved:
+[2025-04-21 16:58:45,130] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:45,130] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:45,131] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:45,234] INFO: Peer list retrieved:
+[2025-04-21 16:58:45,234] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:45,235] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:45,235] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:45,340] INFO: Peer list retrieved:
+[2025-04-21 16:58:45,341] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:45,341] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:45,342] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:45,445] INFO: Peer list retrieved:
+[2025-04-21 16:58:45,445] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:45,445] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:45,446] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:45,549] INFO: Peer list retrieved:
+[2025-04-21 16:58:45,550] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:45,550] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:45,551] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:45,655] INFO: Peer list retrieved:
+[2025-04-21 16:58:45,655] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:45,655] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:45,656] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:45,758] INFO: Peer list retrieved:
+[2025-04-21 16:58:45,760] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:45,760] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:45,760] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:45,863] INFO: Peer list retrieved:
+[2025-04-21 16:58:45,863] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:45,864] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:45,864] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:45,969] INFO: Peer list retrieved:
+[2025-04-21 16:58:45,969] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:45,970] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:45,971] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:46,075] INFO: Peer list retrieved:
+[2025-04-21 16:58:46,076] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:46,076] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:46,076] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:46,189] INFO: Peer list retrieved:
+[2025-04-21 16:58:46,189] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:46,190] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:46,190] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:46,295] INFO: Peer list retrieved:
+[2025-04-21 16:58:46,295] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:46,296] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:46,296] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:46,401] INFO: Peer list retrieved:
+[2025-04-21 16:58:46,401] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:46,402] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:46,402] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:46,506] INFO: Peer list retrieved:
+[2025-04-21 16:58:46,506] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:46,506] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:46,506] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:46,612] INFO: Peer list retrieved:
+[2025-04-21 16:58:46,612] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:46,612] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:46,613] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:46,717] INFO: Peer list retrieved:
+[2025-04-21 16:58:46,718] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:46,718] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:46,718] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:46,822] INFO: Peer list retrieved:
+[2025-04-21 16:58:46,823] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:46,823] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:46,824] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:46,928] INFO: Peer list retrieved:
+[2025-04-21 16:58:46,928] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:46,929] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:46,929] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:47,033] INFO: Peer list retrieved:
+[2025-04-21 16:58:47,033] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:47,034] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:47,034] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:47,138] INFO: Peer list retrieved:
+[2025-04-21 16:58:47,138] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:47,139] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:47,139] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:47,243] INFO: Peer list retrieved:
+[2025-04-21 16:58:47,244] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:47,245] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:47,246] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:47,349] INFO: Peer list retrieved:
+[2025-04-21 16:58:47,350] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:47,351] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:47,351] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:47,454] INFO: Peer list retrieved:
+[2025-04-21 16:58:47,455] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:47,456] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:47,456] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:47,560] INFO: Peer list retrieved:
+[2025-04-21 16:58:47,560] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:47,560] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:47,561] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:47,665] INFO: Peer list retrieved:
+[2025-04-21 16:58:47,666] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:47,666] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:47,667] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:47,770] INFO: Peer list retrieved:
+[2025-04-21 16:58:47,771] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:47,771] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:47,771] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:47,875] INFO: Peer list retrieved:
+[2025-04-21 16:58:47,876] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:47,877] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:47,877] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:47,979] INFO: Peer list retrieved:
+[2025-04-21 16:58:47,979] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:47,980] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:47,980] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:48,084] INFO: Peer list retrieved:
+[2025-04-21 16:58:48,086] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:48,086] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:48,086] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:48,190] INFO: Peer list retrieved:
+[2025-04-21 16:58:48,191] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:48,191] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:48,193] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:48,297] INFO: Peer list retrieved:
+[2025-04-21 16:58:48,297] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:48,298] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:48,298] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:48,401] INFO: Peer list retrieved:
+[2025-04-21 16:58:48,401] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:48,401] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:48,402] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:48,505] INFO: Peer list retrieved:
+[2025-04-21 16:58:48,507] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:48,507] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:48,508] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:48,611] INFO: Peer list retrieved:
+[2025-04-21 16:58:48,611] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:48,612] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:48,612] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:48,715] INFO: Peer list retrieved:
+[2025-04-21 16:58:48,716] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:48,716] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:48,717] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:48,821] INFO: Peer list retrieved:
+[2025-04-21 16:58:48,822] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:48,823] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:48,823] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:48,926] INFO: Peer list retrieved:
+[2025-04-21 16:58:48,927] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:48,927] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:48,928] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:49,031] INFO: Peer list retrieved:
+[2025-04-21 16:58:49,031] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:49,032] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:49,032] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:49,135] INFO: Peer list retrieved:
+[2025-04-21 16:58:49,136] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:49,136] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:49,137] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:49,241] INFO: Peer list retrieved:
+[2025-04-21 16:58:49,242] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:49,242] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:49,243] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:49,346] INFO: Peer list retrieved:
+[2025-04-21 16:58:49,346] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:49,346] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:49,347] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:49,450] INFO: Peer list retrieved:
+[2025-04-21 16:58:49,451] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:49,451] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:49,451] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:49,555] INFO: Peer list retrieved:
+[2025-04-21 16:58:49,555] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:49,555] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:49,556] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:49,659] INFO: Peer list retrieved:
+[2025-04-21 16:58:49,660] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:49,660] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:49,661] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:49,763] INFO: Peer list retrieved:
+[2025-04-21 16:58:49,765] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:49,765] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:49,765] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:49,870] INFO: Peer list retrieved:
+[2025-04-21 16:58:49,870] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:49,871] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:49,872] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:49,976] INFO: Peer list retrieved:
+[2025-04-21 16:58:49,977] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:49,977] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:49,978] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:50,082] INFO: Peer list retrieved:
+[2025-04-21 16:58:50,083] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:50,083] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:50,084] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:50,188] INFO: Peer list retrieved:
+[2025-04-21 16:58:50,189] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:50,189] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:50,190] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:50,292] INFO: Peer list retrieved:
+[2025-04-21 16:58:50,294] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:50,294] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:50,295] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:50,398] INFO: Peer list retrieved:
+[2025-04-21 16:58:50,399] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:50,399] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:50,399] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:50,504] INFO: Peer list retrieved:
+[2025-04-21 16:58:50,504] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:50,505] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:50,506] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:50,609] INFO: Peer list retrieved:
+[2025-04-21 16:58:50,610] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:50,610] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:50,610] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:50,714] INFO: Peer list retrieved:
+[2025-04-21 16:58:50,714] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:50,715] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:50,715] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:50,820] INFO: Peer list retrieved:
+[2025-04-21 16:58:50,820] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:50,821] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:50,822] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:50,924] INFO: Peer list retrieved:
+[2025-04-21 16:58:50,926] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:50,926] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:50,926] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:51,029] INFO: Peer list retrieved:
+[2025-04-21 16:58:51,030] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:51,030] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:51,030] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:51,135] INFO: Peer list retrieved:
+[2025-04-21 16:58:51,135] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:51,136] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:51,137] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:51,240] INFO: Peer list retrieved:
+[2025-04-21 16:58:51,240] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:51,241] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:51,242] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:51,345] INFO: Peer list retrieved:
+[2025-04-21 16:58:51,345] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:51,345] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:51,346] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:51,451] INFO: Peer list retrieved:
+[2025-04-21 16:58:51,452] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:51,452] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:51,453] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:51,557] INFO: Peer list retrieved:
+[2025-04-21 16:58:51,557] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:51,558] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:51,558] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:51,662] INFO: Peer list retrieved:
+[2025-04-21 16:58:51,662] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:51,664] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:51,664] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:51,767] INFO: Peer list retrieved:
+[2025-04-21 16:58:51,768] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:51,768] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:51,768] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:51,872] INFO: Peer list retrieved:
+[2025-04-21 16:58:51,872] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:51,872] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:51,873] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:51,977] INFO: Peer list retrieved:
+[2025-04-21 16:58:51,978] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:51,978] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:51,978] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:52,083] INFO: Peer list retrieved:
+[2025-04-21 16:58:52,084] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:52,084] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:52,085] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:52,188] INFO: Peer list retrieved:
+[2025-04-21 16:58:52,189] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:52,189] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:52,190] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:52,293] INFO: Peer list retrieved:
+[2025-04-21 16:58:52,294] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:52,294] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:52,295] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:52,398] INFO: Peer list retrieved:
+[2025-04-21 16:58:52,399] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:52,399] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:52,400] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:52,504] INFO: Peer list retrieved:
+[2025-04-21 16:58:52,505] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:52,505] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:52,506] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:52,609] INFO: Peer list retrieved:
+[2025-04-21 16:58:52,610] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:52,610] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:52,611] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:52,715] INFO: Peer list retrieved:
+[2025-04-21 16:58:52,716] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:52,716] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:52,717] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:52,821] INFO: Peer list retrieved:
+[2025-04-21 16:58:52,821] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:52,821] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:52,822] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:52,926] INFO: Peer list retrieved:
+[2025-04-21 16:58:52,927] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:52,927] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:52,927] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:53,032] INFO: Peer list retrieved:
+[2025-04-21 16:58:53,032] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:53,033] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:53,033] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:53,137] INFO: Peer list retrieved:
+[2025-04-21 16:58:53,137] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:53,137] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:53,138] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:53,242] INFO: Peer list retrieved:
+[2025-04-21 16:58:53,242] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:53,242] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:53,243] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:53,347] INFO: Peer list retrieved:
+[2025-04-21 16:58:53,347] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:53,348] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:53,348] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:53,451] INFO: Peer list retrieved:
+[2025-04-21 16:58:53,452] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:53,452] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:53,453] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:53,558] INFO: Peer list retrieved:
+[2025-04-21 16:58:53,558] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:53,559] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:53,560] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:53,663] INFO: Peer list retrieved:
+[2025-04-21 16:58:53,663] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:53,663] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:53,665] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:53,768] INFO: Peer list retrieved:
+[2025-04-21 16:58:53,770] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:53,770] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:53,770] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:53,873] INFO: Peer list retrieved:
+[2025-04-21 16:58:53,874] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:53,874] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:53,875] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:53,978] INFO: Peer list retrieved:
+[2025-04-21 16:58:53,978] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:53,979] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:53,980] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:54,085] INFO: Peer list retrieved:
+[2025-04-21 16:58:54,085] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:54,085] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:54,086] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:54,190] INFO: Peer list retrieved:
+[2025-04-21 16:58:54,190] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:54,191] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:54,192] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:54,295] INFO: Peer list retrieved:
+[2025-04-21 16:58:54,295] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:54,296] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:54,296] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:54,400] INFO: Peer list retrieved:
+[2025-04-21 16:58:54,401] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:54,401] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:54,402] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:54,505] INFO: Peer list retrieved:
+[2025-04-21 16:58:54,506] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:54,506] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:54,507] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:54,612] INFO: Peer list retrieved:
+[2025-04-21 16:58:54,612] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:54,613] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:54,614] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:54,718] INFO: Peer list retrieved:
+[2025-04-21 16:58:54,718] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:54,719] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:54,719] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:54,822] INFO: Peer list retrieved:
+[2025-04-21 16:58:54,822] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:54,822] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:54,824] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:54,928] INFO: Peer list retrieved:
+[2025-04-21 16:58:54,928] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:54,929] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:54,930] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:55,034] INFO: Peer list retrieved:
+[2025-04-21 16:58:55,034] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:55,035] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:55,035] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:55,139] INFO: Peer list retrieved:
+[2025-04-21 16:58:55,139] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:55,140] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:55,140] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:55,243] INFO: Peer list retrieved:
+[2025-04-21 16:58:55,245] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:55,245] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:55,246] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:55,349] INFO: Peer list retrieved:
+[2025-04-21 16:58:55,349] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:55,350] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:55,350] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:55,454] INFO: Peer list retrieved:
+[2025-04-21 16:58:55,455] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:55,455] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:55,456] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:55,559] INFO: Peer list retrieved:
+[2025-04-21 16:58:55,560] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:55,560] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:55,560] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:55,664] INFO: Peer list retrieved:
+[2025-04-21 16:58:55,665] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:55,665] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:55,665] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:55,768] INFO: Peer list retrieved:
+[2025-04-21 16:58:55,768] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:55,768] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:55,769] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:55,872] INFO: Peer list retrieved:
+[2025-04-21 16:58:55,874] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:55,874] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:55,875] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:55,979] INFO: Peer list retrieved:
+[2025-04-21 16:58:55,979] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:55,980] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:55,981] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:56,083] INFO: Peer list retrieved:
+[2025-04-21 16:58:56,084] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:56,084] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:56,085] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:56,189] INFO: Peer list retrieved:
+[2025-04-21 16:58:56,190] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:56,190] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:56,191] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:56,293] INFO: Peer list retrieved:
+[2025-04-21 16:58:56,294] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:56,294] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:56,294] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:56,397] INFO: Peer list retrieved:
+[2025-04-21 16:58:56,399] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:56,399] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:56,400] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:56,503] INFO: Peer list retrieved:
+[2025-04-21 16:58:56,503] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:56,503] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:56,504] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:56,608] INFO: Peer list retrieved:
+[2025-04-21 16:58:56,609] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:56,609] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:56,610] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:56,715] INFO: Peer list retrieved:
+[2025-04-21 16:58:56,715] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:56,716] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:56,716] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:56,819] INFO: Peer list retrieved:
+[2025-04-21 16:58:56,821] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:56,821] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:56,822] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:56,926] INFO: Peer list retrieved:
+[2025-04-21 16:58:56,926] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:56,927] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:56,927] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:57,031] INFO: Peer list retrieved:
+[2025-04-21 16:58:57,031] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:57,032] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:57,032] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:57,137] INFO: Peer list retrieved:
+[2025-04-21 16:58:57,137] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:57,137] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:57,138] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:57,242] INFO: Peer list retrieved:
+[2025-04-21 16:58:57,243] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:57,243] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:57,244] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:57,348] INFO: Peer list retrieved:
+[2025-04-21 16:58:57,349] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:57,349] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:57,350] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:57,453] INFO: Peer list retrieved:
+[2025-04-21 16:58:57,454] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:57,454] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:57,455] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:57,559] INFO: Peer list retrieved:
+[2025-04-21 16:58:57,560] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:57,561] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:57,562] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:57,666] INFO: Peer list retrieved:
+[2025-04-21 16:58:57,666] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:57,666] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:57,668] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:57,772] INFO: Peer list retrieved:
+[2025-04-21 16:58:57,772] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:57,773] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:57,773] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:57,877] INFO: Peer list retrieved:
+[2025-04-21 16:58:57,877] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:57,877] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:57,877] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:57,980] INFO: Peer list retrieved:
+[2025-04-21 16:58:57,981] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:57,981] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:57,982] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:58,086] INFO: Peer list retrieved:
+[2025-04-21 16:58:58,087] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:58,087] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:58,088] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:58,192] INFO: Peer list retrieved:
+[2025-04-21 16:58:58,192] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:58,192] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:58,193] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:58,297] INFO: Peer list retrieved:
+[2025-04-21 16:58:58,297] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:58,298] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:58,298] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:58,402] INFO: Peer list retrieved:
+[2025-04-21 16:58:58,402] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:58,403] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:58,403] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:58,506] INFO: Peer list retrieved:
+[2025-04-21 16:58:58,506] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:58,506] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:58,508] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:58,612] INFO: Peer list retrieved:
+[2025-04-21 16:58:58,612] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:58,613] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:58,614] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:58,718] INFO: Peer list retrieved:
+[2025-04-21 16:58:58,719] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:58,719] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:58,719] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:58,822] INFO: Peer list retrieved:
+[2025-04-21 16:58:58,823] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:58,823] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:58,824] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:58,928] INFO: Peer list retrieved:
+[2025-04-21 16:58:58,929] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:58,929] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:58,930] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:59,033] INFO: Peer list retrieved:
+[2025-04-21 16:58:59,034] INFO:  - an08 (172.20.10.2:8237)
+[2025-04-21 16:58:59,034] INFO:  - an09 (172.20.10.2:8549)
+[2025-04-21 16:58:59,035] INFO: Sent UDP livestream message to 172.20.10.2:8238
+[2025-04-21 16:58:59,063] INFO: Stopping livestream.
+[2025-04-21 16:58:59,664] INFO: Livestream stopped.
+[2025-04-21 17:00:00,745] INFO: Sending message: alooo
+[2025-04-21 17:00:01,069] INFO: Sent P2P chat to 172.20.10.2:8237 – {"type": "chat", "sender": "an09", "message": "alooo", "channel": "aa1", "owner": "an09"}
+[2025-04-21 17:00:03,118] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-21 17:00:05,164] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-21 17:00:07,211] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-21 17:00:07,211] INFO: Message from an09 sent in channel 'aa1'
+[2025-04-21 17:00:12,291] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 17:00:12,291] INFO: [SYNC] SyncManager started for channel 'aa1'
+[2025-04-21 17:00:12,743] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 17:00:12,744] INFO: [SYNC] SyncManager started for channel 'aa1'
+[2025-04-21 17:00:14,919] INFO: [P2P MESSAGE] an08 -> an09: chào
+[2025-04-21 17:00:18,760] INFO: [P2P MESSAGE] an08 -> an09: alo
+[2025-04-21 17:00:22,940] INFO: Sending message: sao hong hiện
+[2025-04-21 17:00:23,262] INFO: Sent P2P chat to 172.20.10.2:8237 – {"type": "chat", "sender": "an09", "message": "sao hong hi\u1ec7n", "channel": "aa1", "owner": "an09"}
+[2025-04-21 17:00:25,303] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-21 17:00:27,349] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-21 17:00:29,381] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-21 17:00:29,382] INFO: Message from an09 sent in channel 'aa1'
