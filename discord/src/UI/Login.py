@@ -114,7 +114,7 @@ class LoginRegisterUI(QWidget):
     def __init__(self):
         super().__init__()
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_ip = '10.0.217.86'
+        server_ip = '10.0.3.222'
         server_port = 5000
         try:
             self.client_socket.connect((server_ip, server_port))
@@ -249,7 +249,14 @@ class LoginRegisterUI(QWidget):
                             with open(sync_path, "a", encoding="utf-8") as f:
                                 new_lines_count = 0
                                 for msg in messages:
-                                    line = msg.get("text", "").strip()
+                                    if isinstance(msg, dict):
+                                        line = msg.get("text", "").strip()
+                                    elif isinstance(msg, str):
+                                        line = msg.strip()
+                                    else:
+                                        logging.warning("[SYNC LOGIN] Unexpected message format: %s", msg)
+                                        continue
+
                                     if line and line not in existing_lines:
                                         f.write(line + "\n")
                                         new_lines_count += 1

@@ -70778,3 +70778,12 @@
 [2025-04-15 15:13:16,509] INFO: Sending message: aaaaa
 [2025-04-15 15:13:16,510] INFO: Sent chat message via tracker: [DM to an09 (Online)] aaaaa
 [2025-04-15 15:14:21,187] INFO: Tracker response on LEAVE: Peer an08 (172.20.10.2:6669) left
+[2025-04-21 15:12:10,238] INFO: Logged in as: an08
+[2025-04-21 15:12:11,307] INFO: [SYNC LOGIN] Saved 14 new messages for an08
+[2025-04-21 15:12:11,307] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 15:12:13,362] ERROR: Unable to connect to Tracker: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-21 15:12:13,367] INFO: P2P SERVER listening on 172.20.10.4:6533
+[2025-04-21 15:12:13,369] INFO: UDP LISTENER listening on 172.20.10.4:6534 for livestream.
+[2025-04-21 15:12:18,136] INFO: User an08 joined public channel '11'
+[2025-04-21 15:12:41,895] INFO: [SYNC DONE] Synced file: sync_an08_an08.txt
+[2025-04-21 15:12:42,730] ERROR: Not connected to tracker.

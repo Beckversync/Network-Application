@@ -345,26 +345,26 @@ class DiscordUI(QMainWindow):
                 self.chat_display.append(f"Polling error: {response.get('message')}")
 
         if (owner_data and owner_data.get("state") == "online"):
-            
-            if response.get("status") == "success":
-                try:
-                    file_path = os.path.join("local_sync", f"sync_{self.current_channel}_{owner_username}.txt")
-                    if not os.path.exists(file_path):
-                        self.chat_display.append("[INFO] Do not have mesage.")
-                        return
+                if response.get("status") == "success":
+                    try:
+                        file_path = os.path.join("local_sync", f"sync_{self.current_channel}_{owner_username}.txt")
+                        if not os.path.exists(file_path):
+                            self.chat_display.append("[INFO] Do not have mesage.")
+                            return
 
-                    with open(file_path, 'r', encoding='utf-8') as f:
-                        for line in f:
-                            self.chat_display.append(line.strip())
-                            self.last_message_count += 1
-                            self.current_channel_info = response
+                        with open(file_path, 'r', encoding='utf-8') as f:
+                            for line in f:
+                                self.chat_display.append(line.strip())
+                                self.last_message_count += 1
+                                self.current_channel_info = response
 
-                    logging.info("[SYNC LOAD] Save message to file: %s", file_path)
-                except Exception as e:
-                    logging.error("[SYNC LOAD] Error when read file: %s", e)
-                    self.chat_display.append("[ERROR] Can not load message from file.")
-            else:
-                self.chat_display.append(f"Polling error: {response.get('message')}")
+                        logging.info("[SYNC LOAD] Save message to file: %s", file_path)
+                    except Exception as e:
+                        logging.error("[SYNC LOAD] Error when read file: %s", e)
+                        self.chat_display.append("[ERROR] Can not load message from file.")
+                else:
+                    self.chat_display.append(f"Polling error: {response.get('message')}")       
+
 
 
     def start_request_timer(self, owner):
@@ -642,8 +642,8 @@ class DiscordUI(QMainWindow):
                 self.hosted_channel_list.clear()
                 for c in channels:
                     self.hosted_channel_list.addItem(c)
-            else:
-                logging.error("Error get_hosted_channels: %s", response.get("message"))
+            # else:
+            #     logging.error("Error get_hosted_channels: %s", response.get("message"))
         
         except Exception as e:
             logging.error("get_hosted_channels_from_server error: %s", e)
@@ -665,7 +665,6 @@ class DiscordUI(QMainWindow):
 
                     if not owner_data:
                         logging.warning("poll_loop: Owner data is None for username: %s", owner_username)
-                        time.sleep(0.5)
                         continue
 
                     if owner_data.get("state") == "offline":
@@ -682,55 +681,95 @@ class DiscordUI(QMainWindow):
 
                         if response.get("status") == "success":
                             messages = response.get("messages", [])
+                            
                             if len(messages) > self.last_message_count:
                                 new_msgs = messages[self.last_message_count:]
+
                                 for msg in new_msgs:
                                     text = msg.get("text")
-                                    self.chat_display.append(f"{text}")
-                                    self.last_message_count = len(messages)
+                                    if not hasattr(self, "seen_messages"):
+                                        self.seen_messages = set()
+
+                                    if text not in self.seen_messages:
+                                        self.chat_display.append(f"{text}")
+                                        self.seen_messages.add(text)
+                                        print(">>> Tin nhắn mới được thêm <<<")
+
+                                self.last_message_count = len(messages)
                         else:
                             logging.error("Polling error: %s", response.get("message"))
 
                     elif owner_data.get("state") == "online" or owner_data.get("state") == "Invisible":
-                        request_data = {
-                            "action": "get_channel_info",
-                            "channel_name": self.current_channel,
-                            "username": self.username,
-                        }
-                        if self.is_viewer:
-                            request_data["is_visitor"] = True
+                            request_data = {
+                                "action": "get_channel_info",
+                                "channel_name": self.current_channel,
+                                "username": self.username,
+                            }
+                            if self.is_viewer:
+                                request_data["is_visitor"] = True
 
-                        response_str = channelRequest.handle_channel_request(json.dumps(request_data))
-                        response = json.loads(response_str)
+                            response_str = channelRequest.handle_channel_request(json.dumps(request_data))
+                            response = json.loads(response_str)
 
-                        if response.get("status") == "success":
-                            file_path = os.path.join("local_sync", f"sync_{self.current_channel}_{owner_username}.txt")
-                            if os.path.exists(file_path):
-                                with open(file_path, 'r', encoding='utf-8') as f:
-                                    lines = [line.strip() for line in f if line.strip() and message_pattern.match(line)]
+                            if response.get("status") == "success":
+                                file_path = os.path.join("local_sync", f"sync_{self.current_channel}_{owner_username}.txt")
+                                if os.path.exists(file_path):
+                                    with open(file_path, 'r', encoding='utf-8') as f:
+                                        lines = [line.strip() for line in f if line.strip() and message_pattern.match(line)]
 
-                                # Phần xử lý nằm ngoài with
-                                if not lines:
-                                    time.sleep(0.5)
-                                    continue
+                                   
+                                    if not lines:
+                                        time.sleep(0.5)
+                                        continue
 
-                                if not hasattr(self, "last_seen_line") or self.last_seen_line not in lines:
-                                    for line in lines:
-                                        self.chat_display.append(line)
-                                    self.last_seen_line = lines[-1]
-                                    self.last_message_count = len(lines)
-                                else:
-                                    idx = lines.index(self.last_seen_line)
-                                    new_lines = lines[idx + 1:]
-                                    for line in new_lines:
-                                        self.chat_display.append(line)
-                                    if new_lines:
-                                        self.last_seen_line = new_lines[-1]
+                                    if not hasattr(self, "last_seen_line") or self.last_seen_line not in lines:
+                                        for _, line in enumerate(lines):  # _ vì bạn không cần chỉ mục (index)
+                                            self.chat_display.append(line)
+                                            # print("EEEEEEEEEEEEEEEEEEEEEE")
+                                            if owner_username == self.username:
+                                                # print("nEEEEEEEEEEEEEEe")
+                                                message_dict = {
+                                                    "sender": owner_username,
+                                                    "text": line
+                                                }
+                                                channels_collection.update_one(
+                                                    {"channel_name": self.current_channel},
+                                                    {"$push": {"messages": message_dict}}
+                                                )
+                                        self.last_seen_line = lines[-1]
                                         self.last_message_count = len(lines)
+                                    else:
+                                        idx = lines.index(self.last_seen_line)
+                                        new_lines = lines[idx + 1:]
+                                        if not hasattr(self, "seen_messages"):
+                                            self.seen_messages = set()
+
+                                        for line in new_lines:  # <-- CHỈ XỬ LÝ DÒNG MỚI
+                                            if line not in self.seen_messages:
+                                                self.chat_display.append(line)
+                                                self.seen_messages.add(line)
+
+                                                if owner_username == self.username:
+                                                    if not channels_collection.find_one({
+                                                        "channel_name": self.current_channel,
+                                                        "messages.text": line
+                                                    }):
+                                                        message_dict = {
+                                                            "sender": owner_username,
+                                                            "text": line
+                                                        }
+                                                        channels_collection.update_one(
+                                                            {"channel_name": self.current_channel},
+                                                            {"$push": {"messages": message_dict}}
+                                                        )
+
+                                        if new_lines:
+                                            self.last_seen_line = new_lines[-1]
+                                            self.last_message_count = len(new_lines)
+                                else:
+                                    logging.warning("[SYNC LOAD] File not found: %s", file_path)
                             else:
-                                logging.warning("[SYNC LOAD] File not found: %s", file_path)
-                        else:
-                            logging.error("poll_loop response error: %s", response.get("message"))
+                                logging.error("poll_loop response error: %s", response.get("message"))
 
                 except Exception as e:
                     logging.error("Exception in poll_loop: %s", e)
@@ -743,7 +782,7 @@ class DiscordUI(QMainWindow):
             except Exception as e:
                 logging.error("Error updating lists: %s", e)
 
-            time.sleep(0.5)
+            time.sleep(1)
     
     def toggle_livestream(self):
         if self.current_mode != "channel":
@@ -768,7 +807,7 @@ class DiscordUI(QMainWindow):
         session_id = self.session_info.get("session_id")
         try:
             client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            server_ip = '10.0.217.86'
+            server_ip = '10.0.3.222'
             server_port = 5000
             client_socket.connect((server_ip, server_port))
             if status == "Online":
@@ -792,8 +831,9 @@ class DiscordUI(QMainWindow):
     
     def logout(self):
         try:
+            # Gửi yêu cầu logout đến server
             client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            server_ip = '10.0.217.86'
+            server_ip = '10.0.3.222'
             server_port = 5000
             client_socket.connect((server_ip, server_port))
             session_id = self.session_info.get("session_id")
@@ -804,69 +844,21 @@ class DiscordUI(QMainWindow):
             client_socket.close()
 
             if response.get("status") == "success":
-                sync_folder = "local_sync"
-                if os.path.exists(sync_folder):
-                    for filename in os.listdir(sync_folder):
-                        if filename.startswith("sync_") and filename.endswith(".txt"):
-                            file_path = os.path.join(sync_folder, filename)
-                            parts = filename.replace("sync_", "").replace(".txt", "").split("_")
-                            if len(parts) < 2:
-                                continue
+                os.makedirs("local_sync", exist_ok=True)
 
-                            channel_name = parts[0]
-                            channel_owner = parts[1]
+                for filename in os.listdir("local_sync"):
+                    if filename.startswith("sync_") and filename.endswith(".txt"):
+                        sync_path = os.path.join("local_sync", filename)
 
-                            if channel_owner != self.username:
-                                logging.warning("[SYNC SKIPPED] User is not owner of channel: %s", channel_name)
-                                continue
+                        if os.path.exists(sync_path):
+                            with open(sync_path, "r", encoding="utf-8") as f:
+                                lines = f.readlines()
 
-                            # Đọc file và loại bỏ dòng đầu nếu không phải tin nhắn
-                            if os.path.exists(file_path):
-                                with open(file_path, "r", encoding="utf-8") as f:
-                                    lines = f.readlines()
-
-                                message_pattern = re.compile(r'^\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\] .+: .+')
-                                if lines and not message_pattern.match(lines[0].strip()):
-                                    lines = lines[1:]
-                                    with open(file_path, "w", encoding="utf-8") as f:
-                                        f.writelines(lines)
-
-                            # Tiếp tục xử lý file như cũ
-                            channel_doc = channels_collection.find_one({"channel_name": channel_name})
-                            existing_messages = channel_doc.get("messages", []) if channel_doc else []
-                            existing_texts = set(msg["text"] for msg in existing_messages)
-                            message_id = len(existing_messages)
-
-                            with open(file_path, "r", encoding="utf-8") as f:
-                                for line in f:
-                                    line = line.strip()
-                                    if not line:
-                                        continue
-                                    try:
-                                        time_part, rest = line.split("] ", 1)
-                                        readable_time = time_part[1:]
-                                        sender, message_text = rest.split(": ", 1)
-                                        full_text = f"[{readable_time}] {sender}: {message_text}"
-
-                                        if full_text in existing_texts:
-                                            continue
-
-                                        message_dict = {
-                                            "id": message_id,
-                                            "sender": sender,
-                                            "text": full_text
-                                        }
-
-                                        channels_collection.update_one(
-                                            {"channel_name": channel_name},
-                                            {"$push": {"messages": message_dict}}
-                                        )
-                                        message_id += 1
-                                        existing_texts.add(full_text)
-                                    except Exception as e:
-                                        logging.error("Error processing line in %s: %s", filename, e)
-
-                            logging.info("[SYNC DONE] Synced file: %s", filename)
+                            message_pattern = re.compile(r'^\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\] .+: .+')
+                            if lines and not message_pattern.match(lines[0].strip()):
+                                lines = lines[1:]
+                                with open(sync_path, "w", encoding="utf-8") as f:
+                                    f.writelines(lines)
 
                 QMessageBox.information(self, "Logout", "You have been logged out.")
                 if self.user_peer:

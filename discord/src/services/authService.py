@@ -19,7 +19,7 @@ def register_user(user: UserRegister) -> dict:
         if users_collection.find_one({"username": user.username}):
             return {"status": "error", "message": "Username already taken"}
 
-        new_user = user.model_dump()
+        new_user = user.dict()
         new_user["verified"] = True 
         result = users_collection.insert_one(new_user) 
         logging.info("User %s registered successfully", user.username)

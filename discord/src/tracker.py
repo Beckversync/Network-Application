@@ -28,7 +28,7 @@ class TRACKER_SERVER:
 
     def handle_client(self, conn, addr):
         peer_ip, peer_temp_port = addr
-        logging.info("New connection from %s:%s", peer_ip, peer_temp_port)
+        # logging.info("New connection from %s:%s", peer_ip, peer_temp_port)
 
         try:
             while True:

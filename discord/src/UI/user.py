@@ -9,60 +9,72 @@ import socket
 import cv2
 import numpy as np
 import base64
-from config.db import users_collection, channels_collection
-import time
 import datetime
+
+from config.db import users_collection, channels_collection
+
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
 class USER:
     def __init__(self, TRACKER_IP, TRACKER_PORT, headless=False, username=None, port=None):
-        # Nếu không truyền username thì nhập từ bàn phím
+        # Thiết lập tên người dùng và đồng nhất thuộc tính
         if username is not None:
             self.name = username
+            self.username = username
         else:
             self.name = input("ENTER YOUR NAME: ")
-        # ip = self.get_host_default_interface_ip()
-        # print(ip)
-        self.ip = '10.0.217.86'
+            self.username = self.name
+
+        # Lấy IP tự động
+        self.ip = USER.get_host_default_interface_ip()
+
+        # Thiết lập cổng
         if headless:
             self.port = port if port is not None else self._get_random_port()
         else:
             self.port = int(input("ENTER YOUR PORT (TCP): "))
 
-        
         self.udp_port = self.port + 1
+
+        # Khởi tạo thư mục sync
+        os.makedirs("local_sync", exist_ok=True)
+
+        # Kết nối tracker và server P2P, UDP listener
         self.tracker_socket = None
         self.connect_to_tracker(TRACKER_IP, TRACKER_PORT)
         self.start_p2p_server()
         self.start_udp_listener()
-        self.chat_history = []  # Lịch sử chat
+
+        # Lịch sử chat và trạng thái
+        self.chat_history = []
         self.isChatRunning = False
 
-        # Offline caching: lưu tin nhắn livestream nếu gửi không thành công
+        # File offline caching
         self.offline_file = f"offline_{self.name}.txt"
         self.sync_offline_messages()
 
-        # Các thuộc tính hỗ trợ livestream:
-        self._stop_livestream_flag = False  # Cờ dừng livestream
-        self.is_livestreaming = False       # Trạng thái livestream
-        # THÊM: Thuộc tính để kiểm soát livestream cho từng channel
-        self.livestream_channel = None  # Channel mà host đang phát livestream
-        self.active_channel = None      # Channel mà user hiện đang xem (điều này được cập nhật từ giao diện)
+        # Thuộc tính livestream
+        self._stop_livestream_flag = False
+        self.is_livestreaming = False
+        self.livestream_channel = None
+        self.active_channel = None
 
         if not headless:
             self.menu()
-    def get_host_default_interface_ip(self):
-            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            try:
-                s.connect(('192.168.1.1', 80))
-                ip = s.getsockname()[0]
-            except Exception as e:
-                ip = '127.0.0.1'
-                print("Error when getting IP:", e)
-            finally:
-                s.close()
-            return ip
-    
+
+    @staticmethod
+    def get_host_default_interface_ip():
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        try:
+            s.connect(('8.8.8.8', 80))
+            ip = s.getsockname()[0]
+        except Exception as e:
+            ip = '127.0.0.1'
+            logging.error("Error when getting IP: %s", e)
+        finally:
+            s.close()
+        return ip
+
     def _get_random_port(self):
         return random.randint(6000, 9000)
 
@@ -146,6 +158,7 @@ class USER:
                             logging.error("[ERROR] Cannot create file: %s", e)
 
                     line = f"[{readable_time}] {sender}: {text}\n"
+                    print(line)
                     try:
                         with open(filepath, 'a', encoding='utf-8') as f:
                             f.write(line)
@@ -163,7 +176,7 @@ class USER:
 
         finally:
             conn.close()
-
+    # Các method gửi chat qua tracker và P2P giữ nguyên, đảm bảo thêm 'channel' và 'owner' trong payload
     def send_chat_message_via_tracker(self, message):
         if self.tracker_socket is None:
             logging.error("No tracker connection. Chat message not sent: %s", message)
@@ -182,22 +195,21 @@ class USER:
             logging.error("Error sending chat message via tracker: %s", e)
 
     def send_message_p2p(self, target_ip, target_port, message, msg_type="chat"):
-        if msg_type == "chat":
-            self.send_chat_message_via_tracker(message)
-            return
+        payload = {
+            "sender": self.name,
+            "owner": self.name,
+            "type": msg_type,
+            "channel": self.active_channel,
+            "message": message
+        }
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             s.connect((target_ip, target_port))
-            message_data = json.dumps({
-                "sender": self.name,
-                "type": msg_type,
-                "message": message
-            })
-            s.sendall(message_data.encode('utf-8'))
+            s.sendall(json.dumps(payload).encode('utf-8'))
             s.close()
-            logging.info("Sent %s message to %s:%s", msg_type, target_ip, target_port)
+            logging.info("Sent %s to %s:%s in channel %s", msg_type, target_ip, target_port, self.active_channel)
         except Exception as e:
-            logging.error("Failed to send %s message to %s:%s: %s", msg_type, target_ip, target_port, e)
+            logging.error("Failed to send %s to %s:%s: %s", msg_type, target_ip, target_port, e)
 
     def send_p2p_broadcast(self, message, msg_type="chat"):
         if msg_type == "chat":
@@ -505,4 +517,8 @@ class USER:
             logging.error("Invalid selection or error: %s", e)
 
 if __name__ == '__main__':
-    USER("10.0.217.86", 5000)
+    # Lấy IP của máy tự động
+    tracker_ip = USER.get_host_default_interface_ip()
+    tracker_port = 5000  # Hoặc đặt thành biến nếu cần linh động
+
+    USER(tracker_ip, tracker_port)
