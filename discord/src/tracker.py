@@ -4,7 +4,7 @@ import json
 import logging
 from request.authRequest import handle_request as auth_request
 from request.channelRequest import handle_channel_request
-from config.db import users_collection
+from config.db import users_collection 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
 

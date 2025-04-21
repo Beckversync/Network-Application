@@ -23,12 +23,11 @@ logger.addHandler(console_handler)
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(BASE_DIR)
 
-from server import server_program  
 from PyQt6.QtWidgets import QApplication
 from UI.Login import LoginRegisterUI
 from UI.Home import DiscordUI
 
-from tracker import TRACKER  # Tracker server, chạy riêng (python tracker.py)
+from tracker import TRACKER_SERVER  # Tracker server, chạy riêng (python tracker.py)
 from user import USER
 
 class AppManager:
@@ -43,14 +42,24 @@ class AppManager:
     def open_main_app(self, username, session_info):
         logging.info("User '%s' logging in (authenticated mode).", username)
         # Khởi tạo USER ở chế độ headless để thực hiện các thao tác P2P.
-        self.user_peer = USER("172.20.10.2", 5000, headless=True, username=username)
+        tracker_ip   = "172.20.10.2"
+        tracker_port = 5000
+
+        self.user_peer = USER(tracker_ip, tracker_port,
+                            headless=True,
+                            username=username)
         self.main_window = DiscordUI(self.login_window, username, session_info, self.user_peer)
         self.main_window.show()
         self.login_window.close()
     
     def open_main_app_as_viewer(self, username, session_info):
         logging.info("User '%s' logging in (visitor mode).", username)
-        self.user_peer = USER("172.20.10.2", 5000, headless=True, username=username)
+        tracker_ip   = "172.20.10.2"
+        tracker_port = 5000
+
+        self.user_peer = USER(tracker_ip, tracker_port,
+                            headless=True,
+                            username=username)
         self.main_window = DiscordUI(self.login_window, username, session_info, self.user_peer)
         self.main_window.setWindowTitle("Discord Clone - Viewer Mode")
         self.main_window.send_button.setEnabled(False)
@@ -67,7 +76,7 @@ class AppManager:
         sys.exit(self.app.exec())
 
 if __name__ == "__main__":
-    server_thread = threading.Thread(target=server_program, args=("0.0.0.0", 22236), daemon=True)
-    server_thread.start()
+    # server_thread = threading.Thread(target=server_program, args=("192.168.110.96", 22236), daemon=True)
+    # server_thread.start()
     app_manager = AppManager()
     app_manager.run()

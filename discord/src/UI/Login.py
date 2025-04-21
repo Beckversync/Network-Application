@@ -6,9 +6,11 @@ from PyQt6.QtCore import Qt, pyqtSignal
 from request import authRequest
 import json
 import socket
-
+import os
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
-
+from user import USER
+from config.db import channels_collection, users_collection
+from request import channelRequest
 class RegisterDialog(QDialog):
     def __init__(self, client_socket): 
         super().__init__()
@@ -82,6 +84,29 @@ class RegisterDialog(QDialog):
     def get_credentials(self):
         return self.username_input.text().strip(), self.password_input.text().strip()
 
+class ViewerLoginDialog(QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Viewer Login")
+        self.setStyleSheet("background-color: #2C2F33; color: white;")
+        self.setFixedSize(300, 150)
+
+        layout = QVBoxLayout()
+        self.username_input = QLineEdit()
+        self.username_input.setPlaceholderText("Enter viewer username")
+        self.username_input.setStyleSheet("background-color: #40444B; color: white; padding: 8px; border-radius: 5px;")
+        layout.addWidget(self.username_input)
+
+        self.login_button = QPushButton("Continue")
+        self.login_button.setStyleSheet("background-color: #7289DA; color: white; padding: 8px; border-radius: 5px;")
+        self.login_button.clicked.connect(self.accept)
+        layout.addWidget(self.login_button)
+
+        self.setLayout(layout)
+
+    def get_username(self):
+        return self.username_input.text().strip()
+    
 class LoginRegisterUI(QWidget):
     login_success = pyqtSignal(str, dict)
     viewer_login_success = pyqtSignal(str, dict)
@@ -89,8 +114,8 @@ class LoginRegisterUI(QWidget):
     def __init__(self):
         super().__init__()
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_ip = "127.0.0.1"
-        server_port = 22236
+        server_ip = '172.20.10.2'
+        server_port = 5000
         try:
             self.client_socket.connect((server_ip, server_port))
             print("Connected to server from LoginRegisterUI")
@@ -160,11 +185,10 @@ class LoginRegisterUI(QWidget):
                 "password": password
             }
 
-            # dùng self.client_socket
             self.client_socket.send(json.dumps(request_data).encode())
             response_str = self.client_socket.recv(4096).decode()
 
-            print("Server response:", response_str)
+            #print("Server response:", response_str)
             try:
                 response = json.loads(response_str)
             except json.JSONDecodeError:
@@ -192,21 +216,92 @@ class LoginRegisterUI(QWidget):
             else:
                 self.session_info = {"session_id": "dummy-session-id"}
 
-            print("Session info:", self.session_info)
+            #Đồng bộ các kênh làm owner vào file local
+            try:
+                request_channels = {
+                    "action": "get_hosted_channels",
+                    "username": self.username
+                }
+                response_channels = channelRequest.handle_channel_request(json.dumps(request_channels))
+                hosted_channels_response = json.loads(response_channels)
+                if hosted_channels_response.get("status") == "success":
+                    os.makedirs("local_sync", exist_ok=True)
+                    hosted_channels = hosted_channels_response.get("data", {}).get("hosted_channels", [])
+                    for channel_name in hosted_channels:
+                        request_messages = {
+                            "action": "get_channel_info",
+                            "channel_name": channel_name,
+                            "username": self.username
+                        }
+                        response_msg_str = channelRequest.handle_channel_request(json.dumps(request_messages))
+                        msg_data = json.loads(response_msg_str)
+
+                        if msg_data.get("status") == "success":
+                            messages = msg_data.get("messages", [])
+                            sync_filename = f"sync_{channel_name}_{self.username}.txt"
+                            sync_path = os.path.join("local_sync", sync_filename)
+                            
+                            existing_lines = set()
+                            if os.path.exists(sync_path):
+                                with open(sync_path, "r", encoding="utf-8") as f:
+                                    existing_lines = set(line.strip() for line in f if line.strip())
+
+                            with open(sync_path, "a", encoding="utf-8") as f:
+                                new_lines_count = 0
+                                for msg in messages:
+                                    line = msg.get("text", "").strip()
+                                    if line and line not in existing_lines:
+                                        f.write(line + "\n")
+                                        new_lines_count += 1
+
+                            logging.info("[SYNC LOGIN] Saved %d new messages for %s", new_lines_count, channel_name)
+                        else:
+                            logging.warning("[SYNC LOGIN] Failed to get messages for channel: %s", channel_name)
+                else:
+                    logging.warning("[SYNC LOGIN] Failed to fetch hosted channels")
+
+            except Exception as sync_e:
+                logging.error("Error during login-time sync: %s", sync_e)
+
             self.login_success.emit(self.username, self.session_info)
 
         except Exception as e:
             QMessageBox.critical(self, "Error", f"An error occurred: {str(e)}")
     
     def login_as_viewer(self):
-        username = self.username_input.text().strip() or "Viewer"
-        QMessageBox.information(self, "Viewer Mode", "You are now in viewer mode. You cannot interact with the chat.")
-        logging.info("Logged in as Viewer: %s", username)
-        
-        self.username = username
-        self.session_info = {"session_id": "dummy-session-id"}
-        
-        self.viewer_login_success.emit(self.username, self.session_info)
+        dialog = ViewerLoginDialog(self)
+        if dialog.exec() == QDialog.DialogCode.Accepted:
+            name = dialog.get_username()
+            if not name:
+                QMessageBox.warning(self, "Input Error", "Username cannot be empty.")
+                return
+
+            request_data = {
+                "action": "visitor",
+                "name": name
+            }
+
+            try:
+                self.client_socket.send(json.dumps(request_data).encode())
+                response_str = self.client_socket.recv(4096).decode()
+                response = json.loads(response_str)
+            except Exception as e:
+                QMessageBox.critical(self, "Error", f"Connection or parsing error: {e}")
+                return
+
+            if not isinstance(response, dict):
+                QMessageBox.critical(self, "Error", "Unexpected response format from server")
+                return
+
+            if response.get("status") != "success":
+                QMessageBox.warning(self, "Login Failed", response.get("message", "Unknown error"))
+                return
+
+            QMessageBox.information(self, "Viewer Mode", "You are now in viewer mode. You cannot interact with the chat.")
+            logging.info("Logged in as Viewer: %s", name)
+            self.username = name
+            self.session_info = {"session_id": "dummy-session-id"}
+            self.viewer_login_success.emit(self.username, self.session_info)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

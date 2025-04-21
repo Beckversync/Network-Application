@@ -1,10 +1,13 @@
 from config.db import channels_collection, users_collection
 from models.channelModel import Channel
 import logging
-
+import time
+import datetime
+import socket
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
+import json
 
-def create_channel(host: str, channel_name: str, is_private: bool):
+def create_channel(host: str, channel_name: str, is_private: bool, allow_visitor: bool):
     if channels_collection.find_one({"channel_name": channel_name}):
         return {"status": "error", "message": "Channel already exists"}
     
@@ -13,7 +16,8 @@ def create_channel(host: str, channel_name: str, is_private: bool):
         owner=host,
         members=[host],
         is_private=is_private,
-        join_requests=[] 
+        join_requests=[],
+        allow_visitor=allow_visitor
     )
     channels_collection.insert_one(new_channel.dict())
     users_collection.update_one(
@@ -105,7 +109,6 @@ def get_join_requests(owner: str, channel_name: str):
         "status": "success",
         "join_requests": join_requests
     }
-
 def send_message(username: str, channel_name: str, message_text: str):
     channel_data = channels_collection.find_one({"channel_name": channel_name})
     if not channel_data:
@@ -116,14 +119,102 @@ def send_message(username: str, channel_name: str, message_text: str):
             "status": "error",
             "message": "You do not have permission to send messages in this private channel"
         }
-
-    new_message = {"sender": username, "text": message_text}
+    timestamp = time.time()
+    readable_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    new_message = {
+        "sender": username,
+        "text": f"[{readable_time}] {username}: {message_text}"
+    }
     channels_collection.update_one(
-        {"channel_name": channel_name},
-        {"$push": {"messages": new_message}}
+            {"channel_name": channel_name},
+            {"$push": {"messages": new_message}}
     )
-    logging.info("Message from %s sent in channel '%s'", username, channel_name)
     return {"status": "success", "message": "Message sent successfully"}
+
+def send_to_p2p_server(peer_ip, peer_port, message_text, sender="Unknown", channel=None, owner=None):
+    try:
+        data_dict = {
+            "type": "chat",
+            "sender": sender,
+            "message": message_text
+        }
+        # thêm thông tin kênh và chủ kênh
+        if channel is not None:
+            data_dict["channel"] = channel
+        if owner is not None:
+            data_dict["owner"] = owner
+
+        json_str = json.dumps(data_dict)
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.connect((peer_ip, peer_port))
+            s.sendall(json_str.encode('utf-8'))
+        logging.info("Sent P2P chat to %s:%s – %s", peer_ip, peer_port, json_str)
+        return {"status": "success"}
+    except Exception as e:
+        logging.error("P2P send error: %s", e)
+        return {"status": "error", "message": str(e)}
+
+
+def send_message_p2p(username: str, channel_name: str, message_text: str):
+    # Lấy thông tin kênh và danh sách thành viên
+    channel_data = channels_collection.find_one({"channel_name": channel_name})
+    if not channel_data:
+        return {"status": "error", "message": "Không tìm thấy kênh"}
+
+    owner_username = channel_data.get("owner")
+    members = channel_data.get("members", [])
+
+    # CHỦ KÊNH gửi → broadcast tới mọi member (trừ chính mình)
+    if username == owner_username:
+        # 1. Lưu message vào DB để đồng bộ offline/online
+        send_message(username, channel_name, message_text)
+
+        # 2. Lấy tất cả session của các member online
+        for member in members:
+            if member == username:
+                continue
+            user_doc = users_collection.find_one({"username": member})
+            if not user_doc:
+                continue
+            for sess in user_doc.get("sessions", []):
+                peer_ip   = sess.get("peer_ip")
+                peer_port = sess.get("peer_port")
+                if peer_ip and peer_port:
+                    # gửi P2P
+                    send_to_p2p_server(
+                        peer_ip, peer_port,
+                        message_text,
+                        sender=username,
+                        channel=channel_name,
+                        owner=owner_username
+                    )
+        return {"status": "success", "message": "Broadcast chat tới peers"}
+
+    # NGƯỜI THƯỜNG gửi → vẫn gửi 1‑1 tới owner
+    # tìm session đầu tiên của owner
+    owner_doc = users_collection.find_one({"username": owner_username})
+    if owner_doc:
+        sessions = owner_doc.get("sessions", [])
+        if sessions:
+            sess = sessions[0]
+            peer_ip   = sess.get("peer_ip")
+            peer_port = sess.get("peer_port")
+            result = send_to_p2p_server(
+                peer_ip, peer_port,
+                message_text,
+                sender=username,
+                channel=channel_name,
+                owner=owner_username
+            )
+            if result.get("status") == "success":
+                # và cũng ghi vào DB để lưu history
+                send_message(username, channel_name, message_text)
+            return result
+
+    # nếu không tìm được owner session, fallback về gửi qua DB (client-server)
+    send_message(username, channel_name, message_text)
+    return {"status": "success", "message": "Message lưu qua server"}
+
 
 def get_channel_info(channel_name: str, username: str) -> dict:
     channel = channels_collection.find_one({"channel_name": channel_name})
@@ -135,6 +226,17 @@ def get_channel_info(channel_name: str, username: str) -> dict:
         return {
             "status": "error",
             "message": "This is a private channel. You do not have permission to see old messages."
+        }
+    
+    elif channel.get("is_private", True):
+        return {
+            "status": "success",
+            "channel_name": channel["channel_name"],
+            "owner": channel["owner"],
+            "members": channel["members"],
+            "messages": channel.get("messages", []),
+            "allow_visitor": channel.get("allow_visitor", True),
+            "is_private": channel.get("is_private", False)
         }
     
     return {
@@ -158,7 +260,7 @@ def get_hosted_channels(username: str):
     if not user_data:
         return {"status": "error", "message": "User not found"}
     return {"status": "success", "hosted_channels": user_data.get("hosted_channels", [])}
-
+    
 def delete_channel(username: str, channel_name: str):
     channel = channels_collection.find_one({"channel_name": channel_name})
     if not channel:

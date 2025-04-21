@@ -4,6 +4,8 @@ from datetime import datetime, timezone
 from models.authModel import UserRegister, UserLogin, Visitor
 import logging
 import re
+import threading
+import socket
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
@@ -18,6 +20,7 @@ def register_user(user: UserRegister) -> dict:
             return {"status": "error", "message": "Username already taken"}
 
         new_user = user.model_dump()
+        new_user = user.dict()
         new_user["verified"] = True 
         result = users_collection.insert_one(new_user) 
         logging.info("User %s registered successfully", user.username)
@@ -35,11 +38,15 @@ def login_user(user: UserLogin, peer_ip: str, peer_port: int) -> dict:
             "peer_port": peer_port,
             "session_id": session_id,
             "login_time": datetime.now(timezone.utc).isoformat(),
-            "visible": True  # Mặc định hiển thị là Online
+            "visible": True 
         }
         users_collection.update_one(
             {"username": user.username},
-            {"$push": {"sessions": new_session}}
+             {
+                 "$push": {"sessions": new_session},
+                 "$set": {"state": "online"}
+             }
+            
         )
         user_data = users_collection.find_one({"username": user.username})
 
@@ -55,6 +62,7 @@ def login_user(user: UserLogin, peer_ip: str, peer_port: int) -> dict:
             "user": {
                 "username": user_data["username"],
                 "email": user_data.get("email", ""),
+                "state": user_data.get("state", "online"),
                 "channels_joined": user_data.get("channels_joined", []),
                 "hosted_channels": user_data.get("hosted_channels", []),
                 "sessions": [{**session, "login_time": serialize(session["login_time"])}
@@ -64,15 +72,26 @@ def login_user(user: UserLogin, peer_ip: str, peer_port: int) -> dict:
     return {"status": "error", "message": "Invalid username or password"}
 
 def update_user_status(session_id: str, visible: bool) -> dict:
-    user = users_collection.find_one({"sessions.session_id": session_id})
-    if not user:
-         return {"status": "error", "message": "Session not found"}
-    users_collection.update_one(
-         {"_id": user["_id"], "sessions.session_id": session_id},
-         {"$set": {"sessions.$.visible": visible}}
-    )
-    logging.info("Updated session %s visible to %s", session_id, visible)
-    return {"status": "success", "message": "User status updated"}
+    try:
+        user = users_collection.find_one({"sessions.session_id": session_id})
+        if not user:
+            return {"status": "error", "message": "Invalid session_id"}
+
+        result = users_collection.update_one(
+            {"_id": user["_id"], "sessions.session_id": session_id},
+            {"$set": {"sessions.$.visible": visible}}
+        )
+
+        if result.modified_count == 0:
+            logging.warning("No session updated for session_id: %s", session_id)
+            return {"status": "error", "message": "Failed to update visibility status"}
+
+        logging.info("Updated visibility of session %s to %s", session_id, visible)
+        return {"status": "success", "message": "User status updated"}
+    
+    except Exception as e:
+        logging.error("Database error during status update: %s", e)
+        return {"status": "error", "message": f"Database error: {str(e)}"}
 
 def get_all_users():
     try:
@@ -112,6 +131,13 @@ def logout_user(session_id: str) -> dict:
             {"_id": user["_id"]},
             {"$pull": {"sessions": {"session_id": session_id}}}
         )
+
+        updated_user = users_collection.find_one({"_id": user["_id"]})
+        if not updated_user.get("sessions"):  # sessions rỗng hoặc không tồn tại
+             users_collection.update_one(
+                 {"_id": user["_id"]},
+                 {"$set": {"state": "offline"}}
+             )
         logging.info("User %s logged out", user["username"])
         return {"status": "success", "message": "Logout successful"}
     except Exception as e:

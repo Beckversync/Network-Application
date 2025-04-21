@@ -8,7 +8,11 @@ from controllers.channelController import (
     delete_channel_controller,
     get_all_channels_controller,
     get_all_users_controller,
-    approve_join_request_controller, get_join_requests_controller, reject_join_request_controller
+    approve_join_request_controller, 
+    get_join_requests_controller, 
+    reject_join_request_controller, 
+    get_hosted_channels_controller,
+    send_message_p2p_controller
 )
 
 def handle_channel_request(data: str) -> str:
@@ -41,6 +45,10 @@ def handle_channel_request(data: str) -> str:
             response = get_join_requests_controller(request)
         elif action == "reject_join_request":
             response = reject_join_request_controller(request)
+        elif action == "get_hosted_channels":
+            response = get_hosted_channels_controller(request)
+        elif action == "send_message_p2p":
+            response = send_message_p2p_controller(request)
         else:
             response = {"status": "error", "message": "Invalid action"}
         return json.dumps(response)
