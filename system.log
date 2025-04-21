@@ -74260,3 +74260,494 @@
 [2025-04-21 17:00:27,349] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
 [2025-04-21 17:00:29,381] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
 [2025-04-21 17:00:29,382] INFO: Message from an09 sent in channel 'aa1'
+[2025-04-21 17:02:57,477] ERROR: Exception in poll_loop: cluster0-shard-00-02.fum1o.mongodb.net:27017: connection closed (configured timeouts: connectTimeoutMS: 20000.0ms)
+[2025-04-21 17:02:57,478] ERROR: Exception in poll_loop: cluster0-shard-00-02.fum1o.mongodb.net:27017: connection closed (configured timeouts: connectTimeoutMS: 20000.0ms)
+[2025-04-21 17:02:57,478] ERROR: Exception in poll_loop: cluster0-shard-00-02.fum1o.mongodb.net:27017: connection closed (configured timeouts: connectTimeoutMS: 20000.0ms)
+[2025-04-21 17:06:37,509] INFO: Sending message: onanaa
+[2025-04-21 17:06:58,772] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 17:07:19,800] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 17:13:13,661] INFO: Logged in as: an08
+[2025-04-21 17:13:14,419] INFO: [SYNC LOGIN] Saved 0 new messages for kenhAn
+[2025-04-21 17:13:14,477] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 17:13:14,479] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 17:13:35,516] ERROR: Unable to connect to Tracker: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 17:13:35,517] INFO: UDP LISTENER listening on 10.229.233.176:6519 for livestream.
+[2025-04-21 17:13:35,518] INFO: P2P SERVER listening on 10.229.233.176:6518
+[2025-04-21 17:15:33,617] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 17:15:38,565] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 17:15:41,334] INFO: Sending message: tôi
+[2025-04-21 17:15:41,334] ERROR: Tracker offline: cannot send channel message: tôi
+[2025-04-21 17:16:30,405] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 17:16:30,406] INFO: [SYNC] SyncManager started for channel 'kênhnew'
+[2025-04-21 17:17:00,816] INFO: [SYNC DONE] Synced file: sync_kenhAn_an08.txt
+[2025-04-21 17:17:00,874] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 17:17:01,612] ERROR: Not connected to tracker.
+[2025-04-21 17:19:35,113] INFO: Logged in as: an09
+[2025-04-21 17:19:35,981] INFO: [SYNC LOGIN] Saved 4 new messages for aa1
+[2025-04-21 17:19:35,982] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-21 17:19:36,098] INFO: Tracker response: Peer an09 (10.229.233.176:6582) added
+[2025-04-21 17:19:36,098] INFO: P2P SERVER listening on 10.229.233.176:6582
+[2025-04-21 17:19:36,098] INFO: UDP LISTENER listening on 10.229.233.176:6583 for livestream.
+[2025-04-21 17:19:50,300] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 17:19:50,300] INFO: [SYNC] SyncManager started for channel 'aa1'
+[2025-04-21 17:19:51,186] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 17:19:51,186] INFO: [SYNC] SyncManager started for channel 'aa1'
+[2025-04-21 17:19:58,441] INFO: Sending message: chào
+[2025-04-21 17:20:19,693] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 17:20:40,741] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 17:21:01,774] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 17:21:22,834] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 17:21:24,875] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-21 17:21:24,875] INFO: Message from an09 sent in channel 'aa1'
+[2025-04-21 17:22:06,960] INFO: [SYNC DONE] Synced file: sync_aa1_an09.txt
+[2025-04-21 17:22:07,613] INFO: Tracker response on LEAVE: Peer an09 (10.229.233.176:6582) left
+[2025-04-21 17:25:14,187] INFO: Logged in as: an09
+[2025-04-21 17:25:15,209] INFO: [SYNC LOGIN] Saved 1 new messages for aa1
+[2025-04-21 17:25:15,209] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-21 17:25:15,321] INFO: Tracker response: Peer an09 (10.229.233.176:6206) added
+[2025-04-21 17:25:15,323] INFO: P2P SERVER listening on 10.229.233.176:6206
+[2025-04-21 17:25:15,324] INFO: UDP LISTENER listening on 10.229.233.176:6207 for livestream.
+[2025-04-21 17:25:19,072] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 17:25:21,547] INFO: User an09 joined public channel 'kênhnew'
+[2025-04-21 17:25:21,857] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 17:25:24,508] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 17:25:26,794] INFO: Sending message: xin chào
+[2025-04-21 17:25:47,945] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 17:26:11,025] INFO: [SYNC DONE] Synced file: sync_aa1_an09.txt
+[2025-04-21 17:26:11,973] INFO: Tracker response on LEAVE: Peer an09 (10.229.233.176:6206) left
+[2025-04-21 20:03:38,130] INFO: Logged in as: an09
+[2025-04-21 20:03:38,770] INFO: [SYNC LOGIN] Saved 0 new messages for aa1
+[2025-04-21 20:03:38,770] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-21 20:03:38,865] INFO: Tracker response: Peer an09 (10.0.156.176:6745) added
+[2025-04-21 20:03:38,867] INFO: P2P SERVER listening on 10.0.156.176:6745
+[2025-04-21 20:03:38,868] INFO: UDP LISTENER listening on 10.0.156.176:6746 for livestream.
+[2025-04-21 20:03:42,612] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:43,386] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:44,160] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:44,931] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:45,665] INFO: User an09 joined public channel 'no1'
+[2025-04-21 20:03:45,707] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:46,491] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:47,260] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:48,033] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:48,793] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:49,552] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:50,316] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:51,099] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:51,866] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:52,637] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:53,406] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:53,637] INFO: Sending message: xin chào
+[2025-04-21 20:03:54,183] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:54,945] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:55,721] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:56,484] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:57,256] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:58,013] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:58,775] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:03:59,543] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:00,303] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:01,060] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:01,820] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:02,585] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:03,348] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:04,125] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:04,890] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:05,657] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:06,419] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:07,179] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:07,939] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:08,698] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:09,457] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:10,218] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:10,982] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:11,747] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:12,509] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:13,278] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:14,046] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:14,760] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 20:04:14,807] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:15,842] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:16,604] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:17,376] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:18,142] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:18,909] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:19,673] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:20,435] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:21,193] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:21,952] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:22,727] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:23,490] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:24,253] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:25,020] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:25,228] INFO: [SYNC DONE] Synced file: sync_aa1_an09.txt
+[2025-04-21 20:04:25,771] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:26,100] INFO: Tracker response on LEAVE: Peer an09 (10.0.156.176:6745) left
+[2025-04-21 20:04:26,522] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:27,268] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:27,380] INFO: Logged in as: an09
+[2025-04-21 20:04:28,013] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:28,430] INFO: [SYNC LOGIN] Saved 0 new messages for aa1
+[2025-04-21 20:04:28,430] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-21 20:04:28,526] INFO: Tracker response: Peer an09 (10.0.156.176:7127) added
+[2025-04-21 20:04:28,527] INFO: P2P SERVER listening on 10.0.156.176:7127
+[2025-04-21 20:04:28,527] INFO: UDP LISTENER listening on 10.0.156.176:7128 for livestream.
+[2025-04-21 20:04:28,784] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:29,551] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:30,301] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:31,051] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:31,803] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:32,559] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:33,267] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:33,312] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:34,025] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:34,072] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:34,788] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:34,829] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:35,542] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:35,583] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:36,294] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:36,342] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:37,048] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:37,096] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:37,801] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:37,846] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:38,558] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:38,602] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:39,314] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:39,354] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:40,069] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:40,112] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:40,820] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:40,867] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:41,577] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:41,621] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:42,327] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:42,381] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:43,080] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:43,136] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:43,838] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:43,892] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:44,594] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:44,648] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:45,354] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:45,403] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:46,114] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:46,158] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:46,876] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:46,914] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:47,627] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:47,807] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:48,382] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:48,567] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:49,140] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:49,321] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:49,901] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:50,082] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:50,658] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:50,834] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:51,419] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:51,594] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:52,173] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:52,367] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:52,954] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:53,141] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:53,728] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:53,918] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:54,489] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:54,677] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:55,244] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:55,436] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:56,003] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:56,193] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:56,760] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:56,950] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:57,512] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:57,709] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:58,269] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:58,462] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:59,028] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:59,219] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:59,793] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:04:59,985] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:00,552] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:00,737] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:01,306] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:01,499] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:02,062] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:02,250] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:02,817] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:03,004] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:03,585] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:03,767] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:04,338] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:04,524] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:05,096] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:05,282] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:05,849] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:06,038] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:06,613] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:06,794] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:07,369] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:07,550] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:08,132] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:08,336] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:08,909] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:09,093] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:09,666] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:09,846] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:10,420] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:10,601] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:11,182] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:11,361] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:13,367] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:13,450] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:13,661] INFO: [SYNC DONE] Synced file: sync_aa1_an09.txt
+[2025-04-21 20:05:14,281] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:14,485] INFO: Tracker response on LEAVE: Peer an09 (10.0.156.176:7127) left
+[2025-04-21 20:05:14,656] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:15,016] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:15,394] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:05:15,753] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 20:17:39,057] INFO: Logged in as: an08
+[2025-04-21 20:17:39,735] INFO: [SYNC LOGIN] Saved 2 new messages for kênhnew
+[2025-04-21 20:17:39,779] INFO: [SYNC LOGIN] Saved 12 new messages for a1
+[2025-04-21 20:17:39,779] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 20:17:39,867] INFO: Tracker response: Peer an08 (10.0.156.176:7264) added
+[2025-04-21 20:17:39,869] INFO: P2P SERVER listening on 10.0.156.176:7264
+[2025-04-21 20:17:39,870] INFO: UDP LISTENER listening on 10.0.156.176:7265 for livestream.
+[2025-04-21 20:17:58,989] INFO: [SYNC LOAD] Save message to file: local_sync\sync_a1_an08.txt
+[2025-04-21 20:17:58,989] INFO: [SYNC] SyncManager started for channel 'a1'
+[2025-04-21 20:17:59,760] INFO: [SYNC LOAD] Save message to file: local_sync\sync_a1_an08.txt
+[2025-04-21 20:17:59,760] INFO: [SYNC] SyncManager started for channel 'a1'
+[2025-04-21 20:18:08,368] INFO: Channel 'neww1' created by an08 (is_private=False)
+[2025-04-21 20:18:11,816] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:11,992] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:18:12,183] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:18:12,578] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:13,369] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:14,151] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:14,926] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:15,700] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:16,473] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:17,380] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:18,165] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:18,947] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:20,166] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:21,934] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:24,013] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:25,438] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:26,265] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:27,036] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:27,836] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:28,593] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:29,362] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:30,142] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:30,917] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:31,463] INFO: Sending message: chào
+[2025-04-21 20:18:31,635] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 20:18:31,727] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:32,552] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:33,314] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:34,075] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:34,847] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:35,346] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:18:35,544] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:18:35,636] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:36,436] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:37,216] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:37,998] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:38,791] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:39,573] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:40,351] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:41,121] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:41,890] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:42,653] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:43,446] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:44,213] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:44,990] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:45,751] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:46,516] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:47,285] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:48,159] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:48,187] INFO: Sending message: đụ má
+[2025-04-21 20:18:48,341] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 20:18:48,944] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:49,721] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:50,345] INFO: Sending message: gì kfi v
+[2025-04-21 20:18:50,479] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 20:18:50,494] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:51,277] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:52,066] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:52,498] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 20:18:52,546] INFO: [SYNC DONE] Synced file: sync_a1_an08.txt
+[2025-04-21 20:18:52,594] INFO: [SYNC DONE] Synced file: sync_neww1_an08.txt
+[2025-04-21 20:18:53,314] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:7264) left
+[2025-04-21 20:18:54,349] INFO: Logged in as: an08
+[2025-04-21 20:18:54,985] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 20:18:55,033] INFO: [SYNC LOGIN] Saved 0 new messages for a1
+[2025-04-21 20:18:55,078] INFO: [SYNC LOGIN] Saved 3 new messages for neww1
+[2025-04-21 20:18:55,079] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 20:18:55,163] INFO: Tracker response: Peer an08 (10.0.156.176:7669) added
+[2025-04-21 20:18:55,167] INFO: P2P SERVER listening on 10.0.156.176:7669
+[2025-04-21 20:18:55,169] INFO: UDP LISTENER listening on 10.0.156.176:7670 for livestream.
+[2025-04-21 20:18:56,410] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:56,410] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:18:58,148] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:58,149] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:18:58,329] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:58,330] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:20:57,660] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 20:20:57,701] INFO: [SYNC DONE] Synced file: sync_a1_an08.txt
+[2025-04-21 20:20:57,740] INFO: [SYNC DONE] Synced file: sync_neww1_an08.txt
+[2025-04-21 20:21:00,737] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:7669) left
+[2025-04-21 20:52:13,125] INFO: Logged in as: an09
+[2025-04-21 20:52:13,951] INFO: [SYNC LOGIN] Saved 0 new messages for aa1
+[2025-04-21 20:52:13,951] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-21 20:52:14,041] INFO: Tracker response: Peer an09 (10.0.156.176:7383) added
+[2025-04-21 20:52:14,043] INFO: P2P SERVER listening on 10.0.156.176:7383
+[2025-04-21 20:52:14,043] INFO: UDP LISTENER listening on 10.0.156.176:7384 for livestream.
+[2025-04-21 20:52:18,364] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:52:29,720] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:52:29,888] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:52:57,178] INFO: Sending message: lô
+[2025-04-21 20:52:57,257] INFO: Sent P2P chat to 10.0.156.176:7239 – {"type": "chat", "sender": "an09", "message": "l\u00f4", "channel": "neww1", "owner": "an08"}
+[2025-04-21 20:52:57,341] INFO: Message from an09 sent in channel 'neww1'
+[2025-04-21 20:53:00,511] INFO: Sending message: à
+[2025-04-21 20:53:00,598] INFO: Sent P2P chat to 10.0.156.176:7239 – {"type": "chat", "sender": "an09", "message": "\u00e0", "channel": "neww1", "owner": "an08"}
+[2025-04-21 20:53:00,685] INFO: Message from an09 sent in channel 'neww1'
+[2025-04-21 20:53:06,428] INFO: Sending message: á
+[2025-04-21 20:53:06,536] INFO: Sent P2P chat to 10.0.156.176:7239 – {"type": "chat", "sender": "an09", "message": "\u00e1", "channel": "neww1", "owner": "an08"}
+[2025-04-21 20:53:06,631] INFO: Message from an09 sent in channel 'neww1'
+[2025-04-21 20:53:07,366] INFO: Sending message: a
+[2025-04-21 20:53:07,446] INFO: Sent P2P chat to 10.0.156.176:7239 – {"type": "chat", "sender": "an09", "message": "a", "channel": "neww1", "owner": "an08"}
+[2025-04-21 20:53:07,531] INFO: Message from an09 sent in channel 'neww1'
+[2025-04-21 20:53:13,660] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:53:20,534] WARNING: [SYNC LOAD] File not found: local_sync\sync_test1_an08.txt
+[2025-04-21 20:53:21,270] WARNING: [SYNC LOAD] File not found: local_sync\sync_test1_an10.txt
+[2025-04-21 20:53:21,664] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:53:28,326] INFO: [SYNC DONE] Synced file: sync_aa1_an09.txt
+[2025-04-21 20:53:29,212] INFO: Tracker response on LEAVE: Peer an09 (10.0.156.176:7383) left
+[2025-04-21 20:53:30,396] INFO: Logged in as: an09
+[2025-04-21 20:53:31,160] INFO: [SYNC LOGIN] Saved 0 new messages for aa1
+[2025-04-21 20:53:31,160] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-21 20:53:31,251] INFO: Tracker response: Peer an09 (10.0.156.176:7288) added
+[2025-04-21 20:53:31,251] INFO: P2P SERVER listening on 10.0.156.176:7288
+[2025-04-21 20:53:31,251] INFO: UDP LISTENER listening on 10.0.156.176:7289 for livestream.
+[2025-04-21 20:53:33,717] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:53:35,371] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:53:41,827] INFO: Sending message: xàm l ác
+[2025-04-21 20:53:41,907] INFO: Sent P2P chat to 10.0.156.176:7239 – {"type": "chat", "sender": "an09", "message": "x\u00e0m l \u00e1c", "channel": "neww1", "owner": "an08"}
+[2025-04-21 20:53:41,993] INFO: Message from an09 sent in channel 'neww1'
+[2025-04-21 20:53:48,904] INFO: Sending message: mệt dữ ní
+[2025-04-21 20:53:48,982] INFO: Sent P2P chat to 10.0.156.176:7239 – {"type": "chat", "sender": "an09", "message": "m\u1ec7t d\u1eef n\u00ed", "channel": "neww1", "owner": "an08"}
+[2025-04-21 20:53:49,067] INFO: Message from an09 sent in channel 'neww1'
+[2025-04-21 20:53:51,859] INFO: Sending message: bú bú
+[2025-04-21 20:53:51,948] INFO: Sent P2P chat to 10.0.156.176:7239 – {"type": "chat", "sender": "an09", "message": "b\u00fa b\u00fa", "channel": "neww1", "owner": "an08"}
+[2025-04-21 20:53:52,044] INFO: Message from an09 sent in channel 'neww1'
+[2025-04-21 20:54:09,086] INFO: Sending message: ?
+[2025-04-21 20:54:09,248] INFO: Message from an09 sent in channel 'neww1'
+[2025-04-21 20:54:13,070] INFO: Sending message: thích gì
+[2025-04-21 20:54:13,236] INFO: Message from an09 sent in channel 'neww1'
+[2025-04-21 20:54:25,021] INFO: Sending message: sợ gì
+[2025-04-21 20:54:25,166] INFO: Sent P2P chat to 10.0.156.176:6567 – {"type": "chat", "sender": "an09", "message": "s\u1ee3 g\u00ec", "channel": "neww1", "owner": "an08"}
+[2025-04-21 20:54:26,507] INFO: Message from an09 sent in channel 'neww1'
+[2025-04-21 20:54:34,021] INFO: Sending message: sao
+[2025-04-21 20:54:34,111] INFO: Sent P2P chat to 10.0.156.176:6567 – {"type": "chat", "sender": "an09", "message": "sao", "channel": "neww1", "owner": "an08"}
+[2025-04-21 20:54:34,203] INFO: Message from an09 sent in channel 'neww1'
+[2025-04-21 20:54:40,415] INFO: [SYNC DONE] Synced file: sync_aa1_an09.txt
+[2025-04-21 20:54:41,299] INFO: Tracker response on LEAVE: Peer an09 (10.0.156.176:7288) left
+[2025-04-21 20:54:43,320] ERROR: Exception in load_dm_list: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-21 20:54:43,329] ERROR: Exception in load_dm_list: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-21 21:34:07,337] INFO: Logged in as: an09
+[2025-04-21 21:34:08,257] INFO: [SYNC LOGIN] Saved 0 new messages for aa1
+[2025-04-21 21:34:08,257] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-21 21:34:08,351] INFO: Tracker response: Peer an09 (10.0.156.176:8014) added
+[2025-04-21 21:34:08,352] INFO: P2P SERVER listening on 10.0.156.176:8014
+[2025-04-21 21:34:08,355] INFO: UDP LISTENER listening on 10.0.156.176:8015 for livestream.
+[2025-04-21 21:34:31,086] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:34:32,089] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:34:35,039] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:34:38,119] INFO: User an09 joined public channel 'neww1'
+[2025-04-21 21:34:38,298] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:34:41,917] INFO: [P2P MESSAGE] an08 -> an09: xin chaof
+[2025-04-21 21:34:48,879] INFO: Sending message: thicsh chao k
+[2025-04-21 21:34:48,963] INFO: Sent P2P chat to 10.0.156.176:8811 – {"type": "chat", "sender": "an09", "message": "thicsh chao k", "channel": "neww1", "owner": "an08"}
+[2025-04-21 21:34:49,050] INFO: Message from an09 sent in channel 'neww1'
+[2025-04-21 21:34:54,266] INFO: Sending message: chao clm
+[2025-04-21 21:34:54,350] INFO: Sent P2P chat to 10.0.156.176:8811 – {"type": "chat", "sender": "an09", "message": "chao clm", "channel": "neww1", "owner": "an08"}
+[2025-04-21 21:34:54,446] INFO: Message from an09 sent in channel 'neww1'
+[2025-04-21 21:35:00,767] INFO: [P2P MESSAGE] an08 -> an09: owif m ngon do thang l
+[2025-04-21 21:35:04,458] INFO: [P2P MESSAGE] an08 -> an09: di me m
+[2025-04-21 21:35:08,038] INFO: [P2P MESSAGE] an08 -> an09: live
+[2025-04-21 21:35:22,424] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:35:28,684] INFO: [SYNC LOAD] Save message to file: local_sync\sync_a1_an08.txt
+[2025-04-21 21:35:30,222] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:35:31,794] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 21:35:32,946] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:35:47,469] INFO: [P2P MESSAGE] an08 -> an09: oke live oonr
+[2025-04-21 21:35:53,445] INFO: [P2P MESSAGE] an08 -> an09: chi con cai UI thoi
+[2025-04-21 21:36:02,098] INFO: [SYNC DONE] Synced file: sync_aa1_an09.txt
+[2025-04-21 21:36:03,744] INFO: Tracker response on LEAVE: Peer an09 (10.0.156.176:8014) left
+[2025-04-21 21:43:02,320] INFO: Logged in as: an09
+[2025-04-21 21:43:02,881] INFO: [SYNC LOGIN] Saved 0 new messages for aa1
+[2025-04-21 21:43:02,881] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-21 21:43:02,992] INFO: Tracker response: Peer an09 (10.0.156.176:8120) added
+[2025-04-21 21:43:02,994] INFO: P2P SERVER listening on 10.0.156.176:8120
+[2025-04-21 21:43:02,996] INFO: UDP LISTENER listening on 10.0.156.176:8121 for livestream.
+[2025-04-21 21:43:08,232] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:43:10,526] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:43:11,380] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:43:17,440] INFO: Sending message: alo
+[2025-04-21 21:43:17,536] INFO: Sent P2P chat to 10.0.156.176:7302 – {"type": "chat", "sender": "an09", "message": "alo", "channel": "neww1", "owner": "an08"}
+[2025-04-21 21:43:17,646] INFO: Message from an09 sent in channel 'neww1'
+[2025-04-21 21:43:22,094] INFO: Sending message: nhge
+[2025-04-21 21:43:22,200] INFO: Sent P2P chat to 10.0.156.176:7302 – {"type": "chat", "sender": "an09", "message": "nhge", "channel": "neww1", "owner": "an08"}
+[2025-04-21 21:43:22,293] INFO: Message from an09 sent in channel 'neww1'
+[2025-04-21 21:43:25,119] INFO: [P2P MESSAGE] an08 -> an09: nghe
+[2025-04-21 21:44:18,126] INFO: [P2P MESSAGE] an08 -> an09: mệt dữ ní
+[2025-04-21 21:44:20,846] INFO: [P2P MESSAGE] an08 -> an09: k thấy
+[2025-04-21 21:44:23,877] INFO: Sending message: thấy
+[2025-04-21 21:44:23,973] INFO: Sent P2P chat to 10.0.156.176:8721 – {"type": "chat", "sender": "an09", "message": "th\u1ea5y", "channel": "neww1", "owner": "an08"}
+[2025-04-21 21:44:24,077] INFO: Message from an09 sent in channel 'neww1'
+[2025-04-21 21:44:34,751] INFO: [SYNC DONE] Synced file: sync_aa1_an09.txt
+[2025-04-21 21:44:35,412] INFO: Tracker response on LEAVE: Peer an09 (10.0.156.176:8120) left
+[2025-04-21 21:52:32,173] INFO: Logged in as: an09
+[2025-04-21 21:52:32,772] INFO: [SYNC LOGIN] Saved 0 new messages for aa1
+[2025-04-21 21:52:32,773] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-21 21:52:32,875] INFO: Tracker response: Peer an09 (10.0.156.176:6907) added
+[2025-04-21 21:52:32,877] INFO: P2P SERVER listening on 10.0.156.176:6907
+[2025-04-21 21:52:32,877] INFO: UDP LISTENER listening on 10.0.156.176:6908 for livestream.
+[2025-04-21 21:52:36,044] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:52:36,818] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:52:39,957] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:52:40,211] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:52:43,265] INFO: Sent P2P chat to 10.0.156.176:6739 – {"type": "chat", "sender": "an09", "message": "sao", "channel": "neww1", "owner": "an08"}
+[2025-04-21 21:52:43,349] INFO: Message from an09 sent in channel 'neww1'
+[2025-04-21 21:52:46,150] INFO: Sent P2P chat to 10.0.156.176:6739 – {"type": "chat", "sender": "an09", "message": "\u00e2lalala", "channel": "neww1", "owner": "an08"}
+[2025-04-21 21:52:46,350] INFO: Message from an09 sent in channel 'neww1'
+[2025-04-21 21:53:45,842] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:46,596] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:47,335] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:48,068] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:48,821] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:49,553] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:50,306] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:51,089] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:51,830] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:52,566] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:52,662] INFO: User an09 joined public channel '4anhem'
+[2025-04-21 21:53:53,328] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:54,108] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:54,888] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:55,670] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:56,466] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:56,541] INFO: [INFO] Tạo file mới: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:56,543] INFO: [P2P MESSAGE] an08 -> an09: chào
+[2025-04-21 21:54:02,996] INFO: Sent P2P chat to 10.0.156.176:6739 – {"type": "chat", "sender": "an09", "message": "h\u1ebf l\u00f4", "channel": "4anhem", "owner": "an08"}
+[2025-04-21 21:54:03,095] INFO: Message from an09 sent in channel '4anhem'
+[2025-04-21 21:54:07,236] INFO: Sent P2P chat to 10.0.156.176:6739 – {"type": "chat", "sender": "an09", "message": "\u00f4ng d\u1ea1o n\u00e0y sao", "channel": "4anhem", "owner": "an08"}
+[2025-04-21 21:54:07,333] INFO: Message from an09 sent in channel '4anhem'
+[2025-04-21 21:54:12,607] INFO: [P2P MESSAGE] an08 -> an09: t khỏe còn má m
+[2025-04-21 21:55:49,948] INFO: [SYNC DONE] Synced file: sync_aa1_an09.txt
+[2025-04-21 21:55:50,781] INFO: Tracker response on LEAVE: Peer an09 (10.0.156.176:6907) left

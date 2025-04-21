@@ -46224,3 +46224,1942 @@
 [2025-04-21 17:00:18,759] INFO: Sent P2P chat to 172.20.10.2:8549 – {"type": "chat", "sender": "an08", "message": "alo", "channel": "aa1", "owner": "an09"}
 [2025-04-21 17:00:18,910] INFO: Message from an08 sent in channel 'aa1'
 [2025-04-21 17:00:23,263] INFO: [P2P MESSAGE] an09 -> an08: sao hong hiện
+[2025-04-21 17:02:57,493] ERROR: Error get_channels: cluster0-shard-00-02.fum1o.mongodb.net:27017: connection closed (configured timeouts: connectTimeoutMS: 20000.0ms)
+[2025-04-21 17:02:57,494] ERROR: Error get_hosted_channels: cluster0-shard-00-02.fum1o.mongodb.net:27017: connection closed (configured timeouts: connectTimeoutMS: 20000.0ms)
+[2025-04-21 17:11:06,805] INFO: Logged in as: an09
+[2025-04-21 17:11:07,425] INFO: [SYNC LOGIN] Saved 10 new messages for aa1
+[2025-04-21 17:11:07,426] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-21 17:11:28,465] ERROR: Unable to connect to Tracker: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 17:11:28,477] INFO: P2P SERVER listening on 10.229.233.176:7390
+[2025-04-21 17:11:28,480] INFO: UDP LISTENER listening on 10.229.233.176:7391 for livestream.
+[2025-04-21 17:11:48,272] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 17:11:48,272] INFO: [SYNC] SyncManager started for channel 'aa1'
+[2025-04-21 17:15:48,980] INFO: Sending message: tôi
+[2025-04-21 17:15:48,981] ERROR: Tracker offline: cannot send channel message: tôi
+[2025-04-21 17:16:29,334] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 17:16:56,647] INFO: Sending message: xin chào
+[2025-04-21 17:16:56,647] ERROR: Tracker offline: cannot send channel message: xin chào
+[2025-04-21 17:16:58,946] INFO: [SYNC DONE] Synced file: sync_aa1_an09.txt
+[2025-04-21 17:16:59,813] ERROR: Not connected to tracker.
+[2025-04-21 17:19:07,011] INFO: Logged in as: an08
+[2025-04-21 17:19:07,666] INFO: [SYNC LOGIN] Saved 0 new messages for kenhAn
+[2025-04-21 17:19:07,714] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 17:19:07,715] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 17:19:07,857] INFO: Tracker response: Peer an08 (10.229.233.176:8058) added
+[2025-04-21 17:19:07,859] INFO: P2P SERVER listening on 10.229.233.176:8058
+[2025-04-21 17:19:07,859] INFO: UDP LISTENER listening on 10.229.233.176:8059 for livestream.
+[2025-04-21 17:19:09,422] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 17:19:11,402] INFO: Sending message: aa
+[2025-04-21 17:19:32,782] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 17:20:54,381] INFO: [SYNC DONE] Synced file: sync_kenhAn_an08.txt
+[2025-04-21 17:20:54,425] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 17:20:55,672] INFO: Tracker response on LEAVE: Peer an08 (10.229.233.176:8058) left
+[2025-04-21 17:24:46,287] INFO: Logged in as: an08
+[2025-04-21 17:24:46,938] INFO: [SYNC LOGIN] Saved 0 new messages for kenhAn
+[2025-04-21 17:24:46,997] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 17:24:46,998] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 17:24:47,121] INFO: Tracker response: Peer an08 (10.229.233.176:6156) added
+[2025-04-21 17:24:47,123] INFO: P2P SERVER listening on 10.229.233.176:6156
+[2025-04-21 17:24:47,123] INFO: UDP LISTENER listening on 10.229.233.176:6157 for livestream.
+[2025-04-21 17:24:48,888] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 17:24:48,888] INFO: [SYNC] SyncManager started for channel 'kênhnew'
+[2025-04-21 17:24:51,908] INFO: Sending message: aaa
+[2025-04-21 17:24:52,078] INFO: Message from an08 sent in channel 'kênhnew'
+[2025-04-21 17:25:23,434] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 17:25:23,434] INFO: [SYNC] SyncManager started for channel 'kênhnew'
+[2025-04-21 17:26:14,521] INFO: [SYNC DONE] Synced file: sync_kenhAn_an08.txt
+[2025-04-21 17:26:14,580] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 17:26:15,389] INFO: Tracker response on LEAVE: Peer an08 (10.229.233.176:6156) left
+[2025-04-21 17:33:44,834] INFO: Logged in as: an08
+[2025-04-21 17:33:45,552] INFO: [SYNC LOGIN] Saved 0 new messages for kenhAn
+[2025-04-21 17:33:45,635] INFO: [SYNC LOGIN] Saved 1 new messages for kênhnew
+[2025-04-21 17:33:45,635] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 17:33:45,781] INFO: Tracker response: Peer an08 (172.20.10.4:7045) added
+[2025-04-21 17:33:45,783] INFO: P2P SERVER listening on 172.20.10.4:7045
+[2025-04-21 17:33:45,785] INFO: UDP LISTENER listening on 172.20.10.4:7046 for livestream.
+[2025-04-21 17:33:47,891] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 17:33:49,291] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 17:33:49,878] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 17:33:53,004] INFO: Sending message: tôi onl
+[2025-04-21 17:34:14,215] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 17:34:27,474] INFO: [SYNC DONE] Synced file: sync_kenhAn_an08.txt
+[2025-04-21 17:34:27,555] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 17:34:28,542] INFO: Tracker response on LEAVE: Peer an08 (172.20.10.4:7045) left
+[2025-04-21 19:35:31,344] INFO: Logged in as: an08
+[2025-04-21 19:35:32,137] INFO: [SYNC LOGIN] Saved 0 new messages for kenhAn
+[2025-04-21 19:35:32,197] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 19:35:32,198] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 19:35:32,295] INFO: Tracker response: Peer an08 (10.0.156.176:7567) added
+[2025-04-21 19:35:32,295] INFO: P2P SERVER listening on 10.0.156.176:7567
+[2025-04-21 19:35:32,305] INFO: UDP LISTENER listening on 10.0.156.176:7568 for livestream.
+[2025-04-21 19:35:34,015] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 19:35:39,626] INFO: Sending message: hello
+[2025-04-21 19:36:00,758] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 19:37:34,688] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:35,263] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 19:37:36,691] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kenhAn_an08.txt
+[2025-04-21 19:37:36,691] INFO: [SYNC] SyncManager started for channel 'kenhAn'
+[2025-04-21 19:37:37,572] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 19:37:37,573] INFO: [SYNC] SyncManager started for channel 'kênhnew'
+[2025-04-21 19:37:43,784] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:44,562] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:45,344] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:46,170] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:46,986] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:47,764] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:48,545] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:49,317] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:50,094] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:50,870] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:51,272] INFO: Starting livestream.
+[2025-04-21 19:37:51,453] INFO: Peer list retrieved:
+[2025-04-21 19:37:51,453] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:51,581] INFO: Peer list retrieved:
+[2025-04-21 19:37:51,581] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:51,648] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:51,684] INFO: Peer list retrieved:
+[2025-04-21 19:37:51,684] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:51,788] INFO: Peer list retrieved:
+[2025-04-21 19:37:51,789] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:51,891] INFO: Peer list retrieved:
+[2025-04-21 19:37:51,891] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:51,996] INFO: Peer list retrieved:
+[2025-04-21 19:37:51,996] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:52,099] INFO: Peer list retrieved:
+[2025-04-21 19:37:52,099] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:52,203] INFO: Peer list retrieved:
+[2025-04-21 19:37:52,204] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:52,307] INFO: Peer list retrieved:
+[2025-04-21 19:37:52,307] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:52,411] INFO: Peer list retrieved:
+[2025-04-21 19:37:52,411] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:52,453] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:52,515] INFO: Peer list retrieved:
+[2025-04-21 19:37:52,515] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:52,619] INFO: Peer list retrieved:
+[2025-04-21 19:37:52,619] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:52,721] INFO: Peer list retrieved:
+[2025-04-21 19:37:52,722] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:52,825] INFO: Peer list retrieved:
+[2025-04-21 19:37:52,826] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:52,928] INFO: Peer list retrieved:
+[2025-04-21 19:37:52,929] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:53,033] INFO: Peer list retrieved:
+[2025-04-21 19:37:53,034] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:53,136] INFO: Peer list retrieved:
+[2025-04-21 19:37:53,136] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:53,230] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:53,239] INFO: Peer list retrieved:
+[2025-04-21 19:37:53,239] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:53,342] INFO: Peer list retrieved:
+[2025-04-21 19:37:53,342] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:53,446] INFO: Peer list retrieved:
+[2025-04-21 19:37:53,447] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:53,557] INFO: Peer list retrieved:
+[2025-04-21 19:37:53,558] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:53,662] INFO: Peer list retrieved:
+[2025-04-21 19:37:53,662] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:53,765] INFO: Peer list retrieved:
+[2025-04-21 19:37:53,765] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:53,869] INFO: Peer list retrieved:
+[2025-04-21 19:37:53,870] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:53,974] INFO: Peer list retrieved:
+[2025-04-21 19:37:53,975] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:54,007] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:54,077] INFO: Peer list retrieved:
+[2025-04-21 19:37:54,078] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:54,181] INFO: Peer list retrieved:
+[2025-04-21 19:37:54,181] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:54,285] INFO: Peer list retrieved:
+[2025-04-21 19:37:54,285] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:54,388] INFO: Peer list retrieved:
+[2025-04-21 19:37:54,388] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:54,491] INFO: Peer list retrieved:
+[2025-04-21 19:37:54,492] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:54,595] INFO: Peer list retrieved:
+[2025-04-21 19:37:54,595] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:54,698] INFO: Peer list retrieved:
+[2025-04-21 19:37:54,698] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:54,785] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:54,801] INFO: Peer list retrieved:
+[2025-04-21 19:37:54,802] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:54,905] INFO: Peer list retrieved:
+[2025-04-21 19:37:54,906] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:55,009] INFO: Peer list retrieved:
+[2025-04-21 19:37:55,009] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:55,113] INFO: Peer list retrieved:
+[2025-04-21 19:37:55,113] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:55,216] INFO: Peer list retrieved:
+[2025-04-21 19:37:55,216] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:55,319] INFO: Peer list retrieved:
+[2025-04-21 19:37:55,320] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:55,424] INFO: Peer list retrieved:
+[2025-04-21 19:37:55,424] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:55,529] INFO: Peer list retrieved:
+[2025-04-21 19:37:55,529] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:55,573] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:55,633] INFO: Peer list retrieved:
+[2025-04-21 19:37:55,633] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:55,737] INFO: Peer list retrieved:
+[2025-04-21 19:37:55,737] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:55,840] INFO: Peer list retrieved:
+[2025-04-21 19:37:55,840] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:55,945] INFO: Peer list retrieved:
+[2025-04-21 19:37:55,945] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:56,049] INFO: Peer list retrieved:
+[2025-04-21 19:37:56,050] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:56,154] INFO: Peer list retrieved:
+[2025-04-21 19:37:56,154] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:56,259] INFO: Peer list retrieved:
+[2025-04-21 19:37:56,259] INFO:  - an08 (10.0.156.176:7567)
+[2025-04-21 19:37:56,349] INFO: Stopping livestream.
+[2025-04-21 19:37:56,351] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:56,994] INFO: Livestream stopped.
+[2025-04-21 19:37:57,130] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:57,908] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:58,690] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:59,472] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an10.txt
+[2025-04-21 19:37:59,912] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 19:37:59,913] INFO: [SYNC] SyncManager started for channel 'kênhnew'
+[2025-04-21 19:38:05,456] INFO: Sending message: alo
+[2025-04-21 19:38:26,690] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 19:38:47,736] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 19:39:08,779] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 19:39:29,834] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 19:39:29,836] INFO: Message from an08 sent in channel 'kênhnew'
+[2025-04-21 19:39:36,094] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 19:39:36,094] INFO: [SYNC] SyncManager started for channel 'kênhnew'
+[2025-04-21 19:39:36,935] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kenhAn_an08.txt
+[2025-04-21 19:39:36,940] INFO: [SYNC] SyncManager started for channel 'kenhAn'
+[2025-04-21 19:39:37,748] WARNING: [SYNC LOAD] File not found: local_sync\sync_aa1_an08.txt
+[2025-04-21 19:39:37,864] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 19:39:38,078] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 19:39:41,385] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 19:44:30,544] INFO: [SYNC DONE] Synced file: sync_kenhAn_an08.txt
+[2025-04-21 19:44:30,641] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 19:44:31,309] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:7567) left
+[2025-04-21 19:48:06,433] INFO: Logged in as: an10
+[2025-04-21 19:48:07,328] INFO: [SYNC LOGIN] Saved 16 new messages for 123
+[2025-04-21 19:48:07,328] INFO: User 'an10' logging in (authenticated mode).
+[2025-04-21 19:48:07,430] INFO: Tracker response: Peer an10 (10.0.156.176:7127) added
+[2025-04-21 19:48:07,432] INFO: P2P SERVER listening on 10.0.156.176:7127
+[2025-04-21 19:48:07,433] INFO: UDP LISTENER listening on 10.0.156.176:7128 for livestream.
+[2025-04-21 19:48:08,862] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 19:48:13,355] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 19:48:13,520] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 19:48:13,689] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 19:48:17,783] INFO: Sending message: hello
+[2025-04-21 19:48:38,911] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 19:53:03,765] INFO: [SYNC DONE] Synced file: sync_123_an10.txt
+[2025-04-21 19:53:04,432] INFO: Tracker response on LEAVE: Peer an10 (10.0.156.176:7127) left
+[2025-04-21 19:53:37,804] INFO: Logged in as: an08
+[2025-04-21 19:53:38,428] INFO: [SYNC LOGIN] Saved 0 new messages for kenhAn
+[2025-04-21 19:53:38,468] INFO: [SYNC LOGIN] Saved 1 new messages for kênhnew
+[2025-04-21 19:53:38,469] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 19:53:38,569] INFO: Tracker response: Peer an08 (10.0.156.176:7195) added
+[2025-04-21 19:53:38,572] INFO: P2P SERVER listening on 10.0.156.176:7195
+[2025-04-21 19:53:38,572] INFO: UDP LISTENER listening on 10.0.156.176:7196 for livestream.
+[2025-04-21 19:53:43,859] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 19:53:49,940] INFO: Channel 'no1' created by an08 (is_private=False)
+[2025-04-21 19:53:52,513] INFO: [SYNC] SyncManager started for channel 'no1'
+[2025-04-21 19:53:52,696] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:53:53,437] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:53:54,171] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:53:54,911] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:53:55,676] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:53:56,419] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:53:57,159] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:53:57,885] INFO: Sending message: a
+[2025-04-21 19:53:57,893] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:53:58,014] INFO: Message from an08 sent in channel 'no1'
+[2025-04-21 19:53:58,637] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:53:59,375] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:00,121] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:00,891] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:01,645] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:02,402] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:02,518] INFO: Sending message: xin chào
+[2025-04-21 19:54:02,639] INFO: Message from an08 sent in channel 'no1'
+[2025-04-21 19:54:03,154] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:03,898] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:04,652] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:05,407] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:06,162] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:06,925] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:07,684] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:08,483] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:09,236] WARNING: [SYNC LOAD] File not found: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:09,295] INFO: [SYNC DONE] Synced file: sync_kenhAn_an08.txt
+[2025-04-21 19:54:09,347] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 19:54:09,386] INFO: [SYNC DONE] Synced file: sync_no1_an08.txt
+[2025-04-21 19:54:10,439] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:7195) left
+[2025-04-21 19:54:31,835] INFO: Logged in as: an08
+[2025-04-21 19:54:32,463] INFO: [SYNC LOGIN] Saved 0 new messages for kenhAn
+[2025-04-21 19:54:32,514] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 19:54:32,566] INFO: [SYNC LOGIN] Saved 2 new messages for no1
+[2025-04-21 19:54:32,566] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 19:54:32,665] INFO: Tracker response: Peer an08 (10.0.156.176:7155) added
+[2025-04-21 19:54:32,666] INFO: P2P SERVER listening on 10.0.156.176:7155
+[2025-04-21 19:54:32,668] INFO: UDP LISTENER listening on 10.0.156.176:7156 for livestream.
+[2025-04-21 19:54:34,026] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:34,027] INFO: [SYNC] SyncManager started for channel 'no1'
+[2025-04-21 19:54:36,732] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:36,733] INFO: [SYNC] SyncManager started for channel 'no1'
+[2025-04-21 19:54:40,065] INFO: Sending message: tôi đến đây
+[2025-04-21 19:54:40,199] INFO: Message from an08 sent in channel 'no1'
+[2025-04-21 19:54:46,983] INFO: Sending message: còn ai không
+[2025-04-21 19:54:47,131] INFO: Message from an08 sent in channel 'no1'
+[2025-04-21 19:54:51,769] INFO: Sending message: ụa t host mà
+[2025-04-21 19:54:51,913] INFO: Message from an08 sent in channel 'no1'
+[2025-04-21 19:54:53,404] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an10.txt
+[2025-04-21 19:54:53,929] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:53,929] INFO: [SYNC] SyncManager started for channel 'no1'
+[2025-04-21 19:54:54,129] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:54,129] INFO: [SYNC] SyncManager started for channel 'no1'
+[2025-04-21 19:54:54,596] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:54,597] INFO: [SYNC] SyncManager started for channel 'no1'
+[2025-04-21 19:54:54,775] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:54,776] INFO: [SYNC] SyncManager started for channel 'no1'
+[2025-04-21 19:54:55,731] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 19:54:55,732] INFO: [SYNC] SyncManager started for channel 'no1'
+[2025-04-21 19:54:56,714] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an10.txt
+[2025-04-21 19:54:59,915] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 19:54:59,916] INFO: [SYNC] SyncManager started for channel 'kênhnew'
+[2025-04-21 19:55:00,622] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 19:55:00,622] INFO: [SYNC] SyncManager started for channel 'kênhnew'
+[2025-04-21 19:55:00,832] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an10.txt
+[2025-04-21 19:55:01,037] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an10.txt
+[2025-04-21 19:55:02,020] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 19:55:02,020] INFO: [SYNC] SyncManager started for channel 'no1'
+[2025-04-21 19:55:04,421] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 19:55:04,422] INFO: [SYNC] SyncManager started for channel 'no1'
+[2025-04-21 19:55:05,922] INFO: [SYNC DONE] Synced file: sync_kenhAn_an08.txt
+[2025-04-21 19:55:05,972] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 19:55:06,196] INFO: [SYNC DONE] Synced file: sync_no1_an08.txt
+[2025-04-21 19:55:07,196] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:7155) left
+[2025-04-21 19:59:59,719] INFO: Logged in as: an10
+[2025-04-21 20:00:00,605] INFO: [SYNC LOGIN] Saved 0 new messages for 123
+[2025-04-21 20:00:00,606] INFO: User 'an10' logging in (authenticated mode).
+[2025-04-21 20:00:00,701] INFO: Tracker response: Peer an10 (10.0.156.176:8522) added
+[2025-04-21 20:00:00,704] INFO: P2P SERVER listening on 10.0.156.176:8522
+[2025-04-21 20:00:00,705] INFO: UDP LISTENER listening on 10.0.156.176:8523 for livestream.
+[2025-04-21 20:00:02,077] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an10.txt
+[2025-04-21 20:00:02,078] INFO: [SYNC] SyncManager started for channel '123'
+[2025-04-21 20:00:03,194] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 20:00:03,369] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 20:00:03,552] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 20:00:04,911] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 20:00:07,447] INFO: Sending message: ụa
+[2025-04-21 20:00:28,568] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 20:01:08,944] INFO: [SYNC DONE] Synced file: sync_123_an10.txt
+[2025-04-21 20:01:09,654] INFO: Tracker response on LEAVE: Peer an10 (10.0.156.176:8522) left
+[2025-04-21 20:01:12,833] INFO: Logged in as: an08
+[2025-04-21 20:01:13,534] INFO: [SYNC LOGIN] Saved 0 new messages for kenhAn
+[2025-04-21 20:01:13,577] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 20:01:13,621] INFO: [SYNC LOGIN] Saved 3 new messages for no1
+[2025-04-21 20:01:13,621] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 20:01:13,718] INFO: Tracker response: Peer an08 (10.0.156.176:8978) added
+[2025-04-21 20:01:13,720] INFO: P2P SERVER listening on 10.0.156.176:8978
+[2025-04-21 20:01:13,720] INFO: UDP LISTENER listening on 10.0.156.176:8979 for livestream.
+[2025-04-21 20:01:14,943] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 20:01:14,944] INFO: [SYNC] SyncManager started for channel 'no1'
+[2025-04-21 20:01:17,319] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 20:01:17,319] INFO: [SYNC] SyncManager started for channel 'no1'
+[2025-04-21 20:01:20,568] INFO: Sending message: xin chào
+[2025-04-21 20:01:20,709] INFO: Message from an08 sent in channel 'no1'
+[2025-04-21 20:01:32,705] INFO: Sending message: tôi đến từ Mặt Trời
+[2025-04-21 20:01:32,852] INFO: Message from an08 sent in channel 'no1'
+[2025-04-21 20:04:46,915] INFO: Sending message: xin chào
+[2025-04-21 20:05:08,150] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 20:05:29,182] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 20:05:50,211] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 20:06:11,263] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 20:06:13,310] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-21 20:06:13,312] INFO: Message from an08 sent in channel 'no1'
+[2025-04-21 20:06:36,477] INFO: [SYNC DONE] Synced file: sync_kenhAn_an08.txt
+[2025-04-21 20:06:36,522] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 20:06:36,568] INFO: [SYNC DONE] Synced file: sync_no1_an08.txt
+[2025-04-21 20:06:37,736] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:8978) left
+[2025-04-21 20:06:39,101] ERROR: get_channels_from_server error: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-21 20:11:45,858] INFO: Logged in as: an08
+[2025-04-21 20:11:46,559] INFO: [SYNC LOGIN] Saved 0 new messages for kenhAn
+[2025-04-21 20:11:46,609] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 20:11:46,652] INFO: [SYNC LOGIN] Saved 3 new messages for no1
+[2025-04-21 20:11:46,652] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 20:11:46,747] INFO: Tracker response: Peer an08 (10.0.156.176:7900) added
+[2025-04-21 20:11:46,748] INFO: P2P SERVER listening on 10.0.156.176:7900
+[2025-04-21 20:11:46,749] INFO: UDP LISTENER listening on 10.0.156.176:7901 for livestream.
+[2025-04-21 20:11:50,106] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an10.txt
+[2025-04-21 20:11:51,517] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 20:11:51,518] INFO: [SYNC] SyncManager started for channel 'no1'
+[2025-04-21 20:11:51,689] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 20:11:51,689] INFO: [SYNC] SyncManager started for channel 'no1'
+[2025-04-21 20:11:51,860] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 20:11:51,860] INFO: [SYNC] SyncManager started for channel 'no1'
+[2025-04-21 20:11:52,035] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 20:11:52,036] INFO: [SYNC] SyncManager started for channel 'no1'
+[2025-04-21 20:11:52,205] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 20:11:52,205] INFO: [SYNC] SyncManager started for channel 'no1'
+[2025-04-21 20:11:53,206] INFO: [SYNC LOAD] Save message to file: local_sync\sync_no1_an08.txt
+[2025-04-21 20:11:53,207] INFO: [SYNC] SyncManager started for channel 'no1'
+[2025-04-21 20:11:56,081] INFO: Sending message: nhắn tin
+[2025-04-21 20:12:17,308] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 20:12:38,355] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 20:12:59,402] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 20:13:20,436] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 20:13:20,438] INFO: Message from an08 sent in channel 'no1'
+[2025-04-21 20:14:08,784] INFO: Channel 'no1' deleted by an08
+[2025-04-21 20:14:08,785] ERROR: poll_loop response error: Channel not found
+[2025-04-21 20:14:13,651] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 20:14:13,653] INFO: [SYNC] SyncManager started for channel 'kênhnew'
+[2025-04-21 20:14:15,134] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 20:14:22,938] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kenhAn_an08.txt
+[2025-04-21 20:14:22,939] INFO: [SYNC] SyncManager started for channel 'kenhAn'
+[2025-04-21 20:14:24,323] WARNING: [SYNC LOAD] File not found: local_sync\sync_aa1_an08.txt
+[2025-04-21 20:14:24,401] INFO: [SYNC LOAD] Save message to file: local_sync\sync_aa1_an09.txt
+[2025-04-21 20:14:26,578] WARNING: [SYNC LOAD] File not found: local_sync\sync_kenhAn_an09.txt
+[2025-04-21 20:14:26,722] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kenhAn_an08.txt
+[2025-04-21 20:14:26,723] INFO: [SYNC] SyncManager started for channel 'kenhAn'
+[2025-04-21 20:14:29,113] INFO: Channel 'kenhAn' deleted by an08
+[2025-04-21 20:14:29,152] WARNING: poll_loop: Channel data is None for channel: kenhAn
+[2025-04-21 20:14:29,153] ERROR: Exception in poll_loop: 'NoneType' object has no attribute 'get'
+[2025-04-21 20:14:30,383] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 20:14:30,384] INFO: [SYNC] SyncManager started for channel 'kênhnew'
+[2025-04-21 20:14:32,804] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an10.txt
+[2025-04-21 20:14:40,527] INFO: Channel 'a1' created by an08 (is_private=False)
+[2025-04-21 20:14:42,155] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:42,178] INFO: [SYNC] SyncManager started for channel 'a1'
+[2025-04-21 20:14:42,917] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:43,681] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:44,439] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:44,546] INFO: Sending message: xin chào
+[2025-04-21 20:14:44,676] INFO: Message from an08 sent in channel 'a1'
+[2025-04-21 20:14:45,192] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:45,936] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:46,687] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:47,445] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:47,942] INFO: Sending message: tôi là ai
+[2025-04-21 20:14:48,068] INFO: Message from an08 sent in channel 'a1'
+[2025-04-21 20:14:48,187] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:48,951] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:49,700] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:50,467] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:50,733] INFO: Sending message: bạn là ai
+[2025-04-21 20:14:50,862] INFO: Message from an08 sent in channel 'a1'
+[2025-04-21 20:14:51,225] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:51,987] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:52,762] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:53,527] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:54,304] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:54,582] INFO: Sending message: tôi đến từ đâu
+[2025-04-21 20:14:54,725] INFO: Message from an08 sent in channel 'a1'
+[2025-04-21 20:14:55,065] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:55,891] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:56,679] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:56,980] INFO: Sending message: hello
+[2025-04-21 20:14:57,114] INFO: Message from an08 sent in channel 'a1'
+[2025-04-21 20:14:57,441] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:58,208] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:58,966] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:14:59,725] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:15:00,487] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:15:01,254] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:15:02,033] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:15:02,791] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:15:03,558] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:15:04,327] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:15:05,095] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:15:05,844] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:15:06,608] WARNING: [SYNC LOAD] File not found: local_sync\sync_a1_an08.txt
+[2025-04-21 20:15:07,249] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 20:15:07,294] INFO: [SYNC DONE] Synced file: sync_a1_an08.txt
+[2025-04-21 20:15:08,033] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:7900) left
+[2025-04-21 20:16:18,917] INFO: Logged in as: an08
+[2025-04-21 20:16:19,607] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 20:16:19,654] INFO: [SYNC LOGIN] Saved 5 new messages for a1
+[2025-04-21 20:16:19,655] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 20:16:19,746] INFO: Tracker response: Peer an08 (10.0.156.176:6110) added
+[2025-04-21 20:16:19,747] INFO: P2P SERVER listening on 10.0.156.176:6110
+[2025-04-21 20:16:19,747] INFO: UDP LISTENER listening on 10.0.156.176:6111 for livestream.
+[2025-04-21 20:16:21,133] INFO: [SYNC LOAD] Save message to file: local_sync\sync_a1_an08.txt
+[2025-04-21 20:16:21,134] INFO: [SYNC] SyncManager started for channel 'a1'
+[2025-04-21 20:16:23,259] INFO: [SYNC LOAD] Save message to file: local_sync\sync_a1_an08.txt
+[2025-04-21 20:16:23,260] INFO: [SYNC] SyncManager started for channel 'a1'
+[2025-04-21 20:16:29,111] INFO: Sending message: hiểu r
+[2025-04-21 20:16:29,252] INFO: Message from an08 sent in channel 'a1'
+[2025-04-21 20:16:30,856] INFO: Sending message: quá tê
+[2025-04-21 20:16:30,987] INFO: Message from an08 sent in channel 'a1'
+[2025-04-21 20:16:33,354] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 20:16:33,398] INFO: [SYNC DONE] Synced file: sync_a1_an08.txt
+[2025-04-21 20:16:34,066] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:6110) left
+[2025-04-21 20:16:35,893] INFO: Logged in as: an08
+[2025-04-21 20:16:36,613] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 20:16:36,659] INFO: [SYNC LOGIN] Saved 2 new messages for a1
+[2025-04-21 20:16:36,659] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 20:16:36,748] INFO: Tracker response: Peer an08 (10.0.156.176:6843) added
+[2025-04-21 20:16:36,748] INFO: P2P SERVER listening on 10.0.156.176:6843
+[2025-04-21 20:16:36,749] INFO: UDP LISTENER listening on 10.0.156.176:6844 for livestream.
+[2025-04-21 20:16:38,111] INFO: [SYNC LOAD] Save message to file: local_sync\sync_a1_an08.txt
+[2025-04-21 20:16:38,111] INFO: [SYNC] SyncManager started for channel 'a1'
+[2025-04-21 20:16:39,806] INFO: [SYNC LOAD] Save message to file: local_sync\sync_a1_an08.txt
+[2025-04-21 20:16:39,806] INFO: [SYNC] SyncManager started for channel 'a1'
+[2025-04-21 20:16:42,416] INFO: Sending message: tệ thế
+[2025-04-21 20:16:42,556] INFO: Message from an08 sent in channel 'a1'
+[2025-04-21 20:16:47,121] INFO: Sending message: fetch chán vãi
+[2025-04-21 20:16:47,564] INFO: Message from an08 sent in channel 'a1'
+[2025-04-21 20:16:49,968] INFO: Sending message: hừm
+[2025-04-21 20:16:50,106] INFO: Message from an08 sent in channel 'a1'
+[2025-04-21 20:16:51,532] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 20:16:51,578] INFO: [SYNC DONE] Synced file: sync_a1_an08.txt
+[2025-04-21 20:16:52,707] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:6843) left
+[2025-04-21 20:16:57,765] INFO: Logged in as: an08
+[2025-04-21 20:16:58,506] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 20:16:58,547] INFO: [SYNC LOGIN] Saved 3 new messages for a1
+[2025-04-21 20:16:58,547] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 20:16:58,656] INFO: Tracker response: Peer an08 (10.0.156.176:6791) added
+[2025-04-21 20:16:58,657] INFO: P2P SERVER listening on 10.0.156.176:6791
+[2025-04-21 20:16:58,657] INFO: UDP LISTENER listening on 10.0.156.176:6792 for livestream.
+[2025-04-21 20:17:02,545] INFO: [SYNC LOAD] Save message to file: local_sync\sync_a1_an08.txt
+[2025-04-21 20:17:02,546] INFO: [SYNC] SyncManager started for channel 'a1'
+[2025-04-21 20:17:02,750] INFO: [SYNC LOAD] Save message to file: local_sync\sync_a1_an08.txt
+[2025-04-21 20:17:02,751] INFO: [SYNC] SyncManager started for channel 'a1'
+[2025-04-21 20:17:04,624] INFO: [SYNC LOAD] Save message to file: local_sync\sync_a1_an08.txt
+[2025-04-21 20:17:04,624] INFO: [SYNC] SyncManager started for channel 'a1'
+[2025-04-21 20:17:04,813] INFO: [SYNC LOAD] Save message to file: local_sync\sync_a1_an08.txt
+[2025-04-21 20:17:04,813] INFO: [SYNC] SyncManager started for channel 'a1'
+[2025-04-21 20:17:07,421] INFO: Sending message: happy
+[2025-04-21 20:17:07,560] INFO: Message from an08 sent in channel 'a1'
+[2025-04-21 20:17:09,668] INFO: Sending message: birthday
+[2025-04-21 20:17:09,809] INFO: Message from an08 sent in channel 'a1'
+[2025-04-21 20:17:14,657] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 20:17:14,703] INFO: [SYNC DONE] Synced file: sync_a1_an08.txt
+[2025-04-21 20:17:15,463] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:6791) left
+[2025-04-21 20:17:51,620] INFO: Logged in as: an09
+[2025-04-21 20:17:52,457] INFO: [SYNC LOGIN] Saved 1 new messages for aa1
+[2025-04-21 20:17:52,458] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-21 20:17:52,557] INFO: Tracker response: Peer an09 (10.0.156.176:6777) added
+[2025-04-21 20:17:52,558] INFO: P2P SERVER listening on 10.0.156.176:6777
+[2025-04-21 20:17:52,560] INFO: UDP LISTENER listening on 10.0.156.176:6778 for livestream.
+[2025-04-21 20:17:56,594] INFO: [SYNC LOAD] Save message to file: local_sync\sync_a1_an08.txt
+[2025-04-21 20:18:00,333] INFO: [SYNC LOAD] Save message to file: local_sync\sync_a1_an08.txt
+[2025-04-21 20:18:00,687] INFO: [SYNC LOAD] Save message to file: local_sync\sync_a1_an08.txt
+[2025-04-21 20:18:02,547] INFO: Sending message: fetch
+[2025-04-21 20:18:23,671] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 20:18:28,483] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:29,218] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:29,965] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:30,705] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:31,443] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:32,193] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:32,950] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:33,701] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:34,441] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:35,210] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:35,982] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:36,175] INFO: [SYNC LOAD] Save message to file: local_sync\sync_a1_an08.txt
+[2025-04-21 20:18:36,744] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:37,488] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:38,255] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:38,994] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:39,738] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:40,477] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:40,993] INFO: Sending message: có ai thấy tôi không
+[2025-04-21 20:18:41,221] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:41,965] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:42,768] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:43,510] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:44,256] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:44,989] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:45,735] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:46,497] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:47,250] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:48,021] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:48,876] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:49,627] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:50,361] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:51,110] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:51,852] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:52,595] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:53,358] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:54,103] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:54,861] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:55,599] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:56,335] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:57,080] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:57,842] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:58,580] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:18:59,340] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:00,085] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:00,825] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:01,571] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:02,127] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-21 20:19:02,320] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:03,076] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:03,816] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:05,838] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:08,425] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:09,221] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:09,983] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:10,749] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:11,505] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:12,254] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:12,997] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:13,814] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:14,709] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:15,454] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:17,426] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:20,078] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:21,229] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:21,978] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:22,722] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:23,458] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:24,197] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:24,942] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:25,701] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:26,448] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:27,251] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:27,994] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:28,735] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:29,477] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:30,218] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:30,987] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:31,776] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:32,536] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:33,278] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:34,313] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:35,252] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:35,997] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:36,759] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:37,503] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:38,246] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:38,986] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:39,756] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:40,497] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:41,252] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:42,014] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:42,809] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:43,571] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:44,323] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:45,071] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:45,840] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:46,598] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:47,365] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:48,123] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:48,930] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:49,694] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:50,446] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:51,195] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:51,939] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:52,681] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:53,426] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:54,173] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:54,915] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:55,674] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:56,448] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:57,202] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:57,960] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:58,779] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:19:59,537] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:00,289] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:01,039] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:01,784] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:02,527] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:03,269] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:04,015] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:04,773] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:05,526] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:06,270] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:07,026] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:07,776] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:08,558] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:09,305] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:10,050] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:10,785] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:11,523] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:12,259] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:13,028] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:13,840] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:14,582] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:15,328] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:16,100] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:16,843] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:17,594] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:18,344] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:19,085] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:19,838] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:20,588] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:21,333] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:22,090] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:22,832] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:23,616] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:24,439] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:25,198] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:25,941] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:26,816] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:27,743] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:28,822] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:29,584] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:30,402] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:31,203] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:32,148] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:32,979] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:33,735] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:34,484] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:35,234] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:35,977] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:36,729] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:37,548] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:38,288] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:39,085] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:39,827] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:40,570] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:41,306] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:42,060] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:42,807] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:43,563] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:44,309] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:45,056] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:45,840] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:46,586] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:47,323] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:48,075] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:48,820] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:49,562] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:50,307] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:51,054] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:51,808] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:52,625] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:53,367] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:54,114] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:54,861] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:55,625] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:56,370] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:20:57,125] WARNING: [SYNC LOAD] File not found: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:21:01,943] INFO: [SYNC DONE] Synced file: sync_aa1_an09.txt
+[2025-04-21 20:21:02,635] INFO: Tracker response on LEAVE: Peer an09 (10.0.156.176:6777) left
+[2025-04-21 20:21:04,779] ERROR: Exception in load_dm_list: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-21 20:42:34,295] INFO: Logged in as: an08
+[2025-04-21 20:42:34,963] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 20:42:35,007] INFO: [SYNC LOGIN] Saved 3 new messages for a1
+[2025-04-21 20:42:35,057] INFO: [SYNC LOGIN] Saved 4 new messages for neww1
+[2025-04-21 20:42:35,058] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 20:42:35,144] INFO: Tracker response: Peer an08 (10.0.156.176:6431) added
+[2025-04-21 20:42:35,146] INFO: P2P SERVER listening on 10.0.156.176:6431
+[2025-04-21 20:42:35,146] INFO: UDP LISTENER listening on 10.0.156.176:6432 for livestream.
+[2025-04-21 20:42:52,736] INFO: Sending message: zô
+[2025-04-21 20:42:54,540] INFO: Message from an08 sent in channel 'test1'
+[2025-04-21 20:42:56,360] INFO: Sending message: ụa cl
+[2025-04-21 20:42:56,673] INFO: Message from an08 sent in channel 'test1'
+[2025-04-21 20:42:59,415] INFO: Sending message: t đây
+[2025-04-21 20:43:00,238] INFO: Message from an08 sent in channel 'test1'
+[2025-04-21 20:43:02,293] INFO: Sending message: đánh l không
+[2025-04-21 20:43:04,345] INFO: Message from an08 sent in channel 'test1'
+[2025-04-21 20:43:06,875] INFO: Sending message: thằng chó
+[2025-04-21 20:43:07,405] INFO: Message from an08 sent in channel 'test1'
+[2025-04-21 20:43:11,563] INFO: Sending message: lô
+[2025-04-21 20:43:12,143] INFO: Message from an08 sent in channel 'test1'
+[2025-04-21 20:43:12,434] INFO: Sending message: cu
+[2025-04-21 20:43:12,911] INFO: Message from an08 sent in channel 'test1'
+[2025-04-21 20:43:19,023] INFO: Sending message: sợ m quá
+[2025-04-21 20:43:19,205] INFO: Message from an08 sent in channel 'test1'
+[2025-04-21 20:43:23,116] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:43:23,116] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:43:23,293] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:43:23,294] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:43:27,321] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:43:27,322] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:43:27,961] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:43:27,961] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:43:33,491] INFO: Sending message: app như l
+[2025-04-21 20:43:33,636] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 20:43:38,040] INFO: Sending message: dẹp mẹ đi mấy thằng l
+[2025-04-21 20:43:38,179] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 20:43:54,413] INFO: [SYNC LOAD] Save message to file: local_sync\sync_a1_an08.txt
+[2025-04-21 20:43:54,413] INFO: [SYNC] SyncManager started for channel 'a1'
+[2025-04-21 20:43:56,525] INFO: [SYNC LOAD] Save message to file: local_sync\sync_a1_an08.txt
+[2025-04-21 20:43:56,526] INFO: [SYNC] SyncManager started for channel 'a1'
+[2025-04-21 20:44:01,507] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:44:01,508] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:44:01,698] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:44:01,699] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:44:03,158] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 20:44:03,159] INFO: [SYNC] SyncManager started for channel 'kênhnew'
+[2025-04-21 20:44:03,333] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 20:44:03,333] INFO: [SYNC] SyncManager started for channel 'kênhnew'
+[2025-04-21 20:44:04,647] WARNING: [SYNC LOAD] File not found: local_sync\sync_aa1_an08.txt
+[2025-04-21 20:44:11,000] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:44:11,001] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:44:13,311] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:44:13,311] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:44:14,625] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 20:44:14,672] INFO: [SYNC DONE] Synced file: sync_a1_an08.txt
+[2025-04-21 20:44:14,714] INFO: [SYNC DONE] Synced file: sync_neww1_an08.txt
+[2025-04-21 20:44:15,354] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:6431) left
+[2025-04-21 20:50:48,736] INFO: Logged in as: an08
+[2025-04-21 20:50:49,881] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 20:50:49,936] INFO: [SYNC LOGIN] Saved 0 new messages for a1
+[2025-04-21 20:50:49,985] INFO: [SYNC LOGIN] Saved 6 new messages for neww1
+[2025-04-21 20:50:49,986] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 20:50:50,069] INFO: Tracker response: Peer an08 (10.0.156.176:7156) added
+[2025-04-21 20:50:50,071] INFO: P2P SERVER listening on 10.0.156.176:7156
+[2025-04-21 20:50:50,073] INFO: UDP LISTENER listening on 10.0.156.176:7157 for livestream.
+[2025-04-21 20:50:55,915] INFO: Sending message: 8:30
+[2025-04-21 20:50:56,086] INFO: Message from an08 sent in channel 'test1'
+[2025-04-21 20:51:04,971] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 20:51:05,021] INFO: [SYNC DONE] Synced file: sync_a1_an08.txt
+[2025-04-21 20:51:05,081] INFO: [SYNC DONE] Synced file: sync_neww1_an08.txt
+[2025-04-21 20:51:05,715] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:7156) left
+[2025-04-21 20:52:04,257] INFO: Logged in as: an08
+[2025-04-21 20:52:04,881] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 20:52:04,930] INFO: [SYNC LOGIN] Saved 0 new messages for a1
+[2025-04-21 20:52:04,974] INFO: [SYNC LOGIN] Saved 0 new messages for neww1
+[2025-04-21 20:52:04,974] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 20:52:05,059] INFO: Tracker response: Peer an08 (10.0.156.176:7239) added
+[2025-04-21 20:52:05,061] INFO: P2P SERVER listening on 10.0.156.176:7239
+[2025-04-21 20:52:05,061] INFO: UDP LISTENER listening on 10.0.156.176:7240 for livestream.
+[2025-04-21 20:52:16,806] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:52:16,808] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:52:27,995] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:52:27,995] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:52:34,077] INFO: Sending message: quá tệ
+[2025-04-21 20:52:34,214] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 20:52:54,582] INFO: Sending message: đụng voolaf bug
+[2025-04-21 20:52:54,705] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 20:52:57,259] INFO: [P2P MESSAGE] an09 -> an08: lô
+[2025-04-21 20:53:00,599] INFO: [P2P MESSAGE] an09 -> an08: à
+[2025-04-21 20:53:06,537] INFO: [P2P MESSAGE] an09 -> an08: á
+[2025-04-21 20:53:07,447] INFO: [P2P MESSAGE] an09 -> an08: a
+[2025-04-21 20:53:15,838] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:53:15,839] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:53:16,410] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:53:16,410] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:53:16,787] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:53:16,788] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:53:17,865] WARNING: [SYNC LOAD] File not found: local_sync\sync_test1_an10.txt
+[2025-04-21 20:53:19,346] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:53:19,346] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:53:24,551] INFO: Sending message: luộc
+[2025-04-21 20:53:24,677] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 20:53:37,679] INFO: Sending message: kkk
+[2025-04-21 20:53:37,813] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 20:53:41,909] INFO: [P2P MESSAGE] an09 -> an08: xàm l ác
+[2025-04-21 20:53:48,983] INFO: [P2P MESSAGE] an09 -> an08: mệt dữ ní
+[2025-04-21 20:53:51,950] INFO: [P2P MESSAGE] an09 -> an08: bú bú
+[2025-04-21 20:53:56,083] INFO: Sending message: bú ác
+[2025-04-21 20:53:56,217] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 20:54:02,765] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 20:54:02,807] INFO: [SYNC DONE] Synced file: sync_a1_an08.txt
+[2025-04-21 20:54:02,945] INFO: [SYNC DONE] Synced file: sync_neww1_an08.txt
+[2025-04-21 20:54:05,700] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:7239) left
+[2025-04-21 20:54:14,735] INFO: Logged in as: an08
+[2025-04-21 20:54:15,555] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 20:54:15,594] INFO: [SYNC LOGIN] Saved 0 new messages for a1
+[2025-04-21 20:54:15,637] INFO: [SYNC LOGIN] Saved 9 new messages for neww1
+[2025-04-21 20:54:15,637] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 20:54:15,726] INFO: Tracker response: Peer an08 (10.0.156.176:6567) added
+[2025-04-21 20:54:15,728] INFO: P2P SERVER listening on 10.0.156.176:6567
+[2025-04-21 20:54:15,729] INFO: UDP LISTENER listening on 10.0.156.176:6568 for livestream.
+[2025-04-21 20:54:17,319] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:54:17,320] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:54:19,641] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 20:54:19,643] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 20:54:21,710] INFO: Sending message: à
+[2025-04-21 20:54:21,832] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 20:54:25,168] INFO: [P2P MESSAGE] an09 -> an08: sợ gì
+[2025-04-21 20:54:30,662] INFO: Sending message: á lồ
+[2025-04-21 20:54:30,800] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 20:54:34,113] INFO: [P2P MESSAGE] an09 -> an08: sao
+[2025-04-21 20:54:37,729] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 20:54:37,769] INFO: [SYNC DONE] Synced file: sync_a1_an08.txt
+[2025-04-21 20:54:37,852] INFO: [SYNC DONE] Synced file: sync_neww1_an08.txt
+[2025-04-21 20:54:38,911] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:6567) left
+[2025-04-21 21:34:03,081] INFO: Logged in as: an08
+[2025-04-21 21:34:04,106] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 21:34:04,156] INFO: [SYNC LOGIN] Saved 0 new messages for a1
+[2025-04-21 21:34:04,206] INFO: [SYNC LOGIN] Saved 3 new messages for neww1
+[2025-04-21 21:34:04,206] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 21:34:04,296] INFO: Tracker response: Peer an08 (10.0.156.176:8811) added
+[2025-04-21 21:34:04,297] INFO: P2P SERVER listening on 10.0.156.176:8811
+[2025-04-21 21:34:04,298] INFO: UDP LISTENER listening on 10.0.156.176:8812 for livestream.
+[2025-04-21 21:34:13,318] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:34:13,319] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 21:34:16,593] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:34:16,594] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 21:34:16,806] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:34:16,806] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 21:34:20,191] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an10.txt
+[2025-04-21 21:34:21,936] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an10.txt
+[2025-04-21 21:34:24,457] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an10.txt
+[2025-04-21 21:34:24,668] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an10.txt
+[2025-04-21 21:34:27,422] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:34:27,423] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 21:34:29,154] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:34:29,155] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 21:34:29,369] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:34:29,369] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 21:34:41,737] INFO: Sending message: xin chaof
+[2025-04-21 21:34:41,915] INFO: Sent P2P chat to 10.0.156.176:8014 – {"type": "chat", "sender": "an08", "message": "xin chaof", "channel": "neww1", "owner": "an08"}
+[2025-04-21 21:34:41,916] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 21:34:48,965] INFO: [P2P MESSAGE] an09 -> an08: thicsh chao k
+[2025-04-21 21:34:54,353] INFO: [P2P MESSAGE] an09 -> an08: chao clm
+[2025-04-21 21:35:00,564] INFO: Sending message: owif m ngon do thang l
+[2025-04-21 21:35:00,766] INFO: Sent P2P chat to 10.0.156.176:8014 – {"type": "chat", "sender": "an08", "message": "owif m ngon do thang l", "channel": "neww1", "owner": "an08"}
+[2025-04-21 21:35:00,766] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 21:35:04,280] INFO: Sending message: di me m
+[2025-04-21 21:35:04,457] INFO: Sent P2P chat to 10.0.156.176:8014 – {"type": "chat", "sender": "an08", "message": "di me m", "channel": "neww1", "owner": "an08"}
+[2025-04-21 21:35:04,458] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 21:35:07,828] INFO: Sending message: live
+[2025-04-21 21:35:08,037] INFO: Sent P2P chat to 10.0.156.176:8014 – {"type": "chat", "sender": "an08", "message": "live", "channel": "neww1", "owner": "an08"}
+[2025-04-21 21:35:08,037] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 21:35:13,202] INFO: Starting livestream.
+[2025-04-21 21:35:13,387] INFO: Peer list retrieved:
+[2025-04-21 21:35:13,388] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:13,388] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:13,388] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:13,516] INFO: Peer list retrieved:
+[2025-04-21 21:35:13,517] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:13,517] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:13,518] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:13,625] INFO: Peer list retrieved:
+[2025-04-21 21:35:13,626] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:13,626] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:13,627] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:13,731] INFO: Peer list retrieved:
+[2025-04-21 21:35:13,732] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:13,732] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:13,733] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:13,838] INFO: Peer list retrieved:
+[2025-04-21 21:35:13,839] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:13,839] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:13,840] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:13,945] INFO: Peer list retrieved:
+[2025-04-21 21:35:13,945] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:13,946] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:13,946] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:14,051] INFO: Peer list retrieved:
+[2025-04-21 21:35:14,051] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:14,052] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:14,053] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:14,158] INFO: Peer list retrieved:
+[2025-04-21 21:35:14,158] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:14,160] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:14,160] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:14,264] INFO: Peer list retrieved:
+[2025-04-21 21:35:14,264] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:14,265] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:14,265] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:14,369] INFO: Peer list retrieved:
+[2025-04-21 21:35:14,369] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:14,370] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:14,370] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:14,474] INFO: Peer list retrieved:
+[2025-04-21 21:35:14,475] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:14,475] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:14,475] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:14,584] INFO: Peer list retrieved:
+[2025-04-21 21:35:14,584] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:14,585] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:14,585] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:14,688] INFO: Peer list retrieved:
+[2025-04-21 21:35:14,689] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:14,689] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:14,690] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:14,793] INFO: Peer list retrieved:
+[2025-04-21 21:35:14,793] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:14,794] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:14,794] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:14,896] INFO: Peer list retrieved:
+[2025-04-21 21:35:14,896] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:14,896] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:14,896] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:15,000] INFO: Peer list retrieved:
+[2025-04-21 21:35:15,000] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:15,000] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:15,001] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:15,104] INFO: Peer list retrieved:
+[2025-04-21 21:35:15,121] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:15,128] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:15,128] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:15,232] INFO: Peer list retrieved:
+[2025-04-21 21:35:15,237] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:15,243] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:15,246] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:15,349] INFO: Peer list retrieved:
+[2025-04-21 21:35:15,350] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:15,350] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:15,351] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:15,454] INFO: Peer list retrieved:
+[2025-04-21 21:35:15,455] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:15,455] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:15,456] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:15,560] INFO: Peer list retrieved:
+[2025-04-21 21:35:15,560] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:15,560] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:15,561] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:15,664] INFO: Peer list retrieved:
+[2025-04-21 21:35:15,665] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:15,669] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:15,673] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:15,778] INFO: Peer list retrieved:
+[2025-04-21 21:35:15,779] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:15,780] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:15,781] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:15,885] INFO: Peer list retrieved:
+[2025-04-21 21:35:15,885] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:15,886] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:15,886] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:15,991] INFO: Peer list retrieved:
+[2025-04-21 21:35:15,992] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:15,992] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:15,994] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:16,100] INFO: Peer list retrieved:
+[2025-04-21 21:35:16,101] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:16,102] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:16,103] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:16,208] INFO: Peer list retrieved:
+[2025-04-21 21:35:16,212] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:16,215] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:16,216] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:16,323] INFO: Peer list retrieved:
+[2025-04-21 21:35:16,323] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:16,323] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:16,324] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:16,427] INFO: Peer list retrieved:
+[2025-04-21 21:35:16,435] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:16,435] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:16,436] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:16,541] INFO: Peer list retrieved:
+[2025-04-21 21:35:16,555] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:16,555] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:16,556] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:16,660] INFO: Peer list retrieved:
+[2025-04-21 21:35:16,661] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:16,661] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:16,662] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:16,766] INFO: Peer list retrieved:
+[2025-04-21 21:35:16,766] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:16,766] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:16,767] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:16,871] INFO: Peer list retrieved:
+[2025-04-21 21:35:16,872] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:16,872] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:16,874] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:16,978] INFO: Peer list retrieved:
+[2025-04-21 21:35:16,978] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:16,980] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:16,980] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:17,083] INFO: Peer list retrieved:
+[2025-04-21 21:35:17,084] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:17,084] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:17,084] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:17,188] INFO: Peer list retrieved:
+[2025-04-21 21:35:17,189] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:17,189] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:17,191] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:17,295] INFO: Peer list retrieved:
+[2025-04-21 21:35:17,295] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:17,296] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:17,297] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:17,401] INFO: Peer list retrieved:
+[2025-04-21 21:35:17,401] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:17,403] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:17,403] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:17,511] INFO: Peer list retrieved:
+[2025-04-21 21:35:17,512] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:17,513] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:17,515] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:17,636] INFO: Peer list retrieved:
+[2025-04-21 21:35:17,636] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:17,637] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:17,637] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:17,742] INFO: Peer list retrieved:
+[2025-04-21 21:35:17,743] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:17,743] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:17,744] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:17,848] INFO: Peer list retrieved:
+[2025-04-21 21:35:17,848] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:17,848] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:17,849] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:17,953] INFO: Peer list retrieved:
+[2025-04-21 21:35:17,956] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:17,957] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:17,958] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:18,071] INFO: Peer list retrieved:
+[2025-04-21 21:35:18,072] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:18,073] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:18,074] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:18,199] INFO: Peer list retrieved:
+[2025-04-21 21:35:18,202] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:18,202] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:18,203] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:18,320] INFO: Peer list retrieved:
+[2025-04-21 21:35:18,321] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:18,322] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:18,325] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:18,434] INFO: Peer list retrieved:
+[2025-04-21 21:35:18,435] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:18,435] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:18,436] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:18,541] INFO: Peer list retrieved:
+[2025-04-21 21:35:18,541] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:18,542] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:18,543] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:18,648] INFO: Peer list retrieved:
+[2025-04-21 21:35:18,649] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:18,649] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:18,650] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:18,755] INFO: Peer list retrieved:
+[2025-04-21 21:35:18,755] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:18,756] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:18,756] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:18,861] INFO: Peer list retrieved:
+[2025-04-21 21:35:18,862] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:18,862] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:18,863] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:18,967] INFO: Peer list retrieved:
+[2025-04-21 21:35:18,967] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:18,967] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:18,968] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:19,072] INFO: Peer list retrieved:
+[2025-04-21 21:35:19,072] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:19,073] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:19,073] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:19,178] INFO: Peer list retrieved:
+[2025-04-21 21:35:19,196] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:19,197] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:19,207] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:19,319] INFO: Peer list retrieved:
+[2025-04-21 21:35:19,320] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:19,321] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:19,322] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:19,426] INFO: Peer list retrieved:
+[2025-04-21 21:35:19,427] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:19,427] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:19,428] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:19,532] INFO: Peer list retrieved:
+[2025-04-21 21:35:19,534] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:19,534] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:19,535] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:19,638] INFO: Peer list retrieved:
+[2025-04-21 21:35:19,640] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:19,640] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:19,641] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:19,747] INFO: Peer list retrieved:
+[2025-04-21 21:35:19,750] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:19,752] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:19,753] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:19,856] INFO: Peer list retrieved:
+[2025-04-21 21:35:19,857] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:19,857] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:19,858] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:19,962] INFO: Peer list retrieved:
+[2025-04-21 21:35:19,963] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:19,963] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:19,964] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:20,068] INFO: Peer list retrieved:
+[2025-04-21 21:35:20,069] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:20,070] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:20,071] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:20,175] INFO: Peer list retrieved:
+[2025-04-21 21:35:20,176] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:20,176] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:20,177] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:20,281] INFO: Peer list retrieved:
+[2025-04-21 21:35:20,282] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:20,283] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:20,283] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:20,388] INFO: Peer list retrieved:
+[2025-04-21 21:35:20,388] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:20,389] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:20,390] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:20,495] INFO: Peer list retrieved:
+[2025-04-21 21:35:20,496] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:20,496] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:20,496] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:20,601] INFO: Peer list retrieved:
+[2025-04-21 21:35:20,604] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:20,604] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:20,605] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:20,709] INFO: Peer list retrieved:
+[2025-04-21 21:35:20,709] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:20,711] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:20,711] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:20,814] INFO: Peer list retrieved:
+[2025-04-21 21:35:20,815] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:20,815] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:20,816] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:20,920] INFO: Peer list retrieved:
+[2025-04-21 21:35:20,920] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:20,921] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:20,921] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:21,025] INFO: Peer list retrieved:
+[2025-04-21 21:35:21,026] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:21,026] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:21,027] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:21,131] INFO: Peer list retrieved:
+[2025-04-21 21:35:21,131] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:21,132] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:21,132] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:21,236] INFO: Peer list retrieved:
+[2025-04-21 21:35:21,238] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:21,238] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:21,239] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:21,343] INFO: Peer list retrieved:
+[2025-04-21 21:35:21,345] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:21,345] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:21,346] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:21,450] INFO: Peer list retrieved:
+[2025-04-21 21:35:21,451] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:21,451] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:21,452] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:21,556] INFO: Peer list retrieved:
+[2025-04-21 21:35:21,557] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:21,557] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:21,559] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:21,662] INFO: Peer list retrieved:
+[2025-04-21 21:35:21,662] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:21,662] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:21,664] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:21,767] INFO: Peer list retrieved:
+[2025-04-21 21:35:21,768] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:21,768] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:21,768] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:21,873] INFO: Peer list retrieved:
+[2025-04-21 21:35:21,874] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:21,874] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:21,874] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:21,980] INFO: Peer list retrieved:
+[2025-04-21 21:35:21,981] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:21,981] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:21,982] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:22,086] INFO: Peer list retrieved:
+[2025-04-21 21:35:22,087] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:22,088] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:22,089] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:22,194] INFO: Peer list retrieved:
+[2025-04-21 21:35:22,195] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:22,196] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:22,197] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:22,300] INFO: Peer list retrieved:
+[2025-04-21 21:35:22,302] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:22,303] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:22,304] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:22,408] INFO: Peer list retrieved:
+[2025-04-21 21:35:22,409] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:22,410] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:22,412] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:22,522] INFO: Peer list retrieved:
+[2025-04-21 21:35:22,522] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:22,523] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:22,524] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:22,629] INFO: Peer list retrieved:
+[2025-04-21 21:35:22,630] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:22,630] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:22,632] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:22,735] INFO: Peer list retrieved:
+[2025-04-21 21:35:22,735] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:22,738] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:22,738] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:22,842] INFO: Peer list retrieved:
+[2025-04-21 21:35:22,843] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:22,843] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:22,844] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:22,948] INFO: Peer list retrieved:
+[2025-04-21 21:35:22,948] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:22,949] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:22,949] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:23,055] INFO: Peer list retrieved:
+[2025-04-21 21:35:23,056] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:23,057] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:23,058] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:23,163] INFO: Peer list retrieved:
+[2025-04-21 21:35:23,165] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:23,167] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:23,167] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:23,271] INFO: Peer list retrieved:
+[2025-04-21 21:35:23,271] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:23,272] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:23,272] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:23,379] INFO: Peer list retrieved:
+[2025-04-21 21:35:23,380] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:23,380] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:23,381] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:23,491] INFO: Peer list retrieved:
+[2025-04-21 21:35:23,499] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:23,499] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:23,500] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:23,604] INFO: Peer list retrieved:
+[2025-04-21 21:35:23,605] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:23,608] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:23,610] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:23,719] INFO: Peer list retrieved:
+[2025-04-21 21:35:23,722] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:23,722] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:23,723] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:23,828] INFO: Peer list retrieved:
+[2025-04-21 21:35:23,828] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:23,829] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:23,830] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:23,935] INFO: Peer list retrieved:
+[2025-04-21 21:35:23,936] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:23,936] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:23,937] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:24,059] INFO: Peer list retrieved:
+[2025-04-21 21:35:24,059] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:24,060] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:24,060] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:24,168] INFO: Peer list retrieved:
+[2025-04-21 21:35:24,169] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:24,169] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:24,170] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:24,275] INFO: Peer list retrieved:
+[2025-04-21 21:35:24,276] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:24,276] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:24,277] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:24,381] INFO: Peer list retrieved:
+[2025-04-21 21:35:24,381] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:24,382] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:24,383] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:24,487] INFO: Peer list retrieved:
+[2025-04-21 21:35:24,488] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:24,488] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:24,488] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:24,593] INFO: Peer list retrieved:
+[2025-04-21 21:35:24,594] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:24,595] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:24,595] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:24,699] INFO: Peer list retrieved:
+[2025-04-21 21:35:24,708] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:24,709] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:24,711] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:24,821] INFO: Peer list retrieved:
+[2025-04-21 21:35:24,822] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:24,822] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:24,823] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:24,928] INFO: Peer list retrieved:
+[2025-04-21 21:35:24,928] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:24,928] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:24,930] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:25,035] INFO: Peer list retrieved:
+[2025-04-21 21:35:25,038] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:25,038] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:25,038] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:25,142] INFO: Peer list retrieved:
+[2025-04-21 21:35:25,143] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:25,144] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:25,145] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:25,248] INFO: Peer list retrieved:
+[2025-04-21 21:35:25,287] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:25,288] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:25,288] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:25,393] INFO: Peer list retrieved:
+[2025-04-21 21:35:25,393] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:25,394] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:25,395] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:25,499] INFO: Peer list retrieved:
+[2025-04-21 21:35:25,503] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:25,504] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:25,505] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:25,611] INFO: Peer list retrieved:
+[2025-04-21 21:35:25,612] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:25,615] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:25,616] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:25,742] INFO: Peer list retrieved:
+[2025-04-21 21:35:25,742] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:25,742] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:25,743] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:25,847] INFO: Peer list retrieved:
+[2025-04-21 21:35:25,848] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:25,849] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:25,849] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:25,953] INFO: Peer list retrieved:
+[2025-04-21 21:35:25,955] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:25,955] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:25,956] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:26,061] INFO: Peer list retrieved:
+[2025-04-21 21:35:26,061] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:26,062] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:26,066] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:26,172] INFO: Peer list retrieved:
+[2025-04-21 21:35:26,174] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:26,174] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:26,175] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:26,278] INFO: Peer list retrieved:
+[2025-04-21 21:35:26,281] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:26,281] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:26,282] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:26,419] INFO: Peer list retrieved:
+[2025-04-21 21:35:26,421] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:26,421] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:26,422] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:26,527] INFO: Peer list retrieved:
+[2025-04-21 21:35:26,534] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:26,534] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:26,535] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:26,640] INFO: Peer list retrieved:
+[2025-04-21 21:35:26,642] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:26,645] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:26,646] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:26,751] INFO: Peer list retrieved:
+[2025-04-21 21:35:26,751] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:26,752] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:26,753] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:26,856] INFO: Peer list retrieved:
+[2025-04-21 21:35:26,857] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:26,857] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:26,857] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:26,960] INFO: Peer list retrieved:
+[2025-04-21 21:35:26,960] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:26,961] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:26,962] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:27,066] INFO: Peer list retrieved:
+[2025-04-21 21:35:27,066] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:27,066] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:27,066] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:27,168] INFO: Peer list retrieved:
+[2025-04-21 21:35:27,168] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:27,168] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:27,169] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:27,271] INFO: Peer list retrieved:
+[2025-04-21 21:35:27,271] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:27,271] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:27,271] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:27,376] INFO: Peer list retrieved:
+[2025-04-21 21:35:27,377] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:27,377] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:27,378] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:27,482] INFO: Peer list retrieved:
+[2025-04-21 21:35:27,482] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:27,483] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:27,483] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:27,587] INFO: Peer list retrieved:
+[2025-04-21 21:35:27,588] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:27,590] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:27,591] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:27,695] INFO: Peer list retrieved:
+[2025-04-21 21:35:27,696] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:27,696] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:27,697] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:27,801] INFO: Peer list retrieved:
+[2025-04-21 21:35:27,801] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:27,803] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:27,815] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:27,920] INFO: Peer list retrieved:
+[2025-04-21 21:35:27,921] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:27,921] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:27,922] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:28,163] INFO: Peer list retrieved:
+[2025-04-21 21:35:28,165] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:28,166] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:28,167] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:28,270] INFO: Peer list retrieved:
+[2025-04-21 21:35:28,272] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:28,272] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:28,273] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:28,377] INFO: Peer list retrieved:
+[2025-04-21 21:35:28,378] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:28,378] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:28,380] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:28,484] INFO: Peer list retrieved:
+[2025-04-21 21:35:28,484] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:28,485] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:28,485] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:28,588] INFO: Peer list retrieved:
+[2025-04-21 21:35:28,590] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:28,591] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:28,591] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:28,696] INFO: Peer list retrieved:
+[2025-04-21 21:35:28,697] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:28,698] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:28,698] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:28,802] INFO: Peer list retrieved:
+[2025-04-21 21:35:28,803] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:28,803] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:28,804] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:28,908] INFO: Peer list retrieved:
+[2025-04-21 21:35:28,909] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:28,909] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:28,909] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:29,014] INFO: Peer list retrieved:
+[2025-04-21 21:35:29,015] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:29,015] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:29,016] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:29,121] INFO: Peer list retrieved:
+[2025-04-21 21:35:29,121] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:29,122] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:29,122] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:29,226] INFO: Peer list retrieved:
+[2025-04-21 21:35:29,226] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:29,227] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:29,228] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:29,330] INFO: Peer list retrieved:
+[2025-04-21 21:35:29,330] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:29,332] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:29,332] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:29,438] INFO: Peer list retrieved:
+[2025-04-21 21:35:29,441] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:29,443] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:29,473] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:29,581] INFO: Peer list retrieved:
+[2025-04-21 21:35:29,582] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:29,582] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:29,583] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:29,686] INFO: Peer list retrieved:
+[2025-04-21 21:35:29,692] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:29,694] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:29,695] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:29,818] INFO: Peer list retrieved:
+[2025-04-21 21:35:29,820] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:29,826] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:29,833] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:29,937] INFO: Peer list retrieved:
+[2025-04-21 21:35:29,939] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:29,939] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:29,940] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:30,055] INFO: Peer list retrieved:
+[2025-04-21 21:35:30,055] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:30,056] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:30,056] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:30,160] INFO: Peer list retrieved:
+[2025-04-21 21:35:30,161] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:30,161] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:30,162] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:30,267] INFO: Peer list retrieved:
+[2025-04-21 21:35:30,268] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:30,268] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:30,269] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:30,373] INFO: Peer list retrieved:
+[2025-04-21 21:35:30,375] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:30,376] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:30,377] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:30,482] INFO: Peer list retrieved:
+[2025-04-21 21:35:30,483] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:30,483] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:30,484] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:30,588] INFO: Peer list retrieved:
+[2025-04-21 21:35:30,589] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:30,589] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:30,590] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:30,695] INFO: Peer list retrieved:
+[2025-04-21 21:35:30,695] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:30,695] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:30,696] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:30,800] INFO: Peer list retrieved:
+[2025-04-21 21:35:30,801] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:30,801] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:30,802] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:30,907] INFO: Peer list retrieved:
+[2025-04-21 21:35:30,908] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:30,908] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:30,910] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:31,015] INFO: Peer list retrieved:
+[2025-04-21 21:35:31,017] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:31,032] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:31,034] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:31,138] INFO: Peer list retrieved:
+[2025-04-21 21:35:31,172] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:31,172] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:31,172] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:31,277] INFO: Peer list retrieved:
+[2025-04-21 21:35:31,279] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:31,280] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:31,280] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:31,385] INFO: Peer list retrieved:
+[2025-04-21 21:35:31,386] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:31,387] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:31,389] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:31,493] INFO: Peer list retrieved:
+[2025-04-21 21:35:31,493] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:31,494] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:31,495] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:31,599] INFO: Peer list retrieved:
+[2025-04-21 21:35:31,600] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:31,601] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:31,602] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:31,708] INFO: Peer list retrieved:
+[2025-04-21 21:35:31,709] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:31,709] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:31,710] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:31,820] INFO: Peer list retrieved:
+[2025-04-21 21:35:31,821] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:31,826] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:31,840] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:31,947] INFO: Peer list retrieved:
+[2025-04-21 21:35:31,950] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:31,951] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:31,952] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:32,055] INFO: Peer list retrieved:
+[2025-04-21 21:35:32,058] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:32,059] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:32,059] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:32,163] INFO: Peer list retrieved:
+[2025-04-21 21:35:32,166] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:32,167] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:32,168] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:32,273] INFO: Peer list retrieved:
+[2025-04-21 21:35:32,274] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:32,275] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:32,276] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:32,381] INFO: Peer list retrieved:
+[2025-04-21 21:35:32,381] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:32,382] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:32,383] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:32,486] INFO: Peer list retrieved:
+[2025-04-21 21:35:32,486] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:32,486] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:32,487] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:32,591] INFO: Peer list retrieved:
+[2025-04-21 21:35:32,591] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:32,592] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:32,593] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:32,698] INFO: Peer list retrieved:
+[2025-04-21 21:35:32,698] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:32,698] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:32,699] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:32,803] INFO: Peer list retrieved:
+[2025-04-21 21:35:32,804] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:32,804] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:32,805] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:32,910] INFO: Peer list retrieved:
+[2025-04-21 21:35:32,910] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:32,911] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:32,911] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:33,015] INFO: Peer list retrieved:
+[2025-04-21 21:35:33,016] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:33,016] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:33,017] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:33,120] INFO: Peer list retrieved:
+[2025-04-21 21:35:33,121] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:33,121] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:33,122] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:33,227] INFO: Peer list retrieved:
+[2025-04-21 21:35:33,227] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:33,228] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:33,228] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:33,333] INFO: Peer list retrieved:
+[2025-04-21 21:35:33,333] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:33,334] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:33,337] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:33,442] INFO: Peer list retrieved:
+[2025-04-21 21:35:33,443] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:33,443] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:33,444] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:33,550] INFO: Peer list retrieved:
+[2025-04-21 21:35:33,552] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:33,552] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:33,553] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:33,658] INFO: Peer list retrieved:
+[2025-04-21 21:35:33,658] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:33,660] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:33,662] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:33,766] INFO: Peer list retrieved:
+[2025-04-21 21:35:33,767] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:33,767] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:33,767] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:33,876] INFO: Peer list retrieved:
+[2025-04-21 21:35:33,878] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:33,880] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:33,881] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:33,988] INFO: Peer list retrieved:
+[2025-04-21 21:35:33,988] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:33,989] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:33,989] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:34,093] INFO: Peer list retrieved:
+[2025-04-21 21:35:34,095] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:34,098] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:34,100] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:34,209] INFO: Peer list retrieved:
+[2025-04-21 21:35:34,213] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:34,213] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:34,214] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:34,317] INFO: Peer list retrieved:
+[2025-04-21 21:35:34,319] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:34,319] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:34,320] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:34,423] INFO: Peer list retrieved:
+[2025-04-21 21:35:34,423] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:34,424] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:34,424] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:34,527] INFO: Peer list retrieved:
+[2025-04-21 21:35:34,530] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:34,532] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:34,534] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:34,638] INFO: Peer list retrieved:
+[2025-04-21 21:35:34,640] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:34,640] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:34,641] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:34,745] INFO: Peer list retrieved:
+[2025-04-21 21:35:34,746] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:34,746] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:34,747] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:34,851] INFO: Peer list retrieved:
+[2025-04-21 21:35:34,851] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:34,852] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:34,852] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:34,957] INFO: Peer list retrieved:
+[2025-04-21 21:35:34,958] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:34,958] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:34,959] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:35,065] INFO: Peer list retrieved:
+[2025-04-21 21:35:35,066] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:35,067] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:35,068] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:35,117] INFO: Stopping livestream.
+[2025-04-21 21:35:35,715] INFO: Livestream stopped.
+[2025-04-21 21:35:42,019] INFO: Starting livestream.
+[2025-04-21 21:35:42,148] INFO: Peer list retrieved:
+[2025-04-21 21:35:42,149] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:42,149] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:42,150] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:42,266] INFO: Peer list retrieved:
+[2025-04-21 21:35:42,269] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:42,270] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:42,271] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:42,393] INFO: Peer list retrieved:
+[2025-04-21 21:35:42,394] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:42,395] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:42,396] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:42,501] INFO: Peer list retrieved:
+[2025-04-21 21:35:42,503] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:42,503] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:42,504] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:42,608] INFO: Peer list retrieved:
+[2025-04-21 21:35:42,608] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:42,609] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:42,611] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:42,716] INFO: Peer list retrieved:
+[2025-04-21 21:35:42,717] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:42,718] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:42,719] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:42,822] INFO: Peer list retrieved:
+[2025-04-21 21:35:42,823] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:42,824] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:42,825] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:42,929] INFO: Peer list retrieved:
+[2025-04-21 21:35:42,929] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:42,930] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:42,931] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:43,035] INFO: Peer list retrieved:
+[2025-04-21 21:35:43,052] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:43,053] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:43,053] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:43,171] INFO: Peer list retrieved:
+[2025-04-21 21:35:43,173] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:43,174] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:43,175] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:43,278] INFO: Peer list retrieved:
+[2025-04-21 21:35:43,279] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:43,279] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:43,281] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:43,384] INFO: Peer list retrieved:
+[2025-04-21 21:35:43,384] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:43,384] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:43,385] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:43,490] INFO: Peer list retrieved:
+[2025-04-21 21:35:43,491] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:43,492] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:43,493] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:43,597] INFO: Peer list retrieved:
+[2025-04-21 21:35:43,597] INFO:  - an08 (10.0.156.176:8811)
+[2025-04-21 21:35:43,598] INFO:  - an09 (10.0.156.176:8014)
+[2025-04-21 21:35:43,598] INFO: Sent UDP livestream message to 10.0.156.176:8015
+[2025-04-21 21:35:43,681] INFO: Stopping livestream.
+[2025-04-21 21:35:44,253] INFO: Livestream stopped.
+[2025-04-21 21:35:47,284] INFO: Sending message: oke live oonr
+[2025-04-21 21:35:47,468] INFO: Sent P2P chat to 10.0.156.176:8014 – {"type": "chat", "sender": "an08", "message": "oke live oonr", "channel": "neww1", "owner": "an08"}
+[2025-04-21 21:35:47,469] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 21:35:53,152] INFO: Sending message: chi con cai UI thoi
+[2025-04-21 21:35:53,443] INFO: Sent P2P chat to 10.0.156.176:8014 – {"type": "chat", "sender": "an08", "message": "chi con cai UI thoi", "channel": "neww1", "owner": "an08"}
+[2025-04-21 21:35:53,443] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 21:36:01,309] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 21:36:01,358] INFO: [SYNC DONE] Synced file: sync_a1_an08.txt
+[2025-04-21 21:36:01,468] INFO: [SYNC DONE] Synced file: sync_neww1_an08.txt
+[2025-04-21 21:36:02,904] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:8811) left
+[2025-04-21 21:41:35,278] INFO: Logged in as: an08
+[2025-04-21 21:41:36,005] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 21:41:36,047] INFO: [SYNC LOGIN] Saved 0 new messages for a1
+[2025-04-21 21:41:36,091] INFO: [SYNC LOGIN] Saved 7 new messages for neww1
+[2025-04-21 21:41:36,091] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 21:41:36,183] INFO: Tracker response: Peer an08 (10.0.156.176:7150) added
+[2025-04-21 21:41:36,184] INFO: P2P SERVER listening on 10.0.156.176:7150
+[2025-04-21 21:41:36,184] INFO: UDP LISTENER listening on 10.0.156.176:7151 for livestream.
+[2025-04-21 21:41:37,613] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:41:37,615] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 21:41:40,241] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:41:41,946] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:41:47,537] INFO: Sending message: lô
+[2025-04-21 21:41:47,705] INFO: Message from an08 sent in channel '345'
+[2025-04-21 21:41:52,093] INFO: Sending message: thấy t không
+[2025-04-21 21:41:52,283] INFO: Message from an08 sent in channel '345'
+[2025-04-21 21:41:54,632] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:41:54,832] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:41:57,826] INFO: Sending message: đồng bộ chưa
+[2025-04-21 21:41:58,023] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 21:42:02,442] INFO: Sending message: lỏ lỏ
+[2025-04-21 21:42:02,607] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 21:42:05,823] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 21:42:05,867] INFO: [SYNC DONE] Synced file: sync_a1_an08.txt
+[2025-04-21 21:42:05,914] INFO: [SYNC DONE] Synced file: sync_neww1_an08.txt
+[2025-04-21 21:42:06,633] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:7150) left
+[2025-04-21 21:42:12,314] INFO: Logged in as: an08
+[2025-04-21 21:42:13,374] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 21:42:13,416] INFO: [SYNC LOGIN] Saved 0 new messages for a1
+[2025-04-21 21:42:13,460] INFO: [SYNC LOGIN] Saved 2 new messages for neww1
+[2025-04-21 21:42:13,460] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 21:42:13,545] INFO: Tracker response: Peer an08 (10.0.156.176:8409) added
+[2025-04-21 21:42:13,546] INFO: P2P SERVER listening on 10.0.156.176:8409
+[2025-04-21 21:42:13,546] INFO: UDP LISTENER listening on 10.0.156.176:8410 for livestream.
+[2025-04-21 21:42:15,008] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:42:15,008] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 21:42:24,338] INFO: Sending message: ủa đù lúc nhắn thì không hiện
+[2025-04-21 21:42:24,636] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 21:42:29,407] INFO: Sending message: nhưng vẫn ghi lên sync nha'
+[2025-04-21 21:42:29,598] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 21:42:31,251] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 21:42:31,295] INFO: [SYNC DONE] Synced file: sync_a1_an08.txt
+[2025-04-21 21:42:31,338] INFO: [SYNC DONE] Synced file: sync_neww1_an08.txt
+[2025-04-21 21:42:31,883] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:8409) left
+[2025-04-21 21:42:33,187] INFO: Logged in as: an08
+[2025-04-21 21:42:34,287] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 21:42:34,329] INFO: [SYNC LOGIN] Saved 0 new messages for a1
+[2025-04-21 21:42:34,375] INFO: [SYNC LOGIN] Saved 2 new messages for neww1
+[2025-04-21 21:42:34,376] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 21:42:34,464] INFO: Tracker response: Peer an08 (10.0.156.176:7302) added
+[2025-04-21 21:42:34,465] INFO: P2P SERVER listening on 10.0.156.176:7302
+[2025-04-21 21:42:34,466] INFO: UDP LISTENER listening on 10.0.156.176:7303 for livestream.
+[2025-04-21 21:42:35,961] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:42:35,962] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 21:43:17,536] INFO: [P2P MESSAGE] an09 -> an08: alo
+[2025-04-21 21:43:22,202] INFO: [P2P MESSAGE] an09 -> an08: nhge
+[2025-04-21 21:43:24,954] INFO: Sending message: nghe
+[2025-04-21 21:43:25,117] INFO: Sent P2P chat to 10.0.156.176:8120 – {"type": "chat", "sender": "an08", "message": "nghe", "channel": "neww1", "owner": "an08"}
+[2025-04-21 21:43:25,118] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 21:44:01,260] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 21:44:01,307] INFO: [SYNC DONE] Synced file: sync_a1_an08.txt
+[2025-04-21 21:44:01,354] INFO: [SYNC DONE] Synced file: sync_neww1_an08.txt
+[2025-04-21 21:44:02,651] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:7302) left
+[2025-04-21 21:44:07,700] INFO: Logged in as: an08
+[2025-04-21 21:44:08,528] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 21:44:08,575] INFO: [SYNC LOGIN] Saved 0 new messages for a1
+[2025-04-21 21:44:08,622] INFO: [SYNC LOGIN] Saved 1 new messages for neww1
+[2025-04-21 21:44:08,623] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 21:44:08,718] INFO: Tracker response: Peer an08 (10.0.156.176:8721) added
+[2025-04-21 21:44:08,722] INFO: P2P SERVER listening on 10.0.156.176:8721
+[2025-04-21 21:44:08,724] INFO: UDP LISTENER listening on 10.0.156.176:8722 for livestream.
+[2025-04-21 21:44:10,599] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 21:44:10,601] INFO: [SYNC] SyncManager started for channel 'kênhnew'
+[2025-04-21 21:44:12,222] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:44:17,942] INFO: Sending message: mệt dữ ní
+[2025-04-21 21:44:18,123] INFO: Sent P2P chat to 10.0.156.176:8120 – {"type": "chat", "sender": "an08", "message": "m\u1ec7t d\u1eef n\u00ed", "channel": "neww1", "owner": "an08"}
+[2025-04-21 21:44:18,125] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 21:44:20,649] INFO: Sending message: k thấy
+[2025-04-21 21:44:20,843] INFO: Sent P2P chat to 10.0.156.176:8120 – {"type": "chat", "sender": "an08", "message": "k th\u1ea5y", "channel": "neww1", "owner": "an08"}
+[2025-04-21 21:44:20,844] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 21:44:23,974] INFO: [P2P MESSAGE] an09 -> an08: thấy
+[2025-04-21 21:44:26,405] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 21:44:26,450] INFO: [SYNC DONE] Synced file: sync_a1_an08.txt
+[2025-04-21 21:44:26,547] INFO: [SYNC DONE] Synced file: sync_neww1_an08.txt
+[2025-04-21 21:44:27,639] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:8721) left
+[2025-04-21 21:44:34,096] ERROR: get_hosted_channels_from_server error: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-21 21:44:34,104] ERROR: get_hosted_channels_from_server error: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-21 21:44:34,104] ERROR: get_hosted_channels_from_server error: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-21 21:44:34,106] ERROR: get_hosted_channels_from_server error: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-21 21:49:07,147] INFO: Logged in as: an08
+[2025-04-21 21:49:07,769] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 21:49:07,812] INFO: [SYNC LOGIN] Saved 0 new messages for a1
+[2025-04-21 21:49:07,858] INFO: [SYNC LOGIN] Saved 3 new messages for neww1
+[2025-04-21 21:49:07,859] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 21:49:07,945] INFO: Tracker response: Peer an08 (10.0.156.176:7927) added
+[2025-04-21 21:49:07,948] INFO: UDP LISTENER listening on 10.0.156.176:7928 for livestream.
+[2025-04-21 21:49:07,948] INFO: P2P SERVER listening on 10.0.156.176:7927
+[2025-04-21 21:49:09,436] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:49:09,437] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 21:49:12,848] INFO: Sending message: lô
+[2025-04-21 21:49:13,031] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 21:49:41,481] INFO: Logged in as: an08
+[2025-04-21 21:49:43,881] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 21:49:43,922] INFO: [SYNC LOGIN] Saved 0 new messages for a1
+[2025-04-21 21:49:44,054] INFO: [SYNC LOGIN] Saved 1 new messages for neww1
+[2025-04-21 21:49:44,055] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 21:49:44,150] INFO: Tracker response: Peer an08 (10.0.156.176:7998) added
+[2025-04-21 21:49:44,151] INFO: P2P SERVER listening on 10.0.156.176:7998
+[2025-04-21 21:49:44,153] INFO: UDP LISTENER listening on 10.0.156.176:7999 for livestream.
+[2025-04-21 21:49:45,698] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-21 21:49:45,700] INFO: [SYNC] SyncManager started for channel 'kênhnew'
+[2025-04-21 21:49:46,936] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:49:48,913] INFO: Sending message: lô
+[2025-04-21 21:49:49,095] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 21:49:55,496] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 21:49:55,537] INFO: [SYNC DONE] Synced file: sync_a1_an08.txt
+[2025-04-21 21:49:55,581] INFO: [SYNC DONE] Synced file: sync_neww1_an08.txt
+[2025-04-21 21:49:56,381] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:7998) left
+[2025-04-21 21:51:53,455] INFO: Logged in as: an08
+[2025-04-21 21:51:54,015] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 21:51:54,061] INFO: [SYNC LOGIN] Saved 0 new messages for a1
+[2025-04-21 21:51:54,105] INFO: [SYNC LOGIN] Saved 1 new messages for neww1
+[2025-04-21 21:51:54,107] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 21:51:54,197] INFO: Tracker response: Peer an08 (10.0.156.176:6739) added
+[2025-04-21 21:51:54,198] INFO: P2P SERVER listening on 10.0.156.176:6739
+[2025-04-21 21:51:54,199] INFO: UDP LISTENER listening on 10.0.156.176:6740 for livestream.
+[2025-04-21 21:51:55,341] INFO: [SYNC LOAD] Save message to file: local_sync\sync_neww1_an08.txt
+[2025-04-21 21:51:55,342] INFO: [SYNC] SyncManager started for channel 'neww1'
+[2025-04-21 21:51:58,257] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 21:52:03,401] INFO: Message from an08 sent in channel 'neww1'
+[2025-04-21 21:52:43,266] INFO: [P2P MESSAGE] an09 -> an08: sao
+[2025-04-21 21:52:46,153] INFO: [P2P MESSAGE] an09 -> an08: âlalala
+[2025-04-21 21:53:43,331] INFO: Channel '4anhem' created by an08 (is_private=False)
+[2025-04-21 21:53:44,938] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:45,796] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:46,605] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:47,366] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:48,022] INFO: Message from an08 sent in channel '4anhem'
+[2025-04-21 21:53:48,159] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:48,909] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:49,659] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:50,469] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:51,219] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:51,973] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:52,729] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:53,478] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:54,233] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:54,985] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:55,739] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:56,538] INFO: Sent P2P chat to 10.0.156.176:6907 – {"type": "chat", "sender": "an08", "message": "ch\u00e0o", "channel": "4anhem", "owner": "an08"}
+[2025-04-21 21:53:56,540] INFO: Message from an08 sent in channel '4anhem'
+[2025-04-21 21:53:56,759] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:57,511] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:58,264] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:59,032] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:53:59,826] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:54:00,582] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:54:01,342] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:54:02,143] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:54:02,950] WARNING: [SYNC LOAD] File not found: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:54:03,000] INFO: [INFO] Tạo file mới: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:54:03,002] INFO: [P2P MESSAGE] an09 -> an08: hế lô
+[2025-04-21 21:54:07,237] INFO: [P2P MESSAGE] an09 -> an08: ông dạo này sao
+[2025-04-21 21:54:12,605] INFO: Sent P2P chat to 10.0.156.176:6907 – {"type": "chat", "sender": "an08", "message": "t kh\u1ecfe c\u00f2n m\u00e1 m", "channel": "4anhem", "owner": "an08"}
+[2025-04-21 21:54:12,606] INFO: Message from an08 sent in channel '4anhem'
+[2025-04-21 21:55:12,885] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 21:55:12,928] INFO: [SYNC DONE] Synced file: sync_a1_an08.txt
+[2025-04-21 21:55:12,975] INFO: [SYNC DONE] Synced file: sync_neww1_an08.txt
+[2025-04-21 21:55:13,084] INFO: [SYNC DONE] Synced file: sync_4anhem_an08.txt
+[2025-04-21 21:55:13,884] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:6739) left
+[2025-04-21 21:55:15,753] INFO: Logged in as: an08
+[2025-04-21 21:55:16,571] INFO: [SYNC LOGIN] Saved 0 new messages for kênhnew
+[2025-04-21 21:55:16,613] INFO: [SYNC LOGIN] Saved 0 new messages for a1
+[2025-04-21 21:55:16,697] INFO: [SYNC LOGIN] Saved 2 new messages for neww1
+[2025-04-21 21:55:16,743] INFO: [SYNC LOGIN] Saved 4 new messages for 4anhem
+[2025-04-21 21:55:16,743] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 21:55:16,828] INFO: Tracker response: Peer an08 (10.0.156.176:8054) added
+[2025-04-21 21:55:16,829] INFO: P2P SERVER listening on 10.0.156.176:8054
+[2025-04-21 21:55:16,830] INFO: UDP LISTENER listening on 10.0.156.176:8055 for livestream.
+[2025-04-21 21:55:19,299] INFO: [SYNC LOAD] Save message to file: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:55:19,300] INFO: [SYNC] SyncManager started for channel '4anhem'
+[2025-04-21 21:55:21,565] INFO: [SYNC LOAD] Save message to file: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:55:21,779] INFO: [SYNC LOAD] Save message to file: local_sync\sync_4anhem_an08.txt
+[2025-04-21 21:55:47,498] INFO: [SYNC DONE] Synced file: sync_kênhnew_an08.txt
+[2025-04-21 21:55:47,539] INFO: [SYNC DONE] Synced file: sync_a1_an08.txt
+[2025-04-21 21:55:47,584] INFO: [SYNC DONE] Synced file: sync_neww1_an08.txt
+[2025-04-21 21:55:47,624] INFO: [SYNC DONE] Synced file: sync_4anhem_an08.txt
+[2025-04-21 21:55:48,605] INFO: Tracker response on LEAVE: Peer an08 (10.0.156.176:8054) left

@@ -42,7 +42,7 @@ class AppManager:
     def open_main_app(self, username, session_info):
         logging.info("User '%s' logging in (authenticated mode).", username)
         # Khởi tạo USER ở chế độ headless để thực hiện các thao tác P2P.
-        tracker_ip   = "172.20.10.2"
+        tracker_ip   = "10.0.156.176"
         tracker_port = 5000
 
         self.user_peer = USER(tracker_ip, tracker_port,
@@ -54,7 +54,7 @@ class AppManager:
     
     def open_main_app_as_viewer(self, username, session_info):
         logging.info("User '%s' logging in (visitor mode).", username)
-        tracker_ip   = "172.20.10.2"
+        tracker_ip   = "10.0.156.176"
         tracker_port = 5000
 
         self.user_peer = USER(tracker_ip, tracker_port,

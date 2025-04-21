@@ -114,7 +114,7 @@ class LoginRegisterUI(QWidget):
     def __init__(self):
         super().__init__()
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_ip = '172.20.10.2'
+        server_ip = '10.0.156.176'
         server_port = 5000
         try:
             self.client_socket.connect((server_ip, server_port))

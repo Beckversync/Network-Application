@@ -29,18 +29,18 @@ class DiscordUI(QMainWindow):
 
         self.setWindowTitle("Discord Clone - Improved UI")
         self.setGeometry(100, 100, 1200, 700)
-        
+
         self.current_mode = None
         self.current_channel = None
         self.current_dm_user = None
         self.current_channel_info = None
         self.channels = {}
-        self.hosted_channels = {}      
-        self.dm_users = []      
-        self.last_message_count = 0  
-
+        self.hosted_channels = {}
+        self.dm_users = []
+        self.last_message_count = 0
         self.is_viewer = False
 
+        # Sync manager
         self.sync_manager = None
 
         self.initUI()
@@ -56,149 +56,158 @@ class DiscordUI(QMainWindow):
         self.setCentralWidget(central_widget)
         main_layout = QHBoxLayout(central_widget)
         main_layout.setContentsMargins(0, 0, 0, 0)
-        
+
+        # Sidebar
         self.sidebar_frame = QFrame()
         self.sidebar_frame.setStyleSheet("background-color: #2F3136;")
         self.sidebar_frame.setFixedWidth(200)
         sidebar_layout = QVBoxLayout(self.sidebar_frame)
         sidebar_layout.setContentsMargins(10, 10, 10, 10)
         sidebar_layout.setSpacing(8)
-        
-        title_label = QLabel("DISCORD V2.0")
-        title_label.setStyleSheet("color: white; font-size: 16px; font-weight: bold;")
-        title_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        sidebar_layout.addWidget(title_label)
-        
+
+        title = QLabel("DISCORD V2.0")
+        title.setStyleSheet("color: white; font-size: 16px; font-weight: bold;")
+        title.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        sidebar_layout.addWidget(title)
+
         self.add_channel_button = QPushButton("+ Create Channel")
         self.add_channel_button.setStyleSheet("background-color: #5865F2; color: white;")
         self.add_channel_button.clicked.connect(self.add_channel)
         sidebar_layout.addWidget(self.add_channel_button)
-        
-        tab_widget = QTabWidget()
-        tab_widget.setStyleSheet("QTabBar::tab { height: 30px; color: white; }")
-        
-        channel_tab = QWidget()
-        channel_tab_layout = QVBoxLayout(channel_tab)
+
+        tabs = QTabWidget()
+        tabs.setStyleSheet("QTabBar::tab { height: 30px; color: white; }")
+
+        # Channels
+        ch_tab = QWidget()
+        ch_layout = QVBoxLayout(ch_tab)
         self.channel_list = QListWidget()
         self.channel_list.setStyleSheet("background-color: #3F4147; color: white;")
         self.channel_list.itemClicked.connect(self.handle_channel_clicked)
-        channel_tab_layout.addWidget(self.channel_list)
-        tab_widget.addTab(channel_tab, "Channels")
+        ch_layout.addWidget(self.channel_list)
+        tabs.addTab(ch_tab, "Channels")
 
-        hosted_channel_tab = QWidget()
-        hosted_channel_layout = QVBoxLayout(hosted_channel_tab)
+        # Hosted
+        hosted_tab = QWidget()
+        hosted_layout = QVBoxLayout(hosted_tab)
         self.hosted_channel_list = QListWidget()
         self.hosted_channel_list.setStyleSheet("background-color: #3F4147; color: white;")
         self.hosted_channel_list.itemClicked.connect(self.handle_channel_clicked)
-        hosted_channel_layout.addWidget(self.hosted_channel_list)
-        tab_widget.addTab(hosted_channel_tab, "Hosted Channels")
-        
+        hosted_layout.addWidget(self.hosted_channel_list)
+        tabs.addTab(hosted_tab, "Hosted Channels")
+
+        # DM
         dm_tab = QWidget()
-        dm_tab_layout = QVBoxLayout(dm_tab)
+        dm_layout = QVBoxLayout(dm_tab)
         self.dm_list = QListWidget()
         self.dm_list.setStyleSheet("background-color: #3F4147; color: white;")
         self.dm_list.itemClicked.connect(self.handle_dm_clicked)
-        dm_tab_layout.addWidget(self.dm_list)
-        tab_widget.addTab(dm_tab, "Direct Msg")
-        
-        sidebar_layout.addWidget(tab_widget)
-        
+        dm_layout.addWidget(self.dm_list)
+        tabs.addTab(dm_tab, "Direct Msg")
+
+        sidebar_layout.addWidget(tabs)
+
         self.status_dropdown = QComboBox()
         self.status_dropdown.addItems(["Online", "Offline", "Invisible"])
         self.status_dropdown.currentTextChanged.connect(self.change_status)
         sidebar_layout.addWidget(self.status_dropdown)
-        
+
         main_layout.addWidget(self.sidebar_frame)
-        
+
+        # Center
         self.center_frame = QFrame()
         self.center_frame.setStyleSheet("background-color: #36393F;")
         center_layout = QVBoxLayout(self.center_frame)
         center_layout.setContentsMargins(10, 10, 10, 10)
         center_layout.setSpacing(8)
-        
+
         self.chat_title_label = QLabel("No channel/user selected")
         self.chat_title_label.setStyleSheet("color: white; font-size: 18px; font-weight: bold;")
         center_layout.addWidget(self.chat_title_label)
-        
+
         self.join_button = QPushButton("Join Channel")
         self.join_button.setStyleSheet("background-color: #7289DA; color: white;")
         self.join_button.clicked.connect(self.join_channel)
         center_layout.addWidget(self.join_button)
-        
+
         self.delete_channel_button = QPushButton("Delete Channel")
         self.delete_channel_button.setStyleSheet("background-color: #FF5555; color: white;")
         self.delete_channel_button.clicked.connect(self.delete_channel)
         self.delete_channel_button.setVisible(False)
         center_layout.addWidget(self.delete_channel_button)
-        
+
         self.join_button.setVisible(False)
-        
+
         self.chat_display = QTextEdit()
         self.chat_display.setReadOnly(True)
         self.chat_display.setStyleSheet("background-color: #40444B; color: white;")
         center_layout.addWidget(self.chat_display, 1)
-        
-        input_layout = QHBoxLayout()
+
+        inp_layout = QHBoxLayout()
         self.message_input = QLineEdit()
         self.message_input.setStyleSheet("background-color: #2F3136; color: white; padding: 8px;")
         self.message_input.returnPressed.connect(self.send_message)
         self.send_button = QPushButton("Send")
         self.send_button.setStyleSheet("background-color: #5865F2; color: white; padding: 8px;")
         self.send_button.clicked.connect(self.send_message)
-        input_layout.addWidget(self.message_input)
-        input_layout.addWidget(self.send_button)
-        center_layout.addLayout(input_layout)
-        
+        inp_layout.addWidget(self.message_input)
+        inp_layout.addWidget(self.send_button)
+        center_layout.addLayout(inp_layout)
+
         self.toggle_livestream_button = QPushButton("Start Livestream")
         self.toggle_livestream_button.setStyleSheet("background-color: orange; color: white; padding: 8px;")
         self.toggle_livestream_button.clicked.connect(self.toggle_livestream)
         center_layout.addWidget(self.toggle_livestream_button)
-        
+
         main_layout.addWidget(self.center_frame, 1)
-        
+
+        # Right
         self.right_frame = QFrame()
         self.right_frame.setStyleSheet("background-color: #2F3136;")
         self.right_frame.setFixedWidth(200)
         right_layout = QVBoxLayout(self.right_frame)
         right_layout.setContentsMargins(10, 10, 10, 10)
-        
-        members_label = QLabel("Members")
-        members_label.setStyleSheet("color: white; font-size: 14px; font-weight: bold;")
-        right_layout.addWidget(members_label)
-        
+
+        lbl_members = QLabel("Members")
+        lbl_members.setStyleSheet("color: white; font-size: 14px; font-weight: bold;")
+        right_layout.addWidget(lbl_members)
+
         self.member_list = QListWidget()
         self.member_list.setStyleSheet("background-color: #3F4147; color: white;")
         right_layout.addWidget(self.member_list)
-        
-        request_label = QLabel("Join Requests")
-        request_label.setStyleSheet("color: white; font-size: 14px; font-weight: bold;")
-        right_layout.addWidget(request_label)
-        
+
+        lbl_req = QLabel("Join Requests")
+        lbl_req.setStyleSheet("color: white; font-size: 14px; font-weight: bold;")
+        right_layout.addWidget(lbl_req)
+
         self.request_list = QListWidget()
         self.request_list.setStyleSheet("background-color: #3F4147; color: white;")
         right_layout.addWidget(self.request_list)
-        
+
         self.logout_button = QPushButton("Logout")
         self.logout_button.setStyleSheet("background-color: red; color: white;")
         self.logout_button.clicked.connect(self.logout)
         right_layout.addWidget(self.logout_button)
-        
+
         main_layout.addWidget(self.right_frame)
-        
-        self.load_dm_list()
+
 
     def send_message(self):
         message = self.message_input.text().strip()
         if not message:
             return
         self.message_input.clear()
-        #self.chat_display.append(message)
-        logging.info("Sending message: %s", message)
+        # Đảm bảo timestamp được định nghĩa trước khi dùng
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        # Gửi tin nhắn tùy theo chế độ
         if self.current_mode == "channel":
             self.send_message_p2p_api(message)
+            # Hiển thị ngay tin nhắn đã gửi
+            self.chat_display.append(f"[{timestamp}] {self.username}: {message}")
         elif self.current_mode == "dm":
             if self.user_peer:
                 self.user_peer.send_chat_message_via_tracker(f"[DM to {self.current_dm_user}] {message}")
+                self.chat_display.append(f"[{timestamp}] {self.username} -> {self.current_dm_user}: {message}")
             else:
                 self.chat_display.append("[ERROR] No user_peer for DM")
         else:
@@ -287,8 +296,8 @@ class DiscordUI(QMainWindow):
                 self.user_peer.livestream_channel = self.current_channel
         if self.channels.get(self.current_channel, {}).get("owner") == self.username:
             if not self.sync_manager:
-                # self.sync_manager = SyncManager(self.username, self.current_channel)
-                # self.sync_manager.start_periodic_sync(interval=30)
+                self.sync_manager = SyncManager(self.username, self.current_channel)
+                self.sync_manager.start_periodic_sync(interval=30)
                 logging.info("[SYNC] SyncManager started for channel '%s'", self.current_channel)
     
 
@@ -768,7 +777,7 @@ class DiscordUI(QMainWindow):
         session_id = self.session_info.get("session_id")
         try:
             client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            server_ip = '172.20.10.2'
+            server_ip = '10.0.156.176'
             server_port = 5000
             client_socket.connect((server_ip, server_port))
             if status == "Online":
@@ -794,7 +803,7 @@ class DiscordUI(QMainWindow):
         try:
             # Gửi yêu cầu logout đến server
             client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            server_ip = '172.20.10.2'
+            server_ip = '10.0.156.176'
             server_port = 5000
             client_socket.connect((server_ip, server_port))
             session_id = self.session_info.get("session_id")
