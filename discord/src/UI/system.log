@@ -40206,3 +40206,2165 @@
 [2025-04-20 21:07:49,049] INFO: P2P SERVER listening on 10.0.217.86:8782
 [2025-04-20 21:07:49,049] INFO: UDP LISTENER listening on 10.0.217.86:8783 for livestream.
 [2025-04-20 21:07:51,310] INFO: Status changed to Offline
+[2025-04-20 21:09:56,933] INFO: Logged in as: an08
+[2025-04-20 21:09:57,679] INFO: [SYNC LOGIN] Saved 0 new messages for Hello1
+[2025-04-20 21:09:57,722] INFO: [SYNC LOGIN] Saved 0 new messages for hello2
+[2025-04-20 21:09:57,762] INFO: [SYNC LOGIN] Saved 0 new messages for hello3
+[2025-04-20 21:09:57,762] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 21:09:57,855] INFO: Tracker response: Peer an08 (10.0.217.86:6194) added
+[2025-04-20 21:09:57,857] INFO: P2P SERVER listening on 10.0.217.86:6194
+[2025-04-20 21:09:57,858] INFO: UDP LISTENER listening on 10.0.217.86:6195 for livestream.
+[2025-04-20 21:10:15,722] INFO: Status changed to Offline
+[2025-04-20 21:11:14,671] INFO: Logged in as: an08
+[2025-04-20 21:11:15,594] INFO: [SYNC LOGIN] Saved 0 new messages for Hello1
+[2025-04-20 21:11:15,635] INFO: [SYNC LOGIN] Saved 0 new messages for hello2
+[2025-04-20 21:11:15,683] INFO: [SYNC LOGIN] Saved 0 new messages for hello3
+[2025-04-20 21:11:15,684] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 21:11:15,774] INFO: Tracker response: Peer an08 (10.0.217.86:8632) added
+[2025-04-20 21:11:15,775] INFO: P2P SERVER listening on 10.0.217.86:8632
+[2025-04-20 21:11:15,776] INFO: UDP LISTENER listening on 10.0.217.86:8633 for livestream.
+[2025-04-20 21:11:19,821] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello2_an08.txt
+[2025-04-20 21:11:19,822] INFO: [SYNC] SyncManager started for channel 'hello2'
+[2025-04-20 21:11:21,125] INFO: [SYNC LOAD] Save message to file: local_sync\sync_Hello1_an08.txt
+[2025-04-20 21:11:21,125] INFO: [SYNC] SyncManager started for channel 'Hello1'
+[2025-04-20 21:11:22,002] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello3_an08.txt
+[2025-04-20 21:11:22,002] INFO: [SYNC] SyncManager started for channel 'hello3'
+[2025-04-20 21:11:22,708] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello3_an08.txt
+[2025-04-20 21:11:22,709] INFO: [SYNC] SyncManager started for channel 'hello3'
+[2025-04-20 21:11:23,265] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello2_an08.txt
+[2025-04-20 21:11:23,266] INFO: [SYNC] SyncManager started for channel 'hello2'
+[2025-04-20 21:11:24,373] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello2_an08.txt
+[2025-04-20 21:11:24,373] INFO: [SYNC] SyncManager started for channel 'hello2'
+[2025-04-20 21:11:24,819] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello2_an08.txt
+[2025-04-20 21:11:24,820] INFO: [SYNC] SyncManager started for channel 'hello2'
+[2025-04-20 21:11:25,368] INFO: [SYNC LOAD] Save message to file: local_sync\sync_Hello1_an08.txt
+[2025-04-20 21:11:25,369] INFO: [SYNC] SyncManager started for channel 'Hello1'
+[2025-04-20 21:11:25,914] INFO: [SYNC LOAD] Save message to file: local_sync\sync_Hello1_an08.txt
+[2025-04-20 21:11:25,915] INFO: [SYNC] SyncManager started for channel 'Hello1'
+[2025-04-20 21:11:27,150] INFO: [SYNC LOAD] Save message to file: local_sync\sync_Hello1_an08.txt
+[2025-04-20 21:11:27,151] INFO: [SYNC] SyncManager started for channel 'Hello1'
+[2025-04-20 21:11:29,385] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello3_an08.txt
+[2025-04-20 21:11:29,386] INFO: [SYNC] SyncManager started for channel 'hello3'
+[2025-04-20 21:11:35,320] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello3_an08.txt
+[2025-04-20 21:11:35,321] INFO: [SYNC] SyncManager started for channel 'hello3'
+[2025-04-20 21:11:36,640] ERROR: Error processing line in sync_Hello1_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 21:11:36,640] INFO: [SYNC DONE] Synced file: sync_Hello1_an08.txt
+[2025-04-20 21:11:36,688] ERROR: Error processing line in sync_hello2_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 21:11:36,689] INFO: [SYNC DONE] Synced file: sync_hello2_an08.txt
+[2025-04-20 21:11:36,731] INFO: [SYNC DONE] Synced file: sync_hello3_an08.txt
+[2025-04-20 21:11:37,457] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:8632) left
+[2025-04-20 21:12:13,075] INFO: Logged in as: an08
+[2025-04-20 21:12:13,740] INFO: [SYNC LOGIN] Saved 0 new messages for Hello1
+[2025-04-20 21:12:13,782] INFO: [SYNC LOGIN] Saved 0 new messages for hello2
+[2025-04-20 21:12:13,822] INFO: [SYNC LOGIN] Saved 0 new messages for hello3
+[2025-04-20 21:12:13,822] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 21:12:13,910] INFO: Tracker response: Peer an08 (10.0.217.86:8946) added
+[2025-04-20 21:12:13,911] INFO: UDP LISTENER listening on 10.0.217.86:8947 for livestream.
+[2025-04-20 21:12:13,911] INFO: P2P SERVER listening on 10.0.217.86:8946
+[2025-04-20 21:12:15,904] INFO: Status changed to Offline
+[2025-04-20 21:12:50,146] ERROR: get_channels_from_server error: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-20 21:12:59,934] INFO: Logged in as: an08
+[2025-04-20 21:13:00,763] INFO: [SYNC LOGIN] Saved 0 new messages for Hello1
+[2025-04-20 21:13:00,807] INFO: [SYNC LOGIN] Saved 0 new messages for hello2
+[2025-04-20 21:13:00,853] INFO: [SYNC LOGIN] Saved 0 new messages for hello3
+[2025-04-20 21:13:00,854] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 21:13:00,970] INFO: Tracker response: Peer an08 (10.0.217.86:6002) added
+[2025-04-20 21:13:00,972] INFO: UDP LISTENER listening on 10.0.217.86:6003 for livestream.
+[2025-04-20 21:13:00,972] INFO: P2P SERVER listening on 10.0.217.86:6002
+[2025-04-20 21:13:02,899] INFO: Status changed to Offline
+[2025-04-20 22:04:36,303] INFO: Logged in as: an08
+[2025-04-20 22:04:37,024] INFO: [SYNC LOGIN] Saved 0 new messages for Hello1
+[2025-04-20 22:04:37,064] INFO: [SYNC LOGIN] Saved 0 new messages for hello2
+[2025-04-20 22:04:37,105] INFO: [SYNC LOGIN] Saved 0 new messages for hello3
+[2025-04-20 22:04:37,106] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 22:04:37,190] INFO: Tracker response: Peer an08 (10.0.217.86:6837) added
+[2025-04-20 22:04:37,190] INFO: P2P SERVER listening on 10.0.217.86:6837
+[2025-04-20 22:04:37,191] INFO: UDP LISTENER listening on 10.0.217.86:6838 for livestream.
+[2025-04-20 22:04:44,524] INFO: [SYNC LOAD] Save message to file: local_sync\sync_Hello1_an08.txt
+[2025-04-20 22:04:44,525] INFO: [SYNC] SyncManager started for channel 'Hello1'
+[2025-04-20 22:04:45,859] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello3_an08.txt
+[2025-04-20 22:04:45,859] INFO: [SYNC] SyncManager started for channel 'hello3'
+[2025-04-20 22:04:46,820] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello2_an08.txt
+[2025-04-20 22:04:46,821] INFO: [SYNC] SyncManager started for channel 'hello2'
+[2025-04-20 22:04:47,474] INFO: [SYNC LOAD] Save message to file: local_sync\sync_Hello1_an08.txt
+[2025-04-20 22:04:47,475] INFO: [SYNC] SyncManager started for channel 'Hello1'
+[2025-04-20 22:04:48,284] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello2_an08.txt
+[2025-04-20 22:04:48,285] INFO: [SYNC] SyncManager started for channel 'hello2'
+[2025-04-20 22:04:49,746] INFO: [SYNC LOAD] Save message to file: local_sync\sync_Hello1_an08.txt
+[2025-04-20 22:04:49,746] INFO: [SYNC] SyncManager started for channel 'Hello1'
+[2025-04-20 22:04:50,422] INFO: [SYNC LOAD] Save message to file: local_sync\sync_Hello1_an08.txt
+[2025-04-20 22:04:50,423] INFO: [SYNC] SyncManager started for channel 'Hello1'
+[2025-04-20 22:04:51,517] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello2_an08.txt
+[2025-04-20 22:04:51,518] INFO: [SYNC] SyncManager started for channel 'hello2'
+[2025-04-20 22:04:56,107] INFO: Sending message: lo
+[2025-04-20 22:04:56,200] INFO: [P2P MESSAGE] an08 -> an08: lo
+[2025-04-20 22:04:56,201] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "lo"}
+[2025-04-20 22:04:56,202] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh 'hello2'
+[2025-04-20 22:04:56,203] INFO: Message from an08 sent in channel 'hello2'
+[2025-04-20 22:05:01,099] INFO: Status changed to Invisible
+[2025-04-20 22:05:22,649] INFO: [SYNC LOAD] Save message to file: local_sync\sync_Hello1_an08.txt
+[2025-04-20 22:05:22,650] INFO: [SYNC] SyncManager started for channel 'Hello1'
+[2025-04-20 22:10:16,771] INFO: Logged in as: an08
+[2025-04-20 22:10:17,642] INFO: [SYNC LOGIN] Saved 0 new messages for Hello1
+[2025-04-20 22:10:17,687] INFO: [SYNC LOGIN] Saved 0 new messages for hello2
+[2025-04-20 22:10:17,733] INFO: [SYNC LOGIN] Saved 0 new messages for hello3
+[2025-04-20 22:10:17,734] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 22:10:17,827] INFO: Tracker response: Peer an08 (10.0.217.86:6953) added
+[2025-04-20 22:10:17,828] INFO: P2P SERVER listening on 10.0.217.86:6953
+[2025-04-20 22:10:17,828] INFO: UDP LISTENER listening on 10.0.217.86:6954 for livestream.
+[2025-04-20 22:11:04,530] INFO: Logged in as: an08
+[2025-04-20 22:11:05,435] INFO: [SYNC LOGIN] Saved 0 new messages for Hello1
+[2025-04-20 22:11:05,481] INFO: [SYNC LOGIN] Saved 0 new messages for hello2
+[2025-04-20 22:11:05,527] INFO: [SYNC LOGIN] Saved 0 new messages for hello3
+[2025-04-20 22:11:05,528] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 22:11:05,613] INFO: Tracker response: Peer an08 (10.0.217.86:7393) added
+[2025-04-20 22:11:05,614] INFO: P2P SERVER listening on 10.0.217.86:7393
+[2025-04-20 22:11:05,614] INFO: UDP LISTENER listening on 10.0.217.86:7394 for livestream.
+[2025-04-20 22:11:08,274] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello3_an08.txt
+[2025-04-20 22:11:08,274] INFO: [SYNC] SyncManager started for channel 'hello3'
+[2025-04-20 22:11:11,413] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello2_an08.txt
+[2025-04-20 22:11:11,414] INFO: [SYNC] SyncManager started for channel 'hello2'
+[2025-04-20 22:11:12,479] INFO: [SYNC LOAD] Save message to file: local_sync\sync_Hello1_an08.txt
+[2025-04-20 22:11:12,480] INFO: [SYNC] SyncManager started for channel 'Hello1'
+[2025-04-20 22:11:13,110] INFO: [SYNC LOAD] Save message to file: local_sync\sync_Hello1_an08.txt
+[2025-04-20 22:11:13,111] INFO: [SYNC] SyncManager started for channel 'Hello1'
+[2025-04-20 22:11:13,734] INFO: [SYNC LOAD] Save message to file: local_sync\sync_Hello1_an08.txt
+[2025-04-20 22:11:13,735] INFO: [SYNC] SyncManager started for channel 'Hello1'
+[2025-04-20 22:11:14,611] ERROR: Error processing line in sync_Hello1_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:11:14,612] INFO: [SYNC DONE] Synced file: sync_Hello1_an08.txt
+[2025-04-20 22:11:14,659] ERROR: Error processing line in sync_hello2_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:11:14,711] INFO: [SYNC DONE] Synced file: sync_hello2_an08.txt
+[2025-04-20 22:11:14,758] INFO: [SYNC DONE] Synced file: sync_hello3_an08.txt
+[2025-04-20 22:11:15,625] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:7393) left
+[2025-04-20 22:12:51,801] INFO: Logged in as: an08
+[2025-04-20 22:12:52,587] INFO: [SYNC LOGIN] Saved 0 new messages for Hello1
+[2025-04-20 22:12:52,630] INFO: [SYNC LOGIN] Saved 0 new messages for hello2
+[2025-04-20 22:12:52,674] INFO: [SYNC LOGIN] Saved 0 new messages for hello3
+[2025-04-20 22:12:52,674] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 22:12:52,768] INFO: Tracker response: Peer an08 (10.0.217.86:7064) added
+[2025-04-20 22:12:52,769] INFO: UDP LISTENER listening on 10.0.217.86:7065 for livestream.
+[2025-04-20 22:12:52,770] INFO: P2P SERVER listening on 10.0.217.86:7064
+[2025-04-20 22:12:54,149] INFO: [SYNC LOAD] Save message to file: local_sync\sync_Hello1_an08.txt
+[2025-04-20 22:12:54,149] INFO: [SYNC] SyncManager started for channel 'Hello1'
+[2025-04-20 22:12:56,933] INFO: [SYNC LOAD] Save message to file: local_sync\sync_Hello1_an08.txt
+[2025-04-20 22:12:56,934] INFO: [SYNC] SyncManager started for channel 'Hello1'
+[2025-04-20 22:12:58,380] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello2_an08.txt
+[2025-04-20 22:12:58,381] INFO: [SYNC] SyncManager started for channel 'hello2'
+[2025-04-20 22:12:59,101] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello2_an08.txt
+[2025-04-20 22:12:59,102] INFO: [SYNC] SyncManager started for channel 'hello2'
+[2025-04-20 22:12:59,846] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello2_an08.txt
+[2025-04-20 22:12:59,846] INFO: [SYNC] SyncManager started for channel 'hello2'
+[2025-04-20 22:13:02,938] ERROR: Error processing line in sync_Hello1_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:13:02,939] INFO: [SYNC DONE] Synced file: sync_Hello1_an08.txt
+[2025-04-20 22:13:02,983] ERROR: Error processing line in sync_hello2_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:13:02,984] INFO: [SYNC DONE] Synced file: sync_hello2_an08.txt
+[2025-04-20 22:13:03,027] INFO: [SYNC DONE] Synced file: sync_hello3_an08.txt
+[2025-04-20 22:13:04,095] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:7064) left
+[2025-04-20 22:14:22,653] INFO: Logged in as: an08
+[2025-04-20 22:14:23,275] INFO: [SYNC LOGIN] Saved 0 new messages for Hello1
+[2025-04-20 22:14:23,318] INFO: [SYNC LOGIN] Saved 0 new messages for hello2
+[2025-04-20 22:14:23,360] INFO: [SYNC LOGIN] Saved 0 new messages for hello3
+[2025-04-20 22:14:23,361] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 22:14:23,445] INFO: Tracker response: Peer an08 (10.0.217.86:7012) added
+[2025-04-20 22:14:23,447] INFO: P2P SERVER listening on 10.0.217.86:7012
+[2025-04-20 22:14:23,447] INFO: UDP LISTENER listening on 10.0.217.86:7013 for livestream.
+[2025-04-20 22:14:25,014] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello3_an08.txt
+[2025-04-20 22:14:25,015] INFO: [SYNC] SyncManager started for channel 'hello3'
+[2025-04-20 22:14:26,195] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello3_an08.txt
+[2025-04-20 22:14:26,196] INFO: [SYNC] SyncManager started for channel 'hello3'
+[2025-04-20 22:14:27,127] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello2_an08.txt
+[2025-04-20 22:14:27,128] INFO: [SYNC] SyncManager started for channel 'hello2'
+[2025-04-20 22:14:27,612] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello2_an08.txt
+[2025-04-20 22:14:27,613] INFO: [SYNC] SyncManager started for channel 'hello2'
+[2025-04-20 22:14:28,354] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello2_an08.txt
+[2025-04-20 22:14:28,354] INFO: [SYNC] SyncManager started for channel 'hello2'
+[2025-04-20 22:14:32,835] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello2_an08.txt
+[2025-04-20 22:14:32,836] INFO: [SYNC] SyncManager started for channel 'hello2'
+[2025-04-20 22:14:33,362] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello3_an08.txt
+[2025-04-20 22:14:33,363] INFO: [SYNC] SyncManager started for channel 'hello3'
+[2025-04-20 22:14:35,303] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello3_an08.txt
+[2025-04-20 22:14:35,304] INFO: [SYNC] SyncManager started for channel 'hello3'
+[2025-04-20 22:14:37,504] ERROR: Error processing line in sync_Hello1_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:14:37,505] INFO: [SYNC DONE] Synced file: sync_Hello1_an08.txt
+[2025-04-20 22:14:37,548] ERROR: Error processing line in sync_hello2_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:14:37,548] INFO: [SYNC DONE] Synced file: sync_hello2_an08.txt
+[2025-04-20 22:14:37,592] INFO: [SYNC DONE] Synced file: sync_hello3_an08.txt
+[2025-04-20 22:14:38,213] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:7012) left
+[2025-04-20 22:21:22,626] INFO: Logged in as: an08
+[2025-04-20 22:21:23,241] INFO: [SYNC LOGIN] Saved 0 new messages for Hello1
+[2025-04-20 22:21:23,292] INFO: [SYNC LOGIN] Saved 0 new messages for hello2
+[2025-04-20 22:21:23,341] INFO: [SYNC LOGIN] Saved 0 new messages for hello3
+[2025-04-20 22:21:23,341] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 22:21:23,434] INFO: Tracker response: Peer an08 (10.0.217.86:6956) added
+[2025-04-20 22:21:23,435] INFO: P2P SERVER listening on 10.0.217.86:6956
+[2025-04-20 22:21:23,435] INFO: UDP LISTENER listening on 10.0.217.86:6957 for livestream.
+[2025-04-20 22:21:24,877] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello3_an08.txt
+[2025-04-20 22:21:24,877] INFO: [SYNC] SyncManager started for channel 'hello3'
+[2025-04-20 22:21:27,082] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello3_an08.txt
+[2025-04-20 22:21:27,083] INFO: [SYNC] SyncManager started for channel 'hello3'
+[2025-04-20 22:21:40,421] INFO: Logged in as: an09
+[2025-04-20 22:21:41,034] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-20 22:21:41,120] INFO: Tracker response: Peer an09 (10.0.217.86:8825) added
+[2025-04-20 22:21:41,121] INFO: P2P SERVER listening on 10.0.217.86:8825
+[2025-04-20 22:21:41,122] INFO: UDP LISTENER listening on 10.0.217.86:8826 for livestream.
+[2025-04-20 22:21:53,939] INFO: Channel 'an09' created by an08 (is_private=True)
+[2025-04-20 22:21:56,439] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 22:21:57,256] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 22:21:58,042] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 22:21:58,265] INFO: User an09 requested to join private channel 'an09'
+[2025-04-20 22:21:58,816] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 22:21:59,275] INFO: [SYNC] SyncManager started for channel 'an09'
+[2025-04-20 22:21:59,573] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 22:21:59,855] WARNING: [SYNC LOAD] File not found: local_sync\sync_an09_an08.txt
+[2025-04-20 22:22:00,327] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 22:22:00,630] WARNING: [SYNC LOAD] File not found: local_sync\sync_an09_an08.txt
+[2025-04-20 22:22:01,088] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 22:22:01,253] INFO: User an09 approved to join channel 'an09' by an08
+[2025-04-20 22:22:01,405] WARNING: [SYNC LOAD] File not found: local_sync\sync_an09_an08.txt
+[2025-04-20 22:22:01,846] WARNING: [SYNC LOAD] File not found: local_sync\sync_an09_an08.txt
+[2025-04-20 22:22:02,202] WARNING: [SYNC LOAD] File not found: local_sync\sync_an09_an08.txt
+[2025-04-20 22:22:02,596] WARNING: [SYNC LOAD] File not found: local_sync\sync_an09_an08.txt
+[2025-04-20 22:22:02,991] WARNING: [SYNC LOAD] File not found: local_sync\sync_an09_an08.txt
+[2025-04-20 22:22:03,389] WARNING: [SYNC LOAD] File not found: local_sync\sync_an09_an08.txt
+[2025-04-20 22:22:03,811] WARNING: [SYNC LOAD] File not found: local_sync\sync_an09_an08.txt
+[2025-04-20 22:22:04,205] WARNING: [SYNC LOAD] File not found: local_sync\sync_an09_an08.txt
+[2025-04-20 22:22:04,569] INFO: Sending message: glo
+[2025-04-20 22:22:04,629] WARNING: [SYNC LOAD] File not found: local_sync\sync_an09_an08.txt
+[2025-04-20 22:22:04,658] INFO: [INFO] Create new file: local_sync\sync_an09_an08.txt
+[2025-04-20 22:22:04,659] INFO: [P2P MESSAGE] an08 -> an08: glo
+[2025-04-20 22:22:04,659] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "glo"}
+[2025-04-20 22:22:04,659] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh 'an09'
+[2025-04-20 22:22:04,660] INFO: Message from an08 sent in channel 'an09'
+[2025-04-20 22:26:04,799] ERROR: Error processing line in sync_an09_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:26:04,860] INFO: [SYNC DONE] Synced file: sync_an09_an08.txt
+[2025-04-20 22:26:04,907] ERROR: Error processing line in sync_Hello1_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:26:04,908] INFO: [SYNC DONE] Synced file: sync_Hello1_an08.txt
+[2025-04-20 22:26:04,957] ERROR: Error processing line in sync_hello2_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:26:04,957] INFO: [SYNC DONE] Synced file: sync_hello2_an08.txt
+[2025-04-20 22:26:05,005] INFO: [SYNC DONE] Synced file: sync_hello3_an08.txt
+[2025-04-20 22:26:05,803] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:6956) left
+[2025-04-20 22:26:08,982] WARNING: [SYNC SKIPPED] User is not owner of channel: an09
+[2025-04-20 22:26:08,983] WARNING: [SYNC SKIPPED] User is not owner of channel: Hello1
+[2025-04-20 22:26:08,984] WARNING: [SYNC SKIPPED] User is not owner of channel: hello2
+[2025-04-20 22:26:08,984] WARNING: [SYNC SKIPPED] User is not owner of channel: hello3
+[2025-04-20 22:26:10,276] INFO: Tracker response on LEAVE: Peer an09 (10.0.217.86:8825) left
+[2025-04-20 22:26:22,020] INFO: Logged in as: an08
+[2025-04-20 22:26:22,779] INFO: [SYNC LOGIN] Saved 0 new messages for Hello1
+[2025-04-20 22:26:22,831] INFO: [SYNC LOGIN] Saved 0 new messages for hello2
+[2025-04-20 22:26:22,884] INFO: [SYNC LOGIN] Saved 0 new messages for hello3
+[2025-04-20 22:26:22,974] INFO: [SYNC LOGIN] Saved 0 new messages for an09
+[2025-04-20 22:26:22,975] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 22:26:23,082] INFO: Tracker response: Peer an08 (10.0.217.86:8742) added
+[2025-04-20 22:26:23,085] INFO: P2P SERVER listening on 10.0.217.86:8742
+[2025-04-20 22:26:23,085] INFO: UDP LISTENER listening on 10.0.217.86:8743 for livestream.
+[2025-04-20 22:26:34,884] INFO: Logged in as: an09
+[2025-04-20 22:26:35,613] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-20 22:26:35,699] INFO: Tracker response: Peer an09 (10.0.217.86:6391) added
+[2025-04-20 22:26:35,700] INFO: P2P SERVER listening on 10.0.217.86:6391
+[2025-04-20 22:26:35,700] INFO: UDP LISTENER listening on 10.0.217.86:6392 for livestream.
+[2025-04-20 22:26:43,557] INFO: Channel 'an08' created by an08 (is_private=True)
+[2025-04-20 22:26:45,679] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 22:26:46,461] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 22:26:46,546] INFO: [SYNC] SyncManager started for channel 'an08'
+[2025-04-20 22:26:46,842] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:47,224] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 22:26:47,633] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:47,697] INFO: User an09 requested to join private channel 'an08'
+[2025-04-20 22:26:48,002] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 22:26:48,415] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:48,803] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 22:26:49,201] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:49,578] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 22:26:49,982] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:50,095] INFO: User an09 approved to join channel 'an08' by an08
+[2025-04-20 22:26:50,341] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:50,769] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:51,144] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:51,559] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:51,923] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:52,346] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:52,712] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:53,130] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:53,500] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:53,945] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:54,294] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:54,740] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:55,087] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:55,545] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:55,872] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:56,352] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:56,481] INFO: Sending message: hello m
+[2025-04-20 22:26:56,596] INFO: [INFO] Create new file: local_sync\sync_an08_an08.txt
+[2025-04-20 22:26:56,598] INFO: [P2P MESSAGE] an08 -> an08: hello m
+[2025-04-20 22:26:56,599] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "hello m"}
+[2025-04-20 22:26:56,599] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh 'an08'
+[2025-04-20 22:26:56,599] INFO: Message from an08 sent in channel 'an08'
+[2025-04-20 22:27:00,094] INFO: Sending message: nghe m
+[2025-04-20 22:27:00,187] INFO: [P2P MESSAGE] an09 -> an08: nghe m
+[2025-04-20 22:27:00,189] INFO: Sending message: {"type": "chat", "sender": "an09", "message": "nghe m"}
+[2025-04-20 22:27:00,189] INFO: Tin nhắn từ an09 đã được gửi qua peer của chủ kênh và lưu vào kênh 'an08'
+[2025-04-20 22:27:00,189] INFO: Message from an09 sent in channel 'an08'
+[2025-04-20 22:27:02,004] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an08_an08.txt
+[2025-04-20 22:27:04,775] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an08_an08.txt
+[2025-04-20 22:27:05,400] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an08_an08.txt
+[2025-04-20 22:27:05,945] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an08_an08.txt
+[2025-04-20 22:27:06,483] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an08_an08.txt
+[2025-04-20 22:27:08,236] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an08_an08.txt
+[2025-04-20 22:27:08,237] INFO: [SYNC] SyncManager started for channel 'an08'
+[2025-04-20 22:27:15,069] ERROR: Error processing line in sync_an08_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:27:15,185] INFO: [SYNC DONE] Synced file: sync_an08_an08.txt
+[2025-04-20 22:27:15,231] ERROR: Error processing line in sync_an09_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:27:15,232] INFO: [SYNC DONE] Synced file: sync_an09_an08.txt
+[2025-04-20 22:27:15,282] ERROR: Error processing line in sync_Hello1_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:27:15,282] INFO: [SYNC DONE] Synced file: sync_Hello1_an08.txt
+[2025-04-20 22:27:15,327] ERROR: Error processing line in sync_hello2_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:27:15,329] INFO: [SYNC DONE] Synced file: sync_hello2_an08.txt
+[2025-04-20 22:27:15,374] INFO: [SYNC DONE] Synced file: sync_hello3_an08.txt
+[2025-04-20 22:27:16,206] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:8742) left
+[2025-04-20 22:27:18,339] WARNING: [SYNC SKIPPED] User is not owner of channel: an08
+[2025-04-20 22:27:18,340] WARNING: [SYNC SKIPPED] User is not owner of channel: an09
+[2025-04-20 22:27:18,340] WARNING: [SYNC SKIPPED] User is not owner of channel: Hello1
+[2025-04-20 22:27:18,341] WARNING: [SYNC SKIPPED] User is not owner of channel: hello2
+[2025-04-20 22:27:18,341] WARNING: [SYNC SKIPPED] User is not owner of channel: hello3
+[2025-04-20 22:27:19,154] INFO: Tracker response on LEAVE: Peer an09 (10.0.217.86:6391) left
+[2025-04-20 22:28:35,457] INFO: Logged in as: an08
+[2025-04-20 22:28:36,320] INFO: [SYNC LOGIN] Saved 0 new messages for Hello1
+[2025-04-20 22:28:36,367] INFO: [SYNC LOGIN] Saved 0 new messages for hello2
+[2025-04-20 22:28:36,417] INFO: [SYNC LOGIN] Saved 0 new messages for hello3
+[2025-04-20 22:28:36,461] INFO: [SYNC LOGIN] Saved 0 new messages for an09
+[2025-04-20 22:28:36,505] INFO: [SYNC LOGIN] Saved 0 new messages for an08
+[2025-04-20 22:28:36,506] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 22:28:36,592] INFO: Tracker response: Peer an08 (10.0.217.86:8791) added
+[2025-04-20 22:28:36,594] INFO: P2P SERVER listening on 10.0.217.86:8791
+[2025-04-20 22:28:36,595] INFO: UDP LISTENER listening on 10.0.217.86:8792 for livestream.
+[2025-04-20 22:28:37,999] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello2_an08.txt
+[2025-04-20 22:28:38,000] INFO: [SYNC] SyncManager started for channel 'hello2'
+[2025-04-20 22:28:38,759] INFO: [SYNC LOAD] Save message to file: local_sync\sync_Hello1_an08.txt
+[2025-04-20 22:28:38,760] INFO: [SYNC] SyncManager started for channel 'Hello1'
+[2025-04-20 22:28:40,499] INFO: Channel 'Hello1' deleted by an08
+[2025-04-20 22:28:40,506] WARNING: poll_loop: Channel data is None for channel: Hello1
+[2025-04-20 22:28:41,478] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello2_an08.txt
+[2025-04-20 22:28:41,479] INFO: [SYNC] SyncManager started for channel 'hello2'
+[2025-04-20 22:28:42,335] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello2_an08.txt
+[2025-04-20 22:28:42,336] INFO: [SYNC] SyncManager started for channel 'hello2'
+[2025-04-20 22:28:44,007] INFO: Channel 'hello2' deleted by an08
+[2025-04-20 22:28:44,040] WARNING: poll_loop: Channel data is None for channel: hello2
+[2025-04-20 22:28:44,748] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an08_an08.txt
+[2025-04-20 22:28:44,749] INFO: [SYNC] SyncManager started for channel 'an08'
+[2025-04-20 22:28:45,037] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an08_an08.txt
+[2025-04-20 22:28:45,038] INFO: [SYNC] SyncManager started for channel 'an08'
+[2025-04-20 22:28:46,870] ERROR: poll_loop response error: Channel not found
+[2025-04-20 22:28:46,871] INFO: Channel 'an08' deleted by an08
+[2025-04-20 22:28:48,009] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an09_an08.txt
+[2025-04-20 22:28:48,010] INFO: [SYNC] SyncManager started for channel 'an09'
+[2025-04-20 22:28:48,537] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an09_an08.txt
+[2025-04-20 22:28:48,539] INFO: [SYNC] SyncManager started for channel 'an09'
+[2025-04-20 22:28:50,291] INFO: Channel 'an09' deleted by an08
+[2025-04-20 22:28:50,974] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello3_an08.txt
+[2025-04-20 22:28:50,975] INFO: [SYNC] SyncManager started for channel 'hello3'
+[2025-04-20 22:28:51,499] INFO: [SYNC LOAD] Save message to file: local_sync\sync_hello3_an08.txt
+[2025-04-20 22:28:51,500] INFO: [SYNC] SyncManager started for channel 'hello3'
+[2025-04-20 22:28:53,596] ERROR: poll_loop response error: Channel not found
+[2025-04-20 22:28:53,608] INFO: Channel 'hello3' deleted by an08
+[2025-04-20 22:28:54,292] ERROR: Error processing line in sync_an08_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:28:54,380] INFO: [SYNC DONE] Synced file: sync_an08_an08.txt
+[2025-04-20 22:28:54,425] ERROR: Error processing line in sync_an09_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:28:54,469] INFO: [SYNC DONE] Synced file: sync_an09_an08.txt
+[2025-04-20 22:28:54,512] ERROR: Error processing line in sync_Hello1_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:28:55,172] INFO: [SYNC DONE] Synced file: sync_Hello1_an08.txt
+[2025-04-20 22:28:55,216] ERROR: Error processing line in sync_hello2_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:28:55,356] INFO: [SYNC DONE] Synced file: sync_hello2_an08.txt
+[2025-04-20 22:28:55,578] INFO: [SYNC DONE] Synced file: sync_hello3_an08.txt
+[2025-04-20 22:28:56,760] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:8791) left
+[2025-04-20 22:30:10,809] INFO: Logged in as: an08
+[2025-04-20 22:30:11,397] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 22:30:11,484] INFO: Tracker response: Peer an08 (10.0.217.86:8162) added
+[2025-04-20 22:30:11,485] INFO: P2P SERVER listening on 10.0.217.86:8162
+[2025-04-20 22:30:11,486] INFO: UDP LISTENER listening on 10.0.217.86:8163 for livestream.
+[2025-04-20 22:30:16,756] INFO: Channel 'an08' created by an08 (is_private=True)
+[2025-04-20 22:30:17,809] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an08_an08.txt
+[2025-04-20 22:30:17,810] INFO: [SYNC] SyncManager started for channel 'an08'
+[2025-04-20 22:30:20,030] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an08_an08.txt
+[2025-04-20 22:30:20,030] INFO: [SYNC] SyncManager started for channel 'an08'
+[2025-04-20 22:30:23,916] WARNING: poll_loop: Channel data is None for channel: an08
+[2025-04-20 22:30:23,994] INFO: Channel 'an08' deleted by an08
+[2025-04-20 22:30:49,972] INFO: Channel 'an08' created by an08 (is_private=True)
+[2025-04-20 22:30:51,213] INFO: [SYNC] SyncManager started for channel 'an08'
+[2025-04-20 22:30:51,420] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:30:51,868] INFO: [SYNC] SyncManager started for channel 'an08'
+[2025-04-20 22:30:52,172] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:30:52,935] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:30:53,722] WARNING: [SYNC LOAD] File not found: local_sync\sync_an08_an08.txt
+[2025-04-20 22:30:53,747] INFO: Sending message: hello
+[2025-04-20 22:30:53,830] INFO: [INFO] Create new file: local_sync\sync_an08_an08.txt
+[2025-04-20 22:30:53,831] INFO: [P2P MESSAGE] an08 -> an08: hello
+[2025-04-20 22:30:53,831] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "hello"}
+[2025-04-20 22:30:53,832] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh 'an08'
+[2025-04-20 22:30:53,832] INFO: Message from an08 sent in channel 'an08'
+[2025-04-20 22:30:56,925] INFO: Sending message: my name an
+[2025-04-20 22:30:57,012] INFO: [P2P MESSAGE] an08 -> an08: my name an
+[2025-04-20 22:30:57,013] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "my name an"}
+[2025-04-20 22:30:57,014] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh 'an08'
+[2025-04-20 22:30:57,014] INFO: Message from an08 sent in channel 'an08'
+[2025-04-20 22:31:02,132] INFO: Sending message: an 08
+[2025-04-20 22:31:02,222] INFO: [P2P MESSAGE] an08 -> an08: an 08
+[2025-04-20 22:31:02,222] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "an 08"}
+[2025-04-20 22:31:02,224] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh 'an08'
+[2025-04-20 22:31:02,225] INFO: Message from an08 sent in channel 'an08'
+[2025-04-20 22:31:03,689] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an08_an08.txt
+[2025-04-20 22:31:03,690] INFO: [SYNC] SyncManager started for channel 'an08'
+[2025-04-20 22:31:05,029] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an08_an08.txt
+[2025-04-20 22:31:05,029] INFO: [SYNC] SyncManager started for channel 'an08'
+[2025-04-20 22:31:06,805] INFO: Sending message: alo
+[2025-04-20 22:31:06,904] INFO: [P2P MESSAGE] an08 -> an08: alo
+[2025-04-20 22:31:06,904] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "alo"}
+[2025-04-20 22:31:06,905] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh 'an08'
+[2025-04-20 22:31:06,905] INFO: Message from an08 sent in channel 'an08'
+[2025-04-20 22:31:09,353] INFO: Sending message: asmdasdjl
+[2025-04-20 22:31:09,481] INFO: [P2P MESSAGE] an08 -> an08: asmdasdjl
+[2025-04-20 22:31:09,483] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "asmdasdjl"}
+[2025-04-20 22:31:09,483] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh 'an08'
+[2025-04-20 22:31:09,484] INFO: Message from an08 sent in channel 'an08'
+[2025-04-20 22:31:10,771] ERROR: Error processing line in sync_an08_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:31:11,015] INFO: [SYNC DONE] Synced file: sync_an08_an08.txt
+[2025-04-20 22:31:12,170] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:8162) left
+[2025-04-20 22:31:47,521] INFO: Logged in as: an08
+[2025-04-20 22:31:48,327] INFO: [SYNC LOGIN] Saved 0 new messages for an08
+[2025-04-20 22:31:48,328] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 22:31:48,412] INFO: Tracker response: Peer an08 (10.0.217.86:6521) added
+[2025-04-20 22:31:48,413] INFO: P2P SERVER listening on 10.0.217.86:6521
+[2025-04-20 22:31:48,414] INFO: UDP LISTENER listening on 10.0.217.86:6522 for livestream.
+[2025-04-20 22:31:53,398] INFO: Channel 'an09' created by an08 (is_private=True)
+[2025-04-20 22:31:54,399] INFO: [SYNC] SyncManager started for channel 'an09'
+[2025-04-20 22:31:54,801] WARNING: [SYNC LOAD] File not found: local_sync\sync_an09_an08.txt
+[2025-04-20 22:31:55,610] WARNING: [SYNC LOAD] File not found: local_sync\sync_an09_an08.txt
+[2025-04-20 22:31:56,700] WARNING: [SYNC LOAD] File not found: local_sync\sync_an09_an08.txt
+[2025-04-20 22:31:56,959] INFO: Sending message: 123
+[2025-04-20 22:31:57,056] INFO: [INFO] Create new file: local_sync\sync_an09_an08.txt
+[2025-04-20 22:31:57,059] INFO: [P2P MESSAGE] an08 -> an08: 123
+[2025-04-20 22:31:57,059] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "123"}
+[2025-04-20 22:31:57,060] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh 'an09'
+[2025-04-20 22:31:57,060] INFO: Message from an08 sent in channel 'an09'
+[2025-04-20 22:31:59,066] INFO: Sending message: alolao
+[2025-04-20 22:31:59,184] INFO: [P2P MESSAGE] an08 -> an08: alolao
+[2025-04-20 22:31:59,186] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "alolao"}
+[2025-04-20 22:31:59,186] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh 'an09'
+[2025-04-20 22:31:59,187] INFO: Message from an08 sent in channel 'an09'
+[2025-04-20 22:32:01,865] INFO: Sending message: nghe k
+[2025-04-20 22:32:01,965] INFO: [P2P MESSAGE] an08 -> an08: nghe k
+[2025-04-20 22:32:01,966] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "nghe k"}
+[2025-04-20 22:32:01,966] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh 'an09'
+[2025-04-20 22:32:01,967] INFO: Message from an08 sent in channel 'an09'
+[2025-04-20 22:32:04,167] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an08_an08.txt
+[2025-04-20 22:32:04,168] INFO: [SYNC] SyncManager started for channel 'an08'
+[2025-04-20 22:32:06,073] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an09_an08.txt
+[2025-04-20 22:32:06,074] INFO: [SYNC] SyncManager started for channel 'an09'
+[2025-04-20 22:32:06,593] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an09_an08.txt
+[2025-04-20 22:32:06,593] INFO: [SYNC] SyncManager started for channel 'an09'
+[2025-04-20 22:32:13,054] ERROR: Error processing line in sync_an08_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:32:13,054] INFO: [SYNC DONE] Synced file: sync_an08_an08.txt
+[2025-04-20 22:32:13,097] ERROR: Error processing line in sync_an09_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:32:13,258] INFO: [SYNC DONE] Synced file: sync_an09_an08.txt
+[2025-04-20 22:32:14,628] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:6521) left
+[2025-04-20 22:43:00,210] INFO: Logged in as: an08
+[2025-04-20 22:43:00,887] INFO: [SYNC LOGIN] Saved 0 new messages for an08
+[2025-04-20 22:43:00,932] INFO: [SYNC LOGIN] Saved 0 new messages for an09
+[2025-04-20 22:43:00,932] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 22:43:01,029] INFO: Tracker response: Peer an08 (10.0.217.86:8564) added
+[2025-04-20 22:43:01,030] INFO: P2P SERVER listening on 10.0.217.86:8564
+[2025-04-20 22:43:01,031] INFO: UDP LISTENER listening on 10.0.217.86:8565 for livestream.
+[2025-04-20 22:43:05,903] INFO: Channel 'an10' created by an08 (is_private=True)
+[2025-04-20 22:43:07,477] INFO: [SYNC] SyncManager started for channel 'an10'
+[2025-04-20 22:43:07,478] WARNING: [SYNC LOAD] File not found: local_sync\sync_an10_an08.txt
+[2025-04-20 22:43:08,253] WARNING: [SYNC LOAD] File not found: local_sync\sync_an10_an08.txt
+[2025-04-20 22:43:09,029] WARNING: [SYNC LOAD] File not found: local_sync\sync_an10_an08.txt
+[2025-04-20 22:43:09,791] WARNING: [SYNC LOAD] File not found: local_sync\sync_an10_an08.txt
+[2025-04-20 22:43:10,590] WARNING: [SYNC LOAD] File not found: local_sync\sync_an10_an08.txt
+[2025-04-20 22:43:10,867] INFO: Sending message: hello world
+[2025-04-20 22:43:10,956] INFO: [INFO] Create new file: local_sync\sync_an10_an08.txt
+[2025-04-20 22:43:10,958] INFO: [P2P MESSAGE] an08 -> an08: hello world
+[2025-04-20 22:43:10,960] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "hello world"}
+[2025-04-20 22:43:10,960] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh 'an10'
+[2025-04-20 22:43:10,961] INFO: Message from an08 sent in channel 'an10'
+[2025-04-20 22:43:15,183] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an10_an08.txt
+[2025-04-20 22:43:15,183] INFO: [SYNC] SyncManager started for channel 'an10'
+[2025-04-20 22:43:16,651] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an10_an08.txt
+[2025-04-20 22:43:16,652] INFO: [SYNC] SyncManager started for channel 'an10'
+[2025-04-20 22:43:21,031] INFO: Sending message: alo
+[2025-04-20 22:43:21,117] INFO: [P2P MESSAGE] an08 -> an08: alo
+[2025-04-20 22:43:21,117] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "alo"}
+[2025-04-20 22:43:21,118] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh 'an10'
+[2025-04-20 22:43:21,119] INFO: Message from an08 sent in channel 'an10'
+[2025-04-20 22:43:22,900] ERROR: Error processing line in sync_an08_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:43:22,900] INFO: [SYNC DONE] Synced file: sync_an08_an08.txt
+[2025-04-20 22:43:22,943] ERROR: Error processing line in sync_an09_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:43:22,943] INFO: [SYNC DONE] Synced file: sync_an09_an08.txt
+[2025-04-20 22:43:22,986] ERROR: Error processing line in sync_an10_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:43:23,084] INFO: [SYNC DONE] Synced file: sync_an10_an08.txt
+[2025-04-20 22:43:24,198] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:8564) left
+[2025-04-20 22:44:43,201] INFO: Logged in as: an08
+[2025-04-20 22:44:44,082] INFO: [SYNC LOGIN] Saved 0 new messages for an08
+[2025-04-20 22:44:44,127] INFO: [SYNC LOGIN] Saved 0 new messages for an09
+[2025-04-20 22:44:44,172] INFO: [SYNC LOGIN] Saved 0 new messages for an10
+[2025-04-20 22:44:44,172] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 22:44:44,259] INFO: Tracker response: Peer an08 (10.0.217.86:7112) added
+[2025-04-20 22:44:44,261] INFO: P2P SERVER listening on 10.0.217.86:7112
+[2025-04-20 22:44:44,261] INFO: UDP LISTENER listening on 10.0.217.86:7113 for livestream.
+[2025-04-20 22:44:45,671] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an10_an08.txt
+[2025-04-20 22:44:45,672] INFO: [SYNC] SyncManager started for channel 'an10'
+[2025-04-20 22:44:50,673] INFO: Channel 'an11' created by an08 (is_private=True)
+[2025-04-20 22:44:51,365] WARNING: [SYNC LOAD] File not found: local_sync\sync_an11_an08.txt
+[2025-04-20 22:44:51,554] INFO: [SYNC] SyncManager started for channel 'an11'
+[2025-04-20 22:44:52,167] WARNING: [SYNC LOAD] File not found: local_sync\sync_an11_an08.txt
+[2025-04-20 22:44:52,169] INFO: [SYNC] SyncManager started for channel 'an11'
+[2025-04-20 22:44:52,942] WARNING: [SYNC LOAD] File not found: local_sync\sync_an11_an08.txt
+[2025-04-20 22:44:53,720] WARNING: [SYNC LOAD] File not found: local_sync\sync_an11_an08.txt
+[2025-04-20 22:44:54,498] WARNING: [SYNC LOAD] File not found: local_sync\sync_an11_an08.txt
+[2025-04-20 22:44:54,800] INFO: Sending message: helo
+[2025-04-20 22:44:54,909] INFO: [INFO] Create new file: local_sync\sync_an11_an08.txt
+[2025-04-20 22:44:54,911] INFO: [P2P MESSAGE] an08 -> an08: helo
+[2025-04-20 22:44:54,912] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "helo"}
+[2025-04-20 22:44:54,913] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh 'an11'
+[2025-04-20 22:44:54,913] INFO: Message from an08 sent in channel 'an11'
+[2025-04-20 22:45:22,702] INFO: Channel 'an12' created by an08 (is_private=True)
+[2025-04-20 22:45:28,008] INFO: [SYNC] SyncManager started for channel 'an12'
+[2025-04-20 22:45:28,204] WARNING: [SYNC LOAD] File not found: local_sync\sync_an12_an08.txt
+[2025-04-20 22:45:28,981] WARNING: [SYNC LOAD] File not found: local_sync\sync_an12_an08.txt
+[2025-04-20 22:45:29,769] WARNING: [SYNC LOAD] File not found: local_sync\sync_an12_an08.txt
+[2025-04-20 22:45:30,555] WARNING: [SYNC LOAD] File not found: local_sync\sync_an12_an08.txt
+[2025-04-20 22:45:31,342] WARNING: [SYNC LOAD] File not found: local_sync\sync_an12_an08.txt
+[2025-04-20 22:45:32,117] WARNING: [SYNC LOAD] File not found: local_sync\sync_an12_an08.txt
+[2025-04-20 22:45:32,897] WARNING: [SYNC LOAD] File not found: local_sync\sync_an12_an08.txt
+[2025-04-20 22:45:33,681] WARNING: [SYNC LOAD] File not found: local_sync\sync_an12_an08.txt
+[2025-04-20 22:45:34,462] WARNING: [SYNC LOAD] File not found: local_sync\sync_an12_an08.txt
+[2025-04-20 22:45:35,227] WARNING: [SYNC LOAD] File not found: local_sync\sync_an12_an08.txt
+[2025-04-20 22:45:36,010] WARNING: [SYNC LOAD] File not found: local_sync\sync_an12_an08.txt
+[2025-04-20 22:45:36,053] INFO: [SYNC] SyncManager started for channel 'an12'
+[2025-04-20 22:45:36,782] WARNING: [SYNC LOAD] File not found: local_sync\sync_an12_an08.txt
+[2025-04-20 22:45:37,562] WARNING: [SYNC LOAD] File not found: local_sync\sync_an12_an08.txt
+[2025-04-20 22:45:37,791] INFO: Sending message: lo
+[2025-04-20 22:45:37,889] INFO: [INFO] Create new file: local_sync\sync_an12_an08.txt
+[2025-04-20 22:45:37,891] INFO: [P2P MESSAGE] an08 -> an08: lo
+[2025-04-20 22:45:37,891] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "lo"}
+[2025-04-20 22:45:37,892] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh 'an12'
+[2025-04-20 22:45:37,892] INFO: Message from an08 sent in channel 'an12'
+[2025-04-20 22:50:51,055] ERROR: Error processing line in sync_an08_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:50:51,055] INFO: [SYNC DONE] Synced file: sync_an08_an08.txt
+[2025-04-20 22:50:51,105] ERROR: Error processing line in sync_an09_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:50:51,105] INFO: [SYNC DONE] Synced file: sync_an09_an08.txt
+[2025-04-20 22:50:51,150] ERROR: Error processing line in sync_an10_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:50:51,151] INFO: [SYNC DONE] Synced file: sync_an10_an08.txt
+[2025-04-20 22:50:51,196] ERROR: Error processing line in sync_an11_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:50:51,245] INFO: [SYNC DONE] Synced file: sync_an11_an08.txt
+[2025-04-20 22:50:51,315] ERROR: Error processing line in sync_an12_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:50:51,365] INFO: [SYNC DONE] Synced file: sync_an12_an08.txt
+[2025-04-20 22:50:52,250] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:7112) left
+[2025-04-20 22:51:04,681] INFO: Logged in as: an08
+[2025-04-20 22:51:05,435] INFO: [SYNC LOGIN] Saved 0 new messages for an08
+[2025-04-20 22:51:05,477] INFO: [SYNC LOGIN] Saved 0 new messages for an09
+[2025-04-20 22:51:05,525] INFO: [SYNC LOGIN] Saved 0 new messages for an10
+[2025-04-20 22:51:05,570] INFO: [SYNC LOGIN] Saved 0 new messages for an11
+[2025-04-20 22:51:05,619] INFO: [SYNC LOGIN] Saved 0 new messages for an12
+[2025-04-20 22:51:05,619] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 22:51:05,731] INFO: Tracker response: Peer an08 (10.0.217.86:8665) added
+[2025-04-20 22:51:05,732] INFO: P2P SERVER listening on 10.0.217.86:8665
+[2025-04-20 22:51:05,733] INFO: UDP LISTENER listening on 10.0.217.86:8666 for livestream.
+[2025-04-20 22:51:10,944] INFO: Channel 'an13' created by an08 (is_private=True)
+[2025-04-20 22:51:11,821] INFO: [SYNC] SyncManager started for channel 'an13'
+[2025-04-20 22:51:11,972] WARNING: [SYNC LOAD] File not found: local_sync\sync_an13_an08.txt
+[2025-04-20 22:51:12,343] WARNING: [SYNC LOAD] File not found: local_sync\sync_an13_an08.txt
+[2025-04-20 22:51:12,718] WARNING: [SYNC LOAD] File not found: local_sync\sync_an13_an08.txt
+[2025-04-20 22:51:13,119] WARNING: [SYNC LOAD] File not found: local_sync\sync_an13_an08.txt
+[2025-04-20 22:51:13,508] WARNING: [SYNC LOAD] File not found: local_sync\sync_an13_an08.txt
+[2025-04-20 22:51:13,882] WARNING: [SYNC LOAD] File not found: local_sync\sync_an13_an08.txt
+[2025-04-20 22:51:14,256] WARNING: [SYNC LOAD] File not found: local_sync\sync_an13_an08.txt
+[2025-04-20 22:51:14,625] WARNING: [SYNC LOAD] File not found: local_sync\sync_an13_an08.txt
+[2025-04-20 22:51:14,939] INFO: Sending message: hello
+[2025-04-20 22:51:15,019] WARNING: [SYNC LOAD] File not found: local_sync\sync_an13_an08.txt
+[2025-04-20 22:51:15,037] INFO: [INFO] Create new file: local_sync\sync_an13_an08.txt
+[2025-04-20 22:51:15,040] INFO: [P2P MESSAGE] an08 -> an08: hello
+[2025-04-20 22:51:15,041] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "hello"}
+[2025-04-20 22:51:15,042] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh 'an13'
+[2025-04-20 22:51:15,042] INFO: Message from an08 sent in channel 'an13'
+[2025-04-20 22:51:15,404] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:15,774] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:16,210] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:16,602] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:16,987] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:17,378] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:17,755] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:18,130] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:18,504] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:18,510] INFO: Sending message: t la an
+[2025-04-20 22:51:18,599] INFO: [P2P MESSAGE] an08 -> an08: t la an
+[2025-04-20 22:51:18,599] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "t la an"}
+[2025-04-20 22:51:18,600] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh 'an13'
+[2025-04-20 22:51:18,601] INFO: Message from an08 sent in channel 'an13'
+[2025-04-20 22:51:18,880] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:19,264] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:19,666] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:20,035] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:20,101] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an13_an08.txt
+[2025-04-20 22:51:20,102] INFO: [SYNC] SyncManager started for channel 'an13'
+[2025-04-20 22:51:20,409] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:20,774] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:21,149] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:21,528] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:21,936] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:22,312] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:22,684] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:23,059] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:23,444] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:23,823] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:24,224] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:24,619] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:25,005] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:25,396] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:25,800] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:26,166] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:26,542] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:26,950] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:27,323] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:27,695] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:28,064] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:28,422] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:28,797] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:29,171] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:29,538] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:29,912] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:30,295] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:30,668] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:31,058] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:31,433] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:31,810] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:32,187] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:32,551] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:32,915] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:33,306] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:33,677] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:34,048] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:34,418] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:34,787] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:35,168] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:35,548] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:35,928] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:36,290] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:36,669] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:37,048] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:37,422] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:37,794] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:38,170] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:38,535] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:38,905] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:39,275] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:39,635] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:40,035] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:40,406] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:40,792] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:41,163] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:41,528] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:41,897] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:42,268] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:42,643] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:43,015] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:43,384] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:43,779] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:44,157] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:44,522] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:44,887] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:45,259] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:45,639] ERROR: Exception in poll_loop: module 'datetime' has no attribute 'now'
+[2025-04-20 22:51:45,737] ERROR: Error processing line in sync_an08_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:51:45,737] INFO: [SYNC DONE] Synced file: sync_an08_an08.txt
+[2025-04-20 22:51:45,777] ERROR: Error processing line in sync_an09_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:51:45,778] INFO: [SYNC DONE] Synced file: sync_an09_an08.txt
+[2025-04-20 22:51:45,822] ERROR: Error processing line in sync_an10_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:51:45,822] INFO: [SYNC DONE] Synced file: sync_an10_an08.txt
+[2025-04-20 22:51:45,865] ERROR: Error processing line in sync_an11_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:51:45,865] INFO: [SYNC DONE] Synced file: sync_an11_an08.txt
+[2025-04-20 22:51:45,911] ERROR: Error processing line in sync_an12_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:51:45,912] INFO: [SYNC DONE] Synced file: sync_an12_an08.txt
+[2025-04-20 22:51:45,954] ERROR: Error processing line in sync_an13_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 22:51:46,051] INFO: [SYNC DONE] Synced file: sync_an13_an08.txt
+[2025-04-20 22:51:46,869] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:8665) left
+[2025-04-20 23:06:26,564] INFO: Logged in as: an08
+[2025-04-20 23:06:27,306] INFO: [SYNC LOGIN] Saved 0 new messages for an08
+[2025-04-20 23:06:27,347] INFO: [SYNC LOGIN] Saved 0 new messages for an09
+[2025-04-20 23:06:27,389] INFO: [SYNC LOGIN] Saved 0 new messages for an10
+[2025-04-20 23:06:27,435] INFO: [SYNC LOGIN] Saved 0 new messages for an11
+[2025-04-20 23:06:27,476] INFO: [SYNC LOGIN] Saved 0 new messages for an12
+[2025-04-20 23:06:27,522] INFO: [SYNC LOGIN] Saved 0 new messages for an13
+[2025-04-20 23:06:27,523] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 23:06:27,613] INFO: Tracker response: Peer an08 (10.0.217.86:7670) added
+[2025-04-20 23:06:27,614] INFO: P2P SERVER listening on 10.0.217.86:7670
+[2025-04-20 23:06:27,615] INFO: UDP LISTENER listening on 10.0.217.86:7671 for livestream.
+[2025-04-20 23:06:39,248] INFO: Channel '112' created by an08 (is_private=True)
+[2025-04-20 23:06:40,299] WARNING: [SYNC LOAD] File not found: local_sync\sync_112_an08.txt
+[2025-04-20 23:06:40,344] INFO: [SYNC] SyncManager started for channel '112'
+[2025-04-20 23:06:41,083] WARNING: [SYNC LOAD] File not found: local_sync\sync_112_an08.txt
+[2025-04-20 23:06:42,212] WARNING: [SYNC LOAD] File not found: local_sync\sync_112_an08.txt
+[2025-04-20 23:06:42,729] INFO: Sending message: lo
+[2025-04-20 23:06:42,814] INFO: [INFO] Create new file: local_sync\sync_112_an08.txt
+[2025-04-20 23:06:42,816] INFO: [P2P MESSAGE] an08 -> an08: lo
+[2025-04-20 23:06:42,816] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "lo"}
+[2025-04-20 23:06:42,817] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh '112'
+[2025-04-20 23:06:42,817] INFO: Message from an08 sent in channel '112'
+[2025-04-20 23:06:44,677] INFO: Sending message: t ne
+[2025-04-20 23:06:44,760] INFO: [P2P MESSAGE] an08 -> an08: t ne
+[2025-04-20 23:06:44,761] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "t ne"}
+[2025-04-20 23:06:44,762] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh '112'
+[2025-04-20 23:06:44,763] INFO: Message from an08 sent in channel '112'
+[2025-04-20 23:06:48,625] INFO: [SYNC LOAD] Save message to file: local_sync\sync_112_an08.txt
+[2025-04-20 23:06:48,625] INFO: [SYNC] SyncManager started for channel '112'
+[2025-04-20 23:06:49,357] INFO: [SYNC LOAD] Save message to file: local_sync\sync_112_an08.txt
+[2025-04-20 23:06:49,358] INFO: [SYNC] SyncManager started for channel '112'
+[2025-04-20 23:06:49,554] INFO: [SYNC LOAD] Save message to file: local_sync\sync_112_an08.txt
+[2025-04-20 23:06:49,555] INFO: [SYNC] SyncManager started for channel '112'
+[2025-04-20 23:06:49,728] INFO: [SYNC LOAD] Save message to file: local_sync\sync_112_an08.txt
+[2025-04-20 23:06:49,728] INFO: [SYNC] SyncManager started for channel '112'
+[2025-04-20 23:06:50,524] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an13_an08.txt
+[2025-04-20 23:06:50,524] INFO: [SYNC] SyncManager started for channel 'an13'
+[2025-04-20 23:06:50,996] INFO: [SYNC LOAD] Save message to file: local_sync\sync_112_an08.txt
+[2025-04-20 23:06:50,997] INFO: [SYNC] SyncManager started for channel '112'
+[2025-04-20 23:06:52,785] ERROR: Error processing line in sync_112_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 23:06:52,878] INFO: [SYNC DONE] Synced file: sync_112_an08.txt
+[2025-04-20 23:06:52,921] ERROR: Error processing line in sync_an08_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 23:06:52,921] INFO: [SYNC DONE] Synced file: sync_an08_an08.txt
+[2025-04-20 23:06:52,961] ERROR: Error processing line in sync_an09_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 23:06:52,962] INFO: [SYNC DONE] Synced file: sync_an09_an08.txt
+[2025-04-20 23:06:53,002] ERROR: Error processing line in sync_an10_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 23:06:53,004] INFO: [SYNC DONE] Synced file: sync_an10_an08.txt
+[2025-04-20 23:06:53,043] ERROR: Error processing line in sync_an11_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 23:06:53,044] INFO: [SYNC DONE] Synced file: sync_an11_an08.txt
+[2025-04-20 23:06:53,084] ERROR: Error processing line in sync_an12_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 23:06:53,084] INFO: [SYNC DONE] Synced file: sync_an12_an08.txt
+[2025-04-20 23:06:53,129] ERROR: Error processing line in sync_an13_an08.txt: not enough values to unpack (expected 2, got 1)
+[2025-04-20 23:06:53,130] INFO: [SYNC DONE] Synced file: sync_an13_an08.txt
+[2025-04-20 23:06:54,156] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:7670) left
+[2025-04-20 23:09:16,331] INFO: Logged in as: an08
+[2025-04-20 23:09:17,316] INFO: [SYNC LOGIN] Saved 0 new messages for an08
+[2025-04-20 23:09:17,355] INFO: [SYNC LOGIN] Saved 0 new messages for an09
+[2025-04-20 23:09:17,400] INFO: [SYNC LOGIN] Saved 0 new messages for an10
+[2025-04-20 23:09:17,522] INFO: [SYNC LOGIN] Saved 0 new messages for an11
+[2025-04-20 23:09:17,564] INFO: [SYNC LOGIN] Saved 0 new messages for an12
+[2025-04-20 23:09:17,607] INFO: [SYNC LOGIN] Saved 0 new messages for an13
+[2025-04-20 23:09:17,736] INFO: [SYNC LOGIN] Saved 0 new messages for 112
+[2025-04-20 23:09:17,736] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 23:09:17,933] INFO: Tracker response: Peer an08 (10.0.217.86:7625) added
+[2025-04-20 23:09:17,935] INFO: P2P SERVER listening on 10.0.217.86:7625
+[2025-04-20 23:09:17,935] INFO: UDP LISTENER listening on 10.0.217.86:7626 for livestream.
+[2025-04-20 23:09:22,385] INFO: Channel '121212' created by an08 (is_private=True)
+[2025-04-20 23:09:24,035] INFO: [SYNC] SyncManager started for channel '121212'
+[2025-04-20 23:09:24,634] WARNING: [SYNC LOAD] File not found: local_sync\sync_121212_an08.txt
+[2025-04-20 23:09:25,406] WARNING: [SYNC LOAD] File not found: local_sync\sync_121212_an08.txt
+[2025-04-20 23:09:25,684] INFO: Sending message: lo ae
+[2025-04-20 23:09:25,775] INFO: [INFO] Create new file: local_sync\sync_121212_an08.txt
+[2025-04-20 23:09:25,776] INFO: [P2P MESSAGE] an08 -> an08: lo ae
+[2025-04-20 23:09:25,777] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "lo ae"}
+[2025-04-20 23:09:25,777] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh '121212'
+[2025-04-20 23:09:25,778] INFO: Message from an08 sent in channel '121212'
+[2025-04-20 23:09:28,754] INFO: [SYNC DONE] Synced file: sync_112_an08.txt
+[2025-04-20 23:09:28,843] INFO: [SYNC DONE] Synced file: sync_121212_an08.txt
+[2025-04-20 23:09:28,893] INFO: [SYNC DONE] Synced file: sync_an08_an08.txt
+[2025-04-20 23:09:28,936] INFO: [SYNC DONE] Synced file: sync_an09_an08.txt
+[2025-04-20 23:09:28,978] INFO: [SYNC DONE] Synced file: sync_an10_an08.txt
+[2025-04-20 23:09:29,020] INFO: [SYNC DONE] Synced file: sync_an11_an08.txt
+[2025-04-20 23:09:29,062] INFO: [SYNC DONE] Synced file: sync_an12_an08.txt
+[2025-04-20 23:09:29,105] INFO: [SYNC DONE] Synced file: sync_an13_an08.txt
+[2025-04-20 23:09:29,828] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:7625) left
+[2025-04-20 23:09:45,850] INFO: Logged in as: an08
+[2025-04-20 23:09:46,515] INFO: [SYNC LOGIN] Saved 0 new messages for an08
+[2025-04-20 23:09:46,560] INFO: [SYNC LOGIN] Saved 0 new messages for an09
+[2025-04-20 23:09:46,601] INFO: [SYNC LOGIN] Saved 0 new messages for an10
+[2025-04-20 23:09:46,642] INFO: [SYNC LOGIN] Saved 0 new messages for an11
+[2025-04-20 23:09:46,686] INFO: [SYNC LOGIN] Saved 0 new messages for an12
+[2025-04-20 23:09:46,733] INFO: [SYNC LOGIN] Saved 0 new messages for an13
+[2025-04-20 23:09:46,782] INFO: [SYNC LOGIN] Saved 0 new messages for 112
+[2025-04-20 23:09:46,829] INFO: [SYNC LOGIN] Saved 0 new messages for 121212
+[2025-04-20 23:09:46,830] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-20 23:09:46,922] INFO: Tracker response: Peer an08 (10.0.217.86:7777) added
+[2025-04-20 23:09:46,923] INFO: P2P SERVER listening on 10.0.217.86:7777
+[2025-04-20 23:09:46,923] INFO: UDP LISTENER listening on 10.0.217.86:7778 for livestream.
+[2025-04-20 23:09:50,317] INFO: [SYNC LOAD] Save message to file: local_sync\sync_121212_an08.txt
+[2025-04-20 23:09:50,318] INFO: [SYNC] SyncManager started for channel '121212'
+[2025-04-20 23:09:51,994] INFO: Sending message: lo
+[2025-04-20 23:09:52,084] INFO: [P2P MESSAGE] an08 -> an08: lo
+[2025-04-20 23:09:52,085] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "lo"}
+[2025-04-20 23:09:52,085] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh '121212'
+[2025-04-20 23:09:52,087] INFO: Message from an08 sent in channel '121212'
+[2025-04-20 23:09:53,467] INFO: [SYNC LOAD] Save message to file: local_sync\sync_121212_an08.txt
+[2025-04-20 23:09:53,468] INFO: [SYNC] SyncManager started for channel '121212'
+[2025-04-20 23:09:56,263] INFO: Sending message: alo
+[2025-04-20 23:09:56,347] INFO: [P2P MESSAGE] an08 -> an08: alo
+[2025-04-20 23:09:56,348] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "alo"}
+[2025-04-20 23:09:56,349] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh '121212'
+[2025-04-20 23:09:56,349] INFO: Message from an08 sent in channel '121212'
+[2025-04-20 23:10:06,382] INFO: [SYNC LOAD] Save message to file: local_sync\sync_121212_an08.txt
+[2025-04-20 23:10:06,383] INFO: [SYNC] SyncManager started for channel '121212'
+[2025-04-20 23:10:06,873] INFO: [SYNC LOAD] Save message to file: local_sync\sync_121212_an08.txt
+[2025-04-20 23:10:06,873] INFO: [SYNC] SyncManager started for channel '121212'
+[2025-04-20 23:10:09,653] INFO: Sending message: lolo
+[2025-04-20 23:10:09,746] INFO: [P2P MESSAGE] an08 -> an08: lolo
+[2025-04-20 23:10:09,747] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "lolo"}
+[2025-04-20 23:10:09,749] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh '121212'
+[2025-04-20 23:10:09,749] INFO: Message from an08 sent in channel '121212'
+[2025-04-20 23:10:11,482] INFO: [SYNC LOAD] Save message to file: local_sync\sync_112_an08.txt
+[2025-04-20 23:10:11,483] INFO: [SYNC] SyncManager started for channel '112'
+[2025-04-20 23:10:12,536] INFO: [SYNC LOAD] Save message to file: local_sync\sync_121212_an08.txt
+[2025-04-20 23:10:12,537] INFO: [SYNC] SyncManager started for channel '121212'
+[2025-04-20 23:10:13,217] INFO: [SYNC LOAD] Save message to file: local_sync\sync_121212_an08.txt
+[2025-04-20 23:10:13,219] INFO: [SYNC] SyncManager started for channel '121212'
+[2025-04-20 23:10:25,343] INFO: Logged in as: an09
+[2025-04-20 23:10:26,035] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-20 23:10:26,129] INFO: Tracker response: Peer an09 (10.0.217.86:7727) added
+[2025-04-20 23:10:26,130] INFO: P2P SERVER listening on 10.0.217.86:7727
+[2025-04-20 23:10:26,130] INFO: UDP LISTENER listening on 10.0.217.86:7728 for livestream.
+[2025-04-20 23:10:29,132] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 23:10:29,963] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 23:10:30,825] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 23:10:31,653] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 23:10:32,449] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 23:10:33,255] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 23:10:34,064] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 23:10:35,181] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 23:10:35,899] INFO: User an09 requested to join private channel '121212'
+[2025-04-20 23:10:35,984] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 23:10:36,791] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-20 23:10:36,874] INFO: User an09 approved to join channel '121212' by an08
+[2025-04-20 23:10:37,926] INFO: [SYNC LOAD] Save message to file: local_sync\sync_121212_an08.txt
+[2025-04-20 23:10:40,078] INFO: Sending message: alo
+[2025-04-20 23:10:40,170] INFO: [P2P MESSAGE] an08 -> an08: alo
+[2025-04-20 23:10:40,171] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "alo"}
+[2025-04-20 23:10:40,171] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh '121212'
+[2025-04-20 23:10:40,172] INFO: Message from an08 sent in channel '121212'
+[2025-04-20 23:10:43,554] INFO: Sending message: thays k
+[2025-04-20 23:10:43,651] INFO: [P2P MESSAGE] an09 -> an08: thays k
+[2025-04-20 23:10:43,651] INFO: Sending message: {"type": "chat", "sender": "an09", "message": "thays k"}
+[2025-04-20 23:10:43,652] INFO: Tin nhắn từ an09 đã được gửi qua peer của chủ kênh và lưu vào kênh '121212'
+[2025-04-20 23:10:43,652] INFO: Message from an09 sent in channel '121212'
+[2025-04-20 23:10:47,149] INFO: [SYNC LOAD] Save message to file: local_sync\sync_121212_an08.txt
+[2025-04-20 23:10:50,956] INFO: Sending message: thay
+[2025-04-20 23:10:51,043] INFO: [P2P MESSAGE] an08 -> an08: thay
+[2025-04-20 23:10:51,044] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "thay"}
+[2025-04-20 23:10:51,045] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh '121212'
+[2025-04-20 23:10:51,045] INFO: Message from an08 sent in channel '121212'
+[2025-04-20 23:10:52,993] INFO: [SYNC DONE] Synced file: sync_112_an08.txt
+[2025-04-20 23:10:53,335] INFO: [SYNC DONE] Synced file: sync_121212_an08.txt
+[2025-04-20 23:10:53,389] INFO: [SYNC DONE] Synced file: sync_an08_an08.txt
+[2025-04-20 23:10:53,436] INFO: [SYNC DONE] Synced file: sync_an09_an08.txt
+[2025-04-20 23:10:53,480] INFO: [SYNC DONE] Synced file: sync_an10_an08.txt
+[2025-04-20 23:10:53,527] INFO: [SYNC DONE] Synced file: sync_an11_an08.txt
+[2025-04-20 23:10:53,575] INFO: [SYNC DONE] Synced file: sync_an12_an08.txt
+[2025-04-20 23:10:53,624] INFO: [SYNC DONE] Synced file: sync_an13_an08.txt
+[2025-04-20 23:10:54,980] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:7777) left
+[2025-04-20 23:10:57,264] WARNING: [SYNC SKIPPED] User is not owner of channel: 112
+[2025-04-20 23:10:57,265] WARNING: [SYNC SKIPPED] User is not owner of channel: 121212
+[2025-04-20 23:10:57,265] WARNING: [SYNC SKIPPED] User is not owner of channel: an08
+[2025-04-20 23:10:57,266] WARNING: [SYNC SKIPPED] User is not owner of channel: an09
+[2025-04-20 23:10:57,266] WARNING: [SYNC SKIPPED] User is not owner of channel: an10
+[2025-04-20 23:10:57,266] WARNING: [SYNC SKIPPED] User is not owner of channel: an11
+[2025-04-20 23:10:57,267] WARNING: [SYNC SKIPPED] User is not owner of channel: an12
+[2025-04-20 23:10:57,267] WARNING: [SYNC SKIPPED] User is not owner of channel: an13
+[2025-04-20 23:10:58,328] INFO: Tracker response on LEAVE: Peer an09 (10.0.217.86:7727) left
+[2025-04-21 09:31:59,199] INFO: Logged in as: an08
+[2025-04-21 09:32:00,352] INFO: [SYNC LOGIN] Saved 0 new messages for an08
+[2025-04-21 09:32:00,398] INFO: [SYNC LOGIN] Saved 0 new messages for an09
+[2025-04-21 09:32:00,539] INFO: [SYNC LOGIN] Saved 0 new messages for an10
+[2025-04-21 09:32:00,691] INFO: [SYNC LOGIN] Saved 0 new messages for an11
+[2025-04-21 09:32:00,738] INFO: [SYNC LOGIN] Saved 0 new messages for an12
+[2025-04-21 09:32:00,894] INFO: [SYNC LOGIN] Saved 0 new messages for an13
+[2025-04-21 09:32:00,937] INFO: [SYNC LOGIN] Saved 0 new messages for 112
+[2025-04-21 09:32:00,982] INFO: [SYNC LOGIN] Saved 0 new messages for 121212
+[2025-04-21 09:32:00,982] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 09:32:01,181] INFO: Tracker response: Peer an08 (10.0.217.86:7514) added
+[2025-04-21 09:32:01,182] INFO: P2P SERVER listening on 10.0.217.86:7514
+[2025-04-21 09:32:01,183] INFO: UDP LISTENER listening on 10.0.217.86:7515 for livestream.
+[2025-04-21 09:32:07,169] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an08_an08.txt
+[2025-04-21 09:32:07,169] INFO: [SYNC] SyncManager started for channel 'an08'
+[2025-04-21 09:32:09,831] ERROR: poll_loop response error: Channel not found
+[2025-04-21 09:32:09,859] INFO: Channel 'an08' deleted by an08
+[2025-04-21 09:32:10,946] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an09_an08.txt
+[2025-04-21 09:32:10,946] INFO: [SYNC] SyncManager started for channel 'an09'
+[2025-04-21 09:32:12,855] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an09_an08.txt
+[2025-04-21 09:32:12,855] INFO: [SYNC] SyncManager started for channel 'an09'
+[2025-04-21 09:32:14,126] INFO: Channel 'an09' deleted by an08
+[2025-04-21 09:32:14,216] WARNING: poll_loop: Channel data is None for channel: an09
+[2025-04-21 09:32:14,217] ERROR: Exception in poll_loop: 'NoneType' object has no attribute 'get'
+[2025-04-21 09:32:14,918] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an10_an08.txt
+[2025-04-21 09:32:14,918] INFO: [SYNC] SyncManager started for channel 'an10'
+[2025-04-21 09:32:15,962] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an10_an08.txt
+[2025-04-21 09:32:15,963] INFO: [SYNC] SyncManager started for channel 'an10'
+[2025-04-21 09:32:17,295] ERROR: poll_loop response error: Channel not found
+[2025-04-21 09:32:17,298] INFO: Channel 'an10' deleted by an08
+[2025-04-21 09:32:18,145] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an11_an08.txt
+[2025-04-21 09:32:18,145] INFO: [SYNC] SyncManager started for channel 'an11'
+[2025-04-21 09:32:18,318] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an11_an08.txt
+[2025-04-21 09:32:18,319] INFO: [SYNC] SyncManager started for channel 'an11'
+[2025-04-21 09:32:18,501] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an11_an08.txt
+[2025-04-21 09:32:18,502] INFO: [SYNC] SyncManager started for channel 'an11'
+[2025-04-21 09:32:20,194] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an11_an08.txt
+[2025-04-21 09:32:20,194] INFO: [SYNC] SyncManager started for channel 'an11'
+[2025-04-21 09:32:21,631] INFO: Channel 'an11' deleted by an08
+[2025-04-21 09:32:21,736] WARNING: poll_loop: Channel data is None for channel: None
+[2025-04-21 09:32:21,737] ERROR: Exception in poll_loop: 'NoneType' object has no attribute 'get'
+[2025-04-21 09:32:22,434] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an12_an08.txt
+[2025-04-21 09:32:22,435] INFO: [SYNC] SyncManager started for channel 'an12'
+[2025-04-21 09:32:23,444] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an12_an08.txt
+[2025-04-21 09:32:23,444] INFO: [SYNC] SyncManager started for channel 'an12'
+[2025-04-21 09:32:24,777] WARNING: poll_loop: Channel data is None for channel: an12
+[2025-04-21 09:32:24,777] ERROR: Exception in poll_loop: 'NoneType' object has no attribute 'get'
+[2025-04-21 09:32:24,822] INFO: Channel 'an12' deleted by an08
+[2025-04-21 09:32:25,473] INFO: [SYNC LOAD] Save message to file: local_sync\sync_121212_an08.txt
+[2025-04-21 09:32:25,473] INFO: [SYNC] SyncManager started for channel '121212'
+[2025-04-21 09:32:25,964] INFO: [SYNC LOAD] Save message to file: local_sync\sync_121212_an08.txt
+[2025-04-21 09:32:25,965] INFO: [SYNC] SyncManager started for channel '121212'
+[2025-04-21 09:32:27,474] INFO: Channel '121212' deleted by an08
+[2025-04-21 09:32:28,327] INFO: [SYNC LOAD] Save message to file: local_sync\sync_an13_an08.txt
+[2025-04-21 09:32:28,328] INFO: [SYNC] SyncManager started for channel 'an13'
+[2025-04-21 09:32:30,204] INFO: Channel 'an13' deleted by an08
+[2025-04-21 09:32:30,781] WARNING: poll_loop: Channel data is None for channel: an13
+[2025-04-21 09:32:30,781] ERROR: Exception in poll_loop: 'NoneType' object has no attribute 'get'
+[2025-04-21 09:32:31,058] INFO: [SYNC LOAD] Save message to file: local_sync\sync_112_an08.txt
+[2025-04-21 09:32:31,059] INFO: [SYNC] SyncManager started for channel '112'
+[2025-04-21 09:32:31,655] INFO: [SYNC LOAD] Save message to file: local_sync\sync_112_an08.txt
+[2025-04-21 09:32:31,655] INFO: [SYNC] SyncManager started for channel '112'
+[2025-04-21 09:32:32,786] INFO: Channel '112' deleted by an08
+[2025-04-21 09:33:42,834] INFO: Status changed to Invisible
+[2025-04-21 09:33:47,669] INFO: Channel '123' created by an08 (is_private=True)
+[2025-04-21 09:33:48,710] INFO: [SYNC] SyncManager started for channel '123'
+[2025-04-21 09:33:49,264] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:33:50,006] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:33:50,795] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:33:51,583] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:33:52,350] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:33:53,134] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:33:53,937] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:33:54,714] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:33:55,500] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:33:56,290] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:33:56,755] INFO: Sending message: hello
+[2025-04-21 09:33:57,042] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:33:57,812] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:33:58,610] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:33:59,388] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:00,164] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:00,935] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:01,724] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:02,505] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:03,269] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:04,008] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:04,760] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:05,543] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:06,327] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:07,098] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:07,876] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:08,665] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:09,436] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:10,207] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:10,995] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:11,756] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:12,788] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:13,809] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:14,552] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:15,304] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:16,074] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:16,823] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:17,606] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:18,355] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:19,109] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:19,873] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:20,626] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:21,392] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:22,182] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:22,923] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:23,674] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:24,431] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:25,220] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:25,961] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:26,701] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:27,464] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:28,225] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:28,985] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:29,751] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:30,506] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:31,277] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:32,066] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:32,856] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:33,655] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:34,447] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:35,233] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:36,013] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:36,783] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:37,524] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:38,284] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:39,076] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:39,602] INFO: Sending message: alo
+[2025-04-21 09:34:39,840] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:40,620] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:41,364] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:42,113] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:42,867] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:43,610] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:44,354] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:45,100] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:45,874] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:46,632] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:47,381] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:48,131] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:48,886] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:49,633] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:50,388] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:51,128] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:51,877] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:52,894] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:53,697] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:54,452] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:55,189] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:55,930] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:56,699] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:57,455] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:58,210] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:58,969] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:34:59,717] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:00,515] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:01,282] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:02,077] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:02,864] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:03,648] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:04,421] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:05,194] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:06,002] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:06,818] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:07,598] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:08,375] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:09,155] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:09,936] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:10,721] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:11,497] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:12,256] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:13,298] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:14,068] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:14,856] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:15,636] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:16,427] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:17,208] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:17,979] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:18,758] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:19,511] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:20,286] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:21,063] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:21,851] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:22,624] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:23,406] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:24,179] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:24,961] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:25,748] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:26,523] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:27,292] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:28,075] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:28,847] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:29,639] WARNING: [SYNC LOAD] File not found: local_sync\sync_123_an08.txt
+[2025-04-21 09:35:30,840] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:7514) left
+[2025-04-21 09:53:01,205] INFO: Logged in as: an08
+[2025-04-21 09:53:02,166] INFO: [SYNC LOGIN] Saved 0 new messages for 123
+[2025-04-21 09:53:02,167] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 09:53:02,251] INFO: Tracker response: Peer an08 (10.0.217.86:6942) added
+[2025-04-21 09:53:02,252] INFO: P2P SERVER listening on 10.0.217.86:6942
+[2025-04-21 09:53:02,252] INFO: UDP LISTENER listening on 10.0.217.86:6943 for livestream.
+[2025-04-21 09:53:03,598] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an08.txt
+[2025-04-21 09:53:03,598] INFO: [SYNC] SyncManager started for channel '123'
+[2025-04-21 09:53:05,425] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an08.txt
+[2025-04-21 09:53:05,426] INFO: [SYNC] SyncManager started for channel '123'
+[2025-04-21 09:53:06,890] INFO: Sending message: hello
+[2025-04-21 09:53:06,984] INFO: [P2P MESSAGE] an08 -> an08: hello
+[2025-04-21 09:53:06,984] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "hello"}
+[2025-04-21 09:53:06,984] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh '123'
+[2025-04-21 09:53:06,987] INFO: Message from an08 sent in channel '123'
+[2025-04-21 09:53:11,398] INFO: Status changed to Invisible
+[2025-04-21 09:53:13,054] INFO: Sending message: alo
+[2025-04-21 09:53:13,154] INFO: [P2P MESSAGE] an08 -> an08: alo
+[2025-04-21 09:53:13,154] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "alo"}
+[2025-04-21 09:53:13,155] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh '123'
+[2025-04-21 09:53:13,155] INFO: Message from an08 sent in channel '123'
+[2025-04-21 09:53:21,903] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an08.txt
+[2025-04-21 09:53:21,904] INFO: [SYNC] SyncManager started for channel '123'
+[2025-04-21 09:53:24,424] INFO: Sending message: alaloa
+[2025-04-21 09:53:24,515] INFO: [P2P MESSAGE] an08 -> an08: alaloa
+[2025-04-21 09:53:24,516] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "alaloa"}
+[2025-04-21 09:53:24,516] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh '123'
+[2025-04-21 09:53:24,516] INFO: Message from an08 sent in channel '123'
+[2025-04-21 09:53:27,859] INFO: Sending message: my name an 08
+[2025-04-21 09:53:27,951] INFO: [P2P MESSAGE] an08 -> an08: my name an 08
+[2025-04-21 09:53:27,951] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "my name an 08"}
+[2025-04-21 09:53:27,952] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh '123'
+[2025-04-21 09:53:27,952] INFO: Message from an08 sent in channel '123'
+[2025-04-21 09:53:30,169] INFO: [SYNC DONE] Synced file: sync_123_an08.txt
+[2025-04-21 09:53:31,141] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:6942) left
+[2025-04-21 10:56:43,468] INFO: Logged in as: an08
+[2025-04-21 10:56:44,019] INFO: [SYNC LOGIN] Saved 0 new messages for 123
+[2025-04-21 10:56:44,020] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 10:56:44,103] INFO: Tracker response: Peer an08 (10.0.217.86:7913) added
+[2025-04-21 10:56:44,106] INFO: UDP LISTENER listening on 10.0.217.86:7914 for livestream.
+[2025-04-21 10:56:44,106] INFO: P2P SERVER listening on 10.0.217.86:7913
+[2025-04-21 10:56:45,520] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an08.txt
+[2025-04-21 10:56:45,520] INFO: [SYNC] SyncManager started for channel '123'
+[2025-04-21 10:56:46,958] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an08.txt
+[2025-04-21 10:56:46,959] INFO: [SYNC] SyncManager started for channel '123'
+[2025-04-21 10:56:51,225] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an08.txt
+[2025-04-21 10:56:51,225] INFO: [SYNC] SyncManager started for channel '123'
+[2025-04-21 10:56:52,526] INFO: [SYNC DONE] Synced file: sync_123_an08.txt
+[2025-04-21 10:56:53,183] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:7913) left
+[2025-04-21 11:00:41,716] INFO: Logged in as: an08
+[2025-04-21 11:00:42,598] INFO: [SYNC LOGIN] Saved 0 new messages for 123
+[2025-04-21 11:00:42,598] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-21 11:00:42,689] INFO: Tracker response: Peer an08 (10.0.217.86:7828) added
+[2025-04-21 11:00:42,690] INFO: UDP LISTENER listening on 10.0.217.86:7829 for livestream.
+[2025-04-21 11:00:42,691] INFO: P2P SERVER listening on 10.0.217.86:7828
+[2025-04-21 11:00:44,029] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an08.txt
+[2025-04-21 11:00:44,029] INFO: [SYNC] SyncManager started for channel '123'
+[2025-04-21 11:00:45,214] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an08.txt
+[2025-04-21 11:00:45,214] INFO: [SYNC] SyncManager started for channel '123'
+[2025-04-21 11:00:46,129] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an08.txt
+[2025-04-21 11:00:46,130] INFO: [SYNC] SyncManager started for channel '123'
+[2025-04-21 11:00:47,143] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an08.txt
+[2025-04-21 11:00:47,144] INFO: [SYNC] SyncManager started for channel '123'
+[2025-04-21 11:00:47,738] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an08.txt
+[2025-04-21 11:00:47,738] INFO: [SYNC] SyncManager started for channel '123'
+[2025-04-21 11:00:48,573] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an08.txt
+[2025-04-21 11:00:48,573] INFO: [SYNC] SyncManager started for channel '123'
+[2025-04-21 11:01:23,970] INFO: Logged in as Viewer: an1
+[2025-04-21 11:01:23,971] INFO: User 'an1' logging in (visitor mode).
+[2025-04-21 11:01:24,011] INFO: Tracker response: User not logged in
+[2025-04-21 11:01:24,012] INFO: P2P SERVER listening on 10.0.217.86:7423
+[2025-04-21 11:01:24,012] INFO: UDP LISTENER listening on 10.0.217.86:7424 for livestream.
+[2025-04-21 11:01:24,152] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:24,322] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:24,954] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:25,581] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:26,219] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:26,856] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:27,502] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:27,828] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an08.txt
+[2025-04-21 11:01:27,828] INFO: [SYNC] SyncManager started for channel '123'
+[2025-04-21 11:01:28,408] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:29,044] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:29,682] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:29,815] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:30,460] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:30,592] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:31,224] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:31,355] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:31,481] INFO: [SYNC LOAD] Save message to file: local_sync\sync_123_an08.txt
+[2025-04-21 11:01:31,482] INFO: [SYNC] SyncManager started for channel '123'
+[2025-04-21 11:01:31,992] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:32,133] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:32,773] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:32,904] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:33,572] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:33,703] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:34,335] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:34,468] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:35,106] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:35,234] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:35,879] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:36,007] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:36,675] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:36,814] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:37,451] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:37,617] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:38,251] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:38,380] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:38,607] INFO: Channel 'publicview' created by an08 (is_private=False)
+[2025-04-21 11:01:39,017] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:39,163] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:39,830] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:39,974] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:40,675] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:40,812] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:41,444] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:41,574] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:42,214] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:42,346] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:42,980] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:43,119] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:43,770] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:43,906] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:44,537] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:44,674] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:45,316] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:45,452] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:46,093] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:46,252] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:46,917] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:47,063] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:47,704] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:48,035] INFO: Channel 'publicnoview' created by an08 (is_private=False)
+[2025-04-21 11:01:48,106] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:48,746] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:48,872] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:49,516] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:49,644] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:50,324] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:50,427] INFO: [SYNC] SyncManager started for channel 'publicview'
+[2025-04-21 11:01:50,450] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:50,493] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicview_an08.txt
+[2025-04-21 11:01:50,994] INFO: [SYNC] SyncManager started for channel 'publicnoview'
+[2025-04-21 11:01:51,078] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:51,211] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:51,247] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicnoview_an08.txt
+[2025-04-21 11:01:51,844] ERROR: poll_loop response error: This is a private channel. You do not have permission to see old messages.
+[2025-04-21 11:01:51,979] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:51,988] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicnoview_an08.txt
+[2025-04-21 11:01:52,611] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicview_an08.txt
+[2025-04-21 11:01:52,740] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:52,746] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicnoview_an08.txt
+[2025-04-21 11:01:53,528] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicnoview_an08.txt
+[2025-04-21 11:01:53,704] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicview_an08.txt
+[2025-04-21 11:01:53,835] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:54,267] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicnoview_an08.txt
+[2025-04-21 11:01:54,468] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicview_an08.txt
+[2025-04-21 11:01:54,599] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:55,012] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicnoview_an08.txt
+[2025-04-21 11:01:55,241] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicview_an08.txt
+[2025-04-21 11:01:55,374] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:55,758] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicnoview_an08.txt
+[2025-04-21 11:01:56,016] ERROR: poll_loop response error: This channel does not allow visitor viewing operation
+[2025-04-21 11:01:56,154] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:56,531] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicnoview_an08.txt
+[2025-04-21 11:01:56,794] ERROR: poll_loop response error: This channel does not allow visitor viewing operation
+[2025-04-21 11:01:56,922] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:57,278] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicnoview_an08.txt
+[2025-04-21 11:01:57,552] ERROR: poll_loop response error: This channel does not allow visitor viewing operation
+[2025-04-21 11:01:57,679] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:58,020] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicnoview_an08.txt
+[2025-04-21 11:01:58,318] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicview_an08.txt
+[2025-04-21 11:01:58,448] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:58,770] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicnoview_an08.txt
+[2025-04-21 11:01:59,108] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicview_an08.txt
+[2025-04-21 11:01:59,236] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:01:59,530] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicnoview_an08.txt
+[2025-04-21 11:01:59,878] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicview_an08.txt
+[2025-04-21 11:02:00,005] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:00,275] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicnoview_an08.txt
+[2025-04-21 11:02:00,647] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicview_an08.txt
+[2025-04-21 11:02:00,779] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:00,888] INFO: [SYNC] SyncManager started for channel 'publicview'
+[2025-04-21 11:02:01,019] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicview_an08.txt
+[2025-04-21 11:02:01,410] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicview_an08.txt
+[2025-04-21 11:02:01,541] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:01,786] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicview_an08.txt
+[2025-04-21 11:02:02,187] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicview_an08.txt
+[2025-04-21 11:02:02,316] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:02,542] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicview_an08.txt
+[2025-04-21 11:02:02,905] INFO: Sending message: alo
+[2025-04-21 11:02:02,976] WARNING: [SYNC LOAD] File not found: local_sync\sync_publicview_an08.txt
+[2025-04-21 11:02:02,986] INFO: [INFO] Create new file: local_sync\sync_publicview_an08.txt
+[2025-04-21 11:02:02,988] INFO: [P2P MESSAGE] an08 -> an08: alo
+[2025-04-21 11:02:02,988] INFO: Sending message: {"type": "chat", "sender": "an08", "message": "alo"}
+[2025-04-21 11:02:02,989] INFO: Tin nhắn từ an08 đã được gửi qua peer của chủ kênh và lưu vào kênh 'publicview'
+[2025-04-21 11:02:02,989] INFO: Message from an08 sent in channel 'publicview'
+[2025-04-21 11:02:03,104] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:03,868] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:04,620] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:05,374] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:06,145] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:07,450] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:08,239] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:08,570] INFO: Starting livestream.
+[2025-04-21 11:02:08,806] INFO: Peer list retrieved:
+[2025-04-21 11:02:08,806] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:08,938] INFO: Peer list retrieved:
+[2025-04-21 11:02:08,938] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:08,995] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:09,045] INFO: Peer list retrieved:
+[2025-04-21 11:02:09,045] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:09,158] INFO: Peer list retrieved:
+[2025-04-21 11:02:09,158] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:09,266] INFO: Peer list retrieved:
+[2025-04-21 11:02:09,266] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:09,373] INFO: Peer list retrieved:
+[2025-04-21 11:02:09,373] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:09,483] INFO: Peer list retrieved:
+[2025-04-21 11:02:09,483] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:09,589] INFO: Peer list retrieved:
+[2025-04-21 11:02:09,589] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:09,699] INFO: Peer list retrieved:
+[2025-04-21 11:02:09,699] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:09,760] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:09,804] INFO: Peer list retrieved:
+[2025-04-21 11:02:09,804] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:09,914] INFO: Peer list retrieved:
+[2025-04-21 11:02:09,915] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:10,023] INFO: Peer list retrieved:
+[2025-04-21 11:02:10,023] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:10,132] INFO: Peer list retrieved:
+[2025-04-21 11:02:10,132] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:10,242] INFO: Peer list retrieved:
+[2025-04-21 11:02:10,242] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:10,352] INFO: Peer list retrieved:
+[2025-04-21 11:02:10,352] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:10,458] INFO: Peer list retrieved:
+[2025-04-21 11:02:10,458] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:10,538] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:11,093] INFO: Peer list retrieved:
+[2025-04-21 11:02:11,094] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:11,200] INFO: Peer list retrieved:
+[2025-04-21 11:02:11,202] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:11,307] INFO: Peer list retrieved:
+[2025-04-21 11:02:11,307] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:11,320] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:11,415] INFO: Peer list retrieved:
+[2025-04-21 11:02:11,415] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:11,523] INFO: Peer list retrieved:
+[2025-04-21 11:02:11,523] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:11,632] INFO: Peer list retrieved:
+[2025-04-21 11:02:11,632] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:11,739] INFO: Peer list retrieved:
+[2025-04-21 11:02:11,739] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:11,849] INFO: Peer list retrieved:
+[2025-04-21 11:02:11,849] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:11,955] INFO: Peer list retrieved:
+[2025-04-21 11:02:11,956] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:12,062] INFO: Peer list retrieved:
+[2025-04-21 11:02:12,062] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:12,093] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:12,168] INFO: Peer list retrieved:
+[2025-04-21 11:02:12,169] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:12,276] INFO: Peer list retrieved:
+[2025-04-21 11:02:12,276] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:12,384] INFO: Peer list retrieved:
+[2025-04-21 11:02:12,385] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:12,494] INFO: Peer list retrieved:
+[2025-04-21 11:02:12,494] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:12,599] INFO: Peer list retrieved:
+[2025-04-21 11:02:12,600] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:12,707] INFO: Peer list retrieved:
+[2025-04-21 11:02:12,707] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:12,815] INFO: Peer list retrieved:
+[2025-04-21 11:02:12,815] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:12,852] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:12,921] INFO: Peer list retrieved:
+[2025-04-21 11:02:12,921] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:13,029] INFO: Peer list retrieved:
+[2025-04-21 11:02:13,029] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:13,141] INFO: Peer list retrieved:
+[2025-04-21 11:02:13,142] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:13,249] INFO: Peer list retrieved:
+[2025-04-21 11:02:13,249] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:13,356] INFO: Peer list retrieved:
+[2025-04-21 11:02:13,356] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:13,464] INFO: Peer list retrieved:
+[2025-04-21 11:02:13,464] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:13,572] INFO: Peer list retrieved:
+[2025-04-21 11:02:13,573] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:13,637] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:13,680] INFO: Peer list retrieved:
+[2025-04-21 11:02:13,680] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:13,790] INFO: Peer list retrieved:
+[2025-04-21 11:02:13,790] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:13,899] INFO: Peer list retrieved:
+[2025-04-21 11:02:13,900] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:14,009] INFO: Peer list retrieved:
+[2025-04-21 11:02:14,009] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:14,120] INFO: Peer list retrieved:
+[2025-04-21 11:02:14,120] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:14,409] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:14,716] INFO: Peer list retrieved:
+[2025-04-21 11:02:14,716] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:14,823] INFO: Peer list retrieved:
+[2025-04-21 11:02:14,823] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:14,934] INFO: Peer list retrieved:
+[2025-04-21 11:02:14,934] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:15,043] INFO: Peer list retrieved:
+[2025-04-21 11:02:15,043] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:15,154] INFO: Peer list retrieved:
+[2025-04-21 11:02:15,154] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:15,189] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:15,261] INFO: Peer list retrieved:
+[2025-04-21 11:02:15,261] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:15,370] INFO: Peer list retrieved:
+[2025-04-21 11:02:15,372] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:15,481] INFO: Peer list retrieved:
+[2025-04-21 11:02:15,481] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:15,591] INFO: Peer list retrieved:
+[2025-04-21 11:02:15,591] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:15,699] INFO: Peer list retrieved:
+[2025-04-21 11:02:15,699] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:15,808] INFO: Peer list retrieved:
+[2025-04-21 11:02:15,808] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:15,916] INFO: Peer list retrieved:
+[2025-04-21 11:02:15,917] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:15,950] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:16,023] INFO: Peer list retrieved:
+[2025-04-21 11:02:16,023] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:16,133] INFO: Peer list retrieved:
+[2025-04-21 11:02:16,134] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:16,247] INFO: Peer list retrieved:
+[2025-04-21 11:02:16,247] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:16,356] INFO: Peer list retrieved:
+[2025-04-21 11:02:16,356] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:16,468] INFO: Peer list retrieved:
+[2025-04-21 11:02:16,468] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:16,577] INFO: Peer list retrieved:
+[2025-04-21 11:02:16,577] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:16,686] INFO: Peer list retrieved:
+[2025-04-21 11:02:16,686] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:16,728] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:16,792] INFO: Peer list retrieved:
+[2025-04-21 11:02:16,792] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:16,900] INFO: Peer list retrieved:
+[2025-04-21 11:02:16,900] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:17,009] INFO: Peer list retrieved:
+[2025-04-21 11:02:17,010] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:17,117] INFO: Peer list retrieved:
+[2025-04-21 11:02:17,118] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:17,225] INFO: Peer list retrieved:
+[2025-04-21 11:02:17,225] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:17,332] INFO: Peer list retrieved:
+[2025-04-21 11:02:17,332] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:17,437] INFO: Peer list retrieved:
+[2025-04-21 11:02:17,438] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:17,485] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:17,542] INFO: Peer list retrieved:
+[2025-04-21 11:02:17,542] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:17,653] INFO: Peer list retrieved:
+[2025-04-21 11:02:17,654] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:17,762] INFO: Peer list retrieved:
+[2025-04-21 11:02:17,762] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:17,868] INFO: Peer list retrieved:
+[2025-04-21 11:02:17,868] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:17,977] INFO: Peer list retrieved:
+[2025-04-21 11:02:17,978] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:18,085] INFO: Peer list retrieved:
+[2025-04-21 11:02:18,085] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:18,193] INFO: Peer list retrieved:
+[2025-04-21 11:02:18,194] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:18,253] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:18,300] INFO: Peer list retrieved:
+[2025-04-21 11:02:18,302] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:18,409] INFO: Peer list retrieved:
+[2025-04-21 11:02:18,410] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:18,518] INFO: Peer list retrieved:
+[2025-04-21 11:02:18,518] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:18,627] INFO: Peer list retrieved:
+[2025-04-21 11:02:18,627] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:18,739] INFO: Peer list retrieved:
+[2025-04-21 11:02:18,739] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:18,845] INFO: Peer list retrieved:
+[2025-04-21 11:02:18,845] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:18,951] INFO: Peer list retrieved:
+[2025-04-21 11:02:18,951] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:19,006] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:19,057] INFO: Peer list retrieved:
+[2025-04-21 11:02:19,058] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:19,165] INFO: Peer list retrieved:
+[2025-04-21 11:02:19,165] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:19,274] INFO: Peer list retrieved:
+[2025-04-21 11:02:19,275] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:19,386] INFO: Peer list retrieved:
+[2025-04-21 11:02:19,387] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:19,493] INFO: Peer list retrieved:
+[2025-04-21 11:02:19,494] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:19,601] INFO: Peer list retrieved:
+[2025-04-21 11:02:19,601] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:19,706] INFO: Peer list retrieved:
+[2025-04-21 11:02:19,707] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:19,772] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:19,817] INFO: Peer list retrieved:
+[2025-04-21 11:02:19,817] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:19,928] INFO: Peer list retrieved:
+[2025-04-21 11:02:19,928] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:20,037] INFO: Peer list retrieved:
+[2025-04-21 11:02:20,037] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:20,146] INFO: Peer list retrieved:
+[2025-04-21 11:02:20,147] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:20,259] INFO: Peer list retrieved:
+[2025-04-21 11:02:20,259] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:20,366] INFO: Peer list retrieved:
+[2025-04-21 11:02:20,366] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:20,472] INFO: Peer list retrieved:
+[2025-04-21 11:02:20,473] INFO:  - an08 (10.0.217.86:7828)
+[2025-04-21 11:02:20,535] INFO: Stopping livestream.
+[2025-04-21 11:02:20,555] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:21,094] INFO: Livestream stopped.
+[2025-04-21 11:02:21,357] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:22,131] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:22,901] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:23,667] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:24,509] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:25,279] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:26,034] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:26,842] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:27,604] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:28,413] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:29,181] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:29,934] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:30,692] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:31,466] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:32,232] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:32,993] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:33,766] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:34,522] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:35,286] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:36,042] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:36,810] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:37,555] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:38,319] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:39,106] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:39,868] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:40,660] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:41,428] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:42,182] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:42,941] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:43,695] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:44,459] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:45,229] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:46,428] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:47,202] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:47,971] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:49,017] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:49,796] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:50,549] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:51,317] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:52,086] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:52,846] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:53,601] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:54,371] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:55,160] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:55,927] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:56,715] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:57,488] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:58,251] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:59,048] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:02:59,817] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:00,592] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:01,372] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:02,130] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:02,892] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:03,650] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:04,429] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:05,196] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:05,949] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:06,749] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:08,062] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:08,832] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:09,634] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:10,428] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:11,197] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:11,963] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:12,723] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:13,504] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:14,261] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:15,034] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:15,796] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:16,587] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:17,349] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:18,107] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:18,869] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:19,639] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:20,409] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:21,184] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:21,965] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:22,735] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:23,498] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:24,259] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:25,031] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:25,801] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:26,566] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:27,344] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:28,430] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:29,220] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:29,997] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:30,796] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:31,573] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:32,340] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:33,111] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:33,875] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:34,648] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:35,413] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:36,170] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:36,930] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:37,689] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:38,450] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:39,212] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:39,974] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:40,747] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:41,523] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:42,296] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:43,070] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:43,839] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:44,612] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:45,377] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:46,150] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:47,092] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:48,399] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:49,164] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:50,016] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:50,828] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:51,660] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:52,437] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:53,210] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:53,986] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:54,755] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:55,525] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:56,301] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:57,066] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:57,835] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:58,639] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:03:59,407] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:00,183] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:00,953] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:01,723] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:02,488] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:03,341] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:04,105] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:04,873] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:05,636] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:06,396] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:07,449] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:08,508] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:09,274] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:10,036] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:10,811] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:11,577] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:12,337] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:13,116] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:13,891] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:14,647] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:15,409] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:16,176] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:16,946] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:17,720] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:18,484] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:19,256] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:20,015] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:20,789] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:21,558] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:22,330] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:23,098] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:23,865] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:24,638] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:25,399] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:26,164] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:27,219] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:28,021] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:28,784] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:29,545] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:30,305] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:31,073] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:31,875] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:32,642] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:33,407] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:34,187] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:34,975] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:35,769] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:36,558] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:37,344] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:38,130] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:38,895] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:39,665] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:40,425] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:41,198] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:41,957] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:42,712] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:43,480] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:44,250] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:45,036] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:45,809] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:46,580] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:47,632] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:48,946] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:49,712] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:50,473] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:51,243] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:52,010] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:52,772] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:53,540] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:54,304] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:55,072] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:55,836] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:56,595] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:57,361] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:58,149] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:58,903] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:04:59,667] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:00,422] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:01,184] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:01,949] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:02,715] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:03,471] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:04,240] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:05,004] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:05,775] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:06,535] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:07,329] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:08,106] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:08,867] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:09,628] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:10,393] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:11,169] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:11,943] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:12,713] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:13,489] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:14,263] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:15,023] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:15,793] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:16,556] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:17,314] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:18,082] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:18,842] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:19,619] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:20,374] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:21,131] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:21,888] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:22,646] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:23,404] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:24,168] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:24,942] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:25,714] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:26,497] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:27,265] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:28,048] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:28,808] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:29,565] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:30,327] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:31,097] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:31,873] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:32,651] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:33,436] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:34,203] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:34,998] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:35,756] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:36,524] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:37,280] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:38,040] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:38,796] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:39,554] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:40,324] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:41,083] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:41,864] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:42,644] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:43,409] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:44,178] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:44,945] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:45,704] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:46,469] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:47,242] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:48,551] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:49,367] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:50,133] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:50,894] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:51,668] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:52,438] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:53,196] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:53,966] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:54,724] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:55,481] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:56,244] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:57,004] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:57,778] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:58,542] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:05:59,310] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:00,068] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:00,827] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:01,586] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:02,373] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:03,138] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:03,906] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:04,667] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:05,437] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:06,193] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:07,280] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:08,048] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:08,818] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:09,583] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:10,342] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:11,117] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:11,883] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:12,646] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:13,427] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:14,208] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:14,961] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:15,753] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:16,515] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:17,269] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:18,060] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:18,823] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:19,594] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:20,374] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:21,339] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:22,310] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:23,348] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:24,201] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:24,965] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:25,729] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:26,490] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:27,316] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:28,699] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:29,467] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:30,239] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:31,003] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:31,775] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:32,546] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:33,303] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:34,067] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:34,837] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:35,594] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:36,383] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:37,146] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:37,909] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:38,679] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:39,500] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:40,267] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:41,025] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:41,842] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:42,594] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:43,387] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:44,145] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:44,909] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:45,686] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:46,448] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:47,485] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:48,599] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:49,372] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:50,145] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:51,105] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:51,872] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:52,632] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:53,395] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:54,175] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:54,939] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:55,703] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:56,453] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:57,224] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:58,011] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:58,773] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:06:59,584] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:00,348] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:01,115] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:01,882] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:02,648] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:03,403] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:04,171] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:04,949] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:05,768] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:06,529] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:07,569] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:08,367] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:09,122] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:09,882] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:10,640] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:11,409] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:12,184] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:12,941] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:13,709] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:14,483] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:15,255] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:16,019] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:16,783] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:17,545] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:18,316] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:19,136] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:19,893] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:20,648] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:21,414] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:22,174] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:22,932] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:23,688] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:24,453] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:25,219] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:25,997] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:27,313] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:28,109] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:28,880] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:29,643] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:30,441] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:31,201] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:31,967] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:32,725] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:33,481] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:34,241] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:35,003] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:35,761] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:36,525] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:37,301] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:38,052] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:38,811] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:39,567] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:40,324] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:41,087] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:41,847] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:42,614] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:43,371] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:44,139] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:44,923] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:45,682] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:46,440] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:47,786] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:48,799] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:49,562] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:50,330] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:51,094] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:51,867] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:52,626] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:53,389] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:54,142] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:54,899] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:55,657] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:56,446] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:57,209] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:57,972] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:58,751] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:07:59,532] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:00,305] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:01,062] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:01,833] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:02,589] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:03,355] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:04,127] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:04,890] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:05,642] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:06,400] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:07,687] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:08,463] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:09,227] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:09,989] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:10,752] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:11,514] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:12,321] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:13,086] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:13,844] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:14,615] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:15,476] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:16,233] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:16,987] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:17,750] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:18,517] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:19,286] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:20,058] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:20,826] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:21,590] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:22,339] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:23,095] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:23,857] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:24,616] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:25,369] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:26,129] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:27,177] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:27,949] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:28,735] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:29,573] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:30,341] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:31,106] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:31,868] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:32,621] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:33,379] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:34,139] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:34,898] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:35,669] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:36,711] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:37,471] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:38,236] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:38,998] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:39,761] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:40,565] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:41,329] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:42,094] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:42,851] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:43,613] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:44,382] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:45,141] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:45,923] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:46,715] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:47,498] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:48,788] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:49,555] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:50,389] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:51,149] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:51,939] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:52,697] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:53,453] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:54,213] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:55,005] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:55,760] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:56,519] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:57,283] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:58,072] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:58,841] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:08:59,607] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:00,372] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:01,140] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:01,894] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:02,654] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:03,409] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:04,165] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:04,920] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:05,674] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:06,438] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:07,760] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:08,535] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:09,304] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:10,072] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:10,827] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:11,602] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:12,375] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:13,130] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:13,972] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:14,730] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:15,500] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:16,266] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:17,030] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:17,796] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:18,554] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:19,310] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:20,066] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:20,828] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:21,669] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:22,442] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:23,213] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:23,973] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:24,879] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:25,829] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:26,594] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:27,355] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:28,159] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:28,919] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:29,676] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:30,456] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:31,219] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:31,985] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:32,743] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:33,491] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:34,256] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:35,012] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:35,798] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:36,550] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:37,314] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:38,073] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:38,874] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:39,651] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:40,419] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:41,178] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:41,942] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:42,708] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:43,459] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:44,218] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:44,975] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:45,738] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:46,496] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:47,555] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:48,876] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:49,698] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:50,465] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:51,234] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:52,000] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:52,759] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:53,517] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:54,283] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:55,047] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:55,804] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:56,565] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:57,320] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:58,094] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:58,853] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:09:59,609] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:00,391] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:01,186] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:01,951] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:02,708] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:03,475] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:04,248] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:05,004] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:05,768] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:06,533] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:07,313] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:08,081] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:08,846] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:09,604] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:10,361] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:11,138] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:11,894] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:12,650] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:13,774] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:14,763] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:15,524] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:16,283] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:17,041] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:17,805] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:18,567] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:19,342] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:20,105] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:20,872] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:21,627] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:22,394] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:23,158] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:23,922] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:24,674] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:25,436] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:26,190] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:26,958] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:27,743] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:28,784] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:29,542] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:30,309] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:31,061] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:31,828] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:32,599] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:33,359] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:34,126] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:34,891] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:35,646] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:36,412] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:37,168] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:37,936] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:38,707] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:39,813] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:40,566] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:41,352] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:42,118] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:42,876] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:43,634] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:44,407] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:45,184] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:45,951] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:46,730] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:47,769] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:48,805] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:49,563] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:50,317] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:51,072] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:51,826] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:52,577] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:53,338] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:54,106] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:54,860] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:55,626] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:56,385] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:57,165] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:57,923] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:58,688] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:10:59,459] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:00,248] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:01,009] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:02,024] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:02,791] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:03,548] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:04,302] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:05,061] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:05,819] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:06,581] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:07,869] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:08,639] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:09,389] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:10,141] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:10,899] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:11,666] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:12,429] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:13,186] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:13,953] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:14,737] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:15,496] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:16,253] ERROR: Error get_hosted_channels: User not found
+[2025-04-21 11:11:18,047] INFO: [SYNC DONE] Synced file: sync_123_an08.txt
+[2025-04-21 11:11:18,142] INFO: [SYNC DONE] Synced file: sync_publicview_an08.txt
+[2025-04-21 11:11:18,814] INFO: Tracker response on LEAVE: Peer an08 (10.0.217.86:7828) left

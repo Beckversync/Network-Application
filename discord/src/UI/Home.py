@@ -16,6 +16,9 @@ logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(m
 from config.db import channels_collection, users_collection
 import time
 import datetime
+import re
+
+message_pattern = re.compile(r"^\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\] .+: .+")
 class DiscordUI(QMainWindow):
     def __init__(self, login_window, username, session_info, user_peer=None):
         super().__init__()
@@ -341,7 +344,7 @@ class DiscordUI(QMainWindow):
             else:
                 self.chat_display.append(f"Polling error: {response.get('message')}")
 
-        if owner_data and owner_data.get("state") == "online":
+        if (owner_data and owner_data.get("state") == "online"):
             
             if response.get("status") == "success":
                 try:
@@ -475,8 +478,9 @@ class DiscordUI(QMainWindow):
                 logging.error("Error get_all_users: %s", response.get("message"))
         except Exception as e:
             logging.error("Exception in get_all_users: %s", e)
-        
-        for m in members:
+
+        unique_members = list(dict.fromkeys(members))  # Loại trùng giữ nguyên thứ tự
+        for m in unique_members:
             user_status = status_map.get(m, "Offline")
             if user_status == "Online":
                 display_text = f"🟢 {m}"
@@ -487,6 +491,7 @@ class DiscordUI(QMainWindow):
             item = QListWidgetItem(display_text)
             item.setForeground(color)
             self.member_list.addItem(item)
+
     
     def load_dm_messages(self):
         self.chat_display.clear()
@@ -586,7 +591,6 @@ class DiscordUI(QMainWindow):
                 allow_visitor = False
             else:
                 allow_visitor = data.get("allow_visitor", False)
-                print("ADDDDDDDDDDD", allow_visitor)
 
             request_data = {
                 "action": "create_channel",
@@ -655,8 +659,6 @@ class DiscordUI(QMainWindow):
                     channel_data = channels_collection.find_one({"channel_name": self.current_channel})
                     if not channel_data:
                         logging.warning("poll_loop: Channel data is None for channel: %s", self.current_channel)
-                        time.sleep(0.5)
-                        continue  # bỏ qua vòng này
 
                     owner_username = channel_data.get("owner")
                     owner_data = users_collection.find_one({"username": owner_username})
@@ -666,7 +668,6 @@ class DiscordUI(QMainWindow):
                         time.sleep(0.5)
                         continue
 
-                    # --- Phần xử lý khi chủ kênh offline ---
                     if owner_data.get("state") == "offline":
                         request_data = {
                             "action": "get_channel_info",
@@ -690,8 +691,7 @@ class DiscordUI(QMainWindow):
                         else:
                             logging.error("Polling error: %s", response.get("message"))
 
-                    # --- Phần xử lý khi chủ kênh online ---
-                    elif owner_data.get("state") == "online":
+                    elif owner_data.get("state") == "online" or owner_data.get("state") == "Invisible":
                         request_data = {
                             "action": "get_channel_info",
                             "channel_name": self.current_channel,
@@ -707,23 +707,25 @@ class DiscordUI(QMainWindow):
                             file_path = os.path.join("local_sync", f"sync_{self.current_channel}_{owner_username}.txt")
                             if os.path.exists(file_path):
                                 with open(file_path, 'r', encoding='utf-8') as f:
-                                    lines = [line.strip() for line in f if line.strip()]
-                                    if not lines:
-                                        time.sleep(0.5)
-                                        continue
+                                    lines = [line.strip() for line in f if line.strip() and message_pattern.match(line)]
 
-                                    if not hasattr(self, "last_seen_line") or self.last_seen_line not in lines:
-                                        for line in lines:
-                                            self.chat_display.append(line)
-                                        self.last_seen_line = lines[-1]
-                                        self.last_message_count = len(lines)
-                                    else:
-                                        idx = lines.index(self.last_seen_line)
-                                        new_lines = lines[idx + 1:]
-                                        for line in new_lines:
-                                            self.chat_display.append(line)
-                                        if new_lines:
-                                            self.last_seen_line = new_lines[-1]
+                                # Phần xử lý nằm ngoài with
+                                if not lines:
+                                    time.sleep(0.5)
+                                    continue
+
+                                if not hasattr(self, "last_seen_line") or self.last_seen_line not in lines:
+                                    for line in lines:
+                                        self.chat_display.append(line)
+                                    self.last_seen_line = lines[-1]
+                                    self.last_message_count = len(lines)
+                                else:
+                                    idx = lines.index(self.last_seen_line)
+                                    new_lines = lines[idx + 1:]
+                                    for line in new_lines:
+                                        self.chat_display.append(line)
+                                    if new_lines:
+                                        self.last_seen_line = new_lines[-1]
                                         self.last_message_count = len(lines)
                             else:
                                 logging.warning("[SYNC LOAD] File not found: %s", file_path)
@@ -783,7 +785,8 @@ class DiscordUI(QMainWindow):
                 logging.error("Status update failed: %s", response.get("message"))
             if status == "Offline":
                 QMessageBox.information(self, "Logout", "You have been logged out.")
-                self.logout();
+                self.close()
+                self.login_window.show()
         except Exception as e:
             logging.error("Change status error: %s", str(e))
     
@@ -817,14 +820,24 @@ class DiscordUI(QMainWindow):
                                 logging.warning("[SYNC SKIPPED] User is not owner of channel: %s", channel_name)
                                 continue
 
+                            # Đọc file và loại bỏ dòng đầu nếu không phải tin nhắn
+                            if os.path.exists(file_path):
+                                with open(file_path, "r", encoding="utf-8") as f:
+                                    lines = f.readlines()
+
+                                message_pattern = re.compile(r'^\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\] .+: .+')
+                                if lines and not message_pattern.match(lines[0].strip()):
+                                    lines = lines[1:]
+                                    with open(file_path, "w", encoding="utf-8") as f:
+                                        f.writelines(lines)
+
+                            # Tiếp tục xử lý file như cũ
                             channel_doc = channels_collection.find_one({"channel_name": channel_name})
                             existing_messages = channel_doc.get("messages", []) if channel_doc else []
                             existing_texts = set(msg["text"] for msg in existing_messages)
                             message_id = len(existing_messages)
 
                             with open(file_path, "r", encoding="utf-8") as f:
-                                existing_texts = set(msg["text"] for msg in existing_messages)
-                                
                                 for line in f:
                                     line = line.strip()
                                     if not line:
@@ -834,9 +847,9 @@ class DiscordUI(QMainWindow):
                                         readable_time = time_part[1:]
                                         sender, message_text = rest.split(": ", 1)
                                         full_text = f"[{readable_time}] {sender}: {message_text}"
-                                        
+
                                         if full_text in existing_texts:
-                                            continue 
+                                            continue
 
                                         message_dict = {
                                             "id": message_id,

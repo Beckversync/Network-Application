@@ -71,15 +71,26 @@ def login_user(user: UserLogin, peer_ip: str, peer_port: int) -> dict:
     return {"status": "error", "message": "Invalid username or password"}
 
 def update_user_status(session_id: str, visible: bool) -> dict:
-    user = users_collection.find_one({"sessions.session_id": session_id})
-    if not user:
-         return {"status": "error", "message": "Session not found"}
-    users_collection.update_one(
-         {"_id": user["_id"], "sessions.session_id": session_id},
-         {"$set": {"sessions.$.visible": visible}}
-    )
-    logging.info("Updated session %s visible to %s", session_id, visible)
-    return {"status": "success", "message": "User status updated"}
+    try:
+        user = users_collection.find_one({"sessions.session_id": session_id})
+        if not user:
+            return {"status": "error", "message": "Invalid session_id"}
+
+        result = users_collection.update_one(
+            {"_id": user["_id"], "sessions.session_id": session_id},
+            {"$set": {"sessions.$.visible": visible}}
+        )
+
+        if result.modified_count == 0:
+            logging.warning("No session updated for session_id: %s", session_id)
+            return {"status": "error", "message": "Failed to update visibility status"}
+
+        logging.info("Updated visibility of session %s to %s", session_id, visible)
+        return {"status": "success", "message": "User status updated"}
+    
+    except Exception as e:
+        logging.error("Database error during status update: %s", e)
+        return {"status": "error", "message": f"Database error: {str(e)}"}
 
 def get_all_users():
     try:

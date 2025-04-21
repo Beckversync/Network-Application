@@ -162,8 +162,8 @@ def send_message_p2p(username: str, channel_name: str, message_text: str):
     owner_username = channel_data.get("owner")
     if owner_username:
         owner_data = users_collection.find_one({"username": owner_username})
-        if owner_data and owner_data.get("state") == "online":
-            session = next((s for s in owner_data.get("sessions", []) if s.get("visible")), None)
+        if (owner_data and owner_data.get("state") == "online"):
+            session = owner_data.get("sessions", [None])[0]
             if session and session.get("peer_ip") and session.get("peer_port"):
                 peer_ip = session.get("peer_ip")
                 peer_port = session.get("peer_port")
