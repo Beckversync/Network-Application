@@ -365,22 +365,47 @@ class DiscordUI(QMainWindow):
             self.current_channel_info = response
             return
 
-        # Bước 4: nếu owner online → đọc từ file sync
+        # Bước 4: nếu owner online → đọc từ file cục bộ, ngược lại fallback lấy từ DB
+        owner_data = users_collection.find_one({"username": channel_data.get("owner")})
         if owner_data and owner_data.get("state") == "online":
-            # Hiển thị hết file local (đã được dump tự động)
-            path = os.path.join("local_sync", f"sync_{self.current_channel}_{self.username}.txt")
-            if not os.path.exists(path):
-                self.chat_display.append("[INFO] Chưa có tin nhắn cục bộ.")
+            file_path = os.path.join(
+                "local_sync",
+                f"sync_{self.current_channel}_{self.username}.txt"
+            )
+
+            # ❶ Nếu đã có file sync → load như cũ
+            if os.path.exists(file_path):
+                try:
+                    with open(file_path, "r", encoding="utf-8") as f:
+                        for line in f:
+                            self.chat_display.append(line.strip())
+                    logging.info("[SYNC LOAD] Loaded from file: %s", file_path)
+                except Exception as e:
+                    logging.error("[SYNC LOAD] Error reading file: %s", e)
+                    self.chat_display.append("[ERROR] Không thể load tin nhắn từ file.")
                 return
 
+            # ❷ Fallback: chưa có file → lấy toàn bộ messages từ MongoDB và dump ngay
             try:
-                with open(path, "r", encoding="utf-8") as f:
-                    for line in f:
-                        self.chat_display.append(line.strip())
-                logging.info("[SYNC LOAD] Loaded from file: %s", path)
+                req = {
+                    "action": "get_channel_info",
+                    "channel_name": self.current_channel,
+                    "username": self.username
+                }
+                resp_str = channelRequest.handle_channel_request(json.dumps(req))
+                resp = json.loads(resp_str)
+                if resp.get("status") == "success":
+                    msgs = resp.get("messages", [])
+                    # Hiển thị và dump về file cục bộ
+                    dump_messages_to_file(self.current_channel, self.username, msgs)
+                    for m in msgs:
+                        text = m.get("text", m) if isinstance(m, dict) else str(m)
+                        self.chat_display.append(text)
+                else:
+                    self.chat_display.append(f"[ERROR] {resp.get('message')}")
             except Exception as e:
-                logging.error("[SYNC LOAD] Error reading file: %s", e)
-                self.chat_display.append("[ERROR] Không thể load tin nhắn từ file.")
+                logging.error("Fallback owner-online load error: %s", e)
+                self.chat_display.append("[ERROR] Không thể load tin từ DB.")
             return
 
 

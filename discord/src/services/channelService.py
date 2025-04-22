@@ -160,10 +160,15 @@ def send_to_p2p_server(peer_ip, peer_port, message_text, sender="Unknown", chann
 
 
 def send_message_p2p(username: str, channel_name: str, message_text: str):
+    from config.db import channels_collection, users_collection
+    from services.channelService import send_message  # để backup vào DB
+    import logging
+
     channel_data = channels_collection.find_one({"channel_name": channel_name})
     if not channel_data:
         return {"status": "error", "message": "Không tìm thấy kênh"}
 
+    # Kiểm quyền gửi trong kênh riêng tư
     if channel_data.get("is_private", False) and username not in channel_data.get("members", []):
         return {
             "status": "error",
@@ -171,40 +176,51 @@ def send_message_p2p(username: str, channel_name: str, message_text: str):
         }
 
     owner_username = channel_data.get("owner")
-    if not owner_username:
-        return {"status": "error", "message": "Không tìm thấy chủ kênh"}
+    owner_data     = users_collection.find_one({"username": owner_username})
 
-    owner_data = users_collection.find_one({"username": owner_username})
+    success_count, sent_targets = 0, set()
+
+    # ❶ Nếu chủ kênh đang online → gửi P2P tới các peer online
     if owner_data and owner_data.get("state") == "online":
-        # Chủ kênh online → gửi cho tất cả thành viên đang online
-        # if username == owner_username:
-            # send_message(username, channel_name, message_text)
-            
-        members = channel_data.get("members", [])
-        success_count = 0
+        for member in channel_data.get("members", []):
+            user = users_collection.find_one({"username": member})
+            if not user or user.get("state") != "online":
+                continue
+            for sess in user.get("sessions", []):
+                peer_ip   = sess.get("peer_ip")
+                peer_port = sess.get("peer_port")
+                target    = f"{peer_ip}:{peer_port}"
+                if peer_ip and peer_port and target not in sent_targets:
+                    send_to_p2p_server(
+                        peer_ip, peer_port,
+                        message_text,
+                        sender=username,
+                        channel=channel_name,
+                        owner=owner_username
+                    )
+                    sent_targets.add(target)
+                    success_count += 1
 
-        sent_targets = set()
+        logging.info(
+            "Tin nhắn từ %s đã gửi tới %d peer online trong kênh '%s'",
+            username, success_count, channel_name
+        )
 
-        for member in members:
-            user_data = users_collection.find_one({"username": member})
-            if user_data and user_data.get("state") == "online":
-                for session in user_data.get("sessions", []):
-                    peer_ip = session.get("peer_ip")
-                    peer_port = session.get("peer_port")
-                    target = f"{peer_ip}:{peer_port}"
-                    if peer_ip and peer_port and target not in sent_targets:
-                        send_to_p2p_server(peer_ip, peer_port, message_text, sender=username)
-                        sent_targets.add(target)
-                        success_count += 1
+    # ❷ LUÔN backup tin nhắn vào MongoDB để peer offline có thể lấy về
+    send_message(username, channel_name, message_text)
 
-        # send_message(username, channel_name, message_text)
-
-        logging.info("Tin nhắn từ %s đã được gửi đến %d peer online trong kênh '%s'", username, success_count, channel_name)
-        return {"status": "success", "message": f"Đã gửi đến {success_count} peer online và lưu vào kênh"}
-    
+    # Trả về thông báo
+    if success_count:
+        return {
+            "status": "success",
+            "message": f"Đã gửi tới {success_count} peer online và backup vào kênh"
+        }
     else:
-        send_message(username, channel_name, message_text)
-        return {"status": "success", "message": "Chủ kênh offline - tin nhắn đã được lưu vào kênh"}
+        return {
+            "status": "success",
+            "message": "Chủ kênh offline – tin nhắn đã lưu vào kênh"
+        }
+
 
 
 

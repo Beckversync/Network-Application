@@ -50952,3 +50952,134 @@
 [2025-04-22 13:49:51,416] INFO: [P2P MESSAGE] an08 -> an08: thấy
 [2025-04-22 13:49:55,372] INFO: [P2P MESSAGE] an10 -> an08: thaays
 [2025-04-22 13:50:16,584] INFO: Tracker response on LEAVE: Peer an08 (172.20.10.2:7872) left
+[2025-04-22 15:16:04,447] INFO: Logged in as: an08
+[2025-04-22 15:16:05,190] INFO: [SYNC LOGIN] Saved 0 new messages for non
+[2025-04-22 15:16:05,262] INFO: [SYNC LOGIN] Saved 0 new messages for Private test
+[2025-04-22 15:16:05,262] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-22 15:16:05,452] INFO: Tracker response: Peer an08 (172.20.10.2:7706) added
+[2025-04-22 15:16:05,454] INFO: P2P SERVER listening on 172.20.10.2:7706
+[2025-04-22 15:16:05,454] INFO: UDP LISTENER listening on 172.20.10.2:7707 for livestream.
+[2025-04-22 15:16:07,003] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_private1_an08.txt
+[2025-04-22 15:16:08,700] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_public1_an08.txt
+[2025-04-22 15:16:17,801] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_public1_an08.txt
+[2025-04-22 15:16:32,107] INFO: Sending message: chào
+[2025-04-22 15:16:32,364] INFO: Sent P2P chat to 172.20.10.4:7882 – {"type": "chat", "sender": "an08", "message": "ch\u00e0o"}
+[2025-04-22 15:16:32,365] INFO: Tin nhắn từ an08 đã được gửi đến 1 peer online trong kênh '456'
+[2025-04-22 15:16:32,365] INFO: Message from an08 sent in channel '456'
+[2025-04-22 15:16:37,660] INFO: Sending message: ai nghe không
+[2025-04-22 15:16:37,991] INFO: Sent P2P chat to 172.20.10.4:7882 – {"type": "chat", "sender": "an08", "message": "ai nghe kh\u00f4ng"}
+[2025-04-22 15:16:37,992] INFO: Tin nhắn từ an08 đã được gửi đến 1 peer online trong kênh '456'
+[2025-04-22 15:16:37,992] INFO: Message from an08 sent in channel '456'
+[2025-04-22 15:16:50,111] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_private1_an08.txt
+[2025-04-22 15:16:50,776] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_public1_an08.txt
+[2025-04-22 15:16:54,675] INFO: User an08 joined public channel '456'
+[2025-04-22 15:16:58,387] INFO: Sending message: all
+[2025-04-22 15:16:58,708] INFO: Sent P2P chat to 172.20.10.4:7882 – {"type": "chat", "sender": "an08", "message": "all"}
+[2025-04-22 15:16:58,784] INFO: Sent P2P chat to 172.20.10.2:7706 – {"type": "chat", "sender": "an08", "message": "all"}
+[2025-04-22 15:16:58,785] INFO: Tin nhắn từ an08 đã được gửi đến 2 peer online trong kênh '456'
+[2025-04-22 15:16:58,786] INFO: Message from an08 sent in channel '456'
+[2025-04-22 15:16:58,786] INFO: [INFO] Create new file: local_sync\sync_456_an08.txt
+[2025-04-22 15:16:58,795] INFO: [P2P MESSAGE] an08 -> an08: all
+[2025-04-22 15:17:06,156] INFO: [P2P MESSAGE] an10 -> an08: meejt vcl
+[2025-04-22 15:17:09,294] INFO: Sending message: nsfdjndsf
+[2025-04-22 15:17:09,618] INFO: Sent P2P chat to 172.20.10.4:7882 – {"type": "chat", "sender": "an08", "message": "nsfdjndsf"}
+[2025-04-22 15:17:09,697] INFO: Sent P2P chat to 172.20.10.2:7706 – {"type": "chat", "sender": "an08", "message": "nsfdjndsf"}
+[2025-04-22 15:17:09,697] INFO: Tin nhắn từ an08 đã được gửi đến 2 peer online trong kênh '456'
+[2025-04-22 15:17:09,697] INFO: Message from an08 sent in channel '456'
+[2025-04-22 15:17:09,699] INFO: [P2P MESSAGE] an08 -> an08: nsfdjndsf
+[2025-04-22 15:17:13,518] INFO: [P2P MESSAGE] an10 -> an08: asldsdkos
+[2025-04-22 15:17:15,803] INFO: Sending message: vúaifdudasf
+[2025-04-22 15:17:16,098] INFO: Sent P2P chat to 172.20.10.4:7882 – {"type": "chat", "sender": "an08", "message": "v\u00faaifdudasf"}
+[2025-04-22 15:17:16,185] INFO: Sent P2P chat to 172.20.10.2:7706 – {"type": "chat", "sender": "an08", "message": "v\u00faaifdudasf"}
+[2025-04-22 15:17:16,185] INFO: Tin nhắn từ an08 đã được gửi đến 2 peer online trong kênh '456'
+[2025-04-22 15:17:16,186] INFO: Message from an08 sent in channel '456'
+[2025-04-22 15:17:16,187] INFO: [P2P MESSAGE] an08 -> an08: vúaifdudasf
+[2025-04-22 15:17:44,183] INFO: Tracker response on LEAVE: Peer an08 (172.20.10.2:7706) left
+[2025-04-22 15:18:02,058] INFO: Logged in as: an08
+[2025-04-22 15:18:02,764] INFO: [SYNC LOGIN] Saved 0 new messages for non
+[2025-04-22 15:18:02,852] INFO: [SYNC LOGIN] Saved 0 new messages for Private test
+[2025-04-22 15:18:02,852] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-22 15:18:03,021] INFO: Tracker response: Peer an08 (172.20.10.2:7808) added
+[2025-04-22 15:18:03,024] INFO: P2P SERVER listening on 172.20.10.2:7808
+[2025-04-22 15:18:03,025] INFO: UDP LISTENER listening on 172.20.10.2:7809 for livestream.
+[2025-04-22 15:18:09,040] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_private1_an08.txt
+[2025-04-22 15:18:10,446] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:18:10,820] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:18:11,169] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:18:11,508] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:18:11,866] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:18:12,925] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:18:13,283] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:18:14,360] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:18:14,694] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:18:15,328] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:18:21,311] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:20:17,164] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:20:17,886] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:20:18,220] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:21:11,867] INFO: Tracker response on LEAVE: Peer an08 (172.20.10.2:7808) left
+[2025-04-22 15:36:32,470] INFO: Logged in as: an08
+[2025-04-22 15:36:33,318] INFO: [SYNC LOGIN] Saved 0 new messages for non
+[2025-04-22 15:36:33,420] INFO: [SYNC LOGIN] Saved 0 new messages for Private test
+[2025-04-22 15:36:33,420] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-22 15:36:33,627] INFO: Tracker response: Peer an08 (172.20.10.2:6895) added
+[2025-04-22 15:36:33,628] INFO: P2P SERVER listening on 172.20.10.2:6895
+[2025-04-22 15:36:33,630] INFO: UDP LISTENER listening on 172.20.10.2:6896 for livestream.
+[2025-04-22 15:36:35,778] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:36:44,444] INFO: [P2P MESSAGE] an10 -> an08: xin chao
+[2025-04-22 15:36:48,020] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:36:52,449] INFO: Sending message: ban la ai
+[2025-04-22 15:36:52,830] INFO: Sent P2P chat to 172.20.10.4:8857 – {"type": "chat", "sender": "an08", "message": "ban la ai", "channel": "456", "owner": "an10"}
+[2025-04-22 15:36:52,907] INFO: Sent P2P chat to 172.20.10.2:6895 – {"type": "chat", "sender": "an08", "message": "ban la ai", "channel": "456", "owner": "an10"}
+[2025-04-22 15:36:52,908] INFO: Tin nhắn từ an08 đã gửi tới 2 peer online trong kênh '456'
+[2025-04-22 15:36:52,909] INFO: [P2P MESSAGE] an08 -> an08: ban la ai
+[2025-04-22 15:36:53,087] INFO: Message from an08 sent in channel '456'
+[2025-04-22 15:36:58,428] INFO: [P2P MESSAGE] an10 -> an08: toi day
+[2025-04-22 15:37:01,825] INFO: Sending message: ừ
+[2025-04-22 15:37:02,116] INFO: Sent P2P chat to 172.20.10.4:8857 – {"type": "chat", "sender": "an08", "message": "\u1eeb", "channel": "456", "owner": "an10"}
+[2025-04-22 15:37:02,202] INFO: Sent P2P chat to 172.20.10.2:6895 – {"type": "chat", "sender": "an08", "message": "\u1eeb", "channel": "456", "owner": "an10"}
+[2025-04-22 15:37:02,203] INFO: Tin nhắn từ an08 đã gửi tới 2 peer online trong kênh '456'
+[2025-04-22 15:37:02,204] INFO: [P2P MESSAGE] an08 -> an08: ừ
+[2025-04-22 15:37:02,372] INFO: Message from an08 sent in channel '456'
+[2025-04-22 15:37:48,828] INFO: [P2P MESSAGE] an10 -> an08: host offf
+[2025-04-22 15:37:55,849] INFO: Sending message: da off
+[2025-04-22 15:37:56,225] INFO: Message from an08 sent in channel '456'
+[2025-04-22 15:38:08,871] INFO: [P2P MESSAGE] an10 -> an08: oke
+[2025-04-22 15:38:11,376] INFO: [P2P MESSAGE] an10 -> an08: thay
+[2025-04-22 15:38:16,475] INFO: Tracker response on LEAVE: Peer an08 (172.20.10.2:6895) left
+[2025-04-22 15:38:27,419] INFO: Logged in as: an08
+[2025-04-22 15:38:28,228] INFO: [SYNC LOGIN] Saved 0 new messages for non
+[2025-04-22 15:38:28,323] INFO: [SYNC LOGIN] Saved 0 new messages for Private test
+[2025-04-22 15:38:28,323] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-22 15:38:28,503] INFO: Tracker response: Peer an08 (172.20.10.2:6086) added
+[2025-04-22 15:38:28,504] INFO: P2P SERVER listening on 172.20.10.2:6086
+[2025-04-22 15:38:28,505] INFO: UDP LISTENER listening on 172.20.10.2:6087 for livestream.
+[2025-04-22 15:38:30,751] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:38:31,372] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:38:50,471] INFO: Logged in as: an08
+[2025-04-22 15:38:51,208] INFO: [SYNC LOGIN] Saved 0 new messages for non
+[2025-04-22 15:38:51,288] INFO: [SYNC LOGIN] Saved 0 new messages for Private test
+[2025-04-22 15:38:51,289] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-22 15:38:51,464] INFO: Tracker response: Peer an08 (172.20.10.2:7550) added
+[2025-04-22 15:38:51,466] INFO: P2P SERVER listening on 172.20.10.2:7550
+[2025-04-22 15:38:51,467] INFO: UDP LISTENER listening on 172.20.10.2:7551 for livestream.
+[2025-04-22 15:38:53,292] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:38:59,061] INFO: [P2P MESSAGE] an10 -> an08: alo
+[2025-04-22 15:39:34,524] INFO: Tracker response on LEAVE: Peer an08 (172.20.10.2:7550) left
+[2025-04-22 15:40:01,045] INFO: Logged in as: an08
+[2025-04-22 15:40:02,262] INFO: [SYNC LOGIN] Saved 0 new messages for non
+[2025-04-22 15:40:02,353] INFO: [SYNC LOGIN] Saved 0 new messages for Private test
+[2025-04-22 15:40:02,353] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-22 15:40:02,718] INFO: Tracker response: Peer an08 (172.20.10.2:8551) added
+[2025-04-22 15:40:02,718] INFO: P2P SERVER listening on 172.20.10.2:8551
+[2025-04-22 15:40:02,723] INFO: UDP LISTENER listening on 172.20.10.2:8552 for livestream.
+[2025-04-22 15:40:05,377] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_456_an08.txt
+[2025-04-22 15:40:13,957] INFO: [P2P MESSAGE] an10 -> an08: xin chao
+[2025-04-22 15:40:38,702] INFO: Sending message: thay
+[2025-04-22 15:40:39,700] INFO: Sent P2P chat to 172.20.10.4:8652 – {"type": "chat", "sender": "an08", "message": "thay", "channel": "456", "owner": "an10"}
+[2025-04-22 15:40:39,766] INFO: Sent P2P chat to 172.20.10.2:8551 – {"type": "chat", "sender": "an08", "message": "thay", "channel": "456", "owner": "an10"}
+[2025-04-22 15:40:39,766] INFO: [P2P MESSAGE] an08 -> an08: thay
+[2025-04-22 15:40:41,798] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-22 15:40:41,798] INFO: Tin nhắn từ an08 đã gửi tới 3 peer online trong kênh '456'
+[2025-04-22 15:40:41,958] INFO: Message from an08 sent in channel '456'
+[2025-04-22 15:41:05,227] INFO: Tracker response on LEAVE: Peer an08 (172.20.10.2:8551) left
