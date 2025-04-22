@@ -11,7 +11,12 @@ from PyQt6.QtCore import Qt, QTimer
 from PyQt6 import QtGui
 from PyQt6.QtGui import QFont
 from request import channelRequest
-from syncService import SyncManager
+from sync_utils import dump_messages_to_file
+def _can_dump(channel_data, username):
+    # nếu private: chỉ dump khi username đã join
+        if channel_data.get("is_private", False):
+            return username in channel_data.get("members", [])
+        return True  # public channel
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 from config.db import channels_collection, users_collection
 import time
@@ -29,18 +34,19 @@ class DiscordUI(QMainWindow):
 
         self.setWindowTitle("Discord Clone - Improved UI")
         self.setGeometry(100, 100, 1200, 700)
-
+        
         self.current_mode = None
         self.current_channel = None
         self.current_dm_user = None
         self.current_channel_info = None
         self.channels = {}
-        self.hosted_channels = {}
-        self.dm_users = []
-        self.last_message_count = 0
+        self.hosted_channels = {}      
+        self.dm_users = []      
+        self.last_message_count = 0 
+        self.last_seen_line = None
+
         self.is_viewer = False
 
-        # Sync manager
         self.sync_manager = None
 
         self.initUI()
@@ -56,158 +62,149 @@ class DiscordUI(QMainWindow):
         self.setCentralWidget(central_widget)
         main_layout = QHBoxLayout(central_widget)
         main_layout.setContentsMargins(0, 0, 0, 0)
-
-        # Sidebar
+        
         self.sidebar_frame = QFrame()
         self.sidebar_frame.setStyleSheet("background-color: #2F3136;")
         self.sidebar_frame.setFixedWidth(200)
         sidebar_layout = QVBoxLayout(self.sidebar_frame)
         sidebar_layout.setContentsMargins(10, 10, 10, 10)
         sidebar_layout.setSpacing(8)
-
-        title = QLabel("DISCORD V2.0")
-        title.setStyleSheet("color: white; font-size: 16px; font-weight: bold;")
-        title.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        sidebar_layout.addWidget(title)
-
+        
+        title_label = QLabel("DISCORD V2.0")
+        title_label.setStyleSheet("color: white; font-size: 16px; font-weight: bold;")
+        title_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        sidebar_layout.addWidget(title_label)
+        
         self.add_channel_button = QPushButton("+ Create Channel")
         self.add_channel_button.setStyleSheet("background-color: #5865F2; color: white;")
         self.add_channel_button.clicked.connect(self.add_channel)
         sidebar_layout.addWidget(self.add_channel_button)
-
-        tabs = QTabWidget()
-        tabs.setStyleSheet("QTabBar::tab { height: 30px; color: white; }")
-
-        # Channels
-        ch_tab = QWidget()
-        ch_layout = QVBoxLayout(ch_tab)
+        
+        tab_widget = QTabWidget()
+        tab_widget.setStyleSheet("QTabBar::tab { height: 30px; color: white; }")
+        
+        channel_tab = QWidget()
+        channel_tab_layout = QVBoxLayout(channel_tab)
         self.channel_list = QListWidget()
         self.channel_list.setStyleSheet("background-color: #3F4147; color: white;")
         self.channel_list.itemClicked.connect(self.handle_channel_clicked)
-        ch_layout.addWidget(self.channel_list)
-        tabs.addTab(ch_tab, "Channels")
+        channel_tab_layout.addWidget(self.channel_list)
+        tab_widget.addTab(channel_tab, "Channels")
 
-        # Hosted
-        hosted_tab = QWidget()
-        hosted_layout = QVBoxLayout(hosted_tab)
+        hosted_channel_tab = QWidget()
+        hosted_channel_layout = QVBoxLayout(hosted_channel_tab)
         self.hosted_channel_list = QListWidget()
         self.hosted_channel_list.setStyleSheet("background-color: #3F4147; color: white;")
         self.hosted_channel_list.itemClicked.connect(self.handle_channel_clicked)
-        hosted_layout.addWidget(self.hosted_channel_list)
-        tabs.addTab(hosted_tab, "Hosted Channels")
-
-        # DM
+        hosted_channel_layout.addWidget(self.hosted_channel_list)
+        tab_widget.addTab(hosted_channel_tab, "Hosted Channels")
+        
         dm_tab = QWidget()
-        dm_layout = QVBoxLayout(dm_tab)
+        dm_tab_layout = QVBoxLayout(dm_tab)
         self.dm_list = QListWidget()
         self.dm_list.setStyleSheet("background-color: #3F4147; color: white;")
         self.dm_list.itemClicked.connect(self.handle_dm_clicked)
-        dm_layout.addWidget(self.dm_list)
-        tabs.addTab(dm_tab, "Direct Msg")
-
-        sidebar_layout.addWidget(tabs)
-
+        dm_tab_layout.addWidget(self.dm_list)
+        tab_widget.addTab(dm_tab, "Direct Msg")
+        
+        sidebar_layout.addWidget(tab_widget)
+        
         self.status_dropdown = QComboBox()
         self.status_dropdown.addItems(["Online", "Offline", "Invisible"])
         self.status_dropdown.currentTextChanged.connect(self.change_status)
         sidebar_layout.addWidget(self.status_dropdown)
-
+        
         main_layout.addWidget(self.sidebar_frame)
-
-        # Center
+        
         self.center_frame = QFrame()
         self.center_frame.setStyleSheet("background-color: #36393F;")
         center_layout = QVBoxLayout(self.center_frame)
         center_layout.setContentsMargins(10, 10, 10, 10)
         center_layout.setSpacing(8)
-
+        
         self.chat_title_label = QLabel("No channel/user selected")
         self.chat_title_label.setStyleSheet("color: white; font-size: 18px; font-weight: bold;")
         center_layout.addWidget(self.chat_title_label)
-
+        
         self.join_button = QPushButton("Join Channel")
         self.join_button.setStyleSheet("background-color: #7289DA; color: white;")
         self.join_button.clicked.connect(self.join_channel)
         center_layout.addWidget(self.join_button)
-
+        
         self.delete_channel_button = QPushButton("Delete Channel")
         self.delete_channel_button.setStyleSheet("background-color: #FF5555; color: white;")
         self.delete_channel_button.clicked.connect(self.delete_channel)
         self.delete_channel_button.setVisible(False)
         center_layout.addWidget(self.delete_channel_button)
-
+        
         self.join_button.setVisible(False)
-
+        
         self.chat_display = QTextEdit()
         self.chat_display.setReadOnly(True)
         self.chat_display.setStyleSheet("background-color: #40444B; color: white;")
         center_layout.addWidget(self.chat_display, 1)
-
-        inp_layout = QHBoxLayout()
+        
+        input_layout = QHBoxLayout()
         self.message_input = QLineEdit()
         self.message_input.setStyleSheet("background-color: #2F3136; color: white; padding: 8px;")
         self.message_input.returnPressed.connect(self.send_message)
         self.send_button = QPushButton("Send")
         self.send_button.setStyleSheet("background-color: #5865F2; color: white; padding: 8px;")
         self.send_button.clicked.connect(self.send_message)
-        inp_layout.addWidget(self.message_input)
-        inp_layout.addWidget(self.send_button)
-        center_layout.addLayout(inp_layout)
-
+        input_layout.addWidget(self.message_input)
+        input_layout.addWidget(self.send_button)
+        center_layout.addLayout(input_layout)
+        
         self.toggle_livestream_button = QPushButton("Start Livestream")
         self.toggle_livestream_button.setStyleSheet("background-color: orange; color: white; padding: 8px;")
         self.toggle_livestream_button.clicked.connect(self.toggle_livestream)
         center_layout.addWidget(self.toggle_livestream_button)
-
+        
         main_layout.addWidget(self.center_frame, 1)
-
-        # Right
+        
         self.right_frame = QFrame()
         self.right_frame.setStyleSheet("background-color: #2F3136;")
         self.right_frame.setFixedWidth(200)
         right_layout = QVBoxLayout(self.right_frame)
         right_layout.setContentsMargins(10, 10, 10, 10)
-
-        lbl_members = QLabel("Members")
-        lbl_members.setStyleSheet("color: white; font-size: 14px; font-weight: bold;")
-        right_layout.addWidget(lbl_members)
-
+        
+        members_label = QLabel("Members")
+        members_label.setStyleSheet("color: white; font-size: 14px; font-weight: bold;")
+        right_layout.addWidget(members_label)
+        
         self.member_list = QListWidget()
         self.member_list.setStyleSheet("background-color: #3F4147; color: white;")
         right_layout.addWidget(self.member_list)
-
-        lbl_req = QLabel("Join Requests")
-        lbl_req.setStyleSheet("color: white; font-size: 14px; font-weight: bold;")
-        right_layout.addWidget(lbl_req)
-
+        
+        request_label = QLabel("Join Requests")
+        request_label.setStyleSheet("color: white; font-size: 14px; font-weight: bold;")
+        right_layout.addWidget(request_label)
+        
         self.request_list = QListWidget()
         self.request_list.setStyleSheet("background-color: #3F4147; color: white;")
         right_layout.addWidget(self.request_list)
-
+        
         self.logout_button = QPushButton("Logout")
         self.logout_button.setStyleSheet("background-color: red; color: white;")
         self.logout_button.clicked.connect(self.logout)
         right_layout.addWidget(self.logout_button)
-
+        
         main_layout.addWidget(self.right_frame)
-
+        
+        self.load_dm_list()
 
     def send_message(self):
         message = self.message_input.text().strip()
         if not message:
             return
         self.message_input.clear()
-        # Đảm bảo timestamp được định nghĩa trước khi dùng
-        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        # Gửi tin nhắn tùy theo chế độ
+        #self.chat_display.append(message)
+        logging.info("Sending message: %s", message)
         if self.current_mode == "channel":
             self.send_message_p2p_api(message)
-            # Hiển thị ngay tin nhắn đã gửi
-            self.chat_display.append(f"[{timestamp}] {self.username}: {message}")
         elif self.current_mode == "dm":
             if self.user_peer:
                 self.user_peer.send_chat_message_via_tracker(f"[DM to {self.current_dm_user}] {message}")
-                self.chat_display.append(f"[{timestamp}] {self.username} -> {self.current_dm_user}: {message}")
             else:
                 self.chat_display.append("[ERROR] No user_peer for DM")
         else:
@@ -296,8 +293,8 @@ class DiscordUI(QMainWindow):
                 self.user_peer.livestream_channel = self.current_channel
         if self.channels.get(self.current_channel, {}).get("owner") == self.username:
             if not self.sync_manager:
-                self.sync_manager = SyncManager(self.username, self.current_channel)
-                self.sync_manager.start_periodic_sync(interval=30)
+                # self.sync_manager = SyncManager(self.username, self.current_channel)
+                # self.sync_manager.start_periodic_sync(interval=30)
                 logging.info("[SYNC] SyncManager started for channel '%s'", self.current_channel)
     
 
@@ -309,10 +306,14 @@ class DiscordUI(QMainWindow):
         self.delete_channel_button.setVisible(False)
         self.load_dm_messages()
     
+
+
     def load_channel_messages(self):
         if not self.current_channel:
             return
         self.chat_display.clear()
+
+        # Bước 1: gọi API lấy info + messages
         try:
             request_data = {
                 "action": "get_channel_info",
@@ -321,59 +322,67 @@ class DiscordUI(QMainWindow):
             }
             if self.is_viewer:
                 request_data["is_visitor"] = True
+
             response_str = channelRequest.handle_channel_request(json.dumps(request_data))
             response = json.loads(response_str)
-            if response.get("status") == "success":
-                members = response.get("members", [])
-                self.update_member_list(members)
-                if self.username in members:
-                    self.join_button.setText("Joined")
-                    self.join_button.setEnabled(False)
-                else:
-                    self.join_button.setText("Join Channel")
-                    self.join_button.setEnabled(True)
-                owner = response.get("owner")
-                self.start_request_timer(owner)
+
+            if response.get("status") != "success":
+                self.chat_display.append(f"[ERROR] {response.get('message')}")
+                return
+
+            # Cập nhật member list, nút join, timer...
+            members = response.get("members", [])
+            self.update_member_list(members)
+            if self.username in members:
+                self.join_button.setText("Joined")
+                self.join_button.setEnabled(False)
+            else:
+                self.join_button.setText("Join Channel")
+                self.join_button.setEnabled(True)
+            self.start_request_timer(response.get("owner"))
 
         except Exception as e:
             logging.error("load_channel_messages error: %s", e)
+            return
+
+        # Bước 2: lấy thông tin kênh & quyết định dump
         channel_data = channels_collection.find_one({"channel_name": self.current_channel})
         if not channel_data:
-            return {"status": "error", "message": "Channel not found"}
-        owner_username = channel_data.get("owner")
-        owner_data = users_collection.find_one({"username": owner_username})
+            self.chat_display.append("[ERROR] Channel not found")
+            return
+
+        # Bước 3: nếu owner offline → hiển thị trực tiếp và dump
+        owner_data = users_collection.find_one({"username": channel_data.get("owner")})
+        messages = response.get("messages", [])
         if owner_data and owner_data.get("state") == "offline":
-            if response.get("status") == "success":
-                messages = response.get("messages", [])
-                self.last_message_count = len(messages)
-                for msg in messages:
-                    text = msg.get("text")
-                    self.chat_display.append(f"{text}")
-                self.current_channel_info = response
-            else:
-                self.chat_display.append(f"Polling error: {response.get('message')}")
+            self.last_message_count = len(messages)
+            for msg in messages:
+                text = msg.get("text", "")
+                self.chat_display.append(text)
+            # Dump toàn bộ messages xuống file (nếu được phép)
+            if _can_dump(channel_data, self.username):
+                dump_messages_to_file(self.current_channel, self.username, messages)
+            self.current_channel_info = response
+            return
 
-        if (owner_data and owner_data.get("state") == "online"):
-            
-            if response.get("status") == "success":
-                try:
-                    file_path = os.path.join("local_sync", f"sync_{self.current_channel}_{owner_username}.txt")
-                    if not os.path.exists(file_path):
-                        self.chat_display.append("[INFO] Do not have mesage.")
-                        return
+        # Bước 4: nếu owner online → đọc từ file sync
+        if owner_data and owner_data.get("state") == "online":
+            # Hiển thị hết file local (đã được dump tự động)
+            path = os.path.join("local_sync", f"sync_{self.current_channel}_{self.username}.txt")
+            if not os.path.exists(path):
+                self.chat_display.append("[INFO] Chưa có tin nhắn cục bộ.")
+                return
 
-                    with open(file_path, 'r', encoding='utf-8') as f:
-                        for line in f:
-                            self.chat_display.append(line.strip())
-                            self.last_message_count += 1
-                            self.current_channel_info = response
+            try:
+                with open(path, "r", encoding="utf-8") as f:
+                    for line in f:
+                        self.chat_display.append(line.strip())
+                logging.info("[SYNC LOAD] Loaded from file: %s", path)
+            except Exception as e:
+                logging.error("[SYNC LOAD] Error reading file: %s", e)
+                self.chat_display.append("[ERROR] Không thể load tin nhắn từ file.")
+            return
 
-                    logging.info("[SYNC LOAD] Save message to file: %s", file_path)
-                except Exception as e:
-                    logging.error("[SYNC LOAD] Error when read file: %s", e)
-                    self.chat_display.append("[ERROR] Can not load message from file.")
-            else:
-                self.chat_display.append(f"Polling error: {response.get('message')}")
 
 
     def start_request_timer(self, owner):
@@ -651,8 +660,8 @@ class DiscordUI(QMainWindow):
                 self.hosted_channel_list.clear()
                 for c in channels:
                     self.hosted_channel_list.addItem(c)
-            else:
-                logging.error("Error get_hosted_channels: %s", response.get("message"))
+            # else:
+            #     logging.error("Error get_hosted_channels: %s", response.get("message"))
         
         except Exception as e:
             logging.error("get_hosted_channels_from_server error: %s", e)
@@ -660,23 +669,32 @@ class DiscordUI(QMainWindow):
         self.current_channel = channel_name
         self.chat_display.clear()
         self.last_message_count = 0
-
+    
     def poll_loop(self):
         while True:
             if self.current_mode == "channel" and self.current_channel:
                 try:
-                    channel_data = channels_collection.find_one({"channel_name": self.current_channel})
+                    # 1. Lấy metadata kênh và trạng thái owner
+                    channel_data = channels_collection.find_one(
+                        {"channel_name": self.current_channel}
+                    )
                     if not channel_data:
-                        logging.warning("poll_loop: Channel data is None for channel: %s", self.current_channel)
-
-                    owner_username = channel_data.get("owner")
-                    owner_data = users_collection.find_one({"username": owner_username})
-
-                    if not owner_data:
-                        logging.warning("poll_loop: Owner data is None for username: %s", owner_username)
+                        logging.warning("poll_loop: Channel data is None for channel: %s",
+                                        self.current_channel)
                         time.sleep(0.5)
                         continue
 
+                    owner_username = channel_data.get("owner")
+                    owner_data = users_collection.find_one(
+                        {"username": owner_username}
+                    )
+                    if not owner_data:
+                        logging.warning("poll_loop: Owner data is None for username: %s",
+                                        owner_username)
+                        time.sleep(0.5)
+                        continue
+
+                    # NHÁNH A: Owner offline → gọi API, hiển thị và dump file mới
                     if owner_data.get("state") == "offline":
                         request_data = {
                             "action": "get_channel_info",
@@ -686,65 +704,65 @@ class DiscordUI(QMainWindow):
                         if self.is_viewer:
                             request_data["is_visitor"] = True
 
-                        response_str = channelRequest.handle_channel_request(json.dumps(request_data))
+                        response_str = channelRequest.handle_channel_request(
+                            json.dumps(request_data)
+                        )
                         response = json.loads(response_str)
 
                         if response.get("status") == "success":
                             messages = response.get("messages", [])
+                            # nếu có tin mới
                             if len(messages) > self.last_message_count:
                                 new_msgs = messages[self.last_message_count:]
+                                # hiển thị lên UI
                                 for msg in new_msgs:
-                                    text = msg.get("text")
-                                    self.chat_display.append(f"{text}")
-                                    self.last_message_count = len(messages)
+                                    text = msg.get("text", "")
+                                    self.chat_display.append(text)
+                                # cập nhật đếm
+                                self.last_message_count = len(messages)
+                                # dump mới về file (nếu đủ quyền)
+                                if _can_dump(channel_data, self.username):
+                                    dump_messages_to_file(
+                                        self.current_channel,
+                                        self.username,
+                                        [m.get("text", "") for m in new_msgs]
+                                    )
                         else:
                             logging.error("Polling error: %s", response.get("message"))
 
-                    elif owner_data.get("state") == "online" or owner_data.get("state") == "Invisible":
-                        request_data = {
-                            "action": "get_channel_info",
-                            "channel_name": self.current_channel,
-                            "username": self.username,
-                        }
-                        if self.is_viewer:
-                            request_data["is_visitor"] = True
+                    # NHÁNH B: Owner online hoặc Invisible → chỉ load từ file cục bộ
+                    else:  # state in ("online","Invisible")
+                        file_path = os.path.join(
+                            "local_sync",
+                            f"sync_{self.current_channel}_{self.username}.txt"
+                        )
+                        if os.path.exists(file_path):
+                            try:
+                                # đọc toàn bộ file
+                                with open(file_path, "r", encoding="utf-8") as f:
+                                    lines = [l.strip() for l in f if l.strip()]
 
-                        response_str = channelRequest.handle_channel_request(json.dumps(request_data))
-                        response = json.loads(response_str)
+                                # khởi tạo bộ đếm nếu lần đầu
+                                if not hasattr(self, "file_line_count"):
+                                    self.file_line_count = 0
 
-                        if response.get("status") == "success":
-                            file_path = os.path.join("local_sync", f"sync_{self.current_channel}_{owner_username}.txt")
-                            if os.path.exists(file_path):
-                                with open(file_path, 'r', encoding='utf-8') as f:
-                                    lines = [line.strip() for line in f if line.strip() and message_pattern.match(line)]
+                                # chỉ lấy dòng mới
+                                new_lines = lines[self.file_line_count:]
+                                for line in new_lines:
+                                    self.chat_display.append(line)
 
-                                # Phần xử lý nằm ngoài with
-                                if not lines:
-                                    time.sleep(0.5)
-                                    continue
-
-                                if not hasattr(self, "last_seen_line") or self.last_seen_line not in lines:
-                                    for line in lines:
-                                        self.chat_display.append(line)
-                                    self.last_seen_line = lines[-1]
-                                    self.last_message_count = len(lines)
-                                else:
-                                    idx = lines.index(self.last_seen_line)
-                                    new_lines = lines[idx + 1:]
-                                    for line in new_lines:
-                                        self.chat_display.append(line)
-                                    if new_lines:
-                                        self.last_seen_line = new_lines[-1]
-                                        self.last_message_count = len(lines)
-                            else:
-                                logging.warning("[SYNC LOAD] File not found: %s", file_path)
-                        else:
-                            logging.error("poll_loop response error: %s", response.get("message"))
-
+                                # cập nhật công cụ đếm
+                                self.file_line_count = len(lines)
+                            except Exception as e:
+                                logging.error("[SYNC LOAD] Error reading file: %s", e)
+                                self.chat_display.append(
+                                    "[ERROR] Cannot load messages from file."
+                                )
+                        # nếu file chưa có thì chờ
                 except Exception as e:
                     logging.error("Exception in poll_loop: %s", e)
 
-            # --- Refresh danh sách ---
+            # --- Refresh danh sách DM và kênh ---
             try:
                 self.load_dm_list()
                 self.get_channels_from_server()
@@ -752,7 +770,8 @@ class DiscordUI(QMainWindow):
             except Exception as e:
                 logging.error("Error updating lists: %s", e)
 
-            time.sleep(0.5)
+            time.sleep(1)
+
     
     def toggle_livestream(self):
         if self.current_mode != "channel":
@@ -777,7 +796,7 @@ class DiscordUI(QMainWindow):
         session_id = self.session_info.get("session_id")
         try:
             client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            server_ip = '10.0.156.176'
+            server_ip = '172.20.10.2'
             server_port = 5000
             client_socket.connect((server_ip, server_port))
             if status == "Online":
@@ -803,7 +822,7 @@ class DiscordUI(QMainWindow):
         try:
             # Gửi yêu cầu logout đến server
             client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            server_ip = '10.0.156.176'
+            server_ip = '172.20.10.2'
             server_port = 5000
             client_socket.connect((server_ip, server_port))
             session_id = self.session_info.get("session_id")
@@ -814,28 +833,12 @@ class DiscordUI(QMainWindow):
             client_socket.close()
 
             if response.get("status") == "success":
-                # Gọi get_hosted_channels
-                request_channels = {
-                    "action": "get_hosted_channels",
-                    "username": self.username
-                }
-                response_channels = channelRequest.handle_channel_request(json.dumps(request_channels))
-                hosted_channels_response = json.loads(response_channels)
+                os.makedirs("local_sync", exist_ok=True)
 
-                if hosted_channels_response.get("status") == "success":
-                    hosted_channels = hosted_channels_response.get("data", {}).get("hosted_channels", [])
-                    os.makedirs("local_sync", exist_ok=True)
+                for filename in os.listdir("local_sync"):
+                    if filename.startswith("sync_") and filename.endswith(".txt"):
+                        sync_path = os.path.join("local_sync", filename)
 
-                    for channel_name in hosted_channels:
-                        sync_filename = f"sync_{channel_name}_{self.username}.txt"
-                        sync_path = os.path.join("local_sync", sync_filename)
-
-                        # Tạo file nếu chưa tồn tại
-                        if not os.path.exists(sync_path):
-                            with open(sync_path, "w", encoding="utf-8") as f:
-                                pass
-
-                        # Đọc file và lọc dòng không hợp lệ đầu tiên
                         if os.path.exists(sync_path):
                             with open(sync_path, "r", encoding="utf-8") as f:
                                 lines = f.readlines()
@@ -845,54 +848,6 @@ class DiscordUI(QMainWindow):
                                 lines = lines[1:]
                                 with open(sync_path, "w", encoding="utf-8") as f:
                                     f.writelines(lines)
-
-                        # Đồng bộ từ file vào database
-                        parts = sync_filename.replace("sync_", "").replace(".txt", "").split("_")
-                        if len(parts) < 2:
-                            continue
-                        channel_owner = parts[1]
-                        if channel_owner != self.username:
-                            logging.warning("[SYNC SKIPPED] User is not owner of channel: %s", channel_name)
-                            continue
-
-                        channel_doc = channels_collection.find_one({"channel_name": channel_name})
-                        existing_messages = channel_doc.get("messages", []) if channel_doc else []
-                        existing_texts = set(msg["text"] for msg in existing_messages)
-                        message_id = len(existing_messages)
-
-                        with open(sync_path, "r", encoding="utf-8") as f:
-                            for line in f:
-                                line = line.strip()
-                                if not line:
-                                    continue
-                                try:
-                                    time_part, rest = line.split("] ", 1)
-                                    readable_time = time_part[1:]
-                                    sender, message_text = rest.split(": ", 1)
-                                    full_text = f"[{readable_time}] {sender}: {message_text}"
-
-                                    if full_text in existing_texts:
-                                        continue
-
-                                    message_dict = {
-                                        "id": message_id,
-                                        "sender": sender,
-                                        "text": full_text
-                                    }
-
-                                    channels_collection.update_one(
-                                        {"channel_name": channel_name},
-                                        {"$push": {"messages": message_dict}}
-                                    )
-                                    message_id += 1
-                                    existing_texts.add(full_text)
-                                except Exception as e:
-                                    logging.error("Error processing line in %s: %s", sync_filename, e)
-
-                        logging.info("[SYNC DONE] Synced file: %s", sync_filename)
-
-                else:
-                    logging.warning("[SYNC LOGOUT] Failed to fetch hosted channels")
 
                 QMessageBox.information(self, "Logout", "You have been logged out.")
                 if self.user_peer:

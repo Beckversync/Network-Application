@@ -74751,3 +74751,194 @@
 [2025-04-21 21:54:12,607] INFO: [P2P MESSAGE] an08 -> an09: t khỏe còn má m
 [2025-04-21 21:55:49,948] INFO: [SYNC DONE] Synced file: sync_aa1_an09.txt
 [2025-04-21 21:55:50,781] INFO: Tracker response on LEAVE: Peer an09 (10.0.156.176:6907) left
+[2025-04-21 21:59:28,252] ERROR: Registration error: [WinError 10057] A request to send or receive data was disallowed because the socket is not connected and (when sending on a datagram socket using a sendto call) no address was supplied
+[2025-04-22 10:24:46,709] INFO: Logged in as: an08
+[2025-04-22 10:24:47,395] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-22 10:24:47,485] INFO: Tracker response: Peer an08 (10.28.128.39:7801) added
+[2025-04-22 10:24:47,486] INFO: P2P SERVER listening on 10.28.128.39:7801
+[2025-04-22 10:24:47,491] INFO: UDP LISTENER listening on 10.28.128.39:7802 for livestream.
+[2025-04-22 10:25:05,526] INFO: Logged in as: an09
+[2025-04-22 10:25:06,634] INFO: [SYNC LOGIN] Saved 0 new messages for aa1
+[2025-04-22 10:25:06,635] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-22 10:25:06,726] INFO: Tracker response: Peer an09 (10.28.128.39:6882) added
+[2025-04-22 10:25:06,728] INFO: P2P SERVER listening on 10.28.128.39:6882
+[2025-04-22 10:25:06,728] INFO: UDP LISTENER listening on 10.28.128.39:6883 for livestream.
+[2025-04-22 10:25:24,889] INFO: Channel '1' created by an08 (is_private=False)
+[2025-04-22 10:25:26,996] INFO: [SYNC] SyncManager started for channel '1'
+[2025-04-22 10:25:27,762] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:28,431] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:29,091] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:29,765] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:30,322] INFO: User an09 joined public channel '1'
+[2025-04-22 10:25:30,380] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:31,100] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:31,669] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:32,442] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:32,953] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:33,747] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:34,239] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:34,296] INFO: Sending message: chaof
+[2025-04-22 10:25:35,055] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:35,539] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:36,357] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:36,862] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:37,662] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:38,186] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:38,966] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:39,534] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:40,282] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:40,855] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:41,583] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:42,198] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:42,888] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:43,539] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:44,189] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:44,868] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:45,490] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:46,188] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:46,793] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:47,539] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:48,114] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:48,860] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:49,444] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:50,201] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:50,788] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:52,102] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:52,110] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:53,418] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:53,425] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:54,725] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:54,755] WARNING: [SYNC LOAD] File not found: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:55,484] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-22 10:25:55,488] INFO: Sent P2P chat to 10.28.128.39:7801 – {"type": "chat", "sender": "an08", "message": "chaof"}
+[2025-04-22 10:25:55,491] INFO: [INFO] Create new file: local_sync\sync_1_an08.txt
+[2025-04-22 10:25:55,492] INFO: [P2P MESSAGE] an08 -> an08: chaof
+[2025-04-22 10:25:55,547] INFO: Sent P2P chat to 10.28.128.39:6882 – {"type": "chat", "sender": "an08", "message": "chaof"}
+[2025-04-22 10:25:55,548] INFO: Tin nhắn từ an08 đã được gửi đến 3 peer online trong kênh '1'
+[2025-04-22 10:25:55,548] INFO: Message from an08 sent in channel '1'
+[2025-04-22 10:25:55,550] INFO: [INFO] Create new file: local_sync\sync_1_an09.txt
+[2025-04-22 10:25:55,550] INFO: [P2P MESSAGE] an08 -> an09: chaof
+[2025-04-22 10:26:01,511] INFO: Sending message: ?
+[2025-04-22 10:26:22,683] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-22 10:26:22,684] INFO: Sent P2P chat to 10.28.128.39:7801 – {"type": "chat", "sender": "an08", "message": "?"}
+[2025-04-22 10:26:22,685] INFO: [P2P MESSAGE] an08 -> an08: ?
+[2025-04-22 10:26:22,738] INFO: Sent P2P chat to 10.28.128.39:6882 – {"type": "chat", "sender": "an08", "message": "?"}
+[2025-04-22 10:26:22,740] INFO: Tin nhắn từ an08 đã được gửi đến 3 peer online trong kênh '1'
+[2025-04-22 10:26:22,741] INFO: Message from an08 sent in channel '1'
+[2025-04-22 10:26:22,742] INFO: [P2P MESSAGE] an08 -> an09: ?
+[2025-04-22 10:26:47,122] INFO: Sending message: alo
+[2025-04-22 10:27:08,328] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-22 10:27:08,329] INFO: Sent P2P chat to 10.28.128.39:7801 – {"type": "chat", "sender": "an09", "message": "alo"}
+[2025-04-22 10:27:08,331] INFO: [P2P MESSAGE] an09 -> an08: alo
+[2025-04-22 10:27:08,383] INFO: Sent P2P chat to 10.28.128.39:6882 – {"type": "chat", "sender": "an09", "message": "alo"}
+[2025-04-22 10:27:08,384] INFO: Tin nhắn từ an09 đã được gửi đến 3 peer online trong kênh '1'
+[2025-04-22 10:27:08,384] INFO: Message from an09 sent in channel '1'
+[2025-04-22 10:27:08,387] INFO: [P2P MESSAGE] an09 -> an09: alo
+[2025-04-22 10:27:36,950] INFO: Tracker response on LEAVE: Peer an08 (10.28.128.39:7801) left
+[2025-04-22 10:27:41,166] INFO: Tracker response on LEAVE: Peer an09 (10.28.128.39:6882) left
+[2025-04-22 10:29:56,104] INFO: Logged in as: an08
+[2025-04-22 10:29:56,852] INFO: [SYNC LOGIN] Saved 0 new messages for 1
+[2025-04-22 10:29:56,853] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-22 10:29:56,965] INFO: Tracker response: Peer an08 (10.28.128.39:6296) added
+[2025-04-22 10:29:56,967] INFO: P2P SERVER listening on 10.28.128.39:6296
+[2025-04-22 10:29:56,967] INFO: UDP LISTENER listening on 10.28.128.39:6297 for livestream.
+[2025-04-22 10:29:58,405] INFO: [SYNC LOAD] Save message to file: local_sync\sync_1_an08.txt
+[2025-04-22 10:29:58,405] INFO: [SYNC] SyncManager started for channel '1'
+[2025-04-22 10:30:02,525] INFO: [SYNC LOAD] Save message to file: local_sync\sync_1_an08.txt
+[2025-04-22 10:30:02,526] INFO: [SYNC] SyncManager started for channel '1'
+[2025-04-22 10:30:02,738] INFO: [SYNC LOAD] Save message to file: local_sync\sync_1_an08.txt
+[2025-04-22 10:30:02,738] INFO: [SYNC] SyncManager started for channel '1'
+[2025-04-22 10:30:05,224] INFO: Sending message: nhắn
+[2025-04-22 10:30:26,423] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-22 10:30:26,424] INFO: Sent P2P chat to 10.28.128.39:6296 – {"type": "chat", "sender": "an08", "message": "nh\u1eafn"}
+[2025-04-22 10:30:26,427] INFO: [P2P MESSAGE] an08 -> an08: nhắn
+[2025-04-22 10:30:26,478] INFO: Tin nhắn từ an08 đã được gửi đến 2 peer online trong kênh '1'
+[2025-04-22 10:30:26,479] INFO: Message from an08 sent in channel '1'
+[2025-04-22 10:33:30,501] INFO: Sending message: chậm
+[2025-04-22 10:33:51,693] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-22 10:33:51,694] INFO: Sent P2P chat to 10.28.128.39:6296 – {"type": "chat", "sender": "an08", "message": "ch\u1eadm"}
+[2025-04-22 10:33:51,696] INFO: [P2P MESSAGE] an08 -> an08: chậm
+[2025-04-22 10:33:51,745] INFO: Tin nhắn từ an08 đã được gửi đến 2 peer online trong kênh '1'
+[2025-04-22 10:33:51,746] INFO: Message from an08 sent in channel '1'
+[2025-04-22 10:34:25,134] INFO: Tracker response on LEAVE: Peer an08 (10.28.128.39:6296) left
+[2025-04-22 10:49:13,852] INFO: Logged in as: an08
+[2025-04-22 10:49:14,428] INFO: [SYNC LOGIN] Saved 0 new messages for 1
+[2025-04-22 10:49:14,429] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-22 10:49:14,534] INFO: Tracker response: Peer an08 (10.28.128.39:8114) added
+[2025-04-22 10:49:14,536] INFO: P2P SERVER listening on 10.28.128.39:8114
+[2025-04-22 10:49:14,536] INFO: UDP LISTENER listening on 10.28.128.39:8115 for livestream.
+[2025-04-22 10:50:15,033] INFO: Logged in as: an08
+[2025-04-22 10:50:15,831] INFO: [SYNC LOGIN] Saved 0 new messages for 1
+[2025-04-22 10:50:15,832] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-22 10:50:15,935] INFO: Tracker response: Peer an08 (10.28.128.39:8060) added
+[2025-04-22 10:50:15,936] INFO: P2P SERVER listening on 10.28.128.39:8060
+[2025-04-22 10:50:15,936] INFO: UDP LISTENER listening on 10.28.128.39:8061 for livestream.
+[2025-04-22 10:50:17,813] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_1_an08.txt
+[2025-04-22 10:50:17,814] INFO: [SYNC] SyncManager started for channel '1'
+[2025-04-22 10:50:20,260] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_1_an08.txt
+[2025-04-22 10:50:20,260] INFO: [SYNC] SyncManager started for channel '1'
+[2025-04-22 10:50:21,889] INFO: Sending message: slow
+[2025-04-22 10:50:43,082] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-22 10:50:43,083] INFO: Sent P2P chat to 10.28.128.39:8060 – {"type": "chat", "sender": "an08", "message": "slow"}
+[2025-04-22 10:50:43,085] INFO: [P2P MESSAGE] an08 -> an08: slow
+[2025-04-22 10:50:45,133] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-22 10:50:45,196] INFO: Tin nhắn từ an08 đã được gửi đến 3 peer online trong kênh '1'
+[2025-04-22 10:50:45,198] INFO: Message from an08 sent in channel '1'
+[2025-04-22 10:50:50,217] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_1_an08.txt
+[2025-04-22 10:50:50,218] INFO: [SYNC] SyncManager started for channel '1'
+[2025-04-22 10:51:04,697] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_1_an08.txt
+[2025-04-22 10:51:04,698] INFO: [SYNC] SyncManager started for channel '1'
+[2025-04-22 10:51:04,915] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_1_an08.txt
+[2025-04-22 10:51:04,916] INFO: [SYNC] SyncManager started for channel '1'
+[2025-04-22 10:51:06,437] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_1_an08.txt
+[2025-04-22 10:51:06,438] INFO: [SYNC] SyncManager started for channel '1'
+[2025-04-22 10:51:07,053] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_1_an08.txt
+[2025-04-22 10:51:07,053] INFO: [SYNC] SyncManager started for channel '1'
+[2025-04-22 10:51:44,027] INFO: Logged in as: an08
+[2025-04-22 10:51:44,729] INFO: [SYNC LOGIN] Saved 0 new messages for 1
+[2025-04-22 10:51:44,730] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-22 10:51:44,835] INFO: Tracker response: Peer an08 (10.28.128.39:8505) added
+[2025-04-22 10:51:44,837] INFO: P2P SERVER listening on 10.28.128.39:8505
+[2025-04-22 10:51:44,837] INFO: UDP LISTENER listening on 10.28.128.39:8506 for livestream.
+[2025-04-22 10:51:46,136] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_1_an08.txt
+[2025-04-22 10:51:46,138] INFO: [SYNC] SyncManager started for channel '1'
+[2025-04-22 10:51:52,963] INFO: Sending message: fasst
+[2025-04-22 10:52:14,174] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-22 10:52:14,175] INFO: Sent P2P chat to 10.28.128.39:8505 – {"type": "chat", "sender": "an08", "message": "fasst"}
+[2025-04-22 10:52:14,179] INFO: [P2P MESSAGE] an08 -> an08: fasst
+[2025-04-22 10:52:16,231] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-22 10:52:18,280] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-22 10:52:18,333] INFO: Tin nhắn từ an08 đã được gửi đến 4 peer online trong kênh '1'
+[2025-04-22 10:52:18,334] INFO: Message from an08 sent in channel '1'
+[2025-04-22 10:52:29,124] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_1_an08.txt
+[2025-04-22 10:52:29,124] INFO: [SYNC] SyncManager started for channel '1'
+[2025-04-22 10:54:54,199] INFO: Logged in as: an08
+[2025-04-22 10:54:55,058] INFO: [SYNC LOGIN] Saved 0 new messages for 1
+[2025-04-22 10:54:55,060] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-22 10:54:55,162] INFO: Tracker response: Peer an08 (10.28.128.39:6527) added
+[2025-04-22 10:54:55,164] INFO: P2P SERVER listening on 10.28.128.39:6527
+[2025-04-22 10:54:55,164] INFO: UDP LISTENER listening on 10.28.128.39:6528 for livestream.
+[2025-04-22 10:54:57,650] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_1_an08.txt
+[2025-04-22 10:54:57,651] INFO: [SYNC] SyncManager started for channel '1'
+[2025-04-22 10:54:59,529] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_1_an08.txt
+[2025-04-22 10:54:59,529] INFO: [SYNC] SyncManager started for channel '1'
+[2025-04-22 10:55:02,833] INFO: Sending message: can dump
+[2025-04-22 10:55:24,000] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-22 10:55:24,002] INFO: Sent P2P chat to 10.28.128.39:6527 – {"type": "chat", "sender": "an08", "message": "can dump"}
+[2025-04-22 10:55:24,004] INFO: [P2P MESSAGE] an08 -> an08: can dump
+[2025-04-22 10:55:26,052] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-22 10:55:28,082] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-22 10:55:30,093] ERROR: P2P send error: [WinError 10061] No connection could be made because the target machine actively refused it
+[2025-04-22 10:55:30,138] INFO: Tin nhắn từ an08 đã được gửi đến 5 peer online trong kênh '1'
+[2025-04-22 10:55:30,138] INFO: Message from an08 sent in channel '1'
+[2025-04-22 10:55:44,668] INFO: Tracker response on LEAVE: Peer an08 (10.28.128.39:6527) left
+[2025-04-22 11:07:42,861] INFO: Logged in as: an09
+[2025-04-22 11:07:43,510] INFO: [SYNC LOGIN] Saved 0 new messages for aa1
+[2025-04-22 11:07:43,511] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-22 11:07:43,615] INFO: Tracker response: Peer an09 (10.28.128.39:7345) added
+[2025-04-22 11:07:43,617] INFO: UDP LISTENER listening on 10.28.128.39:7346 for livestream.
+[2025-04-22 11:07:43,618] INFO: P2P SERVER listening on 10.28.128.39:7345
+[2025-04-22 11:08:06,824] INFO: User an09 requested to join private channel 'Private test'
+[2025-04-22 11:08:53,677] INFO: [INFO] Create new file: local_sync\sync_Private test_an09.txt
+[2025-04-22 11:08:53,696] INFO: [P2P MESSAGE] an08 -> an09: đang nhắn
+[2025-04-22 11:11:25,382] INFO: Tracker response on LEAVE: Peer an09 (10.28.128.39:7345) left

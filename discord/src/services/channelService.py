@@ -14,17 +14,21 @@ def create_channel(host: str, channel_name: str, is_private: bool, allow_visitor
     new_channel = Channel(
         channel_name=channel_name,
         owner=host,
-        members=[host],
+        members=[], 
         is_private=is_private,
         join_requests=[],
         allow_visitor=allow_visitor
     )
+    
     channels_collection.insert_one(new_channel.dict())
+    
     users_collection.update_one(
         {"username": host},
         {"$addToSet": {"hosted_channels": channel_name, "joined_channels": channel_name}}
     )
+    
     logging.info("Channel '%s' created by %s (is_private=%s)", channel_name, host, is_private)
+    
     return {"status": "success", "message": f"Channel '{channel_name}' created successfully"}
 
 def join_channel(username: str, channel_name: str):
@@ -156,64 +160,52 @@ def send_to_p2p_server(peer_ip, peer_port, message_text, sender="Unknown", chann
 
 
 def send_message_p2p(username: str, channel_name: str, message_text: str):
-    # Lấy thông tin kênh và danh sách thành viên
     channel_data = channels_collection.find_one({"channel_name": channel_name})
     if not channel_data:
         return {"status": "error", "message": "Không tìm thấy kênh"}
 
+    if channel_data.get("is_private", False) and username not in channel_data.get("members", []):
+        return {
+            "status": "error",
+            "message": "Bạn không có quyền gửi tin nhắn trong kênh riêng tư này"
+        }
+
     owner_username = channel_data.get("owner")
-    members = channel_data.get("members", [])
+    if not owner_username:
+        return {"status": "error", "message": "Không tìm thấy chủ kênh"}
 
-    # CHỦ KÊNH gửi → broadcast tới mọi member (trừ chính mình)
-    if username == owner_username:
-        # 1. Lưu message vào DB để đồng bộ offline/online
-        send_message(username, channel_name, message_text)
+    owner_data = users_collection.find_one({"username": owner_username})
+    if owner_data and owner_data.get("state") == "online":
+        # Chủ kênh online → gửi cho tất cả thành viên đang online
+        # if username == owner_username:
+            # send_message(username, channel_name, message_text)
+            
+        members = channel_data.get("members", [])
+        success_count = 0
 
-        # 2. Lấy tất cả session của các member online
+        sent_targets = set()
+
         for member in members:
-            if member == username:
-                continue
-            user_doc = users_collection.find_one({"username": member})
-            if not user_doc:
-                continue
-            for sess in user_doc.get("sessions", []):
-                peer_ip   = sess.get("peer_ip")
-                peer_port = sess.get("peer_port")
-                if peer_ip and peer_port:
-                    # gửi P2P
-                    send_to_p2p_server(
-                        peer_ip, peer_port,
-                        message_text,
-                        sender=username,
-                        channel=channel_name,
-                        owner=owner_username
-                    )
-        return {"status": "success", "message": "Broadcast chat tới peers"}
+            user_data = users_collection.find_one({"username": member})
+            if user_data and user_data.get("state") == "online":
+                for session in user_data.get("sessions", []):
+                    peer_ip = session.get("peer_ip")
+                    peer_port = session.get("peer_port")
+                    target = f"{peer_ip}:{peer_port}"
+                    if peer_ip and peer_port and target not in sent_targets:
+                        send_to_p2p_server(peer_ip, peer_port, message_text, sender=username)
+                        sent_targets.add(target)
+                        success_count += 1
 
-    # NGƯỜI THƯỜNG gửi → vẫn gửi 1‑1 tới owner
-    # tìm session đầu tiên của owner
-    owner_doc = users_collection.find_one({"username": owner_username})
-    if owner_doc:
-        sessions = owner_doc.get("sessions", [])
-        if sessions:
-            sess = sessions[0]
-            peer_ip   = sess.get("peer_ip")
-            peer_port = sess.get("peer_port")
-            result = send_to_p2p_server(
-                peer_ip, peer_port,
-                message_text,
-                sender=username,
-                channel=channel_name,
-                owner=owner_username
-            )
-            if result.get("status") == "success":
-                # và cũng ghi vào DB để lưu history
-                send_message(username, channel_name, message_text)
-            return result
+        # send_message(username, channel_name, message_text)
 
-    # nếu không tìm được owner session, fallback về gửi qua DB (client-server)
-    send_message(username, channel_name, message_text)
-    return {"status": "success", "message": "Message lưu qua server"}
+        logging.info("Tin nhắn từ %s đã được gửi đến %d peer online trong kênh '%s'", username, success_count, channel_name)
+        return {"status": "success", "message": f"Đã gửi đến {success_count} peer online và lưu vào kênh"}
+    
+    else:
+        send_message(username, channel_name, message_text)
+        return {"status": "success", "message": "Chủ kênh offline - tin nhắn đã được lưu vào kênh"}
+
 
 
 def get_channel_info(channel_name: str, username: str) -> dict:

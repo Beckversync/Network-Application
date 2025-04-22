@@ -10,9 +10,10 @@ import cv2
 import numpy as np
 import base64
 import datetime
+from concurrent.futures import ThreadPoolExecutor
 
 from config.db import users_collection, channels_collection
-
+from sync_utils import dump_messages_to_file
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
 class USER:
@@ -35,7 +36,7 @@ class USER:
             self.port = int(input("ENTER YOUR PORT (TCP): "))
 
         self.udp_port = self.port + 1
-
+        self._p2p_executor = ThreadPoolExecutor(max_workers=8)
         # Khởi tạo thư mục sync
         os.makedirs("local_sync", exist_ok=True)
 
@@ -119,67 +120,67 @@ class USER:
             if not data:
                 logging.warning("No data received from %s", addr)
                 return
-
             try:
                 data_str = data.decode('utf-8')
                 message_data = json.loads(data_str)
-
-                msg_type    = message_data.get("type", "chat")
-                sender      = message_data.get("sender", "Unknown")
-                msg_channel = message_data.get("channel")
-                owner       = message_data.get("owner", sender)
-
-                # Lọc theo channel đang mở
-                if not self.active_channel or self.active_channel != msg_channel:
-                    logging.warning("Incoming %s không khớp channel: %s", msg_type, msg_channel)
-                    return
-
-                # Xử lý livestream (UDP/tcp) nếu cần
+                msg_type = message_data.get("type", "chat")
+                sender = message_data.get("sender", "Unknown")
+                
                 if msg_type == "livestream":
-                    # decode và hiển thị frame
+                    msg_channel = message_data.get("channel")
+                    if not self.active_channel or self.active_channel != msg_channel:
+                        logging.warning("Livestream not matching active channel: %s", msg_channel)
+                        return
+                    
                     frame_data = message_data.get("message", "")
                     try:
                         img_bytes = base64.b64decode(frame_data)
                         np_arr = np.frombuffer(img_bytes, np.uint8)
                         frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
                         if frame is not None:
-                            threading.Thread(target=self.show_frame, args=(frame, sender), daemon=True).start()
+                            threading.Thread(target=self.show_frame, args=(frame, sender)).start()
                         else:
                             logging.error("Failed to decode livestream frame from %s", sender)
                     except Exception as e:
                         logging.error("Error decoding livestream frame: %s", e)
 
-                # Xử lý chat P2P và ghi sync file
                 elif msg_type == "chat":
                     text = message_data.get("message", "")
-                    readable_time = message_data.get(
-                        "readable_time",
-                        datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                    )
-
-                    filename = f"sync_{msg_channel}_{owner}.txt"
+                    readable_time = message_data.get("readable_time", datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+                    filename = f"sync_{self.active_channel}_{self.name}.txt"
                     filepath = os.path.join("local_sync", filename)
-
+                    os.makedirs(os.path.dirname(filepath), exist_ok=True)
                     if not os.path.exists(filepath):
-                        with open(filepath, 'w', encoding='utf-8') as f:
-                            f.write(f"{filename}\n")
-                        logging.info("[INFO] Tạo file mới: %s", filepath)
+                        try:
+                            with open(filepath, 'w', encoding='utf-8') as f:
+                                f.write(f"{filename}\n")
+                            logging.info("[INFO] Create new file: %s", filepath)
+                        except Exception as e:
+                            logging.error("[ERROR] Cannot create file: %s", e)
 
-                    line = f"[{readable_time}] {sender}: {text}\n"
-                    with open(filepath, 'a', encoding='utf-8') as f:
-                        f.write(line)
+                    line = f"[{readable_time}] {sender}: {text}"
+                    dump_messages_to_file(self.active_channel,
+                      self.name,
+                      [line])
+
+                    print(line)
+                    try:
+                        with open(filepath, 'a', encoding='utf-8') as f:
+                            f.write(line)
+
+                    except Exception as e:
+                        logging.error("[SAVE_DOWN] Cannot save message: %s", e)
 
                     logging.info("[P2P MESSAGE] %s -> %s: %s", sender, self.name, text)
 
             except (json.JSONDecodeError, UnicodeDecodeError) as e:
-                logging.error("Error decoding JSON from %s: %s", addr, e)
+                logging.error("Error handling received data from %s: %s", addr, e)
 
         except Exception as e:
             logging.error("Handling P2P connection error: %s", e)
 
         finally:
             conn.close()
-
     # Các method gửi chat qua tracker và P2P giữ nguyên, đảm bảo thêm 'channel' và 'owner' trong payload
     def send_chat_message_via_tracker(self, message):
         if self.tracker_socket is None:
@@ -228,7 +229,12 @@ class USER:
                 continue
             target_ip = peer["ip"]
             target_port = int(peer["port"])
-            self.send_message_p2p(target_ip, target_port, message, msg_type)
+            self._p2p_executor.submit(
+                self.send_message_p2p,
+                target_ip, target_port,
+                message, msg_type
+            )
+        return
 
     def send_udp_broadcast(self, message, msg_type="chat", channel=None):
         udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -526,4 +532,3 @@ if __name__ == '__main__':
     tracker_port = 5000  # Hoặc đặt thành biến nếu cần linh động
 
     USER(tracker_ip, tracker_port)
-
