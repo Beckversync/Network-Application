@@ -37,7 +37,8 @@ class DiscordUI(QMainWindow):
         self.channels = {}
         self.hosted_channels = {}      
         self.dm_users = []      
-        self.last_message_count = 0  
+        self.last_message_count = 0 
+        self.last_seen_line = None
 
         self.is_viewer = False
 
@@ -716,7 +717,7 @@ class DiscordUI(QMainWindow):
                                 if not hasattr(self, "last_seen_line") or self.last_seen_line not in lines:
                                     for line in lines:
                                         self.chat_display.append(line)
-                                        if self.username != owner_username:
+                                        if self.username == owner_username:
                                             # Push lên database nếu là người xem (không phải owner)
                                             if not channels_collection.find_one({
                                                 "channel_name": self.current_channel,
@@ -726,6 +727,8 @@ class DiscordUI(QMainWindow):
                                                     "sender": owner_username,
                                                     "text": line
                                                 }
+                                                print("day ne", lines)
+                                                print(line)
                                                 channels_collection.update_one(
                                                     {"channel_name": self.current_channel},
                                                     {"$push": {"messages": message_dict}}
@@ -736,26 +739,32 @@ class DiscordUI(QMainWindow):
                                 else:
                                     idx = lines.index(self.last_seen_line)
                                     new_lines = lines[idx + 1:]
-                                    for line in new_lines:
-                                        self.chat_display.append(line)
-                                        if self.username != owner_username:
-                                            # Push lên database nếu là người xem (không phải owner)
-                                            if not channels_collection.find_one({
-                                                "channel_name": self.current_channel,
-                                                "messages.text": line
-                                            }):
-                                                message_dict = {
-                                                    "sender": owner_username,
-                                                    "text": line
-                                                }
-                                                channels_collection.update_one(
-                                                    {"channel_name": self.current_channel},
-                                                    {"$push": {"messages": message_dict}}
-                                                )
 
                                     if new_lines:
+                                        for line in new_lines:
+                                            if line.strip() == self.last_seen_line:
+                                                continue  # bỏ qua dòng lặp
+                                            self.chat_display.append(line)
+                                            if self.username == owner_username:
+                                                if not channels_collection.find_one({
+                                                    "channel_name": self.current_channel,
+                                                    "messages.text": line
+                                                }):
+                                                    message_dict = {
+                                                        "sender": owner_username,
+                                                        "text": line
+                                                    }
+                                                    print("dau co dau")
+                                                    channels_collection.update_one(
+                                                        {"channel_name": self.current_channel},
+                                                        {"$push": {"messages": message_dict}}
+                                                    )
+
+                                        # ✅ Quan trọng: cập nhật sau khi xử lý
                                         self.last_seen_line = new_lines[-1]
+                                        print(self.last_seen_line)
                                         self.last_message_count = len(lines)
+
                             else:
                                 logging.warning("[SYNC LOAD] File not found: %s", file_path)
                         else:

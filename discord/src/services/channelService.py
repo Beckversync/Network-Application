@@ -177,8 +177,8 @@ def send_message_p2p(username: str, channel_name: str, message_text: str):
     owner_data = users_collection.find_one({"username": owner_username})
     if owner_data and owner_data.get("state") == "online":
         # Chủ kênh online → gửi cho tất cả thành viên đang online
-        if username == owner_username:
-            send_message(username, channel_name, message_text)
+        # if username == owner_username:
+            # send_message(username, channel_name, message_text)
             
         members = channel_data.get("members", [])
         success_count = 0

@@ -50296,3 +50296,301 @@
 [2025-04-22 01:01:19,355] INFO: Tracker response on LEAVE: Peer an11 (10.0.3.222:6588) left
 [2025-04-22 01:01:20,715] ERROR: get_channels_from_server error: wrapped C/C++ object of type QListWidget has been deleted
 [2025-04-22 01:01:22,572] INFO: Tracker response on LEAVE: Peer an10 (10.0.3.222:6236) left
+[2025-04-22 07:47:34,820] INFO: Logged in as: an10
+[2025-04-22 07:47:35,930] INFO: [SYNC LOGIN] Saved 0 new messages for 555
+[2025-04-22 07:47:35,930] INFO: User 'an10' logging in (authenticated mode).
+[2025-04-22 07:47:36,020] INFO: Tracker response: Peer an10 (10.0.3.222:6515) added
+[2025-04-22 07:47:36,021] INFO: UDP LISTENER listening on 10.0.3.222:6516 for livestream.
+[2025-04-22 07:47:36,027] INFO: P2P SERVER listening on 10.0.3.222:6515
+[2025-04-22 07:47:42,823] INFO: Channel '444' created by an10 (is_private=False)
+[2025-04-22 07:47:45,025] INFO: [SYNC] SyncManager started for channel '444'
+[2025-04-22 07:47:45,629] WARNING: [SYNC LOAD] File not found: local_sync\sync_444_an10.txt
+[2025-04-22 07:47:45,801] INFO: [SYNC] SyncManager started for channel '444'
+[2025-04-22 07:47:46,888] WARNING: [SYNC LOAD] File not found: local_sync\sync_444_an10.txt
+[2025-04-22 07:47:47,896] INFO: Sending message: alo
+[2025-04-22 07:47:48,025] INFO: Sent P2P chat to 10.0.3.222:6515 – {"type": "chat", "sender": "an10", "message": "alo"}
+[2025-04-22 07:47:48,028] INFO: Tin nhắn từ an10 đã được gửi đến 1 peer online trong kênh '444'
+[2025-04-22 07:47:48,029] INFO: Message from an10 sent in channel '444'
+[2025-04-22 07:47:48,031] INFO: [INFO] Create new file: local_sync\sync_444_an10.txt
+[2025-04-22 07:47:48,032] INFO: [P2P MESSAGE] an10 -> an10: alo
+[2025-04-22 07:47:49,304] INFO: Sending message: 1234
+[2025-04-22 07:47:49,456] INFO: Sent P2P chat to 10.0.3.222:6515 – {"type": "chat", "sender": "an10", "message": "1234"}
+[2025-04-22 07:47:49,457] INFO: Tin nhắn từ an10 đã được gửi đến 1 peer online trong kênh '444'
+[2025-04-22 07:47:49,457] INFO: Message from an10 sent in channel '444'
+[2025-04-22 07:47:49,459] INFO: [P2P MESSAGE] an10 -> an10: 1234
+[2025-04-22 07:48:22,258] INFO: Tracker response on LEAVE: Peer an10 (10.0.3.222:6515) left
+[2025-04-22 07:48:23,567] INFO: Logged in as: an10
+[2025-04-22 07:48:24,973] INFO: [SYNC LOGIN] Saved 0 new messages for 555
+[2025-04-22 07:48:25,027] INFO: [SYNC LOGIN] Saved 0 new messages for 444
+[2025-04-22 07:48:25,027] INFO: User 'an10' logging in (authenticated mode).
+[2025-04-22 07:48:25,150] INFO: Tracker response: Peer an10 (10.0.3.222:8207) added
+[2025-04-22 07:48:25,153] INFO: P2P SERVER listening on 10.0.3.222:8207
+[2025-04-22 07:48:25,154] INFO: UDP LISTENER listening on 10.0.3.222:8208 for livestream.
+[2025-04-22 07:48:29,653] INFO: [SYNC LOAD] Save message to file: local_sync\sync_444_an10.txt
+[2025-04-22 07:48:29,654] INFO: [SYNC] SyncManager started for channel '444'
+[2025-04-22 07:48:30,812] INFO: [SYNC LOAD] Save message to file: local_sync\sync_444_an10.txt
+[2025-04-22 07:48:30,812] INFO: [SYNC] SyncManager started for channel '444'
+[2025-04-22 07:48:38,383] INFO: [SYNC LOAD] Save message to file: local_sync\sync_444_an10.txt
+[2025-04-22 07:48:38,385] INFO: [SYNC] SyncManager started for channel '444'
+[2025-04-22 07:48:53,190] INFO: Sending message: alaolao
+[2025-04-22 07:48:53,357] INFO: Sent P2P chat to 10.0.3.222:8207 – {"type": "chat", "sender": "an10", "message": "alaolao"}
+[2025-04-22 07:48:53,358] INFO: Tin nhắn từ an10 đã được gửi đến 1 peer online trong kênh '444'
+[2025-04-22 07:48:53,358] INFO: Message from an10 sent in channel '444'
+[2025-04-22 07:48:53,360] INFO: [P2P MESSAGE] an10 -> an10: alaolao
+[2025-04-22 07:48:55,866] INFO: Sending message: 123
+[2025-04-22 07:48:55,991] INFO: Sent P2P chat to 10.0.3.222:8207 – {"type": "chat", "sender": "an10", "message": "123"}
+[2025-04-22 07:48:55,992] INFO: Tin nhắn từ an10 đã được gửi đến 1 peer online trong kênh '444'
+[2025-04-22 07:48:55,993] INFO: Message from an10 sent in channel '444'
+[2025-04-22 07:48:55,997] INFO: [P2P MESSAGE] an10 -> an10: 123
+[2025-04-22 07:48:59,920] INFO: Tracker response on LEAVE: Peer an10 (10.0.3.222:8207) left
+[2025-04-22 07:49:58,577] INFO: Logged in as: an11
+[2025-04-22 07:49:59,610] INFO: User 'an11' logging in (authenticated mode).
+[2025-04-22 07:49:59,698] INFO: Tracker response: Peer an11 (10.0.3.222:7063) added
+[2025-04-22 07:49:59,699] INFO: P2P SERVER listening on 10.0.3.222:7063
+[2025-04-22 07:49:59,699] INFO: UDP LISTENER listening on 10.0.3.222:7064 for livestream.
+[2025-04-22 07:50:10,545] INFO: Sending message: alo
+[2025-04-22 07:50:10,780] INFO: Message from an11 sent in channel '444'
+[2025-04-22 07:50:15,259] INFO: Sending message: lo
+[2025-04-22 07:50:15,431] INFO: Message from an11 sent in channel '444'
+[2025-04-22 07:50:36,083] INFO: Logged in as: an10
+[2025-04-22 07:50:37,185] INFO: [SYNC LOGIN] Saved 0 new messages for 555
+[2025-04-22 07:50:37,232] INFO: [SYNC LOGIN] Saved 2 new messages for 444
+[2025-04-22 07:50:37,232] INFO: User 'an10' logging in (authenticated mode).
+[2025-04-22 07:50:37,318] INFO: Tracker response: Peer an10 (10.0.3.222:6663) added
+[2025-04-22 07:50:37,320] INFO: P2P SERVER listening on 10.0.3.222:6663
+[2025-04-22 07:50:37,320] INFO: UDP LISTENER listening on 10.0.3.222:6664 for livestream.
+[2025-04-22 07:50:39,527] INFO: [SYNC LOAD] Save message to file: local_sync\sync_444_an10.txt
+[2025-04-22 07:50:39,527] INFO: [SYNC] SyncManager started for channel '444'
+[2025-04-22 07:50:40,174] INFO: [SYNC LOAD] Save message to file: local_sync\sync_444_an10.txt
+[2025-04-22 07:50:40,174] INFO: [SYNC] SyncManager started for channel '444'
+[2025-04-22 07:50:40,987] INFO: [SYNC LOAD] Save message to file: local_sync\sync_444_an10.txt
+[2025-04-22 07:50:40,987] INFO: [SYNC] SyncManager started for channel '444'
+[2025-04-22 07:50:43,612] INFO: [SYNC LOAD] Save message to file: local_sync\sync_444_an10.txt
+[2025-04-22 07:50:47,670] INFO: Sending message: 1234
+[2025-04-22 07:50:47,799] INFO: Sent P2P chat to 10.0.3.222:6663 – {"type": "chat", "sender": "an10", "message": "1234"}
+[2025-04-22 07:50:47,800] INFO: Tin nhắn từ an10 đã được gửi đến 1 peer online trong kênh '444'
+[2025-04-22 07:50:47,801] INFO: Message from an10 sent in channel '444'
+[2025-04-22 07:50:47,802] INFO: [P2P MESSAGE] an10 -> an10: 1234
+[2025-04-22 07:51:22,031] INFO: Sending message: 11
+[2025-04-22 07:51:22,178] INFO: Sent P2P chat to 10.0.3.222:6663 – {"type": "chat", "sender": "an11", "message": "11"}
+[2025-04-22 07:51:22,179] INFO: Tin nhắn từ an11 đã được gửi đến 1 peer online trong kênh '444'
+[2025-04-22 07:51:22,179] INFO: Message from an11 sent in channel '444'
+[2025-04-22 07:51:22,181] INFO: [P2P MESSAGE] an11 -> an10: 11
+[2025-04-22 07:51:52,694] INFO: Tracker response on LEAVE: Peer an10 (10.0.3.222:6663) left
+[2025-04-22 08:10:40,123] INFO: Tracker response on LEAVE: Peer an11 (10.0.3.222:7063) left
+[2025-04-22 08:11:18,405] INFO: Logged in as: an10
+[2025-04-22 08:11:19,028] INFO: [SYNC LOGIN] Saved 0 new messages for 555
+[2025-04-22 08:11:19,066] INFO: [SYNC LOGIN] Saved 0 new messages for 444
+[2025-04-22 08:11:19,067] INFO: User 'an10' logging in (authenticated mode).
+[2025-04-22 08:11:19,154] INFO: Tracker response: Peer an10 (10.0.3.222:7406) added
+[2025-04-22 08:11:19,156] INFO: P2P SERVER listening on 10.0.3.222:7406
+[2025-04-22 08:11:19,156] INFO: UDP LISTENER listening on 10.0.3.222:7407 for livestream.
+[2025-04-22 08:11:30,033] INFO: Logged in as: an11
+[2025-04-22 08:11:31,750] INFO: User 'an11' logging in (authenticated mode).
+[2025-04-22 08:11:31,842] INFO: Tracker response: Peer an11 (10.0.3.222:7666) added
+[2025-04-22 08:11:31,843] INFO: P2P SERVER listening on 10.0.3.222:7666
+[2025-04-22 08:11:31,843] INFO: UDP LISTENER listening on 10.0.3.222:7667 for livestream.
+[2025-04-22 08:11:36,909] INFO: Channel '333' created by an10 (is_private=False)
+[2025-04-22 08:11:37,822] INFO: [SYNC] SyncManager started for channel '333'
+[2025-04-22 08:11:38,143] WARNING: [SYNC LOAD] File not found: local_sync\sync_333_an10.txt
+[2025-04-22 08:11:38,646] INFO: [SYNC] SyncManager started for channel '333'
+[2025-04-22 08:11:39,155] INFO: [SYNC] SyncManager started for channel '333'
+[2025-04-22 08:11:39,391] WARNING: [SYNC LOAD] File not found: local_sync\sync_333_an10.txt
+[2025-04-22 08:11:40,163] WARNING: [SYNC LOAD] File not found: local_sync\sync_333_an10.txt
+[2025-04-22 08:11:40,644] WARNING: [SYNC LOAD] File not found: local_sync\sync_333_an10.txt
+[2025-04-22 08:11:41,449] WARNING: [SYNC LOAD] File not found: local_sync\sync_333_an10.txt
+[2025-04-22 08:11:42,113] INFO: Sending message: alo
+[2025-04-22 08:11:42,204] WARNING: [SYNC LOAD] File not found: local_sync\sync_333_an10.txt
+[2025-04-22 08:11:42,238] INFO: Sent P2P chat to 10.0.3.222:7406 – {"type": "chat", "sender": "an10", "message": "alo"}
+[2025-04-22 08:11:42,239] INFO: Tin nhắn từ an10 đã được gửi đến 1 peer online trong kênh '333'
+[2025-04-22 08:11:42,240] INFO: Message from an10 sent in channel '333'
+[2025-04-22 08:11:42,240] INFO: [INFO] Create new file: local_sync\sync_333_an10.txt
+[2025-04-22 08:11:42,241] INFO: [P2P MESSAGE] an10 -> an10: alo
+[2025-04-22 08:11:44,797] INFO: Sending message: lo
+[2025-04-22 08:11:44,950] INFO: Sent P2P chat to 10.0.3.222:7406 – {"type": "chat", "sender": "an11", "message": "lo"}
+[2025-04-22 08:11:44,951] INFO: Tin nhắn từ an11 đã được gửi đến 1 peer online trong kênh '333'
+[2025-04-22 08:11:44,951] INFO: Message from an11 sent in channel '333'
+[2025-04-22 08:11:44,952] INFO: [P2P MESSAGE] an11 -> an10: lo
+[2025-04-22 08:11:48,907] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:11:48,908] INFO: [SYNC] SyncManager started for channel '333'
+[2025-04-22 08:11:49,904] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:11:49,905] INFO: [SYNC] SyncManager started for channel '333'
+[2025-04-22 08:11:53,259] INFO: Tracker response on LEAVE: Peer an11 (10.0.3.222:7666) left
+[2025-04-22 08:11:57,463] INFO: Tracker response on LEAVE: Peer an10 (10.0.3.222:7406) left
+[2025-04-22 08:13:42,303] INFO: Logged in as: an10
+[2025-04-22 08:13:42,929] INFO: [SYNC LOGIN] Saved 0 new messages for 555
+[2025-04-22 08:13:42,970] INFO: [SYNC LOGIN] Saved 0 new messages for 444
+[2025-04-22 08:13:43,012] INFO: [SYNC LOGIN] Saved 0 new messages for 333
+[2025-04-22 08:13:43,013] INFO: User 'an10' logging in (authenticated mode).
+[2025-04-22 08:13:43,102] INFO: Tracker response: Peer an10 (10.0.3.222:7652) added
+[2025-04-22 08:13:43,103] INFO: P2P SERVER listening on 10.0.3.222:7652
+[2025-04-22 08:13:43,103] INFO: UDP LISTENER listening on 10.0.3.222:7653 for livestream.
+[2025-04-22 08:13:45,990] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:13:45,991] INFO: [SYNC] SyncManager started for channel '333'
+[2025-04-22 08:13:46,416] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:13:46,417] INFO: [SYNC] SyncManager started for channel '333'
+[2025-04-22 08:13:46,868] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:13:46,869] INFO: [SYNC] SyncManager started for channel '333'
+[2025-04-22 08:14:05,561] INFO: Logged in as: an11
+[2025-04-22 08:14:06,241] INFO: User 'an11' logging in (authenticated mode).
+[2025-04-22 08:14:06,342] INFO: Tracker response: Peer an11 (10.0.3.222:6148) added
+[2025-04-22 08:14:06,343] INFO: P2P SERVER listening on 10.0.3.222:6148
+[2025-04-22 08:14:06,344] INFO: UDP LISTENER listening on 10.0.3.222:6149 for livestream.
+[2025-04-22 08:14:13,399] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:14:13,399] INFO: [SYNC] SyncManager started for channel '333'
+[2025-04-22 08:14:15,325] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:14:16,377] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:14:18,151] INFO: Sending message: lo
+[2025-04-22 08:14:18,280] INFO: Sent P2P chat to 10.0.3.222:7652 – {"type": "chat", "sender": "an11", "message": "lo"}
+[2025-04-22 08:14:18,280] INFO: Tin nhắn từ an11 đã được gửi đến 1 peer online trong kênh '333'
+[2025-04-22 08:14:18,281] INFO: Message from an11 sent in channel '333'
+[2025-04-22 08:14:18,282] INFO: [P2P MESSAGE] an11 -> an10: lo
+[2025-04-22 08:14:19,890] INFO: Sending message: 1
+[2025-04-22 08:14:20,020] INFO: Sent P2P chat to 10.0.3.222:7652 – {"type": "chat", "sender": "an10", "message": "1"}
+[2025-04-22 08:14:20,022] INFO: Tin nhắn từ an10 đã được gửi đến 1 peer online trong kênh '333'
+[2025-04-22 08:14:20,023] INFO: Message from an10 sent in channel '333'
+[2025-04-22 08:14:20,024] INFO: [P2P MESSAGE] an10 -> an10: 1
+[2025-04-22 08:14:34,525] INFO: Tracker response on LEAVE: Peer an10 (10.0.3.222:7652) left
+[2025-04-22 08:14:38,650] INFO: Logged in as: an10
+[2025-04-22 08:14:40,390] INFO: [SYNC LOGIN] Saved 0 new messages for 555
+[2025-04-22 08:14:40,434] INFO: [SYNC LOGIN] Saved 0 new messages for 444
+[2025-04-22 08:14:40,479] INFO: [SYNC LOGIN] Saved 0 new messages for 333
+[2025-04-22 08:14:40,480] INFO: User 'an10' logging in (authenticated mode).
+[2025-04-22 08:14:40,567] INFO: Tracker response: Peer an10 (10.0.3.222:8875) added
+[2025-04-22 08:14:40,568] INFO: P2P SERVER listening on 10.0.3.222:8875
+[2025-04-22 08:14:40,569] INFO: UDP LISTENER listening on 10.0.3.222:8876 for livestream.
+[2025-04-22 08:14:41,742] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:14:41,742] INFO: [SYNC] SyncManager started for channel '333'
+[2025-04-22 08:14:42,389] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:14:42,389] INFO: [SYNC] SyncManager started for channel '333'
+[2025-04-22 08:14:55,213] INFO: Sending message: alo1
+[2025-04-22 08:14:55,356] INFO: Sent P2P chat to 10.0.3.222:8875 – {"type": "chat", "sender": "an10", "message": "alo1"}
+[2025-04-22 08:14:55,357] INFO: Tin nhắn từ an10 đã được gửi đến 1 peer online trong kênh '333'
+[2025-04-22 08:14:55,357] INFO: Message from an10 sent in channel '333'
+[2025-04-22 08:14:55,357] INFO: [P2P MESSAGE] an10 -> an10: alo1
+[2025-04-22 08:14:59,173] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:15:02,177] INFO: Sending message: d
+[2025-04-22 08:15:02,329] INFO: Sent P2P chat to 10.0.3.222:8875 – {"type": "chat", "sender": "an11", "message": "d"}
+[2025-04-22 08:15:02,329] INFO: Tin nhắn từ an11 đã được gửi đến 1 peer online trong kênh '333'
+[2025-04-22 08:15:02,329] INFO: Message from an11 sent in channel '333'
+[2025-04-22 08:15:02,330] INFO: [P2P MESSAGE] an11 -> an10: d
+[2025-04-22 08:15:24,131] INFO: Tracker response on LEAVE: Peer an11 (10.0.3.222:6148) left
+[2025-04-22 08:15:30,354] INFO: Logged in as: an11
+[2025-04-22 08:15:30,879] INFO: User 'an11' logging in (authenticated mode).
+[2025-04-22 08:15:30,965] INFO: Tracker response: Peer an11 (10.0.3.222:7656) added
+[2025-04-22 08:15:30,966] INFO: UDP LISTENER listening on 10.0.3.222:7657 for livestream.
+[2025-04-22 08:15:30,966] INFO: P2P SERVER listening on 10.0.3.222:7656
+[2025-04-22 08:15:31,946] INFO: [SYNC LOAD] Save message to file: local_sync\sync_444_an10.txt
+[2025-04-22 08:15:33,435] INFO: [SYNC LOAD] Save message to file: local_sync\sync_444_an10.txt
+[2025-04-22 08:15:34,439] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:15:35,020] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:15:35,585] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:15:40,515] INFO: Tracker response on LEAVE: Peer an10 (10.0.3.222:8875) left
+[2025-04-22 08:15:54,754] INFO: Tracker response on LEAVE: Peer an11 (10.0.3.222:7656) left
+[2025-04-22 08:18:20,012] INFO: Logged in as: an08
+[2025-04-22 08:18:20,636] INFO: [SYNC LOGIN] Saved 2 new messages for kênhnew
+[2025-04-22 08:18:20,679] INFO: [SYNC LOGIN] Saved 13 new messages for a1
+[2025-04-22 08:18:20,726] INFO: [SYNC LOGIN] Saved 57 new messages for neww1
+[2025-04-22 08:18:20,768] INFO: [SYNC LOGIN] Saved 6 new messages for 4anhem
+[2025-04-22 08:18:20,769] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-22 08:18:20,858] INFO: Tracker response: Peer an08 (10.0.3.222:8187) added
+[2025-04-22 08:18:20,859] INFO: P2P SERVER listening on 10.0.3.222:8187
+[2025-04-22 08:18:20,859] INFO: UDP LISTENER listening on 10.0.3.222:8188 for livestream.
+[2025-04-22 08:18:27,839] INFO: Tracker response on LEAVE: Peer an08 (10.0.3.222:8187) left
+[2025-04-22 08:18:30,757] INFO: Logged in as: an10
+[2025-04-22 08:18:31,350] INFO: [SYNC LOGIN] Saved 0 new messages for 555
+[2025-04-22 08:18:31,395] INFO: [SYNC LOGIN] Saved 0 new messages for 444
+[2025-04-22 08:18:31,437] INFO: [SYNC LOGIN] Saved 0 new messages for 333
+[2025-04-22 08:18:31,437] INFO: User 'an10' logging in (authenticated mode).
+[2025-04-22 08:18:31,522] INFO: Tracker response: Peer an10 (10.0.3.222:6528) added
+[2025-04-22 08:18:31,524] INFO: P2P SERVER listening on 10.0.3.222:6528
+[2025-04-22 08:18:31,524] INFO: UDP LISTENER listening on 10.0.3.222:6529 for livestream.
+[2025-04-22 08:18:32,935] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:18:32,936] INFO: [SYNC] SyncManager started for channel '333'
+[2025-04-22 08:18:33,761] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:18:33,761] INFO: [SYNC] SyncManager started for channel '333'
+[2025-04-22 08:18:46,681] INFO: Logged in as: an11
+[2025-04-22 08:18:47,535] INFO: User 'an11' logging in (authenticated mode).
+[2025-04-22 08:18:47,624] INFO: Tracker response: Peer an11 (10.0.3.222:7576) added
+[2025-04-22 08:18:47,625] INFO: P2P SERVER listening on 10.0.3.222:7576
+[2025-04-22 08:18:47,625] INFO: UDP LISTENER listening on 10.0.3.222:7577 for livestream.
+[2025-04-22 08:18:51,090] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-22 08:18:52,384] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-22 08:18:53,216] INFO: [SYNC LOAD] Save message to file: local_sync\sync_kênhnew_an08.txt
+[2025-04-22 08:18:53,883] WARNING: [SYNC LOAD] File not found: local_sync\sync_333_an08.txt
+[2025-04-22 08:18:54,346] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:18:54,730] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:18:57,745] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:18:58,546] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:18:58,547] INFO: [SYNC] SyncManager started for channel '333'
+[2025-04-22 08:19:01,035] INFO: Sending message: alo 1234
+[2025-04-22 08:19:01,168] INFO: Sent P2P chat to 10.0.3.222:6528 – {"type": "chat", "sender": "an10", "message": "alo 1234"}
+[2025-04-22 08:19:01,169] INFO: Tin nhắn từ an10 đã được gửi đến 1 peer online trong kênh '333'
+[2025-04-22 08:19:01,169] INFO: Message from an10 sent in channel '333'
+[2025-04-22 08:19:01,170] INFO: [P2P MESSAGE] an10 -> an10: alo 1234
+[2025-04-22 08:19:03,906] INFO: Sending message: lo m
+[2025-04-22 08:19:04,033] INFO: Sent P2P chat to 10.0.3.222:6528 – {"type": "chat", "sender": "an11", "message": "lo m"}
+[2025-04-22 08:19:04,033] INFO: Tin nhắn từ an11 đã được gửi đến 1 peer online trong kênh '333'
+[2025-04-22 08:19:04,034] INFO: Message from an11 sent in channel '333'
+[2025-04-22 08:19:04,034] INFO: [P2P MESSAGE] an11 -> an10: lo m
+[2025-04-22 08:19:26,097] INFO: Tracker response on LEAVE: Peer an10 (10.0.3.222:6528) left
+[2025-04-22 08:19:55,567] INFO: Sending message: dau r thang co hon
+[2025-04-22 08:19:55,761] INFO: Message from an11 sent in channel '333'
+[2025-04-22 08:19:57,161] INFO: Sending message: cmm
+[2025-04-22 08:19:57,377] INFO: Message from an11 sent in channel '333'
+[2025-04-22 08:20:42,273] INFO: Logged in as: an10
+[2025-04-22 08:20:44,322] INFO: [SYNC LOGIN] Saved 0 new messages for 555
+[2025-04-22 08:20:44,365] INFO: [SYNC LOGIN] Saved 0 new messages for 444
+[2025-04-22 08:20:44,409] INFO: [SYNC LOGIN] Saved 2 new messages for 333
+[2025-04-22 08:20:44,411] INFO: User 'an10' logging in (authenticated mode).
+[2025-04-22 08:20:44,499] INFO: Tracker response: Peer an10 (10.0.3.222:8162) added
+[2025-04-22 08:20:44,499] INFO: P2P SERVER listening on 10.0.3.222:8162
+[2025-04-22 08:20:44,501] INFO: UDP LISTENER listening on 10.0.3.222:8163 for livestream.
+[2025-04-22 08:20:49,298] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:20:49,298] INFO: [SYNC] SyncManager started for channel '333'
+[2025-04-22 08:20:50,203] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:20:50,203] INFO: [SYNC] SyncManager started for channel '333'
+[2025-04-22 08:20:51,825] INFO: [SYNC LOAD] Save message to file: local_sync\sync_333_an10.txt
+[2025-04-22 08:20:51,826] INFO: [SYNC] SyncManager started for channel '333'
+[2025-04-22 08:20:57,926] INFO: Sending message: chinh xac la 3
+[2025-04-22 08:20:58,058] INFO: Sent P2P chat to 10.0.3.222:8162 – {"type": "chat", "sender": "an10", "message": "chinh xac la 3"}
+[2025-04-22 08:20:58,059] INFO: Tin nhắn từ an10 đã được gửi đến 1 peer online trong kênh '333'
+[2025-04-22 08:20:58,060] INFO: Message from an10 sent in channel '333'
+[2025-04-22 08:20:58,062] INFO: [P2P MESSAGE] an10 -> an10: chinh xac la 3
+[2025-04-22 08:21:03,070] INFO: Sending message: 2
+[2025-04-22 08:21:03,203] INFO: Sent P2P chat to 10.0.3.222:8162 – {"type": "chat", "sender": "an10", "message": "2"}
+[2025-04-22 08:21:03,204] INFO: Tin nhắn từ an10 đã được gửi đến 1 peer online trong kênh '333'
+[2025-04-22 08:21:03,205] INFO: Message from an10 sent in channel '333'
+[2025-04-22 08:21:03,207] INFO: [P2P MESSAGE] an10 -> an10: 2
+[2025-04-22 08:21:03,935] INFO: Sending message: \
+[2025-04-22 08:21:04,063] INFO: Sent P2P chat to 10.0.3.222:8162 – {"type": "chat", "sender": "an10", "message": "\\"}
+[2025-04-22 08:21:04,064] INFO: Tin nhắn từ an10 đã được gửi đến 1 peer online trong kênh '333'
+[2025-04-22 08:21:04,064] INFO: Message from an10 sent in channel '333'
+[2025-04-22 08:21:04,065] INFO: [P2P MESSAGE] an10 -> an10: \
+[2025-04-22 08:21:08,717] INFO: Sending message: 3 ga
+[2025-04-22 08:21:08,857] INFO: Sent P2P chat to 10.0.3.222:8162 – {"type": "chat", "sender": "an11", "message": "3 ga"}
+[2025-04-22 08:21:08,857] INFO: Tin nhắn từ an11 đã được gửi đến 1 peer online trong kênh '333'
+[2025-04-22 08:21:08,857] INFO: Message from an11 sent in channel '333'
+[2025-04-22 08:21:08,858] INFO: [P2P MESSAGE] an11 -> an10: 3 ga
+[2025-04-22 08:21:36,621] INFO: Sending message: thang beckham no ga qua
+[2025-04-22 08:21:36,756] INFO: Sent P2P chat to 10.0.3.222:8162 – {"type": "chat", "sender": "an10", "message": "thang beckham no ga qua"}
+[2025-04-22 08:21:36,757] INFO: Tin nhắn từ an10 đã được gửi đến 1 peer online trong kênh '333'
+[2025-04-22 08:21:36,757] INFO: Message from an10 sent in channel '333'
+[2025-04-22 08:21:36,760] INFO: [P2P MESSAGE] an10 -> an10: thang beckham no ga qua
+[2025-04-22 08:21:43,360] INFO: Sending message: ae mik phai ra tay
+[2025-04-22 08:21:43,498] INFO: Sent P2P chat to 10.0.3.222:8162 – {"type": "chat", "sender": "an10", "message": "ae mik phai ra tay"}
+[2025-04-22 08:21:43,499] INFO: Tin nhắn từ an10 đã được gửi đến 1 peer online trong kênh '333'
+[2025-04-22 08:21:43,500] INFO: Message from an10 sent in channel '333'
+[2025-04-22 08:21:43,502] INFO: [P2P MESSAGE] an10 -> an10: ae mik phai ra tay
+[2025-04-22 08:21:48,169] INFO: Sending message: ga vcl ra
+[2025-04-22 08:21:48,370] INFO: Sent P2P chat to 10.0.3.222:8162 – {"type": "chat", "sender": "an11", "message": "ga vcl ra"}
+[2025-04-22 08:21:48,371] INFO: Tin nhắn từ an11 đã được gửi đến 1 peer online trong kênh '333'
+[2025-04-22 08:21:48,372] INFO: Message from an11 sent in channel '333'
+[2025-04-22 08:21:48,375] INFO: [P2P MESSAGE] an11 -> an10: ga vcl ra
+[2025-04-22 08:21:53,908] INFO: Sending message: am binh dung nghia lun
+[2025-04-22 08:21:54,037] INFO: Sent P2P chat to 10.0.3.222:8162 – {"type": "chat", "sender": "an11", "message": "am binh dung nghia lun"}
+[2025-04-22 08:21:54,039] INFO: Tin nhắn từ an11 đã được gửi đến 1 peer online trong kênh '333'
+[2025-04-22 08:21:54,040] INFO: Message from an11 sent in channel '333'
+[2025-04-22 08:21:54,040] INFO: [P2P MESSAGE] an11 -> an10: am binh dung nghia lun
+[2025-04-22 08:21:57,247] INFO: Tracker response on LEAVE: Peer an10 (10.0.3.222:8162) left
+[2025-04-22 08:22:00,779] INFO: Tracker response on LEAVE: Peer an11 (10.0.3.222:7576) left
