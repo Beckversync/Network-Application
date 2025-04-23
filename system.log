@@ -74942,3 +74942,14 @@
 [2025-04-22 11:08:53,677] INFO: [INFO] Create new file: local_sync\sync_Private test_an09.txt
 [2025-04-22 11:08:53,696] INFO: [P2P MESSAGE] an08 -> an09: đang nhắn
 [2025-04-22 11:11:25,382] INFO: Tracker response on LEAVE: Peer an09 (10.28.128.39:7345) left
+[2025-04-23 10:56:28,894] INFO: Logged in as: an09
+[2025-04-23 10:56:30,074] INFO: [SYNC LOGIN] Saved 0 new messages for aa1
+[2025-04-23 10:56:30,074] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-23 10:56:30,534] INFO: Tracker response: Peer an09 (172.20.10.2:7112) added
+[2025-04-23 10:56:30,535] INFO: P2P SERVER listening on 172.20.10.2:7112
+[2025-04-23 10:56:30,535] INFO: UDP LISTENER listening on 172.20.10.2:7113 for livestream.
+[2025-04-23 10:56:47,269] INFO: User an09 requested to join private channel 'first'
+[2025-04-23 10:56:54,577] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_first_an09.txt
+[2025-04-23 10:56:55,293] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_first_an09.txt
+[2025-04-23 10:56:57,649] INFO: [P2P MESSAGE] an08 -> an09: xin chào
+[2025-04-23 10:58:47,045] INFO: Tracker response on LEAVE: Peer an09 (172.20.10.2:7112) left

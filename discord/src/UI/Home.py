@@ -351,7 +351,7 @@ class DiscordUI(QMainWindow):
             self.chat_display.append("[ERROR] Channel not found")
             return
 
-        # Bước 3: nếu owner offline → hiển thị trực tiếp và dump
+        # Bước 3: nếu owner offline -> hiển thị trực tiếp và dump
         owner_data = users_collection.find_one({"username": channel_data.get("owner")})
         messages = response.get("messages", [])
         if owner_data and owner_data.get("state") == "offline":
@@ -365,7 +365,7 @@ class DiscordUI(QMainWindow):
             self.current_channel_info = response
             return
 
-        # Bước 4: nếu owner online → đọc từ file cục bộ, ngược lại fallback lấy từ DB
+        # Bước 4: nếu owner online -> đọc từ file cục bộ, ngược lại fallback lấy từ DB
         owner_data = users_collection.find_one({"username": channel_data.get("owner")})
         if owner_data and owner_data.get("state") == "online":
             file_path = os.path.join(
@@ -385,7 +385,7 @@ class DiscordUI(QMainWindow):
                     self.chat_display.append("[ERROR] Không thể load tin nhắn từ file.")
                 return
 
-            # ❷ Fallback: chưa có file → lấy toàn bộ messages từ MongoDB và dump ngay
+            # Fallback: chưa có file → lấy toàn bộ messages từ MongoDB và dump ngay
             try:
                 req = {
                     "action": "get_channel_info",
@@ -696,107 +696,137 @@ class DiscordUI(QMainWindow):
         self.last_message_count = 0
     
     def poll_loop(self):
-        while True:
-            if self.current_mode == "channel" and self.current_channel:
+            while True:
+                if self.current_mode == "channel" and self.current_channel:
+                    try:
+                        # 1. Lấy metadata kênh và trạng thái owner
+                        channel_data = channels_collection.find_one(
+                            {"channel_name": self.current_channel}
+                        )
+                        if not channel_data:
+                            logging.warning("poll_loop: Channel data is None for channel: %s",
+                                            self.current_channel)
+                            time.sleep(0.5)
+                            continue
+
+                        owner_username = channel_data.get("owner")
+                        owner_data = users_collection.find_one(
+                            {"username": owner_username}
+                        )
+                        if not owner_data:
+                            logging.warning("poll_loop: Owner data is None for username: %s",
+                                            owner_username)
+                            time.sleep(0.5)
+                            continue
+
+                        # NHÁNH A: Owner offline → gọi API, hiển thị và dump file mới
+                        if owner_data.get("state") == "offline":
+                            request_data = {
+                                "action": "get_channel_info",
+                                "channel_name": self.current_channel,
+                                "username": self.username,
+                            }
+                            if self.is_viewer:
+                                request_data["is_visitor"] = True
+
+                            response_str = channelRequest.handle_channel_request(
+                                json.dumps(request_data)
+                            )
+                            response = json.loads(response_str)
+
+                            if response.get("status") == "success":
+                                messages = response.get("messages", [])
+                                # nếu có tin mới
+                                if len(messages) > self.last_message_count:
+                                    new_msgs = messages[self.last_message_count:]
+                                    # hiển thị lên UI
+                                    for msg in new_msgs:
+                                        text = msg.get("text", "")
+                                        self.chat_display.append(text)
+                                    # cập nhật đếm
+                                    self.last_message_count = len(messages)
+                                    # dump mới về file (nếu đủ quyền)
+                                    if _can_dump(channel_data, self.username):
+                                        dump_messages_to_file(
+                                            self.current_channel,
+                                            self.username,
+                                            [m.get("text", "") for m in new_msgs]
+                                        )
+                            else:
+                                logging.error("Polling error: %s", response.get("message"))
+
+                        # NHÁNH B: Owner online hoặc Invisible → chỉ load từ file cục bộ
+                        else:  # state in ("online","Invisible")
+                            file_path = os.path.join("local_sync", f"sync_{self.current_channel}_{self.username}.txt")
+                            if os.path.exists(file_path):
+                                with open(file_path, 'r', encoding='utf-8') as f:
+                                    lines = [line.strip() for line in f if line.strip() and message_pattern.match(line)]
+
+                                if not lines:
+                                    time.sleep(0.5)
+                                    continue
+
+                                if not hasattr(self, "last_seen_line") or self.last_seen_line not in lines:
+                                    for line in lines:
+                                        self.chat_display.append(line)
+                                        if self.username == owner_username:
+                                            if not channels_collection.find_one({
+                                                "channel_name": self.current_channel,
+                                                "messages.text": line
+                                            }):
+                                                message_dict = {
+                                                    "sender": owner_username,
+                                                    "text": line
+                                                }
+                                                channels_collection.update_one(
+                                                    {"channel_name": self.current_channel},
+                                                    {"$push": {"messages": message_dict}}
+                                                )
+                                    self.last_seen_line = lines[-1]
+                                    self.last_message_count = len(lines)
+
+                                else:
+                                    idx = lines.index(self.last_seen_line)
+                                    new_lines = lines[idx + 1:]
+
+                                    if new_lines:
+                                        for line in new_lines:
+                                            if line.strip() == self.last_seen_line:
+                                                continue  # bỏ qua dòng lặp
+                                            self.chat_display.append(line)
+                                            if self.username == owner_username:
+                                                if not channels_collection.find_one({
+                                                    "channel_name": self.current_channel,
+                                                    "messages.text": line
+                                                }):
+                                                    message_dict = {
+                                                        "sender": owner_username,
+                                                        "text": line
+                                                    }
+                                                    channels_collection.update_one(
+                                                        {"channel_name": self.current_channel},
+                                                        {"$push": {"messages": message_dict}}
+                                                    )
+
+                                            # ✅ Quan trọng: cập nhật sau khi xử lý
+                                        self.last_seen_line = new_lines[-1]
+                                        self.last_message_count = len(lines)
+
+                            else:
+                                logging.warning("[SYNC LOAD] File not found: %s", file_path)
+                            # nếu file chưa có thì chờ
+                    except Exception as e:
+                        logging.error("Exception in poll_loop: %s", e)
+
+                # --- Refresh danh sách DM và kênh ---
                 try:
-                    # 1. Lấy metadata kênh và trạng thái owner
-                    channel_data = channels_collection.find_one(
-                        {"channel_name": self.current_channel}
-                    )
-                    if not channel_data:
-                        logging.warning("poll_loop: Channel data is None for channel: %s",
-                                        self.current_channel)
-                        time.sleep(0.5)
-                        continue
-
-                    owner_username = channel_data.get("owner")
-                    owner_data = users_collection.find_one(
-                        {"username": owner_username}
-                    )
-                    if not owner_data:
-                        logging.warning("poll_loop: Owner data is None for username: %s",
-                                        owner_username)
-                        time.sleep(0.5)
-                        continue
-
-                    # NHÁNH A: Owner offline → gọi API, hiển thị và dump file mới
-                    if owner_data.get("state") == "offline":
-                        request_data = {
-                            "action": "get_channel_info",
-                            "channel_name": self.current_channel,
-                            "username": self.username,
-                        }
-                        if self.is_viewer:
-                            request_data["is_visitor"] = True
-
-                        response_str = channelRequest.handle_channel_request(
-                            json.dumps(request_data)
-                        )
-                        response = json.loads(response_str)
-
-                        if response.get("status") == "success":
-                            messages = response.get("messages", [])
-                            # nếu có tin mới
-                            if len(messages) > self.last_message_count:
-                                new_msgs = messages[self.last_message_count:]
-                                # hiển thị lên UI
-                                for msg in new_msgs:
-                                    text = msg.get("text", "")
-                                    self.chat_display.append(text)
-                                # cập nhật đếm
-                                self.last_message_count = len(messages)
-                                # dump mới về file (nếu đủ quyền)
-                                if _can_dump(channel_data, self.username):
-                                    dump_messages_to_file(
-                                        self.current_channel,
-                                        self.username,
-                                        [m.get("text", "") for m in new_msgs]
-                                    )
-                        else:
-                            logging.error("Polling error: %s", response.get("message"))
-
-                    # NHÁNH B: Owner online hoặc Invisible → chỉ load từ file cục bộ
-                    else:  # state in ("online","Invisible")
-                        file_path = os.path.join(
-                            "local_sync",
-                            f"sync_{self.current_channel}_{self.username}.txt"
-                        )
-                        if os.path.exists(file_path):
-                            try:
-                                # đọc toàn bộ file
-                                with open(file_path, "r", encoding="utf-8") as f:
-                                    lines = [l.strip() for l in f if l.strip()]
-
-                                # khởi tạo bộ đếm nếu lần đầu
-                                if not hasattr(self, "file_line_count"):
-                                    self.file_line_count = 0
-
-                                # chỉ lấy dòng mới
-                                new_lines = lines[self.file_line_count:]
-                                for line in new_lines:
-                                    self.chat_display.append(line)
-
-                                # cập nhật công cụ đếm
-                                self.file_line_count = len(lines)
-                            except Exception as e:
-                                logging.error("[SYNC LOAD] Error reading file: %s", e)
-                                self.chat_display.append(
-                                    "[ERROR] Cannot load messages from file."
-                                )
-                        # nếu file chưa có thì chờ
+                    self.load_dm_list()
+                    self.get_channels_from_server()
+                    self.get_hosted_channels_from_server()
                 except Exception as e:
-                    logging.error("Exception in poll_loop: %s", e)
+                    logging.error("Error updating lists: %s", e)
 
-            # --- Refresh danh sách DM và kênh ---
-            try:
-                self.load_dm_list()
-                self.get_channels_from_server()
-                self.get_hosted_channels_from_server()
-            except Exception as e:
-                logging.error("Error updating lists: %s", e)
-
-            time.sleep(1)
-
+                time.sleep(1)
     
     def toggle_livestream(self):
         if self.current_mode != "channel":

@@ -1,10 +1,14 @@
 import json
-from models.authModel import UserRegister, UserLogin, Visitor
+from models.authModel import UserLogin, Visitor
 from services.authService import register_user, login_user, visitor_mode, logout_user
 
 def register(data):
-    user = UserRegister(**data)
-    result = register_user(user)
+    print(333333333333333333333333333333)
+    username = data.get("username")
+    password = data.get("password")
+    email = data.get("email")
+    
+    result = register_user(username, password, email)
     return result
 
 def login(data, peer_ip, peer_port):

@@ -207,7 +207,8 @@ def send_message_p2p(username: str, channel_name: str, message_text: str):
         )
 
     # ❷ LUÔN backup tin nhắn vào MongoDB để peer offline có thể lấy về
-    send_message(username, channel_name, message_text)
+    else:
+     send_message(username, channel_name, message_text)
 
     # Trả về thông báo
     if success_count:

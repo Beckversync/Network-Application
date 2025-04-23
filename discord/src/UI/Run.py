@@ -14,7 +14,7 @@ file_handler.setLevel(logging.INFO)
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 
-# Handler ghi log ra console (có thể bỏ nếu chỉ muốn ghi file)
+# Handler ghi log ra console 
 console_handler = logging.StreamHandler()
 console_handler.setLevel(logging.INFO)
 console_handler.setFormatter(formatter)
@@ -27,7 +27,7 @@ from PyQt6.QtWidgets import QApplication
 from UI.Login import LoginRegisterUI
 from UI.Home import DiscordUI
 
-from tracker import TRACKER_SERVER  # Tracker server, chạy riêng (python tracker.py)
+from tracker import TRACKER_SERVER  # Tracker server
 from user import USER
 
 class AppManager:

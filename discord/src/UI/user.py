@@ -158,13 +158,13 @@ class USER:
                         except Exception as e:
                             logging.error("[ERROR] Cannot create file: %s", e)
 
-                    line = f"[{readable_time}] {sender}: {text}"
-                    dump_messages_to_file(self.active_channel,
-                      self.name,
-                      [line])
+                    line = f"[{readable_time}] {sender}: {text}\n"
+                    # dump_messages_to_file(self.active_channel,
+                    #   self.name,
+                    #   [line])
 
                     print(line)
-                    try:
+                    try:    
                         with open(filepath, 'a', encoding='utf-8') as f:
                             f.write(line)
 
@@ -529,6 +529,6 @@ class USER:
 if __name__ == '__main__':
     # Lấy IP của máy tự động
     tracker_ip = USER.get_host_default_interface_ip()
-    tracker_port = 5000  # Hoặc đặt thành biến nếu cần linh động
+    tracker_port = 5000  
 
     USER(tracker_ip, tracker_port)

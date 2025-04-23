@@ -188,7 +188,6 @@ class LoginRegisterUI(QWidget):
             self.client_socket.send(json.dumps(request_data).encode())
             response_str = self.client_socket.recv(4096).decode()
 
-            #print("Server response:", response_str)
             try:
                 response = json.loads(response_str)
             except json.JSONDecodeError:
@@ -216,18 +215,19 @@ class LoginRegisterUI(QWidget):
             else:
                 self.session_info = {"session_id": "dummy-session-id"}
 
-            #Đồng bộ các kênh làm owner vào file local
+            # === Phần này cần danh sách các kênh (tự truyền vào nếu không dùng get_hosted_channels) ===
             try:
-                request_channels = {
-                    "action": "get_hosted_channels",
-                    "username": self.username
-                }
-                response_channels = channelRequest.handle_channel_request(json.dumps(request_channels))
-                hosted_channels_response = json.loads(response_channels)
-                if hosted_channels_response.get("status") == "success":
-                    os.makedirs("local_sync", exist_ok=True)
-                    hosted_channels = hosted_channels_response.get("data", {}).get("hosted_channels", [])
-                    for channel_name in hosted_channels:
+                request_data = {"action": "get_all_channels"}
+                response_str = channelRequest.handle_channel_request(json.dumps(request_data))
+                response = json.loads(response_str)
+                print(response)
+                if response.get("status") == "success":
+                    channels = response.get("data", [])
+
+                    channel_list = [ch["channel_name"] for ch in channels]
+                    print(channel_list)  # Debug: in ra danh sách tên kênh
+
+                    for channel_name in channel_list:
                         request_messages = {
                             "action": "get_channel_info",
                             "channel_name": channel_name,
@@ -237,10 +237,15 @@ class LoginRegisterUI(QWidget):
                         msg_data = json.loads(response_msg_str)
 
                         if msg_data.get("status") == "success":
+                            members = msg_data.get("members", [])
+                            if self.username not in members:
+                                logging.info("[SYNC LOGIN] User %s is not a member of channel %s. Skipping sync.", self.username, channel_name)
+                                continue
+
                             messages = msg_data.get("messages", [])
                             sync_filename = f"sync_{channel_name}_{self.username}.txt"
                             sync_path = os.path.join("local_sync", sync_filename)
-                            
+
                             existing_lines = set()
                             if os.path.exists(sync_path):
                                 with open(sync_path, "r", encoding="utf-8") as f:
@@ -264,8 +269,9 @@ class LoginRegisterUI(QWidget):
                             logging.info("[SYNC LOGIN] Saved %d new messages for %s", new_lines_count, channel_name)
                         else:
                             logging.warning("[SYNC LOGIN] Failed to get messages for channel: %s", channel_name)
+
                 else:
-                    logging.warning("[SYNC LOGIN] Failed to fetch hosted channels")
+                    logging.warning("[SYNC LOGIN] Failed to fetch all channels: %s", response.get("message"))
 
             except Exception as sync_e:
                 logging.error("Error during login-time sync: %s", sync_e)
@@ -274,6 +280,7 @@ class LoginRegisterUI(QWidget):
 
         except Exception as e:
             QMessageBox.critical(self, "Error", f"An error occurred: {str(e)}")
+
     
     def login_as_viewer(self):
         dialog = ViewerLoginDialog(self)

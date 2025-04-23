@@ -51083,3 +51083,409 @@
 [2025-04-22 15:40:41,798] INFO: Tin nhắn từ an08 đã gửi tới 3 peer online trong kênh '456'
 [2025-04-22 15:40:41,958] INFO: Message from an08 sent in channel '456'
 [2025-04-22 15:41:05,227] INFO: Tracker response on LEAVE: Peer an08 (172.20.10.2:8551) left
+[2025-04-23 10:42:03,855] INFO: Logged in as: an08
+[2025-04-23 10:42:05,111] INFO: [SYNC LOGIN] Saved 0 new messages for non
+[2025-04-23 10:42:05,396] INFO: [SYNC LOGIN] Saved 0 new messages for Private test
+[2025-04-23 10:42:05,396] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-23 10:42:06,201] INFO: Tracker response: Peer an08 (172.20.10.2:8025) added
+[2025-04-23 10:42:06,201] INFO: P2P SERVER listening on 172.20.10.2:8025
+[2025-04-23 10:42:06,201] INFO: UDP LISTENER listening on 172.20.10.2:8026 for livestream.
+[2025-04-23 10:43:06,895] ERROR: Error get_channels: cluster0-shard-00-02.fum1o.mongodb.net:27017: connection closed (configured timeouts: connectTimeoutMS: 20000.0ms)
+[2025-04-23 10:44:08,059] ERROR: Exception in poll_loop: cluster0-shard-00-00.fum1o.mongodb.net:27017: [Errno 11001] getaddrinfo failed (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),cluster0-shard-00-02.fum1o.mongodb.net:27017: [Errno 11001] getaddrinfo failed (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),cluster0-shard-00-01.fum1o.mongodb.net:27017: [Errno 11001] getaddrinfo failed (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 68086182eed93ce9b0e93f7d, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('cluster0-shard-00-00.fum1o.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('cluster0-shard-00-00.fum1o.mongodb.net:27017: [Errno 11001] getaddrinfo failed (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('cluster0-shard-00-01.fum1o.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('cluster0-shard-00-01.fum1o.mongodb.net:27017: [Errno 11001] getaddrinfo failed (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('cluster0-shard-00-02.fum1o.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('cluster0-shard-00-02.fum1o.mongodb.net:27017: [Errno 11001] getaddrinfo failed (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+[2025-04-23 10:44:36,991] INFO: Tracker response on LEAVE: Peer an08 (172.20.10.2:8025) left
+[2025-04-23 10:55:56,067] INFO: Logged in as: an08
+[2025-04-23 10:55:57,067] INFO: [SYNC LOGIN] Saved 0 new messages for non
+[2025-04-23 10:55:57,138] INFO: [SYNC LOGIN] Saved 0 new messages for Private test
+[2025-04-23 10:55:57,139] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-23 10:55:57,386] INFO: Tracker response: Peer an08 (172.20.10.2:7217) added
+[2025-04-23 10:55:57,386] INFO: P2P SERVER listening on 172.20.10.2:7217
+[2025-04-23 10:55:57,386] INFO: UDP LISTENER listening on 172.20.10.2:7218 for livestream.
+[2025-04-23 10:56:02,532] INFO: Sending message: 1
+[2025-04-23 10:56:02,917] INFO: Message from an08 sent in channel '44'
+[2025-04-23 10:56:42,259] INFO: Channel 'first' created by an08 (is_private=True)
+[2025-04-23 10:56:44,981] INFO: [SYNC] SyncManager started for channel 'first'
+[2025-04-23 10:56:48,878] INFO: User an09 approved to join channel 'first' by an08
+[2025-04-23 10:56:51,429] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_first_an08.txt
+[2025-04-23 10:56:57,249] INFO: Sending message: xin chào
+[2025-04-23 10:56:57,479] INFO: Sent P2P chat to 172.20.10.2:7217 – {"type": "chat", "sender": "an08", "message": "xin ch\u00e0o", "channel": "first", "owner": "an08"}
+[2025-04-23 10:56:57,481] INFO: [P2P MESSAGE] an08 -> an08: xin chào
+[2025-04-23 10:56:57,633] INFO: Sent P2P chat to 172.20.10.2:7112 – {"type": "chat", "sender": "an08", "message": "xin ch\u00e0o", "channel": "first", "owner": "an08"}
+[2025-04-23 10:56:57,633] INFO: Tin nhắn từ an08 đã gửi tới 2 peer online trong kênh 'first'
+[2025-04-23 10:56:58,159] INFO: Message from an08 sent in channel 'first'
+[2025-04-23 10:58:44,759] INFO: Tracker response on LEAVE: Peer an08 (172.20.10.2:7217) left
+[2025-04-23 10:58:50,919] ERROR: Exception in load_dm_list: wrapped C/C++ object of type QListWidget has been deleted
+[2025-04-23 11:03:23,121] INFO: Registration successful for user: an0
+[2025-04-23 11:03:38,375] INFO: Logged in as: an10
+[2025-04-23 11:03:39,807] INFO: [SYNC LOGIN] Saved 4 new messages for 44
+[2025-04-23 11:03:39,807] INFO: User 'an10' logging in (authenticated mode).
+[2025-04-23 11:03:40,013] INFO: Tracker response: Peer an10 (172.20.10.2:8070) added
+[2025-04-23 11:03:40,014] INFO: P2P SERVER listening on 172.20.10.2:8070
+[2025-04-23 11:03:40,016] INFO: UDP LISTENER listening on 172.20.10.2:8071 for livestream.
+[2025-04-23 11:04:20,350] INFO: Logged in as: an11
+[2025-04-23 11:04:21,328] INFO: User 'an11' logging in (authenticated mode).
+[2025-04-23 11:04:21,510] INFO: Tracker response: Peer an11 (172.20.10.2:7996) added
+[2025-04-23 11:04:21,510] INFO: P2P SERVER listening on 172.20.10.2:7996
+[2025-04-23 11:04:21,517] INFO: UDP LISTENER listening on 172.20.10.2:7997 for livestream.
+[2025-04-23 11:04:37,179] INFO: Channel '4444' created by an10 (is_private=False)
+[2025-04-23 11:04:40,258] INFO: [SYNC] SyncManager started for channel '4444'
+[2025-04-23 11:04:41,588] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_4444_an10.txt
+[2025-04-23 11:04:41,588] INFO: [SYNC] SyncManager started for channel '4444'
+[2025-04-23 11:04:50,279] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_4444_an11.txt
+[2025-04-23 11:04:52,630] INFO: User an11 joined public channel '4444'
+[2025-04-23 11:04:52,995] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_4444_an11.txt
+[2025-04-23 11:05:01,903] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_4444_an10.txt
+[2025-04-23 11:05:01,903] INFO: [SYNC] SyncManager started for channel '4444'
+[2025-04-23 11:05:04,752] INFO: Sending message: alo
+[2025-04-23 11:05:05,008] INFO: Sent P2P chat to 172.20.10.2:8070 – {"type": "chat", "sender": "an10", "message": "alo", "channel": "4444", "owner": "an10"}
+[2025-04-23 11:05:05,008] INFO: [P2P MESSAGE] an10 -> an10: alo
+[2025-04-23 11:05:05,086] INFO: Sent P2P chat to 172.20.10.2:7996 – {"type": "chat", "sender": "an10", "message": "alo", "channel": "4444", "owner": "an10"}
+[2025-04-23 11:05:05,086] INFO: Tin nhắn từ an10 đã gửi tới 2 peer online trong kênh '4444'
+[2025-04-23 11:05:05,086] INFO: [P2P MESSAGE] an10 -> an11: alo
+[2025-04-23 11:05:05,250] INFO: Message from an10 sent in channel '4444'
+[2025-04-23 11:05:07,893] INFO: Sending message: 123
+[2025-04-23 11:05:08,148] INFO: Sent P2P chat to 172.20.10.2:8070 – {"type": "chat", "sender": "an11", "message": "123", "channel": "4444", "owner": "an10"}
+[2025-04-23 11:05:08,148] INFO: [P2P MESSAGE] an11 -> an10: 123
+[2025-04-23 11:05:08,221] INFO: Sent P2P chat to 172.20.10.2:7996 – {"type": "chat", "sender": "an11", "message": "123", "channel": "4444", "owner": "an10"}
+[2025-04-23 11:05:08,221] INFO: Tin nhắn từ an11 đã gửi tới 2 peer online trong kênh '4444'
+[2025-04-23 11:05:08,227] INFO: [P2P MESSAGE] an11 -> an11: 123
+[2025-04-23 11:05:08,394] INFO: Message from an11 sent in channel '4444'
+[2025-04-23 11:05:20,313] INFO: Channel '567' created by an10 (is_private=False)
+[2025-04-23 11:05:22,500] INFO: [SYNC] SyncManager started for channel '567'
+[2025-04-23 11:05:26,643] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_567_an10.txt
+[2025-04-23 11:05:26,643] INFO: [SYNC] SyncManager started for channel '567'
+[2025-04-23 11:05:28,298] INFO: Sending message: alo
+[2025-04-23 11:05:28,595] INFO: Sent P2P chat to 172.20.10.2:8070 – {"type": "chat", "sender": "an10", "message": "alo", "channel": "567", "owner": "an10"}
+[2025-04-23 11:05:28,595] INFO: Tin nhắn từ an10 đã gửi tới 1 peer online trong kênh '567'
+[2025-04-23 11:05:28,595] INFO: [P2P MESSAGE] an10 -> an10: alo
+[2025-04-23 11:05:28,770] INFO: Message from an10 sent in channel '567'
+[2025-04-23 11:05:31,813] INFO: Sending message: 123
+[2025-04-23 11:05:32,039] INFO: Sent P2P chat to 172.20.10.2:8070 – {"type": "chat", "sender": "an11", "message": "123", "channel": "567", "owner": "an10"}
+[2025-04-23 11:05:32,039] INFO: Tin nhắn từ an11 đã gửi tới 1 peer online trong kênh '567'
+[2025-04-23 11:05:32,039] INFO: [P2P MESSAGE] an11 -> an10: 123
+[2025-04-23 11:05:32,192] INFO: Message from an11 sent in channel '567'
+[2025-04-23 11:05:34,774] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_567_an11.txt
+[2025-04-23 11:05:37,296] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_567_an10.txt
+[2025-04-23 11:05:37,296] INFO: [SYNC] SyncManager started for channel '567'
+[2025-04-23 11:05:47,903] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-23 11:05:49,333] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-23 11:05:51,891] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_567_an10.txt
+[2025-04-23 11:05:51,891] INFO: [SYNC] SyncManager started for channel '567'
+[2025-04-23 11:05:54,009] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_567_an11.txt
+[2025-04-23 11:05:58,644] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_567_an10.txt
+[2025-04-23 11:05:58,644] INFO: [SYNC] SyncManager started for channel '567'
+[2025-04-23 11:05:59,447] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_567_an11.txt
+[2025-04-23 11:06:03,662] INFO: Sending message: ggg
+[2025-04-23 11:06:04,888] INFO: Sent P2P chat to 172.20.10.2:8070 – {"type": "chat", "sender": "an11", "message": "ggg", "channel": "567", "owner": "an10"}
+[2025-04-23 11:06:04,888] INFO: Tin nhắn từ an11 đã gửi tới 1 peer online trong kênh '567'
+[2025-04-23 11:06:04,888] INFO: [P2P MESSAGE] an11 -> an10: ggg
+[2025-04-23 11:06:05,192] INFO: Message from an11 sent in channel '567'
+[2025-04-23 11:06:13,618] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_567_an10.txt
+[2025-04-23 11:06:13,618] INFO: [SYNC] SyncManager started for channel '567'
+[2025-04-23 11:06:14,832] WARNING: poll_loop: Channel data is None for channel: 567
+[2025-04-23 11:06:14,898] INFO: Channel '567' deleted by an10
+[2025-04-23 11:06:16,014] WARNING: poll_loop: Channel data is None for channel: 567
+[2025-04-23 11:06:16,632] WARNING: poll_loop: Channel data is None for channel: 567
+[2025-04-23 11:06:17,280] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_4444_an11.txt
+[2025-04-23 11:06:21,570] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_4444_an10.txt
+[2025-04-23 11:06:21,570] INFO: [SYNC] SyncManager started for channel '4444'
+[2025-04-23 11:06:22,152] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_4444_an10.txt
+[2025-04-23 11:06:22,152] INFO: [SYNC] SyncManager started for channel '4444'
+[2025-04-23 11:06:37,869] INFO: Tracker response on LEAVE: Peer an10 (172.20.10.2:8070) left
+[2025-04-23 11:06:42,996] INFO: Logged in as Viewer: 12
+[2025-04-23 11:06:42,996] INFO: User '12' logging in (visitor mode).
+[2025-04-23 11:06:43,087] INFO: Tracker response: User not logged in
+[2025-04-23 11:06:43,092] INFO: P2P SERVER listening on 172.20.10.2:7657
+[2025-04-23 11:06:43,093] INFO: UDP LISTENER listening on 172.20.10.2:7658 for livestream.
+[2025-04-23 11:06:57,285] INFO: Tracker response on LEAVE: Peer an11 (172.20.10.2:7996) left
+[2025-04-23 11:11:46,516] INFO: Logged in as: an08
+[2025-04-23 11:11:49,104] INFO: [SYNC LOGIN] Saved 0 new messages for non
+[2025-04-23 11:11:49,340] INFO: [SYNC LOGIN] Saved 0 new messages for Private test
+[2025-04-23 11:11:52,269] INFO: [SYNC LOGIN] Saved 0 new messages for first
+[2025-04-23 11:11:52,269] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-23 11:11:56,207] INFO: Tracker response: Peer an08 (172.20.10.2:7067) added
+[2025-04-23 11:11:56,207] INFO: P2P SERVER listening on 172.20.10.2:7067
+[2025-04-23 11:11:56,207] INFO: UDP LISTENER listening on 172.20.10.2:7068 for livestream.
+[2025-04-23 11:12:20,913] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_66667_an08.txt
+[2025-04-23 11:12:23,335] INFO: User an08 joined public channel '66667'
+[2025-04-23 11:12:23,708] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_66667_an08.txt
+[2025-04-23 11:12:27,006] INFO: Sending message: alo
+[2025-04-23 11:12:27,265] INFO: Sent P2P chat to 172.20.10.4:7453 – {"type": "chat", "sender": "an08", "message": "alo", "channel": "66667", "owner": "a04"}
+[2025-04-23 11:12:27,337] INFO: Sent P2P chat to 172.20.10.2:7067 – {"type": "chat", "sender": "an08", "message": "alo", "channel": "66667", "owner": "a04"}
+[2025-04-23 11:12:27,337] INFO: Tin nhắn từ an08 đã gửi tới 2 peer online trong kênh '66667'
+[2025-04-23 11:12:27,337] INFO: Message from an08 sent in channel '66667'
+[2025-04-23 11:12:27,337] INFO: [P2P MESSAGE] an08 -> an08: alo
+[2025-04-23 11:12:30,386] INFO: [P2P MESSAGE] a04 -> an08: ngh
+[2025-04-23 11:12:32,709] INFO: Sending message: cu
+[2025-04-23 11:12:32,933] INFO: Sent P2P chat to 172.20.10.4:7453 – {"type": "chat", "sender": "an08", "message": "cu", "channel": "66667", "owner": "a04"}
+[2025-04-23 11:12:33,022] INFO: Sent P2P chat to 172.20.10.2:7067 – {"type": "chat", "sender": "an08", "message": "cu", "channel": "66667", "owner": "a04"}
+[2025-04-23 11:12:33,022] INFO: Tin nhắn từ an08 đã gửi tới 2 peer online trong kênh '66667'
+[2025-04-23 11:12:33,022] INFO: Message from an08 sent in channel '66667'
+[2025-04-23 11:12:33,022] INFO: [P2P MESSAGE] an08 -> an08: cu
+[2025-04-23 11:12:35,490] INFO: [P2P MESSAGE] a04 -> an08: ???
+[2025-04-23 11:12:43,974] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_66667_an08.txt
+[2025-04-23 11:12:44,419] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_66667_an08.txt
+[2025-04-23 11:12:45,609] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_66667_an08.txt
+[2025-04-23 11:12:46,033] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_66667_an08.txt
+[2025-04-23 11:14:06,737] INFO: Tracker response on LEAVE: Peer an08 (172.20.10.2:7067) left
+[2025-04-23 11:14:17,552] INFO: Logged in as: an08
+[2025-04-23 11:14:18,462] INFO: [SYNC LOGIN] Saved 0 new messages for non
+[2025-04-23 11:14:18,535] INFO: [SYNC LOGIN] Saved 0 new messages for Private test
+[2025-04-23 11:14:18,626] INFO: [SYNC LOGIN] Saved 0 new messages for first
+[2025-04-23 11:14:18,626] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-23 11:14:18,798] INFO: Tracker response: Peer an08 (172.20.10.2:8416) added
+[2025-04-23 11:14:18,798] INFO: P2P SERVER listening on 172.20.10.2:8416
+[2025-04-23 11:14:18,800] INFO: UDP LISTENER listening on 172.20.10.2:8417 for livestream.
+[2025-04-23 11:14:29,993] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_66667_an08.txt
+[2025-04-23 11:14:32,102] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_66667_an08.txt
+[2025-04-23 11:14:33,664] INFO: [P2P MESSAGE] a04 -> an08: ;po
+[2025-04-23 11:14:36,672] INFO: Sending message: nghe
+[2025-04-23 11:14:36,909] INFO: Sent P2P chat to 172.20.10.4:7856 – {"type": "chat", "sender": "an08", "message": "nghe", "channel": "66667", "owner": "a04"}
+[2025-04-23 11:14:37,032] INFO: Sent P2P chat to 172.20.10.2:8416 – {"type": "chat", "sender": "an08", "message": "nghe", "channel": "66667", "owner": "a04"}
+[2025-04-23 11:14:37,032] INFO: Tin nhắn từ an08 đã gửi tới 2 peer online trong kênh '66667'
+[2025-04-23 11:14:37,032] INFO: Message from an08 sent in channel '66667'
+[2025-04-23 11:14:37,032] INFO: [P2P MESSAGE] an08 -> an08: nghe
+[2025-04-23 11:14:38,376] INFO: [P2P MESSAGE] a04 -> an08: dsadsad
+[2025-04-23 11:14:40,478] INFO: Sending message: sao
+[2025-04-23 11:14:40,736] INFO: Sent P2P chat to 172.20.10.4:7856 – {"type": "chat", "sender": "an08", "message": "sao", "channel": "66667", "owner": "a04"}
+[2025-04-23 11:14:40,846] INFO: Sent P2P chat to 172.20.10.2:8416 – {"type": "chat", "sender": "an08", "message": "sao", "channel": "66667", "owner": "a04"}
+[2025-04-23 11:14:40,846] INFO: Tin nhắn từ an08 đã gửi tới 2 peer online trong kênh '66667'
+[2025-04-23 11:14:40,846] INFO: Message from an08 sent in channel '66667'
+[2025-04-23 11:14:40,846] INFO: [P2P MESSAGE] an08 -> an08: sao
+[2025-04-23 11:14:53,112] INFO: Sending message: đụ đụ đụ
+[2025-04-23 11:14:53,396] INFO: Sent P2P chat to 172.20.10.4:7856 – {"type": "chat", "sender": "an08", "message": "\u0111\u1ee5 \u0111\u1ee5 \u0111\u1ee5", "channel": "66667", "owner": "a04"}
+[2025-04-23 11:14:53,464] INFO: Sent P2P chat to 172.20.10.2:8416 – {"type": "chat", "sender": "an08", "message": "\u0111\u1ee5 \u0111\u1ee5 \u0111\u1ee5", "channel": "66667", "owner": "a04"}
+[2025-04-23 11:14:53,464] INFO: Tin nhắn từ an08 đã gửi tới 2 peer online trong kênh '66667'
+[2025-04-23 11:14:53,464] INFO: Message from an08 sent in channel '66667'
+[2025-04-23 11:14:53,464] INFO: [P2P MESSAGE] an08 -> an08: đụ đụ đụ
+[2025-04-23 11:23:23,313] INFO: Sending message: dau
+[2025-04-23 11:23:23,663] INFO: Message from an08 sent in channel '66667'
+[2025-04-23 11:23:29,205] INFO: Sending message: binh thuong
+[2025-04-23 11:23:29,563] INFO: Message from an08 sent in channel '66667'
+[2025-04-23 11:25:56,561] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_44444444_an08.txt
+[2025-04-23 11:25:59,078] INFO: Sending message: nhge
+[2025-04-23 11:25:59,350] INFO: Sent P2P chat to 172.20.10.4:8112 – {"type": "chat", "sender": "an08", "message": "nhge", "channel": "44444444", "owner": "an10"}
+[2025-04-23 11:25:59,413] INFO: Sent P2P chat to 172.20.10.4:7532 – {"type": "chat", "sender": "an08", "message": "nhge", "channel": "44444444", "owner": "an10"}
+[2025-04-23 11:25:59,413] INFO: Tin nhắn từ an08 đã gửi tới 2 peer online trong kênh '44444444'
+[2025-04-23 11:25:59,413] INFO: Message from an08 sent in channel '44444444'
+[2025-04-23 11:26:13,289] INFO: Sending message: alo
+[2025-04-23 11:26:13,544] INFO: Sent P2P chat to 172.20.10.4:8112 – {"type": "chat", "sender": "an08", "message": "alo", "channel": "44444444", "owner": "an10"}
+[2025-04-23 11:26:13,616] INFO: Sent P2P chat to 172.20.10.4:7532 – {"type": "chat", "sender": "an08", "message": "alo", "channel": "44444444", "owner": "an10"}
+[2025-04-23 11:26:13,616] INFO: Tin nhắn từ an08 đã gửi tới 2 peer online trong kênh '44444444'
+[2025-04-23 11:26:13,616] INFO: Message from an08 sent in channel '44444444'
+[2025-04-23 11:26:16,789] INFO: User an08 joined public channel '44444444'
+[2025-04-23 11:26:17,156] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_44444444_an08.txt
+[2025-04-23 11:26:19,090] INFO: Sending message: alo
+[2025-04-23 11:26:19,316] INFO: Sent P2P chat to 172.20.10.4:8112 – {"type": "chat", "sender": "an08", "message": "alo", "channel": "44444444", "owner": "an10"}
+[2025-04-23 11:26:19,391] INFO: Sent P2P chat to 172.20.10.4:7532 – {"type": "chat", "sender": "an08", "message": "alo", "channel": "44444444", "owner": "an10"}
+[2025-04-23 11:26:19,467] INFO: Sent P2P chat to 172.20.10.2:8416 – {"type": "chat", "sender": "an08", "message": "alo", "channel": "44444444", "owner": "an10"}
+[2025-04-23 11:26:19,467] INFO: Tin nhắn từ an08 đã gửi tới 3 peer online trong kênh '44444444'
+[2025-04-23 11:26:19,467] INFO: Message from an08 sent in channel '44444444'
+[2025-04-23 11:26:19,467] INFO: [P2P MESSAGE] an08 -> an08: alo
+[2025-04-23 11:35:37,123] INFO: Tracker response on LEAVE: Peer an08 (172.20.10.2:8416) left
+[2025-04-23 11:35:45,479] INFO: Logged in as: an08
+[2025-04-23 11:35:46,349] INFO: [SYNC LOGIN] Saved 0 new messages for non
+[2025-04-23 11:35:46,423] INFO: [SYNC LOGIN] Saved 0 new messages for Private test
+[2025-04-23 11:35:46,504] INFO: [SYNC LOGIN] Saved 0 new messages for first
+[2025-04-23 11:35:46,508] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-23 11:35:46,678] INFO: Tracker response: Peer an08 (172.20.10.2:6403) added
+[2025-04-23 11:35:46,678] INFO: P2P SERVER listening on 172.20.10.2:6403
+[2025-04-23 11:35:46,683] INFO: UDP LISTENER listening on 172.20.10.2:6404 for livestream.
+[2025-04-23 11:35:59,851] INFO: User an08 joined public channel '333'
+[2025-04-23 11:36:00,216] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_333_an08.txt
+[2025-04-23 11:36:31,026] INFO: Sending message: alo
+[2025-04-23 11:36:31,380] INFO: Sent P2P chat to 172.20.10.4:6411 – {"type": "chat", "sender": "an08", "message": "alo", "channel": "uuu", "owner": "an10"}
+[2025-04-23 11:36:31,380] INFO: Tin nhắn từ an08 đã gửi tới 1 peer online trong kênh 'uuu'
+[2025-04-23 11:36:31,380] INFO: Message from an08 sent in channel 'uuu'
+[2025-04-23 11:36:39,431] INFO: Sending message: alo
+[2025-04-23 11:37:00,705] ERROR: P2P send error: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2025-04-23 11:37:00,705] INFO: Tin nhắn từ an08 đã gửi tới 1 peer online trong kênh 'uuu'
+[2025-04-23 11:37:00,706] INFO: Message from an08 sent in channel 'uuu'
+[2025-04-23 11:37:12,734] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_uuu_an08.txt
+[2025-04-23 11:37:13,709] WARNING: [SYNC LOAD] File not found: local_sync\sync_555_an08.txt
+[2025-04-23 11:37:14,955] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_333_an08.txt
+[2025-04-23 11:37:17,080] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_44444444_an08.txt
+[2025-04-23 11:37:17,483] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_44444444_an08.txt
+[2025-04-23 11:37:18,631] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_uuu_an08.txt
+[2025-04-23 11:37:19,028] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_uuu_an08.txt
+[2025-04-23 11:37:25,048] INFO: Tracker response on LEAVE: Peer an08 (172.20.10.2:6403) left
+[2025-04-23 11:37:26,914] INFO: Logged in as: an08
+[2025-04-23 11:37:27,590] INFO: [SYNC LOGIN] Saved 0 new messages for non
+[2025-04-23 11:37:27,684] INFO: [SYNC LOGIN] Saved 0 new messages for Private test
+[2025-04-23 11:37:27,799] INFO: [SYNC LOGIN] Saved 0 new messages for first
+[2025-04-23 11:37:27,802] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-23 11:37:27,991] INFO: Tracker response: Peer an08 (172.20.10.2:7122) added
+[2025-04-23 11:37:27,995] INFO: P2P SERVER listening on 172.20.10.2:7122
+[2025-04-23 11:37:27,995] INFO: UDP LISTENER listening on 172.20.10.2:7123 for livestream.
+[2025-04-23 11:37:29,945] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_uuu_an08.txt
+[2025-04-23 11:37:31,214] INFO: User an08 joined public channel 'uuu'
+[2025-04-23 11:37:31,634] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_uuu_an08.txt
+[2025-04-23 11:37:33,997] INFO: Sending message: an
+[2025-04-23 11:37:34,281] INFO: Sent P2P chat to 172.20.10.4:8712 – {"type": "chat", "sender": "an08", "message": "an", "channel": "uuu", "owner": "an10"}
+[2025-04-23 11:37:34,352] INFO: Sent P2P chat to 172.20.10.2:7122 – {"type": "chat", "sender": "an08", "message": "an", "channel": "uuu", "owner": "an10"}
+[2025-04-23 11:37:34,352] INFO: Tin nhắn từ an08 đã gửi tới 2 peer online trong kênh 'uuu'
+[2025-04-23 11:37:34,352] INFO: Message from an08 sent in channel 'uuu'
+[2025-04-23 11:37:34,352] INFO: [P2P MESSAGE] an08 -> an08: an
+[2025-04-23 11:37:38,863] INFO: [P2P MESSAGE] an10 -> an08: 2394
+[2025-04-23 11:37:46,324] INFO: Sending message: he\
+[2025-04-23 11:37:46,664] INFO: Message from an08 sent in channel 'uuu'
+[2025-04-23 11:37:48,164] INFO: Sending message: aldas
+[2025-04-23 11:37:48,500] INFO: Message from an08 sent in channel 'uuu'
+[2025-04-23 11:37:49,653] INFO: Sending message: '''
+[2025-04-23 11:37:49,949] INFO: Message from an08 sent in channel 'uuu'
+[2025-04-23 11:38:21,478] INFO: Sending message: sadksadksad
+[2025-04-23 11:38:21,831] INFO: Message from an08 sent in channel 'uuu'
+[2025-04-23 11:38:36,370] INFO: Sending message: sadaksdksald
+[2025-04-23 11:38:36,741] INFO: Message from an08 sent in channel 'uuu'
+[2025-04-23 11:39:17,111] INFO: Tracker response on LEAVE: Peer an08 (172.20.10.2:7122) left
+[2025-04-23 11:39:35,597] INFO: Logged in as: an08
+[2025-04-23 11:39:36,848] INFO: [SYNC LOGIN] Saved 0 new messages for non
+[2025-04-23 11:39:36,955] INFO: [SYNC LOGIN] Saved 0 new messages for Private test
+[2025-04-23 11:39:37,045] INFO: [SYNC LOGIN] Saved 0 new messages for first
+[2025-04-23 11:39:37,045] INFO: User 'an08' logging in (authenticated mode).
+[2025-04-23 11:39:37,209] INFO: Tracker response: Peer an08 (172.20.10.2:7163) added
+[2025-04-23 11:39:37,209] INFO: P2P SERVER listening on 172.20.10.2:7163
+[2025-04-23 11:39:37,209] INFO: UDP LISTENER listening on 172.20.10.2:7164 for livestream.
+[2025-04-23 11:39:39,233] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_uuu_an08.txt
+[2025-04-23 11:39:40,396] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_uuu_an08.txt
+[2025-04-23 11:39:40,796] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_uuu_an08.txt
+[2025-04-23 11:39:56,229] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_uuu_an08.txt
+[2025-04-23 11:48:36,864] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_first_an08.txt
+[2025-04-23 11:48:36,864] INFO: [SYNC] SyncManager started for channel 'first'
+[2025-04-23 11:48:41,051] INFO: Channel 'first' deleted by an08
+[2025-04-23 11:48:41,113] WARNING: poll_loop: Channel data is None for channel: first
+[2025-04-23 11:48:45,982] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_Private test_an08.txt
+[2025-04-23 11:48:45,982] INFO: [SYNC] SyncManager started for channel 'Private test'
+[2025-04-23 11:48:47,142] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_non_an08.txt
+[2025-04-23 11:48:47,153] INFO: [SYNC] SyncManager started for channel 'non'
+[2025-04-23 11:48:48,688] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_non_an08.txt
+[2025-04-23 11:48:48,704] INFO: [SYNC] SyncManager started for channel 'non'
+[2025-04-23 11:48:49,827] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_non_an08.txt
+[2025-04-23 11:48:49,827] INFO: [SYNC] SyncManager started for channel 'non'
+[2025-04-23 11:48:56,905] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_non_an08.txt
+[2025-04-23 11:48:56,905] INFO: [SYNC] SyncManager started for channel 'non'
+[2025-04-23 11:49:09,265] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_Private test_an08.txt
+[2025-04-23 11:49:09,281] INFO: [SYNC] SyncManager started for channel 'Private test'
+[2025-04-23 11:49:09,747] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_Private test_an08.txt
+[2025-04-23 11:49:09,747] INFO: [SYNC] SyncManager started for channel 'Private test'
+[2025-04-23 11:49:10,211] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_non_an08.txt
+[2025-04-23 11:49:10,211] INFO: [SYNC] SyncManager started for channel 'non'
+[2025-04-23 11:51:45,805] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_Private test_an08.txt
+[2025-04-23 11:51:45,805] INFO: [SYNC] SyncManager started for channel 'Private test'
+[2025-04-23 11:51:46,312] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_Private test_an08.txt
+[2025-04-23 11:51:46,312] INFO: [SYNC] SyncManager started for channel 'Private test'
+[2025-04-23 11:51:46,747] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_non_an08.txt
+[2025-04-23 11:51:46,747] INFO: [SYNC] SyncManager started for channel 'non'
+[2025-04-23 11:51:55,261] INFO: Sending message: ná nà na
+[2025-04-23 11:51:55,577] INFO: Message from an08 sent in channel 'aa1'
+[2025-04-23 11:52:00,248] INFO: Sending message: anh độ Mĩue
+[2025-04-23 11:52:00,595] INFO: Message from an08 sent in channel 'aa1'
+[2025-04-23 11:52:04,666] INFO: Sending message: ná nà na
+[2025-04-23 11:52:05,029] INFO: Message from an08 sent in channel 'aa1'
+[2025-04-23 11:52:07,844] INFO: Sending message: anh ZQNT
+[2025-04-23 11:52:08,174] INFO: Message from an08 sent in channel 'aa1'
+[2025-04-23 12:00:01,176] INFO: Channel 'viett' created by an08 (is_private=False)
+[2025-04-23 12:00:02,712] INFO: [SYNC] SyncManager started for channel 'viett'
+[2025-04-23 12:00:08,459] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_viett_an08.txt
+[2025-04-23 12:00:08,459] INFO: [SYNC] SyncManager started for channel 'viett'
+[2025-04-23 12:00:10,260] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_viett_an08.txt
+[2025-04-23 12:00:10,260] INFO: [SYNC] SyncManager started for channel 'viett'
+[2025-04-23 12:00:33,495] INFO: Sending message: zin chào
+[2025-04-23 12:00:33,936] INFO: Sent P2P chat to 172.20.10.2:7163 – {"type": "chat", "sender": "an08", "message": "zin ch\u00e0o", "channel": "viett", "owner": "an08"}
+[2025-04-23 12:00:33,936] INFO: Tin nhắn từ an08 đã gửi tới 1 peer online trong kênh 'viett'
+[2025-04-23 12:00:33,936] INFO: Message from an08 sent in channel 'viett'
+[2025-04-23 12:00:33,936] INFO: [P2P MESSAGE] an08 -> an08: zin chào
+[2025-04-23 12:00:42,253] INFO: Sending message: tôi host mà
+[2025-04-23 12:00:42,550] INFO: Sent P2P chat to 172.20.10.2:7163 – {"type": "chat", "sender": "an08", "message": "t\u00f4i host m\u00e0", "channel": "viett", "owner": "an08"}
+[2025-04-23 12:00:42,550] INFO: Tin nhắn từ an08 đã gửi tới 1 peer online trong kênh 'viett'
+[2025-04-23 12:00:42,552] INFO: Message from an08 sent in channel 'viett'
+[2025-04-23 12:00:42,552] INFO: [P2P MESSAGE] an08 -> an08: tôi host mà
+[2025-04-23 12:00:50,512] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_viett_an08.txt
+[2025-04-23 12:00:50,512] INFO: [SYNC] SyncManager started for channel 'viett'
+[2025-04-23 12:00:50,955] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_viett_an08.txt
+[2025-04-23 12:00:50,955] INFO: [SYNC] SyncManager started for channel 'viett'
+[2025-04-23 12:03:54,112] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_Private test_an08.txt
+[2025-04-23 12:03:54,112] INFO: [SYNC] SyncManager started for channel 'Private test'
+[2025-04-23 12:10:12,232] INFO: Tracker response on LEAVE: Peer an08 (172.20.10.2:7163) left
+[2025-04-23 12:10:39,993] INFO: Registration successful for user: beck1
+[2025-04-23 12:10:45,452] INFO: Logged in as: beck1
+[2025-04-23 12:10:46,529] INFO: [SYNC LOGIN] User beck1 is not a member of channel aa1. Skipping sync.
+[2025-04-23 12:10:46,593] INFO: [SYNC LOGIN] User beck1 is not a member of channel non. Skipping sync.
+[2025-04-23 12:10:46,673] WARNING: [SYNC LOGIN] Failed to get messages for channel: Private test
+[2025-04-23 12:10:46,740] INFO: [SYNC LOGIN] User beck1 is not a member of channel 66667. Skipping sync.
+[2025-04-23 12:10:46,808] WARNING: [SYNC LOGIN] Failed to get messages for channel: testtt
+[2025-04-23 12:10:46,874] WARNING: [SYNC LOGIN] Failed to get messages for channel: 7777
+[2025-04-23 12:10:46,958] INFO: [SYNC LOGIN] User beck1 is not a member of channel viett. Skipping sync.
+[2025-04-23 12:10:47,071] WARNING: [SYNC LOGIN] Failed to get messages for channel: 777888
+[2025-04-23 12:10:47,071] INFO: User 'beck1' logging in (authenticated mode).
+[2025-04-23 12:10:47,261] INFO: Tracker response: Peer beck1 (172.20.10.2:7317) added
+[2025-04-23 12:10:47,261] INFO: P2P SERVER listening on 172.20.10.2:7317
+[2025-04-23 12:10:47,261] INFO: UDP LISTENER listening on 172.20.10.2:7318 for livestream.
+[2025-04-23 12:10:51,466] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-23 12:10:52,885] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-23 12:10:54,317] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-23 12:10:55,805] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-23 12:10:57,275] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-23 12:10:58,771] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-23 12:11:00,221] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-23 12:11:01,691] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-23 12:11:02,059] INFO: Channel 'con gà' created by beck1 (is_private=False)
+[2025-04-23 12:11:03,149] ERROR: Polling error: This is a private channel. You do not have permission to see old messages.
+[2025-04-23 12:11:03,731] INFO: [SYNC] SyncManager started for channel 'con gà'
+[2025-04-23 12:11:04,615] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_con gà_beck1.txt
+[2025-04-23 12:11:04,615] INFO: [SYNC] SyncManager started for channel 'con gà'
+[2025-04-23 12:11:06,664] INFO: Sending message: alo
+[2025-04-23 12:11:06,890] INFO: Sent P2P chat to 172.20.10.2:7317 – {"type": "chat", "sender": "beck1", "message": "alo", "channel": "con g\u00e0", "owner": "beck1"}
+[2025-04-23 12:11:06,890] INFO: Tin nhắn từ beck1 đã gửi tới 1 peer online trong kênh 'con gà'
+[2025-04-23 12:11:06,890] INFO: Message from beck1 sent in channel 'con gà'
+[2025-04-23 12:11:06,890] INFO: [P2P MESSAGE] beck1 -> beck1: alo
+[2025-04-23 12:11:09,097] INFO: Sending message: xin chào
+[2025-04-23 12:11:09,320] INFO: Sent P2P chat to 172.20.10.2:7317 – {"type": "chat", "sender": "beck1", "message": "xin ch\u00e0o", "channel": "con g\u00e0", "owner": "beck1"}
+[2025-04-23 12:11:09,320] INFO: Tin nhắn từ beck1 đã gửi tới 1 peer online trong kênh 'con gà'
+[2025-04-23 12:11:09,320] INFO: Message from beck1 sent in channel 'con gà'
+[2025-04-23 12:11:09,320] INFO: [P2P MESSAGE] beck1 -> beck1: xin chào
+[2025-04-23 12:11:12,658] INFO: Sending message: được á chứ
+[2025-04-23 12:11:12,902] INFO: Sent P2P chat to 172.20.10.2:7317 – {"type": "chat", "sender": "beck1", "message": "\u0111\u01b0\u1ee3c \u00e1 ch\u1ee9", "channel": "con g\u00e0", "owner": "beck1"}
+[2025-04-23 12:11:12,902] INFO: Tin nhắn từ beck1 đã gửi tới 1 peer online trong kênh 'con gà'
+[2025-04-23 12:11:12,902] INFO: Message from beck1 sent in channel 'con gà'
+[2025-04-23 12:11:12,902] INFO: [P2P MESSAGE] beck1 -> beck1: được á chứ
+[2025-04-23 12:11:56,276] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_con gà_beck1.txt
+[2025-04-23 12:11:56,276] INFO: [SYNC] SyncManager started for channel 'con gà'
+[2025-04-23 12:12:13,898] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:15,393] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:16,756] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:18,127] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:22,397] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:23,631] INFO: User beck1 requested to join private channel '777888'
+[2025-04-23 12:12:23,788] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:25,222] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:26,580] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:27,944] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:29,325] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:30,700] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:32,112] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:33,570] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:34,937] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:36,268] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:37,647] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:39,080] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:40,450] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:41,801] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:43,213] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:44,615] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:45,976] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:47,353] WARNING: [SYNC LOAD] File not found: local_sync\sync_777888_beck1.txt
+[2025-04-23 12:12:48,072] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_con gà_beck1.txt
+[2025-04-23 12:12:48,072] INFO: [SYNC] SyncManager started for channel 'con gà'
+[2025-04-23 12:14:52,068] INFO: Sending message: livestream
+[2025-04-23 12:14:52,323] INFO: Sent P2P chat to 172.20.10.2:7317 – {"type": "chat", "sender": "beck1", "message": "livestream", "channel": "con g\u00e0", "owner": "beck1"}
+[2025-04-23 12:14:52,323] INFO: [P2P MESSAGE] beck1 -> beck1: livestream
+[2025-04-23 12:14:52,418] INFO: Sent P2P chat to 172.20.10.4:8089 – {"type": "chat", "sender": "beck1", "message": "livestream", "channel": "con g\u00e0", "owner": "beck1"}
+[2025-04-23 12:14:52,418] INFO: Tin nhắn từ beck1 đã gửi tới 2 peer online trong kênh 'con gà'
+[2025-04-23 12:14:52,418] INFO: Message from beck1 sent in channel 'con gà'
+[2025-04-23 12:14:55,442] INFO: Sending message: xin chào
+[2025-04-23 12:14:55,670] INFO: Sent P2P chat to 172.20.10.2:7317 – {"type": "chat", "sender": "beck1", "message": "xin ch\u00e0o", "channel": "con g\u00e0", "owner": "beck1"}
+[2025-04-23 12:14:55,670] INFO: [P2P MESSAGE] beck1 -> beck1: xin chào
+[2025-04-23 12:14:55,776] INFO: Sent P2P chat to 172.20.10.4:8089 – {"type": "chat", "sender": "beck1", "message": "xin ch\u00e0o", "channel": "con g\u00e0", "owner": "beck1"}
+[2025-04-23 12:14:55,776] INFO: Tin nhắn từ beck1 đã gửi tới 2 peer online trong kênh 'con gà'
+[2025-04-23 12:14:55,776] INFO: Message from beck1 sent in channel 'con gà'
+[2025-04-23 12:18:33,969] INFO: Tracker response on LEAVE: Peer beck1 (172.20.10.2:7317) left

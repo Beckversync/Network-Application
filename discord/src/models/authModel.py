@@ -1,10 +1,10 @@
 from pydantic import BaseModel
 from typing import List, Dict
 from typing import Optional
-class UserRegister(BaseModel):
-    username: str
-    email: str
-    password: str
+# class UserRegister(BaseModel):
+#     username: str
+#     email: str
+#     password: str
 
 class Visitor(BaseModel):
     name: str

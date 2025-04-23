@@ -1,29 +1,47 @@
 from config.db import users_collection
 import uuid
 from datetime import datetime, timezone
-from models.authModel import UserRegister, UserLogin, Visitor
+from models.authModel import UserLogin, Visitor
 import logging
 import re
 import threading
 import socket
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
-
-def register_user(user: UserRegister) -> dict:
+def register_user(username: str, password: str, email: str) -> dict:
+    print(2222222222222222222222222222222222)
     try:
-        if not re.match(r"^[\w\.-]+@hcmut\.edu\.vn$", user.email):
+        # Kiểm tra định dạng email
+        if not re.match(r"^[\w\.-]+@hcmut\.edu\.vn$", email):
             return {"status": "error", "message": "Email must be in format '@hcmut.edu.vn'"}
-
-        if users_collection.find_one({"email": user.email}):
+        
+        print("LOi111111111111111111111")
+        
+        # Kiểm tra email đã được đăng ký chưa
+        if users_collection.find_one({"email": email}):
             return {"status": "error", "message": "Email already registered"}
-        if users_collection.find_one({"username": user.username}):
+        
+        # Kiểm tra username đã được sử dụng chưa
+        if users_collection.find_one({"username": username}):
             return {"status": "error", "message": "Username already taken"}
-
-        new_user=user.dict()
-        new_user["verified"] = True 
-        result = users_collection.insert_one(new_user) 
-        logging.info("User %s registered successfully", user.username)
+        
+        # Tạo dữ liệu yêu cầu cho đăng ký người dùng
+        request_data = {
+            "action": "register",
+            "username": username,
+            "password": password,
+            "email": email
+        }
+        
+        # Thêm người dùng vào cơ sở dữ liệu
+        request_data["verified"] = True
+        result = users_collection.insert_one(request_data)
+        
+        # Log thông tin đăng ký thành công
+        logging.info("User %s registered successfully", username)
+        
         return {"status": "success", "message": "User registered successfully", "user_id": str(result.inserted_id)}
+    
     except Exception as e:
         logging.error("Database error during registration: %s", e)
         return {"status": "error", "message": f"Database error: {str(e)}"}
