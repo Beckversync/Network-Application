@@ -325,7 +325,7 @@ class DiscordUI(QMainWindow):
 
             response_str = channelRequest.handle_channel_request(json.dumps(request_data))
             response = json.loads(response_str)
-
+            self.current_channel_info = response   
             if response.get("status") != "success":
                 self.chat_display.append(f"[ERROR] {response.get('message')}")
                 return

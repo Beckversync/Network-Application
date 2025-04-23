@@ -74953,3 +74953,23 @@
 [2025-04-23 10:56:55,293] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_first_an09.txt
 [2025-04-23 10:56:57,649] INFO: [P2P MESSAGE] an08 -> an09: xin chào
 [2025-04-23 10:58:47,045] INFO: Tracker response on LEAVE: Peer an09 (172.20.10.2:7112) left
+[2025-04-23 13:53:52,986] INFO: Logged in as: an09
+[2025-04-23 13:53:53,811] INFO: [SYNC LOGIN] User an09 is not a member of channel 111. Skipping sync.
+[2025-04-23 13:53:53,811] INFO: User 'an09' logging in (authenticated mode).
+[2025-04-23 13:53:53,996] INFO: Tracker response: Peer an09 (172.20.10.2:7554) added
+[2025-04-23 13:53:53,996] INFO: P2P SERVER listening on 172.20.10.2:7554
+[2025-04-23 13:53:54,000] INFO: UDP LISTENER listening on 172.20.10.2:7555 for livestream.
+[2025-04-23 13:53:57,469] INFO: User an09 joined public channel '111'
+[2025-04-23 13:53:57,832] INFO: [SYNC LOAD] Loaded from file: local_sync\sync_111_an09.txt
+[2025-04-23 13:53:59,347] INFO: Sending message: chào
+[2025-04-23 13:53:59,615] INFO: Sent P2P chat to 172.20.10.4:8856 – {"type": "chat", "sender": "an09", "message": "ch\u00e0o", "channel": "111", "owner": "an10"}
+[2025-04-23 13:53:59,685] INFO: Sent P2P chat to 172.20.10.2:6182 – {"type": "chat", "sender": "an09", "message": "ch\u00e0o", "channel": "111", "owner": "an10"}
+[2025-04-23 13:53:59,824] INFO: Sent P2P chat to 172.20.10.2:7554 – {"type": "chat", "sender": "an09", "message": "ch\u00e0o", "channel": "111", "owner": "an10"}
+[2025-04-23 13:53:59,824] INFO: [P2P MESSAGE] an09 -> an09: chào
+[2025-04-23 13:53:59,920] INFO: Sent P2P chat to 172.20.10.4:6253 – {"type": "chat", "sender": "an09", "message": "ch\u00e0o", "channel": "111", "owner": "an10"}
+[2025-04-23 13:53:59,920] INFO: Tin nhắn từ an09 đã gửi tới 4 peer online trong kênh '111'
+[2025-04-23 13:53:59,920] INFO: Message from an09 sent in channel '111'
+[2025-04-23 13:54:08,291] INFO: [P2P MESSAGE] an11 -> an09: lo
+[2025-04-23 13:54:12,114] INFO: [P2P MESSAGE] an10 -> an09: alo
+[2025-04-23 13:54:23,512] INFO: [P2P MESSAGE] an10 -> an09: 3232
+[2025-04-23 13:54:24,493] INFO: Tracker response on LEAVE: Peer an09 (172.20.10.2:7554) left
